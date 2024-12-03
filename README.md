@@ -4,7 +4,7 @@
   1) Generate an SSH key
       ```
       ssh-keygen -t rsa -b 4096 -C "email@email.com"
-      eval "$(ssh-agent -S)"
+      eval "$(ssh-agent -s)"
       ssh-add ~/.ssh/id_rsa
       ```
   2) Add the key to github
@@ -27,7 +27,7 @@
   2) If the connection doesn't work, verify the SSH key
 
      ```
-     eval "$(ssh-agent -S)"
+     eval "$(ssh-agent -s)"
      ssh-add ~/.ssh/id_rsa
      ```
   3) Tenter de cloner le repo
