@@ -1,0 +1,69 @@
+title: OSINT - Fake Windows Troubleshooting Support Scam Uploads Screenshots & Uses
+  Paypal
+id: 5a214d9a-ed50-4a33-8812-491a950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_49:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id001
+          - 5becf86e5ad1703345fa243458f6a3b6189619f87e67ffab6bc874d6bdf7c03f
+          SHA256: *id001
+          DriverSha256: *id001
+          TargetProcessSha256: *id001
+          Hashes.sha256: *id001
+  object_50:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - 9a95f7e477cede36981a6a1e01a849d9c6aeac3985ee3a492cf4136bb6dab69c
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_51:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - 1b1e48f2ee9940c1965c00ee1226fd7c3b9ee9c179ba29b9aeb586c6211cb223
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+  object_52:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - 0cc8ad791dc4061ce1f492d651ed2a9baeed02413c5940240bf47bb023f509ef
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  object_53:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id005
+          - f34185d5124690815f089b06cc1629a3d1a42cd7d51aee602823c98e03116a98
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://www.bleepingcomputer.com
+        - http://hitechnovation.com
+        - http://freegeoip.net
+        RequestUrl: *id006
+  condition: any of them

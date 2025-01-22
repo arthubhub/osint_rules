@@ -1,0 +1,58 @@
+title: OSINT - Recent Winnti Infrastructure and Samples
+id: 596f75c0-9118-4b4c-958b-1921950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.winnti
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - googlesoftservice.net
+        - igooglefiles.com
+        - aolonline.cc
+        - facebooknavigation.com
+        - googlecustomservice.com
+        - find2find.com
+        - tiwwter.net
+        - luckhairs.com
+        - googlerenewals.net
+        - pornsee.tv
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 79daceed3c07eaeac39c69b5c40e03cedcaaaced
+          - 5486fd254451d90f2f6acdbfa3330444f98dde68
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - eee4b1c4621b0ca355dc677652dfd6449f1f230565da8cb5db59fa195e8f553f
+          - 1ada845dbf89024f4eee8409880ce21ece2262db3ad5129d2eed33a76d177d39
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 58c66b3ddbc0df9810119bb688ea8fb0
+          - a4b2a6883ba0451429df29506a1f6995
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://www.clearskysec.com
+        - http://54.245.195.101
+        RequestUrl: *id005
+  condition: any of them

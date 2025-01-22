@@ -1,0 +1,44 @@
+title: OSINT - Suspicious binary delivered as fake jpeg
+id: 5a587e74-2218-498e-ba91-4165950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_1697:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 9fec9b390a304fb810a5f31644e8003016bf8b45
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - abaf18fea5fd9f85223eec405fe44246aa8a6a928beb7606b4e5c4afc9bc4045
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 071d734036a4ce8a1913d48715f26001
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - abaf18fea5fd9f85223eec405fe44246aa8a6a928beb7606b4e5c4afc9bc4045
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  condition: any of them

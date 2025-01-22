@@ -1,0 +1,41 @@
+title: Emotet/Trickbot
+id: 5e2c4c13-1f64-4e4e-8165-4801950d210f
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - updatewinlsass.com
+        - 149.28.106.230.vultr.com
+        - 2cdajlnnwxfylth4.onion
+        - myexternalip.com
+        - chekfast.zennolab.com
+        - api.ipify.org
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 68.183.170.114
+        - 155.138.142.157
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://jomamba.best
+        - http://144.202.114.147
+        - http://149.28.106.230
+        - https://qwe4dse4.com
+        - http://207.148.30.186
+        - http://155.138.202.17
+        - https://updatewinlsass.com
+        - https://koretycbeeb.com
+        RequestUrl: *id003
+  condition: any of them

@@ -1,0 +1,59 @@
+title: "Remcos RAT New TTPS \u2013 Detection & Response"
+id: be8c3307-4b09-4ddf-af24-41c2385d8036
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.remcos
+- attack.software.remcos
+- attack.software.s0332
+logsource:
+  product: windows
+detection:
+  object_17266:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.socinvestigation.com
+        RequestUrl: *id001
+  object_17267:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://otx.alienvault.com
+        RequestUrl: *id002
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id003
+        - 178.237.33.50
+        - 194.147.140.29
+        SourceIp: *id003
+        IpAddresses: *id003
+        destination.ip: *id003
+        RequestUrl|contains: *id003
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - bf7212910de7bff455c3b3fe4b3a1a05059fe0da0c29e69b3aef492fe2a66fc0
+          - af9596cf630f0f3e6e453ac8bdd6671f84feb65a057483ec5f620d04f4068209
+          - e2816883a7a514fe1a3fbce95c04c2fc735f0c7ab872f7c23978388c42aea5c2
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 6d25e04e66cccb61648f34728af7c2f2
+          - f331c18c3f685d245d40911d3bd20519
+          - 8cea687c5c02c9b71303c53dc2641f03
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://geoplugin.net
+        RequestUrl: *id006
+  condition: any of them

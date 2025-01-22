@@ -1,0 +1,54 @@
+title: Malicious XLS claiming to be from Deloitte
+id: 5c5b1d6e-d824-4fbe-969b-3aea950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1193
+- attack.t1064
+logsource:
+  product: windows
+detection:
+  object_1700:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 9f9d41aabb5e58d765f5ff4d930e6dab5fa2a613
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 2f00e0bb89d863ee7834ae9cb69d98f8e826e6d328fcdd833d91d62634f675ce
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - bdc928e2064faf3950aef955c1c9fa8c
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id004
+        - deloitte-canada.com
+        RequestUrl: *id004
+        QueryName: *id004
+    - ip_detection:
+        DestinationIp: &id005
+        - 95.211.163.26
+        - 95.211.242.210
+        - 95.211.143.214
+        - 134.19.181.154
+        SourceIp: *id005
+        IpAddresses: *id005
+        destination.ip: *id005
+        RequestUrl|contains: *id005
+  condition: any of them

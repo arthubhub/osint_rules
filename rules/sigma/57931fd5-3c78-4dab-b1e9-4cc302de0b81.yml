@@ -1,0 +1,65 @@
+title: OSINT - Kovter becomes almost file-less, creates a new file type, and gets
+  some new certificates
+id: 57931fd5-3c78-4dab-b1e9-4cc302de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 7e93cc85ed87ddfb31ac84154f28ae9d6bee0116
+          - 78d98ccccc41e0dea1791d24595c2e90f796fd48
+          - c6305ea8aba8b095d31a7798f957d9c91fc17cf6
+          - b780af39e1bf684b7d2579edfff4ed26519b05f6
+          - a286affc5f6e92bdc93374646676ebc49e21bcae
+          - ac4325c9837cd8fa72d6bcaf4b00186957713414
+          - ce75af3b8be1ecef9d0eb51f2f3281b846add3fc
+          - 7177811e2f7be8db2a7d9b1f690dc9e764fdc8a2
+          - da3261ceff37a56797b47b998dafe6e0376f8446
+          - c3f3ecf24b6d39b0e4ff51af31002f3d37677476
+          - c49febe1e240e47364a649b4cd19e37bb14534d0
+          - 3689ff2ef2aceb9dc0877b38edf5cb4e1bd86f39
+          - e428de0899cb13de47ac16618a53c5831337c5e6
+          - b8cace9f517bad05d8dc89d7f76f79aae8717a24
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - cd7a7ef59534293d8f059fef4ebd2cacf5dc3f598c2a34ae1bf9b952f9b022a0
+          - 3bc1d770a7ecc99c014739e7db3b0ed6cf8f0063e593e0f501df701c85ce6e22
+          - 45b2ceb2ed61d75156a001d7c1aa64f5d3f71c188c433c085f2d2383543d24bf
+          - 744c3eba00f668e5e766ff6268b73c419b204fc51fe48fd1f75359c528d5681b
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 7df17844ee9f36c35629c54646953445
+          - 4167da9574e5e334205f5be8b9181aab
+          - 5d908526f1a84e96ce00f5bb1e093ede
+          - 1885e38dce5d58cf8e7436256e019065
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://blogs.technet.microsoft.com
+        - https://eepheverseoftheday.org
+        - https://deequglutenfreeclub.org
+        - https://zaixovinmonopolet.net
+        - https://feehacitysocialising.net
+        - https://uchuhfsbox.net
+        - https://ierairosihanari.org
+        - https://anayimovilyeuros.net
+        RequestUrl: *id004
+  condition: any of them

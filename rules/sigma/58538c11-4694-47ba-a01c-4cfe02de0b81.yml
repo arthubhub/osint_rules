@@ -1,0 +1,52 @@
+title: 'OSINT - One, if by email, and two, if by EK: The Cerbers are coming!'
+id: 58538c11-4694-47ba-a01c-4cfe02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 195.133.49.182
+        - 1.11.32.0
+        - 55.15.15.0
+        - 194.165.16.0
+        - 185.45.192.155
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 9284df1374b35d929f07e010e88b78a8495c0cfd
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - df65f65dc15cfa999f07869b587c74c645da66129c009db5d8b8c2c29ae4fadf
+          - 4e877be5523d5ab453342695fef1d03adb854d215bde2cff647421bd3d583060
+          - 0e395c547547a79bd29280ea7f918a0559058a58ffc789940ceb4caf7a708610
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 2b3e5fa9c8932e27531dd26dc92c81f8
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://isc.sans.edu
+        - http://www.malware-traffic-analysis.net
+        RequestUrl: *id005
+  condition: any of them

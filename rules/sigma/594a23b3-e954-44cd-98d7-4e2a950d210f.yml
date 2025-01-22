@@ -1,0 +1,78 @@
+title: Malspam 2017-06-21 'Job Application'
+id: 594a23b3-e954-44cd-98d7-4e2a950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 204.79.197.203
+        - 2.16.4.219
+        - 207.46.194.10
+        - 195.93.42.3
+        - 204.79.197.200
+        - 195.93.42.2
+        - 207.200.74.133
+        - 151.101.1.108
+        - 185.33.222.62
+        - 151.101.2.49
+        - 185.33.223.202
+        - 152.163.56.3
+        - 66.225.197.197
+        - 188.93.174.137
+        - 151.101.0.249
+        - 176.34.190.222
+        - 13.107.5.80
+        - 209.85.202.155
+        - 193.0.160.206
+        - 35.158.14.190
+        - 213.19.162.80
+        - 185.29.135.234
+        - 95.172.94.30
+        - 178.250.2.76
+        - 54.247.166.89
+        - 62.216.247.226
+        - 52.45.217.171
+        - 185.62.216.248
+        - 52.29.136.72
+        - 161.170.238.122
+        - 23.210.249.91
+        - 34.206.167.59
+        - 188.93.174.145
+        - 52.94.232.32
+        - 173.241.240.143
+        - 152.195.39.2
+        - 37.187.86.42
+        - 52.85.249.98
+        - 104.103.134.242
+        - 188.93.174.139
+        - 104.40.210.32
+        - 23.23.220.195
+        - 78.47.139.102
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 6d275d237668f13ab001a295c0d3233129c058a1
+          - 61ac6d00c979026eacf4b28fcb70969d5dc6a3a2
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 524ad16ac80b196a5507fc45adfff6edc2938d498bc8e736ac69a8be7e5e8034
+          - 0ca31353ae0438503a2ad9ade37d463eef08cdeed35fac4feba5924eb127f32b
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+  condition: any of them

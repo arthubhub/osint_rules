@@ -1,0 +1,41 @@
+title: OSINT - Update on the Fancy Bear Android malware (poprd30.apk)
+id: 58b96522-b5d0-41f7-a781-4b9002de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.sofacy
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 08c4d755f14fd6df76ec86da6eab1b5574dfbafd
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 5b6ea28333399a73475027328812fb42259c12bb24b6650e5def94f4104f385e
+          - 5f6b2a0d1d966fc4f1ed292b46240767f4acb06c13512b0061b434ae2a692fa1
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 26ac59dab32f6246e1ce3da7506d48fa
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://blog.crysys.hu
+        RequestUrl: *id004
+  condition: any of them

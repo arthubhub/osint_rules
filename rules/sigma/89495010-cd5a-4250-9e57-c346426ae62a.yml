@@ -1,0 +1,34 @@
+title: Pandora analysis (NEW ORDER LIST GREEN VALLEY CORP.xlam)
+id: 89495010-cd5a-4250-9e57-c346426ae62a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_16138:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - fd97abbc16fc30c09d7ea6b66ec359b9d9017b19
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 50659dd03345c5b16d6ea45170d63ca5a1846019634b06b4e37a3b97b65f1a36
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 80e6097461cd82991b69946d8054f48d
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  condition: any of them

@@ -1,0 +1,56 @@
+title: Pivot on Shakti domains via PassiveTotal
+id: 57b5ac3c-6780-4f9c-8734-4e8e950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - web4solution.net
+        - securedesignus.com
+        - securedesignuk.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 4297e2c5cae19ffbcf475234e0867bad826fc1bf
+          - 7a21bc3ce6bc2338a5abee83fd8a6bec7220ce3f
+          - 2d09ceee0e303f4e7a2678f8c6cff7071e50012b
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - d6d64c61dada8b5ccfa970356057a6c2c7697f084922744c5a2e29aff079647b
+          - 8d7cbf2ad674118cf1aea4d98cd6d345d2c7b8875ec95f5141c80b588bd2b6f5
+          - c03dc46fb6f01e9a1bcee445378b62b49f008c88cc531e41f2fd095ddac42816
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - b1380af637b4011e674644e0a1a53a64
+          - 2a794573f69c2c81db408f792a7c616b
+          - 255057ba7f3bb62abd5963e42e5fd897
+          - 0b3b8b25054165da8cf7dc300ca6dbba
+          - ffcc6e02d39f7c6f52a1b58eca30bd8f
+          - 41ef9f2385136ac53bd7e602b1cf6826
+          - 35ae59f3408671463546ef39bd92c901
+          - b961d3b27aad49be1a57cf674df88a04
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.passivetotal.org
+        RequestUrl: *id005
+  condition: any of them

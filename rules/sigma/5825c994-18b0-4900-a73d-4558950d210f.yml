@@ -1,0 +1,18 @@
+title: OSINT - BlackNurse Denial of Service Attack
+id: 5825c994-18b0-4900-a73d-4558950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - http://www.netresec.com
+        - http://soc.tdc.dk
+        - http://www.blacknurse.dk
+        RequestUrl: *id001
+  condition: any of them

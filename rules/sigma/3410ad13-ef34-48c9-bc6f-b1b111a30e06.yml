@@ -1,0 +1,158 @@
+title: OSINT - Russia's APT28 uses fear of nuclear war to spread Follina docs in Ukraine
+id: 3410ad13-ef34-48c9-bc6f-b1b111a30e06
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.sofacy
+logsource:
+  product: windows
+detection:
+  object_1169:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - b1847c89143fad810b7a3686296b9c1e91ad087c
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - daaa271cee97853bf4e235b55cb34c1f03ea6f8d3c958f86728d41f418b0bf01
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - eafa11070f213f16efc030f625a423d1
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_1170:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://otx.alienvault.com
+        - https://blog.malwarebytes.com
+        RequestUrl: *id004
+  object_1171:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://kitten-268.frge.io
+        RequestUrl: *id005
+  object_1172:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id006
+          - cfb20c4dbf2de009a1dccac68a4c822d02f7ae94
+          SHA1: *id006
+          DriverSha1: *id006
+          TargetProcessSha1: *id006
+          Hashes.sha1: *id006
+        sha256_detection:
+          sha256: &id007
+          - 5653418e1ea815c908243332a9a7a82e0e0767a202899a2008ca2c21dc11861b
+          SHA256: *id007
+          DriverSha256: *id007
+          TargetProcessSha256: *id007
+          Hashes.sha256: *id007
+        md5_detection:
+          md5: &id008
+          - 2320acc1bfdb7507bd655f7c3753c2e4
+          MD5: *id008
+          DriverMd5: *id008
+          TargetProcessMd5: *id008
+          Hashes.md5: *id008
+  object_1173:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id009
+          - bc5083093539e54d748dd602eb0571ee5656744c
+          SHA1: *id009
+          DriverSha1: *id009
+          TargetProcessSha1: *id009
+          Hashes.sha1: *id009
+        sha256_detection:
+          sha256: &id010
+          - 6b330540046cfcc9d62b17ffbe2c15d5b6c7854a0ea16842cc99a05bb189fb78
+          SHA256: *id010
+          DriverSha256: *id010
+          TargetProcessSha256: *id010
+          Hashes.sha256: *id010
+        md5_detection:
+          md5: &id011
+          - 5e813a8b2d0cb12dc8e7fc43e0149395
+          MD5: *id011
+          DriverMd5: *id011
+          TargetProcessMd5: *id011
+          Hashes.md5: *id011
+  object_1174:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id012
+          - ebb0e34f44089fd4cc750b5fe0dcc14f6bb85a11
+          SHA1: *id012
+          DriverSha1: *id012
+          TargetProcessSha1: *id012
+          Hashes.sha1: *id012
+        sha256_detection:
+          sha256: &id013
+          - 2318ae5d7c23bf186b88abecf892e23ce199381b22c8eb216ad1616ee8877933
+          SHA256: *id013
+          DriverSha256: *id013
+          TargetProcessSha256: *id013
+          Hashes.sha256: *id013
+        md5_detection:
+          md5: &id014
+          - d3bddb5de864afd7e4f5e56027f4e5ea
+          MD5: *id014
+          DriverMd5: *id014
+          TargetProcessMd5: *id014
+          Hashes.md5: *id014
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id015
+        - 144.208.77.68
+        SourceIp: *id015
+        IpAddresses: *id015
+        destination.ip: *id015
+        RequestUrl|contains: *id015
+    - hash_detection:
+        sha1_detection:
+          sha1: &id016
+          - ebb0e34f44089fd4cc750b5fe0dcc14f6bb85a11
+          - b1847c89143fad810b7a3686296b9c1e91ad087c
+          SHA1: *id016
+          DriverSha1: *id016
+          TargetProcessSha1: *id016
+          Hashes.sha1: *id016
+        sha256_detection:
+          sha256: &id017
+          - daaa271cee97853bf4e235b55cb34c1f03ea6f8d3c958f86728d41f418b0bf01
+          - 2318ae5d7c23bf186b88abecf892e23ce199381b22c8eb216ad1616ee8877933
+          SHA256: *id017
+          DriverSha256: *id017
+          TargetProcessSha256: *id017
+          Hashes.sha256: *id017
+        md5_detection:
+          md5: &id018
+          - eafa11070f213f16efc030f625a423d1
+          MD5: *id018
+          DriverMd5: *id018
+          TargetProcessMd5: *id018
+          Hashes.md5: *id018
+    - url_detection:
+        PowershellCommand|contains: &id019
+        - http://kompartpomiar.pl
+        RequestUrl: *id019
+  condition: any of them

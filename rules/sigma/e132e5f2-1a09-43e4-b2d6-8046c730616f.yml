@@ -1,0 +1,76 @@
+title: OSINT - Fortinet says SSL-VPN pre-auth RCE bug is exploited in attacks
+id: e132e5f2-1a09-43e4-b2d6-8046c730616f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1133
+- attack.t1190
+logsource:
+  product: windows
+detection:
+  object_15330:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id001
+  object_15331:
+    all:
+    - ip_detection:
+        DestinationIp: &id002
+        - 188.34.130.40
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+  object_15332:
+    all:
+    - ip_detection:
+        DestinationIp: &id003
+        - 103.131.189.143
+        SourceIp: *id003
+        IpAddresses: *id003
+        destination.ip: *id003
+        RequestUrl|contains: *id003
+  object_15333:
+    all:
+    - ip_detection:
+        DestinationIp: &id004
+        - 192.36.119.61
+        SourceIp: *id004
+        IpAddresses: *id004
+        destination.ip: *id004
+        RequestUrl|contains: *id004
+  object_15334:
+    all:
+    - ip_detection:
+        DestinationIp: &id005
+        - 172.247.168.153
+        SourceIp: *id005
+        IpAddresses: *id005
+        destination.ip: *id005
+        RequestUrl|contains: *id005
+  object_15335:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://www.fortiguard.com
+        RequestUrl: *id006
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id007
+        - 139.180.184.197
+        - 66.42.91.32
+        - 158.247.221.101
+        - 107.148.27.117
+        - 139.180.128.142
+        - 155.138.224.122
+        - 185.174.136.20
+        SourceIp: *id007
+        IpAddresses: *id007
+        destination.ip: *id007
+        RequestUrl|contains: *id007
+  condition: any of them

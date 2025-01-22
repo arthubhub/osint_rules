@@ -1,0 +1,68 @@
+title: OSINT - New Crypto-Ransomware JIGSAW Plays Nasty Games
+id: 5717777b-a8b4-4876-b060-4339950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - 1fichier.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 0c269c5a641fd479269c2f353841a5bf9910888b
+          - dc307a673aa5eecb5c1400f1d342e03697564f98
+          - ce42e2c694ca4737ae68d3c9e333554c55afee27
+          - 1ad9f8695c10adb69bdebd6bdc39b119707d500e
+          - ca40233610d40258539da0212a06af29b07c13f6
+          - f8431cf0a73e4ede5b4b38185d73d8472cfe2ae7
+          - dce911b1c05da965c8733935723b88bc29d12756
+          - 3f6e3e5126c837f46a18ee988dbf5756c2b856aa
+          - 92620194a581a91874a5284a775014e0d71a9db1
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 4cd26e0d543e7da413bff2d85a18d1fd18164059c68996049da570f9bdeb6c42
+          - 773295583998b76b4e24b562f85fa685577067614133db4a7df3d2a28cb4cc3a
+          - a375201f22b6e71d8ea0f81266242e4638e1754aeee14059e9c5e39026d6c710
+          - 9580e6c4deba3bd46419a402b6309f77c2ed47ad62299c82ec8578400c2a3a64
+          - d41b5d3d0c6c0e8e9c850eaedf84623f48ba8e72f3867e57b0d94ddaaca738ee
+          - 917809beb6566079dbb6b686107756d9eb3ff4543f6b41ef327cea7497118457
+          - 31823040d8ccb20eab0b8653d01af370a6537017e69ead69f6f7b73d6ef7ac14
+          - 80a6681b00056a487bba1b66c046b798dfe18bf37aa30d8a4a1be968b9add997
+          - bc83ef30422eb7b0c8903d3b4f1d4258e25cf78e9357a30dac773f8d2c17aa28
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 473807de0d05cd6149060403ad01b658
+          - 89d6fc6c1a51cef335f7ee2bc2aa60ae
+          - 3bee1d24189d4941f68b96da6e207be4
+          - 64e7c95aefe82efb39185321a6cdd5c4
+          - 4fe313da6d94379f996c31754df8eb30
+          - 6984a724843fb60130a965a9fc317f2d
+          - 4c153eacdfa8807f1c8fd98e5267da4b
+          - 1e0812fbdaa20a2b9aaddf531daed935
+          - 5a9bd3d7f1534431a396a033d16ca496
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://blog.trendmicro.com
+        - http://waldorftrust.com
+        RequestUrl: *id005
+  condition: any of them

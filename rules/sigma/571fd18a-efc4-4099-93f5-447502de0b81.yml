@@ -1,0 +1,41 @@
+title: OSINT - Macro Malware Employs Advanced Obfuscation to Avoid Detection
+id: 571fd18a-efc4-4099-93f5-447502de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - c779587e7280121be0725fbecef2e449607f5833
+          - 2f0219710dd785f94f7970b87c6ec19ba1635fc5
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 25f7bf9246534c7aad3b728c0bad60dd62e31d9bd7695de8ac0ec7ec0270f104
+          - 1fcdc054fbd0ecefbb895502d271c94e4733dbb5dc0a0152d8d4864ce82cd916
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - d80c15fd4ee1b10512d81bde32daaf30
+          - c1787d80ad7beb46646d5c20cdd7eff2
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://blogs.mcafee.com
+        RequestUrl: *id004
+  condition: any of them

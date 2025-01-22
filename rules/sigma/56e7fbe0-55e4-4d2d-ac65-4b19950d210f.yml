@@ -1,0 +1,25 @@
+title: Potential SpamBots (2016-03-15)
+id: 56e7fbe0-55e4-4d2d-ac65-4b19950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 182.65.96.201
+        - 115.250.105.20
+        - 5.101.140.71
+        - 180.215.249.37
+        - 182.58.172.236
+        - 201.137.2.95
+        - 196.182.29.34
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+  condition: any of them

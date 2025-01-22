@@ -1,0 +1,26 @@
+title: OSINT - Dasan Unauthenticated Remote Code Execution - and ongoing abuse
+id: 5a8042be-fe8c-4071-a140-414502de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.mirai
+- attack.software.satori
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 185.62.188.88
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://blogs.securiteam.com
+        RequestUrl: *id002
+  condition: any of them

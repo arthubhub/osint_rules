@@ -1,0 +1,150 @@
+title: 'M2M -  Locky / Trickbot: "Emailing: Scan0xxx" from "Sales"'
+id: 59cd3b91-95a4-4efd-9334-4c5b950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.trick_bot
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 217.199.175.27
+        - 91.83.88.51
+        - 193.227.248.241
+        - 89.96.90.17
+        - 98.124.251.75
+        - 185.18.198.158
+        - 208.73.32.82
+        - 202.169.44.141
+        - 208.79.200.63
+        - 203.74.202.50
+        - 72.4.145.228
+        - 89.140.72.171
+        - 176.56.61.52
+        - 109.108.149.65
+        - 80.172.241.35
+        - 66.84.8.235
+        - 78.46.92.133
+        - 69.90.148.231
+        - 149.7.99.14
+        - 208.79.200.165
+        - 87.98.167.154
+        - 208.79.200.8
+        - 217.160.224.147
+        - 50.31.160.160
+        - 205.204.66.82
+        - 193.107.36.30
+        - 109.234.84.109
+        - 110.4.45.159
+        - 50.28.26.10
+        - 63.247.137.98
+        - 178.210.175.13
+        - 63.247.142.80
+        - 70.39.149.97
+        - 178.212.207.6
+        - 192.99.35.71
+        - 89.231.13.38
+        - 94.75.77.162
+        - 194.87.103.36
+        - 5.45.86.128
+        - 195.133.48.187
+        - 194.87.147.212
+        - 5.45.84.9
+        - 185.158.115.72
+        - 194.87.145.40
+        - 185.158.112.67
+        - 195.133.48.38
+        - 194.87.102.225
+        - 5.45.67.36
+        - 194.87.144.198
+        - 94.242.206.172
+        - 194.87.236.228
+        - 194.87.92.30
+        - 185.158.115.7
+        - 195.133.145.96
+        - 195.133.49.157
+        - 46.249.59.97
+        - 185.158.115.62
+        - 138.201.44.28
+        - 217.182.226.168
+        - 195.133.48.152
+        - 194.87.234.90
+        - 217.182.226.165
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 3db124b9ed6064be9389f089b3168747311419a3
+          - c5270e39548d9259b421ad5e94f3e8ebdd2f1cf5
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 4a4491a5daa0b8c0d4e694601cbb860e0e069356b83e2f6ea215be758f533f1e
+          - 01e771dc6cf9572eac3d87120d7a7d1ff95fdc1499b668c7fde2919e0f685256
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 20a51bf0c489d3f2792cfae6ef4ee337
+          - c86b9c09258f31e1bca843e9c74a9049
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://mtblanc-let.co.uk
+        - http://ambrogiauto.com
+        - http://atlantarecyclingcenters.com
+        - http://autoecoleathena.com
+        - http://autoecoleboisdesroches.com
+        - http://autoecole-jeanpierre.com
+        - http://camerawind.com
+        - http://conlin-boats.com
+        - http://essenza.co.id
+        - http://felicesfiestas.com.mx
+        - http://feng-lian.com.tw
+        - http://financeforautos.com
+        - http://fincasoroel.es
+        - http://flooringforyou.co.uk
+        - http://fls-portal.co.uk
+        - http://fmarson.com
+        - http://freevillemusic.com
+        - http://geeks-online.de
+        - http://givensplace.com
+        - http://jakuboweb.com
+        - http://jaysonmorrison.com
+        - http://melting-potes.com
+        - http://patrickreeves.com
+        - http://plumanns.com
+        - http://sherylbro.net
+        - http://poemsan.info
+        - http://americanbulldogradio.com
+        - http://anarakdesert.com
+        - http://asnsport-bg.com
+        - http://astilleroscotnsa.com
+        - http://augustinechua.com
+        - http://classactionlawsuitnewscenter.com
+        - http://davidstephensbanjo.com
+        - http://evlilikpsikolojisi.com
+        - http://e-westchesterpropertytax.com
+        - http://kailanisilks.com
+        - http://mediatrendsistem.com
+        - http://modaintensa.com
+        RequestUrl: *id005
+  condition: any of them

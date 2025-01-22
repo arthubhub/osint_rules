@@ -1,0 +1,59 @@
+title: OSINT - EngineBox Malware Supports 10+ Brazilian Banks
+id: 5997e84c-58b8-4652-a5cc-7d9602de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - da18ecbf61875bab1e71fc13ce2c7ec7e3ebee6a
+          - f393d7b531cd44ce418647fe95715adc3e3c61d2
+          - 918a80d5c982ba2f3b51c92949b15b1fc8caf2e9
+          - edac27ccb0191bd0726af39b13226f073452cde7
+          - f6c940072ce82b7f58a6a86e49d57e2c9a92c154
+          - 1812647fafd4f086614c950cfc8c6b405cfc1fac
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - e3fe4546a5930d584f9a1ccd0ab0cb8eac041821cc238010f18190cfc25f845a
+          - 70ba57fb0bf2f34b86426d21559f5f6d05c1268193904de8e959d7b06ce964ce
+          - 7e476e43a56a56420b5ca05db29979332b327b1c2ccd79f86943a10714afd730
+          - 9663e164be742893c6d1b4586796bff9b778d695823a09cfada18bec0106414a
+          - c05836c76d0e462bb817742f1c4a9ea2db523161c5b9c8506cfb8c7335060e57
+          - 66c3cae1464231a801b0388a5ea858883118b9ef529fa7071146fae0bdb93565
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - f9f6bc998dcb8a3f04dffcc6b81dcfc3
+          - e99d3c9d3ee9c8a8448aa3d427c04f0e
+          - 78b86206541debb3819e51b7e9c48434
+          - bb6756c97ab58fdfeecfe8c75b4bb81e
+          - 90ce84d389eabf96b4ad2f3bb083dada
+          - eb32c070e658937aa9fa9f3ae629b2b8
+          - f476db89c2f6621cc36c4a7a11e1e7a3
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://github.com
+        - https://isc.sans.edu
+        - http://vimfvl6s.bslah3d1ajofjeatqu1qlkiurm0iyzwd.xyz
+        - http://170.254.236.10
+        - https://technet.microsoft.com
+        - http://www.ilspy.net
+        RequestUrl: *id004
+  condition: any of them

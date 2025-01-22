@@ -1,0 +1,53 @@
+title: OSINT - New Infostealer Trojan uses Fiddler Proxy & Json.NET
+id: 572f0929-9b8c-42de-adc6-450202de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 5fdf01ca8ae47bdd65a2423e0ac7bfb9d80ef73e
+          - 8182d4eb88e9958039438c72e9b872d21e8af1d8
+          - 42bfe35afbcea775d5bdbc8bfeb25e928f76d4b7
+          - 1733cac501b28a6498a69d3f8fc24e0cc58b7cbb
+          - 8e5029121123c46bd673119e9dfe93f40d6f3b32
+          - ad56435e072b8c9da6cf8c0ed9ccedec9dd0bbb3
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - fe7da12c96c2be9c0ab8e1ad3a069787be50d138e7c9b96ba73803b0ed8dd401
+          - 66d1130a801e0f698d38af5e597c3607415fd33902ab8516984b4e398e4f7baf
+          - 9bf35a7318909b7eea0cc2a8201d378bbd35559a2399a0107017a902bd3bcc43
+          - 87ddb2c79b9edc81443f5df5a6fb57101fba35dfcfb86a2c2bbfb08884dcf6e6
+          - be6cbe01f409d3299c20e87dd6bc0ede12a7cb2b9abfb20241f46df210a57241
+          - ac93f5fdc3b2ca4708794e19642e565d06912613499bbb2f48c174a20e3db8d3
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 123f4c1d2d3d691c2427aca42289fe85
+          - 070ab6aa63e658ff8a56ea05426a71b4
+          - ac6027d316070dc6d2fd3b273162f2ee
+          - 98bbc1917613c4a73b1fe35e3ba9a8d9
+          - 06f3da0adf8a18679d51c6adaa100bd4
+          - 8c9896440fb0c8f2d36aff0382c9c2e4
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://www.zscaler.com
+        RequestUrl: *id004
+  condition: any of them

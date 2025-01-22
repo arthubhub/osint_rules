@@ -1,0 +1,75 @@
+title: 'M2M -  Locky 2017-09-29 : Affid=3, offline, ".ykcol" : "Invoice" - "123456.7z"'
+id: 59ce3d6e-1884-4055-a07a-7894950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 193.227.248.241
+        - 98.124.251.75
+        - 66.36.173.215
+        - 120.136.0.3
+        - 77.48.30.84
+        - 98.124.252.176
+        - 185.57.172.213
+        - 213.185.88.60
+        - 203.74.203.14
+        - 185.18.198.88
+        - 86.109.170.84
+        - 66.36.163.208
+        - 202.218.252.73
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - f78e3e65207d0756e51ef17cdadd2692dc1b85e5
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 006d0ab2844e4df90109fc769cda49fa6eb8e7e033f8e81b60c1e345fb346560
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 28770e17d1a6bffcaac19a1074b4c2b5
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://awholeblueworld.com
+        - http://autoecolecarnot.com
+        - http://lp-usti.cz
+        - http://suncoastot.com
+        - http://xploramail.com
+        - http://poemsan.info
+        - http://associationlachaloupe.com
+        - http://autoecolejeanluc.com
+        - http://bacota.es
+        - http://ip032.es
+        - http://littleulearning.com
+        - http://long-an.com.tw
+        - http://miamirecyclecenters.com
+        - http://m-tensou.net
+        - http://peep-call.com
+        - http://sdr.co.nz
+        RequestUrl: *id005
+  condition: any of them

@@ -1,0 +1,156 @@
+title: OSINT - Botnet exploiting GPON Vulnerability
+id: 5af412ea-4254-4668-b1ea-44bc950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_16844:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 06f08af784b24a55018b4489afab19f0436b90a9
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - efa4fe06e4949c0f7aedea61a79da92e379ea66b169cd1d99c47b9e93e814093
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - d546bc209d315ae81869315e8d536f36
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_16846:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - c724be3b4cc8b7e0fbac7d0391be0f2aea0b5b19
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - a79964ce5cf4b92f996bbc24230e102b94ef05fb072c0afdeabc88d28695cace
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 21fa1dcc069309245a8aa1c142f112a3
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_16848:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 041dcbad0ca62255129048636afec9b89b65a748
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 1ff787d52bc9e4a6c27d75b1a427c3e5dd16d6d5f082a79227c14edf8e908ab2
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 2adb540db754366a1aa04ccca7105c80
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_16850:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - dc6102418faedf4379bfc786acb216d5defe64f0
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - bab7e9f42df88902acb00fbdf3b4b5d8ffec2a1a7ad32eb5f2fb1dbf38f3167d
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 20deff5786a4769b219c304965559043
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  object_16852:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id013
+          - 44e341d28d744e0b3d2fa1a8cc3481f184d155ff
+          SHA1: *id013
+          DriverSha1: *id013
+          TargetProcessSha1: *id013
+          Hashes.sha1: *id013
+        sha256_detection:
+          sha256: &id014
+          - 7caac9c9fa954730665d63b692119ba5f14ee6c07cf11ffc60bca7b3d25ea109
+          SHA256: *id014
+          DriverSha256: *id014
+          TargetProcessSha256: *id014
+          Hashes.sha256: *id014
+        md5_detection:
+          md5: &id015
+          - a536f99aa4030efb5d44c0b4792f4e9b
+          MD5: *id015
+          DriverMd5: *id015
+          TargetProcessMd5: *id015
+          Hashes.md5: *id015
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id016
+        - 185.62.190.191
+        SourceIp: *id016
+        IpAddresses: *id016
+        destination.ip: *id016
+        RequestUrl|contains: *id016
+    - hash_detection:
+        sha256_detection:
+          sha256: &id017
+          - 1ff787d52bc9e4a6c27d75b1a427c3e5dd16d6d5f082a79227c14edf8e908ab2
+          - 7caac9c9fa954730665d63b692119ba5f14ee6c07cf11ffc60bca7b3d25ea109
+          - a79964ce5cf4b92f996bbc24230e102b94ef05fb072c0afdeabc88d28695cace
+          - bab7e9f42df88902acb00fbdf3b4b5d8ffec2a1a7ad32eb5f2fb1dbf38f3167d
+          - efa4fe06e4949c0f7aedea61a79da92e379ea66b169cd1d99c47b9e93e814093
+          SHA256: *id017
+          DriverSha256: *id017
+          TargetProcessSha256: *id017
+          Hashes.sha256: *id017
+    - url_detection:
+        PowershellCommand|contains: &id018
+        - https://otx.alienvault.com
+        - http://185.62.190.191
+        RequestUrl: *id018
+  condition: any of them

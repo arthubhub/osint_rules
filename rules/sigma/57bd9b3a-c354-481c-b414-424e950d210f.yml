@@ -1,0 +1,44 @@
+title: 'Malspam 2016-08-24 (.hta in .zip) - campaign: "Emailing{N}.jpg"'
+id: 57bd9b3a-c354-481c-b414-424e950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - brunnenburg.de
+        - ficonline.cat
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 95.211.144.65
+        - 213.205.40.169
+        - 69.27.174.10
+        - 112.140.42.29
+        - 193.144.125.70
+        - 212.40.179.74
+        - 134.0.14.63
+        - 88.222.0.5
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://iesjaumei.edu.gva.es
+        - http://www.agenziadini.it
+        - http://www.carloabati.com
+        - http://mage4ever.0catch.com
+        - http://brunnenburg.de
+        - http://csmjs.cba.pl
+        - http://ficonline.cat
+        - http://jon.nomaki.jp
+        - http://ajurveda.meganet.lt
+        RequestUrl: *id003
+  condition: any of them

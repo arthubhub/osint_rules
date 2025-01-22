@@ -1,0 +1,90 @@
+title: OSINT - Javascript malware hosted on US government site which launches powershell
+  to connect to C2.
+id: 59ac43b3-d8a8-4fcf-9543-4a8f02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_18396:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 898e4131496d0ae8eb3fd2a742a30830be3989f6
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 1e6851e6e0ff2e0e430e882c8326334471ab2e35ebbac4104bd2aa27128ea6bd
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - c714ca63fc9fccce002941c171c07e4d
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_18398:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - f996046fea268074d2edd430e628f23942d7b5b6
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 1f15415da53df8a8e0197aa7e17e594d24ea6d7fbe80fe3bb4a5cd41bc8f09f6
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 61bcd1f3233b857be0aee9ceba6779f3
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 898e4131496d0ae8eb3fd2a742a30830be3989f6
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 1e6851e6e0ff2e0e430e882c8326334471ab2e35ebbac4104bd2aa27128ea6bd
+          - 1f15415da53df8a8e0197aa7e17e594d24ea6d7fbe80fe3bb4a5cd41bc8f09f6
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - c714ca63fc9fccce002941c171c07e4d
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+    - url_detection:
+        PowershellCommand|contains: &id010
+        - https://blog.newskysecurity.com
+        - https://pastebin.com
+        - http://dms.nwcg.gov
+        RequestUrl: *id010
+  condition: any of them

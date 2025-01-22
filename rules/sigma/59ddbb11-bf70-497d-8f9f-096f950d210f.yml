@@ -1,0 +1,118 @@
+title: 'M2M -  Locky Affid=3, ".asasin"/Trickbot "mac1" 2017-10-05 : "Invoice INV0000123"
+  - "Invoice INV0000123.7z"'
+id: 59ddbb11-bf70-497d-8f9f-096f950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.trick_bot
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 98.124.251.65
+        - 180.222.185.74
+        - 72.52.195.204
+        - 67.210.102.240
+        - 217.199.175.27
+        - 91.83.88.51
+        - 46.237.117.193
+        - 79.170.7.139
+        - 41.57.103.218
+        - 196.202.194.202
+        - 46.20.56.239
+        - 176.120.126.21
+        - 91.239.249.118
+        - 194.87.103.184
+        - 92.63.102.64
+        - 194.87.238.53
+        - 92.63.102.159
+        - 194.87.232.219
+        - 149.154.69.70
+        - 78.24.223.153
+        - 194.87.92.207
+        - 194.87.94.239
+        - 195.133.147.238
+        - 62.109.15.132
+        - 194.87.236.240
+        - 62.109.6.237
+        - 149.154.69.47
+        - 82.146.47.121
+        - 78.24.216.250
+        - 82.146.56.218
+        - 185.159.131.198
+        - 194.87.146.32
+        - 5.133.179.77
+        - 94.242.224.214
+        - 194.87.92.242
+        - 195.133.146.236
+        - 193.124.117.238
+        - 202.169.44.143
+        - 91.215.186.147
+        - 185.85.205.9
+        - 98.124.251.176
+        - 89.253.235.118
+        - 162.213.255.19
+        - 98.124.252.176
+        - 202.169.44.167
+        - 86.109.170.66
+        - 107.152.98.20
+        - 98.124.252.66
+        - 202.218.252.73
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - dd3ad086b2973e67e41aa21680448badb989f9c5
+          - a0218048aaca34259d0651d911b81f9f12a30326
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 24184f3ae1a878018d650812c7084cdc91fdaa8916d3d11140ef06d6306347a2
+          - c2e56510866a6e038ac723a3e5a2ac66b14f407b91886077727f622f561164e3
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 1934bc240ae9e8e101490a9dab13c079
+          - 5216bf5213f2f94e756ce464d34c740c
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://yamanashi-jyujin.jp
+        - http://smi-wi.com
+        - http://qxr33qxr.com
+        - http://mtblanc-let.co.uk
+        - http://paulcruse.com
+        - http://alucmuhendislik.com
+        - http://bit-chasers.com
+        - http://hexacam.com
+        - http://mh-service.ru
+        - http://handhi.com
+        - http://suncoastot.com
+        - http://nsaflow.info
+        - http://estudiperceptiva.com
+        - http://monstermx.com
+        - http://centurythis.com
+        - http://m-tensou.net
+        - http://bjp.co.id
+        - http://logica-info.com
+        RequestUrl: *id005
+  condition: any of them

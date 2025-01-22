@@ -1,0 +1,30 @@
+title: OSINT - SamSam Ransomware Crew Made Nearly $6 Million From Ransom Payments
+id: 5b6c4a32-92cc-499d-9dd2-3989950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.samas-samsam
+- attack.software.samas-samsam
+logsource:
+  product: windows
+detection:
+  object_14561:
+    all: []
+  object_14562:
+    all: []
+  object_14563:
+    all: []
+  object_14564:
+    all: []
+  object_14565:
+    all: []
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.bleepingcomputer.com
+        - https://www.sophos.com
+        RequestUrl: *id001
+  condition: any of them

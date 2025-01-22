@@ -1,0 +1,68 @@
+title: 'M2M -  Locky 2017-10-10 : Affid=3, offline, ".asasin" : "Document ... is complete"
+  - "invoice_1234_sign_and_return.7z"'
+id: 59dc90da-d970-4168-901d-45c3950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 91.192.195.226
+        - 89.96.90.14
+        - 86.109.170.66
+        - 37.59.210.47
+        - 86.109.170.20
+        - 41.207.64.13
+        - 67.227.187.239
+        - 208.85.1.220
+        - 91.210.80.160
+        - 185.57.172.213
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - cf0c629de9a31e27b672e8898139123aed3bda0d
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 3037b1b587eac2080d8c95d05cc5545f43128b2a69a08aa27e6058f7306b3c9b
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 11166f884550390d27c26a893506657a
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://henweekendsbirmingham.co.uk
+        - http://dueeffepromotion.com
+        - http://agrourbis.com
+        - http://axtes.com
+        - http://deltasec.net
+        - http://likiihillschool.com
+        - http://mastertenniscoach.com
+        - http://shahanabiomedicals.com
+        - http://test.sisap.ro
+        - http://xploramail.com
+        - http://nsaflow.info
+        RequestUrl: *id005
+  condition: any of them

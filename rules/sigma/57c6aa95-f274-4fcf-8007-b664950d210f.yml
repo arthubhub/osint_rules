@@ -1,0 +1,80 @@
+title: 'Malspam 2016-08-31 (.hta in .zip) - campaign: "FW: [Scan]"'
+id: 57c6aa95-f274-4fcf-8007-b664950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - powermax.ru
+        - finishcar.de
+        - dreamworksoffice.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 213.205.40.169
+        - 213.180.150.17
+        - 80.150.6.138
+        - 81.196.20.134
+        - 208.71.106.48
+        - 213.158.72.90
+        - 81.196.20.133
+        - 195.78.215.76
+        - 208.71.106.61
+        - 192.151.153.26
+        - 213.186.33.4
+        - 62.42.230.17
+        - 213.189.197.56
+        - 62.173.139.197
+        - 91.194.151.38
+        - 89.31.143.112
+        - 212.159.9.151
+        - 208.71.106.38
+        - 212.159.8.91
+        - 162.210.101.98
+        - 123.242.226.64
+        - 95.211.96.160
+        - 82.165.58.83
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://www.luigigiordano.org
+        - http://w07q93g5g.homepage.t-online.de
+        - http://a-tconsulting.co.uk
+        - http://powermax.ru
+        - http://www.download.extraslot.ru
+        - http://sonaeyou1.web.fc2.com
+        - http://simo62.web.fc2.com
+        - http://www.redanchemical.com
+        - http://www.hotelancorariviera.com
+        - http://user22393.vs.easily.co.uk
+        - http://www.francogatta.it
+        - http://nkbzryw.republika.pl
+        - http://www.francescafraioli.it
+        - http://www.kreso.it
+        - http://www.ieslamerced.es
+        - http://www.personalshoppingservice.it
+        - http://finishcar.de
+        - http://www.commentaborderunefille.fr
+        - http://www.hager.50webs.org
+        - http://www.helpinict.co.uk
+        - http://pcps.web.fc2.com
+        - http://jack0v0.web.fc2.com
+        - http://khaimekong.50webs.com
+        - http://www.ionut.coman.home.ro
+        - http://dreamworksoffice.com
+        - http://sarushima.web.fc2.com
+        - http://twojamuza.y0.pl
+        - http://www.kukon.go.ro
+        - http://joeybecker.gmxhome.de
+        RequestUrl: *id003
+  condition: any of them

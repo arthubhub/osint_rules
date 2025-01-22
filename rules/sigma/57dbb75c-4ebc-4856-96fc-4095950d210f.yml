@@ -1,0 +1,40 @@
+title: OSINT - ELF.Rex
+id: 57dbb75c-4ebc-4856-96fc-4095950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 6fb2c6abe37f7a1fe4683105c3d2490e758e5aa9
+          - 2c514212637e9d8d8861de4efd4a0062831f75d5
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - ab2b707d7993aee44ad98bf55fdd9ff02c00fa422abeb8eb10d9f275f5f6e55a
+          - 8a7c548a47c7cbd120b2f262797834e8aa8d6441082571f5d125c9a0ed4c75d4
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 864d639dee07f5da2af5dfa375b21d5e
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://twitter.com
+        RequestUrl: *id004
+  condition: any of them

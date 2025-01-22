@@ -1,0 +1,107 @@
+title: OSINT The Dyre Wolf report from IBM
+id: 551e8745-ace0-461c-b9eb-ce36950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - metflex.uk.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 92.240.99.70
+        - 46.151.48.114
+        - 46.63.97.171
+        - 46.63.97.224
+        - 195.32.89.29
+        - 46.151.49.53
+        - 91.210.148.1
+        - 109.87.231.180
+        - 46.151.48.199
+        - 37.115.203.210
+        - 185.31.53.23
+        - 46.63.97.159
+        - 85.94.175.236
+        - 46.63.97.77
+        - 188.165.223.61
+        - 46.63.96.198
+        - 178.253.216.100
+        - 188.165.213.146
+        - 46.63.97.93
+        - 91.194.239.109
+        - 46.63.96.137
+        - 46.29.0.247
+        - 46.63.97.39
+        - 194.28.191.218
+        - 46.63.96.251
+        - 194.28.191.217
+        - 176.36.160.107
+        - 178.212.244.19
+        - 46.160.125.167
+        - 31.131.139.42
+        - 91.242.55.58
+        - 62.80.181.148
+        - 91.225.228.195
+        - 178.217.49.162
+        - 77.85.204.113
+        - 176.119.175.13
+        - 46.151.50.58
+        - 176.98.141.2
+        - 89.22.207.223
+        - 176.98.133.237
+        - 188.165.232.226
+        - 109.237.0.106
+        - 91.202.197.178
+        - 83.219.158.40
+        - 31.131.142.226
+        - 46.151.48.121
+        - 195.189.19.156
+        - 212.36.236.132
+        - 93.175.224.225
+        - 212.36.237.45
+        - 93.99.229.60
+        - 212.36.229.141
+        - 85.248.157.88
+        - 176.197.103.78
+        - 188.231.149.4
+        - 178.253.251.4
+        - 194.28.191.70
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 55065e85ab9723d3b9f8d2b3e2ca0514dae10aae
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 8dbbaec774a42e18f369c2bf947a64d03728749b57fad7f46a80ea1ac396af7f
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - a5c773429e86543747ce8b03314593df
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://securityintelligence.com
+        - https://portal.sec.ibm.com
+        RequestUrl: *id006
+  condition: any of them

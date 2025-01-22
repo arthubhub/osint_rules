@@ -1,0 +1,116 @@
+title: OSINT - MM Core In-Memory Backdoor Returns as "BigBoss" and "SillyGoose"
+id: 58720d9e-8b54-40a9-9d80-42e7950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.mm_core
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 673f315388d9c3e47adc280da1ff8b85a0893525
+          - f7372222ec3e56d384e7ca2650eb39c0f420bc88
+          - f94bada2e3ef2461f9f9b291aac8ffbf81bf46ab
+          - ef59b4ffc8a92a5a49308ba98cb38949f74774f1
+          - 1cf86d87140f13bf88ede74654e01853bae2413c
+          - 415ad0a84fe7ae5b88a68b8c97d2d27de5b3aed2
+          - e8bfa4ed85aac19ab2e77e2b6dfe77252288d89b
+          - 83e7b2d6ea775c8eb1f6cfefb32df754609a8129
+          - b931d3988eb37491506504990cae3081208e1a66
+          - 7031f4be6ced5241ae0dd4315d66a261f654dbd6
+          - ab53485990ac503fb9c440ab469771fac661f3cc
+          - b8e6f570e02d105df2d78698de12ae80d66c54a2
+          - 188776d098f61fa2c3b482b2ace202caee18b411
+          - e0ed40ec0196543814b00fd0aac7218f23de5ec5
+          - 5498bb49083289dfc2557a7c205aed7f8b97b2a8
+          - ce18064f675348dd327569bd50528286929bc37a
+          - 3a8b7ce642a5b4d1147de227249ecb6a89cbd2d3
+          - 21c1904477ceb8d4d26ac9306e844b4ba0af1b43
+          - f89a81c51e67c0bd3fc738bf927cd7cc95b05ea6
+          - 13b25ba2b139b9f45e21697ae00cf1b452eeeff5
+          - c58aac5567df7676c2b08e1235cd70daec3023e8
+          - 4372bb675827922280e8de87a78bf61a6a3e7e4d
+          - 08bfdefef8a1fb1ea6f292b1ed7d709fbbc2c602
+          - d336b8424a65f5c0b83328aa89089c2e4ddbcf72
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 72aea0644729cadfe668751587a1e6384c49c398580feecefc51385ecc018631
+          - 0ec6c4342cf0cae5ba59a216ed074ac0574f04763ce4b5b1944daad9513491b6
+          - 1d3ff6cdda68c63d254df70cef0dc9adfa414200f953499c40cbc75bf3936233
+          - f938e87917ca8885001e922f43ef0fe5e67ff390e951a934254ddac808dca1a5
+          - a3c8d6eaa6239112b1e881f18ea78f58949150fbf051e599b5d6f81e0d2e31c9
+          - 033258861970b3addbe339e9f2c0fde210898896f31dce5d5f7b1d17d19c23eb
+          - ef549a3688f930bf3c5d49d95ed3d1de51be79af10f9d941892d85b25fabd795
+          - 87d743e1876dcb9e13ed8d1dc57125c7c0912b49aa9f02e2f3a45d0e11294317
+          - 1bf0dcf093a04a86c6679f99b6ec5293241b2a16b4749b5ff5af8e11e96ba2a9
+          - 4d22a45690d144ad29aaa06104085293e489ad319ba033ca0bd46759b3d5e42e
+          - e9d5e26e00f3ef239491bdfc80c8b4aabe551135b568c1ac9629202ed10cf2d0
+          - 0dec4b854bcbf15bda79a1a3d9f322d8519a3273155ad18d3b7ce7d36dfe9e85
+          - 4f3275de51c2d16e8df829d020eae4f2450c9b3afd3b3099d615278e29a00479
+          - 86d414a51e946a9a5d8ce411f0f6b54154d7848c046cd58464b49733effdc47a
+          - af34e0b3ecbe1f6aeabd5d74ba48a322f401d348de8a3345fe3e18a62d6d7a93
+          - 87496d1e934706d49b6a03b034f999c61772212b13e901f18453f7f8111defca
+          - 62ba328ada4ac69ac2ec9f9f101d16d5eb72b648c6bd078f735e17c8fc6b2829
+          - 3d85b4f923e2201a21a3e27e86ea6a2d3fda9778899568e7c505de5a4b70653e
+          - dd4a29b9ad4644350878b4c073661481a64762c4be4a9aa20ff7b71453470cce
+          - e9d086bf3e1e657f847a2364ee1da56db50bfeb291a35f1f92f3b2a9125f6f5e
+          - c89fb4332fef7367543c6457d3a6bfbd4d4f6ad7bea915baefc0489ad0c2a873
+          - a4ead13d2cb28c4443f023b5b87ec3bd641fb3ad590ca53ab41afefce9cbeccf
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - c4cee8d6f30127938681c93dd19f2af4
+          - 060d13afdb2212a717666b251feda1d3
+          - bddb10729acb2dfe28a7017b261d63db
+          - a9c07b9fb099f44e7b8f53a74d7f71d0
+          - 0932b703849364ca1537305761bc3429
+          - 9e73734ac2ab5293c0f326245658b50e
+          - c27da5a756569012449c479609c3b959
+          - 6c833531eb3c6b97095b45fcc8f2a1e6
+          - 898812640c2cb691e5d9cdea96fe9599
+          - bffc9f409be33207849207f62622db50
+          - 2801b537960058643dfdb3fc5199246d
+          - fe1eb07a9068c32efd032404a7472e58
+          - 380cfac90270b45518c17c224aa8e5be
+          - ee4563761247361632046c8966a4c790
+          - f38ffc4bfe7b449389b05d483016625b
+          - 50b20197c9f9f3a8ded3a42aa6cf5315
+          - 0647bac99b6a8407795134f5d67d4590
+          - 2826c9c6c25368f773c0e448572585d0
+          - 263b6c350cbf7354b99139be17c272d3
+          - d692a057330361f8f58163f9aa7fc3a8
+          - 1bbc1549b8fe1ced42e65d8375ff7010
+          - e2bc937f028602dda3fa56ad204ca726
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://blogs.forcepoint.com
+        - http://adnetwork33.redirectme.net
+        - http://network-resources.net
+        - http://adworks.webhop.me
+        - http://adrev22.ddns.net
+        - http://davidjone.net
+        - http://presspublishing24.net
+        - http://mockingbird.no-ip.org
+        - http://ichoose.zapto.org
+        - http://waterlily.ddns.net
+        - http://nayanew1.no-ip.org
+        - http://hawahawa123.no-ip.org
+        RequestUrl: *id004
+  condition: any of them

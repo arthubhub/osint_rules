@@ -1,0 +1,77 @@
+title: 'Malspam 2016-09-01 (.hta in .zip) - campaign: "Voice Message from Outside
+  Caller"'
+id: 57c7d69f-2d14-4235-ad06-4b13950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - josemedina.com
+        - zse2.pl
+        - hotcarshhhs6632.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 213.205.40.169
+        - 81.196.20.134
+        - 186.202.126.199
+        - 208.71.106.48
+        - 209.41.183.242
+        - 213.185.87.30
+        - 62.24.202.31
+        - 80.150.6.143
+        - 213.186.33.19
+        - 208.71.106.49
+        - 208.71.106.61
+        - 82.165.62.70
+        - 46.4.89.218
+        - 89.185.242.166
+        - 162.210.101.93
+        - 195.248.63.109
+        - 64.37.52.172
+        - 94.136.40.103
+        - 212.40.179.91
+        - 195.238.0.64
+        - 89.238.218.190
+        - 216.110.144.242
+        - 93.157.100.25
+        - 23.95.106.193
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://209.41.183.242
+        - http://portadeenrolar.ind.br
+        - http://unimet.tmhandel.com
+        - http://www.john.edmunds.talktalk.net
+        - http://www.btb-bike.de
+        - http://foerschl.gmxhome.de
+        - http://m-slova.web-box.ru
+        - http://piisfashionpress.web.fc2.com
+        - http://www.trade-centrum.eu
+        - http://ajedrezimprov.50webs.com
+        - http://yggithuq.utawebhost.at
+        - http://pennylanecupcakes.com.au
+        - http://fingermousedesign.co.uk
+        - http://www.erretisnc.it
+        - http://atomtyann.web.fc2.com
+        - http://www.dietmar-bernhard.de
+        - http://www.en4x4.net
+        - http://news.oboyle.ro
+        - http://matsumotokoichi.web.fc2.com
+        - http://josemedina.com
+        - http://www.rioual.com
+        - http://www.primaria-adamclisi.go.ro
+        - http://zse2.pl
+        - http://hotcarshhhs6632.com
+        RequestUrl: *id003
+  condition: any of them

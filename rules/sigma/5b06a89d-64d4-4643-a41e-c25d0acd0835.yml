@@ -1,0 +1,49 @@
+title: Emotet - 5/17/2018
+id: 5b06a89d-64d4-4643-a41e-c25d0acd0835
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.emotet
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 81.21.67.85
+        - 37.120.170.231
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://protonmail.com
+        - http://die-tauchbar.de
+        - http://angelabphotography.com
+        - http://davehale.co.uk
+        - https://computerspendehamburg.de
+        - http://cedric-2000.de
+        - http://amicidisantorfeto.com
+        - http://jackhonky.com
+        - http://lewistonsports.com
+        - http://brownaudio.com
+        - http://iceraven.com
+        - http://eliaswessel.com
+        - http://eiskugel.org
+        - http://fam-koenig.de
+        - http://bernardesdias.com.br
+        - http://prokeyboardist.com
+        - http://jorgensenco.dk
+        - http://fischereiverein-dotternhausen.de
+        - http://imagemarketingwest.com
+        - https://jaseminedenise.com
+        - http://leavemeinstitches.com
+        - http://jsaphotoarts.com
+        - http://downinthecountry.com
+        RequestUrl: *id002
+  condition: any of them

@@ -1,0 +1,49 @@
+title: '[TIA-REPO Consumption] KeyPass ransomware'
+id: 5b72bf0a-a300-4b09-9755-a4b00acd0835
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        md5_detection:
+          md5: &id001
+          - 901d893f665c6f9741aa940e5f275952
+          MD5: *id001
+          DriverMd5: *id001
+          TargetProcessMd5: *id001
+          Hashes.md5: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://securelist.com
+        - http://cosonar.mcdir.ru
+        - http://rihs2.herocraft.com
+        - http://ggbook601.3g.cn
+        - http://mt20.lbs8.com
+        - http://androidpay-users-pa.googleapis.com
+        - http://www.chinahaobao.com
+        - https://www.vamosemagrecer.com.br
+        - http://www.59pic.com
+        - http://59pic.com
+        - http://www.ngs517.com
+        - http://carestar.cc
+        - http://86.gtuu.com
+        - http://www.xun-yi.com
+        - http://www.dmgpark.com
+        - http://xtw.bhbhxy.com
+        - http://www.job088.com
+        - http://www.damuchang.com
+        - http://www.qcfk120.com
+        - http://www.cncszs.com
+        - http://www.nbysxx.com
+        - http://www.tbgjdj.com
+        - http://www.wzwmw.com
+        - http://www.gzqc.com.cn
+        - http://www.zctaozhi.com
+        RequestUrl: *id002
+  condition: any of them

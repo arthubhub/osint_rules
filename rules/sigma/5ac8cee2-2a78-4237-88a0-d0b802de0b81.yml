@@ -1,0 +1,20 @@
+title: OSINT - Cisco IOS CVE-2018-0171 attack
+id: 5ac8cee2-2a78-4237-88a0-d0b802de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.network_service_scanning
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://otx.alienvault.com
+        - https://www.bleepingcomputer.com
+        - https://tools.cisco.com
+        RequestUrl: *id001
+  condition: any of them

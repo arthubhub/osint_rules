@@ -1,0 +1,60 @@
+title: OSINT - Trochilus and New MoonWind RATs Used In Attack Against Thai Organizations
+id: 58dd02b3-cfa8-4044-b533-4935950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.moonwind
+- attack.software.trochilus
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - webswindows.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 192.225.226.195
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - ae2905c603ebc1b41c11ef26ac344bd695a24580
+          - 36e367bd403f30d18314911ad129810cc7aa03aa
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 59f8a31d66f053f1efcc8d7c7ebb209a8c12233423cc2dc3673373dde9b3a149
+          - 815df680be80b26b5dff0bcaf73f7495b9cae5e3ad3acb7348be188af3e75201
+          - fd4856f2ec676f273ff71e1b0a1729cf6251c82780fc9e7d628deca690b02928
+          - ce3da112e68e00621920911b1f9c72d7175894901173e703a44ac3700e4d427c
+          - e31679b82be58ace96b1d9fdfc2b62b6e91d371ed93957e0764cd7c464b04b9d
+          - f2589745671949422b19beec0856ca8b9608c02d5df4402f92c0dcc9d403010b
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 278a95ffe4e8f8f33d56ae4276b4799b
+          - 9ad1b81ca2d37a63faf2aaf279fed71c
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://researchcenter.paloaltonetworks.com
+        RequestUrl: *id006
+  condition: any of them

@@ -1,0 +1,157 @@
+title: OSINT -  BattleRoyal, DarkGate Cluster Spreads via Email and Fake Browser Updates
+id: f0ef984c-2467-40aa-83c6-7c671a6379cb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_8718:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.proofpoint.com
+        RequestUrl: *id001
+  object_8719:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - fce452bcf10414ece8eee6451cf52b39211eb65ecaa02a15bc5809c8236369a4
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_8720:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - ea8f893c080159a423c9122b239ec389939e4c3c1f218bdee16dde744e08188f
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+  object_8721:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - e2a8a53e117f1dda2c09e5b83a13c99b848873a75b14d20823318840e84de243
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  object_8722:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id005
+          - 96ca146b6bb95de35f61289c2725f979a2957ce54761aff5f37726a85f2f9e77
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+  object_8723:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id006
+          - 7562c213f88efdb119a9bbe95603946ba3beb093c326c3b91e7015ae49561f0f
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+  object_8724:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id007
+          - 2f5af97b13b077a00218c60305b4eee5d88d14a9bd042beed286434c3fc6e084
+          SHA256: *id007
+          DriverSha256: *id007
+          TargetProcessSha256: *id007
+          Hashes.sha256: *id007
+  object_8725:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id008
+        - http://5.181.159.29
+        RequestUrl: *id008
+  object_8726:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id009
+        - http://5.181.159.29
+        RequestUrl: *id009
+  object_8727:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id010
+        - http://79.110.62.96
+        RequestUrl: *id010
+  object_8728:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id011
+        - searcherbigdealk.com
+        RequestUrl: *id011
+        QueryName: *id011
+    - url_detection:
+        PowershellCommand|contains: &id012
+        - http://searcherbigdealk.com
+        RequestUrl: *id012
+  object_8729:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id013
+        - searcherbigdealk.com
+        RequestUrl: *id013
+        QueryName: *id013
+    - url_detection:
+        PowershellCommand|contains: &id014
+        - http://searcherbigdealk.com
+        RequestUrl: *id014
+  object_8730:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id015
+        - heilee.com
+        RequestUrl: *id015
+        QueryName: *id015
+    - url_detection:
+        PowershellCommand|contains: &id016
+        - https://heilee.com
+        RequestUrl: *id016
+  object_8731:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id017
+        - kairoscounselingmi.com
+        RequestUrl: *id017
+        QueryName: *id017
+    - url_detection:
+        PowershellCommand|contains: &id018
+        - https://kairoscounselingmi.com
+        RequestUrl: *id018
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id019
+        - heilee.com
+        - kairoscounselingmi.com
+        - nathumvida.org
+        - searcherbigdealk.com
+        - zxcdota2huysasi.com
+        RequestUrl: *id019
+        QueryName: *id019
+    - ip_detection:
+        DestinationIp: &id020
+        - 5.181.159.29
+        - 79.110.62.96
+        SourceIp: *id020
+        IpAddresses: *id020
+        destination.ip: *id020
+        RequestUrl|contains: *id020
+  condition: any of them

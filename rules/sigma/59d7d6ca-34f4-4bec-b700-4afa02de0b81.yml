@@ -1,0 +1,45 @@
+title: OSINT - Significant FormBook Distribution Campaigns Impacting the U.S. and
+  South Korea
+id: 59d7d6ca-34f4-4bec-b700-4afa02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - brinematriscript.com
+        - jaimagroup.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 524e1011c26b6bf7e23f5d107222397129f9893d
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 6e4ec3712cf641a31f4e9e4af7d9d7a84fd7da4cc2875c6aceb9a283ed0330d7
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - ce84640c3228925cc4815116dde968cb
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.fireeye.com
+        RequestUrl: *id005
+  condition: any of them

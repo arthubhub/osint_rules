@@ -1,0 +1,74 @@
+title: 'M2M - "..doc" 2017-12-01 : "12_Invoice_3456" - "I_4321.7z"'
+id: 5a26b77f-6250-4b25-bd53-4496950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 62.212.154.98
+        - 68.171.62.42
+        - 98.124.251.167
+        - 188.132.180.113
+        - 188.166.203.69
+        - 198.23.241.227
+        - 178.77.75.77
+        - 194.116.187.130
+        - 212.224.65.254
+        - 202.169.44.166
+        - 98.124.252.66
+        - 98.124.252.145
+        - 185.176.221.146
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 4bcba41741021833e193e721f4461645ab7fdb43
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - e2209f339b2e5afbb40d4f3dfddf4939ffdb9accbb5253121707a5b1cde15dd2
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 06c82e99dc35ab88f2db7868d30012a8
+          - 5c3d35bd9282f61e414319d9d98c80b5
+          - b9f2699fc826f8109b12a17c1283ac3f
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://shamanic-extracts.biz
+        - http://centralbaptistchurchnj.org
+        - https://n224ezvhg4sgyamb.onion.link
+        - http://summi.space
+        - http://schwellenwertdaten.de
+        - http://troyriser.com
+        - http://motifahsap.com
+        - http://team-bobcat.org
+        - http://basedow-bilder.de
+        - http://highlandfamily.org
+        - http://pdj.co.id
+        - http://pragmaticinquiry.org
+        - http://185.176.221.146
+        RequestUrl: *id005
+  condition: any of them

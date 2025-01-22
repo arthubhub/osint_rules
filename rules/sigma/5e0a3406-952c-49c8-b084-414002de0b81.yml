@@ -1,0 +1,123 @@
+title: "OSINT - Introducing BIOLOAD: FIN7 BOOSTWRITE\xE2\u20AC\u2122s Lost Twin"
+id: 5e0a3406-952c-49c8-b084-414002de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.dll_search_order_hijacking
+- attack.group.fin7
+- attack.group.anunak
+logsource:
+  product: windows
+detection:
+  object_17877:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 02216bbd2633b23be575230bb1d0fe176ea88b4f
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 7bdae0dfc37cb5561a89a0b337b180ac6a139250bd5247292f470830bd96dda7
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - a8ba59eebd4858b8b448f13a436edf60
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_17879:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - ff62e30eb38116b3273543f9ace038c4d0003f9c
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 77a6fbd4799a8468004f49f5929352336f131ad83c92484b052a2eb120ebaf9a
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 4b32521cc8a8c050fbc55b3f9d05c84d
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_17881:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - a69d0ffed73198235c73f412a81dd2f4d12aa152
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - c1c68454e82d79e75fefad33e5acbb496bbc3f5056dfa26aaf1f142cee1af372
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 27370ffd32942337596785ec737a4e46
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_17883:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - ccd96a0b38d2edd14e290c597a7371e412429515
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 42d3cf75497a724e9a9323855e0051971816915fc7eb9f0426b5a23115a3bdcb
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 21e79ae1d7a5f020c171f412cbb92253
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id013
+          - 7bdae0dfc37cb5561a89a0b337b180ac6a139250bd5247292f470830bd96dda7
+          - c1c68454e82d79e75fefad33e5acbb496bbc3f5056dfa26aaf1f142cee1af372
+          - 77a6fbd4799a8468004f49f5929352336f131ad83c92484b052a2eb120ebaf9a
+          - 42d3cf75497a724e9a9323855e0051971816915fc7eb9f0426b5a23115a3bdcb
+          SHA256: *id013
+          DriverSha256: *id013
+          TargetProcessSha256: *id013
+          Hashes.sha256: *id013
+  condition: any of them

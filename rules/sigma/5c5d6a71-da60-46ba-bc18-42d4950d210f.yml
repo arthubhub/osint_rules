@@ -1,0 +1,150 @@
+title: OSINT - DanaBot updated with new C&C communication
+id: 5c5d6a71-da60-46ba-bc18-42d4950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.danabot
+- attack.software.danabot
+logsource:
+  product: windows
+detection:
+  object_3963:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 5f085b19657d2511a89f3172b7887ce29fc70792
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 2b7483856431572f7db06cc34d1deee58fa79b5ca93920107df3822f794d572a
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 42ed833c083f6f3815b2e38c30751220
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_3965:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 0df17562844b7a0a0170c9830921c3442d59c73c
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 31fafbc37dd3bc55e4dae9c3ffee48dfb132827a3adf836b33c205c6164fbecf
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 8c310a91aba32fd60df859896d5a2f2d
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_3967:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 98c70361ea611ba33ee3a79816a88b2500ed7844
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - ef613c0b16f054289f1dc9791502306fced588a36183fa4b9625356dbe42af26
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 6b83c0cd765311d2144f7e7d5885e013
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_3969:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 4075375a08273e65c223116ecd2cef903ba97b1e
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 4054ca079a1c1af7a9531c160be7025930e45e739af847b264ca6a49b0ea0571
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 3e63651c8ee9143db65c6c1f12936437
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id013
+        - 84.54.37.102
+        - 89.144.25.243
+        - 89.144.25.104
+        - 178.209.51.211
+        - 185.92.222.238
+        - 192.71.249.51
+        - 47.74.249.106
+        - 95.179.227.160
+        - 185.158.249.144
+        SourceIp: *id013
+        IpAddresses: *id013
+        destination.ip: *id013
+        RequestUrl|contains: *id013
+    - hash_detection:
+        sha1_detection:
+          sha1: &id014
+          - 98c70361ea611ba33ee3a79816a88b2500ed7844
+          - 0df17562844b7a0a0170c9830921c3442d59c73c
+          - b816e90e9b71c85539ea3bb897e4f234a0422f85
+          - 5f085b19657d2511a89f3172b7887ce29fc70792
+          - 4075375a08273e65c223116ecd2cef903ba97b1e
+          - 28139782562b0e4cab7f7885eca75dfca5e1d570
+          - b1ff7285b49f36fe8d65e7b896fccdb1618eaa4b
+          - 890b5473b419057f89802e0b6da011b315f3ef94
+          - e50a03d12ddac6ea626718286650b9bb858b2e69
+          - 9b0ec454401023df6d3d4903735301ba669aadd1
+          - dbfd8553c66275694fc4b32f9df16adea74145e6
+          - e0880dcfcb1724790dfeb7dfe01a5d54b33d80b6
+          - 73a5b0bee8c9fb4703a206608ed277a06aa1e384
+          SHA1: *id014
+          DriverSha1: *id014
+          TargetProcessSha1: *id014
+          Hashes.sha1: *id014
+    - url_detection:
+        PowershellCommand|contains: &id015
+        - https://www.welivesecurity.com
+        RequestUrl: *id015
+  condition: any of them

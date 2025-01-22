@@ -1,0 +1,93 @@
+title: OSINT - Malspam pushing Locky ransomware tries HoeflerText notifications for
+  Chrome and FireFox
+id: 5a37cd2b-208c-44c1-a08c-41d0950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  object_15336:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - a7b42163d1d160e1f40e9578bba81bd933571b1e
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 19865bb16f4609b4703eaba1d773d60a85009b715274ad862ca4cbb5772c621a
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 1974edcb8326835d1ad1ca94d70a914a
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_15338:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 05ff3b6bc80e3eef785aca0a7c65e86da6fcd32d
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - decd71ae3b5e683f0c3d057ac0576cbd624ca10734e1984f15cb77fcd23c4a37
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 009e6dffb0f760c9ee154f46fa212e01
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - http://griffithphoto.com
+        - https://isc.sans.edu
+        - http://ambrogiauto.com
+        - http://arthurdenniswilliams.com
+        - http://autoecoleathena.com
+        - http://autoecoleboisdesroches.com
+        - http://autoecoledufrene.com
+        - http://binarycousins.com
+        - http://campusvoltaire.com
+        - http://charleskeener.com
+        - http://dar-alataa.com
+        - http://flooringforyou.co.uk
+        - http://geocean.co.id
+        - http://jakuboweb.com
+        - http://jaysonmorrison.com
+        - http://patrickreeves.com
+        - http://potamitis.gr
+        - http://tasgetiren.com
+        - http://gclubrace.info
+        - http://albion-cx22.co.uk
+        - http://avtokhim.ru
+        - http://bayimpex.be
+        - http://gestionale-orbit.it
+        - http://willemshoeck.nl
+        - http://dippydado.net
+        - http://46.183.165.45
+        RequestUrl: *id007
+  condition: any of them

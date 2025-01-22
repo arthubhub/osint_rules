@@ -1,0 +1,106 @@
+title: Turla Outlook White Paper
+id: 5b773e07-e694-458b-b99c-27f30a016219
+description: edit this field when analysing or editing the rule - reported by "ESET"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1122
+- attack.email_collection
+- attack.group.turla_group
+- attack.component_object_model_hijacking
+- attack.t1114
+logsource:
+  product: windows
+detection:
+  object_15757:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 8a7e2399a61ec025c15d06ecdd9b7b37d6245ec2
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - e869c8e7f61d4f49d357d02179ed557e466b1d66ce6993faddbc23d5992ff59b
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 7009af646c6c3e6abc0af744152ca968
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_15759:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - cf943895684c6ff8d1e922a76b71a188cfb371d7
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 6a9bc3a1eb4f814af952f27066b70136b9cd7ad980f705dad5bc91b697888b5f
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - af8889f4705145d4390ee8d581f45436
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_15760:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 851dffa6cd611dc70c9a0d5b487ff00bc3853f30
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+  object_15762:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id008
+          - f992abe8a67120667a01b88cd5bf11ca39d491a0
+          SHA1: *id008
+          DriverSha1: *id008
+          TargetProcessSha1: *id008
+          Hashes.sha1: *id008
+        sha256_detection:
+          sha256: &id009
+          - 881941ea24e92f4bd4d69d79e27ce1d2b10094172cb3cc93b223daf70ef2d867
+          SHA256: *id009
+          DriverSha256: *id009
+          TargetProcessSha256: *id009
+          Hashes.sha256: *id009
+        md5_detection:
+          md5: &id010
+          - ff8c3f362d7c9b9a19cfa09b4b3cfc75
+          MD5: *id010
+          DriverMd5: *id010
+          TargetProcessMd5: *id010
+          Hashes.md5: *id010
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id011
+        - https://github.com
+        - https://www.welivesecurity.com
+        - https://wws.cert-ist.com
+        RequestUrl: *id011
+  condition: any of them

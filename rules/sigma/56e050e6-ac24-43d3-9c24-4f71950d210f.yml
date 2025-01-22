@@ -1,0 +1,125 @@
+title: Malspam (2016-03-09) - Locky, TeslaCrypt
+id: 56e050e6-ac24-43d3-9c24-4f71950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - mommycantakeff.com
+        - witchbehereqq.com
+        - torgtehnik.ru
+        - ari-ev.com
+        - kaleofis.com
+        - edge-institut.org
+        - ahlanmedicalcentre.com
+        - cam-itour.info
+        - informaticauno.net
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 173.82.74.197
+        - 78.40.108.39
+        - 185.118.142.154
+        - 78.135.108.94
+        - 74.117.183.252
+        - 147.213.4.6
+        - 91.243.75.135
+        - 142.25.97.48
+        - 89.108.87.179
+        - 94.73.151.140
+        - 69.64.35.2
+        - 151.236.14.51
+        - 37.235.53.18
+        - 91.195.12.131
+        - 149.154.157.14
+        - 85.233.160.146
+        - 46.105.62.205
+        - 184.168.47.225
+        - 188.40.132.132
+        - 50.87.28.241
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - da893665253bb150357f5334044ce226f83bf5fc
+          - 49d55b2251f5b38c4b5bed3caa3a22cb350b8c31
+          - 71eb9147fbd1b2e26a765e7d4de376a1991922ec
+          - e7eec76ef8add57a102f38f9c1ad9da61ff2c79c
+          - c4940aa42fa81267a9e2a63f2a1c719a5088f468
+          - f57d0795b9f030b079df12920e878b2fae0c4e09
+          - 8c44d22ebe9a12b77d52d07df6e170b24a8c4f19
+          - 2d3d72d7df8c35ed7939431ac8c0309aa2e4cedb
+          - 89d7a593b730a2c7c89fa506dc2b37a51068d67e
+          - 430a038349c05fa47aa7917f7d97ba4dac15cbe1
+          - 3ab801425b1bf8eae78c0b4fe0751d92aef8014e
+          - bd2846e87e4012ea72a508300de8ec3c68778fea
+          - 08d493d7afc20b9cfce70e641fb07537fe105f32
+          - 84b9da7aba08ae045cbeb79feacdfb38baecb4c6
+          - 3802ff83640b013fc1295d6a3191fbf18a1846e5
+          - 4716856ccfaf9d6da5c5ef7fd92c815750660108
+          - 310df2a0e574db6511b35a165d71c4d78c050c02
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - cc34e2ed0fc564dbabadddaa5c7f953f7187a6d5a8aaa8ae92edd9d11baf3de1
+          - 1f8f0007f437b4cf355913722568b95112a3786be6d24c0980cb4bb72af94d96
+          - 192a46bb8952ccc1fcbb620ce5adaf77b67f32949cf4989c1bed0a22ec46f96d
+          - 1af82c782877d943a137a3d7de610cb2cfc8871879de4912d6b5cc3c6cb0acea
+          - 90e4468b681b4dfcac724aa46904e8fdadbf8cd238b88d9e2769c1f2024d078d
+          - 00b1fa0bf426c6abe13e8334b1d92e9deb284c4aa19117b4dd988ef61c924ce7
+          - ddf70b11b61b6c496c78c93c759297286e227f03b8cbc3ba9d7df0653295d877
+          - e42da926490c01d608eb02cbb6553ac488cfc24b5c56d6566617eeca9003aa82
+          - 7724f7c3f68423afa353df334435adcbf6a3a5356a7c6d03e08aa5ddf41d43eb
+          - d536fb9620493a6fee54863306b744cbaf2bb7c3301d2042406b3a6383b23a57
+          - a1241150c5b9e095d0cd37a51a4eeb511b2087e036ea02d75f045659f0f8286b
+          - 94212563ebd10f4fbd52f203dd45c939e9ef097b96d0a7ec8d9952e8369b7e75
+          - 5863081c8714364fd4f88667667e6d8930512d30818db66d96317790385e4336
+          - 2b602a949a0e62c5a45549fd91ce1777ed1dc0b05c8472ae3ae224d05fb82754
+          - 019cbaf5d6e0e88ff36ce1be20dcaea0c72c3eeddee27f4773531d8b66a2ca8b
+          - b38d6261a2031977d74e18dd8347328fed9fa352757ef3a77717049b84353556
+          - 9b09a502597a71b493d88663f45cf66f73760e005ebde1138b6f0c80ae7aa070
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - e7bd868fcbf16e13756f547f016a62fc
+          - 6d42c5aa20117483b47b6e9c10444626
+          - 3eb979e16b4c0a18ef1f329370493880
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://78.40.108.39
+        - http://kaleofis.com
+        - http://ari-ev.com
+        - http://www.ekowen.sk
+        - http://torgtehnik.ru
+        - http://witchbehereqq.com
+        - http://mommycantakeff.com
+        - http://91.195.12.131
+        - http://37.235.53.18
+        - http://151.236.14.51
+        - http://ahlanmedicalcentre.com
+        - http://specializedaccess.co.uk
+        - http://edge-institut.org
+        - http://www.informaticauno.net
+        - http://cam-itour.info
+        RequestUrl: *id006
+  condition: any of them

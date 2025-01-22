@@ -1,0 +1,205 @@
+title: Linux server infection with coinminers (derived from original post with iptables
+  rules)
+id: 5cf22f74-759c-4744-90eb-4300950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1059
+- attack.software.coinminer
+- attack.t1496
+- attack.group.coinminer
+logsource:
+  product: windows
+detection:
+  object_866:
+    all:
+    - ip_detection:
+        DestinationIp: &id001
+        - 165.227.140.184
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+  object_867:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 535fd49cf76e48d610f2e80d0ce16d722ba6b949
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 7a38a2d4512b775da7ea7c98e03df1ae348493ce512d761013ae123da4379805
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 2cb968c8d33d89af2ec03df8fd875ab6
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+  object_869:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id005
+          - 6faf93653c6f64d7aa814c878fed112a6db992f6
+          SHA1: *id005
+          DriverSha1: *id005
+          TargetProcessSha1: *id005
+          Hashes.sha1: *id005
+        sha256_detection:
+          sha256: &id006
+          - 0bc0ea8a037baa0154c4c136bf7a3167cfd81f3c33b2969855d4ef5ce0090e72
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+        md5_detection:
+          md5: &id007
+          - 3694010708de4a2c916e34cbe2a0ed60
+          MD5: *id007
+          DriverMd5: *id007
+          TargetProcessMd5: *id007
+          Hashes.md5: *id007
+  object_871:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id008
+          - 4ee5040af71f5fd8080f0f0bed2672bc1f68d1e1
+          SHA1: *id008
+          DriverSha1: *id008
+          TargetProcessSha1: *id008
+          Hashes.sha1: *id008
+        sha256_detection:
+          sha256: &id009
+          - 1fc77ceb1ffad48a067c9c83bc1c5347e4b359b4520859b91fc14fedc29a8803
+          SHA256: *id009
+          DriverSha256: *id009
+          TargetProcessSha256: *id009
+          Hashes.sha256: *id009
+        md5_detection:
+          md5: &id010
+          - 9f189f26da1206151ce39e5aab269ff6
+          MD5: *id010
+          DriverMd5: *id010
+          TargetProcessMd5: *id010
+          Hashes.md5: *id010
+  object_872:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id011
+        - http://87.236.212.237
+        RequestUrl: *id011
+  object_873:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id012
+        - http://185.165.169.6
+        RequestUrl: *id012
+  object_874:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id013
+        - http://87.236.212.237
+        RequestUrl: *id013
+  object_875:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id014
+        - http://41.203.146.142
+        RequestUrl: *id014
+  object_876:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id015
+          - 69af27d553292952e4d93338c44b0f4e66a15470
+          SHA1: *id015
+          DriverSha1: *id015
+          TargetProcessSha1: *id015
+          Hashes.sha1: *id015
+        sha256_detection:
+          sha256: &id016
+          - 3d02bbddc185352ddc1dea20f54e2f2b39f180a9bd26d8453b5ad7b983466c95
+          SHA256: *id016
+          DriverSha256: *id016
+          TargetProcessSha256: *id016
+          Hashes.sha256: *id016
+        md5_detection:
+          md5: &id017
+          - 9ae7dc5ff13526e8cc5b8c236066a828
+          MD5: *id017
+          DriverMd5: *id017
+          TargetProcessMd5: *id017
+          Hashes.md5: *id017
+  object_877:
+    all:
+    - ip_detection:
+        DestinationIp: &id018
+        - 45.77.54.157
+        SourceIp: *id018
+        IpAddresses: *id018
+        destination.ip: *id018
+        RequestUrl|contains: *id018
+  object_878:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id019
+          - da05b42311606eaa03ca8edd6a94ff2eacd44c2b
+          SHA1: *id019
+          DriverSha1: *id019
+          TargetProcessSha1: *id019
+          Hashes.sha1: *id019
+        sha256_detection:
+          sha256: &id020
+          - 62ca3fd070d6447e844c76e4bedcce908a18bc275c1a713415d11838b1cb5f04
+          SHA256: *id020
+          DriverSha256: *id020
+          TargetProcessSha256: *id020
+          Hashes.sha256: *id020
+        md5_detection:
+          md5: &id021
+          - f049ae13406fdebadb10960bc0deee87
+          MD5: *id021
+          DriverMd5: *id021
+          TargetProcessMd5: *id021
+          Hashes.md5: *id021
+  object_879:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id022
+        - https://twitter.com
+        RequestUrl: *id022
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id023
+          - 0bc0ea8a037baa0154c4c136bf7a3167cfd81f3c33b2969855d4ef5ce0090e72
+          SHA256: *id023
+          DriverSha256: *id023
+          TargetProcessSha256: *id023
+          Hashes.sha256: *id023
+        md5_detection:
+          md5: &id024
+          - 2cb968c8d33d89af2ec03df8fd875ab6
+          MD5: *id024
+          DriverMd5: *id024
+          TargetProcessMd5: *id024
+          Hashes.md5: *id024
+    - url_detection:
+        PowershellCommand|contains: &id025
+        - http://165.227.140.184
+        RequestUrl: *id025
+  condition: any of them

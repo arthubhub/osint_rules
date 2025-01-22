@@ -1,0 +1,93 @@
+title: 'M2M -  Locky Affid=3, "asasin" / Trickbot "mac1" 2017-10-10 : "Status of invoice
+  A2171234-56" - "A2171234-56.html"'
+id: 59dce1ec-b998-42ad-ba4f-48a4950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.trick_bot
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 180.222.185.74
+        - 49.51.134.194
+        - 72.52.195.204
+        - 67.210.102.240
+        - 217.199.175.27
+        - 91.83.88.51
+        - 46.237.117.193
+        - 79.170.7.139
+        - 41.57.103.218
+        - 196.202.194.202
+        - 46.20.56.239
+        - 176.120.126.21
+        - 91.239.249.118
+        - 194.87.103.184
+        - 92.63.102.64
+        - 194.87.238.53
+        - 92.63.102.159
+        - 194.87.232.219
+        - 149.154.69.70
+        - 78.24.223.153
+        - 194.87.92.207
+        - 194.87.94.239
+        - 195.133.147.238
+        - 62.109.15.132
+        - 194.87.236.240
+        - 62.109.6.237
+        - 149.154.69.47
+        - 82.146.47.121
+        - 78.24.216.250
+        - 82.146.56.218
+        - 185.159.131.198
+        - 194.87.146.32
+        - 5.133.179.77
+        - 94.242.224.214
+        - 194.87.92.242
+        - 195.133.146.236
+        - 193.124.117.238
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 47dde438bfb84ef917b8beadf5fde3f0f503c013
+          - 0db85dd510c03b3642bd7d1f214bade1a2574106
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - aace7044f2f3cd7bb109a2e5d494ac86d952e0eaa13ce8d6abd7e4744f2ede10
+          - 10bed3e54c61088d5dc0d1be55da154efbcb32130ebf228e446fc97f5787e7a0
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - a85fa294fa2d4d48565cd78b4950695d
+          - 554a8eabcb28deeb57d70a3c1d6c3a5d
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://haproprab.net
+        - http://yamanashi-jyujin.jp
+        - http://smi-wi.com
+        - http://qxr33qxr.com
+        - http://mtblanc-let.co.uk
+        RequestUrl: *id005
+  condition: any of them

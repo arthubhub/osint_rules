@@ -1,0 +1,79 @@
+title: March 2021 Exchange Server Security Updates for older Cumulative Updates of
+  Exchange Server
+id: fd875781-262e-4159-a0cd-ac0241784cc7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_15412:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://techcommunity.microsoft.com
+        RequestUrl: *id001
+  object_15413:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 0ba9a76f55aaa495670d74d21850d0155ff5d6a5
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - b75f163ca9b9240bf4b37ad92bc7556b40a17e27c2b8ed5c8991385fe07d17d0
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 4b3039cf227c611c45d2242d1228a121
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+  object_15415:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id005
+          - fc6f5ce56166d9b4516ba207f3a653b722e1a8df
+          SHA1: *id005
+          DriverSha1: *id005
+          TargetProcessSha1: *id005
+          Hashes.sha1: *id005
+        sha256_detection:
+          sha256: &id006
+          - 511df0e2df9bfa5521b588cc4bb5f8c5a321801b803394ebc493db1ef3c78fa1
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+        md5_detection:
+          md5: &id007
+          - 5544ba9ad1b56101b5d52b5270421d4a
+          MD5: *id007
+          DriverMd5: *id007
+          TargetProcessMd5: *id007
+          Hashes.md5: *id007
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id008
+          - b75f163ca9b9240bf4b37ad92bc7556b40a17e27c2b8ed5c8991385fe07d17d0
+          - 811157f9c7003ba8d17b45eb3cf09bef2cecd2701cedb675274949296a6a183d
+          - 65149e036fff06026d80ac9ad4d156332822dc93142cf1a122b1841ec8de34b5
+          - 511df0e2df9bfa5521b588cc4bb5f8c5a321801b803394ebc493db1ef3c78fa1
+          - 4edc7770464a14f54d17f36dc9d0fe854f68b346b27b35a6f5839adf1f13f8ea
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+  condition: any of them

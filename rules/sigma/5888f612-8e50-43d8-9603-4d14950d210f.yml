@@ -1,0 +1,45 @@
+title: OSINT - Detecting threat actors in recent German industrial attacks with Windows
+  Defender ATP
+id: 5888f612-8e50-43d8-9603-4d14950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.winnti
+- attack.group.barium
+- attack.group.lead
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - d740674f543565b3616c10c8f9c834ac39bb382f
+          - 56994d107bad32dddf8516351c9c137c3b1d0724
+          - 07d8314ceff227f32bce19b9a8d33a48eec6c7e7
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 964f9bfd52b5a93179b90d21705cd0c31461f54d51c56d558806fe0efff264e5
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - eada46387b377ff07a4f4c36e1778cd2
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://blogs.technet.microsoft.com
+        RequestUrl: *id004
+  condition: any of them

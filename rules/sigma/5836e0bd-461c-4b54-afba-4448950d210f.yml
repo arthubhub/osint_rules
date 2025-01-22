@@ -1,0 +1,33 @@
+title: Cerber 5.0 through Google via onion gateway
+id: 5836e0bd-461c-4b54-afba-4448950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 86e4fe06a8bc2efe8f16e418866cc6581da0e9e8
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - bdaacb4e4d0f3a33c3a9199fd3cbaa2ab0047c269068d41773a754379c9c75c5
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://www.google.com
+        - https://pvjk6aukijrdwwqs.onion.to
+        - http://ffoqr3ug7m726zou.vofy7f.top
+        RequestUrl: *id003
+  condition: any of them

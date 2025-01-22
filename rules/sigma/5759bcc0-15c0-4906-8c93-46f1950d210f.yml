@@ -1,0 +1,118 @@
+title: 'OSINT - Rotten Apples: Apple-Like Malicious Phishing Domains by FireEye'
+id: 5759bcc0-15c0-4906-8c93-46f1950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - icloud-apple-apleid.com
+        - appleidapplecwy.com
+        - ioslock-iphone.com
+        - appleid-xyw.com
+        - icloudhh.top
+        - appleid-yun-icloud.com
+        - icloud-mail-apple.com
+        - itnues-appid.com
+        - appie-itnues.com
+        - icloud-appleid-yun.win
+        - iphone-appdw.com
+        - ioslock-apple.com
+        - iclouddd.top
+        - iphone-iosl0ck.com
+        - apple-web-icluod.com
+        - icloudee.top
+        - iphone-ioslock.com
+        - icloud-findip.com
+        - lcloudmid.com
+        - appleicloudsupportticket84752.com
+        - appleticket-434s.com
+        - appleticket-782765.info
+        - appleticketid-593212.org
+        - appleticket-0893209.info
+        - appleticket-0932389.net
+        - applesupport-83439.org
+        - appleticketid-688392.com
+        - appleticket-782765.com
+        - appleticket-298374.org
+        - applesupport-83431.com
+        - appleticket-321828.info
+        - appleticket-0893209.net
+        - appleticket-0893209.com
+        - appleticket-839234.net
+        - appleticket-872398.com
+        - appleticketid-983241.net
+        - applesupport4853.org
+        - appleticketid-983241.com
+        - appleticket-298374.com
+        - applesupport-id9376.com
+        - appleticket-782765.org
+        - appleticketid-593212.com
+        - appleticket-0932389.org
+        - appleticket-321828.net
+        - appleticket-291823.org
+        - appleticketid-983241.org
+        - appleticket-0893209.org
+        - applesupport4853.com
+        - appleticket-839234.org
+        - appleticketid-483938.info
+        - appleticket-291823.net
+        - applesupport-83431.org
+        - appleticket-437ss.info
+        - appleticketid-688392.net
+        - appleicloudsupport-ticket84752.net
+        - appleticket-364738.org
+        - applesupport-83439.info
+        - appleticket-839234.info
+        - applesupport-id9376.org
+        - appleticket-291646.info
+        - appleticket-437ss.net
+        - appleticketid-483938.net
+        - appleticket-364738.info
+        - appleticket-321828.org
+        - appleticketid-983241.info
+        - appleticketid-743532.com
+        - applesupport-83439.com
+        - appleticket-0932389.info
+        - appleticketid-743532.net
+        - applesupport-83439.net
+        - appleticket-437ss.com
+        - appleticketid-743532.info
+        - appleticket-872398.info
+        - applesupport-83431.info
+        - appleticket-872398.org
+        - appleticket-437ss.org
+        - appleticketid-593212.net
+        - applesupport-67s422.org
+        - appleticket-782765.net
+        - manageappleid84913.info
+        - appleticketid-688392.org
+        - applesupport-83431.net
+        - appleticket-364738.net
+        - manageappleid-84924.com
+        - appleticketid-483938.org
+        - appleticket-31343.net
+        - appleticketid-688392.info
+        - appleticketid-593212.info
+        - applesupport4853.net
+        - appleticket-434s.net
+        - appleticket-872398.net
+        - appleticket-0932389.com
+        - appleticket-321828.com
+        - appleticketid-743532.org
+        - manageappleid84913.org
+        - appleticket-291823.info
+        - manageappleid84913.com
+        - manageappleid-84924.org
+        RequestUrl: *id001
+        QueryName: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://www.fireeye.com
+        RequestUrl: *id002
+  condition: any of them

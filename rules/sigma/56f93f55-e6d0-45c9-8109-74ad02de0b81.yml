@@ -1,0 +1,75 @@
+title: Locky of the day (20160328) -  affid=3
+id: 56f93f55-e6d0-45c9-8109-74ad02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - comprecaldas.com
+        - distrazur.com
+        - homedesire.co.uk
+        - dragonex.com
+        - orkneyhampers.co.uk
+        - lascelta.com
+        - wholesale.undercovermama.com
+        - pockettypewriter.co.uk
+        - scorpena.com
+        - sandbox.bottlestore.com
+        - store.brugomug.co.uk
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 92.63.87.134
+        - 176.31.47.100
+        - 185.117.72.94
+        - 84.19.170.249
+        - 83.217.8.127
+        - 91.200.14.73
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 76f27ed591f0270e73dbb0853e71f80a5b32218e
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 61894322c327ef2cbead173387a955db7e0dfa0ae7799bbe9608b15c78964d7e
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 1f1e3688f85070dd1e9a766d03b6817e
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://comprecaldas.com
+        - http://distrazur.com
+        - http://dragonex.com
+        - http://homedesire.co.uk
+        - http://lascelta.com
+        - http://orkneyhampers.co.uk
+        - http://pockettypewriter.co.uk
+        - http://sandbox.bottlestore.com
+        - http://scorpena.com
+        - http://store.brugomug.co.uk
+        - http://wholesale.undercovermama.com
+        RequestUrl: *id006
+  condition: any of them

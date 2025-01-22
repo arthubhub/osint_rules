@@ -1,0 +1,81 @@
+title: OSINT - PLEAD Downloader Used by BlackTech
+id: 5b1a247e-2ca0-4132-9210-4b5c950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.plead_downloader
+logsource:
+  product: windows
+detection:
+  object_15217:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://mobile.twitter.com
+        RequestUrl: *id001
+  object_15218:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - bc2c8cc9896cdd5816509f43cb5dca7433198251d754a997a70db7e8ed5cca40
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_15219:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - a26df4f62ada084a596bf0f603691bc9c02024be98abec4a9872f0ff0085f940
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+  object_15220:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - 2ddb2030ab3373b9438102b541aa4623b7dfee972850dcef05742ecbe8982e22
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  object_15221:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id005
+          - eec3f761f7eabe9ed569f39e896be24c9bbb8861b15dbde1b3d539505cd9dd8d
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+  object_15222:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id006
+          - 23f554cc5bea9d4ccd62b0bbccaa4599f225ebce4ad956a576cc1a9b2a73dc15
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id007
+        - 210.71.209.206
+        SourceIp: *id007
+        IpAddresses: *id007
+        destination.ip: *id007
+        RequestUrl|contains: *id007
+    - url_detection:
+        PowershellCommand|contains: &id008
+        - https://blog.jpcert.or.jp
+        RequestUrl: *id008
+  condition: any of them

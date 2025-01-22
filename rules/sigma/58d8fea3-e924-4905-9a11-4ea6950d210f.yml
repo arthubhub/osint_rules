@@ -1,0 +1,45 @@
+title: 'OSINT - Shamoon 2: Delivering Disttrack'
+id: 58d8fea3-e924-4905-9a11-4ea6950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.shamoon
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - d6e98ff295345579e35d8ba21693a64dd80c03a2
+          - 31754ee85d21ce9188394a939c15a271c2562f93
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 4919436d87d224f083c77228b48dadfc153ee7ad48dd7d22f0ba0d5090b5cf9b
+          - 5475f35363e2f4b70d4367554f1691f3f849fb68570be1a580f33f98e7e4df4a
+          - 01a461ad68d11b5b5096f45eb54df9ba62c5af413fa9eb544eacb598373a26bc
+          - c7f937375e8b21dca10ea125e644133de3afc7766a8ca4fc8376470277832d95
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 271554cff73c3843b9282951f2ea7509
+          - 22e9853298c96b1ab89d8f71c4e82302
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://researchcenter.paloaltonetworks.com
+        RequestUrl: *id004
+  condition: any of them

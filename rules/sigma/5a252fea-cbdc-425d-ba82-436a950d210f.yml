@@ -1,0 +1,41 @@
+title: OSINT - Test Cryptomix Ransomware Variant Released
+id: 5a252fea-cbdc-425d-ba82-436a950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.cryptomix
+- attack.software.cryptomix
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - e20b53e74da470d6e36ed15ba70eb1f1658eaaaf
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 0b2f5f6e61a81c9a872827e5ea1fd5ea05ca470b55975267b00033251dc79c1b
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 74c7bec8d4949ebf2f8f6be1af2f2113
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id004
+  condition: any of them

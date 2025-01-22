@@ -1,0 +1,48 @@
+title: OSINT - ConnectWise ScreenConnect attacks deliver malware
+id: f8912a82-2870-4de2-9663-5fdbee0ed401
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1190
+logsource:
+  product: windows
+detection:
+  object_15438:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://news.sophos.com
+        RequestUrl: *id001
+  object_15439:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - 2da975fee507060baa1042fb45e8467579abf3f348f1fd37b86bb742db63438a
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_15440:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - a50d9954c0a50e5804065a8165b18571048160200249766bfa2f75d03c8cb6d0
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+  object_15441:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - c94038781c56ab85d2f110db4f45b86ccf269e77a3ff4b9133b96745ff97d25f
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  condition: any of them

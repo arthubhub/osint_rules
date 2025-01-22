@@ -1,0 +1,43 @@
+title: Malspam week 44 (2016-10-24) - Locky ('Sebek')
+id: 580dc270-81d8-49fa-91cd-417d950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 172.245.9.41
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 06635fa1757440a3ab650df5b42606b0feb7f1e3
+          - bb73bb55c75f620418dfa2bbbd4dbff65b8d5e64
+          - ceb388ed85a1921f5891efa9b3358ac75f1f5dcd
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 89a292c7a32286a18c3874804fc362b9c38f49745a1e4745498197d8e2600ee8
+          - 39bab24fce603a1e77c0a9967aedf78a40820fa33b82373a4d385560178f503c
+          - 245f55dea33f8a6cee9f347a6b08cffd112b9ee847dcfc74e04fe9fd6d40bd45
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://www.injusticeil.top
+        - http://www.surprisingdd.top
+        RequestUrl: *id004
+  condition: any of them

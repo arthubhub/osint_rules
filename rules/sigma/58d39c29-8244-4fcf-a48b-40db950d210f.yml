@@ -1,0 +1,59 @@
+title: 'OSINT -  Hunt Case Study: Hunting Campaign Indicators on Privacy Protected
+  Attack Infrastructure'
+id: 58d39c29-8244-4fcf-a48b-40db950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - primeminister-goverment-techcenter.tech
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 212.199.61.51
+        - 86.105.18.5
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 59c448abaa6cd20ce7af33d6c0ae27e4a853d2bd
+          - 15cac8196cc1cec4d3909698fc5d8a5250d826b5
+          - 341c920ec47efa4fd1bfcd1859a7fb98945f9d85
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 5fe0e156a308b48fb2f9577ed3e3b09768976fdd99f6b2d2db5658b138676902
+          - 4d657793ddc9c49abe7e4afcf9abb43626e91a18a925223555070c53fd672b59
+          - 7651f0d886e1c1054eb716352468ec6aedab06ed61e1eebd02bca4efbb974fb6
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - b34721e53599286a1093c90a9dd0b789
+          - 62f8f45c5f10647af0040f965a3ea96d
+          - 871efc9ecd8a446a7aa06351604a9bf4
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://blog.domaintools.com
+        - http://ssl.pmo.gov.il-dana-naauthurl1-welcome.cgi.primeminister-goverment-techcenter.tech
+        RequestUrl: *id006
+  condition: any of them

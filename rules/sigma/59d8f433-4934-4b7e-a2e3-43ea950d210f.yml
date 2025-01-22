@@ -1,0 +1,98 @@
+title: 'M2M -  Locky 2017-10-05 : Affid=3, offline, ".ykcol" : "Invoice INV000123"
+  - "Invoice INV000123.7z"'
+id: 59d8f433-4934-4b7e-a2e3-43ea950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 98.124.251.65
+        - 175.107.146.17
+        - 85.235.131.27
+        - 98.124.251.204
+        - 109.71.42.24
+        - 195.154.231.6
+        - 69.156.240.29
+        - 98.124.251.167
+        - 195.114.0.64
+        - 202.169.44.149
+        - 195.225.168.230
+        - 80.88.87.95
+        - 117.55.235.14
+        - 202.169.44.152
+        - 202.169.44.167
+        - 195.160.216.10
+        - 74.208.100.102
+        - 185.58.7.11
+        - 40.76.209.29
+        - 91.192.195.51
+        - 85.128.227.19
+        - 66.135.55.8
+        - 192.126.92.143
+        - 82.145.60.140
+        - 209.54.62.81
+        - 174.141.224.179
+        - 131.72.237.171
+        - 213.165.85.53
+        - 173.203.199.105
+        - 195.60.215.74
+        - 83.175.70.7
+        - 199.30.241.139
+        - 5.2.27.27
+        - 23.229.153.66
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - http://conxibit.com
+        - http://agriturismo-1001ulivo.it
+        - http://akolade.com
+        - http://alexandre-azaria.com
+        - http://agricom.it
+        - http://agriturismobellaria.net
+        - http://moonmusic.com.au
+        - http://abelfaria.pt
+        - http://balzantruck.com
+        - http://bnphealthcare.com
+        - http://demopowerindo.com
+        - http://ecofloraholland.nl
+        - http://emeryconsult.com
+        - http://eurecas.org
+        - http://georginabringas.com
+        - http://highpressurewelding.co.uk
+        - http://ilibarcelos.pt
+        - http://lasdamas.com
+        - http://logistics.nazwa.pl
+        - http://machala.freehost.pl
+        - http://pnkparamount.com
+        - http://teracom.co.id
+        - http://troyriser.com
+        - http://unifiedfloor.com
+        - http://www.100kisses.org
+        - http://www.gtCartographic.co.uk
+        - http://mrscrowe.net
+        - http://2-wave.com
+        - http://3e.com.pt
+        - http://9ninewright.net
+        - http://aerotransfer.cl
+        - http://a-host.co.uk
+        - http://allesandradesigns.com
+        - http://andresarlemijn.nl
+        - http://appartement-sailer.at
+        - http://asheardontheradiogreens.com
+        - http://felixsolis.mobi
+        - http://PamelaSparrowChilds.com
+        - http://thedarkpvp.net
+        RequestUrl: *id002
+  condition: any of them

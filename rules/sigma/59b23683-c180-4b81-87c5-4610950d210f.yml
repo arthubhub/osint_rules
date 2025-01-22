@@ -1,0 +1,38 @@
+title: OSINT -  New multi platform malware/adware spreading via Facebook Messenger
+id: 59b23683-c180-4b81-87c5-4610950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - a6f1d1e11c4399dd280fbdba3309357da94ec500
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - ad1b11cb053df4e8cb890872fa4a25057d514a8c2778b6b745c5aaf5b3f984cd
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - ebc117c0cf03ad4b13184d1253862586
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://securelist.com
+        RequestUrl: *id004
+  condition: any of them

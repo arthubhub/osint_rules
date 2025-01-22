@@ -1,0 +1,73 @@
+title: 'M2M -  Locky 2017-09-25 : Affid=3, offline, ".ykcol" : "Message from 02087654321"
+  - "Voice Message.7z"'
+id: 59c8f958-be58-46da-8a21-4c5f950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 72.32.177.50
+        - 49.51.36.73
+        - 199.30.241.139
+        - 212.89.16.142
+        - 81.169.244.233
+        - 94.102.214.231
+        - 193.227.248.247
+        - 149.210.129.109
+        - 80.172.241.36
+        - 213.142.143.191
+        - 77.72.25.23
+        - 188.93.75.198
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 7f07f3b5ba830d55822f75836f0bbbe0ef579256
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - b86a830769fcfd54201495353c5ab8931f7ca796ef54a2219a04b9e7cb7d2a7a
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 8dbdd9122dadc54f21747cc4f0ab267c
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://tertrodefordown.info
+        - http://asheardontheradiogreens.com
+        - http://artplast.uz
+        - http://asesoreszapico.com
+        - http://audio-pa-service.de
+        - http://augsburger-maerchentheater.de
+        - http://auto-ecole-prudence.com
+        - http://automattenonline.com
+        - http://awoodshop.net
+        - http://azimuth.com.pt
+        - http://baburkuyumculuk.com
+        - http://bagnolipisa.it
+        - http://barberomudanzas.com
+        - http://bor.uz
+        RequestUrl: *id005
+  condition: any of them

@@ -1,0 +1,88 @@
+title: Is Hagga Threat Actor (ab)using FSociety framework ?
+id: f07207d5-e6f7-4369-9a9d-a1390b83aaeb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_15840:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id001
+          - 9ea4eebd9cf2a5d4e6343cb559d8c996fae6bf0f3bd7ffada0567053c08acc31
+          SHA256: *id001
+          DriverSha256: *id001
+          TargetProcessSha256: *id001
+          Hashes.sha256: *id001
+  object_15841:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - ab5b1989ddf6113fcb50d06234dbef65d871e41ce8d76d5fb5cc72055c1b28ba
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_15842:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - 20a53f17071f377d50ad9de30fdddd320d54d00b597bf96565a2b41c15649f76
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+  object_15843:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - 5d910ee5697116faa3f4efe230a9d06f6e3f80a7ad2cf8e122546b10e34a0088
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  object_15844:
+    all:
+    - ip_detection:
+        DestinationIp: &id005
+        - 103.151.123.121
+        SourceIp: *id005
+        IpAddresses: *id005
+        destination.ip: *id005
+        RequestUrl|contains: *id005
+  object_15845:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://4.204.233.44
+        RequestUrl: *id006
+  object_15846:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - http://4.204.233.44
+        RequestUrl: *id007
+  object_15847:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id008
+        - https://marcoramilli.com
+        RequestUrl: *id008
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id009
+        - 69.174.99.181
+        - 4.204.233.44
+        - 103.151.123.121
+        SourceIp: *id009
+        IpAddresses: *id009
+        destination.ip: *id009
+        RequestUrl|contains: *id009
+  condition: any of them

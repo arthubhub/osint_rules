@@ -1,0 +1,123 @@
+title: Remcos RAT 02-28-20
+id: 5e5da86d-bfec-4b9a-ae77-57540a0a020f
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1202
+- attack.t1065
+- attack.t1036
+- attack.t1060
+- attack.group.remcos
+- attack.t1054
+- attack.t1099
+- attack.t1064
+- attack.software.remcos
+- attack.t1193
+logsource:
+  product: windows
+detection:
+  object_15700:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 71866e693115a2267657adbcc64e2680b1d3d602
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - ee66c92d54e26d81966c3f8a6ebacf2298fd60696f3f0f67dc675bc61d93d14e
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - ce2d6bef0c6cfd91ca0bd692bf070fe7
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_15701:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 023831f60ab29aae1c0332cb6af80c890f4b9285
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 9c5d88aa18845bd266819994a6bda3253e2df91e942b1b5428a317ab6e189155
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 94a6b123b494cf3990d872d047b0071d
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_15702:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 545cada323b15eeca35a71726d6be830cc7f8b5d
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 66cc741a61fe877e9698d180c19a47495fd49bd9699726d92d88d5c55fe85d17
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 2481f731acf1c77df7ac4b231821dc71
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id010
+        - usadroptop1.com
+        - usadroptop2.com
+        - usadroptop3.com
+        - usadroptop4.com
+        - usadroptop5.com
+        - usadroptop6.com
+        - usadroptop7.com
+        - usadroptop8.com
+        - usadroptop9.com
+        - usadroptop10.com
+        - droptop1.com
+        - droptop2.com
+        - droptop3.com
+        - droptop4.com
+        - droptop5.com
+        - droptop6.com
+        - droptop7.com
+        - droptop8.com
+        - droptop9.com
+        - droptop10.com
+        RequestUrl: *id010
+        QueryName: *id010
+    - url_detection:
+        PowershellCommand|contains: &id011
+        - https://laskowski-tech.com
+        RequestUrl: *id011
+  condition: any of them

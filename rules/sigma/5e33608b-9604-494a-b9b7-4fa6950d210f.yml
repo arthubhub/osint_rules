@@ -1,0 +1,128 @@
+title: VBS Downloader and Defender Control
+id: 5e33608b-9604-494a-b9b7-4fa6950d210f
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_15209:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 157e73777849587b33d789ec7880bd1497a6a1d0
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - c85525ca92a4a0c02992fcab123323eed59876638bccad3949952a02c8271282
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - e376de5663f6da59adc4926f227277d8
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_15210:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 5da4de1dbba55774891497297396fd2e5c306cf5
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - a201f7f81277e28c0bdd680427b979aee70e42e8a98c67f11e7c83d02f8fe7ae
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 3a24a7b7c1ba74a5afa50f88ba81d550
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_15211:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id007
+          - 9ed6a2c887466c353cefde8475095bde936db385e337f085f62ed3cd470d21ec
+          SHA256: *id007
+          DriverSha256: *id007
+          TargetProcessSha256: *id007
+          Hashes.sha256: *id007
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id008
+        - 185.81.114.49
+        - 212.129.62.232
+        - 130.89.149.57
+        - 185.96.88.29
+        - 217.160.141.52
+        - 204.13.164.118
+        - 62.210.83.207
+        - 195.123.245.141
+        - 200.219.222.205
+        SourceIp: *id008
+        IpAddresses: *id008
+        destination.ip: *id008
+        RequestUrl|contains: *id008
+    - hash_detection:
+        sha1_detection:
+          sha1: &id009
+          - e06b32189ebe718e749ca1c13b708dc315bd80b4
+          SHA1: *id009
+          DriverSha1: *id009
+          TargetProcessSha1: *id009
+          Hashes.sha1: *id009
+        sha256_detection:
+          sha256: &id010
+          - 9ed6a2c887466c353cefde8475095bde936db385e337f085f62ed3cd470d21ec
+          - 288100583f65a2b7acfc0c7e231c0e268c58d3067675543f627c01e82f6fd884
+          - 4751809ef6fd3ced738392e7c5df6d4e3938d85711daa0b52b045b5092913c27
+          - e886954dda4cecdf16fdf8c45d5062692c2051dac2b0f4a8e288480ff9b99b61
+          - c4dbed05760a52833d8d714686ee48efbec44b182d354a9ae8942768a9a19cd2
+          - bb2958b2fb3b99f86137ba9bd0122f1dfbc25b77dc8381e8072babb2945c64eb
+          - fde69dcbccb36d4a269a61e45978cff6b9462bb7af15808ce4ccce59f0a566b6
+          - 1ad61b7364a6bfc55d4dd2f1309c7ff8818c22b91407439d768d0d84090a9bbf
+          - b076ba10a04f86f3d0d8ee587ca30addad3f2de1d99dd40dc2c2fec81d051787
+          - 08103ded79a6069be980c9ce74ed04e2f628964b128c6be3c0571dd061b89327
+          - 92d7137e37285ec2eb07471930a7a5bf5aad1f8dccfebd9696570bcb29daf367
+          - 178fc58b34094c32bf7fb903ea9d40d217a78c09feaed836a78ad570381c37a3
+          - a8749afa1916fbb0f579f5b68fafaca629f5930a30ea974d5136b62c3ea232ab
+          - cf8582a4cf26125c4966e5739539a49a02634acaa3bb5bdbf5c0484d2b76d103
+          - 010d814276e6c43dca396c156567a2f513992f6fdb9a030f552c399bcd2b1bbb
+          - bca3a76c9e4d7b2c936d3ff78b7aa40cf51771dda828bed91d66d77073d6c0d0
+          - 97564e945e1ec5a9b401fe69f4bd99663a9bf84ad6f5804d683d0890803975dc
+          SHA256: *id010
+          DriverSha256: *id010
+          TargetProcessSha256: *id010
+          Hashes.sha256: *id010
+        md5_detection:
+          md5: &id011
+          - 2ed20c74e46b75a2e151de7682235de4
+          MD5: *id011
+          DriverMd5: *id011
+          TargetProcessMd5: *id011
+          Hashes.md5: *id011
+    - url_detection:
+        PowershellCommand|contains: &id012
+        - https://www.wilbursecurity.com
+        - http://185.81.114.49
+        RequestUrl: *id012
+  condition: any of them

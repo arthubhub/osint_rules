@@ -1,0 +1,26 @@
+title: OSINT -  Recent Cloud Atlas activity
+id: 5d52daab-6db4-45f1-9fdf-45fc950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.cloud_atlas
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 176.31.59.232
+        - 144.217.174.57
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://securelist.com
+        RequestUrl: *id002
+  condition: any of them

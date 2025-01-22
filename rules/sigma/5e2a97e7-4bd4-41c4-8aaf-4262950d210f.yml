@@ -1,0 +1,205 @@
+title: OSINT - Iranian PupyRAT Bites Middle Eastern Organizations
+id: 5e2a97e7-4bd4-41c4-8aaf-4262950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.apt35
+- attack.software.s0192
+- attack.group.cleaver
+- attack.software.pupyrat
+- attack.group.oilrig
+- attack.group.g0059
+- attack.group.magic_hound
+logsource:
+  product: windows
+detection:
+  object_8075:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://mobile.twitter.com
+        RequestUrl: *id001
+  object_8076:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id002
+        - ntg-sa.com
+        - ntg.com.sa
+        RequestUrl: *id002
+        QueryName: *id002
+    - ip_detection:
+        DestinationIp: &id003
+        - 45.32.186.33
+        SourceIp: *id003
+        IpAddresses: *id003
+        destination.ip: *id003
+        RequestUrl|contains: *id003
+  object_8077:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id004
+        - itworx.com-ho.me
+        - itworx.com
+        RequestUrl: *id004
+        QueryName: *id004
+    - ip_detection:
+        DestinationIp: &id005
+        - 45.32.186.33
+        SourceIp: *id005
+        IpAddresses: *id005
+        destination.ip: *id005
+        RequestUrl|contains: *id005
+  object_8078:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id006
+        - mci.com-ho.me
+        - mci.gov.sa
+        RequestUrl: *id006
+        QueryName: *id006
+    - ip_detection:
+        DestinationIp: &id007
+        - 45.32.186.33
+        SourceIp: *id007
+        IpAddresses: *id007
+        destination.ip: *id007
+        RequestUrl|contains: *id007
+  object_8079:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id008
+        - moh.com-ho.me
+        - moh.gov.sa
+        RequestUrl: *id008
+        QueryName: *id008
+    - ip_detection:
+        DestinationIp: &id009
+        - 45.32.186.33
+        SourceIp: *id009
+        IpAddresses: *id009
+        destination.ip: *id009
+        RequestUrl|contains: *id009
+  object_8080:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id010
+        - mol.com-ho.me
+        - mol.gov.sa
+        RequestUrl: *id010
+        QueryName: *id010
+    - ip_detection:
+        DestinationIp: &id011
+        - 45.32.186.33
+        SourceIp: *id011
+        IpAddresses: *id011
+        destination.ip: *id011
+        RequestUrl|contains: *id011
+  object_8081:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id012
+          - 934c51ff1ea00af2cb3b8465f0a3effcf759d866
+          SHA1: *id012
+          DriverSha1: *id012
+          TargetProcessSha1: *id012
+          Hashes.sha1: *id012
+        sha256_detection:
+          sha256: &id013
+          - 66d24a529308d8ab7b27ddd43a6c2db84107b831257efb664044ec4437f9487b
+          SHA256: *id013
+          DriverSha256: *id013
+          TargetProcessSha256: *id013
+          Hashes.sha256: *id013
+        md5_detection:
+          md5: &id014
+          - 1b5e33e5a244d2d67d7a09c4ccf16e56
+          MD5: *id014
+          DriverMd5: *id014
+          TargetProcessMd5: *id014
+          Hashes.md5: *id014
+  object_8082:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id015
+          - 3215021976b933ff76ce3436e828286e124e2527
+          SHA1: *id015
+          DriverSha1: *id015
+          TargetProcessSha1: *id015
+          Hashes.sha1: *id015
+        sha256_detection:
+          sha256: &id016
+          - 8d89f53b0a6558d6bb9cdbc9f218ef699f3c87dd06bc03dd042290dedc18cb71
+          SHA256: *id016
+          DriverSha256: *id016
+          TargetProcessSha256: *id016
+          Hashes.sha256: *id016
+        md5_detection:
+          md5: &id017
+          - 97cb7dc1395918c2f3018c109ab4ea5b
+          MD5: *id017
+          DriverMd5: *id017
+          TargetProcessMd5: *id017
+          Hashes.md5: *id017
+  object_8083:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id018
+          - d20168c523058c7a82f6d79ef63ea546c794e57b
+          SHA1: *id018
+          DriverSha1: *id018
+          TargetProcessSha1: *id018
+          Hashes.sha1: *id018
+        sha256_detection:
+          sha256: &id019
+          - 6c195ea18c05bbf091f09873ed9cd533ec7c8de7a831b85690e48290b579634b
+          SHA256: *id019
+          DriverSha256: *id019
+          TargetProcessSha256: *id019
+          Hashes.sha256: *id019
+        md5_detection:
+          md5: &id020
+          - 03ea9457bf71d51d8109e737158be888
+          MD5: *id020
+          DriverMd5: *id020
+          TargetProcessMd5: *id020
+          Hashes.md5: *id020
+  object_8084:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id021
+          - 735f5d7ef0c5129f0574bec3cf3d6b06b052744a
+          SHA1: *id021
+          DriverSha1: *id021
+          TargetProcessSha1: *id021
+          Hashes.sha1: *id021
+        sha256_detection:
+          sha256: &id022
+          - e5b643cb6ec30d0d0b458e3f2800609f260a5f15c4ac66faf4ebf384f7976df6
+          SHA256: *id022
+          DriverSha256: *id022
+          TargetProcessSha256: *id022
+          Hashes.sha256: *id022
+        md5_detection:
+          md5: &id023
+          - 43fad2d62bc23ffdc6d301571135222c
+          MD5: *id023
+          DriverMd5: *id023
+          TargetProcessMd5: *id023
+          Hashes.md5: *id023
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id024
+        - 139.59.46.154
+        - 89.107.62.39
+        SourceIp: *id024
+        IpAddresses: *id024
+        destination.ip: *id024
+        RequestUrl|contains: *id024
+  condition: any of them

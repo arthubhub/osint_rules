@@ -1,0 +1,80 @@
+title: 'Malspam 2016-09-20 (.hta in .zip) - campaign: "<no subject>"'
+id: 57e0c08d-4330-42c0-9c8f-4c8d950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - binhminh-group.com
+        - dealza.com
+        - elsoccer.org
+        - gelecekdiyarbakirsigorta.com
+        - hunt-magazine.com
+        - isusip.com
+        - oilandgasukwireless.net
+        - rancho.org
+        - roberttrocina.com
+        - sbbsinfotech.com
+        - schneebett.com
+        - stirlingblack.com
+        - teknidataconsultores.com
+        - thomasduncanwatt.com
+        - trenddatainc.com
+        - worldpennyjar.com
+        - yesman.me
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 103.254.148.134
+        - 94.136.40.103
+        - 119.59.103.81
+        - 123.30.210.74
+        - 143.95.246.211
+        - 148.251.99.148
+        - 173.236.105.50
+        - 173.254.28.14
+        - 185.119.173.182
+        - 185.96.93.154
+        - 198.46.82.242
+        - 207.179.106.94
+        - 207.204.33.199
+        - 45.55.141.237
+        - 64.119.182.93
+        - 69.89.31.79
+        - 70.39.235.94
+        - 80.179.92.187
+        - 94.73.150.110
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://yesman.me
+        - http://binhminh-group.com
+        - http://dealza.com
+        - http://elsoccer.org
+        - http://gelecekdiyarbakirsigorta.com
+        - http://hunt-magazine.com
+        - http://isusip.com
+        - http://oilandgasukwireless.net
+        - http://rancho.org
+        - http://rennie-mackintosh-jewellery.co.uk
+        - http://roberttrocina.com
+        - http://sbbsinfotech.com
+        - http://schneebett.com
+        - http://stirlingblack.com
+        - http://teknidataconsultores.com
+        - http://thomasduncanwatt.com
+        - http://trenddatainc.com
+        - http://worldpennyjar.com
+        - http://xn--41a.xn----8sbivjiocsggj.xn--p1ai
+        RequestUrl: *id003
+  condition: any of them

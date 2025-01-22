@@ -1,0 +1,109 @@
+title: 'Malspam 2016-09-16 (.wsf in .zip) - campaign: "(SCAN|FAX|DOC|IMG)_{integer}"'
+id: 57dc1fe4-0d70-4dde-95fe-46e8950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - 24hourprintshop.com
+        - akademistcicek.com
+        - helpmybathroom.com
+        - hollystamps.com
+        - inovsol.com
+        - junhao8.com
+        - lanehmontgomery.com
+        - lv-nexis.com
+        - mahovik-bg.com
+        - mclodesigns.com
+        - qarmoo.com
+        - samenart.com
+        - sanalnet.org
+        - smt112.com
+        - sstaswim.com
+        - urachart.com
+        - zesthouse.com
+        - apro88.com
+        - all4supply.com
+        - mfcomputer.net
+        - thewebgroup.net
+        - islamiccollege.org
+        - xsolution.sk
+        - chelsea-west.com
+        - honeydavis.us
+        - earnbyemail.com
+        - markanltd.com
+        - mudelts.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 92.43.113.68
+        - 107.180.51.107
+        - 119.28.1.30
+        - 143.95.253.117
+        - 160.153.93.132
+        - 162.210.102.89
+        - 173.254.28.47
+        - 183.90.250.22
+        - 185.131.50.176
+        - 188.124.5.33
+        - 192.186.233.9
+        - 198.46.81.169
+        - 203.170.192.184
+        - 23.226.76.25
+        - 43.245.62.130
+        - 69.36.191.199
+        - 88.198.174.188
+        - 175.176.161.34
+        - 176.31.107.185
+        - 199.59.58.6
+        - 100.42.63.88
+        - 212.57.32.7
+        - 157.112.176.54
+        - 193.218.152.239
+        - 72.167.131.224
+        - 173.236.198.12
+        - 212.175.247.30
+        - 97.74.215.143
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://24hourprintshop.com
+        - http://akademistcicek.com
+        - http://helpmybathroom.com
+        - http://hollystamps.com
+        - http://inovsol.com
+        - http://junhao8.com
+        - http://lanehmontgomery.com
+        - http://lv-nexis.com
+        - http://mahovik-bg.com
+        - http://mclodesigns.com
+        - http://qarmoo.com
+        - http://samenart.com
+        - http://sanalnet.org
+        - http://smt112.com
+        - http://sstaswim.com
+        - http://urachart.com
+        - http://zesthouse.com
+        - http://all4supply.com
+        - http://mfcomputer.net
+        - http://thewebgroup.net
+        - http://islamiccollege.org
+        - http://xsolution.sk
+        - http://chelsea-west.com
+        - http://demo.website.pl
+        - http://honeydavis.us
+        - http://earnbyemail.com
+        - http://markanltd.com
+        - http://mudelts.com
+        RequestUrl: *id003
+  condition: any of them

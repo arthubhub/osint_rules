@@ -1,0 +1,66 @@
+title: '2019-01-28: APT28 XTunnel Backdoor'
+id: 5c500809-453c-4245-83e1-435c950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.sofacy
+- attack.software.xtunnel
+- attack.group.strontium
+- attack.group.g0007
+- attack.software.s0117
+- attack.group.apt28
+logsource:
+  product: windows
+detection:
+  object_45:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://twitter.com
+        RequestUrl: *id001
+  object_46:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 16b6d63390340941ec0fe60b0177384f
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+  object_47:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - c3212e1e609588cb5736b1fd9aa8581c965ffa08
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - be2e58669dbdec916f7aaaf4d7c55d866c4f38ac290812b10d680d943bb5b757
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 16b6d63390340941ec0fe60b0177384f
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id006
+        - 109.236.93.138
+        SourceIp: *id006
+        IpAddresses: *id006
+        destination.ip: *id006
+        RequestUrl|contains: *id006
+  condition: any of them

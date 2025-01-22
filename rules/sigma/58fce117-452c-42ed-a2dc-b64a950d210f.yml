@@ -1,0 +1,29 @@
+title: OSINT - FlexSpy Application Analysis
+id: 58fce117-452c-42ed-a2dc-b64a950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 202.176.88.55
+        - 58.137.119.229
+        - 58.137.119.224
+        - 58.137.119.239
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - http://www.cybermerchantsofdeath.com
+        - http://58.137.119.229
+        - http://trkps.com
+        - http://202.176.88.55
+        RequestUrl: *id002
+  condition: any of them

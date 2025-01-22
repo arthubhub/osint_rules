@@ -1,0 +1,122 @@
+title: 'OSINT - Bad Rabbit: Not-Petya is back with improved ransomware'
+id: 59f049c0-aae0-47d2-a888-4021950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.bad_rabbit
+- attack.software.bad_rabbit
+logsource:
+  product: windows
+detection:
+  object_15935:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 79116fe99f2b421c52ef64097f0f39b815b20907
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+  object_15936:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - afeee8b4acff87bc469a6f0364a81ae5d60a2add
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+  object_15937:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - de5c8d858e6e41da715dca1c019df0bfb92d32c0
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+  object_15938:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 4f61e154230a64902ae035434690bf2b96b4e018
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id005
+        - 1dnscontrol.com
+        RequestUrl: *id005
+        QueryName: *id005
+    - ip_detection:
+        DestinationIp: &id006
+        - 185.149.120.3
+        SourceIp: *id006
+        IpAddresses: *id006
+        destination.ip: *id006
+        RequestUrl|contains: *id006
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 413eba3973a15c1a6429d9f170f3e8287f98c21c
+          - 16605a4a29a101208457c47ebfde788487be788d
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 2f8c54f9fa8e47596a3beff0031f85360e56840c77f71c6a573ace6f46412035
+          - 301b905eb98d8d6bb559c04bbda26628a942b2c4107c07a02e8f753bdcfe347c
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 347ac3b6b791054de3e5720a7144a977
+          - 37945c44a897aa42a66adcab68f560e0
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+    - url_detection:
+        PowershellCommand|contains: &id010
+        - https://www.welivesecurity.com
+        - http://1dnscontrol.com
+        - http://185.149.120.3
+        - http://caforssztxqzf2nm.onion
+        - http://argumentiru.com
+        - http://www.fontanka.ru
+        - http://grupovo.bg
+        - http://www.sinematurk.com
+        - http://www.aica.co.jp
+        - http://spbvoditel.ru
+        - http://argumenti.ru
+        - http://www.mediaport.ua
+        - http://blog.fontanka.ru
+        - http://an-crimea.ru
+        - http://www.t.ks.ua
+        - http://most-dnepr.info
+        - http://osvitaportal.com.ua
+        - http://www.otbrana.com
+        - http://calendar.fontanka.ru
+        - http://www.grupovo.bg
+        - http://www.pensionhotel.cz
+        - http://www.online812.ru
+        - http://www.imer.ro
+        - http://novayagazeta.spb.ru
+        - http://i24.com.ua
+        - http://bg.pensionhotel.com
+        - http://ankerch-crimea.ru
+        RequestUrl: *id010
+  condition: any of them

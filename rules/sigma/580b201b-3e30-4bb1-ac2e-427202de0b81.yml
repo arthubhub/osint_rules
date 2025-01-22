@@ -1,0 +1,49 @@
+title: OSINT -  The new .LNK between spam and Locky infection
+id: 580b201b-3e30-4bb1-ac2e-427202de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 93.170.104.126
+        - 185.46.11.73
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 3dcf2f116af0a548e88022baa1f41f61f362ae39
+          - c1ee00884c0f872767992d5348e4de576935d8da
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - a393cf8d2ec5811d976cff0972069d73a98d33f6d3004b8f11beaf21086ac848
+          - 7953b0dbd410a2e216b45671be48a48f472e74fb1a8049afdacaade02e63709b
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - ee0f3310fecae257f1902beabe8b90fd
+          - 6f582adb2226db03b8ce9822a0d1b1e8
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://blogs.technet.microsoft.com
+        RequestUrl: *id005
+  condition: any of them

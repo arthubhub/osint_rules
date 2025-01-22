@@ -1,0 +1,93 @@
+title: OSINT - Sednit espionage group now using custom exploit kit
+id: 5a3cc84d-2434-4ae6-8d76-c328950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_18311:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - d61ee0b0d4ed95f3300735c81740a21b8beef337
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 6ffaa374cfa9504b061b52a353913c6c120bd4fe43e1a79f69fba7f964e30a4e
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - df895e6479abf85c4c65d7d3a2451ddb
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_18313:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - d0db619a7a160949528d46d20fc0151bf9775c32
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - e031299fa1381b40c660b8cd831bb861654f900a1e2952b1a76bedf140972a81
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - ee64d3273f9b4d80020c24edcbbf961e
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id007
+        - caciltd.com
+        - mfapress.com
+        - azureon-line.com
+        - msonlinelive.com
+        - mfapress.org
+        - armypress.org
+        - defenceiq.us
+        - windows-updater.com
+        - defenceiq.com
+        - armytime.com
+        - foreignaffairs.com
+        - caci.com
+        RequestUrl: *id007
+        QueryName: *id007
+    - hash_detection:
+        sha1_detection:
+          sha1: &id008
+          - d0db619a7a160949528d46d20fc0151bf9775c32
+          - 86092636e7ffa22481ca89ac1b023c32c56b24cf
+          - 12223f098ba3088379ec1dc59440c662752ddabd
+          - d61ee0b0d4ed95f3300735c81740a21b8beef337
+          SHA1: *id008
+          DriverSha1: *id008
+          TargetProcessSha1: *id008
+          Hashes.sha1: *id008
+    - url_detection:
+        PowershellCommand|contains: &id009
+        - https://www.welivesecurity.com
+        - http://defenceiq.us
+        - http://cntt.akcdndata.com
+        RequestUrl: *id009
+  condition: any of them

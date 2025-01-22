@@ -1,0 +1,74 @@
+title: OSINT -  Winnti Abuses GitHub for C&C Communications
+id: 58d38baa-a47c-40c5-8c8f-45b4950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.winnti
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 160.16.243.129
+        - 174.139.203.18
+        - 174.139.203.20
+        - 174.139.203.22
+        - 174.139.203.27
+        - 174.139.203.34
+        - 174.139.62.58
+        - 174.139.62.60
+        - 174.139.62.61
+        - 61.195.98.245
+        - 67.198.161.250
+        - 67.198.161.251
+        - 67.198.161.252
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 08afbd47ce5f4e296d375b3a2d069993e09c090f
+          - 5e23c5b5f21c0a6f894d636cd4f4469bf28b53ba
+          - 51891247e3caa4e4f8f71b2eaf8ba47602dc0be1
+          - 1eddc0e76f1dd787091cfdcf98a058dd4319fd34
+          - 64093d8dbf2e108c73fb5f96bbf0c2fcd8975c94
+          - 1a20d3333e220f6fe2980dff119705c0ddc59604
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 06b077e31a6f339c4f3b1f61ba9a6a6ba827afe52ed5bed6a6bf56bf18a279ba
+          - 1e63a7186886deea6c4e5c2a329eab76a60be3a65bca1ba9ed6e71f9a46b7e9d
+          - 7c37ebb96c54d5d8ea232951ccf56cb1d029facdd6b730f80ca2ad566f6c5d9b
+          - 9d04ef8708cf030b9688bf3e8287c1790023a76374e43bd332178e212420f9fb
+          - b1a0d0508ee932bbf91625330d2136f33344ed70cb25f7e64be0620d32c4b9e2
+          - e5273b72c853f12b77a11e9c08ae6432fabbb32238ac487af2fb959a6cc26089
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 3301341e7e769c92aefb07e4bec15ad2
+          - 802890514844f6bab0cb2004c52025d6
+          - 5b1852311cc9f5ccdddf35a9c473ab27
+          - c7d0ec5b742ee497b9ee536f23586949
+          - 879ce99e253e598a3c156258a9e81457
+          - 5b2484ad1f74f2c19ff0d29e63c773d8
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://blog.trendmicro.com
+        RequestUrl: *id005
+  condition: any of them

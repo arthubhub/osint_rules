@@ -1,0 +1,47 @@
+title: Sample Linux miner - XMring
+id: 5e67e70a-9666-4c32-b3ec-4b51d43a8e4b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1375
+- attack.t1496
+- attack.t1499.004
+logsource:
+  product: windows
+detection:
+  object_17873:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - b8e9bb170890e44785cdfbb0b00ea4233ba6dd73
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 31fe8c12206d590afe61ebaff9d277793af34c8f201e9025f10d7a44a7f52e35
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - a3d50f130c57b5f9b3c81bb237912c83
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_17876:
+    all:
+    - ip_detection:
+        DestinationIp: &id004
+        - 136.243.90.99
+        SourceIp: *id004
+        IpAddresses: *id004
+        destination.ip: *id004
+        RequestUrl|contains: *id004
+  condition: any of them

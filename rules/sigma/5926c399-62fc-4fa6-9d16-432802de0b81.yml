@@ -1,0 +1,34 @@
+title: 'OSINT - Tainted Leaks: Disinformation and Phishing With a Russian Nexus'
+id: 5926c399-62fc-4fa6-9d16-432802de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - id833.ga
+        - id834.ga
+        - id9954.gq
+        - id4242.ga
+        - com-securitysettingpage.tk
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 89.40.181.119
+        - 89.32.40.238
+        - 80.255.12.237
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://citizenlab.org
+        RequestUrl: *id003
+  condition: any of them

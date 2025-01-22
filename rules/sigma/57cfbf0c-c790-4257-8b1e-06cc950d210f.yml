@@ -1,0 +1,83 @@
+title: 'Malspam 2016-09-06 (.wsf in .zip) - campaign: ''Message from "CUKPR[x]"'''
+id: 57cfbf0c-c790-4257-8b1e-06cc950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - bushman-rest.com
+        - marcotormento.de
+        - sp-moto.ru
+        - tst-technik.de
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 95.211.144.65
+        - 213.205.40.169
+        - 213.180.150.17
+        - 80.150.6.138
+        - 81.196.20.134
+        - 186.202.126.199
+        - 188.120.235.214
+        - 208.71.106.37
+        - 208.71.106.45
+        - 208.71.106.48
+        - 209.41.183.242
+        - 211.134.181.38
+        - 213.185.87.30
+        - 62.24.202.31
+        - 80.150.6.143
+        - 81.169.145.157
+        - 81.169.145.82
+        - 81.24.34.9
+        - 85.248.42.103
+        - 87.242.73.75
+        - 88.156.222.94
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://209.41.183.242
+        - http://andreas414.republika.pl
+        - http://around4percent.web.fc2.com
+        - http://bushman-rest.com
+        - http://hotelimperium.go.ro
+        - http://lalarabbit.web.fc2.com
+        - http://marcotormento.de
+        - http://michik.web.fc2.com
+        - http://mixup0813.web.fc2.com
+        - http://pea5.cba.pl
+        - http://portadeenrolar.ind.br
+        - http://rosivani.go.ro
+        - http://sp-moto.ru
+        - http://tst-technik.de
+        - http://unimet.tmhandel.com
+        - http://w8kvpd5ib.homepage.t-online.de
+        - http://www.aldesco.it
+        - http://www.alpstaxi.co.jp
+        - http://www.beniculturali.org
+        - http://www.bytove.jadro.szm.com
+        - http://www.facturi.go.ro
+        - http://www.folkjuannepiu.it
+        - http://www.laribalta.org
+        - http://www.lnowak.tkdami.net
+        - http://www.parrucchieriagiacomo.com
+        - http://www.peritiassicurativi.org
+        - http://www.planet-auto.go.ro
+        - http://www.plumbntile.talktalk.net
+        - http://www.radicegioielli.com
+        - http://www.vilastefania.go.ro
+        - http://www.wellworx.de
+        - http://www.xolod-teplo.ru
+        - http://zui9reica.web.fc2.com
+        RequestUrl: *id003
+  condition: any of them

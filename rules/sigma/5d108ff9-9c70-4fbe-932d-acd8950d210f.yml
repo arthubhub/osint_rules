@@ -1,0 +1,73 @@
+title: Information stealer malware via fake malicious document as "University of Luxembourg"
+id: 5d108ff9-9c70-4fbe-932d-acd8950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_17272:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 7cae4abd0b632e822d3163bf62435e658cab76c4
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - c6b68af5a397b24d5573bbcbb6abd8ffe45550e428f2649e7ce99f6ae15148d3
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 8989672db4d283f6c8e5b97eda426ef4
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_17273:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 0117724817462bb8e09b5b507155eae32b878449
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - e5df9ce468a2510c86d8808083e5c3326385596fba864546491922b2ea9802df
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 7ddb1d9c25487d85cb687682b8a4fb7d
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id007
+        - 192.210.146.35
+        - 103.195.185.115
+        SourceIp: *id007
+        IpAddresses: *id007
+        destination.ip: *id007
+        RequestUrl|contains: *id007
+    - url_detection:
+        PowershellCommand|contains: &id008
+        - http://192.210.146.35
+        - http://tikonainternetservices.co.in
+        RequestUrl: *id008
+  condition: any of them

@@ -1,0 +1,81 @@
+title: 'M2M -  Locky 2017-11-06 : Affid=3, ".asasin" : "E3S1234567890123 Payment advice"
+  - "advice_123456_20171106.doc"'
+id: 5a04510c-b2d0-467b-97a3-75a9950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 212.220.124.233
+        - 27.254.148.14
+        - 74.200.89.171
+        - 89.104.72.196
+        - 194.208.76.18
+        - 90.156.144.159
+        - 212.67.205.60
+        - 72.249.127.194
+        - 209.54.51.32
+        - 95.110.189.247
+        - 217.182.199.8
+        - 37.247.120.83
+        - 82.98.87.48
+        - 173.212.228.135
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - d39e97a9ff6dceb4e8430036f43fb187b8a80003
+          - cfa00beec23e1221ec6197abe887ef51ca0722d8
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 3a5f35fceebf1626dbd11f81bf20656061ab0d1fa100a3fd0aae77edfa859cd5
+          - e49c6973ddcc601cfb85b451e122903b1a9c036c8baafc35cb327f76b998c537
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 804156021313adfee00e9406f8de1031
+          - deed16eadb1a270dfc54daf84f53aad6
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.hybrid-analysis.com
+        - http://testbxc.u-host.ru
+        - http://saranville.com
+        - http://jimhalltreeservice.com
+        - http://l-up.net
+        - http://maeserdruck.com
+        - http://nikom.be
+        - http://ist-profy.ru
+        - http://lvps212-67-205-60.vps.webfusion.co.uk
+        - http://hilaryandsavio.com
+        - http://primeassociatesinc.com
+        - http://ro.isuzu.it
+        - http://studio311.de
+        - http://themollymalone.es
+        - http://xn--buremrt-9wa.ch
+        - http://michelsmarkt.de
+        - http://toftinrontonsfo.info
+        RequestUrl: *id005
+  condition: any of them

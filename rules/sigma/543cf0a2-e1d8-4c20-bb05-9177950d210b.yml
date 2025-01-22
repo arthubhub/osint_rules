@@ -1,0 +1,69 @@
+title: OSINT Shellshock exploitation from Red Sky Weekly blog post
+id: 543cf0a2-e1d8-4c20-bb05-9177950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - google-traffic-analytics.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 14.163.12.119
+        - 77.29.189.34
+        - 78.15.20.81
+        - 78.161.195.166
+        - 79.136.130.110
+        - 88.253.229.151
+        - 93.139.212.67
+        - 109.227.100.189
+        - 112.156.18.40
+        - 113.171.116.163
+        - 117.218.186.16
+        - 118.172.123.111
+        - 119.130.114.154
+        - 124.123.75.68
+        - 178.120.175.81
+        - 178.121.79.68
+        - 190.49.241.220
+        - 190.82.114.190
+        - 223.206.54.26
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 24b24379c3a6e554d77428faa22b4176d78499b7
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 052421011162421c7fbe1c9613e37b520a494034901dab1c6ee192466090421d
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 7847e83ad52b8b32ae14522e1a960370
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://henrybasset.blogspot.be
+        - http://google-traffic-analytics.com
+        RequestUrl: *id006
+  condition: any of them

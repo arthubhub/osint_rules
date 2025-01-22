@@ -1,0 +1,61 @@
+title: Dridex (2016-04-12)
+id: 570cf5b5-18d4-474e-b41e-41f1950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 210.245.92.63
+        - 210.70.242.41
+        - 178.33.167.120
+        - 195.169.147.88
+        - 212.76.140.230
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 0d1da7a67f322e661d23eb5ce9663ea71f5c8342
+          - 93d7a3540c072245ad9e03ade53220209cc5ac25
+          - b0e501e5eccd15ae36b4e5f73e6f2086169c78ab
+          - 26046b09cffcb35f726c5ae48e8a42417f31c682
+          - 6c11cd275b564179de9b84dab1e7648264cebeff
+          - fafaeb92584f17cda1a6682a131f511cc61d5673
+          - 97e35fa85d8ac5cb291ae1b1e0c07729ac324d06
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - ebc54c997d56be2906eeda60eda0e55cbd959b50b424cf807c0fc0578e3ac495
+          - fb6a2e276cc42b793817c7109ee76b161d58ed0b4daf623f9686077a05351d45
+          - 893f33957bb68433b3118ffe8f27a132b975cecccc8b40e8bdf2c9fe5b7e707b
+          - f070b108aae83371236f0e9752fdbe297cdb6c329123c4681937f104915ef253
+          - 88da4ff0eb25d1701755a29c595a40a479e78c56e428dd33d8b559f4166488e7
+          - 6b17dc713ca28c1df380a3e65e3cfef4eaa803337ab747abd23c1d36fe29d515
+          - 2d3fc3a0b53212141b61f7f22019a50ec13db741669cb0851218dbd9b166a4cf
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 4509ca8c6c44a2b9825dfe3936dcd9e3
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://onlineaccess.bleutree.mobi
+        RequestUrl: *id005
+  condition: any of them

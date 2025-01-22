@@ -1,0 +1,133 @@
+title: OSINT - Locky Ransomware Pushed Alongside FakeGlobe in Upgraded Spam Campaigns
+id: 5a3bd35f-7140-48d0-8b88-4555950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+logsource:
+  product: windows
+detection:
+  object_697:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id001
+          - 39256f126bba17770310c2115586b9f22b858cf15c43ab36bd7cfb18ad63a0c2
+          SHA256: *id001
+          DriverSha256: *id001
+          TargetProcessSha256: *id001
+          Hashes.sha256: *id001
+  object_698:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - a299f3de0c9277c0ce7dd3f7dc9aee57a7abe78b155919b1ecced1896c69653b
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_699:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - 4d4a0e1d7218180452e22e6b52a7f9a0db1e0c0aa51a48f9a79c600b51030050
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+  object_700:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - 0f6ae637a9d15503a0af42be649388f01f8637ca16b15526e318a94b7f34bf6e
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  object_701:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id005
+          - bb1df4a93fc27c54c78f84323e0ea7bb2b54469893150e3ea991826c81b56f47
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+  object_702:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id006
+          - e75e5d374f20c386b1114252647cca7bd407190cafb26c6cfbd42c5f9223fe6c
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+  object_703:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id007
+          - 12e75bdbc3f0b489a89104c646aee10a71277c22b6abbc6e346d1ba6f17edf6d
+          SHA256: *id007
+          DriverSha256: *id007
+          TargetProcessSha256: *id007
+          Hashes.sha256: *id007
+  object_704:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id008
+          - 067eb2754a823953a6efa1dfe9353eeabf699f171d21ffbff8e2303f7f678139
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+  object_705:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id009
+          - 6bdf46209fda582d7af5b74770b0eccf6abd3dbeabce3bdfb88db2f252ee778a
+          SHA256: *id009
+          DriverSha256: *id009
+          TargetProcessSha256: *id009
+          Hashes.sha256: *id009
+  object_706:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id010
+          - efb154bccff1e9a0f090a6afd7a08bf2c1fffea745b575a0bf31f22998688973
+          SHA256: *id010
+          DriverSha256: *id010
+          TargetProcessSha256: *id010
+          Hashes.sha256: *id010
+  object_707:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id011
+          - 3cb4484976676ac043fae870addaa57e858c1286cdb17d01ef8c973c5ec5b015
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id012
+        - http://blog.trendmicro.com
+        - http://qolseaboomdog.top
+        - http://newhostrcm.top
+        RequestUrl: *id012
+  condition: any of them

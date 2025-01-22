@@ -1,0 +1,55 @@
+title: OSINT - Investigation of Linux.Mirai Trojan family
+id: 57ef6d48-20c8-4e55-9f02-468f950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.mirai
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 5.206.225.122
+        - 151.80.99.84
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - c129e2a23abe826f808725a0724f12470502a3cc
+          - 8fd0d16edf270c453c5b6b2481d0a044a410c7cd
+          - 9ff383309ad63da2caa9580d7d85abeece9b13a0
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - f8fcaa18be035d0448de7db6781c5e495b665bd3844119171714431a3c1aedbc
+          - 7cf5d0188e43a9a46676d8e71dc251c0871b23eff9d66f89d7eabaeba7a3d2cc
+          - 45b7fa5ad2eae5b32b15ccef313713a37481b6178c4c8bbbb524822a56883b56
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 78440b86e34579001bea6ebc600751f5
+          - e64079b3ccf906204474beca1f5cc41d
+          - 5d25f735cf059d6b4076947860da5c45
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://5.206.225.122
+        - http://www.kernelmode.info
+        RequestUrl: *id005
+  condition: any of them

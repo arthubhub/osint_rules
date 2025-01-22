@@ -1,0 +1,55 @@
+title: 'OSINT - ikittens: iranian actor resurfaces with malware for mac (macdownloader)'
+id: 5898af07-fb0c-4135-b908-491b950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - officialswebsites.info
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 46.17.97.37
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 5b5a34dfc102f0c18b0b0e83c6fda431969e7957
+          - a323168f95d1a1c65186888c6dd16cd2f9f8539a
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 52efcfe30f96a85c9c068880c20663db64f0e08346e0f3b59c2e5bbcb41ba73c
+          - 7a9cdb9d608b88bd7afce001cb285c2bb2ae76f5027977e8635aa04bd064ffb7
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - f8e4cab429263406fbf11b41fd539839
+          - 787d664e842961f2a335139407f91a70
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://iranthreats.github.io
+        - http://192.168.3.217
+        - http://46.17.97.37
+        RequestUrl: *id006
+  condition: any of them

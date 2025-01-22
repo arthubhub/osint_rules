@@ -1,0 +1,166 @@
+title: 'OSINT - APT Attack In the Middle East: The Big Bang'
+id: 5b43ce0c-47e8-476c-97d6-f56402de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.the_big_bang
+- attack.t1043
+- attack.t1213
+- attack.t1113
+- attack.t1193
+logsource:
+  product: windows
+detection:
+  object_1606:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 74ea60b4e269817168e107bdccc42b3a1193c1e6
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 63a73cf005eb328f3c7e99f0d28da65980d9620b66d8c41939f6db023418c864
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - a3dc31c456508df7dfac8349eb0d2b65
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_1608:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 511bec782be41e85a013cbea95725d5807e3c2f2
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - ac6462e9e26362f711783b9874d46fefce198c4c3ca947a5d4df7842a6c51224
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - fd8c8ae6a261b0e88df06236c5b70be6
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_1610:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 994ebbe444183e0d67b13f91d75b0f9bcfb011db
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - e1f52ea30d25289f7a4a5c9d15be97c8a4dfe10eb68ac9d031edcc7275c23dbc
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 18864d22331fc6503641f128226aaea8
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_1612:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 9e093a5b34c4e5dea59e374b409173565dc3b05b
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 4db68522600f2d8aabd255e2da999a9d9c9f1f18491cfce9dadf2296269a172b
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 81881a0841deaa0ef1ea92c51d8c8845
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  object_1614:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id013
+          - a210ac6ea0406d81fa5682e86997be25c73e9d1b
+          SHA1: *id013
+          DriverSha1: *id013
+          TargetProcessSha1: *id013
+          Hashes.sha1: *id013
+        sha256_detection:
+          sha256: &id014
+          - 0ed777075d67d00720021e4703bde809900f4715ccf0a2d4383e285801dca5ba
+          SHA256: *id014
+          DriverSha256: *id014
+          TargetProcessSha256: *id014
+          Hashes.sha256: *id014
+        md5_detection:
+          md5: &id015
+          - 2f8face85084bea8adacac36ee2f641f
+          MD5: *id015
+          DriverMd5: *id015
+          TargetProcessMd5: *id015
+          Hashes.md5: *id015
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id016
+        - lindamullins.info
+        - spgbotup.club
+        - namyyeatop.club
+        - namybotter.info
+        - sanjynono.website
+        - exvsnomy.club
+        - ezofiezo.website
+        - hitmesanjjoy.pro
+        RequestUrl: *id016
+        QueryName: *id016
+    - hash_detection:
+        sha1_detection:
+          sha1: &id017
+          - a210ac6ea0406d81fa5682e86997be25c73e9d1b
+          - 994ebbe444183e0d67b13f91d75b0f9bcfb011db
+          - 74ea60b4e269817168e107bdccc42b3a1193c1e6
+          - 511bec782be41e85a013cbea95725d5807e3c2f2
+          - 9e093a5b34c4e5dea59e374b409173565dc3b05b
+          SHA1: *id017
+          DriverSha1: *id017
+          TargetProcessSha1: *id017
+          Hashes.sha1: *id017
+    - url_detection:
+        PowershellCommand|contains: &id018
+        - https://research.checkpoint.com
+        RequestUrl: *id018
+  condition: any of them

@@ -1,0 +1,83 @@
+title: 'OSINT - PROMETHIUM and NEODYMIUM: Parallel zeroday attacks targeting individuals
+  in Europe'
+id: 58539031-aa78-4da1-9289-487102de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.promethium
+- attack.group.neodymium
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 21a3862dfe21d6b216359c6baa3d3c2beb50c7a3
+          - 0b16135d008f6952df0caca104449c33d736e5fc
+          - 0852aa6b8df78069d75fa2f09b53d4476cdd252b
+          - 05dbe59a7690e28ca295e0f939a0c1213cb42eb0
+          - 3c2c7ac8fddbc3ee25ce0f73f01e668855ccdb80
+          - 211a111586cb5914876adb929ccae736928d8363
+          - c972bf5751438c99fe3e02ecacf6fa759388c40e
+          - 72722073f0adba1919dc31ffa26638555ad5867f
+          - 2fb49455d65ad8baf18e3c604cd1b992b7ebbefa
+          - f41b999f41312f2a0fe4eaf08e90824f73e0e186
+          - d8d54574a082162220c3c2f3d3f4c1b1bd4d6255
+          - 86580603f5e1d817af87e8bf3ba4dc4ea9e3069d
+          - cb5d0d1d557a1266f77357a951358c78196e97ff
+          - d75d12d250e7a36f9ef1173d630a0059b8ea5349
+          - a77db6e89d604eabf29a6114a30345a705b05107
+          - b32b0d52fff7c09c60bb64bc396dc7522a457399
+          - ade19bde9716770bef84ce4414a45c0462c2eba2
+          - e4d82ab117b86fd44c02ff3289976d15a9d9ced4
+          - 88cb78d99fa0275db8123c17a2bd3b3d58f541da
+          - a248f9ad5d757d589a06a253dc46637f4128eea9
+          - 532b0d52fff7c09c60bb64bc396dc7522a457399
+          - 980d96d83f0bae8132fd13eb7d0e799999141492
+          - 7ab2d32b2603c2b12e814264230572584e157d42
+          - a4f72ee3d337e5a0db78f33fd31958b41e9e9d4f
+          - 6de50cf42cd3ff8429a405e9c62d38c11fb2edd6
+          - 8d847ea0ffa06b8d48bbd9c943c50b05b23d310b
+          - 7047ed9ae510377f4625db256e52af02694ef153
+          - bb66c7d655021234ede01bc59e808c6b8f3fa91b
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 15ededb19ec5ab6f03db1106d2ccdeeacacdb8cd708518d065cacb1b0d7e955d
+          - 2f98ac11c78ad1b4c5c5c10a88857baf7af43acb9162e8077709db9d563bcf02
+          - e12031da58c0b08e8b610c3786ca2b66fcfea8ddc9ac558d08a29fd27e95a3e7
+          - dbd8cbbaf59d19cf7566042945e36409cd090bc711e339d3f2ec652bc26d6a03
+          - a8b7e3edaa18c6127e98741503c3a2a66b7720d2abd967c94b8a5f2e99575ac5
+          - 1aef507c385a234e8b10db12852ad1bd66a04730451547b2dcb26f7fae16e01f
+          - 3ce407b441b324142e9f2cd2a5aad8eab1a73f772df0155f362d9ba9f5cb1da8
+          - b488eea412b121d77b5d27d51888485bb640f8c61da8fa3140bd734b315d6ad2
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - f680654dd3421941cd46d6875bd501a6
+          - 2041cc8de9dab93b44434d7f748c63ad
+          - b31ea9acb9d35d9631e316a93a723ec6
+          - c43accf1c69c3020583aa587924ac9a5
+          - 9a313b0c9f9fe6636826d57eed48f9af
+          - 85b60957872f7e03089ef7c758020e61
+          - aaf90c9cf2a35fa1f56e0d0338173d2b
+          - 50f77cd868f6804e9a3bd1b0745ba36c
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://blogs.technet.microsoft.com
+        RequestUrl: *id004
+  condition: any of them

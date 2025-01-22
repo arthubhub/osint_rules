@@ -1,0 +1,31 @@
+title: Flash CVE-2018-15982 IOCs
+id: 5c0abf20-a720-47f4-ae29-5eb60acd0835
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1072
+- attack.t1193
+- attack.t1204
+- attack.t1043
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        md5_detection:
+          md5: &id001
+          - 1cbc626abbe10a4fae6abf0f405c35e2
+          - 7d92dd6e2bff590437dad2cfa221d976
+          - f49da7c983fe65ba301695188006d979
+          - 8a64017953d0840323318bc224bab9c7
+          - 9c65fa48d29e8a0eb1ad80b10b3d9603
+          - 92b1c50c3ddf8289e85cbb7f8eead077
+          MD5: *id001
+          DriverMd5: *id001
+          TargetProcessMd5: *id001
+          Hashes.md5: *id001
+  condition: any of them

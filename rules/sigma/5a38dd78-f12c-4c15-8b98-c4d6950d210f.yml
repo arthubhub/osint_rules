@@ -1,0 +1,63 @@
+title: OSINT - GratefulPOS credit card stealing malware - just in time for the shopping
+  season
+id: 5a38dd78-f12c-4c15-8b98-c4d6950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_1564:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id001
+          - 9a58657669bb3075c1103e73a8948a56
+          MD5: *id001
+          DriverMd5: *id001
+          TargetProcessMd5: *id001
+          Hashes.md5: *id001
+  object_1565:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 17b657174313e3e7ce84c030991a271b66eb0840
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 5540b8d51f2190c45aaa5212c866c402f834d5988752537c388dcfecdf89f4e4
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 9a58657669bb3075c1103e73a8948a56
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id005
+        - a193-108-94-56-deploy-akamaitechnologies.com
+        RequestUrl: *id005
+        QueryName: *id005
+    - ip_detection:
+        DestinationIp: &id006
+        - 96.44.135.70
+        SourceIp: *id006
+        IpAddresses: *id006
+        destination.ip: *id006
+        RequestUrl|contains: *id006
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - https://community.rsa.com
+        RequestUrl: *id007
+  condition: any of them

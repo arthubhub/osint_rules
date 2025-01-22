@@ -1,0 +1,66 @@
+title: 'OSINT - CVE-2017-0199: In the Wild Attacks Leveraging HTA Handler'
+id: 58ed2c42-04f0-44b7-baa4-9f1f02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 217.12.203.90
+        - 95.141.38.110
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - ea434604b3de06110de582a9c003c2b60368b33e
+          - 3bb5af725d63a18a306506b3ebd12aed820e00eb
+          - 0f3b135fd9eb3c6befbeb69f418ac182aeb56557
+          - fa504cb04ea83ecf1d360062fe612aba5e678f68
+          - 9aed05edab5d0200eb509ed22c8c30f19652814c
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 169c9cc7120fa64c7c02cbbf3aeeefd02fef32ca5dcc61093d1ea012e4f39a18
+          - 3e72bfa3ca0880226cacdbac28299d2a0bacde556ad3400d76be8f1666940828
+          - 13d0d0b67c8e881e858ae8cbece32ee464775b33a9ffcec6bff4dd3085dbb575
+          - 01220917060a94315eeeb04e1ee1263c024e54e66058cb1f910dec3a48fef42a
+          - f4a0f65e9161a266b557e3850e3d17f08b2843ee560f8a89ecf7059eba104e66
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - c10dabb05a38edd8a9a0ddda1c9af10e
+          - 9dec125f006f787a3f8ad464d480eed1
+          - acde6fb59ed431000107c8e8ca1b7266
+          - e01982913fbc22188b83f5f9fadc1c17
+          - 5ebfd13250dd0408e3de594e419f9e01
+          - fb475f0d8c8e9bf1bc360211179d8a28
+          - 984658e34e634d56423797858a711846
+          - 73bf8647920eacc7cc377b3602a7ee7a
+          - 11fb87888bbb4dcea4891ab856ac1c52
+          - a1faa23a3ef8cef372f5f74aed82d2de
+          - 15e51cdbd938545c9af47806984b1667
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.fireeye.com
+        - http://www.modani.com
+        - http://95.141.38.110
+        RequestUrl: *id005
+  condition: any of them

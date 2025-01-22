@@ -1,0 +1,38 @@
+title: 'OSINT - Apocalypse: Ransomware which targets companies through insecure RDP'
+id: 57750a68-58c8-4323-8c93-c828950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 70a255c076bd108b0654ae58b6f805efd2ad9613
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - aab148f9445f8ea69a6992a245037919b96c7b6457d35732f4171e371359aee5
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - ac70f2517698ca81bf161645413f168c
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://blog.emsisoft.com
+        RequestUrl: *id004
+  condition: any of them

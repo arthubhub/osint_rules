@@ -1,0 +1,69 @@
+title: 'Trend Micro Blog: New KillDisk Variant Hits Latin American Financial Organizations
+  Again'
+id: 5b1e9c95-75a8-4132-93e5-58ed0acd0835
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.killdisk_wiper
+logsource:
+  product: windows
+detection:
+  object_16110:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 2aa3803869edee7fa1ab7cf96d992ccfecc89e7b
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - a3f2c60aa5af9d903a31ec3c1d02eeeb895c02fcf3094a049a3bdf3aa3d714c8
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 9e33143916f648ec338f209eb0bd4789
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_16111:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 2766d7eaf2003f435f1a868b3687355823d34470
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 1a09b182c63207aa6988b064ec0ee811c173724c33cf6dfe36437427a5c23446
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - c1831baa5505f5a557380e0ab3f60f48
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - https://blog.trendmicro.com
+        - https://www.flashpoint-intel.com
+        RequestUrl: *id007
+  condition: any of them

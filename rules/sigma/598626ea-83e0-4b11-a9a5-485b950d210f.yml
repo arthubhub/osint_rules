@@ -1,0 +1,40 @@
+title: "OSINT - Tale of the Two Payloads \xE2\u20AC\u201C TrickBot and Nitol"
+id: 598626ea-83e0-4b11-a9a5-485b950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.trick_bot
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - d127c60b32fb4a83f711a4a38e9053f347ed90ec
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - b50904ae9527ed6ea09576db81bca8dc46a1921ae4e90f7c388e17ee034123b2
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 2c5639ddaa3ed639e17a0fa669e35da1
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://www.trustwave.com
+        RequestUrl: *id004
+  condition: any of them

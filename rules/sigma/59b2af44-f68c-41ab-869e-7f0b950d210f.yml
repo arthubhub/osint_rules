@@ -1,0 +1,59 @@
+title: 'Malspam 2017-09-08 - ''Microsoft Store E-invoice for your order #'''
+id: 59b2af44-f68c-41ab-869e-7f0b950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - brandingforbuyout.com
+        - etforhartohat.info
+        - lagrangeglassandmirrorco.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 65.182.175.15
+        - 213.246.110.104
+        - 74.208.163.59
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - e599e64297c3525742611b18a8fb1a4a7ceb8c15
+          - e58fbff82ac433af75512b506bb3617c319f5e0f
+          - 98e78ed75d7363977c0384bfd4be315734c0566f
+          - c62429c23718ec9c16361c4e711b2535aaf8b3b7
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 3e1924867806778624d231df10928d4d4deef2b3f24de5505f624ddde7d33636
+          - 114c0ca2d2581cfb70e84a0c0885c892d06fec233213e077a1b332138ebd557f
+          - 7316f1875c62f2a97282023d757e4333752c986e11bc3c521c9ee8adac0cf804
+          - fcf6e02ef14cc219cd532b72d909062967dacf195ad4eb12fe131f3c20755293
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://anloandy.co.uk
+        - http://brandingforbuyout.com
+        - http://etforhartohat.info
+        - http://lagrangeglassandmirrorco.com
+        RequestUrl: *id005
+  condition: any of them

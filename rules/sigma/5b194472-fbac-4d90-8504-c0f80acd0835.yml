@@ -1,0 +1,65 @@
+title: "Sofacy Group\u2019s Parallel Attacks"
+id: 5b194472-fbac-4d90-8504-c0f80acd0835
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.sofacy
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - supservermgr.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 185.25.51.198
+        - 185.25.50.93
+        - 220.158.216.127
+        - 92.114.92.102
+        - 86.106.131.177
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - 85da72c7dbf5da543e10f3f806afd4ebf133f27b6af7859aded2c3a6eced2fd5
+          - 8cf3bc2bf36342e844e9c8108393562538a9af2a1011c80bb46416c0572c86ff
+          - abbad7acd50754f096fdc6551e728aa6054dcf8e55946f90a02b17db552471ca
+          - d697160aecf152a81a89a6b5a7d9e1b8b5e121724038c676157ac72f20364edc
+          - cba5ab65a24be52214736bc1a5bc984953a9c15d0a3826d5b15e94036e5497df
+          - 25f0d1cbcc53d8cfd6d848e12895ce376fbbfaf279be591774b28f70852a4fd8
+          - 115fd8c619fa173622c7a1e84efdf6fed08a25d3ca3095404dcbd5ac3deb1f03
+          - f27836430742c9e014e1b080d89c47e43db299c2e00d0c0801a2830b41b57bc1
+          - 5b5e80f63c04402d0b282e95e32155b2f86cf604a6837853ab467111d4ac15e2
+          - dd7e69e14c88972ac173132b90b3f4bfb2d1faec15cca256a256dd3a12b6e75d
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 1d2c706e821076a59dcd38cf37dcf3c6
+          - 35d2ce0651d8bc045e920c10fd52a178
+          - 35eb9e586dfef4b385d4ee13a85e29de
+          - bf0fea133818387cca7eaef5a52c0aed
+          - 77d4cc390e8bb7e2b5ccfd92efd3dd83
+          - 794d18f975f94e3d9b1144c542c7f39b
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://researchcenter.paloaltonetworks.com
+        - http://supservermgr.com
+        RequestUrl: *id005
+  condition: any of them

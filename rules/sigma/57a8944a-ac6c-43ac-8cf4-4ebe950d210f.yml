@@ -1,0 +1,53 @@
+title: Expansion on OSINT Lost your iPhone? Be on guard for a perfectly-timed Apple
+  ID phishing attack by Hot For Security
+id: 57a8944a-ac6c-43ac-8cf4-4ebe950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - show-iphone-location.com
+        - apple-map-locate.com
+        - findmyiphone-system.com
+        - alert-support.com
+        - icloudsecurelogin.com
+        - fmi-verify-lost.com
+        - alert-map.com
+        - apple-support-apple.com
+        - lcloud-location-map.com
+        - findmyiphones-team.com
+        - security-ios.net
+        - locationteam-icloud.com
+        - icloud-find.us
+        - icloudview.com
+        - forum.liveplays.net
+        - iphone-service.us
+        - fmidevice-location.com
+        - rakgrs.xyz
+        - verify-apple-id.us
+        - trackingiphonelocation.com
+        - mmison.xyz
+        - verify-iphone-location.com
+        - microexperts.xyz
+        - hamedia.net
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 5.189.140.84
+        - 162.210.99.240
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://www.passivetotal.org
+        RequestUrl: *id003
+  condition: any of them

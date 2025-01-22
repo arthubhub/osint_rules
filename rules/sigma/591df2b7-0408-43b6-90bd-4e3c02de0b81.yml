@@ -1,0 +1,55 @@
+title: OSINT - New Loki Variant Being Spread via PDF File
+id: 591df2b7-0408-43b6-90bd-4e3c02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.flokibot
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - online-prodaja.rs
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 194.88.105.202
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - f6b7baa8ed7561c9a9d7394ae65b207f49e9e575
+          - 100b1ff0a54bd7af57f0ac8030dfa29c3da8b745
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - e71379a53045385c4ac32e5be75a04e3d2a9fc7b707fb4478ce90fe689f66d19
+          - fa417e0b42362c40301750809df9f0c9bdbf333269f50f74832d4f471358aaed
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 973f20849613f197ff200f9bcd0fc7f5
+          - 7bc2267d83b97d4733210fbd47ae0633
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://blog.fortinet.com
+        RequestUrl: *id006
+  condition: any of them

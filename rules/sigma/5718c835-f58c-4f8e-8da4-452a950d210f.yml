@@ -1,0 +1,89 @@
+title: 'CryptXXX: New Ransomware From the Actors Behind Reveton, Dropping Via Angler'
+id: 5718c835-f58c-4f8e-8da4-452a950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - rp4roxeuhcf2vgft.onion.to
+        - rp4roxeuhcf2vgft.onion.cab
+        - rp4roxeuhcf2vgft.onion.city
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 146.0.42.68
+        - 104.193.252.245
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - fd1ae96536ef9f29f336425b83022d2beab767a2
+          - 246b1e0d01772a47a5f2032c8642d33d47a11c57
+          - 0487c3856c5e44d3a5c2dcee29c63cb644a4fc52
+          - b4e17ebe8b07727e7ce6ae8580b97d1129e7c6ce
+          - 87d7a85b4ea7d4041ade140576b4d6fd2c5aa403
+          - e22678fe4bd0b209b14d5ed061ae61bb52e79df1
+          - 0a1d2182f272ff4e4321b41f6bf65f8320d9e88c
+          - cfb97a66c90bff92b5d72eb9e81b2e9d8013b66d
+          - 93e9e42eba18e83811b4e9858be5cd09b9c50e5d
+          - 92a35105a3cf19a183ef9ca9e66cb9063fffecf1
+          - d3f6bd8b57a8c353fd3f25d66e0690d9f578d35e
+          - 8b2771240fdcb3ca11c0ea1b77a313484154a85f
+          - 3c0246b41063f5ea26de9d96301774836270eff3
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 41dbbc60b8921709c5eb187cf03e60701e3b172e6deebdb67dd66c8cb3666b90
+          - ab7a58b6e50be6b9bcb926c550ff26669601bbd8bfd922a5b32756e663b25a67
+          - 1036c84a003378907560356642bb065caef961f9dbc5c3b2a4954d5cbe7100df
+          - e53610a977b65c01b275e37aefad7884368dfe00b50750e35b6c8c87556a2c06
+          - a4e9c151a50595b59e787dd3b361ac53d02dd7f212d6b22639dc01776c886d05
+          - 565dadb36e1d8b0c787d0d5e4cd7ec8c24cac1d6b37637427547ae465ab0fff0
+          - 0b12584302a5a72f467a08046814593ea505fa397785f1012ab973dd961a6c0e
+          - eaa857c95fca38ca08411b757f4ad2a841cfb9782deca8abf64aada445923c0d
+          - 5bfae47c9fda81243b50b6df53ac4184d90a70000894fa2a516044fa44770cfd
+          - 59ddf36a9e85f4cf82a6511b49cfcdd9e4521b17f7e245f005e18418176ff4aa
+          - ad3cc219a818047d6d3c38a8e4662e21dfedc858578cb2bde2c127d66dfeb7de
+          - dff7c0aac326f210705e4f53cd78a57cb277e80ecec7bdffd6f68db3bdda39c3
+          - 669ae51d73a3fac117ec39195efb969cb41a16fadecfe412ad83b767b25ae2ae
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 3776ec795ef3aa649ff48fcf83c87713
+          - 17697e1829f0d18d2051a67bc2bca134
+          - d4439055d2d63e52ffc23c6d24d89194
+          - 3e75e8238a6bbd8817164658696198af
+          - de882c049be133a950b6917562bb2313
+          - bfb8f7f6cbe24330a310e5c7cbe99ed4
+          - 0c3431dbb8cd0478250eb4357257880e
+          - cd2d085998a289134ffaf27fbdcbc8cb
+          - d65f155381d26f8ddfa304c83b1ad95a
+          - b824d94af0f981106ec2a12d0c4cc1c0
+          - 971c578c9dea43f91bfb44ceac0ee01d
+          - 70a377690917a98e6ee682f7941eb565
+          - 728733095fe2c66f91a19ebde412dd25
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://www.proofpoint.com
+        RequestUrl: *id006
+  condition: any of them

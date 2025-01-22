@@ -1,0 +1,76 @@
+title: 'OSINT - FreeMilk: A Highly Targeted Spear Phishing Campaign'
+id: 59d68cfe-723c-4b5e-b737-fbfd02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - discgolfglow.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 67cd2e35fd6e06afe80724f53effabbfdf80349b
+          - f374436ec085e8bb254c3bf42d0dc84536cc4a90
+          - 419a86472fa374a333fd616152a4e1c2e94e8c8d
+          - ad6fb28bd1eb1b992982648f0e78874e14e7b4ba
+          - abe2753ea8c2c54163703c4a3ca86ae25a0ce780
+          - f7fcadc8c71752ce5d47af1e8069069cc70e6e27
+          - 011604ce0e46229ece8d9266d69d0e68d5931e72
+          - aa84276ca9a6ad2f644f927cc14c9bff09595d92
+          - 0f97d50ca513c6899204b59d594a0537a14aa81f
+          - 5bb865a0518862c9b47e678446e9968b8e2d0bed
+          - 73f84a1bfb63c06c43d570dd6fd0f08b14c2b7c6
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 1893af524edea4541c317df288adbf17ae4fcc3a30d403331eae541281c71a3c
+          - 64ef80e7639c8c5dddf239883617e6740c6b3589f995d11314d36ab64fcfc54c
+          - 7f35521cdbaa4e86143656ff9c52cef8d1e5e5f8245860c205364138f82c54df
+          - 40572e1fc37f4376fdb2a33a6c376631ff7bc00b1e64538a0385bc1e09a85574
+          - 35273d6c25665a19ac14d469e1436223202be655ee19b5b247cb1afef626c9f2
+          - 1163da8c37ad9ba98d59b921ba8cf8e54bfc1282712cf754f4ff82b63f8e6027
+          - ba5905c2fe46bd6734973139e759ba405fd193c2342dfcac396e9d529b57821b
+          - 99c1b4887d96cb94f32b280c1039b3a7e39ad996859ffa6dd011cf3cca4f1ba5
+          - a50543919c52ccaea40155ce35aa791bc86bd634240fb51922827223aca5c88a
+          - 201b876bcb97f6c8972cc677bdf1e3e2b2f069ae2ec4653db8af4797884efa30
+          - 0f82ea2f92c7e906ee9ffbbd8212be6a8545b9bb0200eda09cce0ba9d7cb1313
+          - 34478d6692f8c28332751b31fd695b799d4ab36a8c12f7b728e2cb99ae2efcd9
+          - ef40f7ddff404d1193e025081780e32f88883fa4dd496f4189084d772a435cb2
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 9f022df0bcfded9377baf4da1fbe7b8c
+          - 36ab73294dbbcdfe2554c5e29544de24
+          - fed4b7096553965a07e0f340494889fe
+          - 53fb994908b72067bc3d2f6f93c0de7d
+          - 321461c22c742328af1feb27a7c1c8e0
+          - 6c668fd6a98f0659abc54d88c1db209e
+          - 237ff78e9d8c9407f89563cb696c2539
+          - f5cae9fcc8bad42b3dddb71ce68dbd92
+          - f5463cd95632706cd7823bfea8fc118c
+          - 7c2ebfc7960aac6f8d58b37e3f092a9c
+          - ab4596f26b25730fbc9dc41e629980f1
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://researchcenter.paloaltonetworks.com
+        - http://old.jrchina.com
+        RequestUrl: *id005
+  condition: any of them

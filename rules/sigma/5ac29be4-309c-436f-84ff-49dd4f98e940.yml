@@ -1,0 +1,27 @@
+title: 'OSINT - Threat Advisory: Oh No Cleo! Cleo Software Actively Being Exploited
+  in the Wild'
+id: 5ac29be4-309c-436f-84ff-49dd4f98e940
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1190
+logsource:
+  product: windows
+detection:
+  object_8144:
+    all:
+    - ip_detection:
+        DestinationIp: &id001
+        - 176.123.5.126
+        - 5.149.249.226
+        - 185.181.230.103
+        - 209.127.12.38
+        - 181.214.147.164
+        - 192.119.99.42
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+  condition: any of them

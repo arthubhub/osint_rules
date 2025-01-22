@@ -1,0 +1,76 @@
+title: 'M2M -  Locky 2017-10-02 : Affid=3, offline, ".ykcol" : "Emailed Invoice -
+  123456" - "I_123456.7z"'
+id: 59d25f8b-1a64-43b0-ab71-4ba1950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 98.124.251.65
+        - 98.124.251.204
+        - 98.124.252.131
+        - 103.53.172.3
+        - 188.132.180.113
+        - 37.48.73.139
+        - 93.187.200.105
+        - 184.168.92.220
+        - 178.77.75.77
+        - 98.124.251.69
+        - 87.106.222.105
+        - 77.245.149.46
+        - 87.106.150.83
+        - 98.124.251.72
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 2d3c8d31b97de4ac412aa36ae9ae5b672a934167
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 5998290a28026732d73b1144dd67e4dcd3b0cbdc1b9d61a8a9286c3a35fcfdfb
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 94f3b5dbf38a74664e85e8bca6ac6ede
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://alexandradickman.com
+        - http://pacalik.net
+        - http://robsacks.com
+        - http://schwellenwertdaten.de
+        - http://goliathstoneindustries.com
+        - http://honeypot.egdevcenter.com
+        - http://ichinose.de
+        - http://kartprinterleri.com
+        - http://leightonbrothers.co.uk
+        - http://motifahsap.com
+        - http://petrochemus.com
+        - http://sherylbro.net
+        - http://skyehoppus.com
+        - http://theceocforeporter.com
+        - http://wallstproperties.com
+        RequestUrl: *id005
+  condition: any of them

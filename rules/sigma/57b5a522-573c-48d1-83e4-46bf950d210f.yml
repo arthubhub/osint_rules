@@ -1,0 +1,85 @@
+title: Pivot on whois registrant 844148030@qq.com
+id: 57b5a522-573c-48d1-83e4-46bf950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - 7b7p.info
+        - 6b6p.pw
+        - 7b7p.pw
+        - 9b9p.mobi
+        - 9b9p.tel
+        - b9p.me
+        - chaccc.pw
+        - chmmm.pw
+        - gaobb.pw
+        - gaomm.pw
+        - hshs995.pw
+        - kanhuangse.pw
+        - mmm666.pw
+        - sebbb11.pw
+        - sebbb12.pw
+        - sebbb13.pw
+        - sebbb14.pw
+        - sebbb15.pw
+        - sebbb16.pw
+        - sebbb17.pw
+        - sebbb18.pw
+        - sebbb19.pw
+        - sebbb20.pw
+        - sebbb21.pw
+        - sebbb22.pw
+        - sebbb23.pw
+        - sebbb24.pw
+        - sebbb25.pw
+        - sebbb27.pw
+        - sebbb28.pw
+        - sebbb30.pw
+        - sebbb31.pw
+        - sebbb32.pw
+        - sebbb33.pw
+        - sebbb34.pw
+        - sebbb35.pw
+        - sebbb36.pw
+        - sebbb37.pw
+        - sebbb38.pw
+        - sebbb39.pw
+        - sebbb40.pw
+        - sebbb41.pw
+        - sebbb42.pw
+        - sebbb43.pw
+        - sebbb44.pw
+        - sebbb45.pw
+        - sebbb46.pw
+        - sebbb47.pw
+        - sebbb48.pw
+        - sebbb49.pw
+        - sebbb50.pw
+        - sebbb52.pw
+        - sebbb54.pw
+        - sebbb56.pw
+        - yaobb.pw
+        - yaoeee.pw
+        - yaokanb.pw
+        - yaokanhp.pw
+        - yaokk.pw
+        - yaomm.pw
+        - yaopp.pw
+        - yaoqqq.pw
+        - yaorrr.pw
+        - yaowww.pw
+        - yaoxx.pw
+        RequestUrl: *id001
+        QueryName: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://reversewhois.domaintools.com
+        RequestUrl: *id002
+  condition: any of them

@@ -1,0 +1,54 @@
+title: 'BadMirror: New Android Malware Family Spotted by SherlockDroid'
+id: 56df115b-5030-4328-a9ee-4484950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - c3edf6fcdc0770c62cc03078051392db418fec7e
+          - 05d9c9eeded99da30bbddbb81150c0eff45d812e
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 835c14d38926c88ee9a51a0b6d8c7893a76e3bf4e8d1978b650e178c88b1e07e
+          - ba56136e88e398a8e7f7c3c398b21550d17beb3ae533b579d6a1abf5de6d4d5c
+          - 171ccb5ef9ff1bbeb65912b7fbaa30724aa17f949e4ac75738d4fbf74ad6577c
+          - 4393b8d81d6ccd5be5aa2652180dfb7213dca8a9f089c70edf4b2b1711aadeba
+          - bad6b2f190c042e85c18fab79f3008bc167dd20a37a2382089e8c50910b2d8bb
+          - c17e327c1b35589317ad4f9f877fb260eac7fc4d1d8647bf1335348ce7ba1564
+          - c684f0d3a87b8bc1f69291fa526ccad2fa71a4701cf55531b23509a985a36210
+          - 8721d98ef053e6f429cbc07a710b87b8048c8b8bb9788651f20e90281bb37ac5
+          - f45fc90d1f2818c72ece2b1a88d6dad6f6065a7a6e1b366e919c8fc85c1391f6
+          - 86e48e907a412f110db908234899037e6890872452b260274e03c5c736537932
+          - a839afe5b67de0d7500f30cd787abfbcaf268c2684b8e247381e28e4bb18e551
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 415990651f6b53b6df3208bea7e5e29d
+          - 4f437c0e4a424bc25c1a3abf26321d98
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://blog.fortinet.com
+        - http://silent.googlestatistics.net
+        - http://silent.800t.net
+        - http://googlestatistics.net
+        - http://bg.800t.net
+        RequestUrl: *id004
+  condition: any of them

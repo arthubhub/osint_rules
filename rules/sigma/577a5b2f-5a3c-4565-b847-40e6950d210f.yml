@@ -1,0 +1,45 @@
+title: Malspam 2016-07-04 (testrun, subject 'Scanned image'), .docm
+id: 577a5b2f-5a3c-4565-b847-40e6950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - greatlakessawingsolutions.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 199.166.6.15
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 0250db9c1bb29902f1b56a67381d36caa21b50b3
+          - 741fd7484a47a5b6dbd56cb0900b1fd64f539175
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 5b353b4cd8c2be450542ced95419cda4c51ad5d2c008d011a6444d37fa8d952b
+          - 0f3f32f5e9ef01c95c1e7c459fb1ddbaec9fe64382bab16893196e156ea8afad
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://greatlakessawingsolutions.com
+        RequestUrl: *id005
+  condition: any of them

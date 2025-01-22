@@ -1,0 +1,183 @@
+title: HALFRIG - Malware Analysis Report
+id: a57a8551-4e22-44b9-a72d-fa8345532029
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1566.001
+- attack.t1574.002
+- attack.t1566
+- attack.t1583.003
+- attack.t1204.002
+- attack.t1553.005
+- attack.software.halfrig
+- attack.t1574.001
+- attack.t1027.006
+- attack.t1204
+- attack.t1584
+- attack.t1140
+- attack.t1547.001
+logsource:
+  product: windows
+detection:
+  object_16807:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.gov.pl
+        RequestUrl: *id001
+  object_16808:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - d9d40cb3e2fe05cf223dc0b592a592c132340042
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - cb470d77087518ed7bc53ca624806c265ae2485d40ec212acc2559720940fb27
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 83863beee3502e42ced7e4b6dacb9eac
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+  object_16809:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id005
+          - fbb482415f5312ed64b3a0ebee7fed5e6610c21a
+          SHA1: *id005
+          DriverSha1: *id005
+          TargetProcessSha1: *id005
+          Hashes.sha1: *id005
+        sha256_detection:
+          sha256: &id006
+          - d1455c42553fab54e78c874525c812aaefb1f3cc69f9c314649bd6e4e57b9fa9
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+        md5_detection:
+          md5: &id007
+          - 0e5ed33778ee9c020aa067546384abcb
+          MD5: *id007
+          DriverMd5: *id007
+          TargetProcessMd5: *id007
+          Hashes.md5: *id007
+  object_16810:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id008
+          - f61e0d09be2fc81d6f325aa7041be6136a747c2d
+          SHA1: *id008
+          DriverSha1: *id008
+          TargetProcessSha1: *id008
+          Hashes.sha1: *id008
+        sha256_detection:
+          sha256: &id009
+          - ddf218e4e7ccd5e8bd502fb115d1e7fbfaa393fb7e0b3b9001168caebc771c50
+          SHA256: *id009
+          DriverSha256: *id009
+          TargetProcessSha256: *id009
+          Hashes.sha256: *id009
+        md5_detection:
+          md5: &id010
+          - f532c0247b683de8936982e86876093b
+          MD5: *id010
+          DriverMd5: *id010
+          TargetProcessMd5: *id010
+          Hashes.md5: *id010
+  object_16811:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id011
+          - e418d37fdcf4c288884bfe744b416cbdb0243a9e
+          SHA1: *id011
+          DriverSha1: *id011
+          TargetProcessSha1: *id011
+          Hashes.sha1: *id011
+        sha256_detection:
+          sha256: &id012
+          - efeb7d9d0fabe464a32c4e33fe756d6ef7a9b369c0f1462b3dd573b6b667488e
+          SHA256: *id012
+          DriverSha256: *id012
+          TargetProcessSha256: *id012
+          Hashes.sha256: *id012
+        md5_detection:
+          md5: &id013
+          - abc87df854f31725dd1d7231f6f07354
+          MD5: *id013
+          DriverMd5: *id013
+          TargetProcessMd5: *id013
+          Hashes.md5: *id013
+  object_16812:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id014
+          - 6dff9a9f13300a5ce72a70d907ff7854599e990a
+          SHA1: *id014
+          DriverSha1: *id014
+          TargetProcessSha1: *id014
+          Hashes.sha1: *id014
+        sha256_detection:
+          sha256: &id015
+          - cfa65036aff012d7478694ea733e3e882cf8e18f336af5fba3ed2ef29160d45b
+          SHA256: *id015
+          DriverSha256: *id015
+          TargetProcessSha256: *id015
+          Hashes.sha256: *id015
+        md5_detection:
+          md5: &id016
+          - 2ffaa8cbc7f0d21d03d3dd897d974dba
+          MD5: *id016
+          DriverMd5: *id016
+          TargetProcessMd5: *id016
+          Hashes.md5: *id016
+  object_16813:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id017
+          - a677b6aa958fe02cac0730d36e8123648e02884f
+          SHA1: *id017
+          DriverSha1: *id017
+          TargetProcessSha1: *id017
+          Hashes.sha1: *id017
+        sha256_detection:
+          sha256: &id018
+          - 86edfd6c7a2fab8c50a372494e3d5b08c032cca754396f6e288d5d4c5738cb4c
+          SHA256: *id018
+          DriverSha256: *id018
+          TargetProcessSha256: *id018
+          Hashes.sha256: *id018
+        md5_detection:
+          md5: &id019
+          - 5b6d8a474c556fe327004ed8a33edcdb
+          MD5: *id019
+          DriverMd5: *id019
+          TargetProcessMd5: *id019
+          Hashes.md5: *id019
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id020
+        - sawabfoundation.net
+        - communitypowersports.com
+        - sanjosemotosport.com
+        RequestUrl: *id020
+        QueryName: *id020
+  condition: any of them

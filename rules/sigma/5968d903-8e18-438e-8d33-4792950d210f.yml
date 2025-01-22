@@ -1,0 +1,66 @@
+title: 'M2M -  #trickbot Lloyds Bank'
+id: 5968d903-8e18-438e-8d33-4792950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.trick_bot
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 193.227.248.241
+        - 74.200.89.84
+        - 190.228.169.106
+        - 94.42.91.27
+        - 118.91.178.114
+        - 186.103.161.204
+        - 163.53.206.187
+        - 46.160.165.16
+        - 191.7.30.30
+        - 46.160.165.31
+        - 197.248.210.150
+        - 194.87.95.60
+        - 195.133.201.149
+        - 94.140.121.250
+        - 83.234.136.55
+        - 93.99.68.140
+        - 118.91.178.145
+        - 168.194.82.174
+        - 190.34.158.250
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 47d6aadfe0808f0bbcc52c06388dde6967d73182
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 3c72d0913352a946707fb18c96195ea96b3e0d6992bf3087f6152c45d7da9a70
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - a6aea28a2b0b1da833699a09787d4a15
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://armor-conduite.com
+        - http://kgshrestha.com.np
+        RequestUrl: *id005
+  condition: any of them

@@ -1,0 +1,62 @@
+title: 'M2M - "..doc" 2017-12-05 : ''Message from "G10PR0123456.MYCOMPANY.COM"'' -
+  "20171205123.zip"'
+id: 5a26b911-af14-4c92-86a9-446c950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 198.23.241.227
+        - 52.5.196.34
+        - 78.111.75.239
+        - 213.203.202.31
+        - 85.214.130.145
+        - 209.54.51.32
+        - 192.185.193.214
+        - 103.198.0.2
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 60d60dff0d3af3b564e43bc87ef5a63ff6146da7
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - c0ce6c2f03e3174d347eb2136a230883a725fcd5179221f61435ea709a2ba81f
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 5da21af74810e3655bcbbe40660f21b8
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://summi.space
+        - http://hofgrund.de
+        - http://horoskoperstellung.com
+        - http://hosting-jw.de
+        - http://primeassociatesinc.com
+        - http://rorymartin8.info
+        - https://ugf57wl6uexcj7fu.onion.link
+        RequestUrl: *id005
+  condition: any of them

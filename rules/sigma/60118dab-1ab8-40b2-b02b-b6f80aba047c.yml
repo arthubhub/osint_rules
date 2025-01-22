@@ -1,0 +1,128 @@
+title: '[CERT-FR] Sandworm intrusion set campaign targeting Centreon systems'
+id: 60118dab-1ab8-40b2-b02b-b6f80aba047c
+description: edit this field when analysing or editing the rule - reported by "CERT-FR_1510"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1041
+- attack.t1573.001
+- attack.t1083
+- attack.t1505.003
+- attack.t1543
+- attack.group.electrum
+- attack.group.iridium
+- attack.t1573
+- attack.group.telebots
+- attack.t1071.001
+- attack.t1543.003
+- attack.t1190
+- attack.t1573.002
+- attack.group.sandworm
+- attack.t1140
+logsource:
+  product: windows
+detection:
+  object_677:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - a739f44390037b3d0a3942cd43d161a7c45fd7e7
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - e1ff729f45b587a5ebbc8a8a97a7923fc4ada14de4973704c9b4b89c50fd1146
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 92ef0aaf5f622b1253e5763f11a08857
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_678:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - c69db1b120d21bd603f13006d87e817fed016667
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 893750547255b848a273bd1668e128a5e169011e79a7f5c7bb86cc5d7b2153bc
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 84837778682450cdca43d1397afd2310
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_679:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - b7afb8c91f8f9df4f18764c25251576a0f8bef6f
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 928d8dde63b0255feffc3d03db30aa76f7ed8913238321cc101083c2c5056ffa
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - a89251cd4c15909a8e15256ead40584e
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_680:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 5a58e46e5b8f468445f848f8eca741eddebcef3e
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - ebe98d5e1ab6966ec1e292fafbd5ef21c2b15bd7c7bb871d8e756971b8b6877a
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 9885fcdda12167b2f598b2d22de07d5b
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id013
+        - https://wws.cert-ist.com
+        RequestUrl: *id013
+  condition: any of them

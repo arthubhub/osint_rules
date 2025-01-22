@@ -1,0 +1,50 @@
+title: 'OSINT - Real News, Fake Flash: Mac OS X Users Targeted'
+id: 5981907c-ee6c-4ed5-bc87-40af02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 45.77.53.146
+        - 213.200.14.138
+        - 176.9.192.223
+        - 185.28.22.22
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 2810d554b2e9e14551cef7293e5240b058fb78c3
+          - 2441e2e9f68b4110218e1fcdc2cfce864b96e2da
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 58509ec67ce9a271bf4a1ec3cad3a37bb666c1df4cc90f16db7038982b57dcf1
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 6597ffd7d1d241b1bf776bc7e1e3f840
+          - 28064805242b3aa9c138061d6c18e7f5
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.volexity.com
+        RequestUrl: *id005
+  condition: any of them

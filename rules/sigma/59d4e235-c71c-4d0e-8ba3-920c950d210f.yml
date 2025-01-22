@@ -1,0 +1,50 @@
+title: OSINT - Malicious Chrome Extensions Stealing Roblox In-Game Currency, Sending
+  Cookies via Discord
+id: 59d4e235-c71c-4d0e-8ba3-920c950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - 3rmillion.net
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 92d2ac44f7b11749fe040ab438ee736866edeafb
+          - aef1f023f744bb3fe1ab8616d9d44391d6a0a03e
+          - 1bbf468286a00175ef032063f6b01c4c958a6b3a
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 0061a5f52c5b577f679e81da3ab3ad3803c20e345c16ffc4dbc8b76386d42a00
+          - 4c4af30a94cd25b23579e12b64191a056bda3c51b6e531a2202d3863b19432b3
+          - d9f21e401ef0197a2af66133e3f7fc3a4ea3efb4437884a4383076bad4060b02
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 98f2e06a90a8d762a05fc7deeb74093f
+          - 178e598baf688ca318482751d38b5f33
+          - 0574437b0e697cf884726bb5e321be80
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://blog.trendmicro.com
+        RequestUrl: *id005
+  condition: any of them

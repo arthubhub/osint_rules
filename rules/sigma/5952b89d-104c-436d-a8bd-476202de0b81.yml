@@ -1,0 +1,46 @@
+title: "OSINT - D\xC3\xA9j\xC3\_ vu: Petya ransomware appears with SMB propagation\
+  \ capabilities"
+id: 5952b89d-104c-436d-a8bd-476202de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.petya
+- attack.software.petya
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 34f917aaba5684fbe56d3c57d48ef2a1aa7cf06d
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 027cc450ef5f8c5f653329641ec1fed91f694e0d229928963b30f6b0d7d3a745
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 71b6a493388e7d0b40c83ce903bc6b04
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://blogs.technet.microsoft.com
+        - https://blogs.forcepoint.com
+        - http://www.ad.nl
+        - https://blockchain.info
+        - https://support.microsoft.com
+        RequestUrl: *id004
+  condition: any of them

@@ -1,0 +1,69 @@
+title: OSINT - Additional Insights on Shamoon2
+id: 58ad3fed-cc40-4087-a6f8-3ca5950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.shamoon
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - analytics-google.org
+        - go-microstf.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 104.218.120.128
+        - 69.87.223.26
+        - 5.254.100.200
+        - 45.63.10.99
+        - 104.238.184.252
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 25b09cdd135197ccd8981488f38b045000297439
+          - 6b3453b85d4cf7cc9a795ed710440da54ce6788c
+          - 2079aa6e288bda7af96a2aa03702a38c29b91479
+          - 175784206471985ed09f2c7f9d46b79ed6a9a6c6
+          - d69fad4a24aade835197d060947719f65528fe84
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - c21074f340665935e6afe2a972c8d1ab517954e2dd05cc73e5ff0e8df587b99d
+          - 924b4615ba6e6ed87fad81ad4c2ae876d10a9b34fb347210a2ec7621b92005cb
+          - 33ee8a57e142e752a9c8960c4f38b5d3ff82bf17ec060e4114f5b15d22aa902e
+          - 388b26e22f75a723ce69ad820b61dd8b75e260d3c61d74ff21d2073c56ea565d
+          - 71e584e7e1fb3cf2689f549192fe3a82fd4cd8ee7c42c15d736ebad47b028087
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 2a0df97277ddb361cecf8726df6d78ac
+          - 5e5ea1a67c2538dbc01df28e4ea87472
+          - d30b8468d16b631cafe458fd94cc3196
+          - 83be35956e5d409306a81e88a1dc89fd
+          - 07d6406036d6e06dc8019e3ade6ee7de
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://www.arbornetworks.com
+        RequestUrl: *id006
+  condition: any of them

@@ -1,0 +1,147 @@
+title: 'OSINT The Italian Connection: An analysis of exploit supply chains and digital
+  quartermasters by Shadowserver'
+id: 55c98ff2-f2fc-4284-8a34-f483950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - appeal.ml
+        - eniw577dlcp4zbag.onion
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 172.246.109.27
+        - 202.183.129.155
+        - 203.249.88.243
+        - 211.226.71.4
+        - 213.186.164.211
+        - 220.134.9.49
+        - 223.25.233.248
+        - 70.90.107.245
+        - 95.110.210.31
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        md5_detection:
+          md5: &id003
+          - dceae0d1a680bc098bae9da466e12610
+          - 5392f1399a49935817669d22e5e644ea
+          - da6c98d8f37290a10119fbca33eec58a
+          - 878d13b8ceb49cfe9ff1b063bffeb9a9
+          - 079a440bee0f86d8a59ebc5c4b523a07
+          - 2c6126e9f308d1be11553978e8a97621
+          - 75dc1e22e16c39e3532673f75fd41b93
+          - 00591821f328911380277272164d08cd
+          - 0b3a047d31461e20887bb1d32b4e472f
+          - f46019f795bd721262dc69988d7e53bc
+          - 557f8d4c6f8b386c32001def807dc715
+          - e9a57f70f739cb26dc053238b0a97425
+          - ceda2299257c96e60ead75fce414c68d
+          - 726bd0bd6cca8d481cf6165c95528caa
+          - b65076f4cb6e74429dd02fcacda0bec3
+          - 8a8e9bbf1ca2a926f0a5d06217eeea55
+          - 054d9852de6983116bd3d521e8d73296
+          - 15112a53fcecc4c666a82ca84a853716
+          - 727dd4a7aae56a8202c5aa7758ea5d46
+          - e33cf5b9f3991a8ee4e71f4380dd7eb1
+          - 451c52652ddb28e9071078f214a327a7
+          - b1238ccbb10af3e81110d3afacd98161
+          - b7d39c5833e5896b7f5849966095a4bf
+          - c101d289d36558c6fbe388d32bd32ab4
+          - 9bf3e6a95a261a449be02ac03d4f0523
+          - 42b091f63548fccbbd87f8c06b632dda
+          - dccb71a74f719aa23e8bbb51ec037f56
+          - e15fb188c0c50d62657c7fd368a9a4ab
+          - 53473af71d40568d25da87fc41dfe500
+          - 5beb4504fe22e859a2b09cd5a654b23e
+          - 9647626a70f006b49bc35d110aaadf8a
+          - 4dd21fd277c772bcf8b9d1d72bf68de8
+          - 195bdc84f114c282e61f206dc88cd26d
+          - edcd313791506c623d8a2a88b9b0e84c
+          - 83388058055d325a2fa5288182a41e89
+          - aa9eded1eb95f026aaf84919cc27ad32
+          - 55bc2ac6bfcaaf9364a67cbd837aa66e
+          - 3652a267b318b13c99c1a817416406ee
+          - 4b705980ed1b07becd76f47e007b5b3a
+          - 955de95974a6228846cea327772815fe
+          - 23489ab7e77f7c69db3e2c6fd791bddb
+          - 2d34c498fa0a65a59fd724d1d5466fbc
+          - b5847d4f60ecba8a09a019d8826a6a18
+          - 00bdfdbc00dd1faa7896926b99444e2f
+          - 026cb3d736b6cd7d3529e04e72d35923
+          - 033ec22cedaaf87f35024104ec4ec7a6
+          - 058fe24b7de10d915737ede604b3954e
+          - 0a28f677465fdf76689ca2fcabc68d53
+          - 12aba18ebd49f917c42e08aed6a2d48a
+          - 13943e2d51bc32daa8199dfe4473b620
+          - 16664601808c8aa59ecd11c37042b81f
+          - 1b127227d6228ce32b93d197756b6708
+          - 1cb92899533679ebc17fd81c3d4059a7
+          - 1ed9c8e84f55c337584869a25b06f453
+          - 21feb2974475a85b2cdf9cc196064796
+          - 29c555ab97f74d957dce14c961d07eff
+          - 2ad0335cc530ebfe59901e4d3b31db7b
+          - 34b614df1e57f2ce95997f85078de2f9
+          - 3614e902f822b6c30e024b80e7f1487b
+          - 36f87c500445e056005beec62f6684b1
+          - 37862fa22c69e945ba6ec5492e518558
+          - 3e7f8f4f2fdd7c587d0212ad38c10805
+          - 3fa797e193ff815afc9378c3a025bcde
+          - 46997daab86bef5a7eaaa705924c1e2a
+          - 4cfeff03580ef09b8dc7cf098bb057e3
+          - 4de5d537bd29289703bf7bf5a54f6c8a
+          - 4eaa236e48598bce7e9b67edb143ca79
+          - 504eedb7ed01bc7748d2bdaf7f0e48cc
+          - 522eed25db0776b18e3a0385ff1f2f74
+          - 535f6f7b3a21d53b4b316b322d238ada
+          - 541f6853cef8144574d8fcdb89aef9e1
+          - 57fab79d1f3836561c5da600c8ed2773
+          - 6302d1026fb32fe7ca579cb503c77234
+          - 6d8d6121af6ba6a8679b876faeb59c01
+          - 76bbf9cfe6d6870d3e35cf038c39234c
+          - 784045c9663a0ac2c3e7509692e32919
+          - 785e8af0535717183f547b6d876513f0
+          - 7d2e309c07099aaa2cf99d4075d77975
+          - 80512010e667756f7d611f5cc6a6f9bb
+          - 85fda4eca55c317752eeabfcba3579a9
+          - 8afb5ce6428615b8bf8c3246bbf964ad
+          - 8e52606b6c31f27b5984ac086f8c0b0f
+          - 94dc2df0886a9b4be8c00336b3b5da5e
+          - aaa62d5f0e348f0e890ad9d3f71e448d
+          - abf00336a309976e60909e08008836f8
+          - acf3b75887d85dcc046792fd83664ef6
+          - b067468484fa4fc1bb27a1a4dcead881
+          - b1bbf35ca05af9486bdfbcbc00961eb7
+          - b45bec70393db70c3c7c6d5f643cdd64
+          - b55e7fd5b60ddd9e19feb8a839f4e6e6
+          - b7fb0e9c99b9d4acf0b27b3cd42ae15d
+          - bbf32eeb560a42a3a69beaed645e7777
+          - c15fb58e768f7625393a8dbbf01c9c26
+          - cb713b544dce5a2505e393f6587aaa47
+          - d5288a98aa9a5f101b9608962d165fcc
+          - d536c4b71d131848e965c4524780a8aa
+          - d5e55bf308d670d68e1ad610e1d2efe3
+          - e1cd6400f115f60213764347f927f7e6
+          - e78376c3ea222d46509900be990fba66
+          - fa9142065d6550d729168b5977f2cf14
+          - ff989967416d02ede7a2a44667c02ff2
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://blog.shadowserver.org
+        - https://docs.google.com
+        RequestUrl: *id004
+  condition: any of them

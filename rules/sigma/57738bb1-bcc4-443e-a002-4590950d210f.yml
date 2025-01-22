@@ -1,0 +1,115 @@
+title: "OSINT - Prince of Persia \xE2\u20AC\u201C Game Over"
+id: 57738bb1-bcc4-443e-a002-4590950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - bestbox3.com
+        - bestupdateserver.com
+        - bestupdateserver2.com
+        - box4054.net
+        - updatebox4.com
+        - updateserver1.com
+        - updateserver3.com
+        - youripinfo.com
+        - safehostline.com
+        - box4035.net
+        - box4036.net
+        - box4037.net
+        - box4038.net
+        - box4039.net
+        - box4040.net
+        - box4041.net
+        - box4042.net
+        - box4043.net
+        - box4044.net
+        - box4045.net
+        - box4046.net
+        - box4047.net
+        - box4048.net
+        - box4049.net
+        - box4050.net
+        - box4051.net
+        - box4052.net
+        - box4053.net
+        - box4055.net
+        - box4056.net
+        - box4057.net
+        - box4058.net
+        - box4059.net
+        - box4060.net
+        - box4061.net
+        - box4062.net
+        - box4063.net
+        - box4064.net
+        - box4065.net
+        - box4066.net
+        - box4067.net
+        - box4068.net
+        - box4069.net
+        - box4070.net
+        - box4071.net
+        - box4072.net
+        - box4075.net
+        - box4078.net
+        - box4079.net
+        - box4080.net
+        - box4081.net
+        - box4082.net
+        - box4083.net
+        - box4084.net
+        - box4085.net
+        - box4086.net
+        - box4087.net
+        - box4088.net
+        - box4089.net
+        - box4090.net
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 5.9.94.34
+        - 138.201.0.134
+        - 138.201.47.150
+        - 144.76.250.205
+        - 138.201.47.158
+        - 138.201.47.153
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 53e145f8b3be90f11d40d88a2decd80c168610f7
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - f07e85143e057ee565c25db2a9f36491102d4e526ffb02c83e580712ec00eb27
+          - 583349b7a2385a1e8de682a43351798ca113cbbb80686193ecf9a61e6942786a
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 4053ea6a7aa9cde6d28a85c6d35f8e4d
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://researchcenter.paloaltonetworks.com
+        RequestUrl: *id006
+  condition: any of them

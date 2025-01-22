@@ -1,0 +1,139 @@
+title: 'M2M -  #trickbot Facture ### via .zip/.WSF'
+id: 594a5e89-05fc-40b3-bf5a-4c9b950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.trick_bot
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 193.0.140.177
+        - 89.231.13.18
+        - 89.231.13.27
+        - 89.231.13.33
+        - 74.122.121.8
+        - 51.255.157.19
+        - 219.118.71.139
+        - 195.110.124.188
+        - 94.140.121.173
+        - 151.80.84.2
+        - 194.87.238.129
+        - 151.80.84.12
+        - 195.133.145.144
+        - 37.1.207.174
+        - 195.62.52.100
+        - 94.140.121.174
+        - 195.133.146.136
+        - 190.228.169.106
+        - 168.194.80.219
+        - 94.42.91.27
+        - 118.91.178.121
+        - 118.91.178.114
+        - 186.103.161.204
+        - 163.53.206.187
+        - 159.224.26.79
+        - 188.117.92.134
+        - 46.160.165.16
+        - 191.7.30.30
+        - 168.194.83.57
+        - 98.124.251.68
+        - 213.247.45.147
+        - 119.28.86.18
+        - 204.11.59.195
+        - 199.79.62.21
+        - 151.1.182.11
+        - 37.187.85.228
+        - 103.195.185.86
+        - 188.166.5.34
+        - 188.165.245.131
+        - 79.96.81.157
+        - 46.30.215.23
+        - 204.11.58.195
+        - 122.114.137.245
+        - 124.248.226.106
+        - 91.210.235.115
+        - 113.23.219.24
+        - 103.50.162.56
+        - 69.65.3.213
+        - 74.220.215.225
+        - 108.174.147.136
+        - 162.210.102.220
+        - 99.198.112.66
+        - 66.147.244.160
+        - 203.195.235.254
+        - 67.55.90.212
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 772c60e4a170ade72a6617cf51485ae1130426cf
+          - a3cd9268e9da6bb0163f6fcce4a81b420384d632
+          - 1fa22fafdb102e5eb17549a99aec6b405c48dfe9
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 15020686b2805795c82a56f7d0ccaea5e4b938f25c0e0fa8781d80afc03ef1fa
+          - 36b83f1df7c918efcde6ec5a895b4b53ec0307b1b8603a5ba3a3ab63ab7c2265
+          - 094c1cf7c9bcc16254b3f04794d401c611123270db493f74154b41c59feb0b81
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 47b102e4de419f18ce1d83dd63c866b8
+          - 78351980d47d75e5647ad25a7d7beb7c
+          - b02fb0a9200ff844a74f71a586464875
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://78tguyc876wwirglmltm.net
+        - http://randomessstioprottoy.net
+        - https://www.hybrid-analysis.com
+        - http://malamalamak9.net
+        - http://xn----8sb4abph0af.com
+        - http://1time.nl
+        - http://adityastudio.com
+        - http://aquareserve.com
+        - http://asathlon.it
+        - http://autobluelite.com
+        - http://chobiring.com
+        - http://chocolatesbazaar.com
+        - http://code-igniter.ro
+        - http://dansstudio-arabesque.be
+        - http://drzewina.pl
+        - http://europegym.be
+        - http://giftskitchen.com
+        - http://lightenenglish.com
+        - http://liukeli.cn
+        - http://marketing-online.ie
+        - http://melakatropical.com
+        - http://partyangel.in
+        - http://rakwhitecement.ae
+        - http://shreveporttradingantiques.com
+        - http://smco.co.in
+        - http://tag27.com
+        - http://techno-me.com
+        - http://telesuonoband.it
+        - http://unitedtanga.com
+        - http://uplandtrains.com
+        - http://veecans.com
+        - http://www.losangelesrelocationservices.net
+        - http://www.manhattanbeachmovers.net
+        RequestUrl: *id005
+  condition: any of them

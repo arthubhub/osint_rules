@@ -1,0 +1,45 @@
+title: OSINT - Spora - the Shortcut Worm that is also a Ransomware
+id: 5881bff7-0bd0-4c84-a206-4eb4950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - d3c89ccaf190890fc0583ea24396b1a2cd8317c4
+          - ae22308bd176a06f3522b8547bd7d9988e1b56fa
+          - 0696d0a4d6fddf137733b867f0334902903e2a0e
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 3fb2e50764dea9266ca8c20681a0e0bf60feaa34a52699cf2cf0c07d96a22553
+          - e2fe74d890ddb516b4f21a6588c6e0bdbf3dd6f8c5116d707d08db7ebddf505a
+          - dbfd24cd70f02ddea6de0a851c1ef0f45f18b4f70e6f3d0f2e2aec0d1b4a2cbf
+          - 0ba39054a70802d0b59a18b873aab519e418dc9b0c81400d27614c9c085409ad
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 312445d2cca1cf82406af567596b9d8c
+          - fc1b2bec47aaa059319f4a47cb37c5e2
+          - 37477dec05d8ae50aa5204559c81bde3
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://blog.gdatasoftware.com
+        RequestUrl: *id004
+  condition: any of them

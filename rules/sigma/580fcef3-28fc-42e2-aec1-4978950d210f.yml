@@ -1,0 +1,103 @@
+title: "OSINT - Houdini\xE2\u20AC\u2122s Magic Reappearance"
+id: 580fcef3-28fc-42e2-aec1-4978950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 52.42.161.75
+        - 78.47.96.17
+        - 136.243.104.200
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 418fab5241665bb22d15e1d16ec723d61c26b9f8
+          - fd5262678a0fee0350e2052336d0d7c09f9ca3bd
+          - 8ee7705fae1d65327c52128d8cd8d961149b0a3a
+          - 21938a5653ccd2c78219b8360d291141873634f6
+          - 0db3bf38a778e2e833e217f715ef67eb9da8169a
+          - 665725908fc67c1810956e682f40bfe9e2ea8160
+          - c2a9af4f0168882d20ca34a15c8af91ea6652b2f
+          - 74d40ba2c54a99bca91bdf6d88d2d86b748f9127
+          - fa73bffab7f2f2e38c70d7a78937e6e4eff242fb
+          - e540045b61ba3e5fa3610b4941664033b1f4d9b8
+          - 624811e7d89f81979ceb56d17aca235b883078b2
+          - 76293d81aa1928c2b72e95dc243f77b9db218c25
+          - 09c5f3cd41fe427c9926c867931b5384dead6869
+          - fbead272dfbf00bc6c3fdbe5a466477efd0afe6e
+          - 1ee3eea0f12c21249c50dd235974d1bf64f65154
+          - dd07143cbedce06fe46660f0867ce42597f20447
+          - cdb55fb4e89464d78af65a9aa42e38f2dba0c70e
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 7916ca6ae6fdbfb45448f6dcff374d072d988d11aa15247a88167bf973ee2c0d
+          - 947d264a413f3353c43dafa0fd918bec75e8752a953b50843bc8134286d6f93f
+          - 9ddf2f2e6ac7da61c04c03f3f27af12cb85e096746f120235724a4ed93fac5aa
+          - 3d287cce7fe1caa5c033a4e6b94680c90a25cb3866837266130ba0fd8fab562c
+          - 444b82caf3c17ea74034c984aeca0f5b2e6547af88a0fb15953f2d5b80e3b448
+          - 3d3db84b6ad760540f638713e3f6a8daf8a226bd045351bcc72c6d22a7df8b3a
+          - fffda1e2d794a5645f973900083a88ef38c3d20a89c5e59ca21412806db28197
+          - 386057a265619c43ef245857b66241a66822061ce9bd047556c4f3f1d262ef36
+          - 44b52baf2ecef2f928a13b17ba3a5552c32ca4a640e6421b8bc35ef5a113801b
+          - 8428857b0c7dfe43cf2182dd585dfdfd845697a11c31e91d909dc400222b4f78
+          - d69e0456ddb11b979bf303b8bb9f87322bd2a9542dd9d9f716100c40bd6decd1
+          - bd5d64234e1ac87955f1d86ee1af34bd8fd11e8edf3a449181234bb62816acab
+          - 774501f3c88ebdd409ec318d08af2350ec37fdbc11f32681f855e215e75440d7
+          - c66b9e8aaa2ac4ce5b53b45ebb661ba7946f5b82e75865ae9e98510caff911a7
+          - 70c55fef53fd4bdeb135ed68a7eead45e8d4ba7d17e0fd907e9770b2793b60ed
+          - 9af85e46344dadf1467c71d66865c7af98a23151025e7d8993bd9afc5150ad7d
+          - 773716bc2d313e17326471289a0b552f90086a2687fa958ef8cdb611cbc9a8c9
+          - e0db0982c437c40ceb67970e0a776e9448f428e919200b5f7a0566c58680070c
+          - 1f45e5eca8f8882481b13fd4a67ffa88a1aa4d6e875a9c2e1fbf0b80e92d9588
+          - 5e42e61340942fc0c46a6668a7f54adbbb4792b01c819bcd3047e855116ae16f
+          - fec925721b6563fec32d7a4cf8df777c647f0e24454fa783569f65cdadff9e03
+          - 106934ff7f6f93a371a4561fff23d69e6783512c38126fbd427ed4a886ca6e65
+          - ba739f3f415efe005fbed6fcfcb1e6d3b3ae64e9a8d2b0566ab913f73530887c
+          - 0672e47513aefcbc3f7a9bd50849acf507a5454bc8c36580304105479c58772a
+          - a4c71f862757e3535b305a14ff9f268e6cf196b2e54b426f25fa65bf658a9242
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 9e2de96dfe130df54e1493893208f5b1
+          - 80bb1b89187f6004e400d7d819480118
+          - 25548be2223f7ce487c6b4d9db370875
+          - 07adbf4d0daa58933716e71baa9f501c
+          - 62d2982a709e45b0542e1cfe210c4058
+          - b9667b4b9d82c6eb254421831c881b45
+          - 7102e9bc802b90b3fc2d82cacbb34aaa
+          - 84b87a84ea684e01d19808abacecf6e8
+          - 54444b71ba380c238f479a4deba20802
+          - f73fed9140bc455617e2430693bc1caa
+          - dbb885f648c560a12beb0d1261ac80e6
+          - f9cd963dec6af1064f6ec31901d50337
+          - e805010d4b68af620b7e97936a5e8f48
+          - da9d023c1d36f8b469aed08ecc996a21
+          - 8fd6fc5f88e11d3df407aafa7ba4ade0
+          - 45009c70d362dcd253112c9cf1924f57
+          - d943834a0323105003194663248f6ff9
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://researchcenter.paloaltonetworks.com
+        RequestUrl: *id005
+  condition: any of them

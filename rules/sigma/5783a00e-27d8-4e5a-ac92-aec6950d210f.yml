@@ -1,0 +1,93 @@
+title: Pivot on What's in a server name (on APT28/Sofacy) by ThreatConnect
+id: 5783a00e-27d8-4e5a-ac92-aec6950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - wsjworld.com
+        - adobeflashdownload.de
+        - adobeupdater.org
+        - adobeupdatetechnology.com
+        - pdf-online-viewer.com
+        - akamaitechupdate.com
+        - helper-akamai.com
+        - cdncloudflare.com
+        - egypressoffice.com
+        - access-google.com
+        - terms-google.com
+        - honeyvvell.co
+        - intelintelligence.org
+        - intelsupportcenter.com
+        - intelsupportcenter.net
+        - micoft.com
+        - microsoft-updates.me
+        - ms-drivadptrwin.com
+        - ms-updates.com
+        - securesystemwin.com
+        - win-wnigarden.com
+        - wincodec.com
+        - wm-z.biz
+        - wmepadtech.com
+        - nato-org.com
+        - natoadviser.com
+        - sec-verified.com
+        - theguardiannews.org
+        - theguardianpress.com
+        - goaarmy.org
+        - stratforglobal.net
+        - worldpostjournal.com
+        - softwaresupportsv.com
+        - energyaspacts.com
+        - bourquinsa.com
+        - ctbkonline.com
+        - ozverler-tr.com
+        - hanmiail.net
+        - hamnaill.net
+        - chianceforkids.com
+        - bisicoind.com
+        - unjiaya.info
+        - pedrodonations.co
+        - diamondscourier.biz
+        - pinllive.com
+        - tracksy.net
+        - e-dates.me
+        - uninstalled.net
+        - yrauto-tw.com
+        - svroulette.com
+        - ferrarlcostruzloni.com
+        - chinagameke.com
+        - tostembekary.com
+        - uniccomvalve.com
+        - atosbasena.com
+        - konrecranes.com
+        - adamsfinanace.com
+        - vortaxworldwlde.com
+        - cellpack-sg.com
+        - expo-consrtuct.com
+        - csc-sratori.com
+        - ghanltootgroup.com
+        - corcpromotion.com
+        - haamltex.com
+        - truslt-valves.com
+        - transllead.com
+        - swsupporttools.com
+        - ajw-avaition.com
+        - sec-trusted.com
+        - sec-login.com
+        - bitfare.org
+        - kaunas-city.com
+        - laisve25.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://threatconnect.com
+        RequestUrl: *id002
+  condition: any of them

@@ -1,0 +1,69 @@
+title: 'Malspam 2016-09-08 (.wsf in .zip) - campaign: icloud.com'
+id: 57d24ef7-1258-4e36-a571-43c9950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - sp-moto.ru
+        - josemedina.com
+        - gam-e20.it
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 213.205.40.169
+        - 80.150.6.138
+        - 86.65.123.70
+        - 188.120.235.214
+        - 208.71.106.37
+        - 208.71.106.45
+        - 209.41.183.242
+        - 211.134.181.38
+        - 213.185.87.30
+        - 62.24.202.31
+        - 85.248.42.103
+        - 87.242.73.75
+        - 81.196.20.133
+        - 112.140.42.29
+        - 200.83.4.62
+        - 208.71.106.61
+        - 216.110.144.242
+        - 62.42.230.17
+        - 213.208.133.41
+        - 158.195.68.10
+        - 62.250.4.180
+        - 93.184.47.165
+        - 211.78.38.199
+        - 85.18.11.68
+        - 202.224.63.6
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://209.41.183.242
+        - http://sp-moto.ru
+        - http://www.aldesco.it
+        - http://www.bytove.jadro.szm.com
+        - http://www.xolod-teplo.ru
+        - http://josemedina.com
+        - http://www.association-julescatoire.fr
+        - http://158.195.68.10
+        - http://sitio655.vtrbandaancha.net
+        - http://www.oltransservice.org
+        - http://fidelitas.heimat.eu
+        - http://srxrun.nobody.jp
+        - http://toukontoutaukaiazalea.web.fc2.com
+        - http://www.ccnprodusenaturiste.home.ro
+        - http://www.idiomestarradellas.com
+        - http://www.one-clap.jp
+        RequestUrl: *id003
+  condition: any of them

@@ -1,0 +1,31 @@
+title: 'OSINT - Ruby/Gem Warning! is rest-client 1.6.13 hijacked? #713'
+id: 5d5bfb96-ff34-4470-9107-cfdc950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1138
+- attack.t1195
+- attack.t1041
+- attack.t1020
+- attack.t1133
+- attack.t1022
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 37.48.72.4
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://pastebin.com
+        - https://github.com
+        RequestUrl: *id002
+  condition: any of them

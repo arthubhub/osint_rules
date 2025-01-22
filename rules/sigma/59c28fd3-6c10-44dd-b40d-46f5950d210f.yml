@@ -1,0 +1,84 @@
+title: 'M2M -  Locky 2017-09-19 : Affid=3, offline, ".ykcol" : "HERBALIFE Order Number:
+  6N01001234" - "6N01001234_1.7z"'
+id: 59c28fd3-6c10-44dd-b40d-46f5950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 175.107.146.17
+        - 202.169.44.149
+        - 88.99.175.38
+        - 202.169.44.152
+        - 195.160.216.10
+        - 91.192.195.51
+        - 5.2.27.27
+        - 217.172.186.114
+        - 95.110.225.147
+        - 77.245.149.146
+        - 68.168.111.133
+        - 213.185.88.41
+        - 83.169.23.101
+        - 92.51.181.237
+        - 178.77.96.238
+        - 178.33.107.201
+        - 72.32.221.251
+        - 180.222.186.87
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 3a2cc64eb0060a0ba7251b723b33441431705d2d
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 43d61bee5ee1ca77d2339d00b69b3675425714598e2b1c81f5351fb1166ab8ca
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - bab4aa0cb4904865dc247c8e78fd0eca
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://conxibit.com
+        - http://bnphealthcare.com
+        - http://ecofloraholland.nl
+        - http://highpressurewelding.co.uk
+        - http://teracom.co.id
+        - http://felixsolis.mobi
+        - http://zionbrand.su
+        - http://download.justowin.it
+        - http://arsmakina.org
+        - http://asiaresearchcenter.org
+        - http://cxwebdesign.de
+        - http://diakoniestation-winnenden.de
+        - http://foodbikers.ch
+        - http://g-peer.at
+        - http://gui-design.de
+        - http://housecafe-essen.de
+        - http://isiquest1.com
+        - http://secureleads.com
+        - http://ycgrp.jp
+        RequestUrl: *id005
+  condition: any of them

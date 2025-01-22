@@ -1,0 +1,76 @@
+title: 'M2M -  Locky 2017-10-06 : Affid=3, offline, ".ykcol" : "Your Remittance Advice"
+  - "12345 Remittance.7z"'
+id: 59d771e1-db74-4d94-97d4-d899950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 98.124.251.65
+        - 85.235.131.27
+        - 195.154.231.6
+        - 195.225.168.230
+        - 80.88.87.95
+        - 209.54.62.81
+        - 174.141.224.179
+        - 213.165.85.53
+        - 173.203.199.105
+        - 195.60.215.74
+        - 83.175.70.7
+        - 199.30.241.139
+        - 5.2.27.27
+        - 23.229.153.66
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - dfd1633be76a92e1d8b3e43e91d8c1a959d2c8d5
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 716f616221f5e45a9e45edb013ab59fdf27c000e0e6dcb77267c37f09ad75589
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 9979bd6521e1fbd4dcd2ff58da4c84ba
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://agriturismo-1001ulivo.it
+        - http://alexandre-azaria.com
+        - http://agricom.it
+        - http://agriturismobellaria.net
+        - http://2-wave.com
+        - http://3e.com.pt
+        - http://9ninewright.net
+        - http://a-host.co.uk
+        - http://allesandradesigns.com
+        - http://andresarlemijn.nl
+        - http://appartement-sailer.at
+        - http://asheardontheradiogreens.com
+        - http://felixsolis.mobi
+        - http://PamelaSparrowChilds.com
+        - http://thedarkpvp.net
+        RequestUrl: *id005
+  condition: any of them

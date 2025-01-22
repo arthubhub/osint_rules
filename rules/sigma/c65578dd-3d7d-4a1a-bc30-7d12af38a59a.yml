@@ -1,0 +1,486 @@
+title: 'TraderTraitor: North Korean State-Sponsored APT Targets Blockchain Companies'
+id: c65578dd-3d7d-4a1a-bc30-7d12af38a59a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.lazarus_group
+- attack.group.g0032
+logsource:
+  product: windows
+detection:
+  object_16899:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.cisa.gov
+        RequestUrl: *id001
+  object_16900:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://www.cisa.gov
+        RequestUrl: *id002
+  object_16901:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id003
+        - dafom.dev
+        RequestUrl: *id003
+        QueryName: *id003
+    - ip_detection:
+        DestinationIp: &id004
+        - 45.14.227.58
+        SourceIp: *id004
+        IpAddresses: *id004
+        destination.ip: *id004
+        RequestUrl|contains: *id004
+  object_16902:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id005
+          - b2d9ca7b6d1bbbe4864ea11dfca343b7e15597d8
+          SHA1: *id005
+          DriverSha1: *id005
+          TargetProcessSha1: *id005
+          Hashes.sha1: *id005
+        sha256_detection:
+          sha256: &id006
+          - 60b3cfe2ec3100caf4afde734cfd5147f78acf58ab17d4480196831db4aa5f18
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+        md5_detection:
+          md5: &id007
+          - c2ea5011a91cd59d0396eb4fa8da7d21
+          MD5: *id007
+          DriverMd5: *id007
+          TargetProcessMd5: *id007
+          Hashes.md5: *id007
+  object_16903:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id008
+        - tokenais.com
+        RequestUrl: *id008
+        QueryName: *id008
+    - ip_detection:
+        DestinationIp: &id009
+        - 199.188.103.115
+        SourceIp: *id009
+        IpAddresses: *id009
+        destination.ip: *id009
+        RequestUrl|contains: *id009
+  object_16904:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 8e67006585e49f51db96604487138e688df732d3
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 5b40b73934c1583144f41d8463e227529fa7157e26e6012babd062e3fd7e0b03
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 930f6f729e5c4d5fb52189338e549e5e
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  object_16905:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id013
+        - cryptais.com
+        RequestUrl: *id013
+        QueryName: *id013
+    - ip_detection:
+        DestinationIp: &id014
+        - 82.102.31.14
+        SourceIp: *id014
+        IpAddresses: *id014
+        destination.ip: *id014
+        RequestUrl|contains: *id014
+  object_16906:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id015
+        - alticgo.com
+        RequestUrl: *id015
+        QueryName: *id015
+    - ip_detection:
+        DestinationIp: &id016
+        - 108.170.55.202
+        SourceIp: *id016
+        IpAddresses: *id016
+        destination.ip: *id016
+        RequestUrl|contains: *id016
+  object_16907:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id017
+        - esilet.com
+        RequestUrl: *id017
+        QueryName: *id017
+    - ip_detection:
+        DestinationIp: &id018
+        - 104.168.98.156
+        SourceIp: *id018
+        IpAddresses: *id018
+        destination.ip: *id018
+        RequestUrl|contains: *id018
+  object_16908:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id019
+        - greenvideo.nl
+        RequestUrl: *id019
+        QueryName: *id019
+    - ip_detection:
+        DestinationIp: &id020
+        - 62.84.240.140
+        SourceIp: *id020
+        IpAddresses: *id020
+        destination.ip: *id020
+        RequestUrl|contains: *id020
+  object_16909:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id021
+        - dafnefonseca.com
+        RequestUrl: *id021
+        QueryName: *id021
+    - ip_detection:
+        DestinationIp: &id022
+        - 151.101.64.119
+        SourceIp: *id022
+        IpAddresses: *id022
+        destination.ip: *id022
+        RequestUrl|contains: *id022
+  object_16910:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id023
+        - haciendadeclarevot.com
+        RequestUrl: *id023
+        QueryName: *id023
+    - ip_detection:
+        DestinationIp: &id024
+        - 185.66.41.17
+        SourceIp: *id024
+        IpAddresses: *id024
+        destination.ip: *id024
+        RequestUrl|contains: *id024
+  object_16911:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id025
+        - sche-eg.org
+        RequestUrl: *id025
+        QueryName: *id025
+    - ip_detection:
+        DestinationIp: &id026
+        - 160.153.235.20
+        SourceIp: *id026
+        IpAddresses: *id026
+        destination.ip: *id026
+        RequestUrl|contains: *id026
+  object_16912:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id027
+        - www.vinoymas.ch
+        RequestUrl: *id027
+        QueryName: *id027
+    - ip_detection:
+        DestinationIp: &id028
+        - 46.16.62.238
+        SourceIp: *id028
+        IpAddresses: *id028
+        destination.ip: *id028
+        RequestUrl|contains: *id028
+  object_16913:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id029
+        - infodigitalnew.com
+        RequestUrl: *id029
+        QueryName: *id029
+    - ip_detection:
+        DestinationIp: &id030
+        - 107.154.160.132
+        SourceIp: *id030
+        IpAddresses: *id030
+        destination.ip: *id030
+        RequestUrl|contains: *id030
+  object_16914:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id031
+        - creaideck.com
+        RequestUrl: *id031
+        QueryName: *id031
+    - ip_detection:
+        DestinationIp: &id032
+        - 38.132.124.161
+        SourceIp: *id032
+        IpAddresses: *id032
+        destination.ip: *id032
+        RequestUrl|contains: *id032
+  object_16915:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id033
+        - aideck.net
+        RequestUrl: *id033
+        QueryName: *id033
+    - ip_detection:
+        DestinationIp: &id034
+        - 89.45.4.151
+        SourceIp: *id034
+        IpAddresses: *id034
+        destination.ip: *id034
+        RequestUrl|contains: *id034
+  object_16916:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id035
+          - f1606d4d374d7e2ba756bdd4df9b780748f6dc98
+          SHA1: *id035
+          DriverSha1: *id035
+          TargetProcessSha1: *id035
+          Hashes.sha1: *id035
+        sha256_detection:
+          sha256: &id036
+          - f0e8c29e3349d030a97f4a8673387c2e21858cccd1fb9ebbf9009b27743b2e5b
+          SHA256: *id036
+          DriverSha256: *id036
+          TargetProcessSha256: *id036
+          Hashes.sha256: *id036
+        md5_detection:
+          md5: &id037
+          - 4e5ebbecd22c939f0edf1d16d68e8490
+          MD5: *id037
+          DriverMd5: *id037
+          TargetProcessMd5: *id037
+          Hashes.md5: *id037
+  object_16917:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id038
+          - 48a6d5141e25b6c63ad8da20b954b56afe589031
+          SHA1: *id038
+          DriverSha1: *id038
+          TargetProcessSha1: *id038
+          Hashes.sha1: *id038
+        sha256_detection:
+          sha256: &id039
+          - 89b5e248c222ebf2cb3b525d3650259e01cf7d8fff5e4aa15ccd7512b1e63957
+          SHA256: *id039
+          DriverSha256: *id039
+          TargetProcessSha256: *id039
+          Hashes.sha256: *id039
+        md5_detection:
+          md5: &id040
+          - 8397ea747d2ab50da4f876a36d673272
+          MD5: *id040
+          DriverMd5: *id040
+          TargetProcessMd5: *id040
+          Hashes.md5: *id040
+  object_16918:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id041
+          - d5ff73c043f3bb75dd749636307500b60a436550
+          SHA1: *id041
+          DriverSha1: *id041
+          TargetProcessSha1: *id041
+          Hashes.sha1: *id041
+        sha256_detection:
+          sha256: &id042
+          - 867c8b49d29ae1f6e4a7cd31b6fe7e278753a1ba03d4be338ed11fd1efc7dd36
+          SHA256: *id042
+          DriverSha256: *id042
+          TargetProcessSha256: *id042
+          Hashes.sha256: *id042
+        md5_detection:
+          md5: &id043
+          - 5d43baf1c9e9e3a939e5defd8f8fbd8d
+          MD5: *id043
+          DriverMd5: *id043
+          TargetProcessMd5: *id043
+          Hashes.md5: *id043
+  object_16919:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id044
+          - f3263451f8988a9b02268f0fb6893f7c41b906d9
+          SHA1: *id044
+          DriverSha1: *id044
+          TargetProcessSha1: *id044
+          Hashes.sha1: *id044
+        sha256_detection:
+          sha256: &id045
+          - 765a79d22330098884e0f7ce692d61c40dfcf288826342f33d976d8314cfd819
+          SHA256: *id045
+          DriverSha256: *id045
+          TargetProcessSha256: *id045
+          Hashes.sha256: *id045
+        md5_detection:
+          md5: &id046
+          - 1c7d0ae1c4d2c0b70f75eab856327956
+          MD5: *id046
+          DriverMd5: *id046
+          TargetProcessMd5: *id046
+          Hashes.md5: *id046
+  object_16920:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id047
+          - ff17bd5abe9f4939918f27afbe0072c18df6db37
+          SHA1: *id047
+          DriverSha1: *id047
+          TargetProcessSha1: *id047
+          Hashes.sha1: *id047
+        sha256_detection:
+          sha256: &id048
+          - e3d98cc4539068ce335f1240deb1d72a0b57b9ca5803254616ea4999b66703ad
+          SHA256: *id048
+          DriverSha256: *id048
+          TargetProcessSha256: *id048
+          Hashes.sha256: *id048
+        md5_detection:
+          md5: &id049
+          - 855b2f4c910602f895ee3c94118e979a
+          MD5: *id049
+          DriverMd5: *id049
+          TargetProcessMd5: *id049
+          Hashes.md5: *id049
+  object_16921:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id050
+          - 3f2c1e60b5fac4cf1013e3e1fc688be490d71a84
+          SHA1: *id050
+          DriverSha1: *id050
+          TargetProcessSha1: *id050
+          Hashes.sha1: *id050
+        sha256_detection:
+          sha256: &id051
+          - 8acd7c2708eb1119ba64699fd702ebd96c0d59a66cba5059f4e089f4b0914925
+          SHA256: *id051
+          DriverSha256: *id051
+          TargetProcessSha256: *id051
+          Hashes.sha256: *id051
+        md5_detection:
+          md5: &id052
+          - 9a6307362e3331459d350a201ad66cd9
+          MD5: *id052
+          DriverMd5: *id052
+          TargetProcessMd5: *id052
+          Hashes.md5: *id052
+  object_16922:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id053
+          - ae9f4e39c576555faadee136c6c3b2d358ad90b9
+          SHA1: *id053
+          DriverSha1: *id053
+          TargetProcessSha1: *id053
+          Hashes.sha1: *id053
+        sha256_detection:
+          sha256: &id054
+          - 9ba02f8a985ec1a99ab7b78fa678f26c0273d91ae7cbe45b814e6775ec477598
+          SHA256: *id054
+          DriverSha256: *id054
+          TargetProcessSha256: *id054
+          Hashes.sha256: *id054
+        md5_detection:
+          md5: &id055
+          - 53d9af8829a9c7f6f177178885901c01
+          MD5: *id055
+          DriverMd5: *id055
+          TargetProcessMd5: *id055
+          Hashes.md5: *id055
+  object_16923:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id056
+          - 41f855b54bf3db621b340b7c59722fb493ba39a5
+          SHA1: *id056
+          DriverSha1: *id056
+          TargetProcessSha1: *id056
+          Hashes.sha1: *id056
+        sha256_detection:
+          sha256: &id057
+          - 9d9dda39af17a37d92b429b68f4a8fc0a76e93ff1bd03f06258c51b73eb40efa
+          SHA256: *id057
+          DriverSha256: *id057
+          TargetProcessSha256: *id057
+          Hashes.sha256: *id057
+        md5_detection:
+          md5: &id058
+          - 1ca31319721740ecb79f4b9ee74cd9b0
+          MD5: *id058
+          DriverMd5: *id058
+          TargetProcessMd5: *id058
+          Hashes.md5: *id058
+  object_16924:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id059
+          - d2a77c31c3e169bec655068e96cf4e7fc52e77b8
+          SHA1: *id059
+          DriverSha1: *id059
+          TargetProcessSha1: *id059
+          Hashes.sha1: *id059
+        sha256_detection:
+          sha256: &id060
+          - dced1acbbe11db2b9e7ae44a617f3c12d6613a8188f6a1ece0451e4cd4205156
+          SHA256: *id060
+          DriverSha256: *id060
+          TargetProcessSha256: *id060
+          Hashes.sha256: *id060
+        md5_detection:
+          md5: &id061
+          - 9578c2be6437dcc8517e78a5de1fa975
+          MD5: *id061
+          DriverMd5: *id061
+          TargetProcessMd5: *id061
+          Hashes.md5: *id061
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id062
+        - https://github.com
+        - https://aideck.net
+        - https://www.esilet.com
+        - https://www.alticgo.com
+        - https://greenvideo.nl
+        - https://dafnefonseca.com
+        - https://haciendadeclarevot.com
+        - https://sche
+        - https://www.vinoymas.ch
+        - https://infodigitalnew.com
+        RequestUrl: *id062
+  condition: any of them

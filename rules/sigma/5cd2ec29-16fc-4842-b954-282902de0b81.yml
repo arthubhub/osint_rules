@@ -1,0 +1,123 @@
+title: 'OSINT - Buckeye: Espionage Outfit Used Equation Group Tools Prior to Shadow
+  Brokers Leak'
+id: 5cd2ec29-16fc-4842-b954-282902de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.ups
+- attack.group.htran
+- attack.group.g0022
+- attack.software.htran
+logsource:
+  product: windows
+detection:
+  object_17547:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - ec6cf407e4f791abb04a2bafde0980a2ba1fd2a8
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 6b1f8b303956c04e24448b1eec8634bd3fb2784c8a2d12ecf8588424b36d3cbc
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 6458806a5071a7c4fefae084791e8c67
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_17549:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 2a01d103b2bb66cba2cdb201f09933fee2055db3
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 3dbe8700ecd27b3dc39643b95b187ccfd44318fc88c5e6ee6acf3a07cdaf377e
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - a3932533efc04ac3fe89fb5b3d60128a
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_17551:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 312f62f4b6a6251a8b6501d665da3069ce21a3b6
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 951f079031c996c85240831ea1b61507f91990282daae6da2841311322e8a6d7
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - a469d48e25e524cf0dec64f01c182b25
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id010
+          - cbe23daa9d2f8e1f5d59c8336dd5b7d7ba1d5cf3f0d45e66107668e80b073ac3
+          - 53145f374299e673d82d108b133341dc7bee642530b560118e3cbcdb981ee92c
+          - 01f53953db8ba580ee606043a482f790082460c8cdbd7ff151d84e03fdc87e42
+          - 6b1f8b303956c04e24448b1eec8634bd3fb2784c8a2d12ecf8588424b36d3cbc
+          - 7bfad342ce88de19d090a4cb2ce332022650abd68f34e83fdc694f10a4090d65
+          - 3dbe8700ecd27b3dc39643b95b187ccfd44318fc88c5e6ee6acf3a07cdaf377e
+          - 1c9f1c7056864b5fdd491d5daa49f920c3388cb8a8e462b2bc34181cef6c1f9c
+          - 951f079031c996c85240831ea1b61507f91990282daae6da2841311322e8a6d7
+          SHA256: *id010
+          DriverSha256: *id010
+          TargetProcessSha256: *id010
+          Hashes.sha256: *id010
+        md5_detection:
+          md5: &id011
+          - 7020bcb347404654e17f6303848b7ec4
+          - aacfef51a4a242f52fbb838c1d063d9b
+          - c2f902f398783922a921df7d46590295
+          - 6458806a5071a7c4fefae084791e8c67
+          - 0d2d0d8f4989679f7c26b5531096b8b2
+          - a3932533efc04ac3fe89fb5b3d60128a
+          - 58f784c7a292103251930360f9ca713e
+          - a469d48e25e524cf0dec64f01c182b25
+          MD5: *id011
+          DriverMd5: *id011
+          TargetProcessMd5: *id011
+          Hashes.md5: *id011
+    - url_detection:
+        PowershellCommand|contains: &id012
+        - https://www.symantec.com
+        RequestUrl: *id012
+  condition: any of them

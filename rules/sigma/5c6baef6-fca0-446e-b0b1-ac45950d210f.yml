@@ -1,0 +1,92 @@
+title: Financial - socgen-compliance.com fake website delivering malicious documents
+id: 5c6baef6-fca0-446e-b0b1-ac45950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1055
+- attack.t1065
+- attack.t1112
+- attack.t1179
+- attack.t1137
+logsource:
+  product: windows
+detection:
+  object_18336:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - ed6bf6587c8ff529e26e5736856ecb606e6ca636
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 25ae00c80a4ec85cb548c891598cf76d131b168a70116a84cb62b4defa3f698c
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - a7e5ee61098748ffb9c42e65cdad6505
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_18338:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 7989837cbbeebe195cdea3f038b962eec9cd2e5d
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - b991288ecd158e84076f7cc38d4ecbcd18cccc580f1971b0dfdd7c88b78e0794
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - dc496a639e8856b7525e33af2756d68c
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id007
+        - socgen-compliance.com
+        RequestUrl: *id007
+        QueryName: *id007
+    - ip_detection:
+        DestinationIp: &id008
+        - 185.10.68.204
+        - 80.82.64.126
+        SourceIp: *id008
+        IpAddresses: *id008
+        destination.ip: *id008
+        RequestUrl|contains: *id008
+    - hash_detection:
+        sha256_detection:
+          sha256: &id009
+          - 25ae00c80a4ec85cb548c891598cf76d131b168a70116a84cb62b4defa3f698c
+          - b991288ecd158e84076f7cc38d4ecbcd18cccc580f1971b0dfdd7c88b78e0794
+          SHA256: *id009
+          DriverSha256: *id009
+          TargetProcessSha256: *id009
+          Hashes.sha256: *id009
+    - url_detection:
+        PowershellCommand|contains: &id010
+        - https://socgen-compliance.com
+        RequestUrl: *id010
+  condition: any of them

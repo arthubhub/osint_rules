@@ -1,0 +1,318 @@
+title: "[CERT-FR] Campagnes d'hame\xE7onnage du mode op\xE9ratoire d'attaquants Nobelium"
+id: 6181159d-d7e0-422f-b7f5-26cc0abe1822
+description: edit this field when analysing or editing the rule - reported by "CERT-FR_1510"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_8206:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - hanproud.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 45.179.89.37
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+  object_8207:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id003
+        - cbdnewsandreviews.net
+        RequestUrl: *id003
+        QueryName: *id003
+    - ip_detection:
+        DestinationIp: &id004
+        - 139.99.167.177
+        SourceIp: *id004
+        IpAddresses: *id004
+        destination.ip: *id004
+        RequestUrl|contains: *id004
+  object_8208:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id005
+        - cityloss.com
+        RequestUrl: *id005
+        QueryName: *id005
+    - ip_detection:
+        DestinationIp: &id006
+        - 51.38.85.225
+        SourceIp: *id006
+        IpAddresses: *id006
+        destination.ip: *id006
+        RequestUrl|contains: *id006
+  object_8209:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id007
+        - businesssalaries.com
+        RequestUrl: *id007
+        QueryName: *id007
+    - ip_detection:
+        DestinationIp: &id008
+        - 190.183.61.30
+        SourceIp: *id008
+        IpAddresses: *id008
+        destination.ip: *id008
+        RequestUrl|contains: *id008
+  object_8210:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id009
+        - trendignews.com
+        RequestUrl: *id009
+        QueryName: *id009
+    - ip_detection:
+        DestinationIp: &id010
+        - 185.243.215.198
+        SourceIp: *id010
+        IpAddresses: *id010
+        destination.ip: *id010
+        RequestUrl|contains: *id010
+  object_8211:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id011
+        - worldhomeoutlet.com
+        RequestUrl: *id011
+        QueryName: *id011
+    - ip_detection:
+        DestinationIp: &id012
+        - 192.99.221.77
+        SourceIp: *id012
+        IpAddresses: *id012
+        destination.ip: *id012
+        RequestUrl|contains: *id012
+  object_8212:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id013
+        - giftbox4u.com
+        RequestUrl: *id013
+        QueryName: *id013
+    - ip_detection:
+        DestinationIp: &id014
+        - 37.120.247.135
+        SourceIp: *id014
+        IpAddresses: *id014
+        destination.ip: *id014
+        RequestUrl|contains: *id014
+  object_8213:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id015
+        - myexpertforum.com
+        RequestUrl: *id015
+        QueryName: *id015
+    - ip_detection:
+        DestinationIp: &id016
+        - 45.80.148.166
+        SourceIp: *id016
+        IpAddresses: *id016
+        destination.ip: *id016
+        RequestUrl|contains: *id016
+  object_8214:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id017
+        - doggroomingnews.com
+        RequestUrl: *id017
+        QueryName: *id017
+    - ip_detection:
+        DestinationIp: &id018
+        - 45.135.167.27
+        SourceIp: *id018
+        IpAddresses: *id018
+        destination.ip: *id018
+        RequestUrl|contains: *id018
+  object_8215:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id019
+        - alifemap.com
+        RequestUrl: *id019
+        QueryName: *id019
+    - ip_detection:
+        DestinationIp: &id020
+        - 188.68.250.182
+        SourceIp: *id020
+        IpAddresses: *id020
+        destination.ip: *id020
+        RequestUrl|contains: *id020
+  object_8216:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id021
+        - enpport.com
+        RequestUrl: *id021
+        QueryName: *id021
+    - ip_detection:
+        DestinationIp: &id022
+        - 54.38.137.218
+        SourceIp: *id022
+        IpAddresses: *id022
+        destination.ip: *id022
+        RequestUrl|contains: *id022
+  object_8217:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id023
+        - theyardservice.com
+        RequestUrl: *id023
+        QueryName: *id023
+    - ip_detection:
+        DestinationIp: &id024
+        - 83.171.237.173
+        SourceIp: *id024
+        IpAddresses: *id024
+        destination.ip: *id024
+        RequestUrl|contains: *id024
+  object_8218:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id025
+        - celebsinformation.com
+        RequestUrl: *id025
+        QueryName: *id025
+    - ip_detection:
+        DestinationIp: &id026
+        - 37.59.225.51
+        SourceIp: *id026
+        IpAddresses: *id026
+        destination.ip: *id026
+        RequestUrl|contains: *id026
+  object_8219:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id027
+        - dailydews.com
+        RequestUrl: *id027
+        QueryName: *id027
+    - ip_detection:
+        DestinationIp: &id028
+        - 31.42.177.114
+        SourceIp: *id028
+        IpAddresses: *id028
+        destination.ip: *id028
+        RequestUrl|contains: *id028
+  object_8220:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id029
+        - ideasofbusiness.com
+        RequestUrl: *id029
+        QueryName: *id029
+    - ip_detection:
+        DestinationIp: &id030
+        - 81.17.30.46
+        SourceIp: *id030
+        IpAddresses: *id030
+        destination.ip: *id030
+        RequestUrl|contains: *id030
+  object_8221:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id031
+        - newminigolf.com
+        RequestUrl: *id031
+        QueryName: *id031
+    - ip_detection:
+        DestinationIp: &id032
+        - 79.143.87.166
+        SourceIp: *id032
+        IpAddresses: *id032
+        destination.ip: *id032
+        RequestUrl|contains: *id032
+  object_8222:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id033
+        - rchosts.com
+        RequestUrl: *id033
+        QueryName: *id033
+    - ip_detection:
+        DestinationIp: &id034
+        - 51.89.50.153
+        SourceIp: *id034
+        IpAddresses: *id034
+        destination.ip: *id034
+        RequestUrl|contains: *id034
+  object_8223:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id035
+        - stockmarketon.com
+        RequestUrl: *id035
+        QueryName: *id035
+    - ip_detection:
+        DestinationIp: &id036
+        - 51.254.241.158
+        SourceIp: *id036
+        IpAddresses: *id036
+        destination.ip: *id036
+        RequestUrl|contains: *id036
+  object_8224:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id037
+        - stonecrestnews.com
+        RequestUrl: *id037
+        QueryName: *id037
+    - ip_detection:
+        DestinationIp: &id038
+        - 91.234.254.144
+        SourceIp: *id038
+        IpAddresses: *id038
+        destination.ip: *id038
+        RequestUrl|contains: *id038
+  object_8225:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id039
+        - teachingdrive.com
+        RequestUrl: *id039
+        QueryName: *id039
+    - ip_detection:
+        DestinationIp: &id040
+        - 194.135.81.18
+        SourceIp: *id040
+        IpAddresses: *id040
+        destination.ip: *id040
+        RequestUrl|contains: *id040
+  object_8226:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id041
+        - newstepsco.com
+        RequestUrl: *id041
+        QueryName: *id041
+    - ip_detection:
+        DestinationIp: &id042
+        - 185.158.250.239
+        SourceIp: *id042
+        IpAddresses: *id042
+        destination.ip: *id042
+        RequestUrl|contains: *id042
+  object_8227:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id043
+        - tacomanewspaper.com
+        RequestUrl: *id043
+        QueryName: *id043
+    - ip_detection:
+        DestinationIp: &id044
+        - 195.206.181.169
+        SourceIp: *id044
+        IpAddresses: *id044
+        destination.ip: *id044
+        RequestUrl|contains: *id044
+  condition: any of them

@@ -1,0 +1,51 @@
+title: OSINT Assorted IOCs associated to Andromeda restlesz.su domain
+id: 5485615b-86f4-4385-a7a3-f894950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - restlesz.su
+        - devicesta.ru
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - c3463de6074006586adb8693d50425ca92cf648d
+          - 848c0e539ccb63ec255815887d30b00ac6656a79
+          - f57f3a94d049f322450b45e70e1d40daf83283fd
+          - 40204de2c697c0ba9645c397a4cbeba1fae132b6
+          - 375e3ea02f5132e8be658214c421baeeda0c1555
+          - 0c8b800108969c750d8e99af742f6b92df6952ae
+          - 0b999e887e055c2804de8c9ccbdf213d2bb8b7aa
+          - 0ba294c3a6385692c861df04b2981ef853044154
+          - 0d5a395056322b94be09f67101eea7a318065a2e
+          - e506c4f9e35d8fa04ef5c940165c3c8a05233d73
+          - 3fab1c6258e1732af9c3a1964a1949e9ee46a477
+          - 07c64c49356c2c5ede0293b94ef629155fb64a04
+          - 4c46214a92680812bcb33ac363ecb51fca931a15
+          - 3bb7e8888a3d4453c7953d3b5b9b81e3032e5e77
+          - 9fba92bbe22de3efdfa70905df8858705a452852
+          - 8e031c24a766c655b39cef1ff1b12b2698e69ca9
+          - 351b87826564efebd7fc1c25f9068297d24331a2
+          - df7870c693e98b298d5b321400c2c28216e43c5c
+          - 5091032c26177dbe8d0cf494f78385290b186d52
+          - 04edc2f4376fab3b9d34bc117891e6c7f265feac
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://www.robtex.com
+        - http://www.scam.cz
+        - http://www.phishtank.com
+        RequestUrl: *id003
+  condition: any of them

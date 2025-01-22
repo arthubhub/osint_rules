@@ -1,0 +1,168 @@
+title: OSINT -  DNSpionage brings out the Karkoff
+id: 5cc023e7-9c7c-418e-b908-4d46950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.dnspionage
+- attack.software.karkoff
+- attack.software.dnspionage
+logsource:
+  product: windows
+detection:
+  object_8160:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - cd3b6c517227ad356264ff076cf0ea106b67fc13
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - cd4b9d0f2d1c0468750855f0ed352c1ed6d4f512d66e0e44ce308688235295b5
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - a583430c9c504fb216c9f976401ecd13
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_8162:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 72ada4db1c70214e19eece2021669d95b94c0d4f
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - e398dac59f604d42362ffe8a2947d4351a652516ebfb25ddf0838dd2c8523be8
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 530606b66bcd5a776f2cdecb34ee0fd1
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_8164:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 7c7e1179eb3cd9effa92f303dd5e45ba881db15d
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 6a251ed6a2c6a0a2be11f2a945ec68c814d27e2b6ef445f4b2c7a779620baa11
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - a37703a0d08996a5fc04db52b71b9bcd
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_8166:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 5dbaaf4b338471ad58065fcdf335673977b2b261
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 5b102bf4d997688268bab45336cead7cdf188eb0d6355764e53b4f62e1cdf30c
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 5733afe71bd0a32328d6ed9978260fa4
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  object_8168:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id013
+          - d9844a1845446367822944464ba65965b1b70c4f
+          SHA1: *id013
+          DriverSha1: *id013
+          TargetProcessSha1: *id013
+          Hashes.sha1: *id013
+        sha256_detection:
+          sha256: &id014
+          - b017b9fc2484ce0a5629ff1fed15bca9f62f942eafbb74da6a40f40337187b04
+          SHA256: *id014
+          DriverSha256: *id014
+          TargetProcessSha256: *id014
+          Hashes.sha256: *id014
+        md5_detection:
+          md5: &id015
+          - 85a3a5f55fcbe63d2181cfa753f35fe1
+          MD5: *id015
+          DriverMd5: *id015
+          TargetProcessMd5: *id015
+          Hashes.md5: *id015
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id016
+        - coldfart.com
+        - rimrun.com
+        - kuternull.com
+        RequestUrl: *id016
+        QueryName: *id016
+    - ip_detection:
+        DestinationIp: &id017
+        - 108.62.141.247
+        - 74.118.138.192
+        SourceIp: *id017
+        IpAddresses: *id017
+        destination.ip: *id017
+        RequestUrl|contains: *id017
+    - hash_detection:
+        sha256_detection:
+          sha256: &id018
+          - 5b102bf4d997688268bab45336cead7cdf188eb0d6355764e53b4f62e1cdf30c
+          - 6a251ed6a2c6a0a2be11f2a945ec68c814d27e2b6ef445f4b2c7a779620baa11
+          - b017b9fc2484ce0a5629ff1fed15bca9f62f942eafbb74da6a40f40337187b04
+          - cd4b9d0f2d1c0468750855f0ed352c1ed6d4f512d66e0e44ce308688235295b5
+          - 2fa19292f353b4078a9bf398f8837d991e383c99e147727eaa6a03ce0259b3c5
+          - e398dac59f604d42362ffe8a2947d4351a652516ebfb25ddf0838dd2c8523be8
+          SHA256: *id018
+          DriverSha256: *id018
+          TargetProcessSha256: *id018
+          Hashes.sha256: *id018
+    - url_detection:
+        PowershellCommand|contains: &id019
+        - https://blog.talosintelligence.com
+        RequestUrl: *id019
+  condition: any of them

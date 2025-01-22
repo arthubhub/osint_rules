@@ -1,0 +1,87 @@
+title: Malspam (2016-04-05) - TeslaCrypt
+id: 5703b3c1-e6a4-421a-a394-440f950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - marvellrulesqq.com
+        - marvellrulescc.asia
+        - addagapublicschool.com
+        - closerdaybyday.info
+        - coldheartedny.com
+        - keldon.info
+        - studiosundaytv.com
+        - thejonesact.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 185.118.142.154
+        - 54.212.162.6
+        - 194.228.3.204
+        - 194.58.191.55
+        - 37.25.109.92
+        - 88.135.116.226
+        - 185.14.19.104
+        - 195.66.218.139
+        - 176.36.174.59
+        - 91.241.249.226
+        - 91.197.19.167
+        - 109.254.59.207
+        - 193.107.174.29
+        - 23.229.239.227
+        - 192.185.151.39
+        - 107.180.26.75
+        - 76.162.168.113
+        - 192.186.220.8
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - feed220d6c57f318e56d367dce4625da7f6ae967
+          - 1d9453cf990eb07ce9fd216cd80a565247444510
+          - c9107bb9f8588f5ad1d82710b84adbad184eccb7
+          - 91b3ef3ad72a124fc88fb9d79c211b1744222ea0
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 218e9bfb8a87783f8ac48e346933e651a457d03fd1b4c72bd4ee6f48c6ba7e6d
+          - ff5926f47c07542be71d4c425273c57292b4905c36edd76a193b5fd4c1af3ca5
+          - 00c43b11fa0e897ad030463b89e6ee03bc4484cd09bae540f8efb6680a916ee9
+          - 94f354409a154d8ad4a9f47c3131e543258911f676c1a1a31d3815dc103078fa
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 8952377a0513c24cd2a00e5946d45103
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://marvellrulesqq.com
+        - http://marvellrulescc.asia
+        - http://addagapublicschool.com
+        - http://helpdesk.keldon.info
+        - http://coldheartedny.com
+        - http://closerdaybyday.info
+        - http://studiosundaytv.com
+        - http://thejonesact.com
+        RequestUrl: *id006
+  condition: any of them

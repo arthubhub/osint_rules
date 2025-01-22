@@ -1,0 +1,71 @@
+title: 'M2M -  Locky 2017-09-26 : Affid=3, offline, ".ykcol" : "Invoice PIS1234567"
+  - "InvoicePIS1234567.7z"'
+id: 59cb4da3-c614-4e43-a0aa-4989950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 103.53.172.3
+        - 185.18.198.158
+        - 216.55.186.90
+        - 72.4.145.228
+        - 89.140.72.171
+        - 80.172.241.35
+        - 87.118.114.57
+        - 74.116.0.194
+        - 78.46.92.133
+        - 85.214.82.5
+        - 149.210.143.182
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 40c29251a7c4325e950af1276fbf82196c3bddb8
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - ebc06b56785f32b5d80bab14ed518e3d6e189c925f6d54dc7805fc7e867a1273
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - efdb6033dccf27fe103b8fc13bc4f2d7
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://playbrief.info
+        - http://camerawind.com
+        - http://envirotambang.com
+        - http://fianceevisa101.com
+        - http://fiancevisacover.com
+        - http://financeforautos.com
+        - http://fincasoroel.es
+        - http://fmarson.com
+        - http://formareal.com
+        - http://fwbcondo.com
+        - http://gbvm.nl
+        - http://geeks-online.de
+        - http://gaestehaus-im-vogelsang.de
+        RequestUrl: *id005
+  condition: any of them

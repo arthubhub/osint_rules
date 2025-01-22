@@ -1,0 +1,96 @@
+title: OSINT  Cheshire Cat
+id: 55d58a12-3644-4378-8ca9-44a6950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - apartmentsin-paris.com
+        - au-skydivelessons.com
+        - beautifuldaisies.com
+        - brazil-crazybungee.com
+        - bungee4you-br.com
+        - bungee4you-uy.com
+        - bungeejumping-br.com
+        - bungeejumping-uy.com
+        - china-flowershop.com
+        - circlesofourlives-ir.com
+        - clickflowers-hk.com
+        - crazy-jump.com
+        - crazyjump-uy.com
+        - cropcirclestours.com
+        - dive-extreme.com
+        - divextreme-ar.com
+        - divextreme-au.com
+        - euro-rafting.com
+        - eurorafting-tr.com
+        - franceholidayapartments.com
+        - groupbungee-br.com
+        - groupbungee-uy.com
+        - groupdive-au.com
+        - groupdive.com
+        - holidayapartments-paris.com
+        - holidayapartments4you.com
+        - hongkong-bouquets.com
+        - ir-cool.com
+        - irelancropcircles.com
+        - magnificentcircles.com
+        - paris-holidayapartments.com
+        - raftingholiday.com
+        - raftingtours-turkey.com
+        - rosesinchina.com
+        - skydivelessons.com
+        - stuntjumps.com
+        - tandemskydive-ar.com
+        - tandemskydive-au.com
+        - turkeyextremerafting.com
+        - uruguay-crazybungee.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 7384156ef7282c4bb6a4d0d4e9498a6a40df2377
+          - 0655670f1cb40e84ba12adb9711f001269712054
+          - ca3c5872080ec86a041b2b887caec9f28ba7b884
+          - 648a62d74ab1076e66a7a70f0899b8093eca2b01
+          - 421156c4858878ef8beeadf54c4549095445b682
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 63735d555f219765d486b3d253e39bd316bbcb1c0ec595ea45ddf6e419bef3cb
+          - dc18850d065ff6a8364421a9c8f9dd5fcce6c7567f4881466cee00e5cd0c7aa8
+          - ec41b029c3ff4147b6a5252cb8b659f851f4538d4af0a574f7e16bc1cd14a300
+          - c074aeef97ce81e8c68b7376b124546cabf40e2cd3aff1719d9daa6c3f780532
+          - 32159d2a16397823bc882ddd3cd77ecdbabe0fde934e62f297b8ff4d7b89832a
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - e2ca6cca598d47dee311f06920c1efde
+          - 4e0a3498438adda8c50c3e101cfa86c5
+          - 3ba57784d7fd4302fe74beb648b28dc1
+          - fa1e5eec39910a34ede1c4351ccecec8
+          - 7b0e7297d5157586f4075098be9efc8c
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://otx.alienvault.com
+        - http://kernelmode.info
+        - https://www.defcon.org
+        RequestUrl: *id005
+  condition: any of them

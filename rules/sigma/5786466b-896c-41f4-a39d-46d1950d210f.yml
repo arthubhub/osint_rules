@@ -1,0 +1,39 @@
+title: Malspam 2016-07-13 .wsf campaign
+id: 5786466b-896c-41f4-a39d-46d1950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - ampexholdings.com
+        - lifecare-hc.com
+        - pernelkul.hu
+        - williamsbreak.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 104.156.51.130
+        - 107.180.50.238
+        - 169.55.8.36
+        - 194.38.104.131
+        - 203.170.86.41
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://ampexholdings.com
+        - http://lifecare-hc.com
+        - http://pernelkul.hu
+        - http://sollove.com.br
+        - http://williamsbreak.com
+        RequestUrl: *id003
+  condition: any of them

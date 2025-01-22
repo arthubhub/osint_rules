@@ -1,0 +1,48 @@
+title: OSINT - SURGE IN SPAM CAMPAIGN DELIVERING LOCKY RANSOMWARE DOWNLOADERS
+id: 56f58bcc-96e4-49d2-bc8b-faf7950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 188.138.88.184
+        - 31.41.47.37
+        - 5.34.183.136
+        - 91.121.97.170
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 1231e4a00c3da3ae8001a0620bae1242ef95d095
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - f927efd7cd2da3a052d857632f78ccf04b673e2774f6ce9a075e654dfd77d940
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 3f118d0b888430ab9f58fc2589207988
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.fireeye.com
+        RequestUrl: *id005
+  condition: any of them

@@ -1,0 +1,164 @@
+title: Muhstik Botnet Attacks Tomato Routers
+id: 5e27f3d8-e238-4290-8b2c-422e950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.tsunami_elf
+- attack.software.tsunami_elf
+logsource:
+  product: windows
+detection:
+  object_3801:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - e9a8aebc6822f01199ff311b94641044c4a38dd3
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 492780a9ac9f03305538b360d8a836c038da4920e8c1ae620988b120613c0b1f
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 2d8a62b8a27e14f741098fe1ced8eae4
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_3803:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 6c9f004c977d3ce1ebda3b6e50313556f977d654
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - a4ba50129408f9f52ddabe5bfd5bfb46aea0ca48fb616f495f2610b2f1729687
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 8154ace62f0dcf7c47447153746c4be5
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_3805:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 7914fb8e72e6a7a57998f8b7817c2508ce9ec865
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 7325742dc0d939542d4c04ae2ae8f2792711203de50d3d16de3a9f83baaf5435
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 167c2f5e0d6abe5b9b35348fd0269928
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_3807:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 00e4457de90df173b51757fcf120bc31ce16040e
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 72123c51bcdf8c1784654d9e2470e69131872407408aa3cf775ea0ace87bb9a0
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - a3e3809eb10bae7d19787f6c52d2b289
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  object_3809:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id013
+          - 0c6484d5bc91a75cb0d94a55795d543c409b3fb8
+          SHA1: *id013
+          DriverSha1: *id013
+          TargetProcessSha1: *id013
+          Hashes.sha1: *id013
+        sha256_detection:
+          sha256: &id014
+          - cee20e79f20d35b95645f0cbda1897302e6e554c50f3e6754ce9293e3c1ba11c
+          SHA256: *id014
+          DriverSha256: *id014
+          TargetProcessSha256: *id014
+          Hashes.sha256: *id014
+        md5_detection:
+          md5: &id015
+          - b66fbdec14a7f7b0087aebb9c176ac12
+          MD5: *id015
+          DriverMd5: *id015
+          TargetProcessMd5: *id015
+          Hashes.md5: *id015
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id016
+        - 46.149.233.35
+        - 68.66.253.100
+        - 185.61.149.22
+        SourceIp: *id016
+        IpAddresses: *id016
+        destination.ip: *id016
+        RequestUrl|contains: *id016
+    - hash_detection:
+        sha256_detection:
+          sha256: &id017
+          - 492780a9ac9f03305538b360d8a836c038da4920e8c1ae620988b120613c0b1f
+          - 2548f5b1613f6ebba2ff589c7b3416ccdd066b73644d4d212232beb1cecd9c31
+          - a4ba50129408f9f52ddabe5bfd5bfb46aea0ca48fb616f495f2610b2f1729687
+          - 7325742dc0d939542d4c04ae2ae8f2792711203de50d3d16de3a9f83baaf5435
+          - 72123c51bcdf8c1784654d9e2470e69131872407408aa3cf775ea0ace87bb9a0
+          - cee20e79f20d35b95645f0cbda1897302e6e554c50f3e6754ce9293e3c1ba11c
+          - dc52a1193ecf6096192f771ae663de6e0389840cb5ceb7b979091333ce6f7f02
+          SHA256: *id017
+          DriverSha256: *id017
+          TargetProcessSha256: *id017
+          Hashes.sha256: *id017
+    - url_detection:
+        PowershellCommand|contains: &id018
+        - https://unit42.paloaltonetworks.com
+        - http://y.fd6fq54s6df541q23sdxfg.eu
+        - http://159.89.156.190
+        RequestUrl: *id018
+  condition: any of them

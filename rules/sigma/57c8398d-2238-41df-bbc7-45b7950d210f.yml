@@ -1,0 +1,64 @@
+title: Malware Posing as Human Rights Organizations and Commercial Software Targeting
+  Iranians, Foreign Policy Institutions and Middle Eastern Countries (ExtremeDownloader
+  and Strealer)
+id: 57c8398d-2238-41df-bbc7-45b7950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - apache-utility.com
+        - microsoft-hotfix.com
+        - update-finder.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 5.152.202.53
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - b89d8b5bd6f9bf1c1d61f0d3851dec9cf4216b9b
+          - d5144c73f7e7c961bc2823cf002892eee70c4dbf
+          - f2179dbba6a4f132864d8edd38c26991ac21559d
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - a62dde31eecf650c2dd39eeda9daf8fd35b1dff5330e72035d1846579ea838dc
+          - 1a24714fd99030bd63804ab96fc2612f148a5f08d1c2845152c3a0e168600db9
+          - e6cd39cf0af6a0b7d8129bf6400e671d5fd2a3797b92e0fe4a8e93f3de46b716
+          - 13c462f6606c20d23796d6b937b0fa6887029dc68f2a3376cc3fa1e068a833e9
+          - b0afef1ee97c8a9a7a7d4a83b5d8aab3a710062d9df98f909a3306c031e2cc21
+          - 3a8995413b8e63dca766999c5a3220114e4ab4c446130c5bd7c852a618dd2fa7
+          - 1ba26bcd857944b0486a76928f41f74d91dad492b46ea93c4ca246a0503cdaae
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - a2ff24322c12558eb1f29aea3ca6f24a
+          - ccaf21e122ca9d2e2397a9e28eb4cc87
+          - 77857588c41f778b7660d4e52634a4e3
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://iranthreats.github.io
+        RequestUrl: *id006
+  condition: any of them

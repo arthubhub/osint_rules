@@ -1,0 +1,63 @@
+title: Talos Blog - Smoking Guns - Smoke Loader learned new tricks
+id: 5b3e4d3d-0644-43ef-9ebd-30cd0acd0835
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.trick_bot
+- attack.software.smoke_loader
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - ukcompany.me
+        - ukcompany.pw
+        - ukcompany.top
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 185.174.173.34
+        - 162.247.155.114
+        - 185.174.173.116
+        - 185.174.173.241
+        - 62.109.26.121
+        - 185.68.93.27
+        - 137.74.151.148
+        - 185.223.95.66
+        - 85.143.221.60
+        - 195.123.216.115
+        - 94.103.82.216
+        - 185.20.187.13
+        - 185.242.179.118
+        - 62.109.26.208
+        - 213.183.51.54
+        - 62.109.24.176
+        - 62.109.27.196
+        - 185.174.174.156
+        - 37.230.112.146
+        - 185.174.174.72
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - b98abdbdb85655c64617bb6515df23062ec184fe88d2d6a898b998276a906ebc
+          - 0be63a01e2510d161ba9d11e327a55e82dcb5ea07ca1488096dac3e9d4733d41
+          - b65806521aa662bff2c655c8a7a3b6c8e598d709e35f3390df880a70c3fded40
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://blog.talosintelligence.com
+        RequestUrl: *id004
+  condition: any of them

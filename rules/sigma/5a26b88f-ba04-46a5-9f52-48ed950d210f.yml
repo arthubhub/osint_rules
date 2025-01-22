@@ -1,0 +1,68 @@
+title: 'M2M - "..doc" 2017-12-04 : "Emailing: 1234567" - "1234567.7z"'
+id: 5a26b88f-ba04-46a5-9f52-48ed950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 188.166.203.69
+        - 198.23.241.227
+        - 64.50.184.217
+        - 216.242.171.101
+        - 195.222.33.183
+        - 195.87.101.81
+        - 81.169.145.159
+        - 192.186.219.83
+        - 81.22.98.50
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 4af27f4b95f29f877d0abb1167e6b1148c1849bd
+          - ef00cbc6001785b44f2919ac125fbbcdebd8f8c9
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 2656da2883d210f9709a0cef925c60cbd00dc60175787063bb13a4cd8d2de9fc
+          - cbbdaa9c7fd2ce88519f37289ef2c7059d43b128d4843613d7744d44be225c6b
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 5afa2724e48f51a1a1afa868670626d5
+          - 2908715eec754aba1ad21414b23cafb6
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://n224ezvhg4sgyamb.onion.link
+        - http://summi.space
+        - http://altarek.com
+        - http://amcscomputer.com
+        - http://arcusautomatika.ba
+        - http://basarteks.com
+        - http://boaze.de
+        - http://c3pconsulting.com
+        - http://coloradofootinstitute.com
+        - http://gulercin.com
+        RequestUrl: *id005
+  condition: any of them

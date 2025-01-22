@@ -1,0 +1,19 @@
+title: OSINT APT30 detection rules Loki Scanner Yara rules by Florian Roth
+id: 56129bd3-3538-4b5a-b6b4-4a06950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.apt_30
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://github.com
+        - https://www2.fireeye.com
+        RequestUrl: *id001
+  condition: any of them

@@ -1,0 +1,28 @@
+title: OVH Phishing
+id: 5b4f5308-42c0-434a-a8c5-48ae950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_8386:
+    all:
+    - ip_detection:
+        DestinationIp: &id001
+        - 195.144.11.40
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+  object_8387:
+    all: []
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://xyu7564.phpnet.org
+        - https://www.ovh.com
+        RequestUrl: *id002
+  condition: any of them

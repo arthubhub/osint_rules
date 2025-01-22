@@ -1,0 +1,142 @@
+title: 'M2M -  Trickbot 2017-06-14 : mac1 : "Emailing: 123456789" - "123456789.PDF"'
+id: 5942404e-7c54-4842-8599-4037950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 95.211.144.65
+        - 119.28.85.128
+        - 92.43.113.68
+        - 193.0.140.177
+        - 89.231.13.18
+        - 89.231.13.27
+        - 89.231.13.33
+        - 103.53.42.51
+        - 131.153.37.2
+        - 69.49.96.24
+        - 69.28.199.160
+        - 14.152.90.146
+        - 43.240.14.235
+        - 136.243.50.2
+        - 43.225.44.151
+        - 148.251.10.145
+        - 103.18.4.204
+        - 120.25.251.140
+        - 174.120.70.145
+        - 79.133.207.76
+        - 192.185.129.71
+        - 119.59.97.123
+        - 103.53.43.40
+        - 209.141.50.122
+        - 162.215.253.74
+        - 162.251.85.92
+        - 81.169.145.84
+        - 49.212.150.106
+        - 183.181.26.10
+        - 92.48.206.18
+        - 219.83.68.91
+        - 103.21.59.25
+        - 27.0.15.26
+        - 23.94.215.117
+        - 162.144.146.80
+        - 5.133.180.146
+        - 10.6.139.112
+        - 195.168.1.32
+        - 195.168.1.33
+        - 119.10.50.116
+        - 94.140.121.173
+        - 151.80.84.2
+        - 194.87.238.129
+        - 151.80.84.12
+        - 195.133.145.144
+        - 37.1.207.174
+        - 195.62.52.100
+        - 94.140.121.174
+        - 195.133.146.136
+        - 190.228.169.106
+        - 168.194.80.219
+        - 94.42.91.27
+        - 118.91.178.121
+        - 118.91.178.114
+        - 186.103.161.204
+        - 163.53.206.187
+        - 159.224.26.79
+        - 188.117.92.134
+        - 46.160.165.16
+        - 191.7.30.30
+        - 168.194.83.57
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 289554e34250b65f41aca4f94b27eb71b77e81d0
+          - e186da769f85c3c7e7352a1b8ed7520403866964
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - ca722faca2b8ecc50c12dea55208cb9a719eea5c7c2c0632da0b0570ebc6b1c8
+          - 7712fcc54a22e33f49f1394bce603a397adf418695cdfe2503cf77fe5678e395
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 4dc2e516738d5495fd927287a971489c
+          - 72d0b64233735fd25bff272d94b82333
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://78tguyc876wwirglmltm.net
+        - http://randomessstioprottoy.net
+        - http://mahovik-bg.com
+        - http://skyfling.com
+        - http://3456group.com
+        - http://360photoservice.ca
+        - http://52aika.com
+        - http://56530006.com
+        - http://aimtravel.pl
+        - http://altisso.pl
+        - http://aoertong.com
+        - http://apagmar.pl
+        - http://canhoreal.com
+        - http://cclimoji.com
+        - http://cintasuci.com
+        - http://comfuture-web.com
+        - http://common-logic.org
+        - http://contentbiz.net
+        - http://ctinfotech.com
+        - http://lmlstaoci.com
+        - http://loantm.com
+        - http://mailblust.com
+        - http://milchdieb.com
+        - http://mochacat.net
+        - http://myhiddentreasures.com
+        - http://myxos.be
+        - http://sandat-bali.com
+        - http://sharuindustries.com
+        - http://sieuthionline.com
+        - http://sll9.com
+        - http://snnftp.com
+        - http://somersetautotints.co.uk
+        - http://surfmohammedia.ueuo.com
+        - http://www.montostroj.eu
+        - http://xiandefood.com
+        RequestUrl: *id005
+  condition: any of them

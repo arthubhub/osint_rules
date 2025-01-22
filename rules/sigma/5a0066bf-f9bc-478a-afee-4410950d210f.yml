@@ -1,0 +1,74 @@
+title: 'M2M -  Locky 2017-11-03 : Affid=3, offline, ".asasin" : "12345678.doc"'
+id: 5a0066bf-f9bc-478a-afee-4410950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 98.124.251.69
+        - 149.3.135.72
+        - 27.85.233.43
+        - 46.32.236.13
+        - 217.73.227.10
+        - 217.18.75.42
+        - 148.251.208.73
+        - 87.106.60.199
+        - 195.177.224.15
+        - 93.95.217.227
+        - 62.149.236.205
+        - 45.56.109.165
+        - 31.24.154.172
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 3a8431e8b65fd170c63cac5b7a37025e925c240a
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 1e272373a8e1fc7607873bee728b2dc64fd78824918846dd8d553a34e776c5a7
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 2765935074df574e38b8c286b82d811f
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://evengrollighromsof.net
+        - http://with-hair.co.jp
+        - http://www.test.doctorsordersltd.co.uk
+        - http://teesaddiction.com
+        - http://ddcms.nl
+        - http://ebsitaly.it
+        - http://finanzen-netto.de
+        - http://futtermittel-schwaegerl.de
+        - http://generalcom.ro
+        - http://dangelofavata.com
+        - http://cibeservice.it
+        - http://washingtoncountyyellowpagesdirectory.com
+        - http://fsol.co.za
+        - http://euroregistro.net
+        - http://ceocfonewsline.com
+        RequestUrl: *id005
+  condition: any of them

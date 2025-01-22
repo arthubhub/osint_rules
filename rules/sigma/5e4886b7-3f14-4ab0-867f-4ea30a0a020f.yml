@@ -1,0 +1,116 @@
+title: IRS Doc Malware
+id: 5e4886b7-3f14-4ab0-867f-4ea30a0a020f
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1060
+- attack.t1197
+- attack.t1086
+- attack.t1059
+- attack.t1032
+- attack.t1064
+- attack.t1193
+- attack.t1043
+logsource:
+  product: windows
+detection:
+  object_15121:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 452d05a5ad2fdd2b8f45b878b2078900b9f072b2
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 585f829c600736a9613d0870c6460068d9461a7be35c07149fe58143b2f24b6f
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 9dec963dd964716405adbe9ef9006de7
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_15122:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 651daa1d0e25c515d8ec9e40627efa0e572de9b7
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - ea755fc9ed86a2a8fd8712e76e1a8ebc2d871ec143b53f4abd3ef4d9150263fa
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 701a346228708332063529695210309a
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_15123:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - ce297b51992a43698b61467beb7b1bae55605037
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 5be14f4258ed8d96da626dff4c8980f121208c45595639ba1fbeb9f895debaa4
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - b102452e6d92a217995f4ca5523d0b85
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id010
+        - siliconmadeinhk.com
+        - binupload.com
+        RequestUrl: *id010
+        QueryName: *id010
+    - ip_detection:
+        DestinationIp: &id011
+        - 199.188.200.112
+        - 185.222.202.237
+        - 89.208.229.55
+        - 172.105.81.149
+        - 172.105.154.72
+        - 89.208.196.16
+        SourceIp: *id011
+        IpAddresses: *id011
+        destination.ip: *id011
+        RequestUrl|contains: *id011
+    - url_detection:
+        PowershellCommand|contains: &id012
+        - https://laskowski-tech.com
+        - http://siliconmadeinhk.com
+        RequestUrl: *id012
+  condition: any of them

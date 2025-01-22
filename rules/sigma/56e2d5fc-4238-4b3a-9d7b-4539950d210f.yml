@@ -1,0 +1,38 @@
+title: '''Surprise'' Ransomware (2016-03-11)'
+id: 56e2d5fc-4238-4b3a-9d7b-4539950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - bee22913ad9d6c9a37152aa65daa6bd9beca00eb
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - ddb0c54759fada5cff7bb60237ace601fcbd526208627fdee170d9ed41e91c7a
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - c34fb15c5f93c2bd1b8a1ba29566837f
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://pulseaudio.duckdns.org
+        RequestUrl: *id004
+  condition: any of them

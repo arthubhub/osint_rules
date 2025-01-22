@@ -1,0 +1,38 @@
+title: OSINT Potential CNC base on CCNE activities described in NSA document leak
+id: 57b57c2f-9218-4138-bd36-48e4950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - mcee.org
+        - sandrogolinelli.net
+        - transpersia.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 208.73.210.155
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        md5_detection:
+          md5: &id003
+          - 610695802715595c52cafa0c19ff5a20
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://www.spiegel.de
+        RequestUrl: *id004
+  condition: any of them

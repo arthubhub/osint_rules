@@ -1,0 +1,37 @@
+title: OSINT - FlawedAmmy RAT
+id: 5cf51bbd-6180-4dc7-a2dd-4baa950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.flawedammy
+logsource:
+  product: windows
+detection:
+  object_16667:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://mobile.twitter.com
+        RequestUrl: *id001
+  object_16668:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - fe3e4635f555f86b64be6e8c9cfa6d6f
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id003
+        - 185.117.89.130
+        SourceIp: *id003
+        IpAddresses: *id003
+        destination.ip: *id003
+        RequestUrl|contains: *id003
+  condition: any of them

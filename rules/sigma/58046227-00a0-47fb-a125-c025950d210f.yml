@@ -1,0 +1,58 @@
+title: Spam week 43 (mule acquisition) - probably related to Locky resources
+id: 58046227-00a0-47fb-a125-c025950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - benavent.cat
+        - bestedates.com
+        - bbwsa.com
+        - billfoundation.org
+        - belevtsev.net
+        - faithfulwebhosting.com
+        - feeltohealfitness.com
+        - festiv-bras.com
+        - getdeone.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 121.46.0.100
+        - 160.153.73.137
+        - 160.153.162.16
+        - 160.153.16.30
+        - 50.23.93.227
+        - 52.202.112.204
+        - 195.208.1.164
+        - 199.116.255.248
+        - 93.62.255.201
+        - 50.63.100.1
+        - 149.202.56.129
+        - 104.238.124.62
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://bdgtest.bluedoor.com.cn
+        - http://benavent.cat
+        - http://bestedates.com
+        - http://canaryislands.website
+        - http://bbwsa.com
+        - http://billfoundation.org
+        - http://belevtsev.net
+        - http://faithfulwebhosting.com
+        - http://fazzini.missionline.org
+        - http://feeltohealfitness.com
+        - http://festiv-bras.com
+        - http://getdeone.com
+        RequestUrl: *id003
+  condition: any of them

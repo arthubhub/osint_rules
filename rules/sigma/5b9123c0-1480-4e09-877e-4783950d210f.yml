@@ -1,0 +1,59 @@
+title: OSINT - Sigma Ransomware Being Distributed Using Fake Craigslist Malspam
+id: 5b9123c0-1480-4e09-877e-4783950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1027
+- attack.t1192
+- attack.t1204
+- attack.t1064
+- attack.group.sigma_ransomware
+- attack.t1193
+- attack.software.sigma_ransomware
+logsource:
+  product: windows
+detection:
+  object_1560:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id001
+          - b81c7079fd573304bb8fb177898dfbf6acdb16ff32632dfa9ebb9c3da2a59864
+          SHA256: *id001
+          DriverSha256: *id001
+          TargetProcessSha256: *id001
+          Hashes.sha256: *id001
+  object_1561:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 0d34add7d61e26583dc54e7b89b6d4056d6bf201
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - b81c7079fd573304bb8fb177898dfbf6acdb16ff32632dfa9ebb9c3da2a59864
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 9afa3302527608a30408958bc48019fc
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.bleepingcomputer.com
+        - http://185.121.139.229
+        RequestUrl: *id005
+  condition: any of them

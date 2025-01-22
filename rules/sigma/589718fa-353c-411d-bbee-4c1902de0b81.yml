@@ -1,0 +1,38 @@
+title: OSINT - Doctor Web detects several thousand infected Linux devices  Linux.Proxy.10
+id: 589718fa-353c-411d-bbee-4c1902de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - f23c4e3dd93bc54ec67dc97023c0b1251a6ca784
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - b15c7445dc66cb1fe24a8f372c2a380e4969b66ae6a7f44a4bce265a6254f80e
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - feb78d1ba686d5c151c3305cf5bc9675
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://news.drweb.com
+        RequestUrl: *id004
+  condition: any of them

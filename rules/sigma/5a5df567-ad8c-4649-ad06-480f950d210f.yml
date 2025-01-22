@@ -1,0 +1,134 @@
+title: OSINT Track to the future - How to use historical intelligence to get back
+  to the future and defend your organization (example using APT28) by ThreatConnect
+id: 5a5df567-ad8c-4649-ad06-480f950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.sofacy
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - joshel.com
+        - edit-mail-yahoo.com
+        - misdepatrment.com
+        - mailpho.com
+        - akamaisoft.com
+        - gtranm.com
+        - zpfgr.com
+        - netcorpscanprotect.com
+        - ppcodecs.com
+        - uniquecorpind.com
+        - adobeincorp.com
+        - vvorthyhands.org
+        - tukangcendol-naikinbuhaji.com
+        - bmwriting.com
+        - trbusinesslink.com
+        - qov.al
+        - securelink1.org
+        - cvvshop.lv
+        - googlegoogie.com
+        - zimbra-service.org
+        - zimbra-servicing.com
+        - networkschecker.com
+        - networkschecker.net
+        - netcloselysecure.org
+        - zimbra-servicing.org
+        - iscellane.org
+        - mail-account-yahoo.com
+        - us-mg6-mail-yahoo.com
+        - outlook-security.org
+        - security-ukr.net
+        - web-privacy-guardian.com
+        - highcomission.org
+        - uzbekistan-mfa.com
+        - defence-adviser.com
+        - computers0ft.com
+        - dislocationineconomic.com
+        - cdn-ch.org
+        - jpoweradmin.com
+        - bitlinkcut.net
+        - login-freemail.com
+        - events-spot.com
+        - carlinocg.com
+        - gmail-google-accounts.com
+        - com-statistics.com
+        - mailer-support.com
+        - cleanphonetrksftware.com
+        - appservicegroup.com
+        - apptaskserver.com
+        - akamaisoftupdate.com
+        - applecloudupdate.com
+        - noticermk.com
+        - runvercheck.com
+        - reportscanprotecting.org
+        - evbrax.org
+        - acrobatportable.com
+        - hotfixmsupload.com
+        - lowprt.org
+        - lgemon.org
+        - downloadsstore.net
+        - rapidfileuploader.org
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 92.114.92.102
+        - 45.32.129.185
+        - 131.72.136.165
+        - 167.114.214.63
+        - 89.42.212.141
+        - 94.177.12.74
+        - 94.177.12.157
+        - 130.255.184.196
+        - 185.25.50.117
+        - 185.86.151.180
+        - 213.251.187.145
+        - 62.113.232.196
+        - 86.105.1.136
+        - 89.45.67.12
+        - 95.215.44.38
+        - 86.105.18.113
+        - 86.106.93.111
+        - 89.45.67.189
+        - 86.104.15.105
+        - 46.102.152.172
+        - 89.33.64.123
+        - 86.105.227.212
+        - 86.105.1.111
+        - 89.37.226.120
+        - 86.105.1.102
+        - 46.102.152.132
+        - 62.113.232.197
+        - 89.45.67.20
+        - 86.105.1.13
+        - 95.215.47.162
+        - 185.156.173.70
+        - 146.0.43.98
+        - 103.41.177.44
+        - 95.215.47.226
+        - 173.243.112.202
+        - 86.104.15.165
+        - 185.86.148.212
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - a1833c32d5f61d6ef9d1bb0133585112069d770e
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://www.threatconnect.com
+        RequestUrl: *id004
+  condition: any of them

@@ -1,0 +1,36 @@
+title: 'OSINT Shakti Trojan: Document Thief  by Malwarebytes'
+id: 57b5a864-be78-4eba-af85-4608950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - web4solution.net
+        - securedesignus.com
+        - securedesignuk.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 8ea35293cbb0712a520c7b89059d5a2a
+          - 6992370821f8fbeea4a96f7be8015967
+          - d9181d69c40fc95d7d27448f5ece1878
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://blog.malwarebytes.com
+        - https://malwr.com
+        - http://www.bleepingcomputer.com
+        - http://vms.drweb.ru
+        RequestUrl: *id003
+  condition: any of them

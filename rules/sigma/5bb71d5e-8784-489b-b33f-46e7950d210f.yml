@@ -1,0 +1,42 @@
+title: 'OSINT - CoalaBot: http Ddos Bot'
+id: 5bb71d5e-8784-489b-b33f-46e7950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.coalabot
+logsource:
+  product: windows
+detection:
+  object_15223:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 0ff1584eec4fc5c72439d94e8cee922703c44049
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - fd07ad13dbf9da3f7841bc0dbfd303dc18153ad36259d9c6db127b49fa01d08f
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - f3862c311c67cb027a06d4272b680a3b
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://malware.dontneedcoffee.com
+        RequestUrl: *id004
+  condition: any of them

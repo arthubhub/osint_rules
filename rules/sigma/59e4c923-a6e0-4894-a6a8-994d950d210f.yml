@@ -1,0 +1,48 @@
+title: OSINT - BlackOasis APT and new targeted attacks leveraging zero-day exploit
+id: 59e4c923-a6e0-4894-a6a8-994d950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.finspy
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 89.45.67.107
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 949da212307259f53b17eb19b353e7c1051fba82
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 16070014b86f2254dcf273bbce78fb6eca43df9a6fc3c6ab85ec8f06a4063b06
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 4a49135d2ecc07085a8b7c5925a36c0a
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://securelist.com
+        - http://89.45.67.107
+        RequestUrl: *id005
+  condition: any of them

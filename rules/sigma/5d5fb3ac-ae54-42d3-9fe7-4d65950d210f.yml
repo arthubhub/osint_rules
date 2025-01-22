@@ -1,0 +1,17 @@
+title: OSINT - Emotet is back
+id: 5d5fb3ac-ae54-42d3-9fe7-4d65950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://pastebin.com
+        - https://github.com
+        RequestUrl: *id001
+  condition: any of them

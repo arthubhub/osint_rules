@@ -1,0 +1,66 @@
+title: 'M2M -  Locky 2017-11-09 : Affid=3, offline, ".asasin" : "Documents" - "ABY001234.doc"'
+id: 5a05d1d7-5710-44c0-869f-4a52950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 77.243.131.16
+        - 212.220.124.233
+        - 78.111.75.239
+        - 213.203.202.31
+        - 85.214.130.145
+        - 209.54.51.32
+        - 82.165.139.233
+        - 85.17.156.101
+        - 27.85.233.43
+        - 149.210.137.37
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 742e7976bafb4e9f437dd30d0faa48a8a4671ab5
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - e37ffad79863d12a3b62190d653d8e4d7f0b88c261d83e85639699829db06f51
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 64d55acb693c58656eb3004b595d782c
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://336.linux1.testsider.dk
+        - http://testbxc.u-host.ru
+        - http://hofgrund.de
+        - http://horoskoperstellung.com
+        - http://primeassociatesinc.com
+        - http://holidays-auction.com
+        - http://jw-portal.hosting-jw.de
+        - http://maydakookt.indepenmedia.nl
+        - http://with-hair.co.jp
+        - http://vallei-elektrotechniek.nl
+        RequestUrl: *id005
+  condition: any of them

@@ -1,0 +1,37 @@
+title: Spam 2016-10-16 (mule acquisition) - probably related to Locky resources
+id: 58030b52-b52c-41e7-93f6-43ae950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - billfoundation.org
+        - bidprogroup.com
+        - bigway.com
+        - bikebreeze.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 52.202.112.204
+        - 166.62.10.183
+        - 50.62.172.113
+        - 69.168.8.211
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://billfoundation.org
+        - http://bidprogroup.com
+        - http://bigway.com
+        - http://bikebreeze.com
+        RequestUrl: *id003
+  condition: any of them

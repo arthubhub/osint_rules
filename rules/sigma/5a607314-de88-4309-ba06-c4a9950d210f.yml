@@ -1,0 +1,72 @@
+title: 'M2M -  GlobeImposter "..doc" 2018-01-12 : "Unpaid invoice " - "1234567.7z"'
+id: 5a607314-de88-4309-ba06-c4a9950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+logsource:
+  product: windows
+detection:
+  object_16325:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 28be65219441d78399027aa42c9cc7456ee67130
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - c45ef4a35047e14d8eaf54cab44a432be18e93915ac26a2f1294d260f220aea8
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - b0ee9dae7de7781ea809278c48c310a5
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id004
+        - 103.198.0.2
+        - 199.188.200.144
+        - 199.188.200.146
+        - 198.54.116.65
+        - 198.54.114.136
+        - 199.188.200.96
+        - 199.188.200.149
+        - 74.220.219.67
+        SourceIp: *id004
+        IpAddresses: *id004
+        destination.ip: *id004
+        RequestUrl|contains: *id004
+    - hash_detection:
+        md5_detection:
+          md5: &id005
+          - b0ee9dae7de7781ea809278c48c310a5
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://icilarache.com
+        - http://jcvitalis.com
+        - http://lasercutlawncare.com
+        - http://loquiereslotienesya.com
+        - http://mikeylinehan.com
+        - http://nwfpakistan.com
+        - https://topyzscsu5poprxy.onion.link
+        - http://psoeiras.net
+        RequestUrl: *id006
+  condition: any of them

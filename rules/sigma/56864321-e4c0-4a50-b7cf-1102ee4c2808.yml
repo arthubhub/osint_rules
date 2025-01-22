@@ -1,0 +1,54 @@
+title: 'RegretLocker - VMRay Analyzer Report for Sample #1500977'
+id: 56864321-e4c0-4a50-b7cf-1102ee4c2808
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.vmray_request_dns_by_name
+- attack.vmray_drop_pe_file
+- attack.vmray_enumerate_processes
+- attack.vmray_check_external_ip
+- attack.vmray_create_process_with_hidden_window
+- attack.vmray_install_startup_script_by_registry
+- attack.vmray_use_encryption_api
+- attack.vmray_change_folder_appearance
+- attack.vmray_known_suspicious_file
+- attack.vmray_create_named_mutex
+- attack.vmray_av_malicious_match
+- attack.software.regretlocker
+- attack.vmray_tcp_out_connection
+- attack.group.regretlocker
+- attack.vmray_establish_http_connection
+- attack.vmray_dynamic_api_usage_by_api
+- attack.vmray_delay_execution_by_sleep
+- attack.vmray_modify_windows_backup_settings
+- attack.vmray_install_scheduled_task_by_schtasks
+- attack.vmray_delay_by_scheduled_task_delayed
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - api.ipify.org
+        - nagano-19599.herokussl.com
+        - elb097307-934924932.us-east-1.elb.amazonaws.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 50.19.252.36
+        - 54.204.14.42
+        - 54.227.255.202
+        - 54.235.98.120
+        - 54.235.169.38
+        - 23.21.252.4
+        - 54.225.66.103
+        - 54.225.169.28
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+  condition: any of them

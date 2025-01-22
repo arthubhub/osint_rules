@@ -1,0 +1,34 @@
+title: OSINT - Cyber Heist Attribution
+id: 5735c472-124c-495e-bebd-4bc5950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - c6eb8e46810f5806d056c4aa34e7b8d8a2c37cad
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 4cf164497c275ae0f86c28d7847b10f5bd302ba12b995646c32cb53d03b7e6b5
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 558b020ce2c80710605ed30678b6fd0c
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  condition: any of them
