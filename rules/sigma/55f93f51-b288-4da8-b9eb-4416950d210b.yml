@@ -1,0 +1,44 @@
+title: 'OSINT The Shade Encryptor: a Double Threat by Kaspersky'
+id: 55f93f51-b288-4da8-b9eb-4416950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 3fe92f2e449dc7709b6ce8a9a48f6db3b60daf33
+          - a3b639e1cf9d0ed3a73d2061dc40049508ea4e37
+          - 1f491c497fedd020894a74a6647ab3b7b1c1a90e
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 01aa0cc7081760ad0b7259f35a3e4b37b1d8c6c4ed6a03606e74646046c64481
+          - f5eb1e8b5561dc0f861d1edbf43bbc3eeda62ff8ce1cb9b286386248b158dfc5
+          - e6154d1c2850170fa81d1405886d0227a7548dc8f012b1b73c84646707e42d27
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 21723762c841b2377e06472dd9691da2
+          - bb159b6fe30e3c914feac5d4e1b85a61
+          - 543d1620ce976cb13fec190ccc1bc83a
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://securelist.com
+        RequestUrl: *id004
+  condition: any of them

@@ -1,0 +1,142 @@
+title: 'DangerousSavanna: Two-year long campaign targets financial institutions in
+  French-speaking Africa'
+id: 42e5a5d8-59d6-4075-9c9d-2d334b9d74e1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.dangeroussavanna
+- attack.t1193
+- attack.t1566.001
+logsource:
+  product: windows
+detection:
+  object_16386:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://research.checkpoint.com
+        RequestUrl: *id001
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id002
+        - tf-bank.com
+        - aeternam.me
+        - i-development.one
+        RequestUrl: *id002
+        QueryName: *id002
+    - ip_detection:
+        DestinationIp: &id003
+        - 15.236.51.204
+        - 3.8.126.182
+        - 35.181.50.113
+        - 13.37.250.144
+        - 13.38.90.3
+        - 137.116.142.70
+        - 170.130.172.46
+        - 192.18.141.199
+        - 20.70.163.11
+        - 192.9.244.42
+        - 20.194.195.96
+        SourceIp: *id003
+        IpAddresses: *id003
+        destination.ip: *id003
+        RequestUrl|contains: *id003
+    - hash_detection:
+        md5_detection:
+          md5: &id004
+          - 020ea21556b56229bb9714e721d893df
+          - 0789e52f16f5fc4ac2dbebadf53d44ec
+          - 0b1d7c043be8c696d53d63fc0c834195
+          - 16157cdfd7b0ea98c44df15fb2fcb417
+          - 1818f84f7f51be74a408f5e193ba5908
+          - 18889d70d5546b861c6fa4ec11126942
+          - 192b70891de0d54af6fa46bd35a5fd87
+          - 1ccd2ce1e827b598207cc65e16686b7b
+          - 1eb29f64f19e07d42d9ad8f6597424b8
+          - 1eed3153b1afae1676ebd0db99ac5802
+          - 1f4f537e550e4299a945a97c1f8a0441
+          - 28165bb98959e7e7d9be67f0d248b31d
+          - 2c95e83759487d78070b56e40843c543
+          - 2e7c90c45b3cd8db15cd22e0caacfd40
+          - 31515f871cb12d538d53e730e5ddd406
+          - 3227c8a45ce4ccf8c475a51b331720c1
+          - 3c70bc09d1f8033e57323879d50ca3ce
+          - 40ec0d84272f1f2394b4a3b74dafbf70
+          - 46058baa3ef1bdf553d89439cacf0675
+          - 46a0071b7e5ea442580a2f80d2fcef42
+          - 47c68680c9a00b117764114668357e23
+          - 47cf9fda04b2abef75f1eca9804aaebe
+          - 496f2a2f14bda410b5f3dcff40bf56c3
+          - 4f52ca22d2d28e1ecdb9fba92e4cdde3
+          - 4fb7503dd8b21396bf9643e0dce70fcf
+          - 4ffd8ae803d7498e2d5a7a7a3a1268f8
+          - 5038e5cd4888adb3661d9958f04a1ec1
+          - 505724eac0faf0eb32e4ad25ab5cddfe
+          - 518a533d6ff1d86afc0f7d94c0a1be7c
+          - 565a87ba8e79f5e081ea937068082afd
+          - 57511cb12fb5f505b3330dfec18f3432
+          - 65cbaec27b51d54dc0bceeef298719a8
+          - 66ac99b3501846a6c18f2671dbf31873
+          - 6702f0057c401cf390adc28d201118f8
+          - 6b14a4d6212087fe8d88ad012dbc8598
+          - 6b781c1082014a0177f42e918adb35de
+          - 6c737910247e3122fe810df6a63581f7
+          - 6c7846d955bb5f3842bb7c35fae1569a
+          - 725489b29e7afbc045b2814dff5474a6
+          - 72ca000f40335d771936d077d4cabefb
+          - 75931e00c81274b1c279d23dfdb0bbad
+          - 76a8391c77723b06587f648dcbde07e9
+          - 775c0666a7a482ce664c72ed9195f120
+          - 7a4927e1a2aad1bc8ccef956130df0c0
+          - 7b8d0b4e718bc543de4a049e23672d79
+          - 7b91f06584afdc4a2aa6edd9d04198b7
+          - 853403bd5feea1ecf83e812759e1ccc7
+          - 8690ccd36c9d63b63e8d0278f0449e3b
+          - 886a8ded2ea2f35ee009088d2c24dd32
+          - 889e8b93ec0c16ffac62ced220ed8e30
+          - 8f4392f839152c9614699048ee4fea11
+          - 953d5a3d8e00bbd2dba08579d95c61dc
+          - 98bf46542e3e9daa280ef0b395a7dabd
+          - 9a57a80692012878fcb463f41ce6dcfa
+          - 9d50143836d41726b6564a524453b868
+          - 9d9da1992f63776e135c1c1215ee1741
+          - a027a4f65e0b0a83eccb56d9047347bd
+          - a5fd946bc7e8b12cdfd207790216b4b1
+          - a6d8cc18af5a983b4c1a7f4838780b01
+          - aa3f386f10864f46a09610d0e03a26b5
+          - aeee6b71690a1df75792fcd3d11b8ede
+          - af8de58e3538fcb40334109bcd571939
+          - b397383ba85fc726b424aac26b42f6ae
+          - b651f7dcfeb3e304f7eb636000a6b935
+          - b895d34958be7565888c15a51e0c73c7
+          - b95ba7fb130f95ccae13c54312a69d36
+          - bac7be7eebb8670ae624a0179a366148
+          - be82532aa428dc5f30107ccfa08da8c6
+          - c43c50baa3271b375298847bf6a7fc13
+          - c4ee082a4ce704dcb3145e2cfd47ef6f
+          - c7beb386813580a4c4812de3ee1aa429
+          - c8ed3353ae9c8b84ea7a9e81d2828193
+          - c9c001c45b2eecaee9704fb21e731ac7
+          - ca09b19b6975e090fb4eda6ced1847b1
+          - cced9e8b1a99b9000f4b958f13b164a5
+          - d32e387d60a18fd90c4854f167b4df4b
+          - d43e6ae895039108cf68a36140190b0f
+          - daa6ce148e2b8e5fd694183338db6ec9
+          - e166ee1de912bf17453d2da1dc06fc6d
+          - e2c3a6bcb015e2e5137d4a46881d38b6
+          - f0960552876da5ef74b8ece55116929e
+          - f2afcfd2ecfb3ea3261855ce1a4747b7
+          - f4a8605fa09e447108eb714eccad57d0
+          - fae63014d33efe844a25f2606de900b6
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://3.8.126.182
+        RequestUrl: *id005
+  condition: any of them

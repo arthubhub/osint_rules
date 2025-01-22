@@ -1,0 +1,48 @@
+title: Kegotip downloader
+id: 570669fe-4138-40e0-ba49-4990950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 51.255.70.98
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - e26dc11326c8ec4a0399b149741f667e9219da87
+          - d69e52c7949bed85fd37129809f50c8277352d47
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 0ea08351e522eda5e3abb1b5b0cf921784b5bfd4eda31ad44ffa5d28ac76d3f7
+          - e9958ef800594203e541f25a70dddf2eda71ecce7bee33c9054a79776e6a0b5d
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - f563f980e99a91fe011fe331bea190d6
+          - d22500f4cc2abf32642a0862fd1d135d
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://51.255.70.98
+        RequestUrl: *id005
+  condition: any of them

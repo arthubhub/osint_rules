@@ -1,0 +1,152 @@
+title: Harma and Odveta Ransomware
+id: 5e66dd0a-d858-4f9e-b0b2-a7c6950d210f
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1043
+- attack.t1133
+- attack.t1060
+- attack.t1059
+- attack.t1486
+logsource:
+  product: windows
+detection:
+  object_1358:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - d5e09d96add7618489b393ddabd0e242fe854e30
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - e3933a84ac4cbbb0a3c259c009b57c190f30c53c9be4c209eded9001cae40627
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - b4f7c2438309bf856fe51dc09d96c8c0
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_1359:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - b97c0fc8a34e88c03704e43829c550d765398a3c
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - c3a3acd8241a5fa5c2f2d596e7b8aecb0e427e7b399ee5ef6c7dfea8d86ebdaa
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 73528b74e4edb1c32a4d88abe34ae437
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_1360:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 1ff9fa96717acbbfaafd95291f1def2b5881e96d
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 7512134f5056a368da19e33984ce40d96bd18933d92996bfc06ee11fabedd6ea
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 6150c9df3c1b2df469b6141a300055e3
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_1361:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 1556232c5b6a998a4765a8f53d48a059cd617c59
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 87bfb05057f215659cc801750118900145f8a22fa93ac4c6e1bfd81aa98b0a55
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 52e666a32d0847b416b66ad9aa98bbed
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  object_1362:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id013
+          - 629c9649ced38fd815124221b80c9d9c59a85e74
+          SHA1: *id013
+          DriverSha1: *id013
+          TargetProcessSha1: *id013
+          Hashes.sha1: *id013
+        sha256_detection:
+          sha256: &id014
+          - f47e3555461472f23ab4766e4d5b6f6fd260e335a6abc31b860e569a720a5446
+          SHA256: *id014
+          DriverSha256: *id014
+          TargetProcessSha256: *id014
+          Hashes.sha256: *id014
+        md5_detection:
+          md5: &id015
+          - 597de376b1f80c06d501415dd973dcec
+          MD5: *id015
+          DriverMd5: *id015
+          TargetProcessMd5: *id015
+          Hashes.md5: *id015
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id016
+        - 64.44.81.20
+        - 148.251.247.174
+        - 80.82.69.52
+        - 5.123.105.24
+        SourceIp: *id016
+        IpAddresses: *id016
+        destination.ip: *id016
+        RequestUrl|contains: *id016
+    - url_detection:
+        PowershellCommand|contains: &id017
+        - https://www.wilbursecurity.com
+        RequestUrl: *id017
+  condition: any of them

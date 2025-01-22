@@ -1,0 +1,32 @@
+title: 'Malspam 2016-09-05 (.js in .zip) - campaign: "Credit card receipt"'
+id: 57cd5a06-59e0-44a8-9200-3306950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - canonsupervideo4k.ws
+        - videoconvertermac.in
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 107.173.176.4
+        - 216.126.225.159
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://canonsupervideo4k.ws
+        - http://darkestzone2.wang
+        - http://tradesmartcoin.xyz
+        RequestUrl: *id003
+  condition: any of them

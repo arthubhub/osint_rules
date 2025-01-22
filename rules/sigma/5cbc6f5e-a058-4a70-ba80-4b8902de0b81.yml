@@ -1,0 +1,139 @@
+title: OSINT - 97 domains phishing spread over 10 IP's
+id: 5cbc6f5e-a058-4a70-ba80-4b8902de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_3493:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://pastebin.com
+        RequestUrl: *id001
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id002
+        - service-verify-v4.gq
+        - service-verify-v1.cf
+        - service-verify-v1.ml
+        - service-verify-v6.gq
+        - service-verify-v8.tk
+        - service-verify-v7.cf
+        - service-verify-v7.ml
+        - service-verify-v7.tk
+        - service-verify-v12.tk
+        - service-verify-v8.ga
+        - service-verify-v8.gq
+        - service-verify-v9.cf
+        - service-verify-v14.gq
+        - service-verify-v13.tk
+        - service-verify-v13.cf
+        - service-verify-v13.gq
+        - service-verify-v14.ml
+        - service-verify-v13.ml
+        - service-verify-v14.cf
+        - service-verify-v14.ga
+        - service-verify-v31.ga
+        - service-verify-v26.tk
+        - service-verify-v22.gq
+        - service-verify-v21.ga
+        - service-verify-v30.ml
+        - service-verify-v29.cf
+        - service-verify-v21.tk
+        - service-verify-v28.ml
+        - service-verify-v30.gq
+        - service-verify-v21.gq
+        - service-verify-v29.ga
+        - service-verify-v17.cf
+        - service-verify-v26.ml
+        - service-verify-v32.ga
+        - service-verify-v28.gq
+        - service-verify-v30.cf
+        - service-verify-v25.gq
+        - service-verify-v29.gq
+        - service-verify-v28.ga
+        - service-verify-v21.ml
+        - service-verify-v29.ml
+        - service-verify-v31.ml
+        - service-verify-v23.cf
+        - service-verify-v26.ga
+        - service-verify-v36.ga
+        - service-verify-v35.ml
+        - service-verify-v40.gq
+        - service-verify-v41.ml
+        - service-verify-v44.ga
+        - service-verify-v36.tk
+        - service-verify-v33.tk
+        - service-verify-v24.ml
+        - service-verify-v23.tk
+        - service-verify-v38.ml
+        - service-verify-v35.ga
+        - service-verify-v23.gq
+        - service-verify-v43.tk
+        - service-verify-v40.ml
+        - service-verify-v41.gq
+        - service-verify-v29.tk
+        - service-verify-v43.ml
+        - service-verify-v40.tk
+        - service-verify-v37.cf
+        - service-verify-v44.ml
+        - service-verify-v42.gq
+        - service-verify-v44.gq
+        - service-verify-v39.tk
+        - service-verify-v42.cf
+        - service-verify-v42.ga
+        - service-verify-v44.cf
+        - service-verify-v40.ga
+        - service-verify-v41.cf
+        - service-verify-v42.ml
+        - service-verify-v43.ga
+        - service-verify-v24.tk
+        - service-verify-v45.ml
+        - service-verify-v41.ga
+        - service-verify-v43.gq
+        - service-verify-v1.ga
+        - service-verify-v1.gq
+        - service-verify-v2.ml
+        - service-verify-v2.cf
+        - service-verify-v2.ga
+        - service-verify-v2.tk
+        - service-verify-v1.tk
+        - service-verify-v3.ga
+        - service-verify-v3.gq
+        - service-verify-v3.cf
+        - service-verify-v3.tk
+        - service-verify-v3.ml
+        - service-verify-v4.cf
+        - service-verify-v19.cf
+        - service-verify2.ml
+        - service-verify1.ml
+        - service-verify3.ml
+        - service-verify2.ga
+        - service-verify6.ga
+        RequestUrl: *id002
+        QueryName: *id002
+    - ip_detection:
+        DestinationIp: &id003
+        - 13.114.203.210
+        - 13.78.36.109
+        - 192.241.152.20
+        - 52.57.118.133
+        - 13.94.203.192
+        - 104.211.152.15
+        - 34.245.34.247
+        - 51.15.84.31
+        - 51.158.108.50
+        - 51.158.190.250
+        SourceIp: *id003
+        IpAddresses: *id003
+        destination.ip: *id003
+        RequestUrl|contains: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://service-verify-v41.ga
+        RequestUrl: *id004
+  condition: any of them

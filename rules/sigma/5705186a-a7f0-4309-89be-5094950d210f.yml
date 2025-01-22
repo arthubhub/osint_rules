@@ -1,0 +1,62 @@
+title: Dridex (2016-04-06) - botnet 122
+id: 5705186a-a7f0-4309-89be-5094950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 31.148.99.90
+        - 210.245.92.63
+        - 210.70.242.41
+        - 178.33.167.120
+        - 195.169.147.88
+        - 2.96.248.216
+        - 94.8.45.38
+        - 142.166.241.182
+        - 93.174.126.37
+        - 80.0.175.169
+        - 188.194.159.78
+        - 155.133.82.61
+        - 197.96.139.253
+        - 88.249.199.217
+        - 222.255.121.202
+        - 217.246.2.106
+        - 109.190.2.168
+        - 179.51.25.160
+        - 50.96.12.201
+        - 88.117.41.155
+        - 176.35.198.188
+        - 24.204.49.244
+        - 71.9.39.36
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - ab8bd52bbc1dfe3099df73fafc8504f4fa5e1430
+          - db6ed6117a984eef40e726675d5d05243e91a119
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 276de439d900d6fc8a589bad01bf71e4379c3ce0228d57ec0620542b51d2e76d
+          - f2c14a8e8e80f37dca28e86d6796f16b37091b90a4a9dd6f471dd3dd276db232
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://shop.bleutree.biz
+        RequestUrl: *id004
+  condition: any of them

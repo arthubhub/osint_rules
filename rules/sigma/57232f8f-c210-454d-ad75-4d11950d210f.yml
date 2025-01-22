@@ -1,0 +1,43 @@
+title: OSINT -  Over 100,000 South Korean Users Affected by BlackMoon Campaign
+id: 57232f8f-c210-454d-ad75-4d11950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 100.43.185.34
+        - 174.139.0.211
+        - 107.151.158.196
+        - 206.161.216.35
+        - 207.226.136.14
+        - 100.43.185.42
+        - 174.139.194.82
+        - 205.209.141.84
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - dfd4dc577d02b76efea004cd2c131ff7
+          - 163f885cc88c0e69a4094122e5667190
+          - 3cfd66340f204e1b8697e7a8514c00ab
+          - ee0def01d390ca7fd7ced414c83f9782
+          - 2aabd4fa21cca0f153f57ccc1f3c54c0
+          - bbcbd3dc203829c9cdbf7d1b057f0e79
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://blog.fortinet.com
+        RequestUrl: *id003
+  condition: any of them

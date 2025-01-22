@@ -1,0 +1,41 @@
+title: Malspam 2016-07-15 .zip/.jse
+id: 5788c19e-ee40-43b8-9160-47da950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 216.170.117.124
+        - 104.238.213.26
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - cfd4c8391bf4c91c79d46b644df1c066b99ef65c
+          - 4d2fc5119c15c7fd88c22224b937fdfcf160c280
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - ba4963275463eaf55938e110e3665d512bebdb1250610b15e577f25069a04283
+          - 33e7e1ae86855d57ba51657c122c74a34afa85b8267815462a66ceed965a2297
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://cosdoshhp.top
+        RequestUrl: *id004
+  condition: any of them

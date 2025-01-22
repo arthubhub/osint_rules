@@ -1,0 +1,66 @@
+title: 'M2M -  Locky 2017-11-07 : Affid=3, offline, ".asasin" : "Emailing: AZ123 -
+  07.11.2017" - "AZ123 - 07.11.2017.doc"'
+id: 5a0451b3-211c-45f2-ac24-403d950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 216.242.171.101
+        - 195.222.33.183
+        - 195.87.101.81
+        - 192.186.219.83
+        - 148.251.218.75
+        - 108.167.141.148
+        - 67.210.100.133
+        - 216.228.2.70
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 38fbc212ba2fde3dc0d9f3e9fa27df1411604398
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 423dc1aaaed311349f9932a643a032d18f0589b97275b501a7a7f6955f5aac46
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - a4872e4fe84e5adcc49ba4c641547821
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://altarek.com
+        - http://amcscomputer.com
+        - http://arcusautomatika.ba
+        - http://basarteks.com
+        - http://c3pconsulting.com
+        - http://city-hospital.com
+        - http://developmenttesting.website
+        - http://ecochart.org
+        - http://2013oakseedessaycontest.com
+        - http://bobtheprinter.com
+        - http://muchinfaket.net
+        RequestUrl: *id005
+  condition: any of them

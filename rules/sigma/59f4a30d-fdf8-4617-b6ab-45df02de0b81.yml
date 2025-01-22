@@ -1,0 +1,95 @@
+title: OSINT - Bahamut Revisited, More Cyber Espionage in the Middle East and South
+  Asia
+id: 59f4a30d-fdf8-4617-b6ab-45df02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_14566:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - i3mode.com
+        RequestUrl: *id001
+        QueryName: *id001
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id002
+        - squre39-cld.info
+        - goolg-en.com
+        - login-asmx.com
+        - string2port.com
+        - session-en.com
+        - singin-go-olge.com
+        - devotedtohumanity-fif.info
+        - kashmir-weather-info.com
+        - mxiplayer.com
+        - insidecloud-aspx.com
+        - data-covery.com
+        - sa-google.com
+        - rnail-aspx.com
+        - session-service.com
+        - session-owa.com
+        - myinfocheck.com
+        - host-auth.com
+        RequestUrl: *id002
+        QueryName: *id002
+    - ip_detection:
+        DestinationIp: &id003
+        - 111.90.138.81
+        - 188.68.242.18
+        - 91.92.136.134
+        - 200.63.45.47
+        SourceIp: *id003
+        IpAddresses: *id003
+        destination.ip: *id003
+        RequestUrl|contains: *id003
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 6e5e7ecb929fdc29ba93058bf2f501842ac0f2c0
+          - 0550dad8d55446e5b5dbae61783cfb7c78ee10d2
+          - 00d000679baab456953b4302d8b2a1e65241ed12
+          - ddaf5e43da0b00884ef957c32d7b16ed692a057a
+          - 9850ac30c3357d3a412d0f6cec2716b63db6c21d
+          - 381307e3120a0ee6b2769b4fe650c910bb55eb90
+          - 9ef613c4db7e172f7df271513dd501f0a18de2c8
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 9e4596bfb4f58d8ecfe2bc3514c6c7b2170040d9acfb02f295ed1e9ab13ec560
+          - 1518badcb2717e6b0fa9bdd883d5ff61fedddf7ddf22cc3dc04a38f4e137fc96
+          - d0e2e7fe3fab992a670137d0693a2b76a5ac88283011b4aa8786d439b37c877b
+          - 05a4e1e6542d6b0ba7b6eced12c05e96a341deaf88adb28695365544940da5ed
+          - 6f60dfbd3c3fdffc731969acc1b7a82a545b8ec5baaecd48e7ae8055beb37259
+          - 65398e0f12248ca71642216ff8606744305c2397c368ff072c243e6410fd42bc
+          - 090bc0f5936a12771b7fdf15070ba2169a24108a095e939920498b94ce19596d
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 94da91def54db4c1895eb7ba99eb75a6
+          - cfa27503eb37b1c94966d7ac3a5c28c0
+          - 94a6aba63c9d2d9587e424acfde41bcb
+          - 019db1adb064ff0245470d0c1972c515
+          - eec26ee59a6fc0f4b7a2a82b13fe6b05
+          - 146335f1c4ffaae9cf3d48e767a1c66b
+          - 63c2bc55a032eef24d0746158727e373
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - https://www.bellingcat.com
+        RequestUrl: *id007
+  condition: any of them

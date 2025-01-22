@@ -1,0 +1,107 @@
+title: Operation Ghost - White Paper
+id: 5d9b516c-e5f0-4e7c-a958-5d8c0a019371
+description: edit this field when analysing or editing the rule - reported by "ESET"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1102
+- attack.t1060
+- attack.t1077
+- attack.group.apt_29
+- attack.t1064
+- attack.t1025
+- attack.t1107
+- attack.t1071
+- attack.t1039
+- attack.t1053
+- attack.t1090
+- attack.t1083
+- attack.t1057
+- attack.t1027
+- attack.t1001
+- attack.t1078
+- attack.t1112
+- attack.t1041
+- attack.t1005
+- attack.t1045
+- attack.t1035
+- attack.t1084
+- attack.t1085
+- attack.t1129
+- attack.t1086
+- attack.t1008
+- attack.t1106
+- attack.t1135
+- attack.t1049
+- attack.t1140
+- attack.t1193
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - acciaio.com.br
+        - ceycarb.com
+        - coachandcook.at
+        - fisioterapiabb.it
+        - lorriratzlaff.com
+        - mavin21c.dothome.co.kr
+        - motherlodebulldogclub.com
+        - powerpolymerindustry.com
+        - publiccouncil.org
+        - rulourialuminiu.co.uk
+        - sistemikan.com
+        - varuhusmc.org
+        - ecolesndmessines.org
+        - salesappliances.com
+        - busseylawoffice.com
+        - fairfieldsch.org
+        - ministernetwork.org
+        - skagenyoga.com
+        - westmedicalgroup.net
+        - bandabonga.fr
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 4ba559c403ff3f5cc2571ae0961eaff6cf0a50f6
+          - cf14ac569a63df214128f375c12d90e535770395
+          - 539d021cd17d901539a5e1132ecaab7164ed5db5
+          - 0e25ee58b119dd48b7c9931879294ac3fc433f50
+          - d625c7ce9dc7e56a29ec9a81650280edc6189616
+          - 0a5a7dd4ad0f2e50f3577f8d43a4c55ddc1d80cf
+          - f7fd63c0534d2f717fd5325d4397597c9ee4065f
+          - 194d8e2ae4c723ce5fe11c4d9cfefbba32dcf766
+          - 64d6c11fff2c2aadaacee01b294afcc751316176
+          - 6acc0b1230303f8cf46152697d3036d69ea5a849
+          - 170be45669026f3c1fc5ba2d48817dbf950da3f6
+          - 5905c55189c683bc37258aec28e916c41948cd1c
+          - b05caba461000c6ebd8b237f318577e9bccd6047
+          - 718c2ce6170d6ca505297b41de072d8d3b873456
+          - a88da2dd033775f7abc8d6fb3ad5dd48efbeade1
+          - db19171b239ef6de8e83b2926eadc652e74a5afa
+          - 9e96b00e9f7eb94a944269108b9e02d97142eedc
+          - af2b46d4371ce632e2669fea1959ee8af4ec39ce
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://www.welivesecurity.com
+        - http://ibb.co
+        - http://imgur.com
+        - http://jack998899jack.imgbb.com
+        - http://simp.ly
+        - http://thinkery.me
+        - http://twitter.com
+        - http://www.evernote.com
+        - http://www.fotolog.com
+        - http://www.kiwibox.com
+        - http://www.reddit.com
+        RequestUrl: *id003
+  condition: any of them

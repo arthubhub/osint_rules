@@ -1,0 +1,709 @@
+title: OSINT - Multi-exploit IoT/Linux Botnets Mirai and Gafgyt Target Apache Struts,
+  SonicWall
+id: 5b991442-a9f0-4b5b-bc56-445f950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.mirai
+- attack.t1190
+- attack.software.gafgyt
+logsource:
+  product: windows
+detection:
+  object_3302:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id001
+          - d6648a36f55d6b8ffd034df7d04156d31411719ce9bc28e6d30c8427feacb397
+          SHA256: *id001
+          DriverSha256: *id001
+          TargetProcessSha256: *id001
+          Hashes.sha256: *id001
+  object_3303:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - 710d56a90b5f61c7ae82fcf305d23d48476e4f237ffff9d68b961171f168f255
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_3304:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - 52274c46933c20aaf64fd4c11557143fcfdc76eef192743fafd1b3a8bed3f4d2
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+  object_3305:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - 078eef70d754e9b64bc783f085846a2e8ae419653a79ed2386c4ade86fde68cb
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  object_3306:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id005
+          - ef090093496ccdab506848166a07554bfa74eb98a0546171b84fc73861f67c79
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+  object_3307:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id006
+          - 49cdb537f5e4081362545532a623f597212c8cea847cf9f2b2f1fe1f3cd0ec2f
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+  object_3308:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id007
+          - 99c22a0c0e252ab123fb3167f49d94dc12960b79565ca6dfd28f2ff5b0346348
+          SHA256: *id007
+          DriverSha256: *id007
+          TargetProcessSha256: *id007
+          Hashes.sha256: *id007
+  object_3309:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id008
+          - ae2354a5d8b84fb6ea6fc4b9ca3060959d5c0c77684cd2100731df2a3c7a204e
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+  object_3310:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id009
+          - 1913cf8e65114136cc309e72c384b717f0aeaaeae0c040188648c4afebce1669
+          SHA256: *id009
+          DriverSha256: *id009
+          TargetProcessSha256: *id009
+          Hashes.sha256: *id009
+  object_3311:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id010
+          - 1814c010f5e7391c7ea38850f9caf0771866e315f8d0c58c563818e71d30c208
+          SHA256: *id010
+          DriverSha256: *id010
+          TargetProcessSha256: *id010
+          Hashes.sha256: *id010
+  object_3312:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id011
+          - 29540468514cd48b6c2571722018dffb49d12f99c95b248a44a1455fff01acfb
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+  object_3313:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id012
+          - 39891a1c13e4e6ec9de410201f697d23c05e83a29ec0010c6c62c6829386e6a6
+          SHA256: *id012
+          DriverSha256: *id012
+          TargetProcessSha256: *id012
+          Hashes.sha256: *id012
+  object_3314:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id013
+          - 596270e91ccee3ec04a552bafde586af127ecac7141852edb9707ac6c4779a99
+          SHA256: *id013
+          DriverSha256: *id013
+          TargetProcessSha256: *id013
+          Hashes.sha256: *id013
+  object_3315:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id014
+          - 68b27935c7d064478339f7d95b57ff06ffa1efbd81009b4a2870c5cf3e0b0b35
+          SHA256: *id014
+          DriverSha256: *id014
+          TargetProcessSha256: *id014
+          Hashes.sha256: *id014
+  object_3316:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id015
+          - 92a4c6ae034c3a03c21b74bdc00264192e60a85deedd90b99a3e350758eb85c1
+          SHA256: *id015
+          DriverSha256: *id015
+          TargetProcessSha256: *id015
+          Hashes.sha256: *id015
+  object_3317:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id016
+          - aab0ec600cdf57f28f9480ff3a9d3547f699af005c015b74c5c9e39a992570b6
+          SHA256: *id016
+          DriverSha256: *id016
+          TargetProcessSha256: *id016
+          Hashes.sha256: *id016
+  object_3318:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id017
+          - d8fbf6d68993045b4840729c788665ab10c50c42b27246a290031664f3b956eb
+          SHA256: *id017
+          DriverSha256: *id017
+          TargetProcessSha256: *id017
+          Hashes.sha256: *id017
+  object_3319:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id018
+          - dafe1b513183902692c8ba8b2a95fede7c13937e49bf21294de448df05edff18
+          SHA256: *id018
+          DriverSha256: *id018
+          TargetProcessSha256: *id018
+          Hashes.sha256: *id018
+  object_3320:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id019
+          - f89d742c4d3312ac9bd707a9135235482c554e369cb646dcd97f6a14b4210136
+          SHA256: *id019
+          DriverSha256: *id019
+          TargetProcessSha256: *id019
+          Hashes.sha256: *id019
+  object_3321:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id020
+          - fab034d705b3ad7a10101858daf5da93a88f8bfd509dee9b8072678b27290ed3
+          SHA256: *id020
+          DriverSha256: *id020
+          TargetProcessSha256: *id020
+          Hashes.sha256: *id020
+  object_3322:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id021
+          - ff7c182fb460d62195d1bae8c394b2e81182defe
+          SHA1: *id021
+          DriverSha1: *id021
+          TargetProcessSha1: *id021
+          Hashes.sha1: *id021
+        sha256_detection:
+          sha256: &id022
+          - 710d56a90b5f61c7ae82fcf305d23d48476e4f237ffff9d68b961171f168f255
+          SHA256: *id022
+          DriverSha256: *id022
+          TargetProcessSha256: *id022
+          Hashes.sha256: *id022
+        md5_detection:
+          md5: &id023
+          - e0b32c133cedca69b05dd3a9dd6e1910
+          MD5: *id023
+          DriverMd5: *id023
+          TargetProcessMd5: *id023
+          Hashes.md5: *id023
+  object_3324:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id024
+          - a4a4d892d04f516261c2fa4c56de3ff21afd2812
+          SHA1: *id024
+          DriverSha1: *id024
+          TargetProcessSha1: *id024
+          Hashes.sha1: *id024
+        sha256_detection:
+          sha256: &id025
+          - 29540468514cd48b6c2571722018dffb49d12f99c95b248a44a1455fff01acfb
+          SHA256: *id025
+          DriverSha256: *id025
+          TargetProcessSha256: *id025
+          Hashes.sha256: *id025
+        md5_detection:
+          md5: &id026
+          - 6a77f21e15a0a4763e86d166763dbd05
+          MD5: *id026
+          DriverMd5: *id026
+          TargetProcessMd5: *id026
+          Hashes.md5: *id026
+  object_3326:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id027
+          - 13c72eb4c783b74046aeb53f50173eccfb64c7ca
+          SHA1: *id027
+          DriverSha1: *id027
+          TargetProcessSha1: *id027
+          Hashes.sha1: *id027
+        sha256_detection:
+          sha256: &id028
+          - ef090093496ccdab506848166a07554bfa74eb98a0546171b84fc73861f67c79
+          SHA256: *id028
+          DriverSha256: *id028
+          TargetProcessSha256: *id028
+          Hashes.sha256: *id028
+        md5_detection:
+          md5: &id029
+          - 1998b2f489c4da5ecafe7fb5cc790575
+          MD5: *id029
+          DriverMd5: *id029
+          TargetProcessMd5: *id029
+          Hashes.md5: *id029
+  object_3328:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id030
+          - 1da48a03224df6397f2215cd6b79308dbda7cf86
+          SHA1: *id030
+          DriverSha1: *id030
+          TargetProcessSha1: *id030
+          Hashes.sha1: *id030
+        sha256_detection:
+          sha256: &id031
+          - dafe1b513183902692c8ba8b2a95fede7c13937e49bf21294de448df05edff18
+          SHA256: *id031
+          DriverSha256: *id031
+          TargetProcessSha256: *id031
+          Hashes.sha256: *id031
+        md5_detection:
+          md5: &id032
+          - 218821892d5d5e460101d6914cfe2a3d
+          MD5: *id032
+          DriverMd5: *id032
+          TargetProcessMd5: *id032
+          Hashes.md5: *id032
+  object_3330:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id033
+          - 61116e2b1614cebeed29b489d699f4bbcf217fa3
+          SHA1: *id033
+          DriverSha1: *id033
+          TargetProcessSha1: *id033
+          Hashes.sha1: *id033
+        sha256_detection:
+          sha256: &id034
+          - 52274c46933c20aaf64fd4c11557143fcfdc76eef192743fafd1b3a8bed3f4d2
+          SHA256: *id034
+          DriverSha256: *id034
+          TargetProcessSha256: *id034
+          Hashes.sha256: *id034
+        md5_detection:
+          md5: &id035
+          - 3df581337af37f4e66be5026062dcfb2
+          MD5: *id035
+          DriverMd5: *id035
+          TargetProcessMd5: *id035
+          Hashes.md5: *id035
+  object_3332:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id036
+          - 8588546bc5ca10137fc6d2268085a2173a7638c8
+          SHA1: *id036
+          DriverSha1: *id036
+          TargetProcessSha1: *id036
+          Hashes.sha1: *id036
+        sha256_detection:
+          sha256: &id037
+          - ae2354a5d8b84fb6ea6fc4b9ca3060959d5c0c77684cd2100731df2a3c7a204e
+          SHA256: *id037
+          DriverSha256: *id037
+          TargetProcessSha256: *id037
+          Hashes.sha256: *id037
+        md5_detection:
+          md5: &id038
+          - 9387e4ce5b53ee19af2dafcf8c5aedd1
+          MD5: *id038
+          DriverMd5: *id038
+          TargetProcessMd5: *id038
+          Hashes.md5: *id038
+  object_3334:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id039
+          - 3a9a06a2f2efdf1fed10793fa7220730bc315af1
+          SHA1: *id039
+          DriverSha1: *id039
+          TargetProcessSha1: *id039
+          Hashes.sha1: *id039
+        sha256_detection:
+          sha256: &id040
+          - 49cdb537f5e4081362545532a623f597212c8cea847cf9f2b2f1fe1f3cd0ec2f
+          SHA256: *id040
+          DriverSha256: *id040
+          TargetProcessSha256: *id040
+          Hashes.sha256: *id040
+        md5_detection:
+          md5: &id041
+          - 75cbd3709696219b94d1355349348e84
+          MD5: *id041
+          DriverMd5: *id041
+          TargetProcessMd5: *id041
+          Hashes.md5: *id041
+  object_3336:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id042
+          - adde5df82821d40c8821452f38704dc70f378eb9
+          SHA1: *id042
+          DriverSha1: *id042
+          TargetProcessSha1: *id042
+          Hashes.sha1: *id042
+        sha256_detection:
+          sha256: &id043
+          - 68b27935c7d064478339f7d95b57ff06ffa1efbd81009b4a2870c5cf3e0b0b35
+          SHA256: *id043
+          DriverSha256: *id043
+          TargetProcessSha256: *id043
+          Hashes.sha256: *id043
+        md5_detection:
+          md5: &id044
+          - af525f736a3d31837e16575136752d2b
+          MD5: *id044
+          DriverMd5: *id044
+          TargetProcessMd5: *id044
+          Hashes.md5: *id044
+  object_3338:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id045
+          - a6a3190afc1c87c98c3ba6b8c82c230b11a02565
+          SHA1: *id045
+          DriverSha1: *id045
+          TargetProcessSha1: *id045
+          Hashes.sha1: *id045
+        sha256_detection:
+          sha256: &id046
+          - f89d742c4d3312ac9bd707a9135235482c554e369cb646dcd97f6a14b4210136
+          SHA256: *id046
+          DriverSha256: *id046
+          TargetProcessSha256: *id046
+          Hashes.sha256: *id046
+        md5_detection:
+          md5: &id047
+          - 6a6307b57a6baf33f9bf148b3fecd9a4
+          MD5: *id047
+          DriverMd5: *id047
+          TargetProcessMd5: *id047
+          Hashes.md5: *id047
+  object_3340:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id048
+          - 0baafb0dc6ecefdda5c131e8128aa6ac698b7c1f
+          SHA1: *id048
+          DriverSha1: *id048
+          TargetProcessSha1: *id048
+          Hashes.sha1: *id048
+        sha256_detection:
+          sha256: &id049
+          - d8fbf6d68993045b4840729c788665ab10c50c42b27246a290031664f3b956eb
+          SHA256: *id049
+          DriverSha256: *id049
+          TargetProcessSha256: *id049
+          Hashes.sha256: *id049
+        md5_detection:
+          md5: &id050
+          - 9bcf535899fe77d4f3c78f3bd9810e10
+          MD5: *id050
+          DriverMd5: *id050
+          TargetProcessMd5: *id050
+          Hashes.md5: *id050
+  object_3342:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id051
+          - b73865efa77e07a75eb3bdd24d95a92b301a0a74
+          SHA1: *id051
+          DriverSha1: *id051
+          TargetProcessSha1: *id051
+          Hashes.sha1: *id051
+        sha256_detection:
+          sha256: &id052
+          - 078eef70d754e9b64bc783f085846a2e8ae419653a79ed2386c4ade86fde68cb
+          SHA256: *id052
+          DriverSha256: *id052
+          TargetProcessSha256: *id052
+          Hashes.sha256: *id052
+        md5_detection:
+          md5: &id053
+          - e407843bffcf913dfd4fa816b067c33c
+          MD5: *id053
+          DriverMd5: *id053
+          TargetProcessMd5: *id053
+          Hashes.md5: *id053
+  object_3344:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id054
+          - 95e7b1213aa808678cd04cd1befdebba8b37ebf7
+          SHA1: *id054
+          DriverSha1: *id054
+          TargetProcessSha1: *id054
+          Hashes.sha1: *id054
+        sha256_detection:
+          sha256: &id055
+          - 99c22a0c0e252ab123fb3167f49d94dc12960b79565ca6dfd28f2ff5b0346348
+          SHA256: *id055
+          DriverSha256: *id055
+          TargetProcessSha256: *id055
+          Hashes.sha256: *id055
+        md5_detection:
+          md5: &id056
+          - b324726c2a526fd98b06145b557408f0
+          MD5: *id056
+          DriverMd5: *id056
+          TargetProcessMd5: *id056
+          Hashes.md5: *id056
+  object_3346:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id057
+          - 8606fd59486682c5fe32e3b1d1df622922e734e8
+          SHA1: *id057
+          DriverSha1: *id057
+          TargetProcessSha1: *id057
+          Hashes.sha1: *id057
+        sha256_detection:
+          sha256: &id058
+          - aab0ec600cdf57f28f9480ff3a9d3547f699af005c015b74c5c9e39a992570b6
+          SHA256: *id058
+          DriverSha256: *id058
+          TargetProcessSha256: *id058
+          Hashes.sha256: *id058
+        md5_detection:
+          md5: &id059
+          - 6b33b5c8d7e57e3c1c674eb1ffaf2cb2
+          MD5: *id059
+          DriverMd5: *id059
+          TargetProcessMd5: *id059
+          Hashes.md5: *id059
+  object_3348:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id060
+          - 96575a020408a67d03d0058735090d601df2e1a8
+          SHA1: *id060
+          DriverSha1: *id060
+          TargetProcessSha1: *id060
+          Hashes.sha1: *id060
+        sha256_detection:
+          sha256: &id061
+          - d6648a36f55d6b8ffd034df7d04156d31411719ce9bc28e6d30c8427feacb397
+          SHA256: *id061
+          DriverSha256: *id061
+          TargetProcessSha256: *id061
+          Hashes.sha256: *id061
+        md5_detection:
+          md5: &id062
+          - d26bf0c4bef27196aae4b0b533877f16
+          MD5: *id062
+          DriverMd5: *id062
+          TargetProcessMd5: *id062
+          Hashes.md5: *id062
+  object_3350:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id063
+          - 9d00562ca754411b4158d4e0e953e486cc4b3886
+          SHA1: *id063
+          DriverSha1: *id063
+          TargetProcessSha1: *id063
+          Hashes.sha1: *id063
+        sha256_detection:
+          sha256: &id064
+          - 596270e91ccee3ec04a552bafde586af127ecac7141852edb9707ac6c4779a99
+          SHA256: *id064
+          DriverSha256: *id064
+          TargetProcessSha256: *id064
+          Hashes.sha256: *id064
+        md5_detection:
+          md5: &id065
+          - f8e0ec8a7c6629c2f206c2b8860ded3f
+          MD5: *id065
+          DriverMd5: *id065
+          TargetProcessMd5: *id065
+          Hashes.md5: *id065
+  object_3352:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id066
+          - c90535a54d0494b981c6a4f09b331762cebbfcc9
+          SHA1: *id066
+          DriverSha1: *id066
+          TargetProcessSha1: *id066
+          Hashes.sha1: *id066
+        sha256_detection:
+          sha256: &id067
+          - fab034d705b3ad7a10101858daf5da93a88f8bfd509dee9b8072678b27290ed3
+          SHA256: *id067
+          DriverSha256: *id067
+          TargetProcessSha256: *id067
+          Hashes.sha256: *id067
+        md5_detection:
+          md5: &id068
+          - d1dffadb8f075c8d4fe822fa81a3ddb1
+          MD5: *id068
+          DriverMd5: *id068
+          TargetProcessMd5: *id068
+          Hashes.md5: *id068
+  object_3354:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id069
+          - 9828898850d3e69d16b8ff312635e95ecf4478e9
+          SHA1: *id069
+          DriverSha1: *id069
+          TargetProcessSha1: *id069
+          Hashes.sha1: *id069
+        sha256_detection:
+          sha256: &id070
+          - 39891a1c13e4e6ec9de410201f697d23c05e83a29ec0010c6c62c6829386e6a6
+          SHA256: *id070
+          DriverSha256: *id070
+          TargetProcessSha256: *id070
+          Hashes.sha256: *id070
+        md5_detection:
+          md5: &id071
+          - 943aa993dd600b3c8080e7a064cf5568
+          MD5: *id071
+          DriverMd5: *id071
+          TargetProcessMd5: *id071
+          Hashes.md5: *id071
+  object_3356:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id072
+          - 2e9676699462fbb3b36ad205a8189e93fd68599e
+          SHA1: *id072
+          DriverSha1: *id072
+          TargetProcessSha1: *id072
+          Hashes.sha1: *id072
+        sha256_detection:
+          sha256: &id073
+          - 1814c010f5e7391c7ea38850f9caf0771866e315f8d0c58c563818e71d30c208
+          SHA256: *id073
+          DriverSha256: *id073
+          TargetProcessSha256: *id073
+          Hashes.sha256: *id073
+        md5_detection:
+          md5: &id074
+          - dd0d4d4196735db691a77ad2201fcb2a
+          MD5: *id074
+          DriverMd5: *id074
+          TargetProcessMd5: *id074
+          Hashes.md5: *id074
+  object_3358:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id075
+          - 86e7114c21dfdbcefd90f61426b9ce88d2698b12
+          SHA1: *id075
+          DriverSha1: *id075
+          TargetProcessSha1: *id075
+          Hashes.sha1: *id075
+        sha256_detection:
+          sha256: &id076
+          - 1913cf8e65114136cc309e72c384b717f0aeaaeae0c040188648c4afebce1669
+          SHA256: *id076
+          DriverSha256: *id076
+          TargetProcessSha256: *id076
+          Hashes.sha256: *id076
+        md5_detection:
+          md5: &id077
+          - f6388e1650573bac1f933011acda71f2
+          MD5: *id077
+          DriverMd5: *id077
+          TargetProcessMd5: *id077
+          Hashes.md5: *id077
+  object_3360:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id078
+          - 99ff9c25bc2e0a874ca4090abb6c612ea984c30c
+          SHA1: *id078
+          DriverSha1: *id078
+          TargetProcessSha1: *id078
+          Hashes.sha1: *id078
+        sha256_detection:
+          sha256: &id079
+          - 92a4c6ae034c3a03c21b74bdc00264192e60a85deedd90b99a3e350758eb85c1
+          SHA256: *id079
+          DriverSha256: *id079
+          TargetProcessSha256: *id079
+          Hashes.sha256: *id079
+        md5_detection:
+          md5: &id080
+          - 2b0919caab591515af6ff99fb76896e8
+          MD5: *id080
+          DriverMd5: *id080
+          TargetProcessMd5: *id080
+          Hashes.md5: *id080
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id081
+        - 185.10.68.213
+        - 185.10.68.127
+        SourceIp: *id081
+        IpAddresses: *id081
+        destination.ip: *id081
+        RequestUrl|contains: *id081
+    - url_detection:
+        PowershellCommand|contains: &id082
+        - https://researchcenter.paloaltonetworks.com
+        RequestUrl: *id082
+  condition: any of them

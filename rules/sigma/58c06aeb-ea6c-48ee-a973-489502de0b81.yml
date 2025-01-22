@@ -1,0 +1,142 @@
+title: 'OSINT - Crypt0l0cker (TorrentLocker): Old Dog, New Tricks'
+id: 58c06aeb-ea6c-48ee-a973-489502de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.torrentlocker
+- attack.software.torrentlocker
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - c24ea0b7bd3008a3eed7ddd1b27d14e5f45207a0
+          - b1fdce07107fb9aef8b11663b0284139e67e3c27
+          - 999fbe88a99a933fbf930651982a674c6f54f2ac
+          - 7707e33e284eb0981ccbe0e8af4ecb136e2a8709
+          - c4c05fda1bf66ee3af794df4ef17d09c62f7e205
+          - 9a188d94c1f15da3b31ee5b5758ccfa736a9fe37
+          - 941247fbe437170b1f8aa63a64cb32b96fdb7149
+          - c2b058909484e9a53a39b7674fd8200553d36c19
+          - a6e5ab9a89e803bb48793c545ca7ef547ef2b155
+          - c3ac47eab687009097f593e01c83baf80bdd03ca
+          - ec419d1bfb435d5dd132f76b7218b0acf01b792c
+          - 08dc3de9ed98cb37cc45fdf3232acd9b128d10fd
+          - adad50138fc9a2939430093a365c804047cc0f9b
+          - 6ff7d641a87e90bbe0353b2cf8f3d30f350eca2b
+          - 17847e340239bf3fd112c29b259a9fbab3b2cf66
+          - 7f3d264e8095a4ca8cf3e3e69bdcb79cdb6b66d3
+          - 63e3eeef3506527b5e9aa5ba98d7caf75d536641
+          - 9236ea3e97b358729188e16dc285fd4987250ba8
+          - f0baeab465f247b66a6037655766ca06b5ae7362
+          - eec3c6580175784d68aed941de45326c0e85eee9
+          - 98943ea8f56edfd7bf5a09e54aaf2548bc7ff225
+          - a71998700fa4abf1aa0c30d85f32862f5589a2e2
+          - df93630beb56a6ed0dba7c0969431ccb0d64e5d7
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 7505f9a8c2092b255f9f41571fba2c09143b69c7ab9505c28188c88d4c80c5a7
+          - e3166a14289b69956beba9fe0ac91aaeeff4c50fc9eb6a15a22864575fcc22fc
+          - 2c8c0d8e1d74a02c44b92e1ee90a1f192e3ea3f65b29bcbba8fe6fc860e8dc6b
+          - 197aa2490e81362e651af2ab8e4ae2c41a5da1a2812e4377719596a2eb2b8c8f
+          - 899c4eb640f97c3b198970e9d25d0464361f3bf5f8839b16f1e10493a82c5382
+          - e32cbfce6291382a188d2dae50c4b3c2a173097f2b4fc17904daceac9b2f3396
+          - 0044e8a82a234674a070e9695f80f418ab72d351a4123b528e51b2b9eb2e44eb
+          - 744b169cc40871e9c39409dbd89879c499433625f9fed1adfc700edcf293b1b0
+          - f893dbf5891995984e564c44878dd5c8dea94812c3df7b995d79159bca051f79
+          - 3745e6e8419a2090130473cb0b8197031fee9c07a824395d1ab261257def3100
+          - ea1f0f1ff85130dc4634019d9e305d35097483d38e37c8aa4dc6c81b7aed1418
+          - 1e2cb0cf9b5b7e7b825fda20a37e5c6e1bb9c548eb89cc457026e4cbee35cd23
+          - cb9050f37dfc7e19b59d3ef4e332efcf2bc04c5707f41b43453f6c50d3740bc4
+          - de183a7886c3dedbbb1d9260934f0d6e7d4abca72fb942c573dc74ac449c4bfc
+          - 9e0ee793008c69494627383251098e1d500212a77fd025f6645c47ffabf015eb
+          - 87fce23e17a86775b210c81089013ca7c058c03cd1b83b79b73413bd380efced
+          - bcd94a7c4a24645948c46afb2616720e2bb166bc327e63dfe2b8c3135accb548
+          - ccb3eba9526df1d9eb983bb5259c47e552efb4fdf8cd95e6a6b6856351114b8f
+          - 076bb85648f5a5e09c85dbf5997b58e7580031e64e5555a58ac0c3bce62a857b
+          - 76f3828bfc53aa3d2f3057521c913797c1e3a7cb8331112bb1771ec6d4241e66
+          - 78f720f09a6ad23a0332c6531c4792a74d554d66d36f007d1e94bdd9c4fb2d1a
+          - 07dab1e46585e90dd9fc1d82b572d454102e09e25e50fc634145dd999b440ee7
+          - ace22efeff8824d0297d7ecd7430ca1f89bf49f394185ec6208e754d0bf505bc
+          - 5bd73eb812173508fc8dc2d8d23f50ea219dc94211a64d5840655ba3e6b0d889
+          - c326b820c6184521b18fef27741fadb628414839ace202352db29608f17f995d
+          - 3c413bf58186282a6ecfec8e6a3f7a6b931b15cd404961accfc7665ad8372a92
+          - c11762004e8a1f31e5e45c21c7af2db2fb304952f0d02e467bc55a8fc0194e8c
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - bc95e03baffdb157918149cce3d8d344
+          - 4368cbb153a94d77bc7aa525e560b905
+          - c484d2f873621855d7885cec6cf63020
+          - 9a8ddb3d089e47015372cc359a574893
+          - 9c52c1cbd3382065fcc0fc567e6ce892
+          - da6f362e59a354f1e9aba6e3459c64c0
+          - ee9715fe05cf675d93b1a7d62b9f91d8
+          - 12e334231ecbfb1fc74b22b1cbfb053f
+          - 3cab16b7faa3407d6a08c15eb478ea97
+          - f73c357b554d3759a81f9c351db09911
+          - b88e5f37bc137b5892fcd399ff49e924
+          - ef55d0d85d324cebdd42eca5b826a1c0
+          - 57ee7e54cd4c17a66535c0b18d3fca6e
+          - fd9677589ae986955fa84fddedff95a7
+          - cfe3be97137aeda22f71504320c01bce
+          - b6a3f25c51cabc1383ae60071e093b66
+          - 60e43530b64e1183628a66fb39fe1392
+          - 51b99671029d548f9e8efe1117d82292
+          - ce59571268952173487c507951899424
+          - 1b21501a12733c0450e96643edb8f5f9
+          - 1a2aae516a2985af8b19438764eab690
+          - 358ca9784fb2f5ccfb34acc4998833f2
+          - fef70ba52555fa58ad714e30a7288de9
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://blog.talosintelligence.com
+        - http://directory.submitlocally.com
+        - http://fanrp.com
+        - http://ileriteknikservis.com
+        - http://nji.fileserver4390.org
+        - http://prorubim.com
+        - http://quatang.thackhoi.com
+        - http://rubbishinteriors.com
+        - http://saudail-alpin.no
+        - http://humannecessityfoundation.com
+        - http://ltmp.joymes.pl
+        - http://staracer.com.br
+        - http://fms-uchet.ru
+        - http://gidrostroy-nn.ru
+        - http://ltmp.applepice.pl
+        - http://arkatechknowledges.com
+        - http://blisunn.com
+        - http://iuhd873.omniheart.pl
+        - http://saunabau.sk
+        - http://cyjt.com
+        - http://48f4339.js2-order.pl
+        - http://4839.js2-order.pl
+        - http://drjacobberger.com
+        - http://biotechclinical.com
+        - http://partylimobusnj.com
+        - http://glutenfreeworks.com
+        - http://mayaastro.com
+        - http://ansagoldcoast.com
+        - http://www.mmgmarketing.com
+        - http://flyanairliner.com
+        - http://activmedia.net
+        - http://www.girokonto.club
+        RequestUrl: *id004
+  condition: any of them

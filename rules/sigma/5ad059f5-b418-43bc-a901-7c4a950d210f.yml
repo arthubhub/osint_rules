@@ -1,0 +1,60 @@
+title: OSINT - Goodbye Cerber? Hello Magniber Ransomware!
+id: 5ad059f5-b418-43bc-a901-7c4a950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.magniber_ransomware
+- attack.group.magniber_ransomware
+logsource:
+  product: windows
+detection:
+  object_15698:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - a7bcd0188e3fd0f16226ab44477a04662a5c5450
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 2e6f9a48d854add9f895a3737fa5fcc9d38d082466765e550cca2dc47a10618e
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 59ef984c16a5c1723d9958fbeb1b7450
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id004
+        - ofotqrmsrdc6c3rz.onion
+        - bankme.date
+        - jobsnot.services
+        - carefit.agency
+        - hotdisk.world
+        RequestUrl: *id004
+        QueryName: *id004
+    - hash_detection:
+        sha256_detection:
+          sha256: &id005
+          - 2e6f9a48d854add9f895a3737fa5fcc9d38d082466765e550cca2dc47a10618e
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id006
+  condition: any of them

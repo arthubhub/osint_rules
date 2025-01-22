@@ -1,0 +1,82 @@
+title: Malspam 2016-06-24 (Locky)
+id: 576d3a39-fe90-4921-85cc-4e3c950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - neoventtechnologies.com
+        - formateam-finance.com
+        - queza.com
+        - noriegachiropracticclinics.com
+        - pinakfoods.com
+        - layaligroup.com
+        - salisburyjc.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 69.195.124.97
+        - 89.42.39.67
+        - 80.109.240.71
+        - 192.185.36.128
+        - 195.3.96.72
+        - 23.229.171.33
+        - 23.229.235.65
+        - 213.186.33.4
+        - 212.40.5.95
+        - 217.26.70.230
+        - 188.40.80.188
+        - 205.167.142.107
+        - 23.229.191.132
+        - 23.229.137.8
+        - 195.154.187.199
+        - 95.211.230.74
+        - 67.199.50.113
+        - 81.88.57.68
+        - 138.229.65.9
+        - 160.153.35.5
+        - 107.180.51.16
+        - 199.116.77.52
+        - 88.86.117.154
+        - 210.116.102.7
+        - 217.26.70.100
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://camera-test.hi2.ro
+        - http://sherlock.uvishere.com
+        - http://80.109.240.71
+        - http://neoventtechnologies.com
+        - http://www.members.aon.at
+        - http://formateam-finance.com
+        - http://212.40.5.95
+        - http://217.26.70.230
+        - http://www.hotelmoonnightnikola.free.bg
+        - http://205.167.142.107
+        - http://www.fancyupage.com
+        - http://www.beautycollegeofamca.com
+        - http://23.229.137.8
+        - http://emisije.sezamprodukcija.com
+        - http://www.cbactive.com
+        - http://ws.osenilo.com
+        - http://67.199.50.113
+        - http://queza.com
+        - http://noriegachiropracticclinics.com
+        - http://pinakfoods.com
+        - http://layaligroup.com
+        - http://salisburyjc.com
+        - http://kksokol.euweb.cz
+        - http://210.116.102.7
+        - http://217.26.70.100
+        RequestUrl: *id003
+  condition: any of them

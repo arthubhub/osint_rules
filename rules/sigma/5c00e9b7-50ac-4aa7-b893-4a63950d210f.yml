@@ -1,0 +1,89 @@
+title: OSINT - Hancitor active again yith new macro - IoCs
+id: 5c00e9b7-50ac-4aa7-b893-4a63950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.hancitor
+- attack.group.hancitor
+logsource:
+  product: windows
+detection:
+  object_3424:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://mobile.twitter.com
+        RequestUrl: *id001
+  object_3425:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - a4276750a825c73f465bf67672b06f19613db82c047f9c0daa7c971c1d231fac
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_3426:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - f403fa334c8804020b9a2f1620ca6a251c34827c
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - a4276750a825c73f465bf67672b06f19613db82c047f9c0daa7c971c1d231fac
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 9aff54da8d88f6794ce900fd3bf2ad62
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id006
+        - appersonpropertiesinc.com
+        - g-cals.com
+        - honeyhillfarmspop.com
+        - joincryptofundraiser.com
+        - joincrytofundraisernow.net
+        - joincrytofundraisernow.org
+        - joincrytofundraisernow.us
+        - kenapperson.net
+        - localloop-wi.com
+        - localloop-wi.org
+        - localloopwi.org
+        - minaskaowners.com
+        - mogamecalls.com
+        - mybabyguam.com
+        - satsumasgeorgia.com
+        - satsumassales.com
+        - satsumasschoolfundraiser.com
+        - wilocalloop.com
+        RequestUrl: *id006
+        QueryName: *id006
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - https://ghostbin.com
+        - http://geeventsehin.com
+        - http://tonshekinar.ru
+        - http://fidosofwass.ru
+        - http://oriton.ru
+        - http://arsmarri.ru
+        - http://bigheartstorage.com
+        - http://letortedierica.it
+        - http://bdhsxj.com
+        RequestUrl: *id007
+  condition: any of them

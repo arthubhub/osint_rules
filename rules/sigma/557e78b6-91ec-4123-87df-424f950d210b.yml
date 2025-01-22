@@ -1,0 +1,54 @@
+title: "OSINT  Evilgrab Delivered by Watering Hole Attack on President of Myanmar\xE2\
+  \u20AC\u2122s Website by Palo Alto Unit 42"
+id: 557e78b6-91ec-4123-87df-424f950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - websecexp.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 211.169.202.2
+        - 59.188.16.130
+        - 218.54.45.220
+        - 61.221.66.199
+        - 59.188.4.106
+        - 59.188.16.135
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - b69106e06dc008e4fa1e4a0b0b58fcb1dc6d2016422a35cb3111168fd3fae577
+          - 10d9611e5b4ff41fc79e8907e3eb522630131b1bdc1010a0564c8780ba55c87c
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 2e78e6d02aaed4f057f4dfa631ea5519
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://researchcenter.paloaltonetworks.com
+        - http://blog.trendmicro.com
+        - http://www.president-office.gov.mm
+        - http://pwc.blogs.com
+        - http://contagiodump.blogspot.com
+        RequestUrl: *id005
+  condition: any of them

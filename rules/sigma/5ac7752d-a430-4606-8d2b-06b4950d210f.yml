@@ -1,0 +1,52 @@
+title: OSINT - The WhiteRose Ransomware Is Decryptable & Tells A Strange Story
+id: 5ac7752d-a430-4606-8d2b-06b4950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.whiterose
+- attack.software.whiterose
+logsource:
+  product: windows
+detection:
+  object_16098:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 0d642ea85680b932e6dd45620c9c12d1060b46fd
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 9614b9bc6cb2d06d261f97ba25743a89df44906e750c52398b5dbdbcb66a9415
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 00bd67cfccf7141c8fb6c622442bd419
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - 9614b9bc6cb2d06d261f97ba25743a89df44906e750c52398b5dbdbcb66a9415
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.bleepingcomputer.com
+        - http://torbox3uiot6wchz.onion
+        RequestUrl: *id005
+  condition: any of them

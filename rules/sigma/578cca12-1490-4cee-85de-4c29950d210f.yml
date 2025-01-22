@@ -1,0 +1,81 @@
+title: 'Malspam 2016-07-18 .wsf (campaign: "bank account report")'
+id: 578cca12-1490-4cee-85de-4c29950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - ecpi.ro
+        - provincialpw.com
+        - matthewmccright.org
+        - kouzoncorporation.com
+        - my-result.ru
+        - blackdildo.net
+        - benavidezhoy.com
+        - rsxxx.com
+        - findmobileauto.com
+        - christian-view.com
+        - deanstum.com
+        - bigislandhawaiihilorealestate.com
+        - ilkhaberadana.com
+        - aquatixbottle.com
+        - fusofrance.fr
+        - bizconsulting.ro
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 89.42.223.64
+        - 160.153.54.35
+        - 107.180.13.17
+        - 192.185.85.237
+        - 103.226.221.161
+        - 60.234.42.102
+        - 95.163.18.88
+        - 50.31.160.94
+        - 187.17.98.182
+        - 69.16.243.28
+        - 69.50.139.6
+        - 192.185.196.208
+        - 69.90.163.170
+        - 192.186.229.69
+        - 208.71.106.216
+        - 192.185.24.133
+        - 159.253.46.194
+        - 192.186.212.231
+        - 213.186.33.40
+        - 86.35.15.215
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://ecpi.ro
+        - http://provincialpw.com
+        - http://matthewmccright.org
+        - http://kouzoncorporation.com
+        - http://ahatv.com.au
+        - http://davisdoherty.co.nz
+        - http://my-result.ru
+        - http://blackdildo.net
+        - http://gruposoluciomatica.com.br
+        - http://benavidezhoy.com
+        - http://rsxxx.com
+        - http://findmobileauto.com
+        - http://christian-view.com
+        - http://deanstum.com
+        - http://eurasian.fc2web.com
+        - http://bigislandhawaiihilorealestate.com
+        - http://ilkhaberadana.com
+        - http://aquatixbottle.com
+        - http://fusofrance.fr
+        - http://bizconsulting.ro
+        RequestUrl: *id003
+  condition: any of them

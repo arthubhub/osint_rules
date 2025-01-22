@@ -1,0 +1,51 @@
+title: OSINT - Ukrainian Financial Institutions Targeted by Wave of Malicious EPS
+  File Attacks
+id: 59a25cc4-e870-4bef-a7d1-48a802de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 583570d92cc49ec7661c055c4900c439446307f9
+          - dfaa3825b6bf2fc21978bf3234f38ffbd2966b96
+          - a85e66a654ca056a14f64516af62e82c07036e06
+          - a8bcbaedfbd3eff1e3d5005c35bd8f4c4f6f325c
+          - 5983b31b80b7f3d84d9d0436574a7351d8522e9c
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - ecc055974d7d190871dc4eb1bf1f8b998d6e8abf04dba2ff560ae395aeec4d5d
+          - 430c1bfa22e0f7b0e8742c0d70b8911089ba58645818e4281d7066d1324a3952
+          - 1892154cc47e8a1bc81186d131e001a22e4edbc4fd88688eb1782b934e1941b6
+          - e9d843761df7f6ef193d9f8e88d93a90816f2067fdd51a1c0765dfbfd4cb398f
+          - 647572d133677882f52843f799375ac77178616bcd3d9ed13b95d49eecfd0a51
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 4eee1c5db5c4678cfa7ad6262a18253d
+          - 98c5c33f5c0bd07ac3e24935edab202a
+          - cfc0b41a7cde01333f10d48e9997d293
+          - 5df8067a6fcb6c45c3b5c14adb944806
+          - c43f1716d6dbb243f0b8cd92944a04bd
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://137.74.224.142
+        RequestUrl: *id004
+  condition: any of them

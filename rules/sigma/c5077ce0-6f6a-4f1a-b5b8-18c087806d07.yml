@@ -1,0 +1,122 @@
+title: AA22-138B Threat Actors Chaining VMware Vulnerabilities for Full System Control
+id: c5077ce0-6f6a-4f1a-b5b8-18c087806d07
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1105
+- attack.t1059.004
+- attack.t1573.001
+- attack.t1222.002
+- attack.t1003.008
+- attack.t1560
+- attack.t1588.001
+- attack.t1071.001
+- attack.t1059.002
+- attack.t1068
+- attack.t1070.003
+- attack.t1203
+- attack.t1090
+- attack.t1505.003
+logsource:
+  product: windows
+detection:
+  object_3452:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 8a85c8f2678b5dff9101f24245d52a30e32ee7c7
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 114160c8f950ab5c620187d0962b66facdd21156d3161db08164af3d309b4dfe
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - dc88c5fe715b5f706f9fb92547da948a
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_3453:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 3e8f0d0faeb4c1aea285263cc7b97a3f926a547f
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 8e7dee3b3cfdc8fbefb86c70ac6d49f1908cf75cafc772b6adfae69eec1733a3
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 5b0bfda04a1e0d8dcb02556dc4e56e6a
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id007
+        - 149.248.35.200.sslip.io
+        - sslip.io
+        RequestUrl: *id007
+        QueryName: *id007
+    - ip_detection:
+        DestinationIp: &id008
+        - 83.84.74.155
+        - 149.248.35.200
+        - 212.227.198.95
+        - 85.203.36.66
+        - 8.45.41.114
+        - 194.31.98.141
+        - 192.241.67.12
+        - 45.72.85.172
+        - 209.127.110.126
+        - 191.102.179.197
+        - 115.167.53.141
+        - 45.72.112.245
+        - 100.14.239.83
+        - 172.94.89.112
+        - 84.38.133.149
+        - 51.79.171.53
+        - 186.233.187.245
+        - 20.232.97.189
+        - 160.20.145.225
+        - 136.243.75.136
+        SourceIp: *id008
+        IpAddresses: *id008
+        destination.ip: *id008
+        RequestUrl|contains: *id008
+    - hash_detection:
+        md5_detection:
+          md5: &id009
+          - f8ff5c72e8ffa2112b01802113148bd1
+          - 4cd8366345ad4068feca4d417738b4bd
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+    - url_detection:
+        PowershellCommand|contains: &id010
+        - https://149.248.35.200.sslip.io
+        - http://84.38.133.149
+        - https://20.232.97.189
+        RequestUrl: *id010
+  condition: any of them

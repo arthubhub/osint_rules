@@ -1,0 +1,142 @@
+title: Emotet links
+id: 5b577b74-e1ac-4dbc-a5b2-c6bf0acd0835
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.emotet
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - http://lecentenaire.be
+        - http://residencesincabo.com
+        - http://momstalk.ae
+        - http://abakus-biuro.net
+        - http://pekny.eu
+        - http://louterfoto.nl
+        - http://www.ogrodu.pl
+        - http://mironovka-school.ru
+        - http://kioskas.lt
+        - http://www.groovezasia.com.mm
+        - http://alean-group.com
+        - http://muhammadiyahamin.com
+        - http://www.residencesincabo.com
+        - http://saladesom.com.br
+        - http://www.a3m-metaal.nl
+        - http://tecleweb.com.br
+        - http://bemnyc.com
+        - http://nagoyamicky.com
+        - http://warriorllc.com
+        - http://divelog.com.br
+        - http://lutaif.com
+        - http://mimsite.net
+        - http://loucic.com.br
+        - http://jlramirez.com
+        - http://amemarine.co.th
+        - http://www.ceo.org.my
+        - http://scafandro.com.br
+        - http://easternh.com.hk
+        - http://www.ferrettconsulting.com
+        - http://oliveirafoto.com
+        - http://www.osotspa-international.com
+        - http://creativospornaturalezapublicidad.com
+        - http://frepaen.org
+        - http://karenbsantos.com.br
+        - http://lavoroproducoes.com.br
+        - http://trixtek.com
+        - http://socialworksummit4africa.org
+        - http://dingesgang.com
+        - http://www.fifthavenuehomes.ca
+        - http://mobilaok.ro
+        - http://ram.gwizdow.pl
+        - http://comservice.org
+        - http://armoverseas.com
+        - http://www.closhlab.com
+        - http://bienhaitien.com
+        - http://www.voiceofveterans.in
+        - http://neokyoto.com
+        - http://flyblog.flypadcorp.com
+        - http://eastend.jp
+        - http://designecologico.net
+        - http://uninegocios.com.br
+        - http://ayumiya.co.jp
+        - http://912graphics.com
+        - http://etc55.ru
+        - http://programa-smeta.ru
+        - http://inicjatywa.edu.pl
+        - http://baute.org
+        - http://www.inancspor.com
+        - http://mihanpay.net
+        - http://lucianomoraes.com.br
+        - http://baominhonline.com
+        - http://ferreirajunior.com.br
+        - http://austria-in-motion.net
+        - http://baongocspa.vn
+        - http://jigneshjhaveri.com
+        - http://ingridkaslik.com
+        - http://vii-seas.com
+        - http://www.luvverly.com
+        - http://imagine8ni.com
+        - http://www.shoremena.com
+        - http://www.laxmanayoga.com
+        - http://elmodular.com
+        - http://universityplumbinginc.com
+        - http://techsistsolution.com
+        - http://oksir.com
+        - http://tamme.nl
+        - http://1pomoc.org
+        - http://nebula-ent.com
+        - http://shop.irpointcenter.com
+        - http://pamphili.com.br
+        - http://rochasecia.com.br
+        - http://www.sundayplanning.com
+        - http://light-estate.co.jp
+        - http://industriadosom.com.br
+        - http://uppum.ru
+        - http://cocarda.pl
+        - http://thonglorpetblog.com
+        - https://bagrustudio.in
+        - http://canadary.com
+        - http://www.staples55.com
+        - http://chaleel-brautmoden.de
+        - http://test.globalexclusive.com.ar
+        - http://37.187.216.196
+        - http://radiospach.cl
+        - http://theminetulsa.com
+        - http://ibchs.com
+        - http://www.mega360.kiennhay.vn
+        - http://hotedeals.co.uk
+        - http://3music.net
+        - http://supnet.com.br
+        - http://emulsiflex.com
+        - http://rehal.jp
+        - http://www.iqmauinsa.com
+        - http://srda.co
+        - https://guiadoviajante.info
+        - http://snowdoll.net
+        - http://www.canadary.com
+        - http://sixx.com
+        - http://www.howardbragman.com
+        - http://sellitti.com
+        - http://mamadance.pl
+        - http://www.hasekimuhendislik.com
+        - http://lagunalights.co.nz
+        - http://arrozvaledosul.com.br
+        - http://labarberia.tv
+        - http://tatoestudio.com
+        - http://francoise-vauzeilles.com
+        - http://dfinformatica.com.br
+        - http://jandkonline.com
+        - http://nahuelko.cl
+        - http://dvdcristao.com.br
+        - http://casellamoving.com
+        - http://rocksolidproducts.com
+        - http://sophiacarta.de
+        RequestUrl: *id001
+  condition: any of them

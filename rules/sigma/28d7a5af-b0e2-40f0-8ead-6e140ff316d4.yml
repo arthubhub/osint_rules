@@ -1,0 +1,16 @@
+title: Leonardo S.p.A. Data Breach Analysis blog post from Reaqta
+id: 28d7a5af-b0e2-40f0-8ead-6e140ff316d4
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://reaqta.com
+        RequestUrl: *id001
+  condition: any of them

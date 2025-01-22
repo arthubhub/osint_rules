@@ -1,0 +1,39 @@
+title: 'Malspam 2016-09-14 (.wsf in .zip) - campaign: "Account report"'
+id: 57d91b04-fabc-46fe-8d05-441d950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - adzebury.com
+        - citmowra.in
+        - ecadxyst.net
+        - maydayen.net
+        - sparmsov.org
+        - sternhala.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 178.212.131.10
+        - 37.200.70.6
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://adzebury.com
+        - http://citmowra.in
+        - http://ecadxyst.net
+        - http://maydayen.net
+        - http://sparmsov.org
+        - http://sternhala.com
+        RequestUrl: *id003
+  condition: any of them

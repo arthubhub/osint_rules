@@ -1,0 +1,68 @@
+title: 'Threat Analysis: Malicious Microsoft Word Documents Being Used in Targeted
+  Attack Campaigns'
+id: 5a462890-bb44-47c7-ba3b-21bda5fe7088
+description: edit this field when analysing or editing the rule - reported by "Crimeware"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - carbon-copy-marketing.com
+        - free-clipart-archive.com
+        - stationmovil.com
+        - www.bankingandfinanceexpert.com
+        - www.themediaeducation.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 212.83.58.231
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 12bc1affe86327d9f78684cde46cfff4dee57149
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 277226cb5f59de6f4493a42e42f7ea575d65da7a033ae343166ad4fa96db8654
+          - 76e2277c63303df6c5b32fdacffcf37c8657ec263070a533eba100d83cade81e
+          - 2519e09e54ccc18c7dfc938760b48b559b7e4fb8465e12d8144083d2178789e2
+          - c10ee375a841fd537ede2afa9e68817ddaaaf2e6587a519c267aac6c1fe8d081
+          - fa405c36d82b264568219b521886d2e7ef589674874983c7db1d67928003489e
+          - 9416893eb0b8b1e7b4afd342887fa358d1ea7dbd56d4a51a25a801715c761356
+          - 2a31a24ce994ae3465e77d4ec190882804233209b7f67bd4ef03375bd9b5f9ed
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 3f06c23c4119d720b2a627ab5454a3e0
+          - 376396fceb8e52425780459c41ac3ab4
+          - d79a8e0a9e8c7294351657f7897fd121
+          - c17cfcab0d115732a262da8a58dcf318
+          - 81af1f218c0a44ea39aa3eca78f24bc0
+          - f2f52c78d594c37b546f6c09207cb481
+          - c916685d48dec5891e92c09e18300381
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://www.carbonblack.com
+        - https://www.cobaltstrike.com
+        RequestUrl: *id006
+  condition: any of them

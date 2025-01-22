@@ -1,0 +1,65 @@
+title: OSINT - Matrix Ransomware Spreads to Other PCs Using Malicious Shortcuts
+id: 58eb4dde-5254-4163-add1-4d47950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.matrix
+- attack.software.matrix
+logsource:
+  product: windows
+detection:
+  object_16408:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 03ce13b4f60d2fc632b67b41b82b5e8cfaf9939f
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 467c2b23b785df7b45758143387e9cc5a588718ae0640b3f01b1c19679b011be
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 36a0cefeb8b0a606358142d4140ea7cf
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 03ce13b4f60d2fc632b67b41b82b5e8cfaf9939f
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 467c2b23b785df7b45758143387e9cc5a588718ae0640b3f01b1c19679b011be
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 36a0cefeb8b0a606358142d4140ea7cf
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id007
+  condition: any of them

@@ -1,0 +1,75 @@
+title: '2019-01-22: Emotet->TrickBot'
+id: 5c47f54e-1cf4-48d1-b188-245768f8e8cf
+description: edit this field when analysing or editing the rule - reported by "VK-Intel"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.trick_bot
+- attack.software.emotet
+logsource:
+  product: windows
+detection:
+  object_644:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - fba09f81056ab943bb90e1500cb1d1317ae2e36e
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 8e4cc0539b4921b0222081a0948bd149f10a027f73983e9ade36d4045f69921f
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - e6aab38ff1d7cf9edd1f9279875248fa
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_645:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - fb5d538084489a7b7b4c9be80cd221b338c6b39c
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 40bbc0b76af2a2130c3ceaba8a2f1fa255bbbef138e2f37c995ee32c6bcccbf8
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 4d0c97d8315be2c87c5b9ec855cad88d
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  event_attributes:
+    any:
+    - hash_detection:
+        md5_detection:
+          md5: &id007
+          - e6aab38ff1d7cf9edd1f9279875248fa
+          MD5: *id007
+          DriverMd5: *id007
+          TargetProcessMd5: *id007
+          Hashes.md5: *id007
+    - url_detection:
+        PowershellCommand|contains: &id008
+        - https://github.com
+        RequestUrl: *id008
+  condition: any of them

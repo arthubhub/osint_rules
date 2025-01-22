@@ -1,0 +1,59 @@
+title: 'Malspam 2016-09-01 (.wsf in .zip) - campaign: "Please find attached invoice
+  no:"'
+id: 57c821ca-f2ac-43e7-a2e4-4470950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - hotcarshhhs6632.com
+        - rodewelshcobs.com
+        - dcqoutlet.es
+        - rhanwid.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 208.71.106.62
+        - 95.211.144.65
+        - 213.205.40.169
+        - 213.180.150.17
+        - 86.65.123.70
+        - 208.71.106.45
+        - 208.71.106.42
+        - 112.140.42.29
+        - 185.64.219.7
+        - 195.238.0.64
+        - 23.95.106.193
+        - 192.151.153.26
+        - 213.186.33.24
+        - 62.42.230.17
+        - 82.165.38.131
+        - 158.195.68.10
+        - 91.207.44.3
+        - 193.231.238.4
+        - 62.250.4.180
+        - 31.22.4.108
+        - 134.0.11.123
+        - 208.71.106.41
+        - 185.64.219.5
+        - 162.210.101.91
+        - 187.45.193.139
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://www.valerypro.com
+        - http://pp4_09_10_2s.republika.pl
+        - http://www.agridiving.net
+        - http://postaldigitalrs.com.br
+        RequestUrl: *id003
+  condition: any of them

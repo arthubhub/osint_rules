@@ -1,0 +1,79 @@
+title: 'OSINT - Striking Oil: A Closer Look at Adversary Infrastructure'
+id: 59cab250-1480-406f-8e7a-4c7e02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.twoface
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - owa-insss-org-ill-owa-authen.ml
+        - webmaiil-tau-ac-il.ml
+        - mail-macroadvisorypartners.ml
+        - webmail-tidhar-co-il.ml
+        - my-mailcoil.ml
+        - logn-micrsftonine-con.ml
+        - so-cc-hujii-ac-il.ml
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 137.74.131.208
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - b5c62d79eda4f7e4b60a9caa5736a3fdc2f1b27e
+          - fd095248cc300eb60c758a8f51f6050b2fe56520
+          - 5221c2ce846d9cbc8ab73142b51414f31544289f
+          - 289f3bfe297923507cf4c26ca500ae01819c6a95
+          - 5447283518473ea8b9d35424532a94e2966f7a90
+          - 0c91a56f61c0365f56dc7b2b4e17bbf1e4cb134b
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 3b08535b4add194f5661e1131c8e81af373ca322cf669674cf1272095e5cab95
+          - 28a0db561ff5a525bc2696cf98d96f443f528afe63c5097c5e0ccad071fcb8c2
+          - 744e0ce108598aaa8994f211e00769ac8a3f05324d3f07f7705277b9af7a7497
+          - caf5f9791ab3049811e16971b4673ec6d4baf35ffaadd7486ea4c5e318d10696
+          - 6ae32cd3b5a8a1dbb5464372ded370f31802fd1f5031795b43d662c64fc5b301
+          - 450ebd66ba67bb46bf18d122823ff07ef4a7b11afe63b6f269aec9236a1790cd
+          - 5b7eb534a852c187eee7eb729056082eec7a028819191fc2bc3ba4d1127fbd12
+          - 6e623311768f1c419b3f755248a3b3d4bf80d26606a74ed4cfd25547a67734c7
+          - 497e6965120a7ca6644da9b8291c65901e78d302139d221fcf0a3ec6c5cf9de3
+          - d3b03c0da854102802c21c0fa8736910ea039bbe93a140c09689fc802435ea31
+          - 5ead94f12c307438e6475e49f02bedaee0cd09ce6cebb7939f9a2830f913212c
+          - bb9b4e088eb99100156f56bbd35a21ff7e96981ffe78ca9132781e9b3f064f44
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - a7f7a0f74c8b48f1699858b3b6c11eda
+          - 28089bfa4a1991ae98a7230f055a6081
+          - b5450c8553def4996426ab46996b2e55
+          - 081e2ce7e2a603a78cc6c20a05b08ca8
+          - 0f9d0b03254830714654c2ceb11a7f5d
+          - a56abdaa3438378bf16b3eccf317af8a
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://researchcenter.paloaltonetworks.com
+        RequestUrl: *id006
+  condition: any of them

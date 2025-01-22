@@ -1,0 +1,17 @@
+title: OSINT - Windows SMBv3 Denial of Service Proof of Concept (0 Day Exploit)
+id: 5894f12f-709c-4502-a896-7dbf02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://github.com
+        - https://isc.sans.edu
+        RequestUrl: *id001
+  condition: any of them

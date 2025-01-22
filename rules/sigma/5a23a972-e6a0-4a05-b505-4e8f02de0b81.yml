@@ -1,0 +1,66 @@
+title: 'OSINT - Tizi: Detecting and blocking socially engineered spyware on Android'
+id: 5a23a972-e6a0-4a05-b505-4e8f02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_3419:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id001
+          - 4d780a6fc18458311250d4d1edc750468fdb9b3e4c950dce5b35d4567b47d4a7
+          SHA256: *id001
+          DriverSha256: *id001
+          TargetProcessSha256: *id001
+          Hashes.sha256: *id001
+  object_3420:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - 7c6af091a7b0f04fb5b212bd3c180ddcc6abf7cd77478fd22595e5b7aa7cfd9f
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_3421:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - 7a956c754f003a219ea1d2205de3ef5bc354419985a487254b8aeb865442a55e
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+  object_3422:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - f2e45ea50fc71b62d9ea59990ced755636286121437ced6237aff90981388f6a
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  object_3423:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id005
+          - 4d0887f41d0de2f31459c14e3133debcdf758ad8bbe57128d3bec2c907f2acf3
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://security.googleblog.com
+        RequestUrl: *id006
+  condition: any of them

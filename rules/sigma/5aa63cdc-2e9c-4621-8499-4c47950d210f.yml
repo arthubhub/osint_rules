@@ -1,0 +1,58 @@
+title: OSINT - Turla Nautilus Implant
+id: 5aa63cdc-2e9c-4621-8499-4c47950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.wipbot
+logsource:
+  product: windows
+detection:
+  object_1426:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 04b0ed6e26b7ec4140cb9535771207802b0c0463
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - f3d488f5f8c74547f1b247c342307ff8d1380907db768e7b6da11d38e0c086db
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - f58bdc5edfa14e23164fd00569b3db3f
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id004
+        - 2.20.189.34
+        SourceIp: *id004
+        IpAddresses: *id004
+        destination.ip: *id004
+        RequestUrl|contains: *id004
+    - hash_detection:
+        sha256_detection:
+          sha256: &id005
+          - f3d488f5f8c74547f1b247c342307ff8d1380907db768e7b6da11d38e0c086db
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://mobile.twitter.com
+        - https://www.reverse.it
+        RequestUrl: *id006
+  condition: any of them

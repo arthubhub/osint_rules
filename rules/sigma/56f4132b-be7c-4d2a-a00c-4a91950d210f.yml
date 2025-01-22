@@ -1,0 +1,40 @@
+title: OSINT - Petya Ransomware
+id: 56f4132b-be7c-4d2a-a00c-4a91950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 39b6d40906c7f7f080e6befa93324dddadcbd9fa
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 26b4699a7b9eeb16e76305d843d4ab05e94d43f3201436927e13b3ebafa90739
+          - b041d9573ae083a02cf52fcd23648b32ad9a8811bd7ea12ca6af3d91ca14a07a
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - af2379cc4d607a45ac44d62135fb7015
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://www.heise.de
+        - https://www.gdata.fr
+        RequestUrl: *id004
+  condition: any of them

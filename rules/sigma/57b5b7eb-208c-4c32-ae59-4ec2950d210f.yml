@@ -1,0 +1,53 @@
+title: OSINT Bad News Bears - Panda Banker Starts Looking More Like a Grizzly by ProofPoint
+id: 57b5b7eb-208c-4c32-ae59-4ec2950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - nederlandstest.com
+        - test2222test.info
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 7039bee1b6918ce4ab9d999c3a6df023674b43f3
+          - 575f0f7f672a66eba44455eb5efaefa6443e760c
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 3a56be53c1493e1bcfae1c22750a1511460a42984c0388fd7bf2b75e9ed041b4
+          - b78afdedb28db1f5d7d9364f2a78e84a3d140dbc90dddd9cba461b41ba864578
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 81a50b5d0005b50a59d4779132703932
+          - 8783e267751086a09130de0b16de5dec
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.proofpoint.com
+        - http://www.monparfum.it
+        - http://vividlightingandliving.com.au
+        - http://www.1800cloud.com
+        - http://88.119.179.160
+        - http://freebase.pw
+        - http://guestlistalamode.com
+        RequestUrl: *id005
+  condition: any of them

@@ -1,0 +1,41 @@
+title: "OSINT Vawtrak C2 \xE2\u20AC\u201C Pin it by Threat Geek"
+id: 57b585fe-ae40-42d8-bdd7-49d9950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.vawtrak
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - rsojnear.ru
+        - dmugmwbu.ru
+        - kmosszts.ru
+        - xdpnchon.ru
+        - hstqothv.ru
+        - xafmolog.ru
+        - hvnmwvdt.ru
+        - gdxwlrat.ru
+        - jhxrkeuh.ru
+        - sgtxgkbi.ru
+        - hzvmnpug.ru
+        - nevlomzj.ru
+        - ybqojmpa.ru
+        - qkgpedwe.ru
+        - xyigqlfc.ru
+        - ttliiubl.ru
+        - qrqlyhfc.ru
+        - enhicefv.ru
+        RequestUrl: *id001
+        QueryName: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://github.com
+        - http://www.threatgeek.com
+        RequestUrl: *id002
+  condition: any of them

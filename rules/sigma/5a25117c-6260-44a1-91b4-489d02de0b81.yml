@@ -1,0 +1,56 @@
+title: OSINT - Gaffe Reveals Full List of Targets in Spear Phishing Attack Using Cobalt
+  Strike Against Financial Institutions
+id: 5a25117c-6260-44a1-91b4-489d02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.cobalt
+logsource:
+  product: windows
+detection:
+  object_8732:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id001
+          - f360d41a0b42b129f7f0c29f98381416
+          MD5: *id001
+          DriverMd5: *id001
+          TargetProcessMd5: *id001
+          Hashes.md5: *id001
+  object_8733:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - d46df9eacfe7ff75e098942e541d0f18
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id003
+        - 138.68.234.128
+        - 104.144.207.207
+        SourceIp: *id003
+        IpAddresses: *id003
+        destination.ip: *id003
+        RequestUrl|contains: *id003
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 6ece5ece4192683d2d84e25b0ba7e04f9cb7eb7c
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.riskiq.com
+        - https://community.riskiq.com
+        RequestUrl: *id005
+  condition: any of them

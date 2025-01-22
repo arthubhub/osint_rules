@@ -1,0 +1,73 @@
+title: 'OSINT - Strider: Cyberespionage group turns eye of Sauron on targets'
+id: 57a88345-5254-4c97-954d-4ff8950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - myhomemusic.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - d18792a187d7567f3f31908c05a8b8a2647d365f
+          - 1bb7614bb7c3042796c8dc7befdd8042197f222d
+          - 63b579b9671b45478b42a5f96110c9d4234f7c82
+          - 90bead07f7c6c92c6ca2b34406c5ea516307ee4e
+          - d18df80316160535aa798303b6f02b6ae8e04388
+          - b5fbba3182ef25b20fecfc537effeeede977a2fc
+          - 4bf1fd9c721d13b74a1aa18d4bf1981558697fc7
+          - 3ae2cafb053009c16dbec057184c6250b450b914
+          - ee9eccad334b3bd8874b7259555a93ccb23f7e59
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 6c8c93069831a1b60279d2b316fd36bffa0d4c407068dbef81b8e2fe8fd8e8cd
+          - d737644d612e5051f66fb97a34ec592b3508be06e33f743a2fdb31cdf6bd2718
+          - c8f95bf8a76ff124cc1d7a8439beff360d0eb9c0972d42a8684c3bd4e91c6600
+          - 6b06522f803437d51c15832dbd6b91d8d8b244440b4d2f09bd952f335351b06d
+          - 3782b63d7f6f688a5ccb1b72be89a6a98bb722218c9f22402709af97a41973c8
+          - 02a9b52c88199e5611871d634b6188c35a174944f75f6d8a2110b5b1c5e60a48
+          - 9572624b6026311a0e122835bcd7200eca396802000d0777dba118afaaf9f2a9
+          - bde264ceb211089f6a9c8cfbaf3974bf3d7bf4843d22186684464152c432f8a5
+          - ab8181ae5cc205f1d3cae00d8b34011e47b735a553bd5a4f079f03052b74a06d
+          - 6189b94c9f3982ce15015d68f280f5d7a87074b829edb87825cadab6ec1c7ec2
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 7b8a3bf6fd266593db96eddaa3fae6f9
+          - cf6c049bd7cd9e04cc365b73f3f6098e
+          - 1d9d7d05ab7c68bdc257afb1c086fb88
+          - 7261230a43a40bb29227a169c2c8e1be
+          - 2a8785bf45f4f03c10cd929bb0685c2d
+          - 90b4b5f0a475f3a028be2f71409e6d1a
+          - 48d0c8faaee08fc51346925090af89aa
+          - 0a0948d871ef5a3006c0ab2997ad330e
+          - 113050c3e3140bf631d186d78d4b1dc0
+          - 1f316e14e773ca0f468d0d160b5d0307
+          - 7c3eecfb5174ca5cb1e03b8bf4b06f19
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://www.symantec.com
+        - http://flowershop22.110mb.com
+        - http://wildhorses.awardspace.info
+        - http://www.myhomemusic.com
+        RequestUrl: *id005
+  condition: any of them

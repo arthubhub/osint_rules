@@ -1,0 +1,91 @@
+title: XMRig & Masscan
+id: 5e47247f-bca8-473d-871d-447a950d210f
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_15932:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - ce2da00e90c4ef14019f51c07073d126ab5b72c7
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - bc3aaf73490a37d0d3c80596ff635ade159bc2a75f43ecd49411ebf591f5386d
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 9f544e2f85d341e7c414174473fd9051
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_15933:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - f63b9e779dc48d49bb13ba0a2c31520d12cf2643
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - ba94d5539a4ed65ac7a94a971dbb463a469f8671c767f515d271223078983442
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 81a4bc7617cee5761fd883413a1a26d3
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_15934:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - da8c372b94516ddc512bdf60cfb8609ad382702a
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 09b9d59ec4afdd479474db30a3b64e4c974a9e5711ab08e14bae2840e95b9aa1
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - e13c006428e3d397c42b3c30122d99cc
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id010
+        - 5.121.144.182
+        SourceIp: *id010
+        IpAddresses: *id010
+        destination.ip: *id010
+        RequestUrl|contains: *id010
+  condition: any of them

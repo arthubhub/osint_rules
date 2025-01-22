@@ -1,0 +1,34 @@
+title: Rhombus - Linux DDoS botnet aims VPS & IoT, w/persistence & dropper
+id: 5e6aa53c-bcf8-4279-9c48-40d0950d210f
+description: edit this field when analysing or editing the rule - reported by "MalwareMustDie"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 209.126.69.167
+        - 45.135.134.132
+        - 167.172.128.4
+        - 205.185.122.243
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 5fd910e87382d838d9ff17e4ad5843fb
+          - d93c7daebe7adc95e575c9934248d00f
+          - 239aecbf01af2ff17b6cfbe606db5808
+          - ba42665872ea41e3d2edd8978bc38c24
+          - e7b10bb7b81346d31f126e202d62a157
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+  condition: any of them

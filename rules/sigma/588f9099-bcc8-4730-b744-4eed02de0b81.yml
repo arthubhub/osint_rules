@@ -1,0 +1,38 @@
+title: OSINT - Saga 2.0 (Sage 2.0) comes with IP Generation Algorithm (IPGA)
+id: 588f9099-bcc8-4730-b744-4eed02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - e8eec675b5af14138598e4d152d34fd2ecb43a87
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 5e7cc796dfd2d47e6efb31412e1d614db6d96620ac118426dda04b6fbb943993
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - cfe8749de0954cee3966e1cbdb341e69
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://www.govcert.admin.ch
+        RequestUrl: *id004
+  condition: any of them

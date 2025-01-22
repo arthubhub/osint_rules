@@ -1,0 +1,45 @@
+title: OSINT OSX/Pintsized Backdoor Additional Details by Zataz / Eric Romang
+id: 559f66e6-6e10-468f-9025-81c0950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - digitalinsight-ltd.com
+        - clust12-akmai.net
+        - jdk-update.com
+        - cloudbox-storage.com
+        - corp-appl.com
+        - fbcbn.net
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 1582d68144de2808b518934f0a02bfd6
+          - 7fe4149b82516ae43938de6b8316ed84
+          - 2e35b9a683ccc2408fef5ca575abf0e6
+          - 27f241c64303e4e2d1d94d3143a48eb9
+          - 2b9b84f0612d6f9d7efb705dd7522f83
+          - 34cee92669e0c60a9dbafae7319f49db
+          - d3f151b246deb74890c612606c6ad044
+          - f419dfb35a0d220c4c53c4a087c91d5e
+          - 59424d4a567ae809f96afc56d22892b2
+          - 0ec55685affc322a5d7be2e9ca1f9cbf
+          - 3a861b8526e397b3684a99f363ec145b
+          - 622fc8b7daf425aed7f9ffa97e30c611
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://eromang.zataz.com
+        RequestUrl: *id003
+  condition: any of them

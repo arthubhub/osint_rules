@@ -1,0 +1,55 @@
+title: "OSINT A Peek Inside an Affiliate\xE2\u20AC\u2122s Malspam Operation: Kovter\
+  \ and Miuref/Boaxxe Infections by PhishMe"
+id: 55f5e10a-e830-4732-9b4f-30d0950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - abama.org
+        - avolonage.com
+        - ayuso-arch.com
+        - ckindustry.com
+        - etqy.com
+        - harmacrebar.com
+        - idsecurednow.com
+        - ihaveavoice2.com
+        - laterrazzafiorita.it
+        - les-eglantiers.fr
+        - readysetgomatthew.com
+        - selmaryachtmarket.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 109.235.50.205
+        - 194.69.193.111
+        - 77.111.207.70
+        - 154.41.66.31
+        - 209.200.253.29
+        - 67.195.61.46
+        - 205.144.171.10
+        - 216.24.245.126
+        - 74.208.252.194
+        - 96.31.35.62
+        - 96.31.36.46
+        - 50.116.104.205
+        - 208.43.65.115
+        - 76.74.242.190
+        - 205.144.171.28
+        - 174.137.191.22
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://phishme.com
+        RequestUrl: *id003
+  condition: any of them

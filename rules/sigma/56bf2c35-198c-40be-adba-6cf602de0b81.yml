@@ -1,0 +1,58 @@
+title: "OSINT - A Look Into Fysbis: Sofacy\xE2\u20AC\u2122s Linux Backdoor"
+id: 56bf2c35-198c-40be-adba-6cf602de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - azureon-line.com
+        - mozilla-plugins.com
+        - mozillaplagins.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 198.105.125.74
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 9444d2b29c6401bc7c2d14f071b11ec9014ae040
+          - ecdda7aca5c805e5be6e0ab2017592439de7e32c
+          - f080e509c988a9578862665b4fcf1e4bf8d77c3e
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 02c7cf55fd5c5809ce2dce56085ba43795f2480423a4256537bfdfda0df85592
+          - fd8b2ea9a2e8a67e4cb3904b49c789d57ed9b1ce5bebfe54fe3d98214d6a0f61
+          - 8bca0031f3b691421cb15f9c6e71ce193355d2d8cf2b190438b6962761d0c6bb
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 075b6695ab63f36af65f7ffd45cccd39
+          - e107c5c84ded6cd9391aede7f04d64c8
+          - 364ff454dcf00420cff13a57bcb78467
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://researchcenter.paloaltonetworks.com
+        RequestUrl: *id006
+  condition: any of them

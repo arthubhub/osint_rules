@@ -1,0 +1,149 @@
+title: Finding Nemo(hosts) from Sofacy by ThreatConnect
+id: 5a5de39e-cb60-4839-af53-c1be950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.sofacy
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - aljazeera-news.com
+        - zpfgr.com
+        - nethostnet.com
+        - hostsvcnet.com
+        - kiteim.org
+        - netcorpscanprotect.com
+        - unisecproper.org
+        - wmiapp.com
+        - networkxc.net
+        - ndsee.org
+        - neoderb.com
+        - remnet.org
+        - remotemanagesvc.net
+        - connectsmd.net
+        - ckgob.com
+        - dmsclock.org
+        - systemfromcuriousmoment.com
+        - driverfordell.com
+        - intelstatistics.com
+        - knightconsults.com
+        - lopback.com
+        - perfect-remote-service.com
+        - probenet.eu
+        - remonitor.net
+        - societyatcuriousteacher.com
+        - spelns.com
+        - unitedprosoftcompany.org
+        - 90update.com
+        - ambcomission.com
+        - cryptokind.com
+        - deshcoin.com
+        - dochardproofing.com
+        - ebramka.info
+        - fes-auth.com
+        - hello76.com
+        - hostedopenfiles.net
+        - kremotevn.net
+        - lasarenas.lt
+        - megauploadfiles.org
+        - nemaskalitnium.com
+        - networkfilehosting.com
+        - news-almasirah.net
+        - newsfromsource.com
+        - platnosci.biz
+        - postmarksmtp.com
+        - remsvc.net
+        - rhfcoin.com
+        - sa7efa.com
+        - searchbrain.net
+        - serbview.com
+        - startthedownload.com
+        - showitem.lt
+        - uploadsforyou.com
+        - wintwinbtc.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 185.25.50.93
+        - 94.177.12.74
+        - 92.114.92.134
+        - 86.107.42.11
+        - 179.43.128.218
+        - 208.91.197.91
+        - 185.183.107.38
+        - 185.86.150.26
+        - 188.40.155.241
+        - 94.177.12.157
+        - 88.99.21.169
+        - 89.187.151.16
+        - 185.86.150.188
+        - 5.255.80.50
+        - 185.94.190.199
+        - 5.135.199.10
+        - 174.128.253.215
+        - 185.86.150.151
+        - 86.105.1.12
+        - 188.241.68.175
+        - 86.105.1.114
+        - 185.94.192.101
+        - 89.44.103.18
+        - 95.153.31.197
+        - 213.252.244.105
+        - 213.252.244.114
+        - 185.25.51.38
+        - 213.252.246.24
+        - 185.25.48.249
+        - 185.25.51.173
+        - 185.25.50.156
+        - 91.108.68.209
+        - 185.64.105.7
+        - 5.255.80.68
+        - 86.105.1.128
+        - 91.216.163.204
+        - 5.135.199.24
+        - 173.44.58.240
+        - 213.252.247.167
+        - 213.252.244.115
+        - 91.216.163.224
+        - 213.252.247.121
+        - 185.25.51.120
+        - 91.108.68.180
+        - 91.216.163.229
+        - 91.216.163.237
+        - 91.216.163.203
+        - 5.255.93.224
+        - 213.252.247.168
+        - 213.252.247.159
+        - 185.25.50.144
+        - 185.25.48.27
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - a1833c32d5f61d6ef9d1bb0133585112069d770e
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - f27c4270b9b9291f465ba5962c36ce38f438377acff300b5c82b3b145f0c9e94
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.threatconnect.com
+        RequestUrl: *id005
+  condition: any of them

@@ -1,0 +1,60 @@
+title: OSINT - Babuk Ransomware
+id: 86836f20-44df-443f-9ee4-6fcf0e554883
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.babuk_ranomsware
+- attack.group.babuk_ranomsware
+logsource:
+  product: windows
+detection:
+  object_754:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 320d799beef673a98481757b2ff7e3463ce67916
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 8203c2f00ecd3ae960cb3247a7d7bfb35e55c38939607c85dbdb5c92f0495fa9
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - e10713a4a5f635767dcd54d609bed977
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - 8203c2f00ecd3ae960cb3247a7d7bfb35e55c38939607c85dbdb5c92f0495fa9
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - e10713a4a5f635767dcd54d609bed977
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://twitter.com
+        - http://chuongdong.com
+        - https://bazaar.abuse.ch
+        RequestUrl: *id006
+  condition: any of them

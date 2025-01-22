@@ -1,0 +1,24 @@
+title: OSINT DarkHotel samples at WooYun
+id: 5778026d-9670-44e0-9c25-4751950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.darkhotel
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - all-microsoft-control.com
+        - view-drama-online.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - http://drops.wooyun.org
+        RequestUrl: *id002
+  condition: any of them

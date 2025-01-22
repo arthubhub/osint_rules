@@ -1,0 +1,46 @@
+title: "OSINT - Websites compromised in \xE2\u20AC\u02DCDecimal IP\xE2\u20AC\u2122\
+  \ campaign"
+id: 58dcbfd0-91a4-4bc6-9aa9-4af7950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 104.238.158.235
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 190cef3dc30d0317955b60e88bb31b924f440882
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 4bed780a55e6179e4a1236444c34398af50d3bea39f86eb877089265f833bda5
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 6da59c5e5a3c4e05f0fdfaa618656a83
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://blog.malwarebytes.com
+        RequestUrl: *id005
+  condition: any of them

@@ -1,0 +1,74 @@
+title: OSINT - Mobile Devices Used to Execute DNS Malware Against Home Routers
+id: 570b9eee-6f60-41d4-bd1b-40d2950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 4b75a94613b7bf238948104092fe9fd4107fbf97
+          - da19d2b503932bfb7b0ccf6c40b9f0b0d19282fb
+          - f7d9dbc1c198de25512cb15f3c19827a2b2188df
+          - 545c71b9988d6df27eae31e8738f28da7caae534
+          - 67c28c29ebef9a57657e84dce83d458225447ae9
+          - 1f6e45204a28d9da16777d772eddf7e8d10e588a
+          - 331441f69ceae4d9f3a78f4b4b46bdc64c11bd4a
+          - 2f48f1c75f0984d722395b47cd10af9c15ea142f
+          - b6c423ff0c91fa65b63a37a136ca6bbe29fce34d
+          - 9d37dcf8f87479545adf78d44ca97464491fe39a
+          - af3ececf550f9486d90fca6f7bb7c735318d50cd
+          - ce034e437b20dce84e75a90ed2b3a58532ebcbb9
+          - acb1f8caa3d2babe37ea21014e0c79ce6c18f8a2
+          - b62ea64db9643fe0a4331f724d234e19c149cabf
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 295ccf30b6fd09ca858cfe749cdedfd8bb29c613452b66c9cdc24173ad213c9c
+          - a019a303c9e54bff72fd7bfcdd9b6264b42e9c7eb6f0ae3cf332f563b20c402a
+          - b4eb873dd1c037dabe6da9e76af356575a9bd43c6b5bbdedc85e1ca4ad502c08
+          - 0c6acde9da4e9109f81ddd9315a66bf9e7f13d92bdd948ef1b2c8bc391e117a6
+          - dd80bc159d3f4a8130a499952a124bd0c8192c371ef62b789496c809894a822a
+          - e05255556781f8c5700604c4c0c631d6c5c6a195ee734e01fb220297030e3b8b
+          - d17376cf4cb292b91b3b207caef7166aa92219d13b421771f8a56bb588aea74f
+          - 0fbdba6c3e06dbf3255ec85b086a252a65b2411c26e0f09d7fb29b6775d48fc5
+          - cf8f91b07ce83247aadc58eded46a59b51a939c4083e47b100a511a377057763
+          - 59ec2b49759dd09f18e6a99dd9424f56223bef43b624f37979e02bd21c976722
+          - a1aabff6b63746df8c0c022ab54645a2945d1fcabfbbb047a0ab3d322fd15c66
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 22ebde4114a9b7028beab9d8673fa1e3
+          - 8a9975c9d8895ca9b1c380624cde780a
+          - 01f21760ba4411cb5488f287d74e4a71
+          - b1e77eef8a1c0509593c424ac12a52d4
+          - 5afcb17b3e53745b6fa987ca46bfde30
+          - cc94092aa34f8a15abacd5912ad65def
+          - 99fa606bb886163b675c9e76e6389c69
+          - 12ffd1585304d593bd63cfaf16d2de7d
+          - 09a34b286a748573fa16d66957432df0
+          - e3234a0a314ab9037281a61532d9f385
+          - cc1a14c0183b22881f7fe3d7ce247ba3
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://blog.trendmicro.com
+        - http://lib.tongjii.us
+        - http://cn.tongjii.us
+        - http://dns.tongjj.info
+        RequestUrl: *id004
+  condition: any of them

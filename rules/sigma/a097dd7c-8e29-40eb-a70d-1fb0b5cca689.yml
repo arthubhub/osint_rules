@@ -1,0 +1,25 @@
+title: HermeticWiper
+id: a097dd7c-8e29-40eb-a70d-1fb0b5cca689
+description: edit this field when analysing or editing the rule - reported by "SCTIF"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id001
+          - 1bc44eef75779e3ca1eefb8ff5a64807dbc942b1e4a2672d77b9f6928d292591
+          SHA256: *id001
+          DriverSha256: *id001
+          TargetProcessSha256: *id001
+          Hashes.sha256: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://twitter.com
+        - https://analyze.intezer.com
+        RequestUrl: *id002
+  condition: any of them

@@ -1,0 +1,193 @@
+title: 'MISSING LINK: Tibetan Groups Targeted with Mobile Exploits'
+id: 5bec8d43-b990-4129-a9f4-45d08064ab0b
+description: edit this field when analysing or editing the rule - reported by "citizenlab"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_16309:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 68533858c90515369a1d2f36d72cb3537de58437
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - b85fe634f3c5b1022a1adbc21f3b85b58451ca2b89e9380fc5f22b9340a18b88
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - fb7bab3571e557ee7f88309dc472f748
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_16311:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 33ea7c4ad4f6d0b59b7b4de906735483e6e8cff7
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - e510c361c8101384277dd95cc2c8e76715dd241f58553f592245b620422beaf3
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 111ba6564931fccb7f4d0e940b492520
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_16313:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - df4c6cd8e046d7072cd833575593069f28a02674
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 6977e6098815cd91016be9d76f194ed4622640d03c6cdd66b1032306a2190af7
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 0d5158b33dc32cfd3c020f9dd13bde55
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_16315:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - fedb77270570b8c401577b65595a9b32e2fa368a
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 0d13e403303b52edae6beb76a6fe7ed454f340aae1246b9a3f55ca728da2d6aa
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - fb713151159601eef43226aadd7bb5a6
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  object_16317:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id013
+          - 24ef2efdb2348cf9db3fb5bf79555e1ffe411c68
+          SHA1: *id013
+          DriverSha1: *id013
+          TargetProcessSha1: *id013
+          Hashes.sha1: *id013
+        sha256_detection:
+          sha256: &id014
+          - 0d2ee9ade24163613772fdda201af985d852ab506e3d3e7f07fb3fa8b0853560
+          SHA256: *id014
+          DriverSha256: *id014
+          TargetProcessSha256: *id014
+          Hashes.sha256: *id014
+        md5_detection:
+          md5: &id015
+          - fa3aeb8ce67077e54b09e0e4c80e3814
+          MD5: *id015
+          DriverMd5: *id015
+          TargetProcessMd5: *id015
+          Hashes.md5: *id015
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id016
+        - www.energy-mail.org
+        - antmoving.online
+        - beemail.online
+        - bf.mk
+        - energy-mail.org
+        - gmailapp.me
+        - izelense.com
+        - mailanalysis.services
+        - mailcontactanalysis.online
+        - mailnotes.online
+        - polarismail.services
+        - rf.mk
+        - walkingnote.online
+        - www.msap.services
+        - msap.services
+        RequestUrl: *id016
+        QueryName: *id016
+    - ip_detection:
+        DestinationIp: &id017
+        - 45.32.75.217
+        - 45.76.149.154
+        - 45.78.79.100
+        - 149.28.93.11
+        - 95.169.2.57
+        - 206.189.65.198
+        - 140.82.17.222
+        - 45.76.53.26
+        - 45.32.91.137
+        - 144.202.59.23
+        - 66.42.58.59
+        - 43.251.16.87
+        SourceIp: *id017
+        IpAddresses: *id017
+        destination.ip: *id017
+        RequestUrl|contains: *id017
+    - hash_detection:
+        sha256_detection:
+          sha256: &id018
+          - 0d2ee9ade24163613772fdda201af985d852ab506e3d3e7f07fb3fa8b0853560
+          - 6977e6098815cd91016be9d76f194ed4622640d03c6cdd66b1032306a2190af7
+          - e510c361c8101384277dd95cc2c8e76715dd241f58553f592245b620422beaf3
+          - 0d13e403303b52edae6beb76a6fe7ed454f340aae1246b9a3f55ca728da2d6aa
+          - b85fe634f3c5b1022a1adbc21f3b85b58451ca2b89e9380fc5f22b9340a18b88
+          SHA256: *id018
+          DriverSha256: *id018
+          TargetProcessSha256: *id018
+          Hashes.sha256: *id018
+    - url_detection:
+        PowershellCommand|contains: &id019
+        - http://bit.ly
+        - http://www.msap.services
+        - http://suo.im
+        - http://news.cmitcsubs.tk
+        - http://msap.services
+        - https://bit.ly
+        - https://www.energy-mail.org
+        - http://45.76.149.154
+        - http://43.251.16.87
+        RequestUrl: *id019
+  condition: any of them

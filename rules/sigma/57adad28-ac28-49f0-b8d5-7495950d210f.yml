@@ -1,0 +1,28 @@
+title: "OSINT New C2 \xE2\u20AC\u201C Neutrino Exploit Kit via pseudoDarkleech HOPTO.ORG\
+  \ gate delivers CrypMic Ransomware by Broad Analysis"
+id: 57adad28-ac28-49f0-b8d5-7495950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 83.217.27.178
+        - 51.254.30.225
+        - 85.14.243.9
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - http://www.broadanalysis.com
+        - http://ccjlwb22w6c22p2k.onion.to
+        - http://ccjlwb22w6c22p2k.onion.city
+        RequestUrl: *id002
+  condition: any of them

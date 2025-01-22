@@ -1,0 +1,44 @@
+title: 'Malspam 2016-10-03 (.xls) - campaign: "[Scan]"'
+id: 57f239a3-9ac0-4261-8678-73f0950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - bluewaterappco.com
+        - boservice.info
+        - cedrussauna.com
+        - far-infraredsaunas.com
+        - golfnauvoo.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 162.253.225.88
+        - 68.65.120.207
+        - 77.79.239.195
+        - 96.0.130.2
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://bluewaterappco.com
+        - http://boservice.info
+        - http://cedrussauna.com
+        - http://far-infraredsaunas.com
+        - http://golfnauvoo.com
+        - http://mmm2.aaomg.com
+        - http://foe-2.com
+        - http://icdsarch.com
+        - http://inmopromo.com
+        - http://denvertracy.com
+        RequestUrl: *id003
+  condition: any of them

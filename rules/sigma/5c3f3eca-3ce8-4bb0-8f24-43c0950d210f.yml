@@ -1,0 +1,215 @@
+title: "OSINT -  Threat Actor \xE2\u20AC\u0153Cold River\xE2\u20AC\x9D: Network Traffic\
+  \ Analysis and a Deep Dive on Agent Drable"
+id: 5c3f3eca-3ce8-4bb0-8f24-43c0950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.cold_river
+logsource:
+  product: windows
+detection:
+  object_1188:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 1f007ab17b62cca88a5681f02089ab33adc10eec
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+  object_1189:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 9ea865e000e3e15cec15efc466801bb181ba40a1
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+  object_1190:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://twitter.com
+        RequestUrl: *id003
+  object_1191:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 1f007ab17b62cca88a5681f02089ab33adc10eec
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+  object_1192:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id005
+          - 9ea865e000e3e15cec15efc466801bb181ba40a1
+          SHA1: *id005
+          DriverSha1: *id005
+          TargetProcessSha1: *id005
+          Hashes.sha1: *id005
+  object_1193:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id006
+          - 1c1fbda6ffc4d19be63a630bd2483f3d2f7aa1f5
+          SHA1: *id006
+          DriverSha1: *id006
+          TargetProcessSha1: *id006
+          Hashes.sha1: *id006
+  object_1194:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 1022620da25db2497dc237adedb53755e6b859e3
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+  object_1195:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id008
+          - 678ea06ebf058f33fffa1237d40b89b47f0e45e1
+          SHA1: *id008
+          DriverSha1: *id008
+          TargetProcessSha1: *id008
+          Hashes.sha1: *id008
+  object_1196:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id009
+          - 1f007ab17b62cca88a5681f02089ab33adc10eec
+          SHA1: *id009
+          DriverSha1: *id009
+          TargetProcessSha1: *id009
+          Hashes.sha1: *id009
+        sha256_detection:
+          sha256: &id010
+          - 15fe5dbcd31be15f98aa9ba18755ee6264a26f5ea0877730b00ca0646d0f25fa
+          SHA256: *id010
+          DriverSha256: *id010
+          TargetProcessSha256: *id010
+          Hashes.sha256: *id010
+        md5_detection:
+          md5: &id011
+          - 48320f502811645fa1f2f614bd8a385a
+          MD5: *id011
+          DriverMd5: *id011
+          TargetProcessMd5: *id011
+          Hashes.md5: *id011
+  object_1198:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id012
+          - 1022620da25db2497dc237adedb53755e6b859e3
+          SHA1: *id012
+          DriverSha1: *id012
+          TargetProcessSha1: *id012
+          Hashes.sha1: *id012
+        sha256_detection:
+          sha256: &id013
+          - 45a9edb24d4174592c69d9d37a534a518fbe2a88d3817fc0cc739e455883b8ff
+          SHA256: *id013
+          DriverSha256: *id013
+          TargetProcessSha256: *id013
+          Hashes.sha256: *id013
+        md5_detection:
+          md5: &id014
+          - c00c9f6ebf2979292d524acff19dd306
+          MD5: *id014
+          DriverMd5: *id014
+          TargetProcessMd5: *id014
+          Hashes.md5: *id014
+  object_1200:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id015
+          - 9ea865e000e3e15cec15efc466801bb181ba40a1
+          SHA1: *id015
+          DriverSha1: *id015
+          TargetProcessSha1: *id015
+          Hashes.sha1: *id015
+        sha256_detection:
+          sha256: &id016
+          - 9ea577a4b3faaf04a3bddbfcb934c9752bed0d0fc579f2152751c5f6923f7e14
+          SHA256: *id016
+          DriverSha256: *id016
+          TargetProcessSha256: *id016
+          Hashes.sha256: *id016
+        md5_detection:
+          md5: &id017
+          - 807482efce3397ece64a1ded3d436139
+          MD5: *id017
+          DriverMd5: *id017
+          TargetProcessMd5: *id017
+          Hashes.md5: *id017
+  object_1202:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id018
+          - 1c1fbda6ffc4d19be63a630bd2483f3d2f7aa1f5
+          SHA1: *id018
+          DriverSha1: *id018
+          TargetProcessSha1: *id018
+          Hashes.sha1: *id018
+        sha256_detection:
+          sha256: &id019
+          - 2010f38ef300be4349e7bc287e720b1ecec678cacbf0ea0556bcf765f6e073ec
+          SHA256: *id019
+          DriverSha256: *id019
+          TargetProcessSha256: *id019
+          Hashes.sha256: *id019
+        md5_detection:
+          md5: &id020
+          - d2052cb9016dab6592c532d5ea47cb7e
+          MD5: *id020
+          DriverMd5: *id020
+          TargetProcessMd5: *id020
+          Hashes.md5: *id020
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id021
+        - 0ffice36o.com
+        - hr-suncor.com
+        - hr-wipro.com
+        - files-sender.com
+        - microsoftonedrive.org
+        RequestUrl: *id021
+        QueryName: *id021
+    - ip_detection:
+        DestinationIp: &id022
+        - 185.161.211.72
+        - 185.20.187.8
+        - 185.20.184.138
+        - 185.20.184.157
+        - 185.161.211.79
+        - 194.9.177.22
+        - 185.20.184.15
+        - 104.148.109.193
+        SourceIp: *id022
+        IpAddresses: *id022
+        destination.ip: *id022
+        RequestUrl|contains: *id022
+    - url_detection:
+        PowershellCommand|contains: &id023
+        - https://www.lastline.com
+        - https://crt.sh
+        RequestUrl: *id023
+  condition: any of them

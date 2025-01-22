@@ -1,0 +1,46 @@
+title: 'Malspam 2016-07-22 .js in .zip with embedded Locky (campaign: "Financial statement")'
+id: 5791cf23-9e10-4537-9f59-4c55950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 176.111.63.51
+        - 185.117.153.176
+        - 77.222.54.202
+        - 194.1.236.126
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 743083a798ba1661826d206ef452a20c13ee9513
+          - 712b31c10ccb843fae4cce1df0d151698345df3d
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 00f3d67cb462fb0091f25a94ff974348ed51a1823fada1e68242d1d1419ee6ef
+          - 838ad87b5c2af12b7f6eca84dc1f31907649ffcac0f51ade3036a262073ae08f
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://176.111.63.51
+        - http://185.117.153.176
+        - http://77.222.54.202
+        - http://194.1.236.126
+        RequestUrl: *id004
+  condition: any of them

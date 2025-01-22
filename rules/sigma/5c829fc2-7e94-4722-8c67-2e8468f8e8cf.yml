@@ -1,0 +1,42 @@
+title: '2019-03-08: TerraLoader Signed -> JS RAT'
+id: 5c829fc2-7e94-4722-8c67-2e8468f8e8cf
+description: edit this field when analysing or editing the rule - reported by "VK-Intel"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.terra_loader
+logsource:
+  product: windows
+detection:
+  object_15206:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 24d6407e700152c83ed7f0b33c7cf9d86e2bff92
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 49af65995e51d88bbe8b0d4be5a5df2692aa57800f1875a18ecbd3f483c8a094
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 9b3ec7553b079f413565a7f61c8efd3c
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://host.moresecurity.kz
+        RequestUrl: *id004
+  condition: any of them

@@ -1,0 +1,78 @@
+title: OSINT - Cisco Job Posting Targets Korean Candidates
+id: 5c5201f6-e414-4dc2-be61-4f4502de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_14736:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - ea9bd89535c250c7bb7d98d10971ca586a574c53
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 1497ab6ddccf91ef7f2cd75ce020bb3bf39979210351deaa6e0025997ddfda5a
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - c067345667eded99610e51042a14081a
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_14738:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 050dbe26683f5d39c8773da4a4b7d3dd28addc00
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - bf27c1631ef64c1e75676375a85d48f8ae97e1ea9a5f67c2beefc02c609fc18b
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - fbd1cd15019c0dd6659a59bc93b8596f
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id007
+        - ilovesvc.com
+        RequestUrl: *id007
+        QueryName: *id007
+    - hash_detection:
+        sha256_detection:
+          sha256: &id008
+          - bf27c1631ef64c1e75676375a85d48f8ae97e1ea9a5f67c2beefc02c609fc18b
+          - 1497ab6ddccf91ef7f2cd75ce020bb3bf39979210351deaa6e0025997ddfda5a
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+    - url_detection:
+        PowershellCommand|contains: &id009
+        - https://blog.talosintelligence.com
+        RequestUrl: *id009
+  condition: any of them

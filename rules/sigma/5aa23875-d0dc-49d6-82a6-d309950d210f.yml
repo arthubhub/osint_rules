@@ -1,0 +1,68 @@
+title: 'OSINT - Apache SOLR: the new target for cryptominers'
+id: 5aa23875-d0dc-49d6-82a6-d309950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_921:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id001
+          - 7153ac617df7aa6f911e361b1f0c8188ca5c142c6aaa8faa2a59b55e0b823c1c
+          SHA256: *id001
+          DriverSha256: *id001
+          TargetProcessSha256: *id001
+          Hashes.sha256: *id001
+  object_922:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - a3bbc8d3c4a950fa0b0def4109a07e9d01bae157781ff7a4b07910340e021dc7
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_923:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - ea0a6633b2f8592028c31aefbfe8f8165076b786
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 7153ac617df7aa6f911e361b1f0c8188ca5c142c6aaa8faa2a59b55e0b823c1c
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 09536b6ee3e600e73436715030467ec9
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id006
+        - pool-proxy.com
+        RequestUrl: *id006
+        QueryName: *id006
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - https://isc.sans.edu
+        - http://mms.kenguru.ru
+        - https://cve.mitre.org
+        - https://www.securityfocus.com
+        RequestUrl: *id007
+  condition: any of them

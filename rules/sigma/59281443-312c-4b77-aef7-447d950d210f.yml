@@ -1,0 +1,96 @@
+title: 'Jaff 2017-05-25 : "Payment Receipt 1234" - "1234.pdf"'
+id: 59281443-312c-4b77-aef7-447d950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.jaff
+- attack.software.jaff
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 46.173.218.111
+        - 81.218.71.217
+        - 95.173.189.215
+        - 176.223.209.7
+        - 192.124.249.6
+        - 88.198.4.251
+        - 195.130.247.50
+        - 81.169.145.66
+        - 81.169.145.160
+        - 46.30.213.61
+        - 81.169.145.162
+        - 80.86.198.13
+        - 70.35.121.121
+        - 166.62.29.125
+        - 83.167.255.182
+        - 192.124.249.2
+        - 81.31.42.12
+        - 160.153.129.221
+        - 104.156.51.239
+        - 91.82.226.140
+        - 162.144.143.109
+        - 81.177.135.191
+        - 34.225.214.20
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 27f095ac614baa7db8bcd1f5737cdefd8b0bb1ad
+          - 09fcafdc65429b55087227f8942e787e10e1b73c
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 2cc1d8edc318e0e09aad6afbc48999980f8e39e54734bca4c1a95c7b5db39569
+          - ba7952ae07b41d049ad82674aeffbd43a5079f1db10a941db6545490c6c386bd
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 9585bc2d5d63b189bf8455d2e05cfb5e
+          - fc8c82354bbc40f2662d577863c6b20f
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://better57toiuydof.net
+        - http://youtoolgrabeertorse.org
+        - http://benimkecim.com
+        - http://bionorica.md
+        - http://blackstoneconsultants.com
+        - http://danthegreat.athost.net
+        - http://derossigroup.it
+        - http://dianagaertner.com
+        - http://dreamybean.de
+        - http://duktigaflickor.se
+        - http://enseling-gmbh.de
+        - http://enzler-elektro.ch
+        - http://facecapsule.com
+        - http://holidayhops.com
+        - http://hunter.cz
+        - http://operadorapuma.com
+        - http://orchideus.cz
+        - http://pepmata.com
+        - http://pixshoot.com
+        - http://rejtjel.hu
+        - http://tropicalcoffeebreak.com
+        - http://vipmarketing.co.il
+        - http://vsflot.ru
+        - http://dorobratiohdtyszxwk.com
+        RequestUrl: *id005
+  condition: any of them

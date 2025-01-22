@@ -1,0 +1,17 @@
+title: OSINT Additional indicators relating to Sofacy (APT28) phishing blog post by
+  PWC
+id: 546bbf42-8e2c-412c-8f8d-4b22950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - http://pwc.blogs.com
+        RequestUrl: *id001
+  condition: any of them

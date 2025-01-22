@@ -1,0 +1,209 @@
+title: Emotet in Depth TTP 10-07-19
+id: 5d9b5933-964c-433c-b84f-4c680a2fe004
+description: edit this field when analysing or editing the rule - reported by "MiSOC"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1033
+- attack.software.emotet
+- attack.t1043
+- attack.software.s0363
+- attack.t1047
+- attack.t1087
+- attack.t1060
+- attack.t1050
+- attack.software.s0154
+- attack.t1055
+- attack.t1193
+- attack.t1059
+- attack.t1071
+- attack.t1064
+- attack.t1482
+- attack.t1032
+- attack.t1053
+- attack.t1086
+logsource:
+  product: windows
+detection:
+  object_9084:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 284534ae3c3ca467f098115d07cd7e14cbec9583
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - dd007df90f91857a9efe65008cf015f7955ff05a5b243017e4931087f5742355
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 9ce5126ffcbc936ad6c0155763898f19
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_9085:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - b49b6719495f8398f72e18c0e9450feacb0f9bd9
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 3306d41a09840db2e94e7497c911e8d61d15776b44346f02bbb6a88f5bd51caa
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 26017e97acce09276f3b4c6800dec256
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_9086:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 019a178ee95b34980a2f07ee624528de5f4eae44
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 16d007d650d117c68da005747378f16cebe820e75a2565be70602fad2cb6e1fe
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 9afcbf6f4f13a40791d368df767b4304
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_9087:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 10dae0bced984456d3d7a2b059cd71a4762f1c5b
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 4cbe34dc9928a6b93786a69bea92b3df0e04fd67d116fc1746d817496314de9e
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 9240845226d22642cbe5e0d39205d869
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  object_9088:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id013
+          - 46b1ad83e2bbf22b08462656e979bca53afff6ba
+          SHA1: *id013
+          DriverSha1: *id013
+          TargetProcessSha1: *id013
+          Hashes.sha1: *id013
+        sha256_detection:
+          sha256: &id014
+          - e23033b26e459f6987fb65b9dd8a975a14c2ea9d903a720d4a67a32d43bff293
+          SHA256: *id014
+          DriverSha256: *id014
+          TargetProcessSha256: *id014
+          Hashes.sha256: *id014
+        md5_detection:
+          md5: &id015
+          - 03dfc482ccecbbbc16c5c208ae55d49a
+          MD5: *id015
+          DriverMd5: *id015
+          TargetProcessMd5: *id015
+          Hashes.md5: *id015
+  object_9089:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id016
+          - 844ce6691b66a81237a592ec6bd2c59c8dbd52a0
+          SHA1: *id016
+          DriverSha1: *id016
+          TargetProcessSha1: *id016
+          Hashes.sha1: *id016
+        sha256_detection:
+          sha256: &id017
+          - 2826263cc5a3199167970f988c628c177ec45cee60618ae40e9fe84ec9167b73
+          SHA256: *id017
+          DriverSha256: *id017
+          TargetProcessSha256: *id017
+          Hashes.sha256: *id017
+        md5_detection:
+          md5: &id018
+          - b65e8c666af6ff39c67552e0c98f55d5
+          MD5: *id018
+          DriverMd5: *id018
+          TargetProcessMd5: *id018
+          Hashes.md5: *id018
+  object_9090:
+    all:
+    - ip_detection:
+        DestinationIp: &id019
+        - 144.202.75.93
+        SourceIp: *id019
+        IpAddresses: *id019
+        destination.ip: *id019
+        RequestUrl|contains: *id019
+  object_9091:
+    all:
+    - ip_detection:
+        DestinationIp: &id020
+        - 91.200.102.245
+        SourceIp: *id020
+        IpAddresses: *id020
+        destination.ip: *id020
+        RequestUrl|contains: *id020
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id021
+        - https://github.com
+        - http://dulich.goasiatravel.com
+        - https://drewnianazagroda.pl
+        - http://latestgovernment.com
+        - https://kurumsalinternetsitesi.com
+        - https://edealsadvisor.com
+        - http://201.184.105.242
+        - http://45.123.3.54
+        - http://80.79.23.144
+        - http://104.131.11.150
+        - http://142.44.162.209
+        - http://178.254.6.27
+        - http://192.254.173.31
+        RequestUrl: *id021
+  condition: any of them

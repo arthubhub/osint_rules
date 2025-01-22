@@ -1,0 +1,33 @@
+title: KuGou trojan backdoor campaign aim RDP on HFS panels
+id: 5ec2382b-1f78-40cf-b07b-4d5d950d210f
+description: edit this field when analysing or editing the rule - reported by "MalwareMustDie"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 192.161.86.218
+        - 162.209.193.211
+        - 111.229.231.218
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - ca3f461b313f3daec1f01a901b56c24e
+          - d5a36d65adf01a8bbad1546c3e113695
+          - 27ce0cd60fd409023e84fcbd03b113c0
+          - 8c19d83ff359a1b77cb06939c2e5f0cb
+          - 1444bebbb5deb71e3243aec2ac0d78e5
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+  condition: any of them

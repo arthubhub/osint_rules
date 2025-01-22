@@ -1,0 +1,45 @@
+title: 'Password-protected docs 2017-05-10 : Ursnif 2002 - "payment confirmation.ab1_c23def4lg56hi#78j.docx"'
+id: 591334cc-3b68-47fc-acc9-4763950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.snifula
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - groupemtheoryparti.ru
+        - thepbinarymaycodewhats.ru
+        - termsphpchoose.ru
+        - ttyouuincludingphpnorand.ru
+        - codeandpromoteuseunder.ru
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 104.238.124.62
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        md5_detection:
+          md5: &id003
+          - d09d24fc872b120ebc3cbda20f28d8ee
+          - 21b0ffda74ede6e0d161ddbab84e58d2
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://www.php.net
+        - http://urbansoft.cc
+        - http://91.210.166.142
+        RequestUrl: *id004
+  condition: any of them

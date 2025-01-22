@@ -1,0 +1,151 @@
+title: Fake amf-fr.org website delivering malicious Word document and binaries
+id: 5c687cb3-08c4-46d3-9981-093702de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1179
+- attack.t1035
+logsource:
+  product: windows
+detection:
+  object_3497:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 0dfe75a01e525bc599dff0c17204129b7ac3a437
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 728bbbea8797c5e00a8737ebf6bebfffb3d84f9c86f144963a2940025329c28b
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - efbcffc10763a287bdedfb6e892ae20c
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_3499:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - b0f4377953f59ba0d5b295861e2ab7fc5c6d03de
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 49103f5c7a5b78c32e56dea67259724c643611a05b49b02ff2653a7c77855eb0
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 28202ac7689aaef894840c773b7e1e56
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_3501:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 79ee5019cebead10c6527e2531e7b0ee69322405
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 1d8a807e9a64243de7f9f5171371b06abc5f056554c5fbfef7052bdbcd0f844a
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 11df89bd965bbd85bed31b90f1481312
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_3503:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 96a942174c55f5f3ab7236eb7e3ac549b67c88db
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - d57f128afb4843b6f0072fadda8dd14046b31703098e365bc5a226e117090d44
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 8ec83dba30c4f4d014899fbcc9a78171
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id013
+        - 51.38.150.171
+        SourceIp: *id013
+        IpAddresses: *id013
+        destination.ip: *id013
+        RequestUrl|contains: *id013
+    - hash_detection:
+        sha1_detection:
+          sha1: &id014
+          - 0dfe75a01e525bc599dff0c17204129b7ac3a437
+          SHA1: *id014
+          DriverSha1: *id014
+          TargetProcessSha1: *id014
+          Hashes.sha1: *id014
+        sha256_detection:
+          sha256: &id015
+          - 728bbbea8797c5e00a8737ebf6bebfffb3d84f9c86f144963a2940025329c28b
+          - 49103f5c7a5b78c32e56dea67259724c643611a05b49b02ff2653a7c77855eb0
+          - d57f128afb4843b6f0072fadda8dd14046b31703098e365bc5a226e117090d44
+          - 1d8a807e9a64243de7f9f5171371b06abc5f056554c5fbfef7052bdbcd0f844a
+          SHA256: *id015
+          DriverSha256: *id015
+          TargetProcessSha256: *id015
+          Hashes.sha256: *id015
+        md5_detection:
+          md5: &id016
+          - efbcffc10763a287bdedfb6e892ae20c
+          MD5: *id016
+          DriverMd5: *id016
+          TargetProcessMd5: *id016
+          Hashes.md5: *id016
+    - url_detection:
+        PowershellCommand|contains: &id017
+        - https://www.amf-france.org
+        - http://amf-fr.org
+        - http://www.amf-fr.org
+        - https://amf-fr.org
+        - https://www.amf-fr.org
+        RequestUrl: *id017
+  condition: any of them

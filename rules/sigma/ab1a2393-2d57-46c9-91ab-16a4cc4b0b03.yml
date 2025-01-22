@@ -1,0 +1,95 @@
+title: Active Exploitation of Two Zero-Day Vulnerabilities in Ivanti Connect Secure
+  VPN
+id: ab1a2393-2d57-46c9-91ab-16a4cc4b0b03
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1190
+logsource:
+  product: windows
+detection:
+  object_15178:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 4602efceb1cca1f2521193a6703362f27d424a91
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - a24d442980715a861674d45085c2f2c138c8a2354cc9c2cb02395533f6d37d85
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 701fdc38b2dc9a605fe3f0877baca62e
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_15179:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - dec06ef16010de8a3a713d929b33bbc0ca0d4380
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 00161c82ad7b297bb96d06c24706e6688ea1fdd54399aeebc442e36c6cf5bee0
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - da0e21202e53d590e4258a893456ab44
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_15180:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - https://www.volexity.com
+        RequestUrl: *id007
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id008
+        - symantke.com
+        - gpoaccess.com
+        - webb-institute.com
+        RequestUrl: *id008
+        QueryName: *id008
+    - ip_detection:
+        DestinationIp: &id009
+        - 50.215.39.49
+        - 173.220.106.166
+        - 206.189.208.156
+        - 75.145.243.85
+        - 47.207.9.89
+        - 98.160.48.170
+        - 73.128.178.221
+        - 50.243.177.161
+        - 50.213.208.89
+        - 64.24.179.210
+        - 75.145.224.109
+        - 71.127.149.194
+        - 173.53.43.7
+        SourceIp: *id009
+        IpAddresses: *id009
+        destination.ip: *id009
+        RequestUrl|contains: *id009
+  condition: any of them

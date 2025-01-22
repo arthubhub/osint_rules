@@ -1,0 +1,28 @@
+title: OSINT - New Bomb Threat Email Scam Campaign Demanding $20K in Bitcoin
+id: 5c18a87a-ba34-4abe-9a37-424d950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_16319:
+    all: []
+  object_16320:
+    all: []
+  object_16321:
+    all: []
+  object_16322:
+    all: []
+  object_16323:
+    all: []
+  object_16324:
+    all: []
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id001
+  condition: any of them

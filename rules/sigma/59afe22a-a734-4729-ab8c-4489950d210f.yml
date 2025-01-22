@@ -1,0 +1,19 @@
+title: OSINT - SynAck Ransomware Sees Huge Spike in Activity
+id: 59afe22a-a734-4729-ab8c-4489950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.synack
+- attack.group.synack
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id001
+  condition: any of them

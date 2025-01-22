@@ -1,0 +1,39 @@
+title: Cerber Ransomware
+id: 56e12e66-f01c-41be-afea-4d9a950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - decrypttozxybarc.onion
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 0af6bde11eaa699604aa92cce9a6210dfce70f42
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - a5ff5f861bbb1ac7c6fd44f303f735fac01273ce2ae43a8acb683076192fcfcc
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://freegeoip.net
+        - http://ipinfo.io
+        - http://ip-api.com
+        - http://maxcdn.bootstrapcdn.com
+        RequestUrl: *id004
+  condition: any of them

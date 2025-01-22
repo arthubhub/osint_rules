@@ -1,0 +1,68 @@
+title: OSINT -  Goodfellas, the Brazilian carding scene is after you
+id: 5b1e2aab-9e84-4908-9db2-4bb8950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.prilex
+logsource:
+  product: windows
+detection:
+  object_15201:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id001
+          - 7ab092ea240430f45264b5dcbd350156
+          MD5: *id001
+          DriverMd5: *id001
+          TargetProcessMd5: *id001
+          Hashes.md5: *id001
+  object_15202:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 34fb450417471eba939057e903b25523
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+  object_15203:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id003
+          - 26dcd3aa4918d4b7438e8c0ebd9e1cfd
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_15204:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id004
+          - f5ff2992bdb1979642599ee54cfbc3d3
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+  object_15205:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id005
+          - 7ae9043778fee965af4f8b66721bdfab
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://securelist.com
+        RequestUrl: *id006
+  condition: any of them

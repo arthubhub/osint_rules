@@ -1,0 +1,33 @@
+title: 'Malspam 2016-09-16 (.js in .zip) - campaign: "Re: request"'
+id: 57dba07b-c36c-4d98-88ac-450e950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - bulkreasy.com
+        - maggycocoa.net
+        - yerndrunk.net
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 178.212.131.10
+        - 37.200.70.6
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://bulkreasy.com
+        - http://maggycocoa.net
+        - http://yerndrunk.net
+        RequestUrl: *id003
+  condition: any of them

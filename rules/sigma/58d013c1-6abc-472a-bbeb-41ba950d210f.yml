@@ -1,0 +1,38 @@
+title: 'OSINT - PetrWrap: the new Petya-based ransomware used in targeted attacks'
+id: 58d013c1-6abc-472a-bbeb-41ba950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 7fa8079e8dca773574d01839efc623d3cd8e6a47
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - e079fa28ea51fa98644164caf585ae3231d25372fccca1245902fb57488d4660
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 17c25c8a7c141195ee887de905f33d7b
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://securelist.com
+        RequestUrl: *id004
+  condition: any of them

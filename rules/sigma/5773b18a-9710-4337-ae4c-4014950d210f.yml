@@ -1,0 +1,69 @@
+title: 'Malspam 2016-06-29 (campaign subject: ''Financial report'')'
+id: 5773b18a-9710-4337-ae4c-4014950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - arquipiedra.cl
+        - benelist.cz
+        - buron.dk
+        - centralbs.com
+        - centro-odontoiatrico-neuromuscolare.it
+        - elipse.es
+        - geiten.nl
+        - greatlakessawingsolutions.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 80.150.6.138
+        - 82.140.32.172
+        - 208.71.106.37
+        - 115.146.42.43
+        - 118.82.125.171
+        - 121.119.174.26
+        - 121.50.42.232
+        - 121.50.44.68
+        - 162.210.101.102
+        - 162.210.101.82
+        - 178.248.213.33
+        - 178.63.16.71
+        - 185.21.40.248
+        - 199.166.6.15
+        - 205.236.147.30
+        - 210.196.205.19
+        - 213.158.72.90
+        - 216.239.136.156
+        - 217.31.51.180
+        - 46.19.218.30
+        - 46.235.47.93
+        - 65.99.205.183
+        - 69.27.174.10
+        - 82.197.131.109
+        - 83.235.64.44
+        - 88.86.120.181
+        - 89.42.39.81
+        - 94.127.185.134
+        - 94.231.103.17
+        - 95.170.90.21
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://82.140.32.172
+        - http://115.146.42.43
+        - http://210.196.205.19
+        - http://65.99.205.183
+        - http://83.235.64.44
+        - http://arquipiedra.cl
+        RequestUrl: *id003
+  condition: any of them

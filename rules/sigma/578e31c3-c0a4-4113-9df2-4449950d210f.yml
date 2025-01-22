@@ -1,0 +1,28 @@
+title: 'Malspam 2016-07-19 .docm (campaign: "Documents from work")'
+id: 578e31c3-c0a4-4113-9df2-4449950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - kveldeil.no
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 85.252.49.19
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://kveldeil.no
+        RequestUrl: *id003
+  condition: any of them

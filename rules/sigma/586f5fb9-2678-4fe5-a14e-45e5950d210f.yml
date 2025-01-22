@@ -1,0 +1,39 @@
+title: OSINT - Exposing an AV-Disabling Driver Just in Time for Lunch
+id: 586f5fb9-2678-4fe5-a14e-45e5950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 822004b4b09c92acc4a281a17e0cab175d90dca6
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 1613f863490f5b28f85483d5eedde68899f1c71d048973e0786f51c4427112be
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 48b872f91f1ff3f96594bf480ebf3dcc
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://twitter.com
+        - https://securityintelligence.com
+        RequestUrl: *id004
+  condition: any of them

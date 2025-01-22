@@ -1,0 +1,16 @@
+title: Tech Support Scam Synchs Alerts with App Crashes in Windows Event Logs
+id: 58cbac05-b7d0-4f38-84fb-0928950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id001
+  condition: any of them

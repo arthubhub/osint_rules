@@ -1,0 +1,64 @@
+title: OSINT - APT Case RUAG Technical Report
+id: 5742bb17-ec60-4c81-8b62-45f3950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.turla_group
+- attack.software.wipbot
+- attack.software.turla
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 5.255.93.228
+        - 195.3.105.50
+        - 85.25.120.177
+        - 195.63.103.228
+        - 81.223.14.100
+        - 155.94.65.2
+        - 193.26.18.117
+        - 85.214.40.111
+        - 92.53.126.118
+        - 94.242.60.104
+        - 217.10.138.233
+        - 80.74.145.80
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 22481e4055d438176e47f1b1164a6bad
+          - 68b2695f59d5fb3a94120e996b8fafea
+          - 3881a38adb90821366e3d6480e6bc496
+          - 1d82c90bcb9863949897e3235b20fb8a
+          - 1a73e08be91bf6bb0edd43008f8338f3
+          - 2cfcacd99ab2edcfaf8853a11f5e79d5
+          - 6b34bf9100c1264faeeb4cb686f7dd41
+          - 9f040c8a4db21bfa329b91ec2c5ff299
+          - a50d8b078869522f68968b61eeb4e61d
+          - ba860e20c766400eb4fab7f16b6099f6
+          - 2372e90fc7b4d1ab57c40a2eed9dd050
+          - b849c860dff468cc52ed045aea429afb
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://www.symantec.com
+        - https://securelist.com
+        - https://blog.gdatasoftware.com
+        - http://www.symantec.com
+        - https://www.melani.admin.ch
+        - https://www.circl.lu
+        - http://www.kaspersky.com
+        - http://artemonsecurity.com
+        RequestUrl: *id003
+  condition: any of them

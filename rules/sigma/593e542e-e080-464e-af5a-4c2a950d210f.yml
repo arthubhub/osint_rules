@@ -1,0 +1,41 @@
+title: 'OSINT - Dvmap: the first Android malware with code injection'
+id: 593e542e-e080-464e-af5a-4c2a950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 05b0513cb53b0c5ee4ed55ce68cd694e676d4d2b
+          - 7eaed59d6a166bc3ec8ce19a27eeb3d5e9c5802c
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 92f8bcd9e62047b380c76afe772ab0fe12ced53b9702d08c37e98424dbb590ae
+          - 183e069c563bd16219c205f7aa1d64fc7cb93c8205adf8de77c50367d56dfc2b
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 43680d1914f28e14c90436e1d42984e2
+          - 20d4b9eb9377c499917c4d69bf4ccebe
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://securelist.com
+        RequestUrl: *id004
+  condition: any of them

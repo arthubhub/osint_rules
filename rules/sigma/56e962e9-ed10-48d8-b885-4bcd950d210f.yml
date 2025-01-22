@@ -1,0 +1,111 @@
+title: Dridex of the day (2016-03-16) - botnet 120
+id: 56e962e9-ed10-48d8-b885-4bcd950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 142.166.241.182
+        - 80.0.175.169
+        - 197.96.139.253
+        - 222.255.121.202
+        - 109.190.2.168
+        - 176.35.198.188
+        - 24.204.49.244
+        - 79.124.67.226
+        - 47.88.191.14
+        - 38.64.199.33
+        - 188.93.239.28
+        - 85.17.155.148
+        - 89.16.145.17
+        - 67.86.188.102
+        - 75.177.102.18
+        - 71.9.39.34
+        - 89.152.248.34
+        - 97.86.83.142
+        - 5.2.245.43
+        - 99.248.17.200
+        - 83.172.215.87
+        - 5.2.164.38
+        - 190.99.140.20
+        - 5.61.129.235
+        - 66.131.80.70
+        - 93.82.193.162
+        - 86.141.111.166
+        - 86.134.190.171
+        - 80.11.41.70
+        - 149.172.43.69
+        - 174.76.17.151
+        - 90.192.130.30
+        - 86.20.173.243
+        - 92.234.200.250
+        - 81.133.155.65
+        - 208.126.217.92
+        - 69.157.17.124
+        - 217.7.194.96
+        - 176.103.56.36
+        - 104.240.39.20
+        - 90.216.198.158
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - d7cddaae21870b1f5b623c5996ef62c242ec8938
+          - 13950ef397a6a61a7b27f54a5401bfa6c276ee76
+          - 2ff4d09ede2f4e41c3b50a50ae5cdde41676c106
+          - a7f39a744b85eedf3c0220d665b21d35c8f367dc
+          - dacccd323bc69d35a11493b7ef49471e4352e48f
+          - e83f8c2238173cc219b47293366a29b06c62da58
+          - 9f026e3358e402553abb353402e9379feeccaf1f
+          - 548c569756a7c91b97b5746cc2941ceec11e1f48
+          - cd111e288d091f87a7bd91acb1ee17a3c10e3fe3
+          - f426dee8034b77b7dbbd41c6ed73b9d6c537dbbb
+          - 911dc4ac61ce31160baa8c7d4e448a00c3b320bd
+          - 994113a3b996da52a936e85e42eeaf61c04954d9
+          - fd048a6f15021e0ddb60c793caba4f61f3c4a9ef
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - b100e104a22f9670164d73679f7d4b6e5de055bf961bc4c1e9c28d2580d3f753
+          - e359622ef1d4fef3197c018aade9706bdac47696372291742fb7b1c2aa648e91
+          - f1c1b9f62663b2f0ef45e6876f01a117e95e75cfa6b6fbce43749de772875df5
+          - d7ce0eb3da17b7607445cb648d3aaae3be4c6a87969cca564bb6b7abc3da72dd
+          - ebf105e691be34c3489602a3f762c168381bc56b537291d896aefcbf8fa300c1
+          - e7d980f73764fd2c9d2a0f9c3e118c651d168f6c685f65b62f16749e32f8a297
+          - 1f0610924b008e977d7c7a1698ec54ff0df356b934b4efc251d73849b29d66bb
+          - 4a760f2b21f217bce11ce0f8d9f71b64808497b8902b47d8985390aaf8511a42
+          - f74c196ce54331be414aa0b0e32e693b9b904f2b48d45be7dac5bcb03667a95c
+          - 298ab00b90631d0cd031d0e21c3c7e8cfacd4ca49edb2c91941c787c6be51959
+          - e9b58017ab5928591a58bd07cb9e44fe55ae50da51fa2eaf4b3f6bb133d9c2b6
+          - 8b1bc719f36c46d5f0303f113f7c7d12825cbad6c7390d92c05ff92ecf41cf2f
+          - 1cbec54232b5d16453e1928ee4de121b3d7b914cd8c0a43ed85df94de0518263
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 4bf685e116b26068633319e52ffb51ab
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://api.holycrossservices.info
+        - http://api.holycrossservices.net
+        - http://api.holycrossservices.org
+        RequestUrl: *id005
+  condition: any of them

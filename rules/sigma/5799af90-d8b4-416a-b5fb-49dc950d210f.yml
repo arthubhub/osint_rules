@@ -1,0 +1,46 @@
+title: OSINT - The Mad Max DGA
+id: 5799af90-d8b4-416a-b5fb-49dc950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 23.253.126.58
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 693a9936e56d19448cedc9ccda519b4c0f57d7d7
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 57976133193b732bb5602345d6aa7ff83555a365f415212dbefae016fc3b57aa
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - c7d1357f4c4acceb1780db12ad1b4de1
+          - 43538f5fb75003cbea84c9216e12c94a
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.arbornetworks.com
+        RequestUrl: *id005
+  condition: any of them

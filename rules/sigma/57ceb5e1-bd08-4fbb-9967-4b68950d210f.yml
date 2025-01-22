@@ -1,0 +1,52 @@
+title: 'Malspam 2016-09-06 (.wsf in .zip) - campaign: "Invoice INV[x]"'
+id: 57ceb5e1-bd08-4fbb-9967-4b68950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - alians-ekb.ru
+        - sp-moto.ru
+        - tst-technik.de
+        - bostoncittyregenerww.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 85.12.197.61
+        - 213.205.40.169
+        - 81.196.20.134
+        - 186.202.126.199
+        - 188.120.235.214
+        - 208.71.106.48
+        - 81.24.34.9
+        - 88.156.222.94
+        - 200.83.4.62
+        - 23.95.106.213
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://mixup0813.web.fc2.com
+        - http://portadeenrolar.ind.br
+        - http://sp-moto.ru
+        - http://tst-technik.de
+        - http://www.lnowak.tkdami.net
+        - http://www.vilastefania.go.ro
+        - http://alians-ekb.ru
+        - http://bostoncittyregenerww.com
+        - http://sitio655.vtrbandaancha.net
+        - http://www.cmg-ingegneria.it
+        - http://www.montegelato.it
+        - http://www.oltransservice.org
+        - http://www.vanetti.it
+        RequestUrl: *id003
+  condition: any of them

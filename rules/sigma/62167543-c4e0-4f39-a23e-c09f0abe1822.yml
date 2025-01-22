@@ -1,0 +1,144 @@
+title: '[NCSC-UK] Cyclops blink'
+id: 62167543-c4e0-4f39-a23e-c09f0abe1822
+description: edit this field when analysing or editing the rule - reported by "CERT-FR_1510"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.electrum
+- attack.group.telebots
+- attack.group.iridium
+- attack.group.sandworm
+logsource:
+  product: windows
+detection:
+  object_596:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 3adf9a59743bc5d8399f67cab5eb2daf28b9b863
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 50df5734dd0c6c5983c21278f119527f9fdf6ef1d7e808a29754ebc5253e9a86
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - d01e2c2e8df92edeb8298c55211bc4b6
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_597:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - c59bc17659daca1b1ce65b6af077f86a648ad8a8
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - c082a9117294fa4880d75a2625cf80f63c8bb159b54a7151553969541ac35862
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - bbb76de7654337fb6c2e851d106cebc7
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_598:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 7d61c0dd0cd901221a9dff9df09bb90810754f10
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 4e69bbb61329ace36fbe62f9fb6ca49c37e2e5a5293545c44d155641934e39d1
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 3c9d46dc4e664e20f1a7256e14a33766
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_599:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 438cd40caca70cafe5ca436b36ef7d3a6321e858
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - ff17ccd8c96059461710711fcc8372cfea5f0f9eb566ceb6ab709ea871190dc6
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 3f22c0aeb1eec4350868368ea1cc798c
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id013
+        - 100.43.220.234
+        - 96.80.68.193
+        - 188.152.254.170
+        - 208.81.37.50
+        - 70.62.153.174
+        - 2.230.110.137
+        - 90.63.245.175
+        - 212.103.208.182
+        - 50.255.126.65
+        - 78.134.89.167
+        - 81.4.177.118
+        - 24.199.247.222
+        - 37.99.163.162
+        - 37.71.147.186
+        - 105.159.248.137
+        - 80.155.38.210
+        - 217.57.80.18
+        - 151.0.169.250
+        - 212.202.147.10
+        - 212.234.179.113
+        - 185.82.169.99
+        - 93.51.177.66
+        - 80.15.113.188
+        - 80.153.75.103
+        - 109.192.30.125
+        SourceIp: *id013
+        IpAddresses: *id013
+        destination.ip: *id013
+        RequestUrl|contains: *id013
+  condition: any of them

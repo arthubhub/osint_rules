@@ -1,0 +1,19 @@
+title: OSINT - New KeyPass Ransomware Campaign Underway
+id: 5b718bda-8d9c-477f-bcd5-4634950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.keypass
+- attack.group.keypass
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id001
+  condition: any of them

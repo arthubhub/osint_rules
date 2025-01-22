@@ -1,0 +1,32 @@
+title: OSINT - Uber Breach & Attack Analysis
+id: 83e15192-96d8-476c-aa39-0317de8dba80
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1566.003
+- attack.t1589.001
+- attack.t1081
+- attack.t1135
+- attack.t1048
+- attack.t1194
+- attack.t1552.001
+- attack.t1133
+- attack.t1078.002
+- attack.t1621
+- attack.t1078
+- attack.t1136.002
+- attack.t1586
+- attack.t1087.002
+logsource:
+  product: windows
+detection:
+  object_15314:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://twitter.com
+        - https://whimsical.com
+        RequestUrl: *id001
+  condition: any of them

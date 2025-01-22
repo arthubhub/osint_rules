@@ -1,0 +1,73 @@
+title: 'OSINT - Turbo Twist: Two 64-bit Derusbi Strains Converge'
+id: 572a1a62-2510-4a7e-b983-4793950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - asixgroupincmeer.biz
+        - attrcorp.com
+        - office365e.com
+        - usapappers.com
+        - dijlacultus.com
+        - google-dash.com
+        - virtualboxs.com
+        - steletracker.com
+        - vmtools.net
+        - hawkthorn.net
+        - strightspunddeals.net
+        - northropgruman.org
+        - cegauoqsykgqecqc.org
+        - eimqqakugeccgwak.org
+        - uogwoigiuweyccsw.org
+        - soyy.info
+        - tianzhen.co
+        - monsterlegendsvn.biz
+        - nickytoh.com
+        - seratjati.com
+        - aiselamodefactory.com
+        - tasty-and-healthy.com
+        - nickytoh.net
+        - animationmyth.net
+        - petersenstore.org
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 761cd81c46034c3d186f626d17487b804b24e4a1
+          - 71c2407eaa08c7093316b62bc1f8eecaa089f775
+          - 4a152785c8b092166cfb164688fc767c22dd3932
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - ecac0b7abed0c5ca580064839813176a68f75d18176234fc15b2aefd277237aa
+          - c6f1a8f9ea60286b24db87d6022991a4342bea473a520569b996a5883332788c
+          - 9c4053485b37ebc972c95abd98ea4ee386feb745cc012b9e57dc689469ea064f
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 3e4fbb9190227848af32dacb17e9fd17
+          - b93197e2aa147fe6b70695ae7bb298b0
+          - 791295ef196cf8c20913b3cce76af29a
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://www.threatgeek.com
+        RequestUrl: *id005
+  condition: any of them

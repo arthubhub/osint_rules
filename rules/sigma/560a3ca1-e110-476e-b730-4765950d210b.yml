@@ -1,0 +1,69 @@
+title: OSINT Infected Korean Website Installs Banking Malware by Cyphort
+id: 560a3ca1-e110-476e-b730-4765950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - koreatimes.com
+        - filehon.com
+        - joara.com
+        - hometax.go.kr
+        - soriaudio.co.kr
+        - gomsee.com
+        - lottoplay.co.kr
+        - insight.co.kr
+        - filecity.co.kr
+        - nggol.com
+        - koreamanse.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 99.188.106.161
+        - 142.0.137.199
+        - 142.0.137.68
+        - 142.0.137.67
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 0cb0f491de8ba2761de899d8cbc136e2747145ee
+          - be8e700fb54019f06e3c816473d9141cc7d75630
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 04272c55bf2a534cf9f4556f102f01770d1ac2d4979cd98e9a2e294cf57c2a49
+          - 3361cece5f1e2920f2eb6029aa844d434f3f265cace7061cc52a0e11a6d1d383
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - c242d641d9432f611360db36f2075f67
+          - a6ec0fbe1ad821a3fb527f39e180e378
+          - b9a5a00e134fe0df217c01145319b1cb
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://www.cyphort.com
+        - http://142.0.137.68
+        - http://142.0.137.67
+        RequestUrl: *id006
+  condition: any of them

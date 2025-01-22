@@ -1,0 +1,144 @@
+title: Lumma Stealer Malware (delivered via GitHub Spam) - Pandora analysis (l6E.exe)
+id: eaa6f2f7-a944-47d2-a71d-cc7080c27fed
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.lumma_stealer
+- attack.software.lumma_stealer
+logsource:
+  product: windows
+detection:
+  object_1498:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 9fca5f5394c9dfe0c1e13f05b4ef26c02d4f7862
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - ff87b44ae63fc48174dd73a0efb161df297861d1e4b9c66eb1869eb0b355d7db
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 14ca9e349f994e878e57686119f004d4
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_1499:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 59ce2a22d5441931757c56512e053728c1113694
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 30333eda5ecb5656ee2cbd56528cf9f16c55befa0e4a0d3d08d15b69a3097b97
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - c38218fae44dcc2ce3d1629fec6039ed
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_1500:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - ce204d1894753f6a806fda9121c0e3ea83c23dd5
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 9a6833fd3cc183b906caf84dad1e9ce58b805f604b34fa49c73395c2a27c2a2a
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - b1c19dc88419b41741030f2fceb517c1
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_1501:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id010
+          - 07b89ccdef9eb2727f8eae56769c60b0a84b8de906ea9ac71cdc53f7fc9608fd
+          SHA256: *id010
+          DriverSha256: *id010
+          TargetProcessSha256: *id010
+          Hashes.sha256: *id010
+  object_1502:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id011
+          - 1970de8788c07b548bf04d0062a1d4008196a709
+          SHA1: *id011
+          DriverSha1: *id011
+          TargetProcessSha1: *id011
+          Hashes.sha1: *id011
+        sha256_detection:
+          sha256: &id012
+          - d737637ee5f121d11a6f3295bf0d51b06218812b5ec04fe9ea484921e905a207
+          SHA256: *id012
+          DriverSha256: *id012
+          TargetProcessSha256: *id012
+          Hashes.sha256: *id012
+        md5_detection:
+          md5: &id013
+          - fac2188e4a28a0cf32bf4417d797b0f8
+          MD5: *id013
+          DriverMd5: *id013
+          TargetProcessMd5: *id013
+          Hashes.md5: *id013
+  object_1503:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id014
+        - tryyudjasudqo.shop
+        - eemmbryequo.shop
+        - reggwardssdqw.shop
+        - relaxatinownio.shop
+        - tesecuuweqo.shop
+        - tendencctywop.shop
+        - licenseodqwmqn.shop
+        - keennylrwmqlw.shop
+        RequestUrl: *id014
+        QueryName: *id014
+  object_1504:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id015
+        - github-scanner.com
+        RequestUrl: *id015
+        QueryName: *id015
+    - url_detection:
+        PowershellCommand|contains: &id016
+        - https://github-scanner.com
+        RequestUrl: *id016
+  condition: any of them

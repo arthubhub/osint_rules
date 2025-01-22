@@ -1,0 +1,70 @@
+title: OSINT -  When A Pony Walks Out Of A Pub
+id: 58996c01-5948-4776-bc9f-4216950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - kbfvzoboss.bid
+        - alphastand.win
+        - alphastand.top
+        - alphastand.trade
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 5.200.52.198
+        - 195.22.127.233
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - b7e499be525b14b6801db2795ed631fbea7ca0bd
+          - a76b850aa336dfb5c83c50e83f24a9c844641684
+          - 9eb47a9bd943afe83c8bbc29669702dfa6db8e18
+          - 73a9c0054b193703960828808249a77840311bdf
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 3cfd8919f095e048e0f24a41c2f132328f0d0efe19581b308d9d2d3ffad40c29
+          - 36baccd2a4fc4f683c839283123a75de61b01ce93205f4a34975263e9c66aaed
+          - 42d0990daba69fa5068a6910d0eac487f3d308ce7e28799a959dace8d84125d7
+          - d214c89af1929af1171ac40999b14a4f6fbcfd13b88cade392853a2c61057122
+          - c7ef89222d760fc915690e6394c61c84176e618f7c9508beca30aa9a0f1b1991
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 05c6208f08108266ab20eedd464fb05f
+          - 9da66a7cf195036cb90606ef106e2234
+          - 05b8b570dcc6c78f26ede9f6f650097e
+          - 6208d08cfb09bae085f2eaeb53c17707
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://blog.talosintel.com
+        - http://5.200.52.198
+        - http://195.22.127.233
+        - http://kbfvzoboss.bid
+        - http://alphastand.win
+        - http://alphastand.top
+        - http://alphastand.trade
+        RequestUrl: *id006
+  condition: any of them

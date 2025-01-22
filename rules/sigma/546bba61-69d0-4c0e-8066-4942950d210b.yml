@@ -1,0 +1,100 @@
+title: "OSINT ScanBox framework \xE2\u20AC\u201C who\xE2\u20AC\u2122s affected, and\
+  \ who\xE2\u20AC\u2122s using it?  by PWC"
+id: 546bba61-69d0-4c0e-8066-4942950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - googlecaches.com
+        - qoog1e.com
+        - webmailgoogle.com
+        - 9aaa.info
+        - educationel.com
+        - foundationssl.com
+        - googlewebcache.com
+        - hudsononlinenews.com
+        - lifewalden.com
+        - mailaunch.com
+        - msdnblog.com
+        - outlookssl.com
+        - windowsautoupdate.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 103.246.247.246
+        - 103.255.61.114
+        - 103.255.61.39
+        - 113.10.201.124
+        - 118.193.153.201
+        - 122.10.10.210
+        - 122.10.9.109
+        - 123.108.111.209
+        - 176.53.22.143
+        - 180.210.206.225
+        - 184.22.163.121
+        - 184.82.123.222
+        - 184.82.46.5
+        - 192.161.61.10
+        - 198.96.92.108
+        - 204.152.198.100
+        - 210.0.176.21
+        - 210.0.176.23
+        - 210.209.127.114
+        - 210.209.127.32
+        - 210.209.127.39
+        - 210.209.127.53
+        - 210.209.86.145
+        - 58.96.172.209
+        - 66.197.231.62
+        - 69.197.146.80
+        - 69.197.183.142
+        - 69.197.183.152
+        - 69.197.183.159
+        - 69.197.183.189
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 809959f390d5a49c8999ad6fff27fdc92ff1b2b0
+          - e8a8ffe39040fe36e95217b4e4f1316177d675ed
+          - f1890cc9d6dc84021426834063394539414f68d8
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 4639c30b3666cb11b3927d5579790a88bff68e8137f18241f4693e0d4539c608
+          - ab58b6aa7dcc25d8f6e4b70a24e0ccede0d5f6129df02a9e61293c1d7d7640a2
+          - 3112420afeb829a575ba46512314c0fab2fc80870c153de35cde4d3140a2dd26
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - be3a3daa7d0d11df2380d3401696624a
+          - ef498ea09bf51b002fc7eb3dfd0d19d3
+          - 9cf5523da799277a4d40881199eb8325
+          - 409ae279d7c44b11156318848ddb4a3f
+          - 9d1f8822b92ad3224db1c9ec89b529ca
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://pwc.blogs.com
+        RequestUrl: *id006
+  condition: any of them

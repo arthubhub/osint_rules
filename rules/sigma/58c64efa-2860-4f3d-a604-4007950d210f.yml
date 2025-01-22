@@ -1,0 +1,94 @@
+title: OSINT -  Preinstalled Malware Targeting Mobile Users
+id: 58c64efa-2860-4f3d-a604-4007950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 4d1d840eedfb9bcfc481457f64dc5ac8644cca00
+          - 9c73e87bf6d952384dbd07e443e60e3e9f89d6f3
+          - 76b2129426eecf9c3d9c29e27224768e6ad4ca34
+          - 41a6c329fece92290cfc4b4b8da85dc4f9cc9de3
+          - f1de6e5751b4ce8dfc5b21b2ad3b70d7a25001d1
+          - c8014051ccd71ee4f2497bf0dbb1978d7ce812e0
+          - 5843a3c3ddb8d392df55b4905145d7fb398e546b
+          - 408f051ae5ccb844cc630e6178bb8643bbc2513b
+          - 5212c5266e251dec4a3fc45407a8b06ce41b52b0
+          - 02cc4cd5fbe40983ce084b9fa92d75c1d3da4954
+          - 3751ebbcdaf63d3036460a390370664996ef4e7c
+          - 7eb75fba47da4c5b4624a083d11cd80536c48c8d
+          - 0845ad3fb76ae29372211368827e1c023b0b83ac
+          - 99a077ac5ed849f0c568ad05ac2fb5e8aa7b1a07
+          - 3468577e251f23950b05b18cee2dbf06b3a4887d
+          - 20f0ddd13c1bbdef8062f878b6a467b933496fa5
+          - e71933f29d8d2a2cf4fdefd9a056b23e8d6028a8
+          - 13542eec9b7704bbaf7302210bfde52e6523b440
+          - 9b35e4c31a55031cfae0d2f7a6c12625f0a296cf
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 3d99f490802f767201e8d507def4360319ce12ddf46765ca1b1168d64041f20f
+          - f901fd1fc2ce079a18c619e1192b14dcc164c97da3286031ee542dabe0b4cd8c
+          - b4e70118905659cd9b2c948ce59eba2c4431149d8eb8f043796806262d9a625b
+          - 936e7af60845c4a90b8ce033734da67d080b4f4f0ca9c319755c4a179d54bf1b
+          - 39c6bab80cc157bfe540bdee9ce2440b3b363e830bc7adaab9fc37075fb26fb1
+          - 998ab3d91cbc4f1b02ea6095f833bfed9d4f610eea83c51c56ce9979a2469aea
+          - e9a30767e69dccb1b980eae42601dff857a394c7abdfe93a18e8739fa218d14b
+          - 01b8cb51464b07775ff5f45207d26d8d9f4a3b6863c110b56076b446bda03a8a
+          - a07745f05913e122ec19eba9848af6dfda88533d67b7ec17d11c1562245cbed1
+          - e4e97090e9fd6cc3d321cee5799efd1806b5d8a9dea7c4872044057eb1c486ff
+          - 947574e790b1370e2a6b5f4738c8411c63bdca09a7455dd9297215bd161cd591
+          - 0d8bf3cf5b58d9ba280f093430259538b6340b24e805058f3d85381d215ca778
+          - 0038f450d7f1df75bf5890cf22299b0c99cc0bea8d66e6d25528cb01992a436b
+          - 217eee3a83f33b658fb03fddfadd0e2eb34781d5dd243203da21f6cb335ef1b4
+          - 3032bb3d90eea6de2ba58ac7ceddead702cc3aeca7792b27508e540f0d1a60be
+          - 1cb5a37bd866e92b993ecbbcc4a2478c717eeb93839049ef0953b0c6ba89434e
+          - e5656c1d96158ee7e1a94f08bca1213686a05266e37fb2efb5443b84250ea29d
+          - c4eac5d13e58fb7d32a123105683a293f70456ffe43bb640a50fde22fe1334a2
+          - 92ae2083a8495cc5b0a0a82f0bdeb53877170d2615ce93bd8081172af9e60f8f
+          - fbe9c495f86a291a0abe67ad36712475ff0674d319334dbd7a2c3aa10ff0f429
+          - b0f6d2fc8176356124e502426d7aa7448490556ef68a2f31a78f4dd8af9d1750
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 4a3a7b03c0d0460ed8c5beff5c20683c
+          - 7fff1e78089eb387b6adfa595385b2c9
+          - 1aac52b7d55f4c1c03c85ed067bf69d9
+          - 51c328fccf1a8b4925054136ccdb1cda
+          - 4e91ff9ac7e3e349b5b9fe36fb505cb4
+          - 59b62f8bc982b31d5e0411c74dbe0897
+          - 379ec59048488fdb74376c4ffa00d1be
+          - 944850ee0b7fc774c055a2233478bb0f
+          - 60806c69e0f4643609dcdf127c8e7ef5
+          - f48122e9f4333ba3bb77fac869043420
+          - 9ed38abb335f0101f55ad20bde8468dc
+          - fcbb243294bb87b039f113352a8db158
+          - 0e987ba8da76f93e8e541150d08e2045
+          - 4d904a24f8f4c52726eb340b329731dd
+          - 629da296cba945662e436bbe10a5cdaa
+          - d5f5480a7b29ffd51c718b63d1ffa165
+          - 660638f5212ef61891090200c354a6d5
+          - 3f188b9aa8f739ee0ed572992a21b118
+          - 41b1f607f153a28a67629617d3fe1007
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://blog.checkpoint.com
+        RequestUrl: *id004
+  condition: any of them

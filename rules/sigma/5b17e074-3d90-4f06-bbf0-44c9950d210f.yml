@@ -1,0 +1,53 @@
+title: OSINT - New Backup Cryptomix Ransomware Variant Actively Infecting Users
+id: 5b17e074-3d90-4f06-bbf0-44c9950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.cryptomix
+- attack.group.cryptomix
+logsource:
+  product: windows
+detection:
+  object_15548:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id001
+          - 44d5b6d36294d2f3bdc773eb7a43ba49c03febc60556616a7d641dd9ee5d13d8
+          SHA256: *id001
+          DriverSha256: *id001
+          TargetProcessSha256: *id001
+          Hashes.sha256: *id001
+  object_15549:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - fdec8b08069600ff74fb3aed138fca79d9528410
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 44d5b6d36294d2f3bdc773eb7a43ba49c03febc60556616a7d641dd9ee5d13d8
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 48182d1c42a37ce24925bcc79d147bf2
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id005
+  condition: any of them

@@ -1,0 +1,41 @@
+title: OSINT -   Sorpresa! JasperLoader targets Italy with a new bag of tricks
+id: 5ce8f7f8-8584-40c3-b33b-4660950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.jasperloader
+- attack.t1192
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 185.158.251.171
+        - 185.158.249.116
+        - 185.158.248.110
+        - 185.212.47.163
+        - 185.212.44.126
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - 052c9895383eb10e4ad5bec37822f624e443bbe01700b1fe5abeeea757456aed
+          - 54666103a3c8221cf3d7d39035b638f3c3bcc233e1916b015aeee2539f38f719
+          - ee3601c6e111c42d02c83b58b4fc70265b937e9d4d153203a4111f51a8a08aab
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://blog.talosintelligence.com
+        - http://tribunaledinapoli.recsinc.com
+        RequestUrl: *id003
+  condition: any of them

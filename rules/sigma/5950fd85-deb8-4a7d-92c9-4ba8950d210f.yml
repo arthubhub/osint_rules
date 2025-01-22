@@ -1,0 +1,150 @@
+title: 'M2M -  Locky 2017-06-26 : Affid=3 : "12_Invoice_3456" - "001_4321.zip"'
+id: 5950fd85-deb8-4a7d-92c9-4ba8950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 190.105.227.224
+        - 5.61.252.24
+        - 81.169.145.82
+        - 202.181.132.161
+        - 66.219.202.10
+        - 66.115.159.76
+        - 109.203.122.184
+        - 66.147.242.154
+        - 162.251.85.205
+        - 46.173.218.214
+        - 46.173.218.249
+        - 27.131.109.130
+        - 175.126.195.54
+        - 81.169.145.163
+        - 162.251.80.21
+        - 69.90.161.220
+        - 81.169.145.86
+        - 43.243.119.253
+        - 43.225.55.90
+        - 203.124.43.229
+        - 66.115.144.70
+        - 160.153.131.152
+        - 122.9.52.203
+        - 115.186.148.123
+        - 43.225.55.204
+        - 81.169.145.165
+        - 192.185.224.197
+        - 125.212.224.157
+        - 46.30.213.193
+        - 208.117.46.237
+        - 74.122.121.8
+        - 93.171.217.153
+        - 89.111.176.93
+        - 151.1.182.14
+        - 194.58.88.162
+        - 160.153.42.132
+        - 103.53.42.51
+        - 202.52.146.56
+        - 203.146.127.133
+        - 81.169.145.164
+        - 192.254.234.175
+        - 198.54.115.6
+        - 51.255.157.19
+        - 91.234.34.98
+        - 141.8.226.58
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - f5fce485a72ab82a5e5b48b98befd5e0568a83e1
+          - 3e19f754ea0fef9e62d91dfd4f22e6c73240bcbc
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 8015133c16d41fdfbeb5f86f5d82ffb124a131ed012375d3cf70babe2f440ac8
+          - 83b366204ef60cca5468c2db1baadeb7590f97493c451fa005f9b583ce691133
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 8cd9f803947badddbfafc584edfdeebb
+          - a0d81f0bffb0e20a34191385031cf17a
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://aristei.com.ar
+        - http://mediawax.be
+        - http://randomessstioprottoy.net
+        - http://oscarbenson.com
+        - http://1010technologies.com
+        - http://alexrice.co.uk
+        - http://bkpny.org
+        - http://bloomasia.net
+        - http://brontorittoozzo.com
+        - http://camberwellroofing.com.au
+        - http://chulkyu.com
+        - http://dextron.de
+        - http://drutha.com
+        - http://earsay.com
+        - http://edelmix.es
+        - http://freelapaustralia.com.au
+        - http://gbdco.com
+        - http://germania2.bravepages.com
+        - http://hrlpk.com
+        - http://hyperblockly.com
+        - http://i2iapp.com
+        - http://ibudian.com
+        - http://itbouquet.com
+        - http://jointpainsrelief.com
+        - http://keysback.com
+        - http://kitchenandgifts.com
+        - http://lamweb123.net
+        - http://langhaug.no
+        - http://libre-brave.com
+        - http://malamalamak9.net
+        - http://medfarmu.ru
+        - http://polistar.net
+        - http://rotarychieti.it
+        - http://sberleasing.ru
+        - http://shopf3.com
+        - http://skyfling.com
+        - http://stalaktit-indonesia.com
+        - http://teekayu.com
+        - http://thephonks.de
+        - http://thepickintool.com
+        - http://tulibistro.com
+        - http://wesser24.de
+        - http://xn----8sb4abph0af.com
+        - http://91.234.34.98
+        - http://aejhpovgmpg.pw
+        - http://ccikylqrgyythm.info
+        - http://rfsucux.pl
+        - http://caynosfilql.org
+        - http://uibvdtcjemduah.work
+        - http://cfqmcgavqics.info
+        - http://phustpnjrwijv.info
+        - http://ycbstxdogx.pw
+        - http://mafxaimsa.pl
+        - http://xtblvmgqgbwtc.work
+        - http://tdtqpmc.info
+        - http://romjuhlbovakjorip.work
+        RequestUrl: *id005
+  condition: any of them

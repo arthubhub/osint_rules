@@ -1,0 +1,64 @@
+title: OSINT - RIG exploit kit distributes Princess ransomware
+id: 5a3797c2-e770-4722-9435-4350950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.princess_locker
+- attack.software.princess_locker
+logsource:
+  product: windows
+detection:
+  object_15213:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 5e30397f36df1e828ce705b7ec0ce62916451aae
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - c61f4c072bb1e3c6281a9799c1a3902f35dba652756fe96a97e60d0097a3f9b7
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - e7412ad8301456f3f4e32ab2d2c6f3f7
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id004
+        - royall6qpvndxlsj.onion
+        RequestUrl: *id004
+        QueryName: *id004
+    - ip_detection:
+        DestinationIp: &id005
+        - 185.198.164.152
+        - 188.225.84.28
+        SourceIp: *id005
+        IpAddresses: *id005
+        destination.ip: *id005
+        RequestUrl|contains: *id005
+    - hash_detection:
+        sha256_detection:
+          sha256: &id006
+          - c61f4c072bb1e3c6281a9799c1a3902f35dba652756fe96a97e60d0097a3f9b7
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - https://blog.malwarebytes.com
+        RequestUrl: *id007
+  condition: any of them

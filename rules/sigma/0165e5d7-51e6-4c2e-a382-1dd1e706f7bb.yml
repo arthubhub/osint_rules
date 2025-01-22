@@ -1,0 +1,97 @@
+title: OSINT - DearCry ransomware (abusing Exchange Server)
+id: 0165e5d7-51e6-4c2e-a382-1dd1e706f7bb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1486
+- attack.t1485
+logsource:
+  product: windows
+detection:
+  object_9279:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 56eec7392297e7301159094d7e461a696fe5b90f
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - e044d9f2d0f1260c3f4a543a1e67f33fcac265be114a1b135fd575b860d2b8c6
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - cdda3913408c4c46a6c575421485fa5b
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_9281:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - b7d99521348d319f57d2b2ba7045295fc99cf6a7
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - feb3e6d30ba573ba23f3bd1291ca173b7879706d1fe039c34d53a4fdcdf33ede
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - c6eeb14485d93f4e30fb79f3a57518fc
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_9283:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - f7b084e581a8dcea450c2652f8058d93797413c3
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 2b9838da7edb0decd32b086e47a31e8f5733b5981ad8247a2f9508e232589bff
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 0e55ead3b8fd305d9a54f78c7b56741a
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id010
+          - e044d9f2d0f1260c3f4a543a1e67f33fcac265be114a1b135fd575b860d2b8c6
+          - 2b9838da7edb0decd32b086e47a31e8f5733b5981ad8247a2f9508e232589bff
+          - feb3e6d30ba573ba23f3bd1291ca173b7879706d1fe039c34d53a4fdcdf33ede
+          SHA256: *id010
+          DriverSha256: *id010
+          TargetProcessSha256: *id010
+          Hashes.sha256: *id010
+  condition: any of them

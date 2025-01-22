@@ -1,0 +1,88 @@
+title: Malware Discovered in Popular NPM Package, ua-parser-js
+id: ad7665ec-fef2-44eb-a019-b1b25a8aec05
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1195.002
+- attack.t1195.001
+logsource:
+  product: windows
+detection:
+  object_14740:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://us-cert.cisa.gov
+        RequestUrl: *id001
+  object_14741:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id002
+        - citationsherbe.at
+        RequestUrl: *id002
+        QueryName: *id002
+    - ip_detection:
+        DestinationIp: &id003
+        - 95.213.165.20
+        SourceIp: *id003
+        IpAddresses: *id003
+        destination.ip: *id003
+        RequestUrl|contains: *id003
+  object_14742:
+    all:
+    - ip_detection:
+        DestinationIp: &id004
+        - 159.148.186.228
+        SourceIp: *id004
+        IpAddresses: *id004
+        destination.ip: *id004
+        RequestUrl|contains: *id004
+  object_14743:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id005
+          - b6004c62e2d9dbad9cfd5f7e18647ac983788766
+          SHA1: *id005
+          DriverSha1: *id005
+          TargetProcessSha1: *id005
+          Hashes.sha1: *id005
+        sha256_detection:
+          sha256: &id006
+          - 2a3acdcd76575762b18c18c644a745125f55ce121f742d2aad962521bc7f25fd
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+        md5_detection:
+          md5: &id007
+          - de8b54a938ac18f15cad804d79a0e19d
+          MD5: *id007
+          DriverMd5: *id007
+          TargetProcessMd5: *id007
+          Hashes.md5: *id007
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id008
+        - citationsherbe.at
+        RequestUrl: *id008
+        QueryName: *id008
+    - hash_detection:
+        sha256_detection:
+          sha256: &id009
+          - 2a3acdcd76575762b18c18c644a745125f55ce121f742d2aad962521bc7f25fd
+          - 47dded0efc230c3536f4db1e2e476afd3eda8d8ea0537db69d432322cdbac9ca
+          SHA256: *id009
+          DriverSha256: *id009
+          TargetProcessSha256: *id009
+          Hashes.sha256: *id009
+    - url_detection:
+        PowershellCommand|contains: &id010
+        - https://github.com
+        - http://159.148.186.228
+        - https://citationsherbe.at
+        RequestUrl: *id010
+  condition: any of them

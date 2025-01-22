@@ -1,0 +1,98 @@
+title: OSINT The Ghost Dragon by Cylance
+id: 571bd702-031c-400b-a851-43ce02de0b81
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - winupdate.net
+        - searchhappynews.com
+        - fhtd.info
+        - swgabeg.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 112.125.17.103
+        - 122.10.18.166
+        - 122.10.36.94
+        - 101.55.33.39
+        - 103.232.215.144
+        - 103.246.245.147
+        - 111.68.8.130
+        - 113.10.148.161
+        - 113.10.148.205
+        - 122.10.41.85
+        - 122.10.83.75
+        - 122.10.85.35
+        - 122.9.247.128
+        - 122.9.247.134
+        - 122.9.247.216
+        - 122.9.247.56
+        - 123.254.111.87
+        - 142.4.103.90
+        - 174.128.255.228
+        - 175.45.192.234
+        - 202.172.32.172
+        - 202.174.130.116
+        - 203.232.28.10
+        - 209.85.84.165
+        - 209.85.84.167
+        - 31.170.179.179
+        - 58.64.187.22
+        - 60.215.128.246
+        - 64.111.220.218
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - c0eea2b52460d5fef1c4c439c56cf51ea74b5abd
+          - 63323dc4bfa47548317a19ae52d6f179f807bba0
+          - f24a47d4d197b06331aa9c86b915799d0ad9c8c9
+          - 83fe6ace20b721a67d7bf6090d78a053b24d0d06
+          - 4e93941aa05dd908e7cd7bfa6f8ca7b446e7b6f7
+          - c17a9c6841c554ebc5273ff021f5aed5c76920c9
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - a48f881f254dc8452561a8f13e2fb81933473ff22e549787f0ca67f19ba7fe67
+          - 71a52058f6b5cef66302c19169f67cf304507b4454cca83e2c36151da8da1d97
+          - 1be9c68b31247357328596a388010c9cfffadcb6e9841fb22de8b0dc2d161c42
+          - f9a669d22866cd041e2d520c5eb093188962bea8864fdfd0c0abb2b254e9f197
+          - 99ee5b764a5db1cb6b8a4f62605b5536487d9c35a28a23de8f9174659f65bcb2
+          - b803381535ac24ce7c8fdcf6155566d208dfca63fd66ec71bbc6754233e251f5
+          - fb5a7cb34040b1e98b077edaf91cb59a446d8ff07263afe875cf6bd85bfb359d
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - ba6eaf301344de6fe1e079fa960bc698
+          - b0a2c91d85195a72f86399590ac2c549
+          - 8b4b1c933f5f7b47e3c2a9da35fb7dc3
+          - 8f513ea6bbfb8b6a439eef9b68aca11c
+          - 1a7772d0fbedf103e4f21d949392a34b
+          - 0875cf64928da6c9b365384e6dbb3c33
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://blog.cylance.com
+        - http://info.winupdate.net
+        RequestUrl: *id006
+  condition: any of them

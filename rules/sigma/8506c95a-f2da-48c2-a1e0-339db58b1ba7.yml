@@ -1,0 +1,43 @@
+title: spearphishing campaign targeted at least 20 Autonomous System (AS) owners
+id: 8506c95a-f2da-48c2-a1e0-339db58b1ba7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1566.001
+logsource:
+  product: windows
+detection:
+  object_15225:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://infosec.exchange
+        RequestUrl: *id001
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id002
+        - swisscoms.com
+        - onnetmais.org
+        RequestUrl: *id002
+        QueryName: *id002
+    - ip_detection:
+        DestinationIp: &id003
+        - 47.251.162.130
+        SourceIp: *id003
+        IpAddresses: *id003
+        destination.ip: *id003
+        RequestUrl|contains: *id003
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - 4ec4b396bfa932756c90833e781f95c07b15108526a9c218efb35526ad956535
+          - 12031213e31dca91eddc9d4a16d2e2c18da9fb355ee98dc4acbbaa16e35faec3
+          - afc971f687303d0b3f3699883aa428f885d0a3fc20576953a28d31844328ccda
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  condition: any of them

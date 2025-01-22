@@ -1,0 +1,39 @@
+title: OSINT Operation Double Tap from FireEye
+id: 5474459d-1c60-456a-b057-4bdc950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 192.157.198.103
+        - 210.109.99.64
+        - 192.184.60.229
+        - 198.55.115.71
+        - 104.151.248.173
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 5a0c4e1925c76a959ab0588f683ab437
+          - 492a839a3bf9c61b7065589a18c5aa8d
+          - 744a17a3bc6dbd535f568ef1e87d8b9a
+          - 5c08957f05377004376e6a622406f9aa
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://www.fireeye.com
+        - https://github.com
+        RequestUrl: *id003
+  condition: any of them

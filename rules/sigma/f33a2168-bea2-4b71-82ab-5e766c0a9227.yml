@@ -1,0 +1,46 @@
+title: Pandora analysis (INV0027378237.7z) - Malicious attachment
+id: f33a2168-bea2-4b71-82ab-5e766c0a9227
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1043
+- attack.t1566.001
+logsource:
+  product: windows
+detection:
+  object_15231:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 1b254621918e9f35783c870d045e6bc0ed66696a
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - e8cdb541ecfffd85cd71fe64b08ed06728b7c14c4079a51b85b0032178338617
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - a86cc9672c8c4fdf34fba38b7c63562b
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_15234:
+    all:
+    - ip_detection:
+        DestinationIp: &id004
+        - 89.117.55.98
+        SourceIp: *id004
+        IpAddresses: *id004
+        destination.ip: *id004
+        RequestUrl|contains: *id004
+  condition: any of them

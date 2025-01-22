@@ -1,0 +1,71 @@
+title: "OSINT An In-Depth Look at How Pawn Storm\xE2\u20AC\u2122s Java Zero-Day Was\
+  \ Used by Trend Micro"
+id: 55a76999-52e4-45c0-ac44-2ce2950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - ausameetings.com
+        - vhgg5hkvn25.exe
+        - api-ms-win-downlevel-profile-l1-1-0.dll
+        - arrayreplace.class
+        - converter.class
+        - mybytearrayinputstream.class
+        - none2.class
+        - none.class
+        - cormac.mcr
+        - acledit.com
+        - biocpl.org
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 95.215.45.189
+        - 87.236.215.132
+        - 192.111.146.185
+        - 37.187.116.240
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 21835aafe6d46840bb697e8b0d4aac06dec44f5b
+          - b4a515ef9de037f18d96b9b0e48271180f5725b7
+          - 95dc765700f5af406883d07f165011d2ff8dd0fb
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - d93f22d46090bfc19ef51963a781eeb864390c66d9347e86e03bba25a1fc29c5
+          - 3d13f2e5b241168005425b15410556bcf26d04078da6b2ef42bc0c2be7654bf8
+          - 3f2d8744205b59f7bee5a8f13e6a15201f04663ce2c6f33b1684968778e44349
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - afe09fb5a2b97f9e119f70292092604e
+          - 211b7100fd799e9eaabeb13cfa446231
+          - 0c345969a5974e8b1ec6a5e23b2cf777
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://blog.trendmicro.com
+        - http://ausameetings.com
+        RequestUrl: *id006
+  condition: any of them

@@ -1,0 +1,260 @@
+title: CVE-2023-46604 (Apache ActiveMQ) Vulnerability Exploited to Infect Systems
+  With Cryptominers and Rootkits
+id: df7b7020-9f17-4a3c-9824-1baa4ff67cb1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1496
+- attack.group.kinsing
+logsource:
+  product: windows
+detection:
+  object_3728:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.trendmicro.com
+        RequestUrl: *id001
+  object_3729:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - http://185.122.204.197
+        RequestUrl: *id002
+  object_3730:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://194.38.22.53
+        RequestUrl: *id003
+  object_3731:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://194.38.22.53
+        RequestUrl: *id004
+  object_3732:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://194.38.22.53
+        RequestUrl: *id005
+  object_3733:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://194.38.22.53
+        RequestUrl: *id006
+  object_3734:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - http://194.38.22.53
+        RequestUrl: *id007
+  object_3738:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id008
+        - http://194.38.21.25
+        RequestUrl: *id008
+  object_3740:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id009
+        - http://45.15.158.124
+        RequestUrl: *id009
+  object_3742:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id010
+        - http://194.87.252.159
+        RequestUrl: *id010
+  object_3744:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id011
+        - http://194.38.20.196
+        RequestUrl: *id011
+  object_3745:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id012
+          - 38c56b5e1489092b80c9908f04379e5a16876f01
+          SHA1: *id012
+          DriverSha1: *id012
+          TargetProcessSha1: *id012
+          Hashes.sha1: *id012
+        sha256_detection:
+          sha256: &id013
+          - c38c21120d8c17688f9aeb2af5bdafb6b75e1d2673b025b720e50232f888808a
+          SHA256: *id013
+          DriverSha256: *id013
+          TargetProcessSha256: *id013
+          Hashes.sha256: *id013
+        md5_detection:
+          md5: &id014
+          - ccef46c7edf9131ccffc47bd69eb743b
+          MD5: *id014
+          DriverMd5: *id014
+          TargetProcessMd5: *id014
+          Hashes.md5: *id014
+  object_3749:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id015
+        - http://194.38.21.25
+        RequestUrl: *id015
+  object_3751:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id016
+        - http://45.15.158.124
+        RequestUrl: *id016
+  object_3753:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id017
+        - http://194.87.252.159
+        RequestUrl: *id017
+  object_3754:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id018
+          - ee458e526125d60cc1a387b4163376be8e9bc689
+          SHA1: *id018
+          DriverSha1: *id018
+          TargetProcessSha1: *id018
+          Hashes.sha1: *id018
+        sha256_detection:
+          sha256: &id019
+          - c6fbd6896d162a12d9c900056781eb82f44649945808b7b009646b5397bcf6bf
+          SHA256: *id019
+          DriverSha256: *id019
+          TargetProcessSha256: *id019
+          Hashes.sha256: *id019
+        md5_detection:
+          md5: &id020
+          - da753ebcfe793614129fc11890acedbc
+          MD5: *id020
+          DriverMd5: *id020
+          TargetProcessMd5: *id020
+          Hashes.md5: *id020
+  object_3757:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id021
+        - http://194.38.22.53
+        RequestUrl: *id021
+  object_3759:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id022
+        - gateway.fe.apple-dns.net
+        RequestUrl: *id022
+        QueryName: *id022
+  object_3761:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id023
+        - mask-api.fe.apple-dns.net
+        RequestUrl: *id023
+        QueryName: *id023
+  object_3763:
+    all:
+    - ip_detection:
+        DestinationIp: &id024
+        - 169.254.169.254
+        SourceIp: *id024
+        IpAddresses: *id024
+        destination.ip: *id024
+        RequestUrl|contains: *id024
+  object_3765:
+    all:
+    - ip_detection:
+        DestinationIp: &id025
+        - 17.248.193.19
+        SourceIp: *id025
+        IpAddresses: *id025
+        destination.ip: *id025
+        RequestUrl|contains: *id025
+  object_3767:
+    all:
+    - ip_detection:
+        DestinationIp: &id026
+        - 17.248.195.64
+        SourceIp: *id026
+        IpAddresses: *id026
+        destination.ip: *id026
+        RequestUrl|contains: *id026
+  object_3769:
+    all:
+    - ip_detection:
+        DestinationIp: &id027
+        - 17.248.195.71
+        SourceIp: *id027
+        IpAddresses: *id027
+        destination.ip: *id027
+        RequestUrl|contains: *id027
+  object_3771:
+    all:
+    - ip_detection:
+        DestinationIp: &id028
+        - 17.253.83.197
+        SourceIp: *id028
+        IpAddresses: *id028
+        destination.ip: *id028
+        RequestUrl|contains: *id028
+  object_3774:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id029
+        - http://194.38.22.53
+        RequestUrl: *id029
+  object_3775:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id030
+          - b841db7fc24e59e60a9d7e158e3ef50236b605b4
+          SHA1: *id030
+          DriverSha1: *id030
+          TargetProcessSha1: *id030
+          Hashes.sha1: *id030
+        sha256_detection:
+          sha256: &id031
+          - d8f55bbbcc20e81e46b9bf78f93b73f002c76a8fcdb4dc2ae21b8609445c14f9
+          SHA256: *id031
+          DriverSha256: *id031
+          TargetProcessSha256: *id031
+          Hashes.sha256: *id031
+        md5_detection:
+          md5: &id032
+          - 0b882c863de5c302015c1a1cb8616bcd
+          MD5: *id032
+          DriverMd5: *id032
+          TargetProcessMd5: *id032
+          Hashes.md5: *id032
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id033
+          - d8f55bbbcc20e81e46b9bf78f93b73f002c76a8fcdb4dc2ae21b8609445c14f9
+          - 0cc60a0c480e4d898fa77ab501bbd2afaf3f5fb89a2917a31e7f5fdaa6c3879c
+          - 787e2c94e6d9ce5ec01f5cbe9ee2518431eca8523155526d6dc85934c9c5787c
+          - c6fbd6896d162a12d9c900056781eb82f44649945808b7b009646b5397bcf6bf
+          - c38c21120d8c17688f9aeb2af5bdafb6b75e1d2673b025b720e50232f888808a
+          SHA256: *id033
+          DriverSha256: *id033
+          TargetProcessSha256: *id033
+          Hashes.sha256: *id033
+    - url_detection:
+        PowershellCommand|contains: &id034
+        - http://185.122.204.197
+        - http://194.38.22.53
+        RequestUrl: *id034
+  condition: any of them

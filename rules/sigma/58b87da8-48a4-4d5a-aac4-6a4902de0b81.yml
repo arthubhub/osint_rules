@@ -1,0 +1,155 @@
+title: 'OSINT - Covert Channels and Poor Decisions: The Tale of DNSMessenger'
+id: 58b87da8-48a4-4d5a-aac4-6a4902de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - algew.me
+        - aloqd.pw
+        - bpee.pw
+        - bvyv.club
+        - bwuk.club
+        - cgqy.us
+        - cihr.site
+        - ckwl.pw
+        - cnmah.pw
+        - coec.club
+        - cuuo.us
+        - daskd.me
+        - dbxa.pw
+        - dlex.pw
+        - doof.pw
+        - dtxf.pw
+        - dvso.pw
+        - dyiud.com
+        - eady.club
+        - enuv.club
+        - eter.pw
+        - fbjz.pw
+        - fhyi.club
+        - futh.pw
+        - gjcu.pw
+        - gjuc.pw
+        - gnoa.pw
+        - grij.us
+        - gxhp.top
+        - hvzr.info
+        - idjb.us
+        - ihrs.pw
+        - jimw.club
+        - jomp.site
+        - jxhv.site
+        - kjke.pw
+        - kshv.site
+        - kwoe.us
+        - ldzp.pw
+        - lhlv.club
+        - lnoy.site
+        - lvrm.pw
+        - lvxf.pw
+        - mewt.us
+        - mfka.pw
+        - mjet.pw
+        - mjut.pw
+        - mvze.pw
+        - mxfg.pw
+        - nroq.pw
+        - nwrr.pw
+        - nxpu.site
+        - oaax.site
+        - odwf.pw
+        - odyr.us
+        - okiq.pw
+        - oknz.club
+        - ooep.pw
+        - ooyh.us
+        - otzd.pw
+        - oxrp.info
+        - oyaw.club
+        - pafk.us
+        - palj.us
+        - pbbk.us
+        - ppdx.pw
+        - pvze.club
+        - qefg.info
+        - qlpa.club
+        - qznm.pw
+        - reld.info
+        - rnkj.pw
+        - rzzc.pw
+        - sgvt.pw
+        - soru.pw
+        - swio.pw
+        - tijm.pw
+        - tsrs.pw
+        - turp.pw
+        - ueox.club
+        - ufyb.club
+        - utca.site
+        - vdfe.site
+        - vjro.club
+        - vkpo.us
+        - vpua.pw
+        - vqba.info
+        - vwcq.us
+        - vxqt.us
+        - vxwy.pw
+        - wfsv.us
+        - wqiy.info
+        - wvzu.pw
+        - xhqd.pw
+        - yamd.pw
+        - yedq.pw
+        - yqox.pw
+        - ysxy.pw
+        - zcnt.pw
+        - zdqp.pw
+        - zjav.us
+        - zjvz.pw
+        - zmyo.club
+        - zody.pw
+        - zugh.us
+        - cspg.pw
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - d00225d485c597bea712e7c7baa4fba7d7f281e3
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - f9e54609f1f4136da71dbab8f57c2e68e84bcdc32a58cc12ad5f86334ac0eacf
+          - f82baa39ba44d9b356eb5d904917ad36446083f29dced8c5b34454955da89174
+          - 340795d1f2c2bdab1f2382188a7b5c838e0a79d3f059d2db9eb274b0205f6981
+          - 7f0a314f15a6f20ca6dced545fbc9ef8c1634f9ff8eb736deab73e46ae131458
+          - be5f4bfa35fc1b350d38d8ddc8e88d2dd357b84f254318b1f3b07160c3900750
+          - 9b955d9d7f62d405da9cf05425c9b6dd3738ce09160c8a75d396a6de229d9dd7
+          - fd6e7fc11a325c498d73cf683ecbe90ddbf0e1ae1d540b811012bd6980eed882
+          - 6bf9d311ed16e059f9538b4c24c836cf421cf5c0c1f756fdfdeb9e1792ada8ba
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 2abad0ae32dd72bac5da0af1e580a2eb
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://blog.talosintelligence.com
+        RequestUrl: *id005
+  condition: any of them

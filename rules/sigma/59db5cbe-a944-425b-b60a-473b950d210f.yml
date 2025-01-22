@@ -1,0 +1,74 @@
+title: 'M2M -  Locky 2017-10-09 : Affid=3, offline, ".ykcol" : "Invoice IP1234567"
+  - "Invoice-IP1234567.7z"'
+id: 59db5cbe-a944-425b-b60a-473b950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 64.50.172.171
+        - 98.124.251.69
+        - 66.36.173.111
+        - 95.110.196.214
+        - 82.151.131.234
+        - 204.244.185.219
+        - 94.126.70.12
+        - 68.178.159.168
+        - 45.40.135.32
+        - 193.19.92.233
+        - 94.247.178.77
+        - 217.73.227.30
+        - 62.113.249.12
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 517c3203aed9a4229d6260a796f03e448250e0a3
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 203ee7bc02c3d2b01584efc23b5240fdbc37c56a99b17cef8983ff59f564ab18
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 3aeeb55f8239b731603f5c907113a34f
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://amatuermatch.org
+        - http://anderlaw.com
+        - http://hard-grooves.com
+        - http://cagliaricity.it
+        - http://depomedikal.com
+        - http://designordie.ca
+        - http://dewekker.nl
+        - http://drspay.com
+        - http://ecotek.me
+        - http://edeldestillerie-mair.at
+        - http://intra.cfecgcaquitaine.com
+        - http://prova.eshopavant.it
+        - http://prueba.depaterna.com
+        - http://scottfranch.org
+        RequestUrl: *id005
+  condition: any of them

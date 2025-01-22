@@ -1,0 +1,87 @@
+title: OSINT -  New Malware with Ties to SunOrcal Discovered
+id: 5a0a9aa9-23a4-4607-b6df-41a9950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 98.126.156.210
+        - 104.148.70.217
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - da7a5e54d1d45462bda65807c1ef03ee34b7e777
+          - 704886d56ded5817e39d7442b0203c2f76207f92
+          - 9adbe92835ee2cc93e0d99b9d4536eb7727acf47
+          - 7fa8bfc051b98698e6b95cbc7163e4aa41880279
+          - a6e538a01c366580e90e49249251b66dfe39c72f
+          - 03bc4181fb54af3151cab60406a01a44158e5277
+          - b31160953ff19e6abf12fc8319420ab2e1c88e77
+          - 172b4578cb50985b08c227360d9c9df2cf32117a
+          - d62f1f039d0be1d7b2a8ed122d97ee917dbc9ce8
+          - e96be5b542d100913a5bca0f02fb094d6f3ad85b
+          - cbde40a234bff8870f8746eca969c364da7f4aec
+          - 5c6b231111239c0625dc9ff4359d1b8553159ecc
+          - c05d15fc94d096a821f2c689a29dff7679ce087a
+          - 0cea48067ddbc9227363168013142f6f3a5dea9f
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - d560f44188fb56d3abb11d9508e1167329470de19b811163eb1167534722e666
+          - 98eb5465c6330b9b49df2e7c9ad0b1164aa5b35423d9e80495a178eb510cdc1c
+          - 05ddbd0506ec95fb460b3994e5b21cdb0418ba4aa406374ca1b91249349b7640
+          - 18ac3b14300ecfeed4b64a844c16dccb06b0e3513d0954d6c6182f2ea14e4c92
+          - c0f8bb77284b96e07cab1c3fab8800b1bbd030720c74628c4ee5666694ef903d
+          - 9213f70bce491991c4cbbbd7dc3e67d3a3d535b965d7064973b35c50f265e59b
+          - 26c234c73e2c3448589c7d4a0cf17f615ad3666541a4e611e2d8b77637205bcf
+          - ae9f158e4886cfdbfb4f1b3b25707d05f6fd873d0be9d8e7334a2c28741228ee
+          - 1fcda755e8fa23d27329e4bc0443a82e1c1e9a6c1691639db256a187365e4db1
+          - c906250e0a4c457663e37119ebe1efa1e4b97eef1d975f383ac3243f9f09908c
+          - 1813f10bcf74beb582c824c64fff63cb150d178bef93af81d875ca84214307a1
+          - 799139b5278dc2ac24279cc6c3db44f4ef0ea78ee7b721b0ace38fd8018c51ac
+          - 81d887fefdbb0219647991c2b7bddf45c2fede4dc6fc18408f1706e0279615b2
+          - 58312fb742ce881e040e1b5b8555f00a402b8dd4fc886acaae2f862040b3bfc5
+          - 38ea33dab0ba2edd16ecd98cba161c550d1036b253c8666c4110d198948329fb
+          - cb7c0cf1750baaa11783e93369230ee666b9f3da7298e4d1bb9a07af6a439f2f
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 7dcf79a66192e88b92ccc12810e61329
+          - af6a25fc28e0560860c01d74854a2cba
+          - 47cc3592bbf8c3b516ae74c95efb3344
+          - 5eb3a846092cae378fcd45bdf5453536
+          - 11a5b1901243396984670af7acc6cf72
+          - 17587683361d8458aebd9b8fdd07137a
+          - 2d563bf83bddca1f24e8a0ffb951a7e9
+          - aab319d9715d38a37a10d82e87478dfc
+          - 892350b2a44efd9fa1e7c88aec013818
+          - dd7edadd019bc120978a4dad284fbea6
+          - ae185e9c43bb1498a3c653a0886896e3
+          - c629f8f3206e5a6de83b4c996a2bacfb
+          - dadf3d3dd411bc02d7c05ee3a18259ea
+          - 9f289cce6f95949450e3f4c96a187f5d
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://researchcenter.paloaltonetworks.com
+        RequestUrl: *id005
+  condition: any of them

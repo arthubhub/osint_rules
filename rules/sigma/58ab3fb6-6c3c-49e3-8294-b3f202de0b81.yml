@@ -1,0 +1,51 @@
+title: OSINT - The Rise of Dridex and the Role of ESPs
+id: 58ab3fb6-6c3c-49e3-8294-b3f202de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.dridex
+- attack.group.anunak
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 179.177.114.30
+        - 81.130.131.55
+        - 109.235.76.95
+        - 136.243.209.34
+        - 159.226.92.9
+        - 173.196.157.250
+        - 178.195.0.12
+        - 194.150.118.25
+        - 195.22.127.26
+        - 82.99.60.26
+        - 89.35.178.115
+        - 154.0.171.105
+        - 95.208.65.134
+        - 77.236.97.60
+        - 198.167.136.139
+        - 209.20.67.87
+        - 213.222.56.155
+        - 216.51.232.176
+        - 37.0.26.34
+        - 37.139.21.245
+        - 46.17.3.237
+        - 81.155.55.211
+        - 86.130.54.90
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://www.govcert.admin.ch
+        - https://talofinancial-my.sharepoint.com
+        - https://yemposolutions-my.sharepoint.com
+        - https://jensenbowers-my.sharepoint.com
+        RequestUrl: *id002
+  condition: any of them

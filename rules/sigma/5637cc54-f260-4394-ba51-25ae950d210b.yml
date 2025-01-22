@@ -1,0 +1,147 @@
+title: 'OSINT - Case Study of Malicious Actors: Going Postal by CERT.pl'
+id: 5637cc54-f260-4394-ba51-25ae950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - sub-host-peer.net
+        - dynayo-rooxo-gabtype.net
+        - skinder-chatcast-topcat.net
+        - topcat-centido-abadel.net
+        - twitterbug-flashpedia-skipster.net
+        - digiify-devify-chatfly.net
+        - teknation-brighttube-zoomtag.net
+        - meevee-yamba-dynatri.net
+        - bizzanalytics.com
+        - gtagmanager.com
+        - wholetdiedogsout.com
+        - mixpornotube.net
+        - varetz.net
+        - androidflv.net
+        - inter-host-media.in
+        - mini0pera.info
+        - androidbrowser.biz
+        - porno18teens.net
+        - porno18teens.com
+        - privateswingerclub.net
+        - crossfit-air.net
+        - pocztapolska.biz
+        - bounaromnabouna.org
+        - getyourpostrack.net
+        - drivewarning.org
+        - trackthingnotice.com
+        - carefuldrive.net
+        - poczta-sledzenie.com
+        - polska-poczta.com
+        - polskapoczta.net
+        - poczta-polska.info
+        - correosportal24.com
+        - correos-portal.net
+        - au-violation.org
+        - tweeter-stat.ru
+        - walkingdead32.ru
+        - mom-soldi-home-blog.com
+        - mamaprofitwork.com
+        - systememichelle-revenu.com
+        - elena-home-work.com
+        - systememichellerevenu.com
+        - einkommenhausmichelle.com
+        - mom-michelle-successo.com
+        - my-profit-method.com
+        - webrxtopstore.com
+        - bestomedoshopo.com
+        - storerxweb.ru
+        - bluerxproduct.com
+        - rxwebstore.ru
+        - rxmartonline.ru
+        - freebonusrx.com
+        - 18pretty.net
+        - hentailake.com
+        - amour-angels.pw
+        - grouphookupdate.com
+        - mega-fuckbook.com
+        - ihookup-tonight.com
+        - auspost24.net
+        - auspost-track24.net
+        - mymotherhascome.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 46.161.30.225
+        - 46.161.30.16
+        - 46.161.30.17
+        - 46.151.53.40
+        - 109.68.190.175
+        - 176.97.116.164
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 8138d13023baaab29cf48e950a697e1c87fc2aaa
+          - 34d754fef4b443e007915e4b1cffc6527543b065
+          - 5ee4ce7f46e493e35bc49782232d574402bf9b56
+          - ecc45323e6f8634e1084dee1ed06ec05385ff0b6
+          - 85a4bf4a77ee71a6c4fcde55086c0987ea1fa52d
+          - 43b6981ece2643775e49eeb46153bb0a8117edb5
+          - 27f6494ff90c37feb416b9fc5c5fabdaf3280181
+          - e0057fbede771456c7138980f19616a22df1b24e
+          - 356b146eb5fd671dc3f31e1d5d41672064e3bd00
+          - b7825f6aacb14bad987294eb244713937f331151
+          - dc7cb949b66b531802a97566cc9b2c64c2f4218b
+          - 4bbe654bb6ccc41e4b669137c21275bd56e99a4e
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - b566239fc3854276619d7c0c157b837fcda02b6878014549f524de4c89f57b37
+          - 3ab0beaf860e12b318f97dfdc629c066e71b0891e1bfd92473db82b86cc93012
+          - 7cdf57eca5220399c45ddb92eed4bf1ac879ef4dbf150cba190b546b77b50357
+          - 07f29192a339791a997c1a58ba58fa24dff31a60924110a610ed04cd691dac80
+          - 9d7dbb4de40e0ef8867500988653cea03fa89a0c62dcc56a3739327f8a24d504
+          - 94a4809a3ba8d40407c7d1f0cfc0b84446fa417a624043bb621879b42832108c
+          - 9eb68bd28de11fdfb397ba67605c3924d8d32e2ee5473209311ca608f212d4c2
+          - 91d8acd8f3c89b92c39ace385a67ac992fae5e56cf8f8c73b8b02e4e4c58deff
+          - f9f7b0b949c1206c15b9f94702efb6d728988d4ae350748aa481cbf621136260
+          - df87eac90c5f3f04ccf2e38b38c196a00a6c3b225d790bab1cc97fb6c6ef67a1
+          - 85cf88e113429393b4f0a4984f45dc0fb97e2a24b3c96f656607abe139504648
+          - bcb7677cfe84ee85418c018f4fb13811637f05bc1234a9dd5e9be15d13a113ff
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - aba29b7e6a148f79494356576dd82a34
+          - b63c893b714d2da6fff735d9459a667c
+          - c9c98e486a41b5609a38f358177bdb0e
+          - 07511b07cc53df4a0f781d7d5f1c41c1
+          - cc8895761120be76bce62a1ae97ca175
+          - 3cfc854e0cf19a9f609a89b0e8d2cf43
+          - eaacfd8c9fac172119a2688270500ab5
+          - e83d83761416742ab69baf379f2b34dd
+          - 1c9bbcf617414a42837db581abdf6d2c
+          - f2393a0b0fc3a23ee43e7f9802d1fa19
+          - cbd198f3856a0dd386fe9402e4f265e1
+          - 90a645be9c632ef4a10dcba031c68cc1
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - http://www.cert.pl
+        RequestUrl: *id006
+  condition: any of them

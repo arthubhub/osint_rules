@@ -1,0 +1,53 @@
+title: OSINT - Mole66 Cryptomix Ransomware Variant Released
+id: 5ac5d6b1-3848-4918-9e42-4206950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.zeta
+- attack.software.cryptomix
+- attack.group.cryptomix
+- attack.software.zeta
+logsource:
+  product: windows
+detection:
+  object_8092:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - f339b703192a562dde82596319e8720c30aaa5ed
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 15f5cb94b851289d0218f333e06372e43b2a55d241c530d4f61aad3b89f68b91
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - c3294c90474063dfb0d28ef8a693a6cb
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  event_attributes:
+    any:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - 15f5cb94b851289d0218f333e06372e43b2a55d241c530d4f61aad3b89f68b91
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id005
+  condition: any of them

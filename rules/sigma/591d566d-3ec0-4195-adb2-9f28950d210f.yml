@@ -1,0 +1,90 @@
+title: 'Invoice ###### 05/17/2017 from dontreply@random'
+id: 591d566d-3ec0-4195-adb2-9f28950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.jaff
+- attack.software.jaff
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 92.43.113.68
+        - 199.166.6.15
+        - 34.209.214.237
+        - 47.91.107.213
+        - 81.88.57.68
+        - 185.87.184.212
+        - 212.18.226.16
+        - 211.115.89.71
+        - 81.169.145.95
+        - 129.121.5.206
+        - 211.149.239.112
+        - 46.30.213.164
+        - 192.162.100.191
+        - 37.230.111.113
+        - 103.247.9.134
+        - 93.185.104.24
+        - 51.254.159.78
+        - 107.154.161.187
+        - 107.154.168.187
+        - 5.61.25.106
+        - 143.95.74.249
+        - 213.246.39.74
+        - 65.19.169.34
+        - 103.224.248.183
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - 86061f2ae8ba5250c38f20070ba446513918c23dfe35f0670ae555910a94c181
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 716165fb5e07ecc95d45e8761b10ab30
+          - f3d9b2cb51e81d12ff3d5faaca231041
+          - 3f6c1a2735a8595cb1b03260bec9cb1b
+          - 14d05276125e70d43e710ef186261c95
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://peryskop.biz
+        - http://herrossoidffr6644qa.top
+        - http://sjffonrvcik45bd.info
+        - http://eesiiuroffde445.com
+        - http://bbz-regeling.nl
+        - http://blackempire.it
+        - http://diytp.com
+        - http://doppellutz.de
+        - http://easternmas.com
+        - http://edazhu.com
+        - http://estimatingservicesinc.com
+        - http://evasalome.nl
+        - http://kezakotheatre.com
+        - http://monowheels.ru
+        - http://oylumsut.com
+        - http://pta-babel.net
+        - http://taure.cz
+        - http://tenda.it
+        - http://texaslandandlifestyle.com
+        - http://tvapps.ir
+        - http://unykmodels.com
+        - http://westprod.fr
+        - http://ws500.net
+        - http://wxklfy.com
+        RequestUrl: *id004
+  condition: any of them

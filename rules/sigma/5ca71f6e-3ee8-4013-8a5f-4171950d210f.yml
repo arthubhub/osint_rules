@@ -1,0 +1,133 @@
+title: OSINT - Hancitor domains
+id: 5ca71f6e-3ee8-4013-8a5f-4171950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.hancitor
+- attack.group.hancitor
+logsource:
+  product: windows
+detection:
+  object_1553:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 9166f0899cdcf7480b1ec5fb925da7641f3c300d
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - d3fad6911b80be1d64eb88ba23fecbcddc2faa73017b6dbcf78578eff47552ed
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - f2b701d43a43315105d649612b27a2ea
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_1555:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - fa741dca980f1b073baf52be08dadb1c996503ea
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - ec3bee6428b6fa258a8c8bdf5c76a8a47662e8373d43b20870282e1df8423a7e
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - f38c97514e2baafc41081d5f22024fef
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_1557:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - fd9c5ed4f1e0224d864d28f2061c1e0a817a5feb
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 06fcfb449aa241fdd05cf0e1b04d0c111005cabf53e0ac40cf04dcb9a7d71c94
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 32ea156c017d71b87cd00718cdae0eda
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_1559:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id010
+        - https://twitter.com
+        RequestUrl: *id010
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id011
+        - alldogspoop.co
+        - alldogspoop.org
+        - alldogspoop.biz
+        - alldogspoop.info
+        - alldogspoop.mobi
+        - alldogspoop.net
+        - cherryhillpooperscoopers.com
+        - pooperscooperfranchise.com
+        - shopalldogspoop.com
+        RequestUrl: *id011
+        QueryName: *id011
+    - hash_detection:
+        sha256_detection:
+          sha256: &id012
+          - 671b416bfb21522d6ba30b05d8fc04732c8737a5ca35fa531563175fb0815395
+          - 8189564580b804ed65d51990a109ac59bc88fd77518ab415363b5bbd8adc3aa2
+          - 06fcfb449aa241fdd05cf0e1b04d0c111005cabf53e0ac40cf04dcb9a7d71c94
+          - ec3bee6428b6fa258a8c8bdf5c76a8a47662e8373d43b20870282e1df8423a7e
+          - d3fad6911b80be1d64eb88ba23fecbcddc2faa73017b6dbcf78578eff47552ed
+          SHA256: *id012
+          DriverSha256: *id012
+          TargetProcessSha256: *id012
+          Hashes.sha256: *id012
+    - url_detection:
+        PowershellCommand|contains: &id013
+        - https://pastebin.com
+        - https://ghostbin.com
+        - http://automotivedreamteam.com
+        - http://ecsn.biz
+        - http://inazel.es
+        - http://nal.com.ua
+        - http://orik.hu
+        - http://scanelectric.ro
+        - http://syrtaki-santorini.gr
+        - http://duloperes.com
+        - http://reflyhepone.ru
+        - http://gogotwitof.ru
+        RequestUrl: *id013
+  condition: any of them

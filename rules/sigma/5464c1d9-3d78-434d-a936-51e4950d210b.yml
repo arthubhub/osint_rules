@@ -1,0 +1,26 @@
+title: OSINT Expansion on Snake
+id: 5464c1d9-3d78-434d-a936-51e4950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.turla_group
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 192.241.211.213
+        - 62.65.252.12
+        - 41.190.233.29
+        - 190.194.224.149
+        - 80.246.199.24
+        - 62.1.82.32
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+  condition: any of them

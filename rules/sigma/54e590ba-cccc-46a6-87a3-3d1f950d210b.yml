@@ -1,0 +1,65 @@
+title: 'OSINT Babar: espionage software finally found and put under the microscope
+  by gdata'
+id: 54e590ba-cccc-46a6-87a3-3d1f950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 1.9.32.11
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - efbe18eb8a66e4b6289a5c53f22254f76e3a29db
+          - 5da5079754d975d5b04342abf9d60bd0bae181a0
+          - efbe18eb8a66e4b6289a5c53f22254f76e3a29bd
+          - 27a0a98053f3eed82a51cdefbdfec7bb948e1f36
+          - 1798985f4cc2398a482f2232e72e5817562530de
+          - a4226714f346c7844a9183e01961e7609d6fa241
+          - 1e8b4c374db03dcca026c5feba0a5c117f740233
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - c6a182f410b4cda0665cd792f00177c56338018fbc31bb34e41b72f8195c20cc
+          - 7d1e5c4afb1682087d86e793b3fc5a8371dc7c28e27e7196e3b258934f6bafb5
+          - 7bfc135194d3e5b85cbe46ed1c6f5e21dbe8f62c0a3ef56245b2d6500fc3a618
+          - be14d781b85125a6074724964622ab05f89f41e6bacbda398bc7709d1d98a2ef
+          - c72a055b677cd9e5e2b2dcbba520425d023d906e6ee609b79c643d9034938ebf
+          - 82e6f9c10c7ba737f8c79deae4132b9ff82090ccd220eb3d3739365b5276c3c8
+          - aa73634ca325022dd6daff2df30484ec9031939044cf4c2a004cbdb66108281d
+          - 57437a675cae8e71ac33cd2e001ca7ef1b206b028f3c810e884223a0369d2f8a
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 4582d9d2120fb9c80ef01e2135fa3515
+          - 4525141d9e6e7b5a7f4e8c3db3f0c24c
+          - 9fff114f15b86896d8d4978c0ad2813d
+          - 3bbb59afdf9bda4ffdc644d9d51c53e7
+          - b8ac16701c3c15b103e61b5a317692bc
+          - c40e3ee23cf95d992b7cd0b7c01b8599
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://blog.gdatasoftware.com
+        - http://1.9.32.11
+        RequestUrl: *id005
+  condition: any of them

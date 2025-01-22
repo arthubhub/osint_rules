@@ -1,0 +1,80 @@
+title: 'M2M -  Jaff 2017-06-06 : "Order" - "MX-2310U_20170606_123456.pdf"'
+id: 593a41df-b920-4f52-bbc3-4abd950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.jaff
+- attack.software.jaff
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 119.28.85.128
+        - 104.219.248.47
+        - 193.68.112.65
+        - 62.113.208.201
+        - 93.90.178.67
+        - 87.239.14.40
+        - 81.88.48.95
+        - 107.180.4.132
+        - 149.126.4.78
+        - 195.178.14.13
+        - 69.90.161.10
+        - 208.91.198.19
+        - 103.26.99.147
+        - 184.154.159.194
+        - 192.124.249.5
+        - 120.76.113.75
+        - 178.237.37.39
+        - 103.53.43.45
+        - 107.154.105.172
+        - 107.154.106.172
+        - 94.102.7.15
+        - 103.211.216.130
+        - 193.70.95.56
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 76e150bceffaee4322fa70b2c48ced16
+          - 5ca3d8cf1cde038e762b535ec4e905fe
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://10minutesto1.net
+        - http://cafe-bg.com
+        - http://cifroshop.net
+        - http://community-gaming.de
+        - http://cor-huizer.nl
+        - http://essentialnulidtro.com
+        - http://lcpinternational.fr
+        - http://luxurious-ss.com
+        - http://makh.ch
+        - http://marcelrahner.com
+        - http://mciverpei.ca
+        - http://mitservices.net
+        - http://myinti.com
+        - http://mymobimarketing.com
+        - http://oneby1.jp
+        - http://rhiannonwrites.com
+        - http://sdmqgg.com
+        - http://sextoygay.be
+        - http://siddhashrampatrika.com
+        - http://stlawyers.ca
+        - http://studyonazar.com
+        - http://supplementsandfitness.com
+        - http://zechsal.pl
+        - http://whoisfoxxrobiouy.net
+        RequestUrl: *id003
+  condition: any of them

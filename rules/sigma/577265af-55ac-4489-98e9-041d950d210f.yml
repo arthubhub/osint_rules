@@ -1,0 +1,117 @@
+title: 'Malspam 2016-06-28 (Locky campaign subject: ''report'')'
+id: 577265af-55ac-4489-98e9-041d950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - 4k18.com
+        - bisericaromaneasca.ro
+        - bobbysinghwpg.com
+        - certifiedbanker.org
+        - euro-support.be
+        - focolareostuni.it
+        - hudebiah.net
+        - jd-products.nl
+        - bbmarilu.it
+        - bbvogliadimare.it
+        - centrosportivoiunco.it
+        - depaardestal.nl
+        - edilperle.it
+        - bordur32.ru
+        - dugganinternational.ca
+        - hate-metal.com
+        - ingstroymash.ru
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 104.152.168.29
+        - 107.6.169.61
+        - 112.140.178.249
+        - 166.63.125.135
+        - 175.45.184.160
+        - 176.62.167.160
+        - 184.171.252.26
+        - 192.186.246.98
+        - 195.208.1.146
+        - 199.241.184.10
+        - 217.73.226.220
+        - 217.76.156.98
+        - 81.177.140.141
+        - 83.96.159.64
+        - 86.106.30.71
+        - 212.227.33.186
+        - 212.227.33.91
+        - 207.154.33.12
+        - 217.76.130.80
+        - 193.203.99.112
+        - 103.6.198.185
+        - 109.71.40.52
+        - 143.95.250.67
+        - 193.203.99.114
+        - 193.203.99.115
+        - 46.30.213.77
+        - 5.9.13.83
+        - 69.90.162.175
+        - 77.221.130.6
+        - 79.96.219.242
+        - 89.107.186.4
+        - 89.111.177.133
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://4k18.com
+        - http://adbm.co.uk
+        - http://atlantaelectronics.co.id
+        - http://beautifulhosting.com.au
+        - http://bisericaromaneasca.ro
+        - http://bobbysinghwpg.com
+        - http://certifiedbanker.org
+        - http://euro-support.be
+        - http://focolareostuni.it
+        - http://hudebiah.net
+        - http://jd-products.nl
+        - http://potolok-profit.ru
+        - http://staffsolut.nichost.ru
+        - http://tip.ub.ac.id
+        - http://www.centroinfantilelmolino.com
+        - http://vonenidan.de
+        - http://mr2peter.de
+        - http://www.johnlodgearchitects.com
+        - http://www.pececitos.com
+        - http://bbmarilu.it
+        - http://bbvogliadimare.it
+        - http://bibliadarkorbit.za.pl
+        - http://centrosportivoiunco.it
+        - http://depaardestal.nl
+        - http://edilperle.it
+        - http://namifitnessclub.it
+        - http://newgeneration2010.it
+        - http://usdavetrana.it
+        - http://bordur32.ru
+        - http://cond.gribochechki.ru
+        - http://dobramu.za.pl
+        - http://dragon.obywateleuropy.eu
+        - http://dugganinternational.ca
+        - http://ft.driftactive.za.pl
+        - http://fuckcraft.xorg.pl
+        - http://hate-metal.com
+        - http://ingstroymash.ru
+        - http://marxforschung.de
+        - http://mycreativeprint.com
+        - http://sprintbus.com.pl
+        - http://stbb.pt
+        - http://tanie-pranie.za.pl
+        - http://turniejkrzyz.za.pl
+        RequestUrl: *id003
+  condition: any of them

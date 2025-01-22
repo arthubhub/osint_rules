@@ -1,0 +1,170 @@
+title: 'OSINT Threat Advisory: SolarWinds supply chain attack'
+id: e6d2f7c9-c183-43c9-bd3c-3dcfbb34665c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_18191:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 1b476f58ca366b54f34d714ffce3fd73cc30db1a
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - d0d626deb3f9484e649294a8dfa814c5568f846d5aa02d4cdad5d041a29d5600
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 02af7cec58b9a5da1c542b5a32151ba1
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_18193:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 2f1a5a7411d015d01aaee4535835400191645023
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 019085a76ba7126fff22770d71bd901c325fc68ac55aa743327984e89f4b0134
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 2c4a910a1299cdae2a4e55988a2f102e
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_18195:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 75af292f34789a1c782ea36c7127bf6106f595e8
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - c15abaf51e78ca56c0376522d699c978217bf041a3bd3c71d09193efa5717c71
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 56ceb6d0011d87b6e4d7023d7ef85676
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_18197:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 76640508b1e7759e548771a5359eaed353bf1eec
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 32519b85c0b422e4656de6e6c41878e95fd95026267daab4215ee59c107d6c77
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - b91ce2fa41029f6955bff20079468448
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  object_18199:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id013
+          - d130bd75645c2433f88ac03e73395fba172ef676
+          SHA1: *id013
+          DriverSha1: *id013
+          TargetProcessSha1: *id013
+          Hashes.sha1: *id013
+        sha256_detection:
+          sha256: &id014
+          - ce77d116a074dab7a22a0fd4f2c1ab475f16eec42e1ded3c0b0aa8211fe858d6
+          SHA256: *id014
+          DriverSha256: *id014
+          TargetProcessSha256: *id014
+          Hashes.sha256: *id014
+        md5_detection:
+          md5: &id015
+          - 846e27a652a5e1bfbd0ddd38a16dc865
+          MD5: *id015
+          DriverMd5: *id015
+          TargetProcessMd5: *id015
+          Hashes.md5: *id015
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id016
+        - avsvmcloud.com
+        - zupertech.com
+        - panhardware.com
+        - databasegalore.com
+        - incomeupdate.com
+        - highdatabase.com
+        - websitetheme.com
+        - freescanonline.com
+        - virtualdataserver.com
+        - deftsecurity.com
+        - thedoccloud.com
+        - digitalcollege.org
+        - globalnetworkissues.com
+        - seobundlekit.com
+        - virtualwebdata.com
+        RequestUrl: *id016
+        QueryName: *id016
+    - hash_detection:
+        sha256_detection:
+          sha256: &id017
+          - ce77d116a074dab7a22a0fd4f2c1ab475f16eec42e1ded3c0b0aa8211fe858d6
+          - 019085a76ba7126fff22770d71bd901c325fc68ac55aa743327984e89f4b0134
+          - 32519b85c0b422e4656de6e6c41878e95fd95026267daab4215ee59c107d6c77
+          - c15abaf51e78ca56c0376522d699c978217bf041a3bd3c71d09193efa5717c71
+          - ac1b2b89e60707a20e9eb1ca480bc3410ead40643b386d624c5d21b47c02917c
+          - c09040d35630d75dfef0f804f320f8b3d16a481071076918e9b236a321c1ea77
+          - d0d626deb3f9484e649294a8dfa814c5568f846d5aa02d4cdad5d041a29d5600
+          - dab758bf98d9b36fa057a66cd0284737abf89857b73ca89280267ee7caf62f3b
+          SHA256: *id017
+          DriverSha256: *id017
+          TargetProcessSha256: *id017
+          Hashes.sha256: *id017
+    - url_detection:
+        PowershellCommand|contains: &id018
+        - https://blog.talosintelligence.com
+        RequestUrl: *id018
+  condition: any of them

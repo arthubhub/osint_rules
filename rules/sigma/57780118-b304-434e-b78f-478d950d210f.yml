@@ -1,0 +1,16 @@
+title: OSINT H-Worm IOCs from WooYun
+id: 57780118-b304-434e-b78f-478d950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - http://drops.wooyun.org
+        RequestUrl: *id001
+  condition: any of them

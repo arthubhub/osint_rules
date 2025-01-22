@@ -1,0 +1,55 @@
+title: 'New IoT multiplatform Linux malware: Linux/AirDropBot'
+id: 5d9049fa-1a6c-4668-b7aa-4bf7950d210f
+description: edit this field when analysing or editing the rule - reported by "MalwareMustDie"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 179.43.149.189
+        - 147.135.124.113
+        - 192.168.0.14
+        - 185.244.25.200
+        - 185.244.25.201
+        - 185.244.25.202
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 417151777eaaccfc62f778d33fd183ff
+          - d31f047c125deb4c2f879d88b083b9d5
+          - ff1eb225f31e5c29dde47c147f40627e
+          - f3aed39202b51afdd1354adc8362d6bf
+          - 083a5f463cb84f7ae8868cb2eb6a22eb
+          - 9ce4decd27c303a44ab2e187625934f3
+          - b6c6c1b2e89de81db8633144f4cb4b7d
+          - abd5008522f69cca92f8eefeb5f160e2
+          - a84bbf660ace4f0159f3d13e058235e9
+          - 5fec65455bd8c842d672171d475460b6
+          - 4d3cab2d0c51081e509ad25fbd7ff596
+          - 252e2dfdf04290e7e9fc3c4d61bb3529
+          - 5dcdace449052a596bce05328bd23a3b
+          - 9c66fbe776a97a8613bfa983c7dca149
+          - 59af44a74873ac034bd24ca1c3275af5
+          - 9642b8aff1fda24baa6abe0aa8c8b173
+          - e56cec6001f2f6efc0ad7c2fb840aceb
+          - 54d93673f9539f1914008cfe8fd2bbdd
+          - 6d202084d4f25a0aa2225589dab536e7
+          - cfbf1bd882ae7b87d4b04122d2ab42cb
+          - b02af5bd329e19d7e4e2006c9c172713
+          - 85a8aad8d938c44c3f3f51089a60ec16
+          - 2c0afe7b13cdd642336ccc7b3e952d8d
+          - 94b8337a2d217286775bcc36d9c862d2
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+  condition: any of them

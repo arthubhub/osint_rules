@@ -1,0 +1,53 @@
+title: OSINT - New Variant of Petya Ransomware Spreading Like Wildfire
+id: 5952d18c-b4f4-4a20-8373-443802de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.petya
+- attack.group.petya
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 34f917aaba5684fbe56d3c57d48ef2a1aa7cf06d
+          - cd23b7c9e0edef184930bc8e0ca2264f0608bcb3
+          - 56c03d8e43f50568741704aee482704a4f5005ad
+          - 38e2855e11e353cedf9a8a4f2f2747f1c5c07fcf
+          - 9717cfdc2d023812dbc84a941674eb23a2a8ef06
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 027cc450ef5f8c5f653329641ec1fed91f694e0d229928963b30f6b0d7d3a745
+          - f8dbabdfa03068130c277ce49c60e35c029ff29d9e3c74c362521f3fb02670d5
+          - 02ef73bd2458627ed7b397ec26ee2de2e92c71a0e7588f78734761d8edbdcd9f
+          - eae9771e2eeb7ea3c6059485da39e77b8c0c369232f01334954fbac1c186c998
+          - 64b0b58a2c030c77fdb2b537b2fcc4af432bc55ffb36599a31d418c7c69e94b1
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 71b6a493388e7d0b40c83ce903bc6b04
+          - aeee996fd3484f28e5cd85fe26b6bdcd
+          - 2813d34f6197eb4df42c886ec7f234a1
+          - 7e37ab34ecdcc3e77e24522ddfd4852d
+          - e285b6ce047015943e685e6638bd837e
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://securingtomorrow.mcafee.com
+        RequestUrl: *id004
+  condition: any of them

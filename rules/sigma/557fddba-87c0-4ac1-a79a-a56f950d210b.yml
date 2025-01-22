@@ -1,0 +1,54 @@
+title: OSINT Targeted Attacks against Tibetan and Hong Kong Groups Exploiting CVE-2014-4114
+  by Citizen Lab
+id: 557fddba-87c0-4ac1-a79a-a56f950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - c6d8eabea5bac84b90851c1a6e17c0c30bcf5c27
+          - 62dbbcd115497a7bbbd4d1351d50a328914a8b26
+          - cd425ce7f3e4a823d9027780e1b439759c4dc665
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 583c8920445feaf0a963fbd3ad8ad24fd9143941e4046cf376cfe08cb9137613
+          - cbb1d6b3c76c77ce1c3397cd607a7642fcb703201b82e07704e7074061d86ea3
+          - 5ff2bc7267759bde3c02e4c19b8c3144c43c4f7fc2c21f2d4f881ca0b821e00b
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 18bb1ce405e4abac4b0fc63054beac6c
+          - 8a18a13910838d08e38db80a08e15bd5
+          - 2a544922d3ece4351c1af4ca63c24550
+          - 705147c509206151c22515ef568bac51
+          - d7832e76ee2c5c48ae428e57599b589e
+          - 9459478ab9a9b996de683789f77b185c
+          - 8432c77b12343d59d991b0d0e0c12f7d
+          - db5a9c790e909629aaf7079b6996861f
+          - a990071b60046863c98bcf462fede77a
+          - 5730866b34ef589bd398c9a9b6d7e307
+          - d839691657ca814be13d5c9c6511d6b2
+          - 03c900a1b115e759b32e4172dec52aa2
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://citizenlab.org
+        RequestUrl: *id004
+  condition: any of them

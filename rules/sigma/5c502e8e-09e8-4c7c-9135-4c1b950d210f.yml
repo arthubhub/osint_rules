@@ -1,0 +1,60 @@
+title: '2019-01-28: Turla Kazuar RAT'
+id: 5c502e8e-09e8-4c7c-9135-4c1b950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.turla_group
+- attack.group.kazuar
+- attack.software.turla_rat
+- attack.group.turla
+- attack.software.kazuar
+- attack.group.g0010
+- attack.software.turla
+- attack.group.turla_rat
+- attack.software.s0265
+logsource:
+  product: windows
+detection:
+  object_9080:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://twitter.com
+        RequestUrl: *id001
+  object_9081:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 988df2967a7239a4b916cc9fcedaff68
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+  object_9082:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 321fac7d4cabce35ce0adc67c700f47d47359021
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 44cc7f6c2b664f15b499c7d07c78c110861d2cc82787ddaad28a5af8efc3daac
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 988df2967a7239a4b916cc9fcedaff68
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+  condition: any of them

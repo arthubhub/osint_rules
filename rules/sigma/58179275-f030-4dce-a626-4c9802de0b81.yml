@@ -1,0 +1,50 @@
+title: 'OSINT - PSA: Conference Invite used as a Lure by Operation Lotus Blossom Actors'
+id: 58179275-f030-4dce-a626-4c9802de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.lotus_blossom
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 103.249.31.49
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 93352181787450e9147ef40124ebde818a361947
+          - 6f2688d24c67b766c4e3fc5de08e3f2137b71fad
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 61de3df463f94f8583934edb227b174c7e4473b89bd110a6f6ba44fad8c41943
+          - aefa519feab9c8741af98ae2ddc287c404117e208cecd6479ee427f682814286
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 9c06ac2eabd50ebfdd988df3b1a633fe
+          - 20c96609d10b2d497031e1e42970913a
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://researchcenter.paloaltonetworks.com
+        RequestUrl: *id005
+  condition: any of them

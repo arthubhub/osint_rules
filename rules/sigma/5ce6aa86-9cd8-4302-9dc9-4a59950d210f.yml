@@ -1,0 +1,107 @@
+title: OSINT - A journey to Zebrocy land
+id: 5ce6aa86-9cd8-4302-9dc9-4a59950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1056
+- attack.t1024
+- attack.software.s0251
+- attack.t1082
+- attack.t1060
+- attack.t1074
+- attack.t1089
+- attack.t1020
+- attack.t1012
+- attack.t1022
+- attack.t1204
+- attack.t1107
+- attack.t1192
+- attack.t1071
+- attack.t1025
+- attack.t1039
+- attack.t1032
+- attack.t1053
+- attack.t1132
+- attack.t1113
+- attack.t1083
+- attack.software.zebrocy
+- attack.t1047
+- attack.t1057
+- attack.t1122
+- attack.t1079
+- attack.t1001
+- attack.group.zebrocy
+- attack.t1041
+- attack.group.zebrocy_autoit
+- attack.t1005
+- attack.t1085
+- attack.t1008
+- attack.t1043
+- attack.software.zebrocy_autoit
+logsource:
+  product: windows
+detection:
+  object_18163:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 48f8b152b86bed027b9152725505fbf4a24a39fd
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+  object_18164:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 1e9f40ef81176190e1ed9a0659473b2226c53f57
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+  object_18165:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - bfa26857575c49abb129aac87207f03f2b062e07
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+  object_18166:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 48f8b152b86bed027b9152725505fbf4a24a39fd
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - b677cce4a844495a20eed2486ef71f4782c06630df34a6ce085880a045a07902
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 5e4e8cab7fcb43ed39b2feac92ddc2e7
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id007
+        - https://www.welivesecurity.com
+        - http://45.124.132.127
+        RequestUrl: *id007
+  condition: any of them

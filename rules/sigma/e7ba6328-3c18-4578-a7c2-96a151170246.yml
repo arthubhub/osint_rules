@@ -1,0 +1,106 @@
+title: 'OSINT - Reservations Requested: TA558 Targets Hospitality and Travel'
+id: e7ba6328-3c18-4578-a7c2-96a151170246
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.ta558
+logsource:
+  product: windows
+detection:
+  object_1420:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://www.proofpoint.com
+        RequestUrl: *id001
+  object_1421:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://otx.alienvault.com
+        RequestUrl: *id002
+  object_1422:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id003
+          - 796c02729c9cd5d37976ddae205226e6339b64859e9980d56cbfc5f461d00910
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+  object_1423:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id004
+          - 7dc70d023b2ee5a941edd925999bb6864343b11758c7dc18309416f2947ddb6e
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+  object_1424:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id005
+          - c2b817b02e56624c8ed7944e76a3896556dc2b7482f747f4be88f95e232f9207
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+  object_1425:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id006
+          - 2f0f99cbac828092c0ec23e12ecb44cbf53f5a671a80842a2447e6114e4f6979
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id007
+        - 38.132.101.45
+        SourceIp: *id007
+        IpAddresses: *id007
+        destination.ip: *id007
+        RequestUrl|contains: *id007
+    - hash_detection:
+        sha1_detection:
+          sha1: &id008
+          - c396cfb2744bf92575274b277a6c47fe9566dbff
+          SHA1: *id008
+          DriverSha1: *id008
+          TargetProcessSha1: *id008
+          Hashes.sha1: *id008
+        sha256_detection:
+          sha256: &id009
+          - c2b817b02e56624c8ed7944e76a3896556dc2b7482f747f4be88f95e232f9207
+          - b57a9f7321216c3410ebcc9d4b09e73a652dee9e750f96b2f6d7d1e39e2923d6
+          - 7dc70d023b2ee5a941edd925999bb6864343b11758c7dc18309416f2947ddb6e
+          - 796c02729c9cd5d37976ddae205226e6339b64859e9980d56cbfc5f461d00910
+          - 2f0f99cbac828092c0ec23e12ecb44cbf53f5a671a80842a2447e6114e4f6979
+          SHA256: *id009
+          DriverSha256: *id009
+          TargetProcessSha256: *id009
+          Hashes.sha256: *id009
+        md5_detection:
+          md5: &id010
+          - 070950303d80db5d2eb93e21aad77d04
+          MD5: *id010
+          DriverMd5: *id010
+          TargetProcessMd5: *id010
+          Hashes.md5: *id010
+    - url_detection:
+        PowershellCommand|contains: &id011
+        - http://maringareservas.com.br
+        - http://hypemediardf.com.pl
+        - http://corporated.com
+        - http://cdtmaster.com.br
+        RequestUrl: *id011
+  condition: any of them

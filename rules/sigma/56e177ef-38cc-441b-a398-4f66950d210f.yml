@@ -1,0 +1,55 @@
+title: 'OSINT - Shifting Tactics: Tracking changes in years-long espionage campaign
+  against Tibetans'
+id: 56e177ef-38cc-441b-a398-4f66950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - e2126ebc4910ea0308a150466f70534854ec201d
+          - 95cecef175012f145df2e0f8255fe92f55f10414
+          - 67762474fb66217bf2594ede3d15abe12ac4d9e7
+          - 6d81d2ad1acfd707a2ea35672bdd76948889d16b
+          - a7e90928e96a44b5223053fd0c1b96d9a3a36e01
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 8d98155283c4d8373d2cf2c7b8a79302251a0ce76d227a8a2abdc2a244fc550e
+          - 3d9bd26f5bd5401efa17690357f40054a3d7b438ce8c91367dbf469f0d9bd520
+          - df9872d1dc1dbb101bf83c7e7d689d2d6df09966481a365f92cd451ef55f047d
+          - caf76e19a2681dd000c96d8389afc749e774c083aef09f023d4f42fbc49d4d3d
+          - cc8936507438fcf8757ff40309c6057aa780c394b158723b7e8fb07e09793344
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 7735e571d0450e2a31e97e4f8e0f66fa
+          - ea45265fe98b25e719d5a9cc3b412d66
+          - 5c030802ad411fea059cc9cc4c118125
+          - d2e9412428c3bcf3ec98dba8a78adb7b
+          - 1bf438b5744db73eea58379a3b9f30e5
+          - 3b869c8e23d66ad0527882fc79ff7237
+          - fef27f432e0ae8218143bc410fda340e
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://citizenlab.org
+        - http://filegoogle.firewall-gateway.com
+        - http://accountgoogle.firewall-gateway.com
+        RequestUrl: *id004
+  condition: any of them

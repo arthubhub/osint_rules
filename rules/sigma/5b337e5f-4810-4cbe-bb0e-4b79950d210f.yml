@@ -1,0 +1,1363 @@
+title: 'OSINT - RedAlpha: New Campaigns Discovered Targeting the Tibetan Community'
+id: 5b337e5f-4810-4cbe-bb0e-4b79950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.redalpha
+- attack.software.njrat
+logsource:
+  product: windows
+detection:
+  object_15949:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://mobile.twitter.com
+        - https://t.co
+        RequestUrl: *id001
+  object_15950:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 3142029872c39f393e765d59d68cf4f912170629
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - e94284e487e59b53efab9d4584fca766883b916118c9a8ff59514087555e9a8e
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - cb71f3b4f08eba58857532ac90bac77d
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+  object_15951:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id005
+          - 1412102eda0c2e5a5a85cb193dbb1524
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+  object_15952:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id006
+          - f243d9d60dbae71ef36c0200372835f5093e954c
+          SHA1: *id006
+          DriverSha1: *id006
+          TargetProcessSha1: *id006
+          Hashes.sha1: *id006
+        sha256_detection:
+          sha256: &id007
+          - da25eb5db338f6ac42e0e48065c41fded56e14c6271d6cb5f6ae5fc23d5c38a8
+          SHA256: *id007
+          DriverSha256: *id007
+          TargetProcessSha256: *id007
+          Hashes.sha256: *id007
+        md5_detection:
+          md5: &id008
+          - 1412102eda0c2e5a5a85cb193dbb1524
+          MD5: *id008
+          DriverMd5: *id008
+          TargetProcessMd5: *id008
+          Hashes.md5: *id008
+  object_15955:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id009
+          - 7e7d38b1687c5949528d35d8e405d995ac15d1b2
+          SHA1: *id009
+          DriverSha1: *id009
+          TargetProcessSha1: *id009
+          Hashes.sha1: *id009
+        sha256_detection:
+          sha256: &id010
+          - 293d5d84b2d4c4398e9e420c16c04dddf62132cd59cf7519109c6718c288adf3
+          SHA256: *id010
+          DriverSha256: *id010
+          TargetProcessSha256: *id010
+          Hashes.sha256: *id010
+        md5_detection:
+          md5: &id011
+          - 42256b4753724f7feb411bc9912155fd
+          MD5: *id011
+          DriverMd5: *id011
+          TargetProcessMd5: *id011
+          Hashes.md5: *id011
+  object_15956:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id012
+        - www.hktechy.com
+        RequestUrl: *id012
+        QueryName: *id012
+  object_15957:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id013
+          - 6d1d6987d0677f40e473befab121ab1b
+          MD5: *id013
+          DriverMd5: *id013
+          TargetProcessMd5: *id013
+          Hashes.md5: *id013
+  object_15958:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id014
+          - 8f0fe2620f8dadf93eee285834e35655
+          MD5: *id014
+          DriverMd5: *id014
+          TargetProcessMd5: *id014
+          Hashes.md5: *id014
+  object_15959:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id015
+          - cd32ce54ed94dfbde7fb85930a16597d
+          MD5: *id015
+          DriverMd5: *id015
+          TargetProcessMd5: *id015
+          Hashes.md5: *id015
+  object_15960:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id016
+          - 1e9a0a147198b8dfb4a33fc5bb1406635bfbe514
+          SHA1: *id016
+          DriverSha1: *id016
+          TargetProcessSha1: *id016
+          Hashes.sha1: *id016
+        sha256_detection:
+          sha256: &id017
+          - d0d02f811f7c07301e91536f2e1d908c1e67e68d89afbd2bc5bfa2cc747e67ec
+          SHA256: *id017
+          DriverSha256: *id017
+          TargetProcessSha256: *id017
+          Hashes.sha256: *id017
+        md5_detection:
+          md5: &id018
+          - 6dd1be1e491d5bf9cd14686c185c3009
+          MD5: *id018
+          DriverMd5: *id018
+          TargetProcessMd5: *id018
+          Hashes.md5: *id018
+  object_15961:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id019
+          - 83d7ceb2e55ae3d6bbf0936376e82fe5bc97a963
+          SHA1: *id019
+          DriverSha1: *id019
+          TargetProcessSha1: *id019
+          Hashes.sha1: *id019
+        sha256_detection:
+          sha256: &id020
+          - 02bf5fdb11eee6ede01cc061206fe98f60a6b5c90ffead31e8f0a87ccfa414ef
+          SHA256: *id020
+          DriverSha256: *id020
+          TargetProcessSha256: *id020
+          Hashes.sha256: *id020
+        md5_detection:
+          md5: &id021
+          - 5228914b534a437eb7985702e78772be
+          MD5: *id021
+          DriverMd5: *id021
+          TargetProcessMd5: *id021
+          Hashes.md5: *id021
+  object_15962:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id022
+          - e6c0ac26b473d1e0fa9f74fdf1d01af8
+          MD5: *id022
+          DriverMd5: *id022
+          TargetProcessMd5: *id022
+          Hashes.md5: *id022
+  object_15963:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id023
+          - 28bc84813b9dec660fe95d590ef33e574fe16254
+          SHA1: *id023
+          DriverSha1: *id023
+          TargetProcessSha1: *id023
+          Hashes.sha1: *id023
+        sha256_detection:
+          sha256: &id024
+          - 50a28a8ebc68b6c608a073278fbb4255912bf41fd0970192d439097af4670f81
+          SHA256: *id024
+          DriverSha256: *id024
+          TargetProcessSha256: *id024
+          Hashes.sha256: *id024
+        md5_detection:
+          md5: &id025
+          - e28db08b2326a34958f00d68dfb034b0
+          MD5: *id025
+          DriverMd5: *id025
+          TargetProcessMd5: *id025
+          Hashes.md5: *id025
+  object_15964:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id026
+          - c94a39d58450b81087b4f1f5fd304add
+          MD5: *id026
+          DriverMd5: *id026
+          TargetProcessMd5: *id026
+          Hashes.md5: *id026
+  object_15965:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id027
+          - 3a2b1a98c0a31ed32759f48df34b4bc8
+          MD5: *id027
+          DriverMd5: *id027
+          TargetProcessMd5: *id027
+          Hashes.md5: *id027
+  object_15966:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id028
+          - e781aa54be06e010f1096fcc39a95df144659bd3
+          SHA1: *id028
+          DriverSha1: *id028
+          TargetProcessSha1: *id028
+          Hashes.sha1: *id028
+        sha256_detection:
+          sha256: &id029
+          - 1967bd2047fd9dabe3d95bdaee7c8e7f8d5bd0e378968a634e157ec4d72db17c
+          SHA256: *id029
+          DriverSha256: *id029
+          TargetProcessSha256: *id029
+          Hashes.sha256: *id029
+        md5_detection:
+          md5: &id030
+          - c74608c70a59371cbf016316bebfab06
+          MD5: *id030
+          DriverMd5: *id030
+          TargetProcessMd5: *id030
+          Hashes.md5: *id030
+  object_15967:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id031
+          - da9c4aad7e38b904106a059b9b6318746fa6175d
+          SHA1: *id031
+          DriverSha1: *id031
+          TargetProcessSha1: *id031
+          Hashes.sha1: *id031
+        sha256_detection:
+          sha256: &id032
+          - b1fe92e04de787bf222847ed889695f26277789b05fa389406a6c380be5d8376
+          SHA256: *id032
+          DriverSha256: *id032
+          TargetProcessSha256: *id032
+          Hashes.sha256: *id032
+        md5_detection:
+          md5: &id033
+          - cd32ce54ed94dfbde7fb85930a16597d
+          MD5: *id033
+          DriverMd5: *id033
+          TargetProcessMd5: *id033
+          Hashes.md5: *id033
+  object_15969:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id034
+          - 84b80f942683d1b29180861664ec31d56321b975
+          SHA1: *id034
+          DriverSha1: *id034
+          TargetProcessSha1: *id034
+          Hashes.sha1: *id034
+        sha256_detection:
+          sha256: &id035
+          - 25445c91f232b6c3ca3ec30fa1ef2f168ddff276ce3f15f9d8eb4f8b1d19a0ca
+          SHA256: *id035
+          DriverSha256: *id035
+          TargetProcessSha256: *id035
+          Hashes.sha256: *id035
+        md5_detection:
+          md5: &id036
+          - 8f0fe2620f8dadf93eee285834e35655
+          MD5: *id036
+          DriverMd5: *id036
+          TargetProcessMd5: *id036
+          Hashes.md5: *id036
+  object_15971:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id037
+          - ba977849cde0836a10da99cbb952f672b360a311
+          SHA1: *id037
+          DriverSha1: *id037
+          TargetProcessSha1: *id037
+          Hashes.sha1: *id037
+        sha256_detection:
+          sha256: &id038
+          - e8b8e4d8694600116b0d7d6062d8f5b77f25e69e993f13be56399cadf175e512
+          SHA256: *id038
+          DriverSha256: *id038
+          TargetProcessSha256: *id038
+          Hashes.sha256: *id038
+        md5_detection:
+          md5: &id039
+          - 6d1d6987d0677f40e473befab121ab1b
+          MD5: *id039
+          DriverMd5: *id039
+          TargetProcessMd5: *id039
+          Hashes.md5: *id039
+  object_15973:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id040
+          - e86204a1c55448eb61c1d03895cf1aecf6c4ce07
+          SHA1: *id040
+          DriverSha1: *id040
+          TargetProcessSha1: *id040
+          Hashes.sha1: *id040
+        sha256_detection:
+          sha256: &id041
+          - 30e628bfbf80a8cb432b679fdeaccbe3c0ab7eaee8d0899fba7a16853abf35b9
+          SHA256: *id041
+          DriverSha256: *id041
+          TargetProcessSha256: *id041
+          Hashes.sha256: *id041
+        md5_detection:
+          md5: &id042
+          - 3a2b1a98c0a31ed32759f48df34b4bc8
+          MD5: *id042
+          DriverMd5: *id042
+          TargetProcessMd5: *id042
+          Hashes.md5: *id042
+  object_15975:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id043
+          - e15ed8a83c9e1745497fbf33aa9af3b19b2ecbda
+          SHA1: *id043
+          DriverSha1: *id043
+          TargetProcessSha1: *id043
+          Hashes.sha1: *id043
+        sha256_detection:
+          sha256: &id044
+          - d4c94b5fed3293f9474de519b6ef232070b38a07e924d0dee13eac728fdac26d
+          SHA256: *id044
+          DriverSha256: *id044
+          TargetProcessSha256: *id044
+          Hashes.sha256: *id044
+        md5_detection:
+          md5: &id045
+          - c94a39d58450b81087b4f1f5fd304add
+          MD5: *id045
+          DriverMd5: *id045
+          TargetProcessMd5: *id045
+          Hashes.md5: *id045
+  object_15978:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id046
+          - acf58d62cdee49cacd253bc759b043d883aad30a
+          SHA1: *id046
+          DriverSha1: *id046
+          TargetProcessSha1: *id046
+          Hashes.sha1: *id046
+        sha256_detection:
+          sha256: &id047
+          - d5c38ea22a4caad56490c6fae7605117dcbea771caef55a4d8072640be1727c5
+          SHA256: *id047
+          DriverSha256: *id047
+          TargetProcessSha256: *id047
+          Hashes.sha256: *id047
+        md5_detection:
+          md5: &id048
+          - e6c0ac26b473d1e0fa9f74fdf1d01af8
+          MD5: *id048
+          DriverMd5: *id048
+          TargetProcessMd5: *id048
+          Hashes.md5: *id048
+  object_15986:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id049
+        - doc.internetdocss.com
+        RequestUrl: *id049
+        QueryName: *id049
+    - ip_detection:
+        DestinationIp: &id050
+        - 220.218.70.160
+        SourceIp: *id050
+        IpAddresses: *id050
+        destination.ip: *id050
+        RequestUrl|contains: *id050
+  object_15987:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id051
+        - 220x218x70x160.ap220.ftth.ucom.ne.jp
+        RequestUrl: *id051
+        QueryName: *id051
+    - ip_detection:
+        DestinationIp: &id052
+        - 220.218.70.160
+        SourceIp: *id052
+        IpAddresses: *id052
+        destination.ip: *id052
+        RequestUrl|contains: *id052
+  object_15988:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id053
+        - u2xu2.com
+        RequestUrl: *id053
+        QueryName: *id053
+    - ip_detection:
+        DestinationIp: &id054
+        - 220.218.70.160
+        SourceIp: *id054
+        IpAddresses: *id054
+        destination.ip: *id054
+        RequestUrl|contains: *id054
+  object_15989:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id055
+        - hktechy.com
+        RequestUrl: *id055
+        QueryName: *id055
+    - ip_detection:
+        DestinationIp: &id056
+        - 198.44.172.97
+        SourceIp: *id056
+        IpAddresses: *id056
+        destination.ip: *id056
+        RequestUrl|contains: *id056
+  object_15990:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id057
+          - 1412102eda0c2e5a5a85cb193dbb1524
+          MD5: *id057
+          DriverMd5: *id057
+          TargetProcessMd5: *id057
+          Hashes.md5: *id057
+  object_15991:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id058
+          - 1b67183acc18d7641917f4fe07c1b053
+          MD5: *id058
+          DriverMd5: *id058
+          TargetProcessMd5: *id058
+          Hashes.md5: *id058
+  object_15992:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id059
+          - 6d1d6987d0677f40e473befab121ab1b
+          MD5: *id059
+          DriverMd5: *id059
+          TargetProcessMd5: *id059
+          Hashes.md5: *id059
+  object_15993:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id060
+        - doc.internetdocss.com
+        RequestUrl: *id060
+        QueryName: *id060
+    - ip_detection:
+        DestinationIp: &id061
+        - 45.77.250.80
+        SourceIp: *id061
+        IpAddresses: *id061
+        destination.ip: *id061
+        RequestUrl|contains: *id061
+  object_15994:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id062
+        - doc.internetdocss.com
+        RequestUrl: *id062
+        QueryName: *id062
+    - ip_detection:
+        DestinationIp: &id063
+        - 122.10.84.146
+        SourceIp: *id063
+        IpAddresses: *id063
+        destination.ip: *id063
+        RequestUrl|contains: *id063
+  object_15995:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id064
+        - item.internetdocss.com
+        RequestUrl: *id064
+        QueryName: *id064
+    - ip_detection:
+        DestinationIp: &id065
+        - 45.77.250.80
+        SourceIp: *id065
+        IpAddresses: *id065
+        destination.ip: *id065
+        RequestUrl|contains: *id065
+  object_15996:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id066
+        - cfr.internetdocss.com
+        RequestUrl: *id066
+        QueryName: *id066
+    - ip_detection:
+        DestinationIp: &id067
+        - 45.77.250.80
+        SourceIp: *id067
+        IpAddresses: *id067
+        destination.ip: *id067
+        RequestUrl|contains: *id067
+  object_15997:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id068
+        - tootopia.internetdocss.com
+        RequestUrl: *id068
+        QueryName: *id068
+    - ip_detection:
+        DestinationIp: &id069
+        - 45.77.250.80
+        SourceIp: *id069
+        IpAddresses: *id069
+        destination.ip: *id069
+        RequestUrl|contains: *id069
+  object_15998:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id070
+        - oc.internetdocss.com
+        RequestUrl: *id070
+        QueryName: *id070
+    - ip_detection:
+        DestinationIp: &id071
+        - 45.77.250.80
+        SourceIp: *id071
+        IpAddresses: *id071
+        destination.ip: *id071
+        RequestUrl|contains: *id071
+  object_15999:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id072
+        - thewire.internetdocss.com
+        RequestUrl: *id072
+        QueryName: *id072
+    - ip_detection:
+        DestinationIp: &id073
+        - 45.77.250.80
+        SourceIp: *id073
+        IpAddresses: *id073
+        destination.ip: *id073
+        RequestUrl|contains: *id073
+  object_16000:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id074
+        - tibet.internetdocss.com
+        RequestUrl: *id074
+        QueryName: *id074
+    - ip_detection:
+        DestinationIp: &id075
+        - 45.77.250.80
+        SourceIp: *id075
+        IpAddresses: *id075
+        destination.ip: *id075
+        RequestUrl|contains: *id075
+  object_16001:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id076
+        - savetibet.internetdocss.com
+        RequestUrl: *id076
+        QueryName: *id076
+    - ip_detection:
+        DestinationIp: &id077
+        - 45.77.250.80
+        SourceIp: *id077
+        IpAddresses: *id077
+        destination.ip: *id077
+        RequestUrl|contains: *id077
+  object_16002:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id078
+        - blog.tibetcul.internetdocss.com
+        RequestUrl: *id078
+        QueryName: *id078
+    - ip_detection:
+        DestinationIp: &id079
+        - 45.77.250.80
+        SourceIp: *id079
+        IpAddresses: *id079
+        destination.ip: *id079
+        RequestUrl|contains: *id079
+  object_16003:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id080
+        - rediff.internetdocss.com
+        RequestUrl: *id080
+        QueryName: *id080
+    - ip_detection:
+        DestinationIp: &id081
+        - 45.77.250.80
+        SourceIp: *id081
+        IpAddresses: *id081
+        destination.ip: *id081
+        RequestUrl|contains: *id081
+  object_16004:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id082
+        - ndtv.internetdocss.com
+        RequestUrl: *id082
+        QueryName: *id082
+    - ip_detection:
+        DestinationIp: &id083
+        - 45.77.250.80
+        SourceIp: *id083
+        IpAddresses: *id083
+        destination.ip: *id083
+        RequestUrl|contains: *id083
+  object_16005:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id084
+        - business.internetdocss.com
+        RequestUrl: *id084
+        QueryName: *id084
+    - ip_detection:
+        DestinationIp: &id085
+        - 45.77.250.80
+        SourceIp: *id085
+        IpAddresses: *id085
+        destination.ip: *id085
+        RequestUrl|contains: *id085
+  object_16006:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id086
+        - apple.internetdocss.com
+        RequestUrl: *id086
+        QueryName: *id086
+    - ip_detection:
+        DestinationIp: &id087
+        - 45.77.250.80
+        SourceIp: *id087
+        IpAddresses: *id087
+        destination.ip: *id087
+        RequestUrl|contains: *id087
+  object_16007:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id088
+        - chinaaid.internetdocss.com
+        RequestUrl: *id088
+        QueryName: *id088
+    - ip_detection:
+        DestinationIp: &id089
+        - 45.77.250.80
+        SourceIp: *id089
+        IpAddresses: *id089
+        destination.ip: *id089
+        RequestUrl|contains: *id089
+  object_16008:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id090
+        - epochtimes.internetdocss.com
+        RequestUrl: *id090
+        QueryName: *id090
+    - ip_detection:
+        DestinationIp: &id091
+        - 45.77.250.80
+        SourceIp: *id091
+        IpAddresses: *id091
+        destination.ip: *id091
+        RequestUrl|contains: *id091
+  object_16009:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id092
+        - artvoice.internetdocss.com
+        RequestUrl: *id092
+        QueryName: *id092
+    - ip_detection:
+        DestinationIp: &id093
+        - 45.77.250.80
+        SourceIp: *id093
+        IpAddresses: *id093
+        destination.ip: *id093
+        RequestUrl|contains: *id093
+  object_16010:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id094
+        - docs.internetdocss.com
+        RequestUrl: *id094
+        QueryName: *id094
+    - ip_detection:
+        DestinationIp: &id095
+        - 45.77.250.80
+        SourceIp: *id095
+        IpAddresses: *id095
+        destination.ip: *id095
+        RequestUrl|contains: *id095
+  object_16011:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id096
+        - www.apple.internetdocss.com
+        RequestUrl: *id096
+        QueryName: *id096
+    - ip_detection:
+        DestinationIp: &id097
+        - 45.77.250.80
+        SourceIp: *id097
+        IpAddresses: *id097
+        destination.ip: *id097
+        RequestUrl|contains: *id097
+  object_16012:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id098
+        - www.doc.internetdocss.com
+        RequestUrl: *id098
+        QueryName: *id098
+    - ip_detection:
+        DestinationIp: &id099
+        - 45.77.250.80
+        SourceIp: *id099
+        IpAddresses: *id099
+        destination.ip: *id099
+        RequestUrl|contains: *id099
+  object_16013:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id100
+        - doc.internetdocss.com
+        RequestUrl: *id100
+        QueryName: *id100
+    - ip_detection:
+        DestinationIp: &id101
+        - 45.77.250.80
+        SourceIp: *id101
+        IpAddresses: *id101
+        destination.ip: *id101
+        RequestUrl|contains: *id101
+  object_16014:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id102
+        - vot.internetdocss.com
+        RequestUrl: *id102
+        QueryName: *id102
+    - ip_detection:
+        DestinationIp: &id103
+        - 45.77.250.80
+        SourceIp: *id103
+        IpAddresses: *id103
+        destination.ip: *id103
+        RequestUrl|contains: *id103
+  object_16015:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id104
+        - video.internetdocss.com
+        RequestUrl: *id104
+        QueryName: *id104
+    - ip_detection:
+        DestinationIp: &id105
+        - 45.77.250.80
+        SourceIp: *id105
+        IpAddresses: *id105
+        destination.ip: *id105
+        RequestUrl|contains: *id105
+  object_16016:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id106
+        - my.anti-spammail.services
+        RequestUrl: *id106
+        QueryName: *id106
+    - ip_detection:
+        DestinationIp: &id107
+        - 45.77.250.80
+        SourceIp: *id107
+        IpAddresses: *id107
+        destination.ip: *id107
+        RequestUrl|contains: *id107
+  object_16017:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id108
+        - u2xu2.com
+        RequestUrl: *id108
+        QueryName: *id108
+    - ip_detection:
+        DestinationIp: &id109
+        - 144.48.220.167
+        SourceIp: *id109
+        IpAddresses: *id109
+        destination.ip: *id109
+        RequestUrl|contains: *id109
+  object_16018:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id110
+        - u2xu2.com
+        RequestUrl: *id110
+        QueryName: *id110
+    - ip_detection:
+        DestinationIp: &id111
+        - 27.126.179.158
+        SourceIp: *id111
+        IpAddresses: *id111
+        destination.ip: *id111
+        RequestUrl|contains: *id111
+  object_16019:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id112
+        - u2xu2.com
+        RequestUrl: *id112
+        QueryName: *id112
+    - ip_detection:
+        DestinationIp: &id113
+        - 220.218.70.160
+        SourceIp: *id113
+        IpAddresses: *id113
+        destination.ip: *id113
+        RequestUrl|contains: *id113
+  object_16020:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id114
+        - u2xu2.com
+        RequestUrl: *id114
+        QueryName: *id114
+    - ip_detection:
+        DestinationIp: &id115
+        - 211.44.63.39
+        SourceIp: *id115
+        IpAddresses: *id115
+        destination.ip: *id115
+        RequestUrl|contains: *id115
+  object_16021:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id116
+          - 1929db297c9d7d88a6427b8603a7145b
+          MD5: *id116
+          DriverMd5: *id116
+          TargetProcessMd5: *id116
+          Hashes.md5: *id116
+  object_16022:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id117
+        - striker.internetdocss.com
+        RequestUrl: *id117
+        QueryName: *id117
+    - ip_detection:
+        DestinationIp: &id118
+        - 27.126.179.157
+        SourceIp: *id118
+        IpAddresses: *id118
+        destination.ip: *id118
+        RequestUrl|contains: *id118
+  object_16023:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id119
+          - c8e61a4282589c93774be2cddc109599316087b7
+          SHA1: *id119
+          DriverSha1: *id119
+          TargetProcessSha1: *id119
+          Hashes.sha1: *id119
+  object_16024:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id120
+          - dd3f4da890fa00b0b6032d1141f54490c093c297
+          SHA1: *id120
+          DriverSha1: *id120
+          TargetProcessSha1: *id120
+          Hashes.sha1: *id120
+  object_16025:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id121
+        - http.ackques.com
+        RequestUrl: *id121
+        QueryName: *id121
+    - ip_detection:
+        DestinationIp: &id122
+        - 7.126.179.159
+        SourceIp: *id122
+        IpAddresses: *id122
+        destination.ip: *id122
+        RequestUrl|contains: *id122
+  object_16026:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id123
+        - sp.u2xu2.com
+        RequestUrl: *id123
+        QueryName: *id123
+    - ip_detection:
+        DestinationIp: &id124
+        - 122.10.84.146
+        SourceIp: *id124
+        IpAddresses: *id124
+        destination.ip: *id124
+        RequestUrl|contains: *id124
+  object_16027:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id125
+          - c74608c70a59371cbf016316bebfab06
+          MD5: *id125
+          DriverMd5: *id125
+          TargetProcessMd5: *id125
+          Hashes.md5: *id125
+  object_16028:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id126
+        - ktechy.com
+        RequestUrl: *id126
+        QueryName: *id126
+  object_16029:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id127
+        - angtechy.com
+        RequestUrl: *id127
+        QueryName: *id127
+    - ip_detection:
+        DestinationIp: &id128
+        - 15.126.39.107
+        SourceIp: *id128
+        IpAddresses: *id128
+        destination.ip: *id128
+        RequestUrl|contains: *id128
+  object_16030:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id129
+        - cqledu.com
+        RequestUrl: *id129
+        QueryName: *id129
+    - ip_detection:
+        DestinationIp: &id130
+        - 115.126.39.107
+        SourceIp: *id130
+        IpAddresses: *id130
+        destination.ip: *id130
+        RequestUrl|contains: *id130
+  object_16031:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id131
+        - mail-aol.space
+        RequestUrl: *id131
+        QueryName: *id131
+    - ip_detection:
+        DestinationIp: &id132
+        - 115.126.39.107
+        SourceIp: *id132
+        IpAddresses: *id132
+        destination.ip: *id132
+        RequestUrl|contains: *id132
+  object_16032:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id133
+        - drlve-gooog1e.com
+        RequestUrl: *id133
+        QueryName: *id133
+    - ip_detection:
+        DestinationIp: &id134
+        - 115.126.39.107
+        SourceIp: *id134
+        IpAddresses: *id134
+        destination.ip: *id134
+        RequestUrl|contains: *id134
+  object_16033:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id135
+        - login-live.space
+        RequestUrl: *id135
+        QueryName: *id135
+    - ip_detection:
+        DestinationIp: &id136
+        - 115.126.39.107
+        SourceIp: *id136
+        IpAddresses: *id136
+        destination.ip: *id136
+        RequestUrl|contains: *id136
+  object_16034:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id137
+        - mail-dsi-go.space
+        RequestUrl: *id137
+        QueryName: *id137
+    - ip_detection:
+        DestinationIp: &id138
+        - 115.126.39.107
+        SourceIp: *id138
+        IpAddresses: *id138
+        destination.ip: *id138
+        RequestUrl|contains: *id138
+  object_16035:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id139
+        - mail-epochtimes.space
+        RequestUrl: *id139
+        QueryName: *id139
+    - ip_detection:
+        DestinationIp: &id140
+        - 115.126.39.107
+        SourceIp: *id140
+        IpAddresses: *id140
+        destination.ip: *id140
+        RequestUrl|contains: *id140
+  object_16036:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id141
+        - mail-defense.tk
+        RequestUrl: *id141
+        QueryName: *id141
+    - ip_detection:
+        DestinationIp: &id142
+        - 115.126.39.107
+        SourceIp: *id142
+        IpAddresses: *id142
+        destination.ip: *id142
+        RequestUrl|contains: *id142
+  object_16037:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id143
+        - webmail-dalailama.com
+        RequestUrl: *id143
+        QueryName: *id143
+    - ip_detection:
+        DestinationIp: &id144
+        - 115.126.39.107
+        SourceIp: *id144
+        IpAddresses: *id144
+        destination.ip: *id144
+        RequestUrl|contains: *id144
+  object_16038:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id145
+        - mail.youxinpai.com
+        RequestUrl: *id145
+        QueryName: *id145
+    - ip_detection:
+        DestinationIp: &id146
+        - 115.126.39.107
+        SourceIp: *id146
+        IpAddresses: *id146
+        destination.ip: *id146
+        RequestUrl|contains: *id146
+  object_16039:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id147
+        - plshl.com
+        RequestUrl: *id147
+        QueryName: *id147
+    - ip_detection:
+        DestinationIp: &id148
+        - 115.126.39.107
+        SourceIp: *id148
+        IpAddresses: *id148
+        destination.ip: *id148
+        RequestUrl|contains: *id148
+  object_16040:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id149
+        - webmail-mpt.space
+        RequestUrl: *id149
+        QueryName: *id149
+    - ip_detection:
+        DestinationIp: &id150
+        - 115.126.39.107
+        SourceIp: *id150
+        IpAddresses: *id150
+        destination.ip: *id150
+        RequestUrl|contains: *id150
+  object_16041:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id151
+        - wengiguowengui.space
+        RequestUrl: *id151
+        QueryName: *id151
+    - ip_detection:
+        DestinationIp: &id152
+        - 115.126.39.107
+        SourceIp: *id152
+        IpAddresses: *id152
+        destination.ip: *id152
+        RequestUrl|contains: *id152
+  object_16042:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id153
+        - tk.u2xu2.com
+        RequestUrl: *id153
+        QueryName: *id153
+    - ip_detection:
+        DestinationIp: &id154
+        - 27.126.179.159
+        - 103.20.193.156
+        SourceIp: *id154
+        IpAddresses: *id154
+        destination.ip: *id154
+        RequestUrl|contains: *id154
+  object_16043:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id155
+          - 83ffd697edd0089204779f5bfb031023
+          MD5: *id155
+          DriverMd5: *id155
+          TargetProcessMd5: *id155
+          Hashes.md5: *id155
+  object_16044:
+    all:
+    - ip_detection:
+        DestinationIp: &id156
+        - 103.20.193.156
+        SourceIp: *id156
+        IpAddresses: *id156
+        destination.ip: *id156
+        RequestUrl|contains: *id156
+  object_16045:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id157
+        - cqyrxy.com
+        RequestUrl: *id157
+        QueryName: *id157
+    - ip_detection:
+        DestinationIp: &id158
+        - 115.126.39.107
+        SourceIp: *id158
+        IpAddresses: *id158
+        destination.ip: *id158
+        RequestUrl|contains: *id158
+  object_16046:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id159
+        - drive-mail-google.com
+        RequestUrl: *id159
+        QueryName: *id159
+  object_16047:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id160
+        - drive-accounts-gooogle.com
+        RequestUrl: *id160
+        QueryName: *id160
+  object_16048:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id161
+          - c6e336550bd1c087ee2a211781fd9280
+          MD5: *id161
+          DriverMd5: *id161
+          TargetProcessMd5: *id161
+          Hashes.md5: *id161
+  object_16049:
+    all:
+    - hash_detection:
+        md5_detection:
+          md5: &id162
+          - d4ea9027edca1d01c62d9f43a2975d30
+          MD5: *id162
+          DriverMd5: *id162
+          TargetProcessMd5: *id162
+          Hashes.md5: *id162
+  object_16054:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id163
+          - ebedaa84b473d939ba91e2dff7b47e8c0d5716b2
+          SHA1: *id163
+          DriverSha1: *id163
+          TargetProcessSha1: *id163
+          Hashes.sha1: *id163
+        sha256_detection:
+          sha256: &id164
+          - 7354fd9fdb07f2509f8dab3bb23df53e21dd02ab2a4745d27eddb4caeaf5be14
+          SHA256: *id164
+          DriverSha256: *id164
+          TargetProcessSha256: *id164
+          Hashes.sha256: *id164
+        md5_detection:
+          md5: &id165
+          - c6e336550bd1c087ee2a211781fd9280
+          MD5: *id165
+          DriverMd5: *id165
+          TargetProcessMd5: *id165
+          Hashes.md5: *id165
+  object_16056:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id166
+          - f3ebba32e13b355e301d310cc63fbd799787f6c2
+          SHA1: *id166
+          DriverSha1: *id166
+          TargetProcessSha1: *id166
+          Hashes.sha1: *id166
+        sha256_detection:
+          sha256: &id167
+          - aa91afdab184f05495cb3cdd9ff71110b000fbb3480f2108d2522a999ff4e9dd
+          SHA256: *id167
+          DriverSha256: *id167
+          TargetProcessSha256: *id167
+          Hashes.sha256: *id167
+        md5_detection:
+          md5: &id168
+          - 1929db297c9d7d88a6427b8603a7145b
+          MD5: *id168
+          DriverMd5: *id168
+          TargetProcessMd5: *id168
+          Hashes.md5: *id168
+  object_16059:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id169
+          - 0163c73acebe691907f4100321dbbefc95a0da49
+          SHA1: *id169
+          DriverSha1: *id169
+          TargetProcessSha1: *id169
+          Hashes.sha1: *id169
+        sha256_detection:
+          sha256: &id170
+          - 8ddb7c0fdf7206441dfd999c49d1113b55e8b0d91de4205e39225d20ae8e567d
+          SHA256: *id170
+          DriverSha256: *id170
+          TargetProcessSha256: *id170
+          Hashes.sha256: *id170
+        md5_detection:
+          md5: &id171
+          - d4ea9027edca1d01c62d9f43a2975d30
+          MD5: *id171
+          DriverMd5: *id171
+          TargetProcessMd5: *id171
+          Hashes.md5: *id171
+  object_16061:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id172
+          - c2862a30d486297a005915421f75703ae9b35223
+          SHA1: *id172
+          DriverSha1: *id172
+          TargetProcessSha1: *id172
+          Hashes.sha1: *id172
+        sha256_detection:
+          sha256: &id173
+          - 9cdaad7554b1b39fdaf0e5f0ad41e7006d36e0f9791dc9c1cf3d50b73f6ca907
+          SHA256: *id173
+          DriverSha256: *id173
+          TargetProcessSha256: *id173
+          Hashes.sha256: *id173
+        md5_detection:
+          md5: &id174
+          - 83ffd697edd0089204779f5bfb031023
+          MD5: *id174
+          DriverMd5: *id174
+          TargetProcessMd5: *id174
+          Hashes.md5: *id174
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id175
+        - 122.10.84.146
+        - 103.245.22.117
+        - 103.245.22.124
+        - 103.30.7.76
+        - 103.30.7.77
+        - 103.20.192.59
+        - 103.20.195.140
+        - 103.20.192.4
+        - 103.20.192.248
+        - 142.4.62.249
+        - 27.126.179.156
+        - 27.126.179.160
+        SourceIp: *id175
+        IpAddresses: *id175
+        destination.ip: *id175
+        RequestUrl|contains: *id175
+    - url_detection:
+        PowershellCommand|contains: &id176
+        - https://www.recordedfuture.com
+        - https://go.recordedfuture.com
+        - http://doc.internetdocss.com
+        - http://220.218.70.160
+        RequestUrl: *id176
+  condition: any of them

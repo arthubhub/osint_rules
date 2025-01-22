@@ -1,0 +1,52 @@
+title: Dridex botnet 222 (20160315)
+id: 56e87ebe-7b6c-4008-bcfd-42a302de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 210.209.89.107
+        - 213.192.1.178
+        - 87.117.242.31
+        - 154.66.148.52
+        - 212.183.20.78
+        - 41.79.173.47
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - b1259b8287e38e79a2afc003471fe4750edefdaa
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 4030b3b7393c61f25ebf225dc619f6bd4000f94d62a0c42c7b83e7460e0ed010
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - f71977440032b680e91baef49d9ca7f8
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://158.255.193.15
+        - https://5.152.201.6
+        - https://93.186.184.135
+        RequestUrl: *id005
+  condition: any of them

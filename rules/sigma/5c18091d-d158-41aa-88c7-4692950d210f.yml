@@ -1,0 +1,88 @@
+title: OSINT - The Return of The Charming Kitten
+id: 5c18091d-d158-41aa-88c7-4692950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.charming_kitten
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - accounts-support.services
+        - broadcast-news.info
+        - broadcastnews.pro
+        - com-identifier-servicelog.info
+        - com-identifier-servicelog.name
+        - com-identifier-userservicelog.com
+        - confirm-session-identification.info
+        - confirm-session-identifier.info
+        - confirmation-service.info
+        - customer-recovery.info
+        - customize-identity.info
+        - document-share.info
+        - documentofficupdate.info
+        - documentsfilesharing.cloud
+        - email-delivery.info
+        - my-scribdinc.online
+        - notificationapp.info
+        - podcastmedia.online
+        - recoveryusercustomer.info
+        - session-management.info
+        - support-recoverycustomers.services
+        - continue-session-identifier.info
+        - mobilecontinue.network
+        - com-messengersaccount.name
+        - invitation-to-messenger.space
+        - confirm-identification.name
+        - mobile-messengerplus.network
+        - com-messengercenters.name
+        - confirm-identity.net
+        - identifier-sessions-mailactivityid.site
+        - sessions-identifier-memberemailid.network
+        - confirm-verification-process.systems
+        - account-profile-users.info
+        - us2-mail-login-profile.site
+        - login-users-account.site
+        - users-account.site
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 178.162.132.65
+        - 190.2.154.34
+        - 190.2.154.35
+        - 190.2.154.36
+        - 190.2.154.38
+        - 46.166.151.211
+        - 51.38.87.64
+        - 51.38.87.65
+        - 51.68.185.96
+        - 51.38.107.113
+        - 95.211.189.45
+        - 95.211.189.46
+        - 95.211.189.47
+        - 213.227.139.148
+        - 54.37.241.221
+        - 54.38.144.250
+        - 54.38.144.251
+        - 54.38.144.252
+        - 85.17.127.172
+        - 85.17.127.173
+        - 85.17.127.174
+        - 85.17.127.175
+        - 89.198.179.103
+        - 31.2.213.18
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://blog.certfa.com
+        RequestUrl: *id003
+  condition: any of them

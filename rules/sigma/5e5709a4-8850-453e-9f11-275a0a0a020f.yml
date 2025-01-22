@@ -1,0 +1,124 @@
+title: Racoon Stealer
+id: 5e5709a4-8850-453e-9f11-275a0a0a020f
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1105
+- attack.t1043
+- attack.t1119
+- attack.t1041
+- attack.t1193
+- attack.t1005
+- attack.t1059
+- attack.t1002
+- attack.t1086
+logsource:
+  product: windows
+detection:
+  object_16839:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 904afe59f6438848be96fd26fdeab01267070d25
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 4478328408cf3c38b356eed6e86171a5c879663d79867c2b55ec8a0538d7588d
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 28c643a1f69f9fca9481a4bc9f3f38f3
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_16840:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - c6d85ab5723e37dc81f8662d066e6260f76cad0f
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 40543a9b3f82e8321f21206489245abdd565d3d7c8bfaea9241506a4176a4504
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 6ffe0b3009316720968139c02ae06aa2
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_16841:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - b05a8cfc70d8ea97d1127feafac6c40320d4dd52
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - f002c889dc7fffee97cfc41b25c1b27bb65704ca0c71a320a9ff58d95ba4131c
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - c1847a04d79f0c84a88dfc2f556e5acb
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_16842:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 93c2ce5fc4924314318554e131cfbcd119f01ab6
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 4cfada7eb51a6c0cb26283f9c86784b2b2587c59c46a5d3dc0f06cad2c55ee97
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 1117cd347d09c43c1f2079439056ada3
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id013
+        - https://laskowski-tech.com
+        - http://35.228.134.218
+        - http://109.201.143.181
+        RequestUrl: *id013
+  condition: any of them

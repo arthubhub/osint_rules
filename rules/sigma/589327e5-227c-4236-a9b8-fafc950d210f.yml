@@ -1,0 +1,26 @@
+title: 'OSINT - Nile Phish: Large-Scale Phishing Campaign Targeting Egyptian Civil
+  Society'
+id: 589327e5-227c-4236-a9b8-fafc950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 108.61.176.96
+        - 104.238.191.204
+        - 176.123.26.42
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://citizenlab.org
+        RequestUrl: *id002
+  condition: any of them

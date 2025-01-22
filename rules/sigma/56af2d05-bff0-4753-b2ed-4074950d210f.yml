@@ -1,0 +1,65 @@
+title: OSINT Introducing Hi-Zor RAT by Fidelis
+id: 56af2d05-bff0-4753-b2ed-4074950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - inocnation.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 87.193.23.40
+        - 211.104.106.41
+        - 202.172.32.160
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 3d7b789e3a630c0bd9db0b3217f72348025b845c
+          - 13a53cbe20908d9b1c705d3901ae87655a87cfb9
+          - b38a8747f2fe62d9f57921154f5d6829688a7ab7
+          - 8a34521175b66e073ee34870263d55611b38b1da
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - cd07ac5947c643854375603800a4f70e2dfe202c8a1f801204328921cb3a2a4c
+          - 2b4cc716ec23a095d831069968d951a125f40574775f466f4251c8a0a37abfca
+          - fce3dd4bd160b8c0698ca1dfba37bc49b3e1ad80cf77a31741bdbd2fa698be36
+          - 01a0c03f7e01bc41e91cff5d2610ac22da77dbfd01decf60c486b500390cd3ae
+          - 1ed0c71298d7e69916fb579772f67109f43c7c9c2809fd80e61fc5e680079663
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 75d3d1f23628122a64a2f1b7ef33f5cf
+          - f25cc334809bd1c36fd94184177de8a4
+          - a7bd555866ae1c161f78630a638850e7
+          - 4f4bf27b738ff8f2a89d1bc487b054a8
+          - 2f7e5f91be1f5be2b2f4fda0910a4c16
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://github.com
+        - http://www.threatgeek.com
+        - https://www.fidelissecurity.com
+        RequestUrl: *id006
+  condition: any of them

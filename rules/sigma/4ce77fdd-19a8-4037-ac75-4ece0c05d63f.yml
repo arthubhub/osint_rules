@@ -1,0 +1,20 @@
+title: C2-JARM - A list of JARM hashes for different ssl implementations used by some
+  C2 tools.
+id: 4ce77fdd-19a8-4037-ac75-4ece0c05d63f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.cobalt_strike
+- attack.software.metasploit
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://github.com
+        RequestUrl: *id001
+  condition: any of them

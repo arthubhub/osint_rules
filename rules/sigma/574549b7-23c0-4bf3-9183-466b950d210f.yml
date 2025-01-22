@@ -1,0 +1,46 @@
+title: OSINT - Dogspectus Ransomware Analysis
+id: 574549b7-23c0-4bf3-9183-466b950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 392e8b90431dfe55ca03e04a49fce1514d61638e
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 197588be3e8ba5c779696d864121aff188901720dcda796759906c17473d46fe
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - e26710a4e499a797aab62fd0ad7ac19c
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://blog.fortinet.com
+        - https://www.bluecoat.com
+        - https://www.mysonicwall.com
+        - http://workoutplaceface.com
+        - http://orlandroot.com
+        - http://daflourstmichurins.com
+        - http://mentosjolly.com
+        - http://belkafruitcymus.com
+        - http://wirtualcleens.com
+        RequestUrl: *id004
+  condition: any of them

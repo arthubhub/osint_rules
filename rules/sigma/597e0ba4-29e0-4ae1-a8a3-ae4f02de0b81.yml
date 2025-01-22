@@ -1,0 +1,40 @@
+title: OSINT - CowerSnail, from the creators of SambaCry
+id: 597e0ba4-29e0-4ae1-a8a3-ae4f02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.cowersnail
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 08f423dd9ec9c03320377161f7d73cdac647a765
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 3fb8a4d2ed4f662a4cb4270bb5f488b79c8758aa6fc5c8b119c78fba38d6b7d1
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 5460ac43725997798bab3eb6474d391f
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://securelist.com
+        RequestUrl: *id004
+  condition: any of them

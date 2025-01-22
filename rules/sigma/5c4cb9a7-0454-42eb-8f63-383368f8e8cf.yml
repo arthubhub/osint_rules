@@ -1,0 +1,107 @@
+title: '2019-01-25: Lazarus Pakistan Toolkits'
+id: 5c4cb9a7-0454-42eb-8f63-383368f8e8cf
+description: edit this field when analysing or editing the rule - reported by "VK-Intel"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.g0032
+- attack.software.lazarus
+- attack.group.powerratankba
+- attack.group.lazarus_group
+- attack.software.powerratankba
+- attack.group.lazarus
+logsource:
+  product: windows
+detection:
+  object_16661:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 943feef623db1143f4b9c957fee4c94753cfb6a5
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 802efe9c41909354921009bd54be7dcf1ee14fcfaf62dacbcdaafbe051a711e3
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - c9ed87e9f99c631cda368f6f329ee27e
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_16663:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - ec80c302c91c6caf5343cfd3fabf43b0bbd067a5
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - bed916831e8c9babfb6d08644058a61e3547d621f847c081309f616aed06c2fe
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 2025d91c1cdd33db576b2c90ef4067c7
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_16665:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 32292b4e125287a6567e3879d53d0d8d82bcdf01
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - 18f0ad8c58558d6eb8129f32cbc2905d0b63822185506b7c3bca49d423d837c7
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 5cc28f3f32e7274f13378a724a5ec33a
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  event_attributes:
+    any:
+    - hash_detection:
+        md5_detection:
+          md5: &id010
+          - c9ed87e9f99c631cda368f6f329ee27e
+          - 5cc28f3f32e7274f13378a724a5ec33a
+          - 2025d91c1cdd33db576b2c90ef4067c7
+          MD5: *id010
+          DriverMd5: *id010
+          TargetProcessMd5: *id010
+          Hashes.md5: *id010
+    - url_detection:
+        PowershellCommand|contains: &id011
+        - https://github.com
+        - https://ecombox.store
+        - https://www.vkremez.com
+        RequestUrl: *id011
+  condition: any of them

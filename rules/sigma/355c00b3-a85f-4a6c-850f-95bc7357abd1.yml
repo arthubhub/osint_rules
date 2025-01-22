@@ -1,0 +1,137 @@
+title: "Linux/CDRThief\u2009\u2014\u2009Indicators of Compromise - Who is calling?\
+  \ CDRThief targets Linux VoIP softswitches"
+id: 355c00b3-a85f-4a6c-850f-95bc7357abd1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_8175:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - cc373d633a16817f7d21372c56955923c9dda825
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 665acb48f9ad6317806231e52e5d3d05e91a93b20f40771a55e634192e8b094b
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 7124c56ab6d8133e2ed2042fb8c2248e
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_8177:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 8e2624da4d209abd3364d90f7bc08230f84510db
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - ffe88d3012c15a680a506f0382264ea763ff2d426bf4ad3caf03111d47d9a80c
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 926c77d3d9fdad7217a9b49bdf033336
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_8179:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 8532e858eb24ae38632091d2d790a1299b7bbc87
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - af75687cb030418c3196d6535d10479bc45e4248d60d3427230381e0d09e5ca4
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 444a5116c6e2b37b33066be16f3e7e6d
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_8181:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - fc7ccabb239ad6fd22472e5b7bb6a5773b7a3dac
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 6b15cf51e4dff3e25b805173eef88940dbeb52b2662bd265450e6e54d5bb84d6
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 3339b8c4a522548b67fca732c54fa232
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id013
+        - 119.29.173.65
+        - 129.211.157.244
+        - 129.226.134.180
+        - 150.109.79.136
+        - 34.94.199.142
+        - 35.236.173.187
+        SourceIp: *id013
+        IpAddresses: *id013
+        destination.ip: *id013
+        RequestUrl|contains: *id013
+    - hash_detection:
+        sha1_detection:
+          sha1: &id014
+          - cc373d633a16817f7d21372c56955923c9dda825
+          - 8e2624da4d209abd3364d90f7bc08230f84510db
+          - fc7ccabb239ad6fd22472e5b7bb6a5773b7a3dac
+          - 8532e858eb24ae38632091d2d790a1299b7bbc87
+          SHA1: *id014
+          DriverSha1: *id014
+          TargetProcessSha1: *id014
+          Hashes.sha1: *id014
+    - url_detection:
+        PowershellCommand|contains: &id015
+        - https://github.com
+        - https://www.welivesecurity.com
+        RequestUrl: *id015
+  condition: any of them

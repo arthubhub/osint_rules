@@ -1,0 +1,86 @@
+title: 'M2M -  Trickbot 2017-06-12 : mac1 : Facture N 1234 du 12/06/2017 - "FACTURE_1234.zip"'
+id: 593e830b-a7e0-481c-b1a1-4390950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 119.28.85.128
+        - 219.118.71.133
+        - 144.76.27.232
+        - 193.239.206.248
+        - 202.181.246.240
+        - 162.215.255.3
+        - 133.242.52.84
+        - 216.97.233.44
+        - 107.180.48.91
+        - 81.169.145.68
+        - 103.50.160.62
+        - 81.169.145.166
+        - 66.219.202.10
+        - 103.21.59.174
+        - 103.21.58.252
+        - 160.153.53.103
+        - 212.40.5.43
+        - 81.169.145.148
+        - 81.169.145.93
+        - 103.21.58.130
+        - 91.201.42.45
+        - 120.25.70.148
+        - 209.99.16.221
+        - 103.249.108.128
+        - 193.0.140.177
+        - 89.231.13.18
+        - 89.231.13.27
+        - 89.231.13.33
+        - 185.203.243.111
+        - 185.203.243.112
+        - 185.203.243.113
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - b1826d53ae551f2969a347dd1804c76d
+          - 20f52f4da77210883918021880d5068c
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://78tguyc876wwirglmltm.net
+        - http://e67tfgc4uybfbnfmd.org
+        - http://1000i.co
+        - http://aacom.pl
+        - http://ceil.hk
+        - http://cnbofa.com
+        - http://crowdvn.com
+        - http://lamartechnical.com
+        - http://lockehouse.com
+        - http://mangetsudo.net
+        - http://martinsturm.de
+        - http://marylanddevelopers.in
+        - http://quente.nl
+        - http://sacrecoeur.bravepages.com
+        - http://sheekchilly.com
+        - http://smartzaa.com
+        - http://sportsfoliorewards.com
+        - http://susewind.ch
+        - http://svadba-tamada.de
+        - http://svi1869.de
+        - http://syrianchristiancentre.org
+        - http://ulyanky.ru
+        - http://xinjingji.net
+        - http://yensaophuongdong.com
+        - http://ythongye.com
+        RequestUrl: *id003
+  condition: any of them

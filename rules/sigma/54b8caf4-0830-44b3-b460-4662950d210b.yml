@@ -1,0 +1,58 @@
+title: OSINT Backdoor.Win32.Shiz from Lavasoft
+id: 54b8caf4-0830-44b3-b460-4662950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - xubifaremin.eu
+        - dixemazufel.eu
+        - lyvejujolec.eu
+        - marytymenok.eu
+        - vojacikigep.eu
+        - gadufiwabim.eu
+        - xuxusujenes.eu
+        - fogeliwokih.eu
+        - jewuqyjywyv.eu
+        - masisokemep.eu
+        - nofyjikoxex.eu
+        - qetoqolusex.eu
+        - jepororyrih.eu
+        - rynazuqihoj.eu
+        - dikoniwudim.eu
+        - kemocujufys.eu
+        - voniqofolyt.eu
+        - dimutobihom.eu
+        - makagucyraj.eu
+        - qebahilojam.eu
+        - tufecagemyl.eu
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - e973239500b4fb216182043805453cea9edf8730
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        md5_detection:
+          md5: &id003
+          - 31e855d428195a27077d535e4b0778cd
+          - 9d1f4902e2eb83feab79175dd89b1912
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://lavasoft.com
+        - http://doc.emergingthreats.net
+        RequestUrl: *id004
+  condition: any of them

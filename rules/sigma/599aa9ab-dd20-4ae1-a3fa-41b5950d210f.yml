@@ -1,0 +1,52 @@
+title: OSINT - Turla APT actor refreshes KopiLuwak JavaScript backdoor for use in
+  G20-themed attack
+id: 599aa9ab-dd20-4ae1-a3fa-41b5950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.turla_group
+- attack.group.turla
+- attack.software.wipbot
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - efb9015be0497bdf6183383ff677fc8474ac69ce
+          - 9d7d559ee19321b07785956f8118d96a9ee47fc1
+          - 5730e117b1efddc9a438a8bf603ff8b17736453e
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 7481e87023604e7534d02339540ddd9565273dd51c13d7677b9b4c9623f0440b
+          - 1c76a66a670a6f69b4fea25ca0ba4885eca9e1b85a2afbab61da3b4a6d52ae19
+          - 5698c92fb8fe7ded0ff940c75979f44734650e4f2c852bdb4cbc9d46e7993185
+          - c978da455018a73ddbc9e1d2bf8c208ad3ec2e622850f68ef6b0aae939e5d2ab
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - df1b4f63c1adb9abfe04e0247956ce66
+          - b318af64676a879dc50b491beccfa951
+          - 7c378d78b7a89aef27e8a3c5066b8511
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://www.proofpoint.com
+        - http://www.huluwa.uk
+        - http://tresor-rare.com.hk
+        RequestUrl: *id004
+  condition: any of them

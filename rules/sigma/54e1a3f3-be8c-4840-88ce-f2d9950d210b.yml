@@ -1,0 +1,25 @@
+title: OSINT MSRT February update from Microsoft
+id: 54e1a3f3-be8c-4840-88ce-f2d9950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - dailygiftclub.info
+        - dailygiftclub1.info
+        - priv8darkshop.com
+        - sopvps.hk
+        RequestUrl: *id001
+        QueryName: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - http://blogs.technet.com
+        - http://www.microsoft.com
+        RequestUrl: *id002
+  condition: any of them

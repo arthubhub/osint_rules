@@ -1,0 +1,44 @@
+title: 'OSINT - The #BronzeUnion/#LuckyMouse/#APT27 infection checker'
+id: 5e05dbcc-074c-40d1-884b-2a2402de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.g0027
+- attack.group.threat_group-3390
+- attack.group.emissary_panda
+logsource:
+  product: windows
+detection:
+  object_3494:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://twitter.com
+        RequestUrl: *id001
+  object_3495:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 5933884f3ed5d98c0bf0158d262d9f3142c4d052
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - caa63ee08af3716c6dc7495a448daa923ac8e8992f6cab3b7ec3f3e6e087bb02
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 86c9e95dcf69f6eca2a176407dcb99ff
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+  condition: any of them

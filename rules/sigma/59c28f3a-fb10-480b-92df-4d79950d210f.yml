@@ -1,0 +1,66 @@
+title: 'M2M -  Locky 2017-09-20 : Affid=3, offline, ".ykcol" : "Status of invoice
+  A2171234-56" - "A2171234-56.rar"'
+id: 59c28f3a-fb10-480b-92df-4d79950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 68.171.49.151
+        - 174.136.13.74
+        - 66.36.173.111
+        - 66.36.165.149
+        - 108.59.87.148
+        - 193.189.74.92
+        - 54.187.116.55
+        - 178.27.144.69
+        - 128.140.221.197
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - e2d2acc931c4999b29e30d4fd227207627fd53ef
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - da386efced7535a1262ae9ede6988e27bdc6fca3411da14e6db02158aa37a5c9
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - fd365e280b5d5125d7045fd10f877e58
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://68.171.49.151
+        - http://digiviews.co.uk
+        - http://hard-grooves.com
+        - http://hellonwheelsthemovie.com
+        - http://mariamandrioli.com
+        - http://pyefittedfurniture.co.uk
+        - http://rockrak.com
+        - http://ryterorrephat.info
+        - http://viwa.homelinux.com
+        - http://wilvreeburg.nl
+        RequestUrl: *id005
+  condition: any of them

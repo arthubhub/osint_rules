@@ -1,0 +1,83 @@
+title: 'Malspam 2016-08-31 (.js in .zip) - campaign: "bank transactions"'
+id: 57c6cb1f-5d40-49cc-a24a-4cb2950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - foodbiz-net.com
+        - abufarha.net
+        - gebetech.at
+        - impregui.com
+        - akristall.ru
+        - cybersocialization.ru
+        - two-capitals.com
+        - izeinstruments.com
+        - akeseverin.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 95.211.144.65
+        - 213.205.40.169
+        - 86.65.123.70
+        - 85.248.42.103
+        - 64.29.151.221
+        - 195.130.132.84
+        - 211.13.196.136
+        - 193.109.184.81
+        - 210.240.104.2
+        - 81.88.57.68
+        - 134.0.11.184
+        - 187.45.240.5
+        - 195.91.160.34
+        - 206.188.192.236
+        - 212.34.140.236
+        - 52.208.197.252
+        - 52.209.246.67
+        - 62.42.230.17
+        - 66.147.240.193
+        - 79.96.153.93
+        - 80.241.232.207
+        - 91.201.41.217
+        - 92.63.216.53
+        - 94.25.37.27
+        - 195.208.0.121
+        - 195.208.1.136
+        - 212.104.43.3
+        - 212.26.129.68
+        - 213.208.133.41
+        - 217.107.219.83
+        - 81.177.139.111
+        - 212.159.8.91
+        - 207.210.232.52
+        - 62.173.164.20
+        - 66.230.196.22
+        - 64.71.34.45
+        - 176.32.162.200
+        - 216.251.43.17
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://210.240.104.2
+        - http://01ad681.netsolhost.com
+        - http://80.241.232.207
+        - http://alci.dommel.be
+        - http://robbeottoy.dommel.be
+        - http://www.instalacionesjosearteaga.com
+        - http://www.jenohorvath.be
+        - http://cybersocialization.ru
+        - http://my.st21.ru
+        - http://www.galleriacolonna.org
+        - http://www.robtozier.com
+        RequestUrl: *id003
+  condition: any of them

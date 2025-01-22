@@ -1,0 +1,31 @@
+title: "OSINT - Masuta : Satori Creators\xE2\u20AC\u2122 Second Botnet Weaponizes\
+  \ A New Router Exploit."
+id: 5a69e332-f944-46f8-b172-637202de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.masuta
+- attack.group.nexus_zeta
+logsource:
+  product: windows
+detection:
+  object_399:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - nexusiotsolutions.net
+        RequestUrl: *id001
+        QueryName: *id001
+  event_attributes:
+    any:
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://blog.newskysecurity.com
+        - http://purenetworks.com
+        - http://www.devttys0.com
+        - https://www.exploit-db.com
+        - https://pastebin.com
+        RequestUrl: *id002
+  condition: any of them

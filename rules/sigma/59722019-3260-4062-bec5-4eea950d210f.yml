@@ -1,0 +1,46 @@
+title: 'OSINT - Linux.Bew: un backdoor para el minado de Bitcoin'
+id: 59722019-3260-4062-bec5-4eea950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 192.211.49.214
+        - 45.58.49.98
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 4c614317fd1686f8c865c0a8d367c8e22b94087f
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 80c4d1a1ef433ac44c4fe72e6ca42395261fbca36eff243b07438263a1b1cf06
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - f42c73e5291392c4c39852670addd7f9
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.securityartwork.es
+        RequestUrl: *id005
+  condition: any of them

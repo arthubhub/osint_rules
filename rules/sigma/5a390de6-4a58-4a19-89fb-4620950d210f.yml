@@ -1,0 +1,152 @@
+title: OSINT - Zeus Panda Banking Trojan Targets Online Holiday Shoppers
+id: 5a390de6-4a58-4a19-89fb-4620950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_1705:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id001
+          - 2514dbf1549b517692e415af85baa6e5eca926cdedb526d2e255b5943501d98b
+          SHA256: *id001
+          DriverSha256: *id001
+          TargetProcessSha256: *id001
+          Hashes.sha256: *id001
+  object_1706:
+    all:
+    - hash_detection:
+        sha256_detection:
+          sha256: &id002
+          - ae92a4a5bc64db6af23219d7fa2d8bce98a5d7eb2eff7193e4f49698e3e5650d
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+  object_1707:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 2cacb877c487b6dae47fb16fdd1dc7b05595125b
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - ae92a4a5bc64db6af23219d7fa2d8bce98a5d7eb2eff7193e4f49698e3e5650d
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - a02d6ca05cbc89a317d82945bcb6b15b
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+  object_1709:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id006
+          - ef22bcec61cb2aea85cd93cede6af5f4b27e011b
+          SHA1: *id006
+          DriverSha1: *id006
+          TargetProcessSha1: *id006
+          Hashes.sha1: *id006
+        sha256_detection:
+          sha256: &id007
+          - 5f7a1b02d5b2904554e65bd01a12f1fa5ff2121eef53f3942c4e9e29c46bdce3
+          SHA256: *id007
+          DriverSha256: *id007
+          TargetProcessSha256: *id007
+          Hashes.sha256: *id007
+        md5_detection:
+          md5: &id008
+          - 52b053886cc0ca44df86cba91de968fa
+          MD5: *id008
+          DriverMd5: *id008
+          TargetProcessMd5: *id008
+          Hashes.md5: *id008
+  object_1711:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id009
+          - 00d8ef79f6fe532815c0325fb6d7165cdae98548
+          SHA1: *id009
+          DriverSha1: *id009
+          TargetProcessSha1: *id009
+          Hashes.sha1: *id009
+        sha256_detection:
+          sha256: &id010
+          - e13594d83f2a573627e742baf33298b9eeec1ebb8c7955304b8c35559e5f23dc
+          SHA256: *id010
+          DriverSha256: *id010
+          TargetProcessSha256: *id010
+          Hashes.sha256: *id010
+        md5_detection:
+          md5: &id011
+          - b2a6ec17f49740ddc699640fb19f951d
+          MD5: *id011
+          DriverMd5: *id011
+          TargetProcessMd5: *id011
+          Hashes.md5: *id011
+  object_1713:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id012
+          - 8eab9d3dfe6ac35a3624e916bb3cdc6d390a83d2
+          SHA1: *id012
+          DriverSha1: *id012
+          TargetProcessSha1: *id012
+          Hashes.sha1: *id012
+        sha256_detection:
+          sha256: &id013
+          - 2514dbf1549b517692e415af85baa6e5eca926cdedb526d2e255b5943501d98b
+          SHA256: *id013
+          DriverSha256: *id013
+          TargetProcessSha256: *id013
+          Hashes.sha256: *id013
+        md5_detection:
+          md5: &id014
+          - bcac60105cb24fdbcc03c1d52d09bfd1
+          MD5: *id014
+          DriverMd5: *id014
+          TargetProcessMd5: *id014
+          Hashes.md5: *id014
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id015
+        - gromnes.top
+        - aklexim.top
+        - kichamyn.top
+        RequestUrl: *id015
+        QueryName: *id015
+    - hash_detection:
+        sha256_detection:
+          sha256: &id016
+          - 5f7a1b02d5b2904554e65bd01a12f1fa5ff2121eef53f3942c4e9e29c46bdce3
+          - e13594d83f2a573627e742baf33298b9eeec1ebb8c7955304b8c35559e5f23dc
+          SHA256: *id016
+          DriverSha256: *id016
+          TargetProcessSha256: *id016
+          Hashes.sha256: *id016
+    - url_detection:
+        PowershellCommand|contains: &id017
+        - https://www.proofpoint.com
+        - http://80.82.67.217
+        - http://www.nfk-trading.com
+        - https://canadapost-packagecenter.com
+        - http://89.248.169.136
+        RequestUrl: *id017
+  condition: any of them

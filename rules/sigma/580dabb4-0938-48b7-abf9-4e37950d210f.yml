@@ -1,0 +1,24 @@
+title: 'OSINT - TeamXRat: Brazilian cybercrime meets ransomware'
+id: 580dabb4-0938-48b7-abf9-4e37950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        md5_detection:
+          md5: &id001
+          - 34260178f9e3b2e769accdee56dac793
+          MD5: *id001
+          DriverMd5: *id001
+          TargetProcessMd5: *id001
+          Hashes.md5: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://securelist.com
+        RequestUrl: *id002
+  condition: any of them

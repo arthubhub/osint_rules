@@ -1,0 +1,53 @@
+title: OSINT - Spam Campaign Delivers Cross-platform Remote Access Trojan Adwind
+id: 59663a31-f174-44a6-adb7-4339950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.adwind_rat
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 6f15724ae6cf1dee7cf8380694f45f3e7769ebed
+          - 9ce4518ebcb5be6d1f0b5477fa00c26860fe9a68
+          - 4f8e8bfea6846c11bb4b58eb07788bea61eadca0
+          - 0eb986bdc1c922a60d81040652d0e67dff3c5ab2
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 3fc826ce8eb9e69b3c384b84351b7af63f558f774dc547fccc23d2f9788ebab4
+          - c16519f1de64c6768c698de89549804c1223addd88964c57ee036f65d57fd39b
+          - 97d585b6aff62fb4e43e7e6a5f816dcd7a14be11a88b109a9ba9e8cd4c456eb9
+          - 705325922cffac1bca8b1854913176f8b2df83a70e0df0c8d683ec56c6632ddb
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 51f9e895441dffdf8e47c83208f85993
+          - 781fb531354d6f291f1ccab48da6d39f
+          - 41c6aae5e303e7f3118af6a3ca2566a8
+          - 829510245185976bd3e423dd8c55c683
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://blog.trendmicro.com
+        - http://vacanzaimmobiliare.it
+        - http://ccb-ba.adv.br
+        - http://www.employersfinder.com
+        - https://nup.pw
+        RequestUrl: *id004
+  condition: any of them

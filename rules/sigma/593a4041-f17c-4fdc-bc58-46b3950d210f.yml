@@ -1,0 +1,107 @@
+title: 'M2M -  Trickbot 2017-06-07 : "mac1" : "12_Invoice_3456" - "001_4321.pdf"'
+id: 593a4041-f17c-4fdc-bc58-46b3950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 119.28.85.128
+        - 81.169.145.77
+        - 193.0.140.177
+        - 89.231.13.18
+        - 89.231.13.27
+        - 27.131.109.130
+        - 160.153.42.132
+        - 195.2.252.152
+        - 37.59.158.241
+        - 147.135.144.28
+        - 212.24.110.190
+        - 212.24.110.154
+        - 76.8.104.213
+        - 213.247.45.147
+        - 144.76.167.44
+        - 114.215.241.221
+        - 178.237.37.40
+        - 69.49.96.13
+        - 89.111.176.244
+        - 216.172.169.149
+        - 69.165.66.179
+        - 111.118.212.208
+        - 109.71.43.177
+        - 208.91.198.52
+        - 91.198.47.86
+        - 81.169.145.167
+        - 81.169.145.170
+        - 195.5.208.205
+        - 208.91.198.170
+        - 103.21.59.24
+        - 176.53.85.89
+        - 199.79.62.205
+        - 81.169.145.71
+        - 174.120.70.216
+        - 103.21.59.28
+        - 46.30.213.72
+        - 209.99.16.217
+        - 46.30.213.233
+        - 176.121.213.31
+        - 185.86.150.185
+        - 194.87.102.6
+        - 194.87.234.99
+        - 195.133.144.138
+        - 196.11.84.62
+        - 5.45.64.113
+        - 68.191.80.115
+        - 89.231.13.24
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - a4644ad54e4ff86a4a3479927857ac29
+          - 9c6cecc960bfd950b64699b2fee1a723
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://camberwellroofing.com.au
+        - http://shopf3.com
+        - http://essentialnulidtro.com
+        - http://1time.nl
+        - http://adproautomation.in
+        - http://aolongkeji.cn
+        - http://beursgays.com
+        - http://caperlea.com
+        - http://castvinyl.ru
+        - http://choralia.net
+        - http://chqm168.com
+        - http://codeclinics.com
+        - http://luxcasa.pt
+        - http://manish-choudhary.com
+        - http://martos.pt
+        - http://micolon.de
+        - http://muldefischer.de
+        - http://musee-champollion.fr
+        - http://mybutterhalf.com
+        - http://mytraveltrip.in
+        - http://saheser.net
+        - http://sanftes-reiten.de
+        - http://shreekamothe.com
+        - http://spocom.de
+        - http://sumbermakmur.com
+        - http://surgideals.com
+        - http://suskunst.dk
+        - http://sutek-industry.com
+        - http://svagin.dk
+        - http://xinding.com
+        RequestUrl: *id003
+  condition: any of them

@@ -1,0 +1,36 @@
+title: Linux/Mirai-Hilix (w/New TABLE encoder) aims Realtek & Huawei routers
+id: 5ebd9f11-4628-4dc2-abaf-4d54950d210f
+description: edit this field when analysing or editing the rule - reported by "MalwareMustDie"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 142.93.217.221
+        - 159.203.44.33
+        - 194.180.224.124
+        - 194.180.224.150
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 7a5e717aa86fd986d9aef089c6e07bcd
+          - 8293c25c4c759654ea72342750a91170
+          - 94008c192bd62432fbacede828e2c497
+          - 749d282b6ff9e1b9390201173af694c0
+          - 34307f52ba4a81d94058c130df146c5a
+          - 84d45afab65260068009911871f5babd
+          - ec413215dc385d95e1c89d9bda44de4d
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+  condition: any of them

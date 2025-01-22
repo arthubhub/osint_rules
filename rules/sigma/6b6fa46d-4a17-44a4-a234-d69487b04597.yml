@@ -1,0 +1,58 @@
+title: CISA - MAR-10459736.r1.v1 - WHIRLPOOL Variant
+id: 6b6fa46d-4a17-44a4-a234-d69487b04597
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_16545:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - deadca9bd85ee5c4e086fd81eee09407b769e9b6
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 0af253e60456b03af49cc675f71d47b2dd9a48f50a927e43b9d8116985c06459
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 77e1e9bf69b09ed0840534adb8258540
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_16546:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - deadca9bd85ee5c4e086fd81eee09407b769e9b6
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 0af253e60456b03af49cc675f71d47b2dd9a48f50a927e43b9d8116985c06459
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 77e1e9bf69b09ed0840534adb8258540
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  condition: any of them

@@ -1,0 +1,53 @@
+title: OSINT Microsoft Office Zero-Day CVE-2015-2424 Leveraged By Tsar Team report
+  by iSight
+id: 5761398f-31d0-46b0-808f-41de950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - wscapi.com
+        - tabsync.net
+        - storsvc.org
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 66.172.11.207
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - e7f7f6caaede6cc29c2e7e4888019f2d1be37cef
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 9e5fbd79d8febe7a162cd5200041772db60dc83244605b1ff37ef8d14334f512
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 112c64f7c07a959a1cbff6621850a4ad
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://www.isightpartners.com
+        RequestUrl: *id006
+  condition: any of them

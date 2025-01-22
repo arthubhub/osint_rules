@@ -1,0 +1,28 @@
+title: M2M -  phishing URLs
+id: 594b8afd-daac-4cf6-8784-4a9b950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 89.189.197.55
+        - 89.189.197.24
+        - 103.224.212.192
+        - 103.224.212.185
+        - 103.224.212.193
+        - 103.224.212.186
+        - 195.20.50.201
+        - 195.20.51.31
+        - 45.33.9.234
+        - 89.189.197.18
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+  condition: any of them

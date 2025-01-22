@@ -1,0 +1,45 @@
+title: "OSINT - Ewind \xE2\u20AC\u201C Adware in Applications\xE2\u20AC\u2122 Clothing"
+id: 58ecc62a-e5bc-406f-adc6-4b65950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - mobincome.org
+        - androwr.ru
+        RequestUrl: *id001
+        QueryName: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 15cd380676f0cc0d9a14cc731c1d20746111d64d
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 9c61616a66918820c936297d930f22df5832063d6e5fc2bea7576f873e7a5cf3
+          - 393ffeceae27421500c54e1cf29658869699095e5bca7b39100bf5f5ca90856b
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 37182a56df80c3cf841f69ee9fcfe5ed
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://researchcenter.paloaltonetworks.com
+        RequestUrl: *id005
+  condition: any of them

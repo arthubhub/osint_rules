@@ -1,0 +1,124 @@
+title: 'Malspam 2016-08-24 (.js in .zip) - campaign: "Statement"'
+id: 57bd7251-390c-4ee2-accd-4f69950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - brothermalw.ws
+        - rejoincomp2.in
+        - wangmewang.name
+        - selectron.ch
+        - bormanns-wetter.de
+        - deananddennys.com
+        - direttaauto.com
+        - djprestige.net
+        - vgweb.ru
+        - biopocasie.sk
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 217.97.216.17
+        - 95.211.144.65
+        - 213.205.40.169
+        - 213.180.150.17
+        - 80.150.6.138
+        - 208.71.106.45
+        - 208.71.106.48
+        - 85.248.42.103
+        - 82.197.131.109
+        - 64.29.151.221
+        - 208.71.106.49
+        - 62.14.3.195
+        - 208.71.106.61
+        - 195.130.132.84
+        - 213.229.74.92
+        - 91.223.89.200
+        - 62.149.142.134
+        - 193.109.184.81
+        - 89.110.146.99
+        - 162.210.101.97
+        - 72.52.99.36
+        - 162.210.101.99
+        - 209.235.144.9
+        - 91.207.44.3
+        - 208.71.106.43
+        - 162.210.101.98
+        - 95.211.80.4
+        - 190.160.0.137
+        - 192.254.232.12
+        - 195.67.82.205
+        - 212.40.179.104
+        - 213.217.149.4
+        - 61.47.40.35
+        - 84.2.38.70
+        - 90.156.201.38
+        - 90.156.201.41
+        - 90.156.201.56
+        - 202.67.211.56
+        - 90.156.201.19
+        - 92.240.253.2
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://brothermalw.ws
+        - http://rejoincomp2.in
+        - http://sopranolady7.wang
+        - http://wangmewang.name
+        - http://www.bbfreeholidays.com
+        - http://selectron.ch
+        - http://karinschacht.addr.com
+        - http://2cfdew.web.fc2.com
+        - http://batsumito.web.fc2.com
+        - http://bluechaos.dommel.be
+        - http://bormanns-wetter.de
+        - http://chrisbell.50webs.com
+        - http://deananddennys.com
+        - http://deia500.50webs.com
+        - http://direttaauto.com
+        - http://djprestige.net
+        - http://goforbroke.web.fc2.com
+        - http://hirokuns06.web.fc2.com
+        - http://javierbaile.atspace.com
+        - http://leasing.ocipov.ru
+        - http://masakipingpong.web.fc2.com
+        - http://minots.atspace.com
+        - http://naderu.web.fc2.com
+        - http://over.50webs.com
+        - http://rsit.cba.pl
+        - http://smilehomeutsumi504.web.fc2.com
+        - http://stigmata.org.uk
+        - http://tetteco.web.fc2.com
+        - http://ttd.co.th
+        - http://vgweb.ru
+        - http://webmail.vtr.net
+        - http://wishmaster.dommel.be
+        - http://wm08g63hd.homepage.t-online.de
+        - http://www.archeoetnos.com
+        - http://www.beck-kituzo.hu
+        - http://www.energetica.it
+        - http://www.kardborren.se
+        - http://www.lenkinetorty.szm.com
+        - http://www.pobierowo-jest-ok.neostrada.pl
+        - http://www.shivartatoo.com
+        - http://www.smees.be
+        - http://www.yerridixielandband.jazztel.es
+        - http://biopocasie.sk
+        - http://cyfrowemotywy.cba.pl
+        - http://generator-diesel.com.ua
+        - http://idesign.com.hk
+        - http://karate-kleczew.republika.pl
+        - http://manuelt.atspace.com
+        - http://salebe.web.fc2.com
+        RequestUrl: *id003
+  condition: any of them

@@ -1,0 +1,39 @@
+title: Erebus Ransomware Utilizes a UAC Bypass and Request a $90 Ransom Payment
+id: 589b1a8a-1e10-4e76-860a-4cba950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 6e5fca51a018272d1b1003b16dce6ee9e836908c
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - ed3a685ca65de70b79faf95bbd94c343e73a150e83184f67e0bdb35b11d05791
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 0ced87772881b63caf95f1d828ba40c5
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://www.bleepingcomputer.com
+        - http://erebus5743lnq6db.onion
+        RequestUrl: *id004
+  condition: any of them

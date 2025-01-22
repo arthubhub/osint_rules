@@ -1,0 +1,58 @@
+title: 'Malspam 2016-09-30 (.doc) - campaign: "Receipt"'
+id: 57ee6fdf-1e58-4cbe-8de1-4287950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - techsilicon.com
+        - amerikanservisi.com
+        - bantayan.net
+        - bestsourcecode.com
+        - gomelnaushnik.com
+        - lucianasaliani.com
+        - mepowell.com
+        - teothemes.com
+        - asknaija.com
+        - b2c-batteries.com
+        - activexsearch.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 107.180.51.252
+        - 198.89.122.236
+        - 5.250.244.87
+        - 50.87.248.224
+        - 69.89.27.246
+        - 69.90.161.195
+        - 74.220.207.148
+        - 81.25.33.146
+        - 198.54.115.140
+        - 67.20.75.70
+        - 69.163.34.60
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://techsilicon.com
+        - http://amerikanservisi.com
+        - http://bantayan.net
+        - http://bestsourcecode.com
+        - http://gomelnaushnik.com
+        - http://lucianasaliani.com
+        - http://mepowell.com
+        - http://teothemes.com
+        - http://asknaija.com
+        - http://b2c-batteries.com
+        - http://activexsearch.com
+        RequestUrl: *id003
+  condition: any of them

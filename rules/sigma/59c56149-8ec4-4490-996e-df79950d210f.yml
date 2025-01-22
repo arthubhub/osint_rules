@@ -1,0 +1,71 @@
+title: 'M2M -  Locky 2017-09-20 : Affid=3, offline, ".ykcol" : "New voice message..."
+  - "msg0321.7z"'
+id: 59c56149-8ec4-4490-996e-df79950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 98.124.251.65
+        - 209.54.62.81
+        - 174.141.224.179
+        - 23.229.153.66
+        - 193.189.74.92
+        - 217.168.155.63
+        - 91.121.20.89
+        - 77.92.99.5
+        - 81.27.85.25
+        - 193.189.74.89
+        - 87.98.239.48
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 6ea25cddbe0957d20d7ddea9efe84d2ba13a84e0
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 302aabfec6b1696e3019699d6367e4ac9e57037aec6237d9b263ba9a8fbe3418
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 5dd7d5899168ac90325b350293c49ee2
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://2-wave.com
+        - http://3e.com.pt
+        - http://9ninewright.net
+        - http://PamelaSparrowChilds.com
+        - http://ryterorrephat.info
+        - http://121-psychic-reading.co.uk
+        - http://4advice-interactive.be
+        - http://adaliyapi.com
+        - http://ahtwindowcleaning.co.uk
+        - http://rasbery.co.uk
+        - http://robinsonfun.pl
+        - http://weddingcarsbury.co.uk
+        - http://weddingcarsrochdale.co.uk
+        RequestUrl: *id005
+  condition: any of them

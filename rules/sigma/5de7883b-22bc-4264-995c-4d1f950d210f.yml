@@ -1,0 +1,92 @@
+title: Malicious PyPI packages
+id: 5de7883b-22bc-4264-995c-4d1f950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1195
+- attack.t1011
+- attack.t1005
+logsource:
+  product: windows
+detection:
+  object_3362:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://gitlab.com
+        RequestUrl: *id001
+  object_3363:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - http://bitly.com
+        RequestUrl: *id002
+  object_3364:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://pypi.org
+        RequestUrl: *id003
+  object_3365:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://pypi.org
+        RequestUrl: *id004
+  object_3366:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id005
+          - 47bddd8311cc683a401eacce51c5f7df49170fc7
+          SHA1: *id005
+          DriverSha1: *id005
+          TargetProcessSha1: *id005
+          Hashes.sha1: *id005
+        sha256_detection:
+          sha256: &id006
+          - e8ec763a658519d9a11284f4e000f4be41e86b5c726904b6d178824eefd738da
+          SHA256: *id006
+          DriverSha256: *id006
+          TargetProcessSha256: *id006
+          Hashes.sha256: *id006
+        md5_detection:
+          md5: &id007
+          - 132fafca98f58aa3c39b2b6f168c5a9b
+          MD5: *id007
+          DriverMd5: *id007
+          TargetProcessMd5: *id007
+          Hashes.md5: *id007
+  object_3367:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id008
+          - 015fb194428fe47cdf3a2c8eefc5b6518ed1a135
+          SHA1: *id008
+          DriverSha1: *id008
+          TargetProcessSha1: *id008
+          Hashes.sha1: *id008
+        sha256_detection:
+          sha256: &id009
+          - e4c356b41fe198da888eb9e4964b92883384d3a7070c51d622911f2b7b5947a9
+          SHA256: *id009
+          DriverSha256: *id009
+          TargetProcessSha256: *id009
+          Hashes.sha256: *id009
+        md5_detection:
+          md5: &id010
+          - a5ce34545c5b06e98f60c93c0db14be5
+          MD5: *id010
+          DriverMd5: *id010
+          TargetProcessMd5: *id010
+          Hashes.md5: *id010
+  object_3368:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id011
+        - http://68.183.212.246
+        RequestUrl: *id011
+  condition: any of them

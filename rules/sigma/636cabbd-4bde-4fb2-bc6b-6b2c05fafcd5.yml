@@ -1,0 +1,150 @@
+title: 'OSINT - RDGAs: The Next Chapter in Domain Generation Algorithms'
+id: 636cabbd-4bde-4fb2-bc6b-6b2c05fafcd5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_36:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - 6rnd9mitqt1rz82.top
+        - 7r7suw52ls00i20.top
+        - 9w9ohb5vky5p3dz.top
+        - bjbntaxmh09r09e.top
+        - qcj4pirltkpqrcu.top
+        RequestUrl: *id001
+        QueryName: *id001
+  object_37:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id002
+        - h87e1mbm0u5f85.xyz
+        - n8j1nau3os4otr.xyz
+        - xnnxr1jquyupjc.xyz
+        - xqajkr8fbrdryp0.xyz
+        - xryqcgcb2upb28k.xyz
+        RequestUrl: *id002
+        QueryName: *id002
+  object_38:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id003
+        - arriveplanetsnow.buzz
+        - coatthinkverb.buzz
+        - debtgenepub.live
+        - poemtrainsurprise.top
+        - quarterneighbourforward.xyz
+        RequestUrl: *id003
+        QueryName: *id003
+  object_39:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id004
+        - castrocountyjail.org
+        - killeencityjail.org
+        - lasalleparishjail.org
+        - miamidadecountyjail.org
+        - northcentralregionaljail.org
+        RequestUrl: *id004
+        QueryName: *id004
+  object_40:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id005
+        - arenadiploma.com
+        - area-diploman24.com
+        - area-diplomans24.com
+        - area-diploms24.com
+        - area-diplomy24.com
+        - areas-diplom.com
+        - areas-diplom24.com
+        - areas-diplomy24.com
+        - arena-diplomsy24.com
+        - arena-diplomy24.com
+        RequestUrl: *id005
+        QueryName: *id005
+  object_41:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id006
+        - chopprousite.ru
+        - patiennerrhe.com
+        - thougolograrly.ru
+        - dintretonid.com
+        - dintretrewor.com
+        - dintrolletone.com
+        - dintromparsup.com
+        - direnrolpar.ru
+        - hadhecrecled.com
+        - hadrecrolof.ru
+        - hadsparmirat.com
+        - hanparolhar.com
+        - rofromandfor.ru
+        - rowrorofrat.com
+        RequestUrl: *id006
+        QueryName: *id006
+  object_42:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id007
+        - assisted-living-11607.bond
+        - online-jobs-42681.bond
+        - perfumes-76753.bond
+        - security-surveillance-cameras-42345.bond
+        - yoga-classes-35904.bond
+        - ai-courses-12139.bond
+        - ai-courses-13069.bond
+        - ai-courses-14729.bond
+        - ai-courses-16651.bond
+        - ai-courses-17621.bond
+        - app-software-development-training-52686.bond
+        - app-software-development-training-54449.bond
+        - app-software-development-training-55554.bond
+        - app-software-development-training-57549.bond
+        - ai-courses-2024-pe.bond
+        - ai-courses-2024-pk.bond
+        - ai-courses-2024sa.bond
+        - ai-courses2023-in.bond
+        - ai-courses2023in.bond
+        - ai-courses2024in.bond
+        - app-software-development-italy.bond
+        - app-software-development-training-usa.bond
+        - online-degrees-16099.bond
+        - portable-air-conditioner-12322.bond
+        - river-cruises-13890.bond
+        - roofing-services-10175.bond
+        - travel-insurance-43494.bond
+        - usa-online-degree-29o.bond
+        - bra-portable-air-conditioner-9o.bond
+        - uk-river-cruises-8n.bond
+        - rsa-roofing-services-8n.bond
+        - col-travel-insurance-3n.bond
+        - welding-machines-10120.bond
+        - welding-machines-35450.bond
+        - welding-machines-56397.bond
+        - welding-machines-76813.bond
+        - welding-machines-99146.bond
+        RequestUrl: *id007
+        QueryName: *id007
+  object_43:
+    all:
+    - domain_detection:
+        PowershellCommand|contains: &id008
+        - tires-book-robust.bond
+        - laser-skin-treatment-19799.bond
+        - pool-repair-35063.bond
+        - apartments-for-rent-72254.bond
+        - hemophilia-treatment-41433.bond
+        RequestUrl: *id008
+        QueryName: *id008
+  object_44:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id009
+        - https://blogs.infoblox.com
+        RequestUrl: *id009
+  condition: any of them

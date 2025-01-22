@@ -1,0 +1,90 @@
+title: OSINT - Banking malware on Google Play targets Polish banks
+id: 5a39216d-e93c-4046-8ff5-bfd8950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  object_7645:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 57a96d024e61f683020be46173d74fad4cf05806
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+  object_7646:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 757ea52db39e9cdbf5e2e95485801e3e4b19020d
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+  object_7647:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - 757ea52db39e9cdbf5e2e95485801e3e4b19020d
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 204f2e5e18691156036cbcfc69fa759272a2180fba77a74415ccb2c7469a670b
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 5e9b289928004deade3fbfc20049abf5
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+  object_7649:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id006
+          - 57a96d024e61f683020be46173d74fad4cf05806
+          SHA1: *id006
+          DriverSha1: *id006
+          TargetProcessSha1: *id006
+          Hashes.sha1: *id006
+        sha256_detection:
+          sha256: &id007
+          - 86aaed9017e3af5d1d9c8460f2d8164f14e14db01b1a278b4b93859d3cf982f5
+          SHA256: *id007
+          DriverSha256: *id007
+          TargetProcessSha256: *id007
+          Hashes.sha256: *id007
+        md5_detection:
+          md5: &id008
+          - 883c2183fecc06f1faab8fbab03186e6
+          MD5: *id008
+          DriverMd5: *id008
+          TargetProcessMd5: *id008
+          Hashes.md5: *id008
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id009
+        - nelis.at
+        - sdljfkh1313.win
+        RequestUrl: *id009
+        QueryName: *id009
+    - url_detection:
+        PowershellCommand|contains: &id010
+        - https://www.welivesecurity.com
+        RequestUrl: *id010
+  condition: any of them

@@ -1,0 +1,41 @@
+title: OSINT - New Arena Crysis Ransomware Variant Released
+id: 59a3d08d-5dc8-4153-bc7c-456d950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.dharma_ransomware
+- attack.group.dharma_ransomware
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 60cbe0e3a70ef3d56810bd9178ce232529c09c5f
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - a683494fc0d017fd3b4638f8b84caaaac145cc28bc211bd7361723368b4bb21e
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - f2679bdabe46e10edc6352fff3c829bc
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://www.bleepingcomputer.com
+        RequestUrl: *id004
+  condition: any of them

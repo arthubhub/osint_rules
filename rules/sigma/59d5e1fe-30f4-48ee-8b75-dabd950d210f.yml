@@ -1,0 +1,84 @@
+title: 'M2M -  Locky 2017-10-04 : Affid=3, offline, ".ykcol" : "Message from 02087654321"
+  - "Voice Message.7z"'
+id: 59d5e1fe-30f4-48ee-8b75-dabd950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 98.124.251.65
+        - 89.96.90.14
+        - 66.135.55.8
+        - 98.124.251.72
+        - 75.126.139.114
+        - 185.19.95.61
+        - 94.75.202.60
+        - 98.124.251.166
+        - 212.63.108.71
+        - 98.124.252.132
+        - 91.185.200.235
+        - 162.212.87.74
+        - 98.124.251.168
+        - 91.221.196.222
+        - 151.1.129.127
+        - 62.149.140.180
+        - 94.23.224.229
+        - 62.149.140.55
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 77e09f12c5385555203421ceb5bad44c6745ba12
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 8a6c5b229dcb7037e59b52c287d1f7ccd0581f8df1815df82ce07156b6ec6199
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 90f130611bdd7fe3c45cdf418f3ec006
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://artsidestudio.com
+        - http://baysanal.com
+        - http://computerserviceheerhugowaard.nl
+        - http://foxcabinets.com
+        - http://lacadosmurcia.com
+        - http://laveentrading.com
+        - http://littleblessingscotons.com
+        - http://mautau.it
+        - http://mis4.zenfinancial.com
+        - http://photobookexpress.com
+        - http://poslovnekomunikacije.si
+        - http://pspcny.com
+        - http://ragazzemessenger.com
+        - http://timmah.users.whitehat.dk
+        - http://trapiantivarese.org
+        - http://www.pizzelli.eu
+        - http://www.rafaelgalindo.com
+        - http://www.traders-forum.com
+        - http://derainlay.info
+        RequestUrl: *id005
+  condition: any of them

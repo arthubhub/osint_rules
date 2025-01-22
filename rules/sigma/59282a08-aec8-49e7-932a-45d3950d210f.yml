@@ -1,0 +1,87 @@
+title: 'Jaff 2017-05-26 : "Scanned Image from a Xerox WorkCentre" - "Scan_0012_123456789.zip"'
+id: 59282a08-aec8-49e7-932a-45d3950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.jaff
+- attack.software.jaff
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 46.173.218.111
+        - 35.166.221.246
+        - 47.89.53.24
+        - 81.169.145.88
+        - 124.150.140.96
+        - 61.106.62.37
+        - 211.174.62.52
+        - 162.251.21.215
+        - 109.232.220.235
+        - 107.180.40.126
+        - 27.54.86.236
+        - 76.74.235.244
+        - 93.170.136.50
+        - 95.173.189.38
+        - 61.19.251.181
+        - 80.78.245.178
+        - 192.185.48.180
+        - 46.173.218.145
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - d4b86429537c3b1d9e15e96a965166fc053efbd0
+          - 124e4c77e52026c2de1a88be302c00a6db4f936b
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 375ba5457b0a8e0328f38e942dc16fa07e03e2b39571392c0f10f93031158d6f
+          - 68c7b7d97fada3f558a54260491ffe1ce77add158f8a91c2599432f13718b807
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - aace687d16706b05aa49c9b7fff7572b
+          - 6708cc80916e838a9bbed09c91854230
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://better57toiuydof.net
+        - http://dsopro.com
+        - http://easy2.cn
+        - http://eisenerzgrube.de
+        - http://eselink.com.my
+        - http://e-snhv.com
+        - http://fabriquekorea.com
+        - http://jinqiaonkyy.com
+        - http://orhangazitur.com
+        - http://paradigmenergycorp.com
+        - http://poltec.com.au
+        - http://praktikum-marketing.de
+        - http://pw-shop.com
+        - http://tasfirin-ustasi.net
+        - http://thanprints.com
+        - http://trade-unite.ru
+        - http://vigs.mx
+        - http://www.buchenried.de
+        - http://youtoolgrabeertorse.org
+        - http://comboratiogferrdto.com
+        RequestUrl: *id005
+  condition: any of them

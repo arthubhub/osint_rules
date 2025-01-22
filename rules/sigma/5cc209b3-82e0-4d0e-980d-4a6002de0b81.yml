@@ -1,0 +1,143 @@
+title: OSINT - Threat Actor TA505 Targets Financial Enterprises Using LOLBins and
+  a New Backdoor Malware
+id: 5cc209b3-82e0-4d0e-980d-4a6002de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.ta505
+- attack.t1041
+- attack.t1193
+logsource:
+  product: windows
+detection:
+  object_8378:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - ad35fa0b3799562931b4bfa3abd057214b8721ff
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 843578299d9e60e52f781ca487aa83f5df4c5f4ca71d3a941a8ea249476c5c3c
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 4ca90e372982c864b8eae6d95161a213
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_8380:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 63aeb16b5d001cbd94b636e9f557fe97b8467c8d
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - cd7bb7396f21c88742fefb278e6e7c9a564dfe109b434494d159518175739c40
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 4acd155b901884134f01b383eb035c23
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_8382:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - 880b383532534e32f3fa49692d676d9488aabac1
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - c0bcd76c486a8c8994fc005d83d64716ed3604c8559463867412c446e5364169
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - 2d3238185537429ea693a81a1c6ca4c0
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_8384:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - 06f232210e507f09f01155e7d0cb5389b8a31042
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - 9dc1381816b8b18aead256bdc05486171968abbc6ff01766088fbfe7badd194e
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - 4a8198fca604a78dd210803aebd5cbba
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id013
+        - aasdkkkdsa3442.icu
+        - joisf333.icu
+        - zxskjkkjsk3232.pw
+        RequestUrl: *id013
+        QueryName: *id013
+    - ip_detection:
+        DestinationIp: &id014
+        - 195.123.227.79
+        - 79.141.171.160
+        SourceIp: *id014
+        IpAddresses: *id014
+        destination.ip: *id014
+        RequestUrl|contains: *id014
+    - hash_detection:
+        sha1_detection:
+          sha1: &id015
+          - 06f232210e507f09f01155e7d0cb5389b8a31042
+          - ad35fa0b3799562931b4bfa3abd057214b8721ff
+          - 63aeb16b5d001cbd94b636e9f557fe97b8467c8d
+          - 880b383532534e32f3fa49692d676d9488aabac1
+          SHA1: *id015
+          DriverSha1: *id015
+          TargetProcessSha1: *id015
+          Hashes.sha1: *id015
+    - url_detection:
+        PowershellCommand|contains: &id016
+        - https://www.cybereason.com
+        RequestUrl: *id016
+  condition: any of them

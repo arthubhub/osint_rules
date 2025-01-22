@@ -1,0 +1,51 @@
+title: OSINT - Will Astrum Fill the Vacuum in the Exploit Kit Landscape?
+id: 591df523-1b50-4547-ae34-4dca02de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 141.255.161.68
+        - 193.124.200.194
+        - 193.124.200.212
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 691d3600ede858cfbb56a76ccaf3e2ae9cd784a2
+          - 79b64ec0395ba20f0de4f6139d6d994668c7b45b
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 39b1e99034338d7f5b0cbff9fb9bd93d9e4dd8f4c77b543da435bb2d2259b0b5
+          - ccf89a7c8005948b9548cdde12cbd060f618234fd00dfd434c52ea5027353be8
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 34b6eb75b8e973fbb065586b4a169cf6
+          - 986df65fe63bcab25996b5edc93b0de0
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://blog.trendmicro.com
+        - http://define.predatorhuntingusa.com
+        RequestUrl: *id005
+  condition: any of them

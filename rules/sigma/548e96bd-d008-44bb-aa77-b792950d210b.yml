@@ -1,0 +1,77 @@
+title: 'OSINT Fidelis Threat Advisory #1014 "Bots, Machines, and the Matrix"'
+id: 548e96bd-d008-44bb-aa77-b792950d210b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - a2kiaymoster14902.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 117.21.191.47
+        - 121.11.83.7
+        - 121.14.212.184
+        - 155.133.18.44
+        - 155.133.18.45
+        - 54.69.90.62
+        - 119.1.109.44
+        - 158.255.1.241
+        - 54.191.142.124
+        - 54.68.121.73
+        - 54.68.194.154
+        - 121.14.212.248
+        - 116.255.202.74
+        - 121.61.118.140
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - c6966d9557a9d5ffbbcd7866d45eddff30a9fd99
+          - de6a4d53b5265f8cddf08271d17d845f58107e82
+          - a87c5b6a588ef4b351ce1a3a0fe2b035e685e96c
+          - feed5337c0a3b1fd55c78a976fbd5388512a22e1
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        md5_detection:
+          md5: &id004
+          - 036eb11a5751c77bc65006769921c8e5
+          - b62391f3f7cbdea02763614f60f3930f
+          - 9e8b203f487dfa85dd47e32b3d24e24e
+          - 463f7191363d0391add327c1270d7fe6
+          - b21e4c8f73151d7b0294a3974fe44421
+          - 9cf7d079713fdf715131e16b144d3f52
+          - 2983d957d4cdd9293682cfaf21147d07
+          - 72380a9fcf7486bb731606d4f4c13f27
+          - 13475d0fdba8dc7a648b57b10e8296d5
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://www.threatgeek.com
+        - http://www.fidelissecurity.com
+        - http://121.11.83.7
+        - http://155.133.18.45
+        - http://54.69.90.62
+        - http://121.14.212.184
+        - http://217.23.6.112
+        - http://54.191.142.124
+        - http://119.1.109.44
+        - http://77.87.79.128
+        - http://158.255.1.241
+        RequestUrl: *id005
+  condition: any of them

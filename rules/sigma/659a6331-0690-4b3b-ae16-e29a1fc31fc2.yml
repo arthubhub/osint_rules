@@ -1,0 +1,45 @@
+title: Malicious GitHub user and account - distributing malicious code and running  Sordeal-Stealer
+id: 659a6331-0690-4b3b-ae16-e29a1fc31fc2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.t1056.002
+- attack.t1185
+- attack.t1056.001
+- attack.t1048
+logsource:
+  product: windows
+detection:
+  object_8170:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id001
+        - https://github.com
+        RequestUrl: *id001
+  object_8171:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://rentry.co
+        RequestUrl: *id002
+  object_8172:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://rentry.co
+        RequestUrl: *id003
+  object_8173:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://rentry.co
+        RequestUrl: *id004
+  object_8174:
+    all:
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://rentry.co
+        RequestUrl: *id005
+  condition: any of them

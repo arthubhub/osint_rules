@@ -1,0 +1,47 @@
+title: OSINT - Turla renews its arsenal with Topinambour
+id: 5d2deea3-eea0-41ea-91bf-4a8b950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.turla
+- attack.software.turla
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 197.168.0.73
+        - 197.168.0.98
+        - 197.168.0.212
+        - 197.168.0.243
+        - 197.168.0.247
+        - 197.168.0.250
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        md5_detection:
+          md5: &id002
+          - 47870ff98164155f088062c95c448783
+          - 2c1e73da56f4da619c4c53b521404874
+          - 6acf316fed472300fa50db54fa6f3cbc
+          - 9573f452004b16eabd20fa65a6c2c1c4
+          - 3772a34d1b731697e2879bef54967332
+          - d967d96ea5d0962e08844d140c2874e0
+          - a80bbd753c07512b31ab04bd5e3324c2
+          - 37dc2eb8ee56aeba4dbd4cf46f87ae9a
+          - 710f729ab26f058f2dbf08664edb3986
+          MD5: *id002
+          DriverMd5: *id002
+          TargetProcessMd5: *id002
+          Hashes.md5: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - https://securelist.com
+        RequestUrl: *id003
+  condition: any of them

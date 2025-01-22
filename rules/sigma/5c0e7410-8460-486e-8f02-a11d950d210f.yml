@@ -1,0 +1,183 @@
+title: OSINT - Sextortion with a side of ransomware
+id: 5c0e7410-8460-486e-8f02-a11d950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.software.azorult
+- attack.software.win.gandcrab
+- attack.group.azorult
+- attack.group.win.gandcrab
+logsource:
+  product: windows
+detection:
+  object_16670:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 7727d9bb9d9572f1c20c7f51b39507cd4107c87c
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - a7ba2c9def86e54086f0624a73597865a90cb93aa72dec7fdf264f655cf1bb56
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - 033414047da131ed4c23cf6ad8bf1d93
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+  object_16672:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id004
+          - 080e71f56a9fc783181cdaf1fa88666c352ba314
+          SHA1: *id004
+          DriverSha1: *id004
+          TargetProcessSha1: *id004
+          Hashes.sha1: *id004
+        sha256_detection:
+          sha256: &id005
+          - 29b42b0ecd874bcad5a5d9d03ed8f8dee320892305312b4898a0b64f9fbde93a
+          SHA256: *id005
+          DriverSha256: *id005
+          TargetProcessSha256: *id005
+          Hashes.sha256: *id005
+        md5_detection:
+          md5: &id006
+          - 3071f670ad7ec4a5985498517a5bf48c
+          MD5: *id006
+          DriverMd5: *id006
+          TargetProcessMd5: *id006
+          Hashes.md5: *id006
+  object_16674:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id007
+          - f3cdae48d7e9f53667a1a7c5332c151f63cf61d0
+          SHA1: *id007
+          DriverSha1: *id007
+          TargetProcessSha1: *id007
+          Hashes.sha1: *id007
+        sha256_detection:
+          sha256: &id008
+          - ef07905923461ce13a3ca18ef6eb1833a8c8d327d47e9cc8641a2ca3d5ce97f3
+          SHA256: *id008
+          DriverSha256: *id008
+          TargetProcessSha256: *id008
+          Hashes.sha256: *id008
+        md5_detection:
+          md5: &id009
+          - db947d361f3e06b039a705a2728606fa
+          MD5: *id009
+          DriverMd5: *id009
+          TargetProcessMd5: *id009
+          Hashes.md5: *id009
+  object_16676:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id010
+          - f3cdae48d7e9f53667a1a7c5332c151f63cf61d0
+          SHA1: *id010
+          DriverSha1: *id010
+          TargetProcessSha1: *id010
+          Hashes.sha1: *id010
+        sha256_detection:
+          sha256: &id011
+          - ef07905923461ce13a3ca18ef6eb1833a8c8d327d47e9cc8641a2ca3d5ce97f3
+          SHA256: *id011
+          DriverSha256: *id011
+          TargetProcessSha256: *id011
+          Hashes.sha256: *id011
+        md5_detection:
+          md5: &id012
+          - db947d361f3e06b039a705a2728606fa
+          MD5: *id012
+          DriverMd5: *id012
+          TargetProcessMd5: *id012
+          Hashes.md5: *id012
+  object_16677:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id013
+          - 080e71f56a9fc783181cdaf1fa88666c352ba314
+          SHA1: *id013
+          DriverSha1: *id013
+          TargetProcessSha1: *id013
+          Hashes.sha1: *id013
+        sha256_detection:
+          sha256: &id014
+          - 29b42b0ecd874bcad5a5d9d03ed8f8dee320892305312b4898a0b64f9fbde93a
+          SHA256: *id014
+          DriverSha256: *id014
+          TargetProcessSha256: *id014
+          Hashes.sha256: *id014
+        md5_detection:
+          md5: &id015
+          - 3071f670ad7ec4a5985498517a5bf48c
+          MD5: *id015
+          DriverMd5: *id015
+          TargetProcessMd5: *id015
+          Hashes.md5: *id015
+  object_16678:
+    all:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id016
+          - 7727d9bb9d9572f1c20c7f51b39507cd4107c87c
+          SHA1: *id016
+          DriverSha1: *id016
+          TargetProcessSha1: *id016
+          Hashes.sha1: *id016
+        sha256_detection:
+          sha256: &id017
+          - a7ba2c9def86e54086f0624a73597865a90cb93aa72dec7fdf264f655cf1bb56
+          SHA256: *id017
+          DriverSha256: *id017
+          TargetProcessSha256: *id017
+          Hashes.sha256: *id017
+        md5_detection:
+          md5: &id018
+          - 033414047da131ed4c23cf6ad8bf1d93
+          MD5: *id018
+          DriverMd5: *id018
+          TargetProcessMd5: *id018
+          Hashes.md5: *id018
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id019
+        - gandcrabmfe6mnef.onion
+        RequestUrl: *id019
+        QueryName: *id019
+    - hash_detection:
+        sha256_detection:
+          sha256: &id020
+          - a7ba2c9def86e54086f0624a73597865a90cb93aa72dec7fdf264f655cf1bb56
+          - 29b42b0ecd874bcad5a5d9d03ed8f8dee320892305312b4898a0b64f9fbde93a
+          - ef07905923461ce13a3ca18ef6eb1833a8c8d327d47e9cc8641a2ca3d5ce97f3
+          SHA256: *id020
+          DriverSha256: *id020
+          TargetProcessSha256: *id020
+          Hashes.sha256: *id020
+    - url_detection:
+        PowershellCommand|contains: &id021
+        - https://www.proofpoint.com
+        - http://jdhftu.tk
+        - http://egorgerov3.temp.swtest.ru
+        - http://supermainers.online
+        RequestUrl: *id021
+  condition: any of them

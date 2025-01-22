@@ -1,0 +1,44 @@
+title: 'Updating: Tracking Powershell Empire C2 via Urlscan'
+id: 5e38d6d4-7d88-40ab-8313-4db80a0a020f
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 37.220.0.54
+        - 185.165.168.226
+        - 185.245.84.106
+        - 194.99.22.145
+        - 23.83.133.15
+        - 45.61.139.40
+        - 54.229.88.99
+        - 149.28.128.67
+        - 155.138.238.182
+        - 23.101.118.20
+        - 23.83.133.137
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://urlscan.io
+        - https://azershop.org
+        - https://virtualofficeroom.com
+        - https://officestorage.org
+        - https://194.99.22.145
+        - http://23.83.133.15
+        - https://updateinfoapps.com
+        - https://www.microsoft-lync.cf
+        - https://cdnupdate2.ddns.net
+        - http://securityinsiderblogs.com
+        - https://bankingadvice.net
+        - http://23.83.133.137
+        RequestUrl: *id002
+  condition: any of them

@@ -1,0 +1,60 @@
+title: "OSINT Neutrino Exploit Kit \xE2\u20AC\u201C One Flash File to Rule Them All\
+  \ by SpiderLabs"
+id: 56b06dc5-2cac-46c1-9827-40f7950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - e6607695a56f13c001c29ae0a4d9ac2b5741626c
+          - 453a2e0069a26e9b7e2db638a8b1942e95c0a5a7
+          - 3c0b6cf1d75aca0e339efecb700a3458aa27017e
+          - efdb659b75d4af0aab67b40042755bfb1f84357e
+          - 5eb520aec1f1c992771f6a4559cda73cd60a5aaf
+          - 90e6bb86cb96abdcd82576669b7a3dfd3a5c641d
+          - 7bc541ef970788a07c973ff8844ea758136fd711
+          - 7a044056194b07daa6a4c104be03e6fccd9089dc
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - fe5bfee142d70d9d2e80f9e09659a244a7aaa262df9088b3643626b0fdba11e0
+          - 163822f0eda6927994cb60736b9eb51600c203c4869b51db362aaba5203c2e98
+          - 806ab2c5b089bd3db019bc98ce00b28a57a936e06b3ad81104453b7aab2be43a
+          - 972ec16e4fc85c88326d7bb616f7091dbc1448369e23107bb7bc0ad15a1046bd
+          - 34b609d980a6baffe4ffe5927730c641b58c274239df68d1846566366940dcea
+          - aee8a02ac4176d4c712520ea0eef75850ad88bf196db983d6d4ccbba6f100d76
+          - 7a1a1e3ae834e7682f3762c743ac44c5c35eeaf35f84ed6dcfff603c1e0357e8
+          - 05a50b8b9cccdfa6adcb1f1173c021c8944b3aa5312e21e0af015a98735263b2
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - d4b9af141d7f2e1b97e55f17133f4919
+          - d523b243c629f71bcdbbd09a1274ec59
+          - 4fc2d57dd2b96eca1d3e24441fc3c401
+          - dbb069409242bcf180c48bbc22df9dd1
+          - 955c42d4d9ac6b821dcb022b790aad82
+          - 4b0235980414e7fa8e188a0c2fc52b1a
+          - cd4ac99e8fe25c9365708745db6ac7ad
+          - 7f2b2f029fdc740b61d3b88c89913cf6
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - https://www.trustwave.com
+        RequestUrl: *id004
+  condition: any of them

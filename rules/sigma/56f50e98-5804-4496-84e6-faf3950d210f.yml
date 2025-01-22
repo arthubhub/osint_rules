@@ -1,0 +1,44 @@
+title: OSINT - PETYA Crypto-ransomware Overwrites MBR to Lock Users Out of Their Computers
+id: 56f50e98-5804-4496-84e6-faf3950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        sha1_detection:
+          sha1: &id001
+          - 39b6d40906c7f7f080e6befa93324dddadcbd9fa
+          - b0c5fab5d69afcc7fd013fd7aef20660bf0077c2
+          - 755f2652638f87ab517c608a363c4aefb9dd6a5a
+          SHA1: *id001
+          DriverSha1: *id001
+          TargetProcessSha1: *id001
+          Hashes.sha1: *id001
+        sha256_detection:
+          sha256: &id002
+          - 26b4699a7b9eeb16e76305d843d4ab05e94d43f3201436927e13b3ebafa90739
+          - b521767f67630b74e2272ee953295ef56c8b6428da75afa5bbfb05b72b34c69d
+          - e99eccfc1473800ea6e2e730e733c213f18e817c0c6501209f4ee40408f94951
+          SHA256: *id002
+          DriverSha256: *id002
+          TargetProcessSha256: *id002
+          Hashes.sha256: *id002
+        md5_detection:
+          md5: &id003
+          - af2379cc4d607a45ac44d62135fb7015
+          - a2d6887d8a7b09b86a917a5c61674ab4
+          - f636b3471c9fda3686735223dbb0b2bd
+          MD5: *id003
+          DriverMd5: *id003
+          TargetProcessMd5: *id003
+          Hashes.md5: *id003
+    - url_detection:
+        PowershellCommand|contains: &id004
+        - http://blog.trendmicro.com
+        RequestUrl: *id004
+  condition: any of them

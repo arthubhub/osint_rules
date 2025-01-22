@@ -1,0 +1,81 @@
+title: 'OSINT - IoT_reaper: A Rappid Spreading New IoT Botnet'
+id: 59e9ec59-a888-48e4-afb4-441602de0b81
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 162.211.183.192
+        - 27.102.101.121
+        - 222.112.82.231
+        - 119.82.26.157
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - cd078ef54430c9ef9aa24dfbb7c89456f13e86f6
+          - 694ab441edcd6da67312df7f006a9ab1951a5c24
+          - 8756fc70cf05d558d086c669e449ca007f2b2f05
+          - bccdbe601b0b12183d55d8622c806f6dff181078
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 2acb0bc56baddeb26a091ff12a39463130243321720d0789375887f4117d8c1a
+          - b8e489068780fff439268a4f3e5feb572356615be043596656d7a1624689b21a
+          - e2ed207461032f4bf96cfd36e54cd883186592860056bd96df94e73f5b7db035
+          - c2978651935f9d2af532605509493c4f588fc332a458eaef3b01199eae1f1897
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - ca92a3b74a65ce06035fcc280740daf6
+          - 3182a132ee9ed2280ce02144e974220a
+          - 3d680273377b67e6491051abe17759db
+          - 41ef6a5c5b2fde1b367685c7b8b3c154
+          - 4406bace3030446371df53ebbdc17785
+          - 4e2f58ba9a8a2bf47bdc24ee74956c73
+          - 596b3167fe0d13e3a0cfea6a53209be4
+          - 6587173d571d2a587c144525195daec9
+          - 6f91694106bb6d5aaa7a7eac841141d9
+          - 704098c8a8a6641a04d25af7406088e1
+          - 726d0626f66d5cacfeff36ed954dad70
+          - 76be3db77c7eb56825fe60009de2a8f2
+          - 95b448bdf6b6c97a33e1d1dbe41678eb
+          - 9ad8473148e994981454b3b04370d1ec
+          - 9f8e8b62b5adaf9c4b5bdbce6b2b95d1
+          - a3401685d8d9c7977180a5c6df2f646a
+          - abe79b8e66c623c771acf9e21c162f44
+          - b2d4a77244cd4f704b65037baf82d897
+          - e9a03dbde09c6b0a83eefc9c295711d7
+          - f9ec2427377cbc6afb4a7ff011e0de77
+          - fb7c00afe00eeefb5d8a24d524f99370
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - http://blog.netlab.360.com
+        - http://cbk99.com
+        - http://bbk80.com
+        - http://103.1.221.40
+        - http://162.211.183.192
+        - http://198.44.241.220
+        - http://23.234.51.91
+        - http://27.102.101.121
+        RequestUrl: *id005
+  condition: any of them

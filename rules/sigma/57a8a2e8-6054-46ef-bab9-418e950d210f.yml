@@ -1,0 +1,146 @@
+title: 'OSINT - ProjectSauron: top level cyber-espionage platform covertly extracts
+  encrypted government comms'
+id: 57a8a2e8-6054-46ef-bab9-418e950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - rapidcomments.com
+        - bikessport.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 185.78.64.121
+        - 81.4.108.168
+        - 178.211.40.117
+        - 176.9.242.188
+        - 217.160.176.157
+        - 5.196.206.166
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - hash_detection:
+        sha1_detection:
+          sha1: &id003
+          - aa70eaa865f9444dbea03df371d220e1cd79156b
+          - d18792a187d7567f3f31908c05a8b8a2647d365f
+          - e13cacb3f1eab730d0def265e7167a4f2ecce9c1
+          - 1bb7614bb7c3042796c8dc7befdd8042197f222d
+          - ad1a9b908602a474ce2039e95b1598f75583eb4d
+          - cc78cea09009e7dfe2f155f24e7968dd69d044a5
+          - 63b579b9671b45478b42a5f96110c9d4234f7c82
+          - 90bead07f7c6c92c6ca2b34406c5ea516307ee4e
+          - d18df80316160535aa798303b6f02b6ae8e04388
+          - 56ba0ff2554c6f2415654d0e4f7438ea8e0fa7f9
+          SHA1: *id003
+          DriverSha1: *id003
+          TargetProcessSha1: *id003
+          Hashes.sha1: *id003
+        sha256_detection:
+          sha256: &id004
+          - 7cc0bf547e78c8aaf408495ceef58fa706e6b5d44441fefdce09d9f06398c0ca
+          - 6c8c93069831a1b60279d2b316fd36bffa0d4c407068dbef81b8e2fe8fd8e8cd
+          - a4736de88e9208eb81b52f29bab9e7f328b90a86512bd0baadf4c519e948e5ec
+          - d737644d612e5051f66fb97a34ec592b3508be06e33f743a2fdb31cdf6bd2718
+          - 96c3404dadee72b1f27f6d4fbd567aac84d1fdf64a5168c7ef2464b6c4b86289
+          - 8e63e579dded54f81ec50ef085929069d30a940ea4afd4f3bf77452f0546a3d3
+          - c8f95bf8a76ff124cc1d7a8439beff360d0eb9c0972d42a8684c3bd4e91c6600
+          - 6b06522f803437d51c15832dbd6b91d8d8b244440b4d2f09bd952f335351b06d
+          - 3782b63d7f6f688a5ccb1b72be89a6a98bb722218c9f22402709af97a41973c8
+          - 720195b07c81e95dab4a1469342bc723938733b3846d7647264f6d0816269380
+          SHA256: *id004
+          DriverSha256: *id004
+          TargetProcessSha256: *id004
+          Hashes.sha256: *id004
+        md5_detection:
+          md5: &id005
+          - 46a676ab7f179e511e30dd2dc41bd388
+          - 9f81f59bc58452127884ce513865ed20
+          - e710f28d59aa529d6792ca6ff0ca1b34
+          - 1f7ddb6752461615ebf0d76bdcc6ab1a
+          - 227ea8f8281b75c5cd5f10370997d801
+          - 2f704cb6c080024624fc3267f9fdf30e
+          - 501fe625d15b91899cc9f29fdfc19c40
+          - 6296851190e685498955a5b37d277582
+          - 6b114168fb117bd870c28c5557f60efe
+          - 7b6fdbd3839642d6ad7786182765d897
+          - 7b8a3bf6fd266593db96eddaa3fae6f9
+          - c0dfb68a5de80b3434b04b38a61dbb61
+          - bb6aec0cf17839a6bedfb9ddb05a0a6f
+          - c074710482023cd73da9f83438c3839f
+          - c3f8f39009c583e2ea0abe2710316d2a
+          - cf6c049bd7cd9e04cc365b73f3f6098e
+          - 40f751f2b22208433a1a363550c73c6b
+          - 1d9d7d05ab7c68bdc257afb1c086fb88
+          - 181c84e45abf1b03af0322f571848c2d
+          - 2e460fd574e4e4cce518f9bc8fc25547
+          - 1f6ba85c62d30a69208fe9fb69d601fa
+          - f3b9c454b799e2fe6f09b6170c81ff5c
+          - 0c12e834187203fbb87d0286de903dab
+          - 72b03abb87f25e4d5a5c0e31877a3077
+          - 76db7e3af9be2dfaa491ec1142599075
+          - 5d41719eb355fdf06277140da14af03e
+          - a277f018c2bb7c0051e15a00e214bbf2
+          - 0c4a971e028dc2ae91789e08b424a265
+          - 44c2fa487a1c01f7839b4898cc54495e
+          - f01dc49fce3a2ff22b18457b1bf098f8
+          - f59813ac7e30a1b0630621e865e3538c
+          - ca05d537b46d87ea700860573dd8a093
+          - 01ac1cd4064b44cdfa24bf4eb40290e7
+          - 1511f3c455128042f1f6db0c3d13f1ab
+          - 57c48b6f6cf410002503a670f1337a4b
+          - edb9e045b8dc7bb0b549bdf28e55f3b5
+          - 71eb97ff9bf70ea8bb1157d54608f8bb
+          - 2f49544325e80437b709c3f10e01cb2d
+          - 7261230a43a40bb29227a169c2c8e1be
+          - fc77b80755f7189dee1bd74760e62a72
+          - a5588746a057f4b990e215b415d2d441
+          - 0209541dead744715e359b6c6cb069a2
+          - fca102a0b39e2e3eddd0fe0a42807417
+          - 5373c62d99aff7135a26b2d38870d277
+          - 91bb599cbba4fb1f72e30c09823e35f7
+          - 914c669dbaaa27041a0be44f88d9a6bd
+          - c58a90accc1200a7f1e98f7f7aa1b1ae
+          - 63780a1690b922045625ead794696482
+          - 8d02e1eb86b7d1280446628f039c1964
+          - 6ca97b89af29d7eff94a3a60fa7efe0a
+          - 93c9c50ac339219ee442ec53d31c11a2
+          - f7434b5c52426041cc87aa7045f04ec7
+          - f936b1c068749fe37ed4a92c9b4cfab6
+          - 2054d07ae841fcff6158c7ccf5f14bf2
+          - 6cd8311d11dc973e970237e10ed04ad7
+          - 5ddd5294655e9eb3b9b2071dc2e503b1
+          - 2a8785bf45f4f03c10cd929bb0685c2d
+          - f0e0cbf1498dbf9b8321d11d21c49811
+          - ac8072dfda27f9ea068dcad5712dd893
+          - 2382a79f9764389acfb4cb4692aa044d
+          - 85ea0d79ff015d0b1e09256a880a13ce
+          - 4728a97e720c564f6e76d0e22c76bae5
+          - b98227f8116133dc8060f2ada986631c
+          - d2065603ea3538d17b6ce276f64aa7a2
+          - fcd1a80575f503a5c4c05d4489d78ff9
+          - eb8d5f44924b4df2ce4a70305dc4bd59
+          - 17deb723a16856e72dd5c1ba0dae0cc7
+          - b6fe14091359399c4ea572ebf645d2c5
+          - c8c30989a25c0b2918a5bb9fd6025a7a
+          - 814ca3a31122d821cd1e582abf958e8f
+          - 951ebe1ee17f61cd2398d8bc0e00b099
+          MD5: *id005
+          DriverMd5: *id005
+          TargetProcessMd5: *id005
+          Hashes.md5: *id005
+    - url_detection:
+        PowershellCommand|contains: &id006
+        - https://securelist.com
+        - https://kas.pr
+        RequestUrl: *id006
+  condition: any of them

@@ -1,0 +1,30 @@
+title: OSINT - Bad Rabbit ransomware
+id: 59f0462f-41d4-47b4-9e1b-4a07950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.bad_rabbit
+- attack.software.bad_rabbit
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - hash_detection:
+        md5_detection:
+          md5: &id001
+          - fbbdc39af1139aebba4da004475e8839
+          - 1d724f95c61f1055f0d02c2154bbccd3
+          - b14d8faf7f0cbcfad051cefe5f39645f
+          MD5: *id001
+          DriverMd5: *id001
+          TargetProcessMd5: *id001
+          Hashes.md5: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://securelist.com
+        - http://1dnscontrol.com
+        RequestUrl: *id002
+  condition: any of them

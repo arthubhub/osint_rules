@@ -1,0 +1,22 @@
+title: OSINT Lost your iPhone? Be on guard for a perfectly-timed Apple ID phishing
+  attack by Hot For Security
+id: 57a8931f-6818-42e8-81a2-44ec950d210f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - show-iphone-location.com
+        RequestUrl: *id001
+        QueryName: *id001
+    - url_detection:
+        PowershellCommand|contains: &id002
+        - https://www.hotforsecurity.com
+        RequestUrl: *id002
+  condition: any of them

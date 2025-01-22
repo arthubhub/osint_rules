@@ -1,0 +1,70 @@
+title: 'Malspam 2016-07-21 .wsf (campaign: "fixed invoice")'
+id: 5790e667-46bc-453e-bb78-44d0950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - domain_detection:
+        PowershellCommand|contains: &id001
+        - choogo.net
+        - kveldeil.no
+        - vkt-rus.com
+        - premiuminformation.org
+        - bizforward.ru
+        - strojdom33.ru
+        - klausschuster.at
+        - voisin-sa.com
+        - mebel-bogatyr.ru
+        RequestUrl: *id001
+        QueryName: *id001
+    - ip_detection:
+        DestinationIp: &id002
+        - 213.205.40.169
+        - 213.180.150.17
+        - 81.196.20.133
+        - 208.71.106.49
+        - 112.171.173.157
+        - 85.252.49.19
+        - 162.210.101.97
+        - 31.220.16.180
+        - 195.208.0.15
+        - 192.254.188.66
+        - 91.201.210.24
+        - 193.232.240.10
+        - 141.8.194.9
+        - 91.194.41.32
+        - 86.59.107.231
+        - 83.125.22.208
+        - 84.246.225.155
+        - 141.8.192.63
+        SourceIp: *id002
+        IpAddresses: *id002
+        destination.ip: *id002
+        RequestUrl|contains: *id002
+    - url_detection:
+        PowershellCommand|contains: &id003
+        - http://choogo.net
+        - http://kveldeil.no
+        - http://forum-droid.16mb.com
+        - http://vkt-rus.com
+        - http://wusromania.home.ro
+        - http://premiuminformation.org
+        - http://www.chipo.republika.pl
+        - http://krisnela.50webs.com
+        - http://dou104.rybadm.ru
+        - http://bizforward.ru
+        - http://strojdom33.ru
+        - http://oldim.lviv.ua
+        - http://sealionnn.web.fc2.com
+        - http://klausschuster.at
+        - http://pixel.sportsontheweb.net
+        - http://voisin-sa.com
+        - http://mebel-bogatyr.ru
+        - http://www.redimec.com
+        RequestUrl: *id003
+  condition: any of them

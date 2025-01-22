@@ -1,0 +1,77 @@
+title: "M2M -  Locky: \"Invoice RE-2017-09-21-00xxx\"\tfrom \"Amazon Marketplace\""
+id: 59c561be-c660-49d3-8193-e0c7950d210f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: '2025-01-22'
+status: experimental
+tags:
+- attack.group.locky
+- attack.software.locky
+logsource:
+  product: windows
+detection:
+  event_attributes:
+    any:
+    - ip_detection:
+        DestinationIp: &id001
+        - 185.4.135.15
+        - 203.83.241.105
+        - 65.182.174.12
+        - 85.236.207.83
+        - 151.1.140.206
+        - 178.255.99.134
+        - 195.225.168.230
+        - 80.88.87.95
+        - 213.165.96.3
+        - 87.230.26.149
+        - 117.55.235.14
+        SourceIp: *id001
+        IpAddresses: *id001
+        destination.ip: *id001
+        RequestUrl|contains: *id001
+    - hash_detection:
+        sha1_detection:
+          sha1: &id002
+          - 7eb945458b1f489b351b86e3ff4403edc3503653
+          - cb540085bef26e1b627476636701006abdff5de9
+          - 0f4ca32e004dbbf7c3e485b3ccd6ed1adac7fb65
+          SHA1: *id002
+          DriverSha1: *id002
+          TargetProcessSha1: *id002
+          Hashes.sha1: *id002
+        sha256_detection:
+          sha256: &id003
+          - 35d9c92cc67596b694396eab38b8ab8b016a96ae3b40e2cd9e6aa686970186ca
+          - ac6da4890150e2037a5913623557ab759b62d0ee9206ec0bacac318523afbc53
+          - 7bf8de16c1fc84eabcf087894b534c8af8fa4f6aa632c77c8b52471274d78a6c
+          SHA256: *id003
+          DriverSha256: *id003
+          TargetProcessSha256: *id003
+          Hashes.sha256: *id003
+        md5_detection:
+          md5: &id004
+          - 149d63efd95781f3d3a07b838d14f04e
+          - f3fcbc16b37e56f7a89ddf7d0f718291
+          - c47bc13595d44521b3f5567ded0a0a13
+          MD5: *id004
+          DriverMd5: *id004
+          TargetProcessMd5: *id004
+          Hashes.md5: *id004
+    - url_detection:
+        PowershellCommand|contains: &id005
+        - https://www.hybrid-analysis.com
+        - http://fulcar.info
+        - http://81552.com
+        - http://accuflowfloors.com
+        - http://adr-werbetechnik.de
+        - http://aetozi.gr
+        - http://afmance.it
+        - http://afradem.com
+        - http://agricom.it
+        - http://agriturismobellaria.net
+        - http://agro-kerler.de
+        - http://ahlbrandt.eu
+        - http://moonmusic.com.au
+        - http://blog.dynamoo.com
+        RequestUrl: *id005
+  condition: any of them
