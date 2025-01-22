@@ -5,26 +5,26 @@ author: IOCparser_bot
 date: '2025-01-22'
 status: experimental
 tags:
-- attack.vmray_create_named_mutex
-- attack.vmray_known_suspicious_file
-- attack.vmray_drop_pe_file
-- attack.vmray_enumerate_processes
-- attack.vmray_establish_http_connection
-- attack.vmray_modify_windows_backup_settings
-- attack.vmray_delay_by_scheduled_task_delayed
 - attack.vmray_request_dns_by_name
-- attack.vmray_install_scheduled_task_by_schtasks
-- attack.group.regretlocker
+- attack.vmray_tcp_out_connection
 - attack.software.regretlocker
+- attack.vmray_create_named_mutex
+- attack.vmray_establish_http_connection
+- attack.vmray_enumerate_processes
+- attack.vmray_dynamic_api_usage_by_api
+- attack.vmray_use_encryption_api
 - attack.vmray_av_malicious_match
+- attack.vmray_modify_windows_backup_settings
+- attack.vmray_install_startup_script_by_registry
+- attack.vmray_create_process_with_hidden_window
 - attack.vmray_change_folder_appearance
 - attack.vmray_check_external_ip
-- attack.vmray_install_startup_script_by_registry
-- attack.vmray_tcp_out_connection
+- attack.vmray_install_scheduled_task_by_schtasks
+- attack.vmray_drop_pe_file
+- attack.vmray_delay_by_scheduled_task_delayed
+- attack.vmray_known_suspicious_file
 - attack.vmray_delay_execution_by_sleep
-- attack.vmray_dynamic_api_usage_by_api
-- attack.vmray_create_process_with_hidden_window
-- attack.vmray_use_encryption_api
+- attack.group.regretlocker
 logsource:
   product: windows
 detection:
