@@ -1,0 +1,21 @@
+title: 'OSINT - Tainted Leaks: Disinformation and Phishing With a Russian Nexus -
+  url_request'
+id: fb42aa30-372f-496e-a8ce-84cd489eea42
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5926c399-62fc-4fa6-9d16-432802de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - id834.ga
+    - https://citizenlab.org
+    - id4242.ga
+    - id833.ga
+    - id9954.gq
+    - com-securitysettingpage.tk
+  condition: attributes

@@ -1,0 +1,15 @@
+title: OSINT - New KONNI Campaign References North Korean Missile Capabilities - dns_query
+id: 1489d80e-d2ae-4606-be4e-c57127be3f8d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/595dfe70-4ba8-4f83-8089-4a65950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 145.14.144.230
+  condition: attributes

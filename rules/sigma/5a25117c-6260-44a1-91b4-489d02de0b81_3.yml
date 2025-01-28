@@ -1,0 +1,24 @@
+title: OSINT - Gaffe Reveals Full List of Targets in Spear Phishing Attack Using Cobalt
+  Strike Against Financial Institutions - process_creation
+id: f55dca3a-62e9-4bef-b584-8400c63ae408
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a25117c-6260-44a1-91b4-489d02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.cobalt
+detection:
+  object_18101:
+    md5:
+    - f360d41a0b42b129f7f0c29f98381416
+  object_18102:
+    md5:
+    - d46df9eacfe7ff75e098942e541d0f18
+  attributes:
+    sha1:
+    - 6ece5ece4192683d2d84e25b0ba7e04f9cb7eb7c
+  condition: 1 of object_* or attributes

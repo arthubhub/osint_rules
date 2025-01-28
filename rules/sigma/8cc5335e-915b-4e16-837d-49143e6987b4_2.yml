@@ -1,0 +1,20 @@
+title: MSFT - MSTIC - Destructive malware targeting Ukrainian organizations - process_creation
+id: bf5f1688-63a6-4d11-986b-df44fc061ec9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/8cc5335e-915b-4e16-837d-49143e6987b4.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1485
+detection:
+  object_17766:
+    sha256:
+    - a196c6b8ffcb97ffb276d04f354696e2391311db3841ae16c8c9f56f36a38e92
+  object_17767:
+    sha256:
+    - dcbbae5a1c61dbbbb7dcd6dc5dd1eb1169f5329958d38b58c3fd9384081c9b78
+  condition: 1 of object_*

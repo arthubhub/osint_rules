@@ -1,0 +1,19 @@
+title: Dridex (2016-04-12) - dns_query
+id: 33fb7d5b-6405-46fe-8774-72437db62d06
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/570cf5b5-18d4-474e-b41e-41f1950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 195.169.147.88
+    - 212.76.140.230
+    - 210.245.92.63
+    - 178.33.167.120
+    - 210.70.242.41
+  condition: attributes

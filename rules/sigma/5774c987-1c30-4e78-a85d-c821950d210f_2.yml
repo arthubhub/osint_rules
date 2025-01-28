@@ -1,0 +1,55 @@
+title: 'Malspam 2016-06-30 (campaign subject: ''Documents copies'') - dns_query'
+id: 8783eac0-0353-4fa4-a974-1d1e61e68846
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5774c987-1c30-4e78-a85d-c821950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - mm.pl
+    - vrkoc.eu
+    - humphrey.nl
+    - iranecs.ir
+    - karlsmart.com
+    - vipoil.es
+    - bdkj-alzey.de
+    - code-ltd.com
+    - pcadesigneng.com
+    - bite-sportivi.it
+    - daveshearth.com
+    - topoeval.ro
+    IpAddresses:
+    - 72.10.54.44
+    - 217.119.54.167
+    - 85.9.56.196
+    - 64.56.177.76
+    - 80.150.6.138
+    - 217.172.226.2
+    - 213.191.128.17
+    - 211.134.183.70
+    - 213.180.150.17
+    - 89.42.39.67
+    - 66.109.30.133
+    - 212.23.8.80
+    - 211.133.144.17
+    - 64.56.177.79
+    - 80.109.240.71
+    - 84.94.229.189
+    - 208.71.106.45
+    - 31.31.77.164
+    - 89.30.176.44
+    - 94.231.109.17
+    - 213.228.128.12
+    - 213.158.72.90
+    - 208.71.106.55
+    - 87.106.143.248
+    - 208.71.106.42
+    - 81.196.20.133
+    - 31.193.152.57
+    - 217.11.249.141
+  condition: attributes

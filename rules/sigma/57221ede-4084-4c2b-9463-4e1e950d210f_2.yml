@@ -1,0 +1,19 @@
+title: OSINT - PLATINUM Targeted attacks in South and Southeast Asia - dns_query
+id: d13999e7-5a85-40ee-afcc-0f2148ea9931
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57221ede-4084-4c2b-9463-4e1e950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 209.45.65.163
+    - 200.61.248.8
+    - 190.96.47.9
+    - 192.192.114.1
+    - 61.31.203.98
+  condition: attributes

@@ -1,0 +1,31 @@
+title: Soft Cell case - Related indicators from correlations - dns_query
+id: 4eb79857-f742-441b-968e-256925a3ec54
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d13be9e-bb04-4946-899d-409e02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - booomaahuuoooapl.ru
+    - bm999999.com
+    - gokeenakte.top
+    - buygearnow.xyz
+    - swisspatentlaw.cn
+    - 8993327.com
+    - prescottarts.com
+    - ressya-hiroba.com
+    - joshel.com
+    - tashdqdxp.com
+    IpAddresses:
+    - 118.184.15.106
+    - 112.213.106.148
+    - 210.56.60.240
+    - 45.121.48.106
+    - 211.21.23.69
+    - 45.77.226.209
+  condition: attributes

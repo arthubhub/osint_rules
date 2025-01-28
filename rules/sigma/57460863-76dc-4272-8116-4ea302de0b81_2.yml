@@ -1,0 +1,20 @@
+title: 'OSINT - CVE-2015-2545: overview of current threats - dns_query'
+id: f352efd6-0f6e-4d35-9b02-d73af8bc656f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57460863-76dc-4272-8116-4ea302de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 115.144.69.54
+    - 74.208.4.201
+    - 180.128.10.28
+    - 180.150.227.135
+    - 74.208.4.200
+    - 59.188.13.204
+  condition: attributes

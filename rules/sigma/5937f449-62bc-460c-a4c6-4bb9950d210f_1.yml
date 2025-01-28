@@ -1,0 +1,20 @@
+title: OSINT - Shadowfall - url_request
+id: 3e50aa11-ca18-442f-bf0e-2e5a1451bd25
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5937f449-62bc-460c-a4c6-4bb9950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - hurtmehard.net
+    - https://www.reverse.it
+    - http://www.malware-traffic-analysis.net
+    - https://blogs.rsa.com
+    - http://pastebin.com
+    - https://panacea.threatgrid.com
+  condition: attributes

@@ -1,0 +1,16 @@
+title: 'Malspam 2016-07-19 .docm (campaign: "Documents from work") - url_request'
+id: 51176e3d-51bf-4a1f-b43c-a025df470251
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/578e31c3-c0a4-4113-9df2-4449950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - kveldeil.no
+    - http://kveldeil.no
+  condition: attributes

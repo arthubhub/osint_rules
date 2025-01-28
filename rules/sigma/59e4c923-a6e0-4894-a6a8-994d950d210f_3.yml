@@ -1,0 +1,22 @@
+title: OSINT - BlackOasis APT and new targeted attacks leveraging zero-day exploit
+  - process_creation
+id: d489a924-ccec-4dd8-b43c-4292b89a4d6a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59e4c923-a6e0-4894-a6a8-994d950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.finspy
+detection:
+  attributes:
+    md5:
+    - 4a49135d2ecc07085a8b7c5925a36c0a
+    sha1:
+    - 949da212307259f53b17eb19b353e7c1051fba82
+    sha256:
+    - 16070014b86f2254dcf273bbce78fb6eca43df9a6fc3c6ab85ec8f06a4063b06
+  condition: attributes

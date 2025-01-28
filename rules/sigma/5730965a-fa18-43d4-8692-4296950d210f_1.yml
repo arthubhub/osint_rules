@@ -1,0 +1,17 @@
+title: OSINT - Exploring CVE-2015-2545 and its users - url_request
+id: 08c113b1-880e-4064-95fa-c1bdb660f7b8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5730965a-fa18-43d4-8692-4296950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - updo.nl
+    - coffeol.com
+    - http://pwc.blogs.com
+  condition: attributes

@@ -1,0 +1,17 @@
+title: OSINT - FlawedAmmy RAT - url_request
+id: d1947bd2-c239-4a92-bcc9-b9955c476b76
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cf51bbd-6180-4dc7-a2dd-4baa950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.flawedammy
+detection:
+  object_10431:
+    RequestUrl|contains:
+    - https://mobile.twitter.com
+  condition: 1 of object_*

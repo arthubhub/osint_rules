@@ -1,0 +1,32 @@
+title: OSINT - Android malware on the rise - url_request
+id: 4023ce90-0091-409e-9ee5-72e91d34a403
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58b59c8c-faa8-4919-97cf-4af602de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - i-app1.online
+    - app01.at
+    - http://alza-shop.online
+    - https://i-app1.online
+    - https://app12.at
+    - https://i-app5.online
+    - http://dhl-tracking.online
+    - app-id3.online
+    - ap11.at
+    - dhl-tracking.online
+    - app12.at
+    - https://i-app4.online
+    - https://bartblaze.blogspot.com
+    - i-app5.online
+    - https://app01.at
+    - i-app4.online
+    - https://ap11.at
+    - alza-shop.online
+  condition: attributes

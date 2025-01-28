@@ -1,0 +1,18 @@
+title: Email Credential Phish, Dropbox Theme - process_creation
+id: 60e6731a-c853-4067-9d34-0d94c07e3429
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b50b23c-d7f0-4195-8512-13c30acd0835.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_16246:
+    md5:
+    - 31676c03e4c1a454e5ba5e50ecf056af
+    sha256:
+    - 3830f13e0a832a4b13b22ecc2acf7cdd39ce7cd48a21ad8537e944c68e4e86a9
+  condition: 1 of object_*

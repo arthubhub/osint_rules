@@ -1,0 +1,15 @@
+title: XMRig and OPSEC Fail - dns_query
+id: 2d19b5f8-eb0b-4d94-b516-74b78dd72146
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e263cf3-b1f8-4393-ad21-42a3950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 178.131.149.179
+  condition: attributes

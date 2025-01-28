@@ -1,0 +1,26 @@
+title: 'OSINT Fidelis Threat Advisory #1014 "Bots, Machines, and the Matrix" - url_request'
+id: 4bd790fe-7f44-4a47-9cea-85ce92fca8a2
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/548e96bd-d008-44bb-aa77-b792950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://121.11.83.7
+    - http://54.69.90.62
+    - http://155.133.18.45
+    - http://121.14.212.184
+    - http://217.23.6.112
+    - http://54.191.142.124
+    - http://77.87.79.128
+    - http://119.1.109.44
+    - http://158.255.1.241
+    - http://www.fidelissecurity.com
+    - http://www.threatgeek.com
+    - a2kiaymoster14902.com
+  condition: attributes

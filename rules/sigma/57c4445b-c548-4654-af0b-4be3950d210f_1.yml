@@ -1,0 +1,15 @@
+title: Ransomware - Xorist - url_request
+id: 77ae4f2d-481d-4a05-bdb7-fbd92638717b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c4445b-c548-4654-af0b-4be3950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.xylibox.com
+  condition: attributes

@@ -1,0 +1,106 @@
+title: OSINT - AN ANALYSIS OF THE EGREGOR RANSOMWARE - process_creation
+id: e56d35d9-56d4-4021-ba31-a3dfe05551f8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/3dd18ce2-fa55-4f0d-b88e-7d4144cb0dcb.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.s0496
+- attack.software.egregor
+- attack.group.gandcrab
+- attack.group.egregor
+- attack.group.sodinokibi
+- attack.software.gandcrab
+- attack.software.sodinokibi
+detection:
+  object_6864:
+    md5:
+    - d0ab713f502d01ddf73694276f0199db
+  object_6865:
+    md5:
+    - d20cd3f8f0ecc34fa400edf72687b215
+  object_6866:
+    md5:
+    - 3fadbe9038c51c12014818f172e43a7d
+  object_6868:
+    md5:
+    - 3fadbe9038c51c12014818f172e43a7d
+    sha1:
+    - a8d17bd6fcee5b9ce9287f2c6742377b0c24d9d7
+    sha256:
+    - 8faf377f0386ff3cbb39e9131ef03161f7a5c26ef38fb601106898d85ebbfd2c
+  object_6870:
+    md5:
+    - 365aa18cadc5b80a9b5ca5950690c7f8
+  object_6871:
+    md5:
+    - 00283740140dbe5c227bd15733d7a3b6
+  object_6872:
+    md5:
+    - b04f9b4feac14cff959718b69b7bbeaf
+  object_6873:
+    md5:
+    - 7af4a442683662b020fd391e26666958
+  object_6874:
+    md5:
+    - fabe184f6721e640474e1497c69ffc98
+  object_6875:
+    md5:
+    - 27304b246c7d5b4e149124d5f93c5b01
+  object_6876:
+    md5:
+    - f41a1afc4cfb95f35cd92da98d90c27b
+  object_6877:
+    md5:
+    - 365aa18cadc5b80a9b5ca5950690c7f8
+    sha1:
+    - 16c33a2907264382715fba2061e4ff803a41c629
+    sha256:
+    - 4de898c139fb5251479ca6f9ec044cac4d83a2f5d1113b7a4b8f13468a130c97
+  object_6879:
+    md5:
+    - fabe184f6721e640474e1497c69ffc98
+    sha1:
+    - 2f23a6389470db5d0dd2095d64939657d8d3ea9d
+    sha256:
+    - 759aa04d5b03ebeee13ba01df554e8c962ca339c74f56627c8bed6984bb7ef80
+  object_6881:
+    md5:
+    - 27304b246c7d5b4e149124d5f93c5b01
+    sha1:
+    - e50d9e3bd91908e13a26b3e23edeaf577fb3a095
+    sha256:
+    - 3337e3875b05e0bfba69ab926532e3f179e8cfbf162ebb60ce58a0281437a7ef
+  object_6883:
+    md5:
+    - 00283740140dbe5c227bd15733d7a3b6
+    sha1:
+    - a5e9003ff1514ef74fe8e39cb753cbc4f5b0b687
+    sha256:
+    - 5944ff3d734b8d46394a4ca2a89db49bc727f6e2f6fc24142f489e5c5211d20b
+  object_6886:
+    md5:
+    - 7af4a442683662b020fd391e26666958
+    sha1:
+    - 226155d4b86497acd3d34f33e93f3d94ef176d0b
+    sha256:
+    - 3592a1d10e880c1a3b8d62d76dc57bd054176c12f77a1b2a3d46721a89a414e9
+  object_6888:
+    md5:
+    - f41a1afc4cfb95f35cd92da98d90c27b
+    sha1:
+    - b9c162e7817d7d99720fd97d9f7cab342dd2812a
+    sha256:
+    - 746de8e02f1e64a707ce060a7d851b5d014698ca8692bd7aa945b40e06b01a07
+  object_6890:
+    md5:
+    - b04f9b4feac14cff959718b69b7bbeaf
+    sha1:
+    - f92394246a01e29d001d995c8a752374743efde4
+    sha256:
+    - 25739ec9823c7483811b2c51f8de4836dbaf5e94ee839555fe13c8076dd0b114
+  condition: 1 of object_*

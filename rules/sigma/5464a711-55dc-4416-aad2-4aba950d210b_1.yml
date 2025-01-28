@@ -1,0 +1,17 @@
+title: OSINT Black Energy 2 malware analysis blog post by Joseph Mlodzianowski - url_request
+id: 539b84e1-6165-440e-acef-39e305092789
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5464a711-55dc-4416-aad2-4aba950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://agxxgle.in
+    - agxxgle.in
+    - http://sub0day.com
+  condition: attributes

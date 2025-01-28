@@ -1,0 +1,22 @@
+title: OSINT - Zeus Panda Banking Trojan Targets Online Holiday Shoppers - url_request
+id: 3ec7af06-e474-4240-846d-6e75f70e657a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a8ab58a-213c-409a-97af-4eb5950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://89.248.169.136
+    - http://80.82.67.217
+    - kichamyn.top
+    - aklexim.top
+    - gromnes.top
+    - http://www.nfk-trading.com
+    - https://www.proofpoint.com
+    - https://canadapost-packagecenter.com
+  condition: attributes

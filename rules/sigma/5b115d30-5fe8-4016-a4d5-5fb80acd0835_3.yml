@@ -1,0 +1,22 @@
+title: One IP hosting multiple phishing domains - process_creation
+id: d0b67840-efcc-44a1-82d4-4ac0f9dfb8a0
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b115d30-5fe8-4016-a4d5-5fb80acd0835.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.formbook
+detection:
+  object_10506:
+    md5:
+    - cd3dbdf4416db2c42359f8beaadd3527
+    sha1:
+    - e764fb3236a1c823b02af3f9ed6d0c7f9c79ad85
+    sha256:
+    - b182e4c1a7089188ecb534ff63a9ad5881b332dce76f839624eaa98efba78b13
+  condition: 1 of object_*

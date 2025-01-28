@@ -1,0 +1,23 @@
+title: 'OSINT - ATMZombie: banking trojan in Israeli waters - dns_query'
+id: 38ce9d25-552c-4878-a978-4650e927c205
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56d42420-c838-4c85-80ee-1365950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - updconfs.com
+    - systruster.com
+    - msupdcheck.com
+    - retsback.com
+    IpAddresses:
+    - 185.86.77.153
+    - 88.214.236.121
+    - 91.230.211.206
+    - 91.215.154.90
+  condition: attributes

@@ -1,0 +1,18 @@
+title: OSINT - EPS Processing Zero-Days Exploited by Multiple Threat Actors - url_request
+id: 7efbe964-a89a-429a-baa5-30be50a8887b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59120865-27e0-4e6d-9b74-4a9f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.gamefish
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.fireeye.com
+    - wmdmediacodecs.com
+  condition: attributes

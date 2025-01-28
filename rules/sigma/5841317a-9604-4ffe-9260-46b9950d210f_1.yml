@@ -1,0 +1,17 @@
+title: 'OSINT -  Shamoon 2: Return of the Disttrack Wiper - url_request'
+id: 3ee44758-d0ac-45de-bf76-741423918e8c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5841317a-9604-4ffe-9260-46b9950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.terbium
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

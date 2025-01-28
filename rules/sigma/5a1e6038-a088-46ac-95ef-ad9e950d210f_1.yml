@@ -1,0 +1,17 @@
+title: OSINT - ROKRAT Reloaded - url_request
+id: 0afdded7-642e-4c6e-ba6f-0d7b5eba72a1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a1e6038-a088-46ac-95ef-ad9e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.rokrat
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.talosintelligence.com
+  condition: attributes

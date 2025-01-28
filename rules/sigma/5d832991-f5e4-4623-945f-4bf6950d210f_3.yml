@@ -1,0 +1,30 @@
+title: OSINT - New Gootkit Banking Trojan campaign against Italian Companies and Users.
+  - process_creation
+id: 2350cba3-9626-42fb-93e6-be953896dc75
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d832991-f5e4-4623-945f-4bf6950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.gootkit
+- attack.software.gootkit
+detection:
+  object_2619:
+    md5:
+    - eb2a050f3c7b6fa0dc1d455232e786f3
+    sha1:
+    - da03a783b590c9c998b593b9701cb227322856b9
+    sha256:
+    - 67a96b2a5657bf39971c50e1b0e7f08f742b62bb1dffe45398298806d2e9fdba
+  object_2621:
+    md5:
+    - 41db936a62634ba98b33051da243632a
+    sha1:
+    - f074c230441a9b682fb5cc4dae8615d4ad1a3fa5
+    sha256:
+    - c18c2e2636ebf84eec95f59b16c3091d02d57ac9f1b9d79fb61e160fb1a32a73
+  condition: 1 of object_*

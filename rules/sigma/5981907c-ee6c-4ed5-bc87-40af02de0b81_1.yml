@@ -1,0 +1,15 @@
+title: 'OSINT - Real News, Fake Flash: Mac OS X Users Targeted - url_request'
+id: c13c4aa4-8c65-436e-979b-b209709f38ea
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5981907c-ee6c-4ed5-bc87-40af02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.volexity.com
+  condition: attributes

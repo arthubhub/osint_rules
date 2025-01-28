@@ -1,0 +1,15 @@
+title: OSINT - GongDa vs. Korean News - url_request
+id: e4f32531-0565-48a0-babf-64d0d3e1e931
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56fba597-d420-45fe-9a73-46f5950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.fireeye.com
+  condition: attributes

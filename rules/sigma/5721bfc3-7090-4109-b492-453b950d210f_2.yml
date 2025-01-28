@@ -1,0 +1,35 @@
+title: Malspam (2016-04-28) - Locky - dns_query
+id: a8898bfa-767f-4ade-828f-9a324d0dabf6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5721bfc3-7090-4109-b492-453b950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - teyseerlab.com
+    - caegpa.com
+    - mc2academy.com
+    - mebdco.com
+    - amwal.qa
+    - codeaweb.net
+    - rumbafalcon.com
+    - lifeiscalling-sports.com
+    - gedvendo.com
+    IpAddresses:
+    - 74.124.210.121
+    - 104.255.193.164
+    - 192.185.160.227
+    - 166.62.10.29
+    - 118.139.176.209
+    - 194.170.187.46
+    - 162.252.57.82
+    - 23.229.237.128
+    - 195.222.33.178
+    - 66.7.223.218
+    - 107.180.51.235
+  condition: attributes

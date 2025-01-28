@@ -1,0 +1,15 @@
+title: OSINT Winnti OpSMN new malware RE report by Novetta - url_request
+id: 58c01d35-4326-4ca6-9b10-094e052e5cde
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5523e803-a6ac-4679-95ee-4382950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.novetta.com
+  condition: attributes

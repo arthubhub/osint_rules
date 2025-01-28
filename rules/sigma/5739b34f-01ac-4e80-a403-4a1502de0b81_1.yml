@@ -1,0 +1,27 @@
+title: OSINT -  Hancitor and Ruckguv Reappear, Updated and With Vawtrak On Deck -
+  url_request
+id: 66fec092-bde4-4bc2-9893-caffa1d4eccd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5739b34f-01ac-4e80-a403-4a1502de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://quoapps.es
+    - http://tantrix.com.tr
+    - http://hadfanawass.com
+    - http://posturepals.es
+    - http://logimax.net.in
+    - http://rophenreswi.ru
+    - http://tourjacket.me
+    - http://mihesfitons.ru
+    - https://krrewiaog3u4npcg.onion.to
+    - http://urbanrecreation.eu
+    - https://www.proofpoint.com
+    - http://therapeutica.com.br
+  condition: attributes

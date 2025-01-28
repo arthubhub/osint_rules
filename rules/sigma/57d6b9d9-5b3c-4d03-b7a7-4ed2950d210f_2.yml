@@ -1,0 +1,19 @@
+title: 'Malspam 2016-09-12 (.js in .zip) - campaign: "Budget report" - dns_query'
+id: ddb676e8-6e6f-4640-adf1-573ad660b591
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d6b9d9-5b3c-4d03-b7a7-4ed2950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - lookbookinghotels.ws
+    - trybttr.ws
+    - one4four1.ws
+    IpAddresses:
+    - 23.95.106.223
+  condition: attributes

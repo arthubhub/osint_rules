@@ -1,0 +1,32 @@
+title: OSINT - Kronos Reborn - url_request
+id: 2ebba9eb-89d8-4bc2-a984-db6b2383980b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b597959-6310-43e8-80b2-4d30950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.smoke_loader
+- attack.software.s0226
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://fritsy83.website
+    - http://lionoi.adygeya.su
+    - http://oo00mika84.website
+    - https://kioxixu.abkhazia.su
+    - http://envirodry.ca
+    - http://jmjp2l7yqgaj5xvv.onion
+    - http://jhrppbnh4d674kzh.onion
+    - http://suzfjfguuis326qw.onion
+    - http://mysmo35wlwhrkeez.onion
+    - https://dkb-agbs.com
+    - https://www.proofpoint.com
+    - http://milliaoin.info
+    - http://gameboosts.net
+    - https://startupbulawayo.website
+    - http://mysit.space
+  condition: attributes

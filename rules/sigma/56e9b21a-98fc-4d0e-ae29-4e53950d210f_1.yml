@@ -1,0 +1,16 @@
+title: 'OSINT - AceDeceiver: First iOS Trojan Exploiting Apple DRM Design Flaws to
+  Infect Any iOS Device - url_request'
+id: ce72e57b-1051-4e28-925a-db674c98e85c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e9b21a-98fc-4d0e-ae29-4e53950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

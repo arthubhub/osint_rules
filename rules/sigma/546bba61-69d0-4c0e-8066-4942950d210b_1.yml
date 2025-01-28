@@ -1,0 +1,29 @@
+title: "OSINT ScanBox framework \xE2\u20AC\u201C who\xE2\u20AC\u2122s affected, and\
+  \ who\xE2\u20AC\u2122s using it?  by PWC - url_request"
+id: b48aeeda-fd05-4b82-9575-af90e6c385c2
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/546bba61-69d0-4c0e-8066-4942950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - googlecaches.com
+    - webmailgoogle.com
+    - educationel.com
+    - foundationssl.com
+    - mailaunch.com
+    - googlewebcache.com
+    - 9aaa.info
+    - windowsautoupdate.com
+    - hudsononlinenews.com
+    - lifewalden.com
+    - http://pwc.blogs.com
+    - msdnblog.com
+    - outlookssl.com
+    - qoog1e.com
+  condition: attributes

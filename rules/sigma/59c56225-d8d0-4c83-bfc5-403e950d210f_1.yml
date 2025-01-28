@@ -1,0 +1,35 @@
+title: 'M2M -  Locky 2017-09-22 : Affid=3, offline, ".ykcol" : "Your Invoice # 123456"
+  - "Invoice_file_654321.7z" - url_request'
+id: 984ea2f9-f747-4488-8aae-0a9eadcb3da0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59c56225-d8d0-4c83-bfc5-403e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://alibristolphotography.com
+    - http://anderlaw.com
+    - http://ammannati.it
+    - http://arc-conduite.com
+    - http://arktupala.com
+    - http://animal-naturals.net
+    - http://ideathlike.net
+    - http://allesandradesigns.com
+    - http://andza.lv
+    - http://appartement-sailer.at
+    - http://aldridgestudios.com
+    - http://amesatarragona.com
+    - http://amatuermatch.org
+    - http://aerotransfer.cl
+    - http://ar-inversiones.com
+    - http://andresarlemijn.nl
+    - http://antwerpiastamps.be
+  condition: attributes

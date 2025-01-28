@@ -1,0 +1,64 @@
+title: OSINT -  Repository containting orignal and decompiled files of TRISIS/TRITON/HATMAN
+  malware - process_creation
+id: 94b4a7d7-cec5-4bc8-aff0-6b7c757da832
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a3faeda-9524-4a8c-a329-b4d302de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.trisis
+detection:
+  object_2623:
+    md5:
+    - 0face841f7b2953e7c29c064d6886523
+    sha1:
+    - 1dd89871c4f8eca7a42642bf4c5ec2aa7688fd5c
+    sha256:
+    - bef59b9a3e00a14956e0cd4a1f3e7524448cbe5d3cc1295d95a15b83a3579c59
+  object_2624:
+    md5:
+    - 437f135ba179959a580412e564d3107f
+    sha1:
+    - b47ad4840089247b058121e95732beb82e6311d0
+    sha256:
+    - 08c34c6ac9186b61d9f29a77ef5e618067e0bc9fe85cab1ad25dc6049c376949
+  object_2625:
+    md5:
+    - 1d2a14142d0e98c0ede881657be0b620
+    sha1:
+    - 3f1ac2364c8e06237f6f841a302f249108aeaf9b
+    sha256:
+    - bf235b24aec5b15ea5255261dee81284137c2f31ae64e03c6311377a00ac114b
+  object_2626:
+    md5:
+    - 4959dc6a9b68e9d55b254ce76c458eed
+    sha1:
+    - a07c2e5b0b903b4d4602474a2c3e26300cb5de71
+    sha256:
+    - f510bee135f800f910f5987c2684c3051756e7182939b93dfddc457c4be8a005
+  object_2627:
+    md5:
+    - 2354a2e07869f9a732f463fe084ad6c5
+    sha1:
+    - 196e027a8328ce2ac5fa1431d501c257a9a79f1a
+    sha256:
+    - eda3c565062b52ab2ff5cd7ec7e7a9e3198da40387d916c0e74881b4636a2d5c
+  object_2628:
+    md5:
+    - fe8374bfc19886efe88fb53c50e26e35
+    sha1:
+    - b9511de0a85e2bcba775228260c748ed0b9faff0
+    sha256:
+    - 9b8a7bec5a92a7c61abd1db2afc121c00ffa803422ee2e4e9c419bb2d2533d7a
+  object_2629:
+    md5:
+    - 6c39c3f4a08d3d78f2eb973a94bd7718
+    sha1:
+    - dc81f383624955e0c0441734f9f1dabfe03f373c
+    sha256:
+    - e8542c07b2af63ee7e72ce5d97d91036c5da56e2b091aa2afe737b224305d230
+  condition: 1 of object_*

@@ -1,0 +1,17 @@
+title: OSINT - NetTraveler APT Targets Russian, European Interests - dns_query
+id: aed4e4be-33e2-4fb1-b0b8-f261a84df358
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5784f9df-02ac-4e17-92bc-7e4502de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 98.126.38.107
+    - 103.231.184.163
+    - 103.231.184.164
+  condition: attributes

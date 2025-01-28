@@ -1,0 +1,15 @@
+title: 'OSINT - SpyDealer: Android Trojan Spying on More Than 40 Apps - url_request'
+id: 7d8bc2cd-fd19-4a70-9dbb-6c5ed3fa8d7b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59637327-79cc-430b-af94-0701950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://researchcenter.paloaltonetworks.com
+  condition: attributes

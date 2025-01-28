@@ -1,0 +1,54 @@
+title: BatLoader Continues to Abuse Google Search Ads to Deliver Vidar Stealer and
+  Ursnif - dns_query
+id: 19c26a74-cedb-4c37-bea6-6d71b0da8e84
+description: edit this field when analysing or editing the rule - reported by "Centre
+  for Cyber security Belgium"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/196cf336-896a-4cc1-9aa9-3480ecd9cf27.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.s0386
+- attack.t1059.001
+- attack.software.vidar
+- attack.t1064
+- attack.t1059.006
+- attack.group.vidar
+- attack.t1410
+- attack.t1059
+detection:
+  attributes:
+    QueryName|contains:
+    - jhgfdlkjhaoiu.su
+    - openoffice-a.com
+    - iujdhsndjfks.ru
+    - java-a.com
+    - reggy506.ru
+    - pixelarmada.su
+    - tableau-r.com
+    - isoridkf.ru
+    - java-r.com
+    - uelcoskdi.ru
+    - anydesk-r.com
+    - gameindikdowd.ru
+    - reggy914.ru
+    - adobe-l.com
+    - zoomvideor.com
+    - shvarcnegerhistory.com
+    - anydesk-o.com
+    - adobe-a.com
+    - spotify-uss.com
+    - bitwarden-t.com
+    - adobe-e.com
+    - gimp-t.com
+    - visualstudio-t.com
+    - quickbooks-q.com
+    - basecamp-a.com
+    - chatgpt-t.com
+    - java-s.com
+    - freecad-l.com
+    - microso-t.com
+  condition: attributes

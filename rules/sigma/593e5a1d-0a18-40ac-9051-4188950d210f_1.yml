@@ -1,0 +1,15 @@
+title: 'OSINT - MacRansom: Offered as Ransomware as a Service - url_request'
+id: e09a4393-cf7e-4b10-9c6f-c3e4e11e2d71
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/593e5a1d-0a18-40ac-9051-4188950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.fortinet.com
+  condition: attributes

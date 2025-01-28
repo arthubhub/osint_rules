@@ -1,0 +1,27 @@
+title: "OSINT -  Threat Actor \xE2\u20AC\u0153Cold River\xE2\u20AC\x9D: Network Traffic\
+  \ Analysis and a Deep Dive on Agent Drable - url_request"
+id: 8d2952e6-be5d-473b-89e2-39b0468ea278
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c3f3eca-3ce8-4bb0-8f24-43c0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.cold_river
+detection:
+  object_17555:
+    RequestUrl|contains:
+    - https://twitter.com
+  attributes:
+    RequestUrl|contains:
+    - hr-suncor.com
+    - microsoftonedrive.org
+    - https://www.lastline.com
+    - files-sender.com
+    - https://crt.sh
+    - hr-wipro.com
+    - 0ffice36o.com
+  condition: 1 of object_* or attributes

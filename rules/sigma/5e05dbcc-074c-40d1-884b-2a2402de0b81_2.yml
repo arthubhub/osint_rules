@@ -1,0 +1,23 @@
+title: 'OSINT - The #BronzeUnion/#LuckyMouse/#APT27 infection checker - process_creation'
+id: 2491091d-e4ac-4b98-9d5c-052cfb30c092
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e05dbcc-074c-40d1-884b-2a2402de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.emissary_panda
+- attack.group.threat_group-3390
+- attack.group.g0027
+detection:
+  object_6819:
+    md5:
+    - 86c9e95dcf69f6eca2a176407dcb99ff
+    sha1:
+    - 5933884f3ed5d98c0bf0158d262d9f3142c4d052
+    sha256:
+    - caa63ee08af3716c6dc7495a448daa923ac8e8992f6cab3b7ec3f3e6e087bb02
+  condition: 1 of object_*

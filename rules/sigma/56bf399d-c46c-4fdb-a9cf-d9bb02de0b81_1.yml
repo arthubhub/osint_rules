@@ -1,0 +1,15 @@
+title: OSINT - Hunting for Malware with Machine Learning - url_request
+id: ead93229-fd51-4f2c-a7be-cebc6eae1a5b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56bf399d-c46c-4fdb-a9cf-d9bb02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.cylance.com
+  condition: attributes

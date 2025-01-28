@@ -1,0 +1,32 @@
+title: 'OSINT - Threat Spotlight: Is Fireball Adware or Malware? - url_request'
+id: 84a8d911-c931-4f5c-a60e-d936ca46eb30
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/599eb71f-2620-4dfe-9f6a-4cf8950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - search2000s.com
+    - hohosearch.com
+    - walasearch.com
+    - https://www.cylance.com
+    - attirerpage.com
+    - yessearches.com
+    - startpageing123.com
+    - thewebanswers.com
+    - luckysearch123.com
+    - trotux.com
+    - youndoo.com
+    - nicesearches.com
+    - mustang-browser.com
+    - giqepofa.com
+    - funcionapage.com
+    - forestbrowser.com
+    - ooxxsearch.com
+    - universalsearches.com
+  condition: attributes

@@ -1,0 +1,16 @@
+title: OVH Phishing - url_request
+id: 5b5cdc33-2c05-4234-8c62-81abf06c8147
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b4f5308-42c0-434a-a8c5-48ae950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://xyu7564.phpnet.org
+    - https://www.ovh.com
+  condition: attributes

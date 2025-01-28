@@ -1,0 +1,47 @@
+title: 'OSINT - Packrat: Seven Years of a South American Threat Actor - url_request'
+id: ce9892ee-78db-4401-b64f-efe12dd80315
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5667e3ea-cec4-4a67-b7c0-f7a9950d210b.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.packrat
+detection:
+  attributes:
+    RequestUrl|contains:
+    - soporte-yahoo.com
+    - support-gmail.com
+    - confirmation-twitter.com
+    - support-whatsapp.com
+    - login-outlook.com
+    - lavozamericana.info
+    - login-office365.com
+    - confirmation-facebook.com
+    - logon-outlook.com
+    - autorizacion-gmail.com
+    - confirmation-outlook.com
+    - movimientoanticorreista.com
+    - deyrep.com
+    - blackboxmusic.co
+    - justicia-desvinculados.com
+    - no-creo.info
+    - soporte-gmail.com
+    - soporte-login-account-yahoo.tk
+    - soporte-login-account-gmail.tk
+    - https://citizenlab.org
+    - support-login-validate-outlook.tk
+    - pancaliente.info
+    - confirmation-yahoo.com
+    - focusecuador.tk
+    - update-outlook.info
+    - mgoogle.us
+    - ecuadorenvivo.co
+    - android-flash.com
+    - confirmation-icloud.com
+    - confirmation-blackberry.com
+    - support-java.com
+  condition: attributes

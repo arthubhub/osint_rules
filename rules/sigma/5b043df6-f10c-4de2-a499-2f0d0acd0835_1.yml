@@ -1,0 +1,16 @@
+title: Keylogger info via Twitter Feed - url_request
+id: ee2c1619-fd3d-4297-8f4b-8591b83a183f
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b043df6-f10c-4de2-a499-2f0d0acd0835.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://pastebin.com
+  condition: attributes

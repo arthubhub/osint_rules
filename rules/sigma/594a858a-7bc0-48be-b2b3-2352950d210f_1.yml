@@ -1,0 +1,31 @@
+title: 'M2M -  Locky 2017-06-21 : Affid=3 : "Copy of Invoice 87654321" - "87654321.zip"
+  - url_request'
+id: feac8be0-b7f4-41d1-a160-a608620e7409
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/594a858a-7bc0-48be-b2b3-2352950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://emtsgdqsik.pl
+    - http://hllfhiqwneuwwx.biz
+    - http://185.115.140.170
+    - http://lrsjplrlaceugxw.work
+    - http://wxcjqfevrkosp.biz
+    - http://ythjvjhtgsfgesd.biz
+    - http://dqutujymgc.info
+    - http://tqathwvfaqfisj.pl
+    - http://agnfmqvhomsa.work
+    - http://cstfxgujaf.biz
+    - http://kabssqyef.info
+    - http://ddgtdcgoysuq.ru
+    - http://gcbdwbtshl.xyz
+  condition: attributes

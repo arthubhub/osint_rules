@@ -1,0 +1,16 @@
+title: Malspam targeting github users - dns_query
+id: c16d0190-b59d-43bc-a9fd-8c80f62cca29
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588b3db6-d5d4-4e46-86d6-42b9950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 185.39.170.74
+    - 62.213.71.141
+  condition: attributes

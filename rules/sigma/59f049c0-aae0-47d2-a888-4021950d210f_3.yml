@@ -1,0 +1,37 @@
+title: 'OSINT - Bad Rabbit: Not-Petya is back with improved ransomware - process_creation'
+id: e5f9a550-b35a-4d97-8301-b2531d08a0ed
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59f049c0-aae0-47d2-a888-4021950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.bad_rabbit
+- attack.group.bad_rabbit
+detection:
+  object_11123:
+    sha1:
+    - 79116fe99f2b421c52ef64097f0f39b815b20907
+  object_11124:
+    sha1:
+    - afeee8b4acff87bc469a6f0364a81ae5d60a2add
+  object_11125:
+    sha1:
+    - de5c8d858e6e41da715dca1c019df0bfb92d32c0
+  object_11126:
+    sha1:
+    - 4f61e154230a64902ae035434690bf2b96b4e018
+  attributes:
+    md5:
+    - 347ac3b6b791054de3e5720a7144a977
+    - 37945c44a897aa42a66adcab68f560e0
+    sha1:
+    - 413eba3973a15c1a6429d9f170f3e8287f98c21c
+    - 16605a4a29a101208457c47ebfde788487be788d
+    sha256:
+    - 2f8c54f9fa8e47596a3beff0031f85360e56840c77f71c6a573ace6f46412035
+    - 301b905eb98d8d6bb559c04bbda26628a942b2c4107c07a02e8f753bdcfe347c
+  condition: 1 of object_* or attributes

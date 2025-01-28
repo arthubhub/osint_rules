@@ -1,0 +1,149 @@
+title: 'CISA - AA24-131A #StopRansomware: Black Basta - dns_query'
+id: 5da6079b-6ddb-448d-b64c-1fb0f7fe21e7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/a9f67dbb-ba26-4635-be1d-0780bc140897.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1486
+- attack.t1562.001
+- attack.t1490
+- attack.t1078
+- attack.t1566
+detection:
+  attributes:
+    QueryName|contains:
+    - nuher.1d67bbcf4.456d87aa6.2d84dfba.dns.specialdrills.com
+    - securecloudmanage.com
+    - otxcosmeticscare.com
+    - protectionek.com
+    - winklen.ch
+    - usaglobalnews.com
+    - erihudeg.com
+    - monitor-websystem.net
+    - startuptechnologyw.net
+    - getfnewssolutions.com
+    - investrealtydom.net
+    - unitedfrom.com
+    - trailshop.net
+    - consulheartinc.com
+    - fy9.36c44903529fa273afff3c9b7ef323432e223d22ae1d625c4a3957d57.015c16eff32356bf566c4fd3590c6ff9b2f6e8c587444ecbfc4bcae7.f71995aff9e6f22f8daffe9d2ad9050abc928b8f93bb0d42682fd3c3.445de2118.588027fa.dns.realbumblebee.net
+    - fy9.39d9030e5d3a8e2352daae2f4cd3c417b36f64c6644a783b9629147a1.afd8b8a4615358e0313bad8c544a1af0d8efcec0e8056c2c8eee96c7.b06d1825c0247387e38851b06be0272b0bd619b7c9636bc17b09aa70.a46890f27.588027fa.dns.realbumblebee.net
+    - brendonline.com
+    - onedogsclub.com
+    - investmendvisor.net
+    - animalsfast.net
+    - artstrailman.com
+    - simorten.com
+    - kolinileas.com
+    - trailcocompany.com
+    - nebraska-lawyers.com
+    - specialdrills.com
+    - welausystem.net
+    - businesforhome.com
+    - artstrailreviews.com
+    - myfinancialexperts.com
+    - bluenetworking.net
+    - seohomee.com
+    - thetrailbig.net
+    - allcompanycenter.com
+    - buyblocknow.com
+    - currentbee.net
+    - jenshol.com
+    - realbumblebee.net
+    - investmentgblog.net
+    - childrensdolls.com
+    - buygreenstudio.com
+    - caspercan.com
+    - dns.trailshop.net
+    - startupbusiness24.net
+    - dns.artspathgroupe.net
+    - audsystemecll.net
+    - webnubee.com
+    - wellsystemte.net
+    - 0gpw.588027fa.dns.realbumblebee.net
+    - artspathgroup.net
+    - ontexcare.com
+    - stockinvestlab.net
+    - recentbee.net
+    - prettyanimals.net
+    - otxcarecosmetics.com
+    - cloudworldst.net
+    - garbagemoval.com
+    - businessprofessionalllc.com
+    - modernbeem.net
+    - oneblackwood.com
+    - maluisepaul.com
+    - tomlawcenter.com
+    - literoved.ru
+    - unougn.com
+    - startupmartec.net
+    - startupbizaud.net
+    - kekeoamigo.com
+    - steamteamdev.net
+    - technologgies.com
+    - wardeli.com
+    - reelsysmoona.net
+    - magentoengineers.com
+    - investmentrealtyhp.net
+    - withclier.com
+    - treeauwin.net
+    - masterunix.net
+    - monitorsystem.net
+    - auuditoe.com
+    - rasapool.net
+    - xkpal.d6597fa.dns.blocktoday.net
+    - karmafisker.com
+    - nuher.3577125d2a75f6a277fc5714ff536c5c6af5283d928a66daad6825b9a.7aaf8bba88534e88ec89251c57b01b322c7f52c7f1a5338930ae2a50.cbb47411f60fe58f76cf79d300c03bdecfb9e83379f59d80b8494951.e10c20f77.7fcc0eb6.dns.blocktoday.net
+    - taskthebox.net
+    - blocktoday.net
+    - getfnewsolutions.com
+    - ionoslaba.com
+    - wipresolutions.com
+    - xserver.jp
+    - recentbeelive.com
+    - trailcosolutions.com
+    - adslsdfdsfmo.world
+    - jessvisser.com
+    - clearsystemwo.net
+    - trailgroupl.net
+    - airbusco.net
+    - limitedtoday.com
+    - septcntr.com
+    - gartenlofti.com
+    - xkpal.1a4a64b6.dns.blocktoday.net
+    - startupbuss.com
+    - mytrailinvest.net
+    - topglobaltv.com
+    - artspathgroupe.net
+    - my.2a91c002002.588027fa.dns.realbumblebee.net
+    - constrtionfirst.com
+    - thesmartcloudusa.com
+    - softradar.net
+    - trackgroup.net
+    IpAddresses:
+    - 185.219.221.136
+    - 185.220.101.149
+    - 5.78.115.67
+    - 46.8.10.134
+    - 5.183.130.92
+    - 83.243.40.10
+    - 95.181.173.227
+    - 185.220.100.240
+    - 185.7.214.79
+    - 116.203.186.178
+    - 46.161.27.151
+    - 183.181.86.147
+    - 188.130.218.39
+    - 155.138.246.122
+    - 88.198.198.90
+    - 188.130.137.181
+    - 107.189.30.69
+    - 46.8.16.77
+    - 80.239.207.200
+    - 64.176.219.106
+  condition: attributes

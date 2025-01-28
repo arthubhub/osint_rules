@@ -1,0 +1,39 @@
+title: OSINT The Teenage Mutant Malvertiser Network by FireEye - url_request
+id: 3f1e29ba-703f-48f8-a9f2-f997b976b912
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5566bfdf-e550-4b40-8178-4b27950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - news4news15.com
+    - searchwebfind.org
+    - buyadvertsort.com
+    - dealsadvdeals.com
+    - millsearch.net
+    - megafinder24.info
+    - news4news14.com
+    - webwebfind.com
+    - superior-movies.com
+    - news4news015.com
+    - news4news2014.com
+    - global-search24.biz
+    - truesearchresults.com
+    - death-tostock.com
+    - searchl.org
+    - integrosearch.com
+    - buyadvlist.com
+    - find-everything.info
+    - find-all.biz
+    - http://research.zscaler.com
+    - buyadvertview.com
+    - https://www.fireeye.com
+    - litle-finder.me
+    - news4news2015.com
+    - ado-global.com
+  condition: attributes

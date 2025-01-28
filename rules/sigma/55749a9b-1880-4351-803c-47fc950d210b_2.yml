@@ -1,0 +1,48 @@
+title: 'OSINT Angler EK: More Obfuscation, Fake Extensions, and Other Nonsense by
+  Talos - dns_query'
+id: a260e7ce-0783-48fa-b718-1cb64b9da7da
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55749a9b-1880-4351-803c-47fc950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - buroroebers.nl
+    - redstarfuochicinesi.it
+    - tarifair.fr
+    - jandchousecleaning.com
+    - alsblueshelpt.nl
+    - doggonesigns.com
+    - asadiag.com
+    - beijerlandsekelnerrace.nl
+    - 99mkb.com
+    - blationmedia.com
+    - buhtime.by
+    - brandgriffin.com
+    - americanfamilyenergy.com
+    - alebehr.com
+    - alchemyofpresence.com
+    - braingame.biz
+    - jeanrey.fr
+    - atlantacustomwork.com
+    - ancientvoyages.com
+    - sweetthangzdesserts.com
+    - asambleadedios.org
+    - 4042shopping.com
+    - gonavarro.com
+    - hostyoursitehere.com
+    - traditionetgourmandises.fr
+    - bezpiecznaswinka.pl
+    - andreiprundeanu.eu
+    IpAddresses:
+    - 173.227.247.35
+    - 78.46.250.103
+    - 194.6.233.7
+    - 94.131.14.23
+    - 94.242.198.221
+  condition: attributes

@@ -1,0 +1,22 @@
+title: OSINT - Lojack Becomes a Double-Agent - url_request
+id: e3c89a8f-da5b-40d2-a79c-8e2aebc309de
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aec6eea-74a4-43f9-8910-498d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.apt28
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://asert.arbornetworks.com
+    - ikmtrust.com
+    - elaxo.org
+    - sysanalyticweb.com
+    - lxwo.org
+    - https://www.blackhat.com
+  condition: attributes

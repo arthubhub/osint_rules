@@ -1,0 +1,24 @@
+title: OSINT - New Downloader for Locky - url_request
+id: 43426094-adfd-49d3-ad42-e7efbd2a9515
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5720bf21-9d4c-40b2-9088-45e6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://185.130.7.22
+    - http://slater.chat.ru
+    - http://mrsweeter.ru
+    - slater.chat.ru
+    - http://hundeschulegoerg.de
+    - buhjolk.at
+    - https://www.fireeye.com
+    - http://buhjolk.at
+    - hundeschulegoerg.de
+    - mrsweeter.ru
+  condition: attributes

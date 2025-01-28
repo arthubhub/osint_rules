@@ -1,0 +1,36 @@
+title: OSINT Black Energy 2 malware analysis blog post by Joseph Mlodzianowski - dns_query
+id: 133146d7-96ef-4ea4-9aec-1bc8e31b642d
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5464a711-55dc-4416-aad2-4aba950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - agxxgle.in
+    IpAddresses:
+    - 5.79.80.166
+    - 46.165.222.6
+    - 5.61.38.31
+    - 95.211.122.36
+    - 109.236.88.12
+    - 124.217.253.10
+    - 46.165.222.101
+    - 4.65.222.28
+    - 5.255.87.39
+    - 46.4.28.218
+    - 84.19.161.123
+    - 37.220.34.56
+    - 85.17.94.134
+    - 95.143.193.182
+    - 89.149.223.205
+    - 194.28.172.58
+    - 188.227.176.74
+    - 78.46.40.239
+    - 184.22.205.194
+    - 212.124.110.62
+  condition: attributes

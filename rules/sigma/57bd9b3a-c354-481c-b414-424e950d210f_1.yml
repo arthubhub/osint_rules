@@ -1,0 +1,25 @@
+title: 'Malspam 2016-08-24 (.hta in .zip) - campaign: "Emailing{N}.jpg" - url_request'
+id: 94419392-a4dc-4ec1-bc76-101b1f39240d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57bd9b3a-c354-481c-b414-424e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.carloabati.com
+    - http://brunnenburg.de
+    - http://ficonline.cat
+    - http://mage4ever.0catch.com
+    - http://www.agenziadini.it
+    - ficonline.cat
+    - http://jon.nomaki.jp
+    - http://iesjaumei.edu.gva.es
+    - http://ajurveda.meganet.lt
+    - brunnenburg.de
+    - http://csmjs.cba.pl
+  condition: attributes

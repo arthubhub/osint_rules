@@ -1,0 +1,29 @@
+title: '2019-01-28: APT28 XTunnel Backdoor - process_creation'
+id: 42b057af-3596-4a1b-9bfe-5d49d8c576d1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c500809-453c-4245-83e1-435c950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.apt28
+- attack.group.g0007
+- attack.group.strontium
+- attack.software.s0117
+- attack.group.sofacy
+- attack.software.xtunnel
+detection:
+  object_16540:
+    md5:
+    - 16b6d63390340941ec0fe60b0177384f
+  object_16541:
+    md5:
+    - 16b6d63390340941ec0fe60b0177384f
+    sha1:
+    - c3212e1e609588cb5736b1fd9aa8581c965ffa08
+    sha256:
+    - be2e58669dbdec916f7aaaf4d7c55d866c4f38ac290812b10d680d943bb5b757
+  condition: 1 of object_*

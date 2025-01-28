@@ -1,0 +1,54 @@
+title: OSINT - Return of Not Petya as Bad Rabbit Diskcoder, yes those two are the
+  same! - url_request
+id: 76f4046a-dfc5-4b47-aa72-b4bde91dee22
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59f04995-3b8c-4cf0-b555-4b26950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.bad_rabbit
+- attack.group.bad_rabbit
+detection:
+  attributes:
+    RequestUrl|contains:
+    - most-dnepr.info
+    - argumentiru.com
+    - http://novayagazeta.spb.ru
+    - http://1dnscontrol.com
+    - http://www.fontanka.ru
+    - http://www.imer.ro
+    - http://most-dnepr.info
+    - http://blog.fontanka.ru
+    - ankerch-crimea.ru
+    - http://www.aica.co.jp
+    - 1dnscontrol.com
+    - http://spbvoditel.ru
+    - http://www.otbrana.com
+    - http://argumentiru.com
+    - argumenti.ru
+    - http://grupovo.bg
+    - http://i24.com.ua
+    - http://www.online812.ru
+    - http://argumenti.ru
+    - caforssztxqzf2nm.onion
+    - http://osvitaportal.com.ua
+    - http://www.mediaport.ua
+    - an-crimea.ru
+    - http://www.t.ks.ua
+    - http://185.149.120.3
+    - http://an-crimea.ru
+    - http://caforssztxqzf2nm.onion
+    - http://www.sinematurk.com
+    - http://calendar.fontanka.ru
+    - http://www.pensionhotel.cz
+    - http://ankerch-crimea.ru
+    - da.id
+    - https://mjolnirsecurity.com
+    - http://www.grupovo.bg
+    - http://bg.pensionhotel.com
+    - spbvoditel.ru
+  condition: attributes

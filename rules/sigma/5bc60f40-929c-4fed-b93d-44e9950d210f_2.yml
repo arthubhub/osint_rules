@@ -1,0 +1,42 @@
+title: OSINT - 2018-10-09 - HANCITOR INFECTION WITH ZEUS PANDA BANKER - dns_query
+id: dabc501c-7e6e-4432-83a7-1b7c2e74fd8c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bc60f40-929c-4fed-b93d-44e9950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1022
+- attack.t1041
+- attack.t1056
+- attack.t1193
+detection:
+  object_6482:
+    IpAddresses:
+    - 46.36.220.116
+  attributes:
+    QueryName|contains:
+    - 275aacaa1610.net
+    - 275aacaa1698.net
+    - oxmoorusedcars.com
+    - sincirewdo.ru
+    - carvanadenver.com
+    - genesisatoxmoor.com
+    - sellittooxmoor.com
+    - lachistontfi.ru
+    - genesisofindiana.com
+    - selltooxmoor.com
+    - hersjustretleft.ru
+    - genesiseastlouisville.com
+    - carvananashville.com
+    - genesisofwestlouisville.com
+    - carvanamemphis.com
+    - hehenforfi.ru
+    - veintitna.ru
+    - genesisofeaslouisville.com
+    - nobotanri.ru
+    - fornetodu.com
+  condition: 1 of object_* or attributes

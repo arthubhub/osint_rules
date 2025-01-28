@@ -1,0 +1,16 @@
+title: 'OSINT - Nile Phish: Large-Scale Phishing Campaign Targeting Egyptian Civil
+  Society - url_request'
+id: e2b2b34e-8892-40d3-be96-0c4957daa7f5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/589327e5-227c-4236-a9b8-fafc950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://citizenlab.org
+  condition: attributes

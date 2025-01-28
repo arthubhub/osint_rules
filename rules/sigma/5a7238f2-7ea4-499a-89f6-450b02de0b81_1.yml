@@ -1,0 +1,72 @@
+title: OSINT - Smominru Monero mining botnet making millions for operators - url_request
+id: eaffe738-a48f-48ff-9137-8aea268d1578
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a7238f2-7ea4-499a-89f6-450b02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_9686:
+    RequestUrl|contains:
+    - down.down0116.info
+  object_9687:
+    RequestUrl|contains:
+    - down.oo000oo.club
+  object_9688:
+    RequestUrl|contains:
+    - www.cyg2016.xyz
+  object_9689:
+    RequestUrl|contains:
+    - down.mys2016.info
+  object_9690:
+    RequestUrl|contains:
+    - wmi.mykings.top.info
+  object_9691:
+    RequestUrl|contains:
+    - wmi.oo000oo.club
+  object_9692:
+    RequestUrl|contains:
+    - xmr.5b6b7b.ru
+  object_9693:
+    RequestUrl|contains:
+    - 64.myxmr.pw
+  object_9694:
+    RequestUrl|contains:
+    - wmi.my0709.xyz
+  object_9695:
+    RequestUrl|contains:
+    - ftp.ruisgood.ru
+  object_9696:
+    RequestUrl|contains:
+    - ftp.oo000oo.me
+  object_9697:
+    RequestUrl|contains:
+    - ftp.ftp0118.info
+  object_9698:
+    RequestUrl|contains:
+    - js.mys2016.info
+  object_9699:
+    RequestUrl|contains:
+    - 64.mymyxmra.ru
+  object_9700:
+    RequestUrl|contains:
+    - xmr.xmr5b.ru
+  object_9701:
+    RequestUrl|contains:
+    - js.my0115.ru
+  object_9702:
+    RequestUrl|contains:
+    - wmi.my0115.ru
+  object_9703:
+    RequestUrl|contains:
+    - down.my0115.ru
+  object_9704:
+    RequestUrl|contains:
+    - down.my0709.xyz
+  attributes:
+    RequestUrl|contains:
+    - https://www.proofpoint.com
+  condition: 1 of object_* or attributes

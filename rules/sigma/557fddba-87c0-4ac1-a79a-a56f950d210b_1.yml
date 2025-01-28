@@ -1,0 +1,16 @@
+title: OSINT Targeted Attacks against Tibetan and Hong Kong Groups Exploiting CVE-2014-4114
+  by Citizen Lab - url_request
+id: 444c7f52-ad80-4dda-9d3a-493c233ce74f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/557fddba-87c0-4ac1-a79a-a56f950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://citizenlab.org
+  condition: attributes

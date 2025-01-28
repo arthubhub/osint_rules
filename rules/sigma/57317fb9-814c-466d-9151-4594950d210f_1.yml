@@ -1,0 +1,15 @@
+title: A Detailed Examination of the Siesta Campaign - url_request
+id: bea9c806-25b5-42d4-af99-6ed0659442e0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57317fb9-814c-466d-9151-4594950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.fireeye.com
+  condition: attributes

@@ -1,0 +1,21 @@
+title: 'OSINT Android Marcher: Continuously Evolving Mobile Malware by Zscaler - url_request'
+id: 091e5099-d093-4c6d-b4ae-ed9b3fc9da01
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b5bfb6-f0d8-4a7e-b860-4ca6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - droidgrades.us
+    - https://www.zscaler.com
+    - https://droidsg.pw
+    - https://droidgrades.top
+    - droidsg.pw
+    - droidgrades.top
+    - https://droidgrades.us
+  condition: attributes

@@ -1,0 +1,22 @@
+title: OSINT - Talos/Cisco  Threat Roundup for April 6 - 13 - url_request
+id: 0f4517b4-fa76-4423-bc92-d87bcd4cca6a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ad5bc00-d988-48bb-9293-2135950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - optitm.com
+    - gpt9.com
+    - nomoreransom.coin
+    - gandcrab.bit
+    - makewebomb.xyz
+    - nomoreransom.bit
+    - optcdn.com
+    - https://blog.talosintelligence.com
+  condition: attributes

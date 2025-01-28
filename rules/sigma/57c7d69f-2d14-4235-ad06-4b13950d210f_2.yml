@@ -1,0 +1,43 @@
+title: 'Malspam 2016-09-01 (.hta in .zip) - campaign: "Voice Message from Outside
+  Caller" - dns_query'
+id: 89db5ad1-c889-47b3-a1a4-73f31daa1c33
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c7d69f-2d14-4235-ad06-4b13950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - zse2.pl
+    - josemedina.com
+    - hotcarshhhs6632.com
+    IpAddresses:
+    - 208.71.106.61
+    - 46.4.89.218
+    - 82.165.62.70
+    - 81.196.20.134
+    - 195.248.63.109
+    - 209.41.183.242
+    - 93.157.100.25
+    - 186.202.126.199
+    - 208.71.106.48
+    - 62.24.202.31
+    - 213.185.87.30
+    - 64.37.52.172
+    - 213.186.33.19
+    - 80.150.6.143
+    - 89.185.242.166
+    - 162.210.101.93
+    - 213.205.40.169
+    - 94.136.40.103
+    - 208.71.106.49
+    - 89.238.218.190
+    - 216.110.144.242
+    - 195.238.0.64
+    - 23.95.106.193
+    - 212.40.179.91
+  condition: attributes

@@ -1,0 +1,18 @@
+title: Dridex (2016-03-09) - botnet 220 - url_request
+id: 0eb4d199-8a8e-494d-9747-0cbb55bc3b19
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e029d7-6afc-4654-a6a7-40bb950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://203.114.112.99
+    - https://159.8.57.10
+    - smartcards.host
+    - https://smartcards.host
+  condition: attributes

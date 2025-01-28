@@ -1,0 +1,17 @@
+title: OSINT - FlawedAmmy RAT - dns_query
+id: 8d0121cb-3723-492f-a558-2076a384f696
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cf51bbd-6180-4dc7-a2dd-4baa950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.flawedammy
+detection:
+  attributes:
+    IpAddresses:
+    - 185.117.89.130
+  condition: attributes

@@ -1,0 +1,16 @@
+title: Secret Malware in European Union Attack Linked to U.S. and British Intelligence
+  article by the Intercept - url_request
+id: bf5ed74c-abf4-45ce-aeb4-d2fd578f3ddf
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54743eaf-e1c0-47a0-b838-49d7950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://firstlook.org
+  condition: attributes

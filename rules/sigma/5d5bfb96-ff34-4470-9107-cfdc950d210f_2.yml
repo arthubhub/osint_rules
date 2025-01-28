@@ -1,0 +1,22 @@
+title: 'OSINT - Ruby/Gem Warning! is rest-client 1.6.13 hijacked? #713 - dns_query'
+id: e406bcfa-4e2f-4269-ad36-af00bad2aede
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d5bfb96-ff34-4470-9107-cfdc950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1022
+- attack.t1133
+- attack.t1195
+- attack.t1020
+- attack.t1041
+- attack.t1138
+detection:
+  attributes:
+    IpAddresses:
+    - 37.48.72.4
+  condition: attributes

@@ -1,0 +1,16 @@
+title: OSINT - OSX Malware is Catching Up, and it wants to Read Your HTTPS Traffic
+  - url_request
+id: 89ff0cff-01e6-421f-a55b-09df68f174e4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5902f92f-c7f4-4bac-97b5-4fa6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.checkpoint.com
+  condition: attributes

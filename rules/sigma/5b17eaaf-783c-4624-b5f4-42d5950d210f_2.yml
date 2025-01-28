@@ -1,0 +1,18 @@
+title: OSINT - Sigrun Ransomware Author Decrypting Russian Victims for Free - process_creation
+id: 0477cf40-db0c-40bd-87ea-831ad647252a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b17eaaf-783c-4624-b5f4-42d5950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.sigrun_ransomware
+- attack.software.sigrun_ransomware
+detection:
+  object_9791:
+    sha256:
+    - 664b482e22e0f108660cf03fb7d1507d929e8242eb6c5762e577096a50a8cc5b
+  condition: 1 of object_*

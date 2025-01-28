@@ -1,0 +1,18 @@
+title: OSINT -  Royal APT - APT15 - Related Information from NCC Group Cyber Defense
+  Operations Research - url_request
+id: 9466e0ad-d2e6-469f-8e68-4c9a85920775
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aa64b62-8f2c-4081-a6f9-4480950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.mirage
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+  condition: attributes

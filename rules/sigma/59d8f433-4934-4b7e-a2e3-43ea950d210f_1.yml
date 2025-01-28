@@ -1,0 +1,57 @@
+title: 'M2M -  Locky 2017-10-05 : Affid=3, offline, ".ykcol" : "Invoice INV000123"
+  - "Invoice INV000123.7z" - url_request'
+id: 801ed007-ee7e-466e-a2f3-5bdc1572621f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d8f433-4934-4b7e-a2e3-43ea950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://3e.com.pt
+    - http://emeryconsult.com
+    - http://asheardontheradiogreens.com
+    - http://unifiedfloor.com
+    - http://troyriser.com
+    - http://PamelaSparrowChilds.com
+    - http://agriturismobellaria.net
+    - http://thedarkpvp.net
+    - http://eurecas.org
+    - http://ecofloraholland.nl
+    - http://akolade.com
+    - http://highpressurewelding.co.uk
+    - http://2-wave.com
+    - http://allesandradesigns.com
+    - http://appartement-sailer.at
+    - http://a-host.co.uk
+    - http://9ninewright.net
+    - http://lasdamas.com
+    - http://aerotransfer.cl
+    - http://mrscrowe.net
+    - http://andresarlemijn.nl
+    - http://moonmusic.com.au
+    - http://abelfaria.pt
+    - http://balzantruck.com
+    - http://conxibit.com
+    - http://pnkparamount.com
+    - http://georginabringas.com
+    - http://logistics.nazwa.pl
+    - http://www.gtCartographic.co.uk
+    - http://ilibarcelos.pt
+    - http://teracom.co.id
+    - http://demopowerindo.com
+    - http://www.100kisses.org
+    - http://bnphealthcare.com
+    - http://machala.freehost.pl
+    - http://agricom.it
+    - http://alexandre-azaria.com
+    - http://agriturismo-1001ulivo.it
+    - http://felixsolis.mobi
+  condition: attributes

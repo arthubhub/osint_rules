@@ -1,0 +1,21 @@
+title: Emissary Panda Attacks Middle East Government Sharepoint Servers by Palo Alto
+  Unit42 - dns_query
+id: e5c236c8-9173-44a4-bc20-0d06927bfab1
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cf0f134-f504-42dd-b11e-9071950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.emissary_panda
+- attack.group.threat_group-3390
+- attack.group.luckymouse
+- attack.group.g0027
+detection:
+  attributes:
+    IpAddresses:
+    - 185.12.45.134
+  condition: attributes

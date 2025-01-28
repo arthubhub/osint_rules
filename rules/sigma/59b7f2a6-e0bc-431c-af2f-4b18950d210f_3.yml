@@ -1,0 +1,20 @@
+title: 'M2M -  Locky 2017-09-12 : Affid=3, ".lukitus" : "Your Amazon.co.uk order..."
+  / AmazonSignIn.html links - process_creation'
+id: 26737ff3-2441-4c82-b036-462b0b9b48aa
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59b7f2a6-e0bc-431c-af2f-4b18950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    md5:
+    - 2c163be10c2dcd9b96243bd8175889d4
+    - 7939128a07bfd9ead222fdc392fc42d5
+  condition: attributes

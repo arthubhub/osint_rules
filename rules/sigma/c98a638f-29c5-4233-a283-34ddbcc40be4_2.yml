@@ -1,0 +1,23 @@
+title: AA23-339A Threat Actors Exploit Adobe ColdFusion CVE- 2023-26360 for Initial
+  Access to Government Servers - process_creation
+id: 6cd5a35f-26b4-4d7f-b642-5c22142fda70
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/c98a638f-29c5-4233-a283-34ddbcc40be4.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_8643:
+    sha1:
+    - be332b6e2e2ed9e1e57d8aafa0c00aa77d4b8656
+  object_8644:
+    md5:
+    - ba69669818ef9ccec174d647a8021a7b
+    sha1:
+    - b6818d2d5cbd902ce23461f24fc47e24937250e6
+    sha256:
+    - a3acb9f79647f813671c1a21097a51836b0b95397ebc9cd178bc806e1773c864
+  condition: 1 of object_*

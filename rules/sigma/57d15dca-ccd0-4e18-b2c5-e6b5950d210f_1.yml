@@ -1,0 +1,42 @@
+title: 'Malspam 2016-09-08 (.wsf in .zip) - campaign: "New voice mail message from"
+  - url_request'
+id: 233e3552-dd99-485d-835b-ae940ff9dbd0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d15dca-ccd0-4e18-b2c5-e6b5950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://dashman.web.fc2.com
+    - tst-technik.de
+    - http://www.plumbntile.talktalk.net
+    - http://www.rioual.com
+    - http://www.laribalta.org
+    - http://kreativmanagement.homepage.t-online.de
+    - http://gam-e20.it
+    - http://www.alpstaxi.co.jp
+    - http://ghost-tony.com.es
+    - http://ngenge.web.fc2.com
+    - http://www.gengokk.co.jp
+    - http://tst-technik.de
+    - http://thb-berlin.homepage.t-online.de
+    - http://www.gebrvanorsouw.nl
+    - gam-e20.it
+    - http://www.texelvakantiehuisje.nl
+    - http://www.hung-guan.com.tw
+    - http://www.mikeg7hen.talktalk.net
+    - http://www.alanmorgan.plus.com
+    - http://tujdaehn.homepage.t-online.de
+    - http://www.agridiving.net
+    - http://www.threshold-online.co.uk
+    - http://olivier.coroenne.perso.sfr.fr
+    - http://unimet.tmhandel.com
+    - http://www.radicegioielli.com
+    - http://www.whitakerpd.co.uk
+    - http://www.spiritueelcentrumaum.net
+  condition: attributes

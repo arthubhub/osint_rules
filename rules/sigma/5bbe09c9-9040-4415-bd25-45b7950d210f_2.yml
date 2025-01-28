@@ -1,0 +1,65 @@
+title: 'OSINT - Threat Spotlight: Panda Banker Trojan Targets the US, Canada and Japan
+  - dns_query'
+id: 72c7a8dc-794b-4b41-bc6e-35e4681ec737
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bbe09c9-9040-4415-bd25-45b7950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1185
+- attack.software.emotet
+detection:
+  attributes:
+    QueryName|contains:
+    - joltter.top
+    - encitimefoan.ru
+    - watercraftuavs.top
+    - inghapwilhe.ru
+    - humoronoff.top
+    - vudoshakar123123.website
+    - picosloop.top
+    - rombutcading.ru
+    - nybaseballfans.website
+    - dintlasirob.com
+    - vethatnetont.com
+    - fullspectrumavs.top
+    - smartnutriment.top
+    - majorhunt.top
+    - rxdirectories.top
+    - downloadmasala.website
+    - rebretaci.com
+    - canariasmotor.top
+    - zanhimnohedt.com
+    - indolentgames.top
+    - hogamotin.com
+    - cebabsebi.com
+    - jecrusandsi.com
+    - lyletening.ru
+    - mystratusstore.xyz
+    - wegmanss.pw
+    - legaleeny.pw
+    - haketsitet.com
+    - antrefurniture.top
+    - theeunload.website
+    - mykeeptake.xyz
+    - bloodskin.website
+    - connectionjump.top
+    - nauseorofte.ru
+    - luxurygoosedown.top
+    - tailbackuisback.xyz
+    - coloredcredit.pw
+    - thevisitorsfilm.top
+    - speakeasyclan.top
+    - adshiepkhach.top
+    - mihecksandca.ru
+    - umirushieteg.website
+    - myaningmuchme.ru
+    - myhubcloud.website
+    - letretuthes.com
+    - gmokkasd.website
+    - akihabrajdu.xyz
+  condition: attributes

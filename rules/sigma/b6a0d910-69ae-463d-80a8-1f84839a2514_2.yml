@@ -1,0 +1,56 @@
+title: Nanocore 20210816 - process_creation
+id: 952bc1dd-4195-4475-8a91-65004f2f5bd6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/b6a0d910-69ae-463d-80a8-1f84839a2514.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.nanocore_rat
+- attack.group.nanocore_rat
+- attack.software.nanocorerat
+detection:
+  object_9471:
+    md5:
+    - d915f9f8421aa34dfd88d1595249f954
+    sha1:
+    - ec958c2d48c6719238780878d1621b8af18c4b65
+    sha256:
+    - 060dc5124e4d0f8869856b52016cbed32339b8ac456b8cb5fea50f628961fc73
+  object_9473:
+    md5:
+    - cab3529dc19b4c630163a24759125fd7
+    sha1:
+    - 716c942e237ebe40e5e0bf443bf2128e5a883197
+    sha256:
+    - 2a2c0a635beba215a9e3f21c398d684dc1d2ad487356e29140247b14f2c6838f
+  object_9475:
+    md5:
+    - 0ff932908a4201a1c0a27db317321e1c
+    sha1:
+    - 511e815032cfeec9706117436c6bfdc9e974e4df
+    sha256:
+    - 67b695b139106a73c333aa2fdd0f08ae160ff5ee38d843cb9999146ad605da73
+  object_9477:
+    md5:
+    - 9bdfa3add2456a5efccabdad1343fa70
+    sha1:
+    - 02a34db66b361e9cb326f32d6e8f71f1cd284b68
+    sha256:
+    - afdcfeac16d321fef57c2aae9b001952544a53fc785ba78a6ad794a81bef0c05
+  attributes:
+    md5:
+    - d915f9f8421aa34dfd88d1595249f954
+    - cab3529dc19b4c630163a24759125fd7
+    sha1:
+    - ec958c2d48c6719238780878d1621b8af18c4b65
+    - 716c942e237ebe40e5e0bf443bf2128e5a883197
+    sha256:
+    - afdcfeac16d321fef57c2aae9b001952544a53fc785ba78a6ad794a81bef0c05
+    - 67b695b139106a73c333aa2fdd0f08ae160ff5ee38d843cb9999146ad605da73
+    - 060dc5124e4d0f8869856b52016cbed32339b8ac456b8cb5fea50f628961fc73
+    - 2a2c0a635beba215a9e3f21c398d684dc1d2ad487356e29140247b14f2c6838f
+  condition: 1 of object_* or attributes

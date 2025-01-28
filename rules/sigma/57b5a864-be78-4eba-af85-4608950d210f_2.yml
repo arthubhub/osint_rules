@@ -1,0 +1,17 @@
+title: 'OSINT Shakti Trojan: Document Thief  by Malwarebytes - dns_query'
+id: 6f00f097-cffa-46da-a68a-1e1244487830
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b5a864-be78-4eba-af85-4608950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - securedesignuk.com
+    - web4solution.net
+    - securedesignus.com
+  condition: attributes

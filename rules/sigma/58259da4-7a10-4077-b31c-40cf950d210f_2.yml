@@ -1,0 +1,22 @@
+title: OSINT - The first cryptor to exploit Telegram - process_creation
+id: 417a3fa4-aa0d-4827-9a6d-23bf8c93fb55
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58259da4-7a10-4077-b31c-40cf950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 14d4bc13a12f8243383756de92529d6d
+    - 3e24d064025ec20d6a8e8bae1d19ecdb
+    sha1:
+    - 54b8fc5de74856d90cad60da8cc41b98940e6a15
+    - aaf26fd22d5cab24dda2923b7ba6b131772b3a68
+    sha256:
+    - 3d7dd597a465d5275ef31d9e4f9dd80ed4de6139a1b3707cb3b0ffa068595567
+    - 63fa775052a5c7258d44a00d9f2b4a9263f96fb7c61778cbb1ba9102fed2082f
+  condition: attributes

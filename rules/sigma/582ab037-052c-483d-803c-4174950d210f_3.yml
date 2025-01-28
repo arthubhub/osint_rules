@@ -1,0 +1,20 @@
+title: OSINT - Ransoc Desktop Locking Ransomware Ransacks Local Files and Social Media
+  Profiles - process_creation
+id: f372531b-8252-43c1-89d9-7569907c655d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582ab037-052c-483d-803c-4174950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 30bf1d54830eb4223f0f3e68d113ff5d
+    sha1:
+    - 44fd0e2d99d6ccc49db7b48d5fc49e74c54f4463
+    sha256:
+    - fee53dc4e165b2aa45c3e7bd100b49c367aa8b7f81757617114ff50a584a1566
+  condition: attributes

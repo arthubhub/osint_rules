@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-10-10 : Affid=3, offline, ".asasin" : "Voicemail From 845-551-1234"
+  - "VMSG12345678_20171010.7z" - process_creation'
+id: b4136c22-6fdf-4bc3-a248-52bf2c62a141
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ddbaf9-3874-405c-b2e7-4770950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    md5:
+    - 37c106c0d8e97fbe9ec10a037858ea23
+    sha1:
+    - 27d90243d7289de58022850f98c5a0333e8da235
+    sha256:
+    - a165963bb5575321c03f974e266808d34b695fa21d0f2dd96a66cd3c887bd5e7
+  condition: attributes

@@ -1,0 +1,32 @@
+title: OSINT - Trojan downloader found on Google Play by @Maler360 - process_creation
+id: fbd60ff8-da11-4ab0-87bc-b1b538b43331
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d01fda4-353c-4011-854f-459c950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_16526:
+    md5:
+    - 6d48cf90e0af21da5e516f0009efcc7f
+  object_16527:
+    md5:
+    - f64cbd33651a99b08a9168607a2374d1
+  object_16528:
+    md5:
+    - f64cbd33651a99b08a9168607a2374d1
+    sha1:
+    - a16bb93ee35e7636e4f824010ddbba975a7db5ed
+    sha256:
+    - 3055fc207f21d4140249a3eb3efcdea047dfe005a4c23388ab917ffe3a8515d7
+  object_16530:
+    md5:
+    - 6d48cf90e0af21da5e516f0009efcc7f
+    sha1:
+    - 83dbf7f9097aa314c64d1ed50a7a112ca87ed38d
+    sha256:
+    - 32c3c1732d8a5b299045ef44f9165d2710d098fc402358aa09ad07fcfd05db1c
+  condition: 1 of object_*

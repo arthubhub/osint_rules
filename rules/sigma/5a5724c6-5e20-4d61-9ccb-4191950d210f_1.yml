@@ -1,0 +1,63 @@
+title: OSINT - Mac Malware of 2017 - url_request
+id: 95d5b576-b393-4e8d-bd25-17ed3ee1e5d7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a5724c6-5e20-4d61-9ccb-4191950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.macransom
+- attack.group.macransom
+- attack.software.cpumeaner
+- attack.software.filecoder
+- attack.software.pwnet
+- attack.software.macspy
+- attack.software.xagentosx
+- attack.software.x-agent
+- attack.software.proton
+- attack.software.turla
+- attack.software.macdownloader
+- attack.software.mughthesec
+- attack.software.fruitfly
+- attack.software.empyre
+- attack.group.filecoder
+detection:
+  object_6328:
+    RequestUrl|contains:
+    - www.securitychecking.org
+  attributes:
+    RequestUrl|contains:
+    - http://23.227.196.215
+    - handbrakestore.com
+    - apple-checker.org
+    - http://apple-search.info
+    - https://www.welivesecurity.com
+    - https://researchcenter.paloaltonetworks.com
+    - http://www.elmedia-video-player.com
+    - apple-search.info
+    - http://apple-checker.org
+    - https://blog.fox-it.com
+    - apple-iclods.org
+    - https://mac.eltima.com
+    - http://apple-iclods.org
+    - https://iranthreats.github.io
+    - handbrake.cc
+    - https://objective-see.com
+    - https://blog.checkpoint.com
+    - http://192.168.3.217
+    - handbrake.biz
+    - officialswebsites.info
+    - http://apple-uptoday.org
+    - apple-iclods.net
+    - symantecblog.com
+    - apple-uptoday.org
+    - https://www.virusbulletin.com
+    - http://46.17.97.37
+    - https://www.securitychecking.org
+    - https://blog.malwarebytes.com
+    - eltima.in
+    - https://www.cybersixgill.com
+  condition: 1 of object_* or attributes

@@ -1,0 +1,26 @@
+title: TinyTurla - Turla deploys new malware to keep a secret backdoor on victim machines
+  - process_creation
+id: 951d05e6-57e9-4f2b-a44c-ccd8b756a64f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/d5ccd0b6-f554-4182-8ac3-c8a4d5789ba6.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.g0010
+- attack.group.turla_group
+detection:
+  object_6603:
+    md5:
+    - 028878c4b6ab475ed0be97eca6f92af9
+    sha1:
+    - 02c37ccdfccfe03560a4bf069f46e8ae3a5d2348
+    sha256:
+    - 030cbd1a51f8583ccfc3fa38a28a5550dc1c84c05d6c0f5eb887d13dedf1da01
+  attributes:
+    sha256:
+    - 030cbd1a51f8583ccfc3fa38a28a5550dc1c84c05d6c0f5eb887d13dedf1da01
+  condition: 1 of object_* or attributes

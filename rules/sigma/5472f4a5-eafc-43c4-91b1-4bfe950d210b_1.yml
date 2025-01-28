@@ -1,0 +1,26 @@
+title: 'OSINT Evil Bunny: Suspect #4 - url_request'
+id: ace45b44-c8c3-4974-9b11-b3cf29e88392
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5472f4a5-eafc-43c4-91b1-4bfe950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - ghatreh.com
+    - le-progres.net
+    - callientefever.info
+    - http://www.usthb-dz.org
+    - http://ghatreh.com
+    - http://0x1338.blogspot.be
+    - http://le-progres.net
+    - usthb-dz.org
+    - http://callientefever.info
+    - fullapple.net
+    - http://1.9.32.11
+    - http://fullapple.net
+  condition: attributes

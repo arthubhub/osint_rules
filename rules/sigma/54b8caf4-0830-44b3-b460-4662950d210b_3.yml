@@ -1,0 +1,18 @@
+title: OSINT Backdoor.Win32.Shiz from Lavasoft - process_creation
+id: c656c80c-3e82-40fb-8f04-ccda17f14338
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54b8caf4-0830-44b3-b460-4662950d210b.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 9d1f4902e2eb83feab79175dd89b1912
+    - 31e855d428195a27077d535e4b0778cd
+    sha1:
+    - e973239500b4fb216182043805453cea9edf8730
+  condition: attributes

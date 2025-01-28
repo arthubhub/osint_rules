@@ -1,0 +1,21 @@
+title: Talos Blog - Smoking Guns - Smoke Loader learned new tricks - process_creation
+id: d4ec65f3-4d87-4fc4-ade2-743a3c1a39c9
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b3e4d3d-0644-43ef-9ebd-30cd0acd0835.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.trick_bot
+- attack.software.smoke_loader
+detection:
+  attributes:
+    sha256:
+    - b65806521aa662bff2c655c8a7a3b6c8e598d709e35f3390df880a70c3fded40
+    - b98abdbdb85655c64617bb6515df23062ec184fe88d2d6a898b998276a906ebc
+    - 0be63a01e2510d161ba9d11e327a55e82dcb5ea07ca1488096dac3e9d4733d41
+  condition: attributes

@@ -1,0 +1,18 @@
+title: OSINT -  Recent Cloud Atlas activity - dns_query
+id: 12006cf8-06e4-4884-8ab2-dd043dde85bc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d52daab-6db4-45f1-9fdf-45fc950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.cloud_atlas
+detection:
+  attributes:
+    IpAddresses:
+    - 176.31.59.232
+    - 144.217.174.57
+  condition: attributes

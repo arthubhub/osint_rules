@@ -1,0 +1,22 @@
+title: Talos Blog - Smoking Guns - Smoke Loader learned new tricks - url_request
+id: ac536087-f1ee-4dfb-8d5c-705a67a43008
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b3e4d3d-0644-43ef-9ebd-30cd0acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.trick_bot
+- attack.software.smoke_loader
+detection:
+  attributes:
+    RequestUrl|contains:
+    - ukcompany.me
+    - ukcompany.top
+    - ukcompany.pw
+    - https://blog.talosintelligence.com
+  condition: attributes

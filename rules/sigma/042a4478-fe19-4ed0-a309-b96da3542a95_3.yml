@@ -1,0 +1,88 @@
+title: "Analysis of FG-IR-22-398 \u2013 FortiOS - heap-based buffer overflow in SSLVPNd\
+  \ - process_creation"
+id: 0a6ec641-1a41-4cb8-982d-2a7e57a9330c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/042a4478-fe19-4ed0-a309-b96da3542a95.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_16822:
+    md5:
+    - 4b5de9374a615b76e607c1dc4d17ac72
+    sha1:
+    - 92a4ea254751b960250b21d8f8e947eb769ef01a
+    sha256:
+    - 5f826a78d3d88061f3f7e3281ffc41b37a8071a217cd15b584e4f6edd909b23c
+  object_16823:
+    md5:
+    - 7ea63e83e1c0f8b6dc4ef536699484dd
+    sha1:
+    - 3326c3c5793f7f3510ef415f14b3db4b62e27bd2
+    sha256:
+    - 89ec50c88cda5557005116ac06d514df68f12d2c0bf29773b20589814ab9723f
+  object_16824:
+    md5:
+    - e4c9d495339c4a934cc1b935660e0e38
+    sha1:
+    - 037f98546890d032d441763d9e3bc1de54ffbbc0
+    sha256:
+    - 336ea8b9b38f4d53ad336eec0b0e1e03b59955194a5f37a15b0ae1fc80b4f061
+  object_16825:
+    md5:
+    - 4f2bf103dfcc95692a488edab688bbc7
+    sha1:
+    - b2d25fd8efd7b824c2912a9f80c918fe1f11952d
+    sha256:
+    - f60d590bc286bc3357f693500e25f8d13699f93402c384ea3354ee694ad6abb2
+  object_16826:
+    md5:
+    - 3312975753899c136a2cba9b13c60ad0
+    sha1:
+    - 6bb845d70432ae6f16002393f1ed36d3f5ff826e
+    sha256:
+    - fc607709d7ac5011094efd7565647ad4dfd793c9f57a0e949f25bf2d241fcbad
+  object_16827:
+    md5:
+    - 7dea362b3fac8e00956a4952a3d4f474
+    sha1:
+    - 05fe405753166f125559e7c9ac558654f107c7e9
+    sha256:
+    - af5570f5a1810b7af78caf4bc70a660f0df51e42baf91d4de5b2328de0e83dfc
+  object_16828:
+    md5:
+    - e3e643d996d7a5984b5ac6bea5f8ad4b
+    sha1:
+    - d6d79694a79924624fcc1f89853e45cc0024d1e4
+    sha256:
+    - 10fa569b3cf75ff21ea3b433416d16d9ff53bb127bcb8dfe24b4aea6bea0b684
+  object_16829:
+    md5:
+    - 927d3c8f39932c4903ce0ae8dc4d7abb
+    sha1:
+    - 512ed9db2fe4151324abf949d70deb3fe4566a66
+    sha256:
+    - a9506a3cbf332502d62d7b7fc0849fde3809545a75d911e9cae9268fa143b32c
+  object_16830:
+    md5:
+    - 54bbea35b095ddfe9740df97b693627b
+    sha1:
+    - 08760cb1d322269dbe62d9a642697ac71306fbe3
+    sha256:
+    - 61aae0e18c41ec4f610676680d26f6c6e1d4d5aa4e5092e40915fe806b679cd4
+  attributes:
+    md5:
+    - 08cbaafb176ce6118f7e4e0b2d2d77cf
+    - e5d989b651b3eb351e10e408d5a062b3
+    - f68c3f72270800ea675889e82bb02fb8
+    - 3191cb2e06e9a30792309813793f78b6
+    - 12e28c14bb7f7b9513a02e5857592ad7
+    - e3f640d8785c0c864739529889b1863a
+    - 856341349dd954d82b112ba9165c4563
+    - ae0839351721db5a9c269fd75dcb57ce
+    - 4548fa6625cb154ab320833186117393
+    - bdc2d2f5d5246f8956711bcce9f456b6
+  condition: 1 of object_* or attributes

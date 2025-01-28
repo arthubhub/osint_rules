@@ -1,0 +1,20 @@
+title: OSINT - Cryptocurrency Miner Uses WMI and EternalBlue To Spread Filelessly
+  - url_request
+id: 23986e5c-4dd2-4e5f-accd-9ad8e36a7060
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59b2544f-ada4-4fc3-9d6a-4165950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.eternalblue
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://67.21.90.226
+    - http://wmi.mykings.top
+    - http://blog.trendmicro.com
+  condition: attributes

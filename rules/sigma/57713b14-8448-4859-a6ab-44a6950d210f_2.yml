@@ -1,0 +1,69 @@
+title: Malspam 2016-06-27 - dns_query
+id: 87dd1993-acae-4e0d-8694-c6aaa751cef0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57713b14-8448-4859-a6ab-44a6950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - potolok-profit.ru
+    - euro-support.be
+    - babycotsonline.com
+    - empiredeckandfence.com
+    - 300tomoli.it
+    - focolareostuni.it
+    - cameramartusa.info
+    - hudebiah.net
+    - climairuk.com
+    - 4k18.com
+    - delicious-doughnuts.net
+    - certifiedbanker.org
+    - bisericaromaneasca.ro
+    - addonworks.com
+    - 3141592.ru
+    - bobbysinghwpg.com
+    - jd-products.nl
+    - mycreativeprint.com
+    - asliaypak.com
+    IpAddresses:
+    - 104.152.168.29
+    - 195.208.1.146
+    - 217.172.226.2
+    - 192.185.146.153
+    - 217.76.156.98
+    - 82.140.32.172
+    - 192.185.225.43
+    - 175.45.184.160
+    - 103.6.198.185
+    - 69.195.124.97
+    - 80.244.134.169
+    - 89.42.39.67
+    - 216.218.93.172
+    - 195.208.0.136
+    - 176.62.167.160
+    - 199.241.184.10
+    - 107.180.24.238
+    - 109.234.160.30
+    - 184.171.252.26
+    - 166.63.125.135
+    - 192.186.246.98
+    - 217.73.226.220
+    - 213.160.76.117
+    - 207.210.108.162
+    - 210.171.0.30
+    - 192.186.246.134
+    - 198.54.115.218
+    - 81.177.140.141
+    - 85.118.237.109
+    - 112.140.178.249
+    - 107.6.169.61
+    - 92.53.126.193
+    - 83.96.159.64
+    - 86.106.30.71
+    - 23.229.131.128
+  condition: attributes

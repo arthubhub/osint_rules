@@ -1,0 +1,28 @@
+title: OSINT Attacks against Israeli & Palestinian interests by PwC - dns_query
+id: 69df5895-61cc-43f8-a822-6d4cdafd3b6c
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/553ea363-7aa4-426b-8f54-ad70950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - cbbnews.tk
+    - store-legal.biz
+    - chromeupdt.tk
+    IpAddresses:
+    - 198.105.122.96
+    - 131.72.136.171
+    - 192.253.246.169
+    - 131.72.136.11
+    - 185.45.193.4
+    - 167.114.62.213
+    - 107.168.129.29
+    - 131.72.136.124
+    - 185.33.168.150
+    - 198.105.122.9
+  condition: attributes

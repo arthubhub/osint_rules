@@ -1,0 +1,47 @@
+title: OSINT - Linux malware found on a single compromised Linux host - url_request
+id: f5e5d15d-5e6b-45b1-a9ed-802dfb7790d5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/c8a8758f-aa63-41c9-8119-804434dab957.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1190
+detection:
+  object_705:
+    RequestUrl|contains:
+    - https://13.37.216.116
+  object_707:
+    RequestUrl|contains:
+    - http://216.128.138.7
+  object_709:
+    RequestUrl|contains:
+    - http://144.202.57.248
+  object_712:
+    RequestUrl|contains:
+    - http://boatnet.uk
+  object_714:
+    RequestUrl|contains:
+    - http://204.76.203.21
+  object_716:
+    RequestUrl|contains:
+    - http://204.76.203.20
+  object_718:
+    RequestUrl|contains:
+    - http://204.76.203.9
+  object_720:
+    RequestUrl|contains:
+    - http://204.76.203.21
+  object_722:
+    RequestUrl|contains:
+    - boatnet.uk
+  object_726:
+    RequestUrl|contains:
+    - http://216.250.253.196
+  object_728:
+    RequestUrl|contains:
+    - http://45.144.31.103
+  condition: 1 of object_*

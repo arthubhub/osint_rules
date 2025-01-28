@@ -1,0 +1,23 @@
+title: "OSINT - D\xC3\xA9j\xC3\_ vu: Petya ransomware appears with SMB propagation\
+  \ capabilities - process_creation"
+id: d0f48c06-8a4a-45f8-a2dd-c9a782d83f9b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5952b89d-104c-436d-a8bd-476202de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.petya
+- attack.software.petya
+detection:
+  attributes:
+    md5:
+    - 71b6a493388e7d0b40c83ce903bc6b04
+    sha1:
+    - 34f917aaba5684fbe56d3c57d48ef2a1aa7cf06d
+    sha256:
+    - 027cc450ef5f8c5f653329641ec1fed91f694e0d229928963b30f6b0d7d3a745
+  condition: attributes

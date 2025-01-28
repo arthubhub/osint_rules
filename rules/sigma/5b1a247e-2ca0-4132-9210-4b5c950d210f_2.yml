@@ -1,0 +1,17 @@
+title: OSINT - PLEAD Downloader Used by BlackTech - dns_query
+id: e1823bd9-ad17-4694-8ae9-b89765009b4f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b1a247e-2ca0-4132-9210-4b5c950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.plead_downloader
+detection:
+  attributes:
+    IpAddresses:
+    - 210.71.209.206
+  condition: attributes

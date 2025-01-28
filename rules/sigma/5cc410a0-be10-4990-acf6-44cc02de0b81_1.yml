@@ -1,0 +1,19 @@
+title: OSINT -  Analysis of an IRC based Botnet - url_request
+id: 613e09c4-a924-4ce7-b42e-22d561d00eeb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cc410a0-be10-4990-acf6-44cc02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.tsunami
+- attack.group.tsunami
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.stratosphereips.org
+    - http://185.244.25.235
+  condition: attributes

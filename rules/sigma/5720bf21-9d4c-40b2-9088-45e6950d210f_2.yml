@@ -1,0 +1,20 @@
+title: OSINT - New Downloader for Locky - dns_query
+id: 8da16a43-0c4c-4da6-a3de-dc3a970d018b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5720bf21-9d4c-40b2-9088-45e6950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - slater.chat.ru
+    - hundeschulegoerg.de
+    - buhjolk.at
+    - mrsweeter.ru
+    IpAddresses:
+    - 185.130.7.22
+  condition: attributes

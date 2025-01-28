@@ -1,0 +1,28 @@
+title: "OSINT - CozyBear \xE2\u20AC\u201C In from the Cold? - dns_query"
+id: 6d8512a1-439c-41aa-869a-8ac592015802
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bf26acf-d95c-4892-a05d-4db5950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.apt29
+- attack.group.apt_29
+- attack.group.g0016
+- attack.software.s0154
+- attack.software.cobalt_strike
+- attack.software.cozycar
+- attack.group.cobalt_strike
+detection:
+  object_1:
+    QueryName|contains:
+    - mx1.era.citon.com
+    IpAddresses:
+    - 216.251.161.198
+  attributes:
+    QueryName|contains:
+    - pandorasong.com
+  condition: 1 of object_* or attributes

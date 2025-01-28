@@ -1,0 +1,20 @@
+title: 'OSINT - Another story of Unix Trojan: Tsunami/Kaiten.c (IRC/Bot) w/ Flooder,
+  Backdoor at a hacked xBSD - dns_query'
+id: adfaea51-10fa-4da9-983e-cf5c29424bba
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5846cc73-5bd0-4a20-9f50-49b0950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - cvv4you.ru
+    IpAddresses:
+    - 205.178.189.131
+    - 188.190.124.81
+    - 188.190.124.120
+  condition: attributes

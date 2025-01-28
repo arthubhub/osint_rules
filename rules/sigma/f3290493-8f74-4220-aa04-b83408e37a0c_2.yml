@@ -1,0 +1,109 @@
+title: Phishing targeting Luxembourg services (hosted and served on/from AWS) - dns_query
+id: 6b92e578-ef30-4443-b53c-e674abf2d6ac
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f3290493-8f74-4220-aa04-b83408e37a0c.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1566
+detection:
+  object_16450:
+    QueryName|contains:
+    - ccss.support
+    - cfl-lu.com
+    IpAddresses:
+    - 3.71.1.255
+  object_16452:
+    QueryName|contains:
+    - luxtrust-help.com
+    IpAddresses:
+    - 54.170.251.238
+  object_16453:
+    QueryName|contains:
+    - public-ccss.com
+  object_16454:
+    QueryName|contains:
+    - help-luxtrust.lu
+  object_16456:
+    QueryName|contains:
+    - infoluxtrust.com
+    IpAddresses:
+    - 3.79.236.229
+  object_16457:
+    QueryName|contains:
+    - luxtrust.help
+    IpAddresses:
+    - 52.59.212.17
+  object_16460:
+    QueryName|contains:
+    - order-public.com
+    IpAddresses:
+    - 16.171.58.164
+  object_16461:
+    QueryName|contains:
+    - support-luxtrust.com
+    IpAddresses:
+    - 52.58.64.31
+  object_16462:
+    QueryName|contains:
+    - guichet.me
+    IpAddresses:
+    - 44.200.31.79
+  object_16463:
+    QueryName|contains:
+    - cfl-lu.com
+    IpAddresses:
+    - 3.71.1.255
+  object_16464:
+    QueryName|contains:
+    - card-order.lu
+    IpAddresses:
+    - 44.200.31.79
+  object_16465:
+    QueryName|contains:
+    - payconiq.tel
+    - payconiq.direct
+    IpAddresses:
+    - 54.155.71.44
+  object_16467:
+    QueryName|contains:
+    - payconiq.support
+    IpAddresses:
+    - 18.197.141.155
+  object_16468:
+    IpAddresses:
+    - 3.64.63.56
+  object_16469:
+    IpAddresses:
+    - 50.112.61.79
+  object_16470:
+    IpAddresses:
+    - 13.60.60.38
+  object_16471:
+    IpAddresses:
+    - 13.60.60.3
+  object_16472:
+    IpAddresses:
+    - 3.79.3.191
+  attributes:
+    QueryName|contains:
+    - cns-lu.com
+    - ccss-public.com
+    - www-cns.com
+    - luxtrust-cancel.com
+    - luxtrust-unlock.com
+    - ccss-sante-lu.com
+    - luxtrust.support
+    - www-cns-lu.com
+    - luxtrust.help
+    IpAddresses:
+    - 3.71.1.255
+    - 35.177.103.239
+    - 18.117.184.102
+    - 51.20.69.186
+    - 54.93.211.218
+  condition: 1 of object_* or attributes

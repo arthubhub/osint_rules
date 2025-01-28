@@ -1,0 +1,21 @@
+title: Lokibot Equation Editor Sample - dns_query
+id: e3173b2f-4bab-4d44-b199-46a3e5dd0d9c
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e761095-13f8-422c-837a-4aa60a0a020f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.loki_password_stealer_pws
+- attack.software.loki_password_stealer_pws
+- attack.software.lokibot
+- attack.group.lokibot
+detection:
+  attributes:
+    IpAddresses:
+    - 216.170.122.34
+    - 23.95.132.48
+  condition: attributes

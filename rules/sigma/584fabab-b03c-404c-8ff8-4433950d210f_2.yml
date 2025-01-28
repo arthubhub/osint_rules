@@ -1,0 +1,40 @@
+title: 'OSINT - Windows 10: protection, detection, and response against recent Depriz
+  malware attacks - process_creation'
+id: c16009e9-7e3a-4bf5-8ec8-c74a2de76ee6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/584fabab-b03c-404c-8ff8-4433950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.terbium
+detection:
+  attributes:
+    md5:
+    - 76c643ab29d497317085e5db8c799960
+    - 1493d342e7a36553c56b2adea150949e
+    - 5446f46d89124462ae7aca4fce420423
+    - 8fbe990c2d493f58a2afa2b746e49c86
+    - c843046e54b755ec63ccb09d0a689674
+    - 5289f4b806bbd7893fbda3ce4025683e
+    - 2cd0a5f1e9bcce6807e57ec8477d222a
+    sha1:
+    - ad6744c7ea5fee854261efa403ca06b68761e290
+    - ce549714a11bd43b52be709581c6e144957136ec
+    - 5c52253b0a2741c4c2e3f1f9a2f82114a254c8d6
+    - 425f02028dcc4e89a07d2892fef9346dac6c140a
+    - e7c7f41babdb279c099526ece03ede9076edca4e
+    - 1292c7dd60214d96a71e7705e519006b9de7968f
+    - a2669df6f7615d317f610f731b6a2129fbed4203
+    sha256:
+    - c7fc1f9c2bed748b50a599ee2fa609eb7c9ddaeb9cd16633ba0d10cf66891d8a
+    - 394a7ebad5dfc13d6c75945a61063470dc3b68f7a207613b79ef000e1990909b
+    - 128fa5815c6fee68463b18051c1a1ccdf28c599ce321691686b1efa4838a2acd
+    - 448ad1bc06ea26f4709159f72ed70ca199ff2176182619afa03435d38cd53237
+    - 4744df6ac02ff0a3f9ad0bf47b15854bbebb73c936dd02f7c79293a2828406f6
+    - 47bb36cd2832a18b5ae951cf5a7d44fba6d8f5dca0a372392d40f51d1fe1ac34
+    - 5a826b4fa10891cf63aae832fc645ce680a483b915c608ca26cedbb173b1b80a
+  condition: attributes

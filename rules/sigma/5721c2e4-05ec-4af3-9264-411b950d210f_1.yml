@@ -1,0 +1,38 @@
+title: Malspam (2016-04-28) - Locky (#2) - url_request
+id: a37dd703-95e6-4ce0-9c8e-a6a3e4116d91
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5721c2e4-05ec-4af3-9264-411b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://be-stlines-tore.com
+    - florsan.net
+    - brutal-escort.ru
+    - http://51.254.240.60
+    - http://htankds.info
+    - http://brutal-escort.ru
+    - http://91.234.32.19
+    - http://xn----9sbmbsck6b1a4b0b.xn--p1ai
+    - http://31.41.44.246
+    - http://ivanmayor.es
+    - http://smartmol.ru
+    - be-stlines-tore.com
+    - http://h-zd.ru
+    - h-zd.ru
+    - http://florsan.net
+    - http://fundacjaireo.org.pl
+    - smartmol.ru
+    - http://83.217.26.168
+    - htankds.info
+    - http://powersom.com.br
+    - http://xn----ctbvdhakkrgv2h.xn--p1ai
+    - http://91.219.31.18
+    - http://commonplaces.davidson.edu
+    - ivanmayor.es
+  condition: attributes

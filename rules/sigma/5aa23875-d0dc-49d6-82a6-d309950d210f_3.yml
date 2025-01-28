@@ -1,0 +1,25 @@
+title: 'OSINT - Apache SOLR: the new target for cryptominers - process_creation'
+id: f5137e5a-a605-4275-90a6-cb6272548886
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aa23875-d0dc-49d6-82a6-d309950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_18439:
+    sha256:
+    - 7153ac617df7aa6f911e361b1f0c8188ca5c142c6aaa8faa2a59b55e0b823c1c
+  object_18440:
+    sha256:
+    - a3bbc8d3c4a950fa0b0def4109a07e9d01bae157781ff7a4b07910340e021dc7
+  object_18441:
+    md5:
+    - 09536b6ee3e600e73436715030467ec9
+    sha1:
+    - ea0a6633b2f8592028c31aefbfe8f8165076b786
+    sha256:
+    - 7153ac617df7aa6f911e361b1f0c8188ca5c142c6aaa8faa2a59b55e0b823c1c
+  condition: 1 of object_*

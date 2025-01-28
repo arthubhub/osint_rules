@@ -1,0 +1,15 @@
+title: OSINT - New self-protecting USB trojan able to avoid detection - url_request
+id: 0a05537b-3bfd-43c0-a462-b68ac807ef9a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f53e06-35d4-47e5-8d94-468e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.eset.ie
+  condition: attributes

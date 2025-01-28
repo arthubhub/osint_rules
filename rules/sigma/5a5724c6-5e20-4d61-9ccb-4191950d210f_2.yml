@@ -1,0 +1,53 @@
+title: OSINT - Mac Malware of 2017 - dns_query
+id: 90d31dbc-1b10-4a27-88c4-e807977dbb54
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a5724c6-5e20-4d61-9ccb-4191950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.macransom
+- attack.group.macransom
+- attack.software.cpumeaner
+- attack.software.filecoder
+- attack.software.pwnet
+- attack.software.macspy
+- attack.software.xagentosx
+- attack.software.x-agent
+- attack.software.proton
+- attack.software.turla
+- attack.software.macdownloader
+- attack.software.mughthesec
+- attack.software.fruitfly
+- attack.software.empyre
+- attack.group.filecoder
+detection:
+  object_6328:
+    QueryName|contains:
+    - www.securitychecking.org
+    IpAddresses:
+    - 185.22.174.37
+  attributes:
+    QueryName|contains:
+    - handbrake.biz
+    - handbrakestore.com
+    - officialswebsites.info
+    - apple-checker.org
+    - apple-iclods.net
+    - symantecblog.com
+    - apple-uptoday.org
+    - apple-search.info
+    - apple-iclods.org
+    - handbrake.cc
+    - eltima.in
+    IpAddresses:
+    - 67.188.230.50
+    - 23.227.196.217
+    - 99.153.29.240
+    - 46.17.97.37
+    - 83.229.87.11
+    - 23.227.196.215
+  condition: 1 of object_* or attributes

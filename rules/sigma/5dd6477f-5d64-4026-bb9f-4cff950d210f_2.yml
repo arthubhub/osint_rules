@@ -1,0 +1,25 @@
+title: 'OSINT -  Wrong hashes (from getmonero.org) #6151 - malicious binaries - dns_query'
+id: c7e9ebb0-8cb1-46ad-9840-975012e46d78
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5dd6477f-5d64-4026-bb9f-4cff950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1199
+- attack.t1195
+detection:
+  object_17633:
+    IpAddresses:
+    - 45.9.148.65
+  attributes:
+    QueryName|contains:
+    - hashmonero.com
+    - xmrsupport.co
+    IpAddresses:
+    - 91.210.104.245
+    - 45.9.148.65
+  condition: 1 of object_* or attributes

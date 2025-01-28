@@ -1,0 +1,171 @@
+title: 'OSINT - OceanLotus Blossoms: Mass Digital Surveillance and Attacks Targeting
+  ASEAN, Asian Nations, the Media, Human Rights Groups, and Civil Society - url_request'
+id: 82907da2-c95f-44d0-9042-abd9f19b57fe
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a015fbc-3218-4ec8-a4e5-4622950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.apt32
+detection:
+  object_16396:
+    RequestUrl|contains:
+    - a.doulbeclick.org
+  object_16397:
+    RequestUrl|contains:
+    - ad.adthis.org
+  object_16398:
+    RequestUrl|contains:
+    - ad.jqueryclick.com
+  object_16399:
+    RequestUrl|contains:
+    - api.querycore.com
+  object_16400:
+    RequestUrl|contains:
+    - browser-extension.jdfkmiabjpfjacifcmihfdjhpnjpiick.com
+  object_16401:
+    RequestUrl|contains:
+    - cdn-js.com
+  object_16402:
+    RequestUrl|contains:
+    - cdn.adsfly.co
+  object_16403:
+    RequestUrl|contains:
+    - cdn.disqusapi.com
+  object_16404:
+    RequestUrl|contains:
+    - cloudflare-api.com
+  object_16405:
+    RequestUrl|contains:
+    - cory.ns.webjzcnd.com
+  object_16406:
+    RequestUrl|contains:
+    - googlescripts.com
+  object_16407:
+    RequestUrl|contains:
+    - health-ray-id.com
+  object_16408:
+    RequestUrl|contains:
+    - hit.asmung.net
+  object_16409:
+    RequestUrl|contains:
+    - jquery.google-script.org
+  object_16410:
+    RequestUrl|contains:
+    - js.ecommer.org
+  object_16411:
+    RequestUrl|contains:
+    - s.jscore-group.com
+  object_16412:
+    RequestUrl|contains:
+    - s1.gridsumcontent.com
+  object_16413:
+    RequestUrl|contains:
+    - s1.jqueryclick.com
+  object_16414:
+    RequestUrl|contains:
+    - ssl.security.akamaihd-d.com
+  object_16415:
+    RequestUrl|contains:
+    - stat.cdnanalytic.com
+  object_16416:
+    RequestUrl|contains:
+    - stats.widgetapi.com
+  object_16417:
+    RequestUrl|contains:
+    - track-google.com
+  object_16418:
+    RequestUrl|contains:
+    - update.security.akamaihd-d.com
+  object_16419:
+    RequestUrl|contains:
+    - update.webfontupdate.com
+  object_16420:
+    RequestUrl|contains:
+    - wiget.adsfly.co
+  object_16421:
+    RequestUrl|contains:
+    - www.googleuserscontent.org
+  object_16422:
+    RequestUrl|contains:
+    - ad.linksys-analytic.com
+  object_16423:
+    RequestUrl|contains:
+    - ads.alternativeads.net
+  object_16424:
+    RequestUrl|contains:
+    - api.2nd-weibo.com
+  object_16425:
+    RequestUrl|contains:
+    - api.analyticsearch.org
+  object_16426:
+    RequestUrl|contains:
+    - api.baiduusercontent.com
+  object_16427:
+    RequestUrl|contains:
+    - api.disquscore.com
+  object_16428:
+    RequestUrl|contains:
+    - cache.akamaihd-d.com
+  object_16429:
+    RequestUrl|contains:
+    - cloud.corewidget.com
+  object_16430:
+    RequestUrl|contains:
+    - core.alternativeads.net
+  object_16431:
+    RequestUrl|contains:
+    - d3.advertisingbaidu.com
+  object_16432:
+    RequestUrl|contains:
+    - eclick.analyticsearch.org
+  object_16433:
+    RequestUrl|contains:
+    - google-js.net
+  object_16434:
+    RequestUrl|contains:
+    - google-js.org
+  object_16435:
+    RequestUrl|contains:
+    - google-script.net
+  object_16436:
+    RequestUrl|contains:
+    - gs.baidustats.com
+  object_16437:
+    RequestUrl|contains:
+    - linked.livestreamanalytic.com
+  object_16438:
+    RequestUrl|contains:
+    - linksys-analytic.com
+  object_16439:
+    RequestUrl|contains:
+    - live.webfontupdate.com
+  object_16440:
+    RequestUrl|contains:
+    - static.livestreamanalytic.com
+  object_16441:
+    RequestUrl|contains:
+    - stats.corewidget.com
+  object_16442:
+    RequestUrl|contains:
+    - update.akamaihd-d.com
+  object_16443:
+    RequestUrl|contains:
+    - update.webfontupdate.com
+  object_16444:
+    RequestUrl|contains:
+    - upgrade.liveupdateplugins.com
+  object_16445:
+    RequestUrl|contains:
+    - widget.jscore-group.com
+  attributes:
+    RequestUrl|contains:
+    - bdstarlbs.com
+    - http://ad.jqueryclick.com
+    - https://www.volexity.com
+    - health-ray-id.com
+  condition: 1 of object_* or attributes

@@ -1,0 +1,19 @@
+title: 'OSINT - PROMETHIUM and NEODYMIUM: Parallel zeroday attacks targeting individuals
+  in Europe - url_request'
+id: 45ff0c14-0db6-4bdf-9a82-0d4f8bc3ea3b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58539031-aa78-4da1-9289-487102de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.neodymium
+- attack.group.promethium
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blogs.technet.microsoft.com
+  condition: attributes

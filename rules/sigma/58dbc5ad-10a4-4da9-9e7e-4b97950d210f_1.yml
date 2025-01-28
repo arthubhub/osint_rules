@@ -1,0 +1,18 @@
+title: "OSINT - Trojanized Adobe Installer used to Install DragonOK\xE2\u20AC\u2122\
+  s New Custom Backdoor - url_request"
+id: 3285e347-fdd7-414e-923f-0004dccd7751
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58dbc5ad-10a4-4da9-9e7e-4b97950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.khrat
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blogs.forcepoint.com
+  condition: attributes

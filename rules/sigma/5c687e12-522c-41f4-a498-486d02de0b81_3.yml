@@ -1,0 +1,19 @@
+title: 'VMRay Analyzer Report for Sample #252574 (related amf-fr.org) - process_creation'
+id: 04a2aced-8629-4d0c-aac5-866571e8f883
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c687e12-522c-41f4-a498-486d02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_16235:
+    md5:
+    - efbcffc10763a287bdedfb6e892ae20c
+    sha1:
+    - 0dfe75a01e525bc599dff0c17204129b7ac3a437
+    sha256:
+    - 728bbbea8797c5e00a8737ebf6bebfffb3d84f9c86f144963a2940025329c28b
+  condition: 1 of object_*

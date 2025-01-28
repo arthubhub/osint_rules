@@ -1,0 +1,15 @@
+title: OSINT Emerging Threat Alert - CVE-2014-4114 blog post by Cylance - url_request
+id: 0d3d3705-7efc-4d9d-96ce-a2dad628571e
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54504af8-1394-43b4-a97d-a3ab950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.cylance.com
+  condition: attributes

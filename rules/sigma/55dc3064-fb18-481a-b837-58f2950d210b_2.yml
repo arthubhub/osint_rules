@@ -1,0 +1,20 @@
+title: "OSINT The Curious Case of the Document Exploiting an Unknown Vulnerability\
+  \ \xE2\u20AC\u201C Part 2: RATs, Hackers and Rihanna by Fortinet - dns_query"
+id: 742d09fb-a280-4848-8ddf-33e2b6793afc
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55dc3064-fb18-481a-b837-58f2950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - notyourbusiness.net
+    - kuwota.com
+    IpAddresses:
+    - 173.192.221.51
+    - 23.249.225.140
+  condition: attributes

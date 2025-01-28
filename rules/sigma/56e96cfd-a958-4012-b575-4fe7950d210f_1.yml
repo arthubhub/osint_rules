@@ -1,0 +1,16 @@
+title: OSINT - Malicious iBanking application with new uninstall countermeasures -
+  url_request
+id: 9019cd96-0e87-433d-b8e1-d6161ff2861a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e96cfd-a958-4012-b575-4fe7950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.cert.pl
+  condition: attributes

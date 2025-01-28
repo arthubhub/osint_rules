@@ -1,0 +1,22 @@
+title: 'M2M -  Locky Affid=3, ".asasin" 2017-11-02 : "Scan" - "Scan00123.doc" - process_creation'
+id: 326fecb6-d906-43f4-9488-0c155ec6b51a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a044f31-7dec-4bf7-b031-cc6f950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    md5:
+    - caf3575a95198ee925f2dfdeba2e78f3
+    sha1:
+    - 2f267d5e2fb9d6ae818d5caa7f2fa508daf09d67
+    sha256:
+    - 0f9ca5c555ddf4b5b29573ea1a513a69555afcfd0b1d3fa8f441bc6991bce543
+  condition: attributes

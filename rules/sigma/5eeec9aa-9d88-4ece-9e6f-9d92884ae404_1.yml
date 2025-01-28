@@ -1,0 +1,155 @@
+title: Dissecting PlugX to Extract Its Crown Jewels - url_request
+id: 4a97d8b7-bd24-4887-935a-07407fefba18
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5eeec9aa-9d88-4ece-9e6f-9d92884ae404.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1132.001
+- attack.t1090.002
+- attack.t1060
+- attack.t1566
+- attack.software.s0141
+- attack.t1027.002
+- attack.group.g0017
+- attack.t1046
+- attack.group.g0044
+- attack.t1059.005
+- attack.t1119
+- attack.t1036.005
+- attack.t1070
+- attack.t1548
+- attack.group.dragonok
+- attack.t1569
+- attack.t1045
+- attack.t1012
+- attack.t1204
+- attack.t1132
+- attack.t1076
+- attack.t1573.001
+- attack.t1007
+- attack.t1036
+- attack.t1115
+- attack.t1140
+- attack.t1055
+- attack.t1036.004
+- attack.t1070.004
+- attack.group.axiom
+- attack.t1059.007
+- attack.t1056.001
+- attack.t1562
+- attack.t1073
+- attack.t1082
+- attack.t1005
+- attack.t1574
+- attack.t1112
+- attack.t1088
+- attack.t1559.001
+- attack.t1204.002
+- attack.t1057
+- attack.t1564.001
+- attack.t1021.001
+- attack.t1059
+- attack.t1041
+- attack.t1090
+- attack.group.g0129
+- attack.group.gallium
+- attack.t1547.001
+- attack.t1105
+- attack.software.s0013
+- attack.t1192
+- attack.group.plugx
+- attack.t1056
+- attack.t1016
+- attack.t1569.002
+- attack.t1543.003
+- attack.t1135
+- attack.t1049
+- attack.t1566.002
+- attack.t1574.002
+- attack.t1564
+- attack.t1547
+- attack.t1543
+- attack.t1018
+- attack.t1001.003
+- attack.t1055.012
+- attack.t1562.001
+- attack.t1021
+- attack.group.mustang_panda
+- attack.t1001
+- attack.t1027
+- attack.t1559
+- attack.t1573
+- attack.group.earth_berberoka
+- attack.software.plugx
+- attack.t1113
+- attack.t1095
+detection:
+  object_6927:
+    RequestUrl|contains:
+    - https://secjoes-reports.s3.eu-central-1.amazonaws.com
+  object_6928:
+    RequestUrl|contains:
+    - fuckeryoumm.nmb.bet
+  object_6929:
+    RequestUrl|contains:
+    - tcp.wy01.com
+  object_6930:
+    RequestUrl|contains:
+    - tools.daji8.me
+  object_6931:
+    RequestUrl|contains:
+    - a2.fafafazq.com
+  object_6932:
+    RequestUrl|contains:
+    - tho.pad62.com
+  object_6933:
+    RequestUrl|contains:
+    - tank.hja63.com
+  object_6934:
+    RequestUrl|contains:
+    - wps.daj8.me
+  object_6935:
+    RequestUrl|contains:
+    - wpsup.daj8.me
+  object_6936:
+    RequestUrl|contains:
+    - tools.googleupdateinfo.com
+  object_6937:
+    RequestUrl|contains:
+    - fly.pad62.com
+  object_6938:
+    RequestUrl|contains:
+    - tho.hja63.com
+  object_6939:
+    RequestUrl|contains:
+    - helpdesk.lnip.org
+  object_6940:
+    RequestUrl|contains:
+    - www.trendmicro-update.org
+  object_6941:
+    RequestUrl|contains:
+    - fuckchina.govnb.com
+  object_6942:
+    RequestUrl|contains:
+    - wmi.ns01.us
+  object_6943:
+    RequestUrl|contains:
+    - services.darkhero.org
+  object_6944:
+    RequestUrl|contains:
+    - microsafes.no-ip.org
+  object_6945:
+    RequestUrl|contains:
+    - wmi.ns01.us
+  object_6946:
+    RequestUrl|contains:
+    - kr.942m.com
+  object_6947:
+    RequestUrl|contains:
+    - www.92al.com
+  condition: 1 of object_*

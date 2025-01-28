@@ -1,0 +1,15 @@
+title: 'OSINT - TwoFace Webshell: Persistent Access Point for Lateral Movement - url_request'
+id: 93ae7ed2-c8e3-40fa-90e6-48dab98e5273
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59861ab3-3ef8-4683-ad19-9533950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://researchcenter.paloaltonetworks.com
+  condition: attributes

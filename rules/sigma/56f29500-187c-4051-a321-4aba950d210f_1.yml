@@ -1,0 +1,24 @@
+title: 'OSINT - Operation C-Major: Information Theft Campaign Targets Military Personnel
+  in India - url_request'
+id: 86a2294a-5c21-430c-abbc-4fe0cd16686a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f29500-187c-4051-a321-4aba950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - afgcloud7.com
+    - http://ordering-checks.com
+    - http://thefriendsmedia.com
+    - http://documents.trendmicro.com
+    - pradahandbagsshoes.com
+    - http://bbmsync2727.com
+    - knockknock-jokes.com
+    - attachment.biz
+    - hussainibuilder.com
+  condition: attributes

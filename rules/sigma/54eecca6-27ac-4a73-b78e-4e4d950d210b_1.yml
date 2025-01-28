@@ -1,0 +1,27 @@
+title: A deeper look into ScanBox TLP:GREEN report from PWC UK - url_request
+id: 74a94df0-c647-489d-8e5b-2ce708896c1e
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54eecca6-27ac-4a73-b78e-4e4d950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - bisononthevinayerd.org
+    - packbot.org
+    - generalatomic.net
+    - wiki-vaeit.com
+    - oglobo-globo.com
+    - sharepoint-vaeit.com
+    - topsec2014.com
+    - whatwhowhat.com
+    - microscft.net
+    - ssl-vaeit.com
+    - infotechnew.com
+    - linde-boc.com
+    - realgamehouse.com
+  condition: attributes

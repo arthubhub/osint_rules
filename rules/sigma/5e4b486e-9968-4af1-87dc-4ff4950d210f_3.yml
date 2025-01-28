@@ -1,0 +1,61 @@
+title: Trickbot and AdFind Recon - process_creation
+id: c30bc27d-b8e6-41f4-9627-6bceaf91f7a8
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e4b486e-9968-4af1-87dc-4ff4950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_8635:
+    md5:
+    - 9efb4a465942dc094a5a57e055fd608a
+    sha1:
+    - e1348386da5af1903766352d4a224d859933e941
+    sha256:
+    - c93a357ea1772eb376ec4528d7a6bf8cfac31d9b9b4fc5455dbc369d6bde3583
+  object_8636:
+    md5:
+    - 538a9f7e97c6b02e3ecfc9f831ce600b
+    sha1:
+    - 3a5d3069e607b2da534964e8b6ceb698357ebba6
+    sha256:
+    - 5c9b25611b59d453b9b1ae2e88ffd83a87a4546ea7e6b61bf4e079701ee729b2
+  object_8637:
+    md5:
+    - 3694432ff283b6d928fc9d97e18dee92
+    sha1:
+    - 2baff313b0db9363816a799f4d2f14b69b420421
+    sha256:
+    - e5591269b1ead7a5bb8d50f6a465e479f3010a611aae1b33caa78a4f7ec16922
+  object_8638:
+    md5:
+    - 9b02dd2a1a15e94922be3f85129083ac
+    sha1:
+    - 2cb6ff75b38a3f24f3b60a2742b6f4d6027f0f2a
+    sha256:
+    - b1102ed4bca6dae6f2f498ade2f73f76af527fa803f0e0b46e100d4cf5150682
+  object_8639:
+    md5:
+    - dbbdb5aa4a033fcae3b699e169706bfd
+    sha1:
+    - 73c0b77442e5aa91fdefcfedf0e43efa7b7cac04
+    sha256:
+    - 2f49676e70ad99b0136132183e197cbd88eb294d3ed4048da7f607f2c21f6df9
+  object_8640:
+    md5:
+    - c872ffd205753b7331e18c96e5274393
+    sha1:
+    - 6529f55f28cc1411af98db6586a965df49479573
+    sha256:
+    - 77aebf8c0fc3caa445c5b8130cf69a988e625ccf45d89118cd30d90021a58436
+  object_8641:
+    md5:
+    - 9efb4a465942dc094a5a57e055fd608a
+    sha1:
+    - e1348386da5af1903766352d4a224d859933e941
+    sha256:
+    - c93a357ea1772eb376ec4528d7a6bf8cfac31d9b9b4fc5455dbc369d6bde3583
+  condition: 1 of object_*

@@ -1,0 +1,41 @@
+title: 'M2M -  Jaff 2017-06-09 : missing subject - "IMG_1234.ZIP" / "DOC_1234.docm"
+  - url_request'
+id: bf6975f0-c3c6-45c1-aba3-d466d6d01d7e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/593a6d56-c9d4-44a5-af47-4b68950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://akira-sushi34.ru
+    - http://msbn.net
+    - http://brookstecholiggronm.net
+    - http://charlenelouw.co.za
+    - http://xp.com.sg
+    - http://sportsandsocialchange.org
+    - http://mercobel.be
+    - http://sevsem.biz
+    - http://gidrowash.ru
+    - http://yesman.me
+    - http://zonnit.com
+    - http://coregroupindia.co.in
+    - http://stock-fallimenti.com
+    - http://adjlegal.com
+    - http://seminator.de
+    - http://zeshta.com
+    - http://speaklifegreetings.com
+    - http://assuresolutions.in
+    - http://7prisms.com
+    - http://matbaa.be
+    - http://missangel.org
+    - http://mscomunicacion.com.mx
+    - http://e67tfgc4uybfbnfmd.org
+  condition: attributes

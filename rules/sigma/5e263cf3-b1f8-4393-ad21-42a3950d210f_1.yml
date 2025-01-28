@@ -1,0 +1,15 @@
+title: XMRig and OPSEC Fail - url_request
+id: 3749a6cd-224b-466c-b7df-fb0731a7d101
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e263cf3-b1f8-4393-ad21-42a3950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.wilbursecurity.com
+  condition: attributes

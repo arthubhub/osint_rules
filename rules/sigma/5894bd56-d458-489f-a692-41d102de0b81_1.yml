@@ -1,0 +1,18 @@
+title: 'OSINT: Malicious software targeting financial sector internals - url_request'
+id: 3b325d4d-6115-4e13-88a2-cc502750745e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5894bd56-d458-489f-a692-41d102de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.knf.gov.pl
+    - https://badcyber.com
+    - http://sap.misapor.ch
+    - https://www.eye-watch.in
+  condition: attributes

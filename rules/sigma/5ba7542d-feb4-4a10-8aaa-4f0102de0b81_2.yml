@@ -1,0 +1,28 @@
+title: OSINT - Poison Ivy Group and the Cyberespionage Campaign Against Chinese Military
+  and Goverment - dns_query
+id: fdb739f5-0ad6-453a-8775-ba548b6f82f2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ba7542d-feb4-4a10-8aaa-4f0102de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.poison_ivy
+- attack.software.poisonivy
+detection:
+  attributes:
+    IpAddresses:
+    - 199.101.133.169
+    - 45.76.9.206
+    - 45.76.125.176
+    - 45.32.8.137
+    - 45.77.171.209
+    - 165.227.220.223
+    - 131.213.66.10
+    - 146.0.32.168
+    - 188.166.67.36
+    - 45.76.228.61
+  condition: attributes

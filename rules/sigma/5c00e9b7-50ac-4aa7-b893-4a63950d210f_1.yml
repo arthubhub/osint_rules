@@ -1,0 +1,47 @@
+title: OSINT - Hancitor active again yith new macro - IoCs - url_request
+id: d1cd95c7-5f12-4399-b703-317bf2d0ff0b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c00e9b7-50ac-4aa7-b893-4a63950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.hancitor
+- attack.software.hancitor
+detection:
+  object_8324:
+    RequestUrl|contains:
+    - https://mobile.twitter.com
+  attributes:
+    RequestUrl|contains:
+    - http://oriton.ru
+    - joincrytofundraisernow.org
+    - localloop-wi.com
+    - satsumasschoolfundraiser.com
+    - http://arsmarri.ru
+    - http://bdhsxj.com
+    - appersonpropertiesinc.com
+    - honeyhillfarmspop.com
+    - minaskaowners.com
+    - http://geeventsehin.com
+    - satsumasgeorgia.com
+    - http://letortedierica.it
+    - joincrytofundraisernow.net
+    - joincryptofundraiser.com
+    - kenapperson.net
+    - mybabyguam.com
+    - http://bigheartstorage.com
+    - satsumassales.com
+    - joincrytofundraisernow.us
+    - localloop-wi.org
+    - localloopwi.org
+    - wilocalloop.com
+    - http://fidosofwass.ru
+    - g-cals.com
+    - mogamecalls.com
+    - http://tonshekinar.ru
+    - https://ghostbin.com
+  condition: 1 of object_* or attributes

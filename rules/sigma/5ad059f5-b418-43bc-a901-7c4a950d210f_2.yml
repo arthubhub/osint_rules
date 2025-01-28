@@ -1,0 +1,22 @@
+title: OSINT - Goodbye Cerber? Hello Magniber Ransomware! - dns_query
+id: 4b28f5d4-14e5-414a-8838-681629e55ead
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ad059f5-b418-43bc-a901-7c4a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.magniber_ransomware
+- attack.software.magniber_ransomware
+detection:
+  attributes:
+    QueryName|contains:
+    - bankme.date
+    - carefit.agency
+    - ofotqrmsrdc6c3rz.onion
+    - jobsnot.services
+    - hotdisk.world
+  condition: attributes

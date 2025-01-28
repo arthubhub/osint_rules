@@ -1,0 +1,33 @@
+title: 'M2M -  Locky 2017-09-27 : Affid=3, offline, ".ykcol" : "Scanned image from
+  MX-2600N" - "20170927_123456.7z" - url_request'
+id: f68cea9f-bb75-4ad3-b04b-d4a86666eaf5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ccca18-b2fc-4249-8c20-49fd950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://dic-astra.com
+    - http://poemsan.info
+    - http://bhs-news.com
+    - http://www.fasching-hallbergmoos.de
+    - http://ashapeforlife.com
+    - http://borcom.de
+    - http://consultingfranquean.com
+    - http://gug-gummi.com
+    - http://cortaestanciapolanco.com
+    - http://avsaroglubisiklet.com
+    - http://ashtontan.com
+    - http://aeaccting.com
+    - http://crna-macka.com
+    - http://asecontrids.com
+    - http://bosphorustekneleri.com
+  condition: attributes

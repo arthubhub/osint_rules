@@ -1,0 +1,18 @@
+title: OSINT - Attackers target dozens of global banks with new malware - url_request
+id: b768d1a1-0546-46f7-b2e0-2d75db50935d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58a0ae18-4554-4af8-a66b-459802de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.lazarus_group
+detection:
+  attributes:
+    RequestUrl|contains:
+    - eye-watch.in
+    - https://www.symantec.com
+  condition: attributes

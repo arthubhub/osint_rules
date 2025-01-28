@@ -1,0 +1,16 @@
+title: OSINT - LinkedIn information used to spread banking malware in the Netherlands
+  - url_request
+id: ac500515-33be-4b9b-a055-1cb8cd160edc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57595892-e5f4-4419-b6dc-48df950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - skorianial.com
+  condition: attributes

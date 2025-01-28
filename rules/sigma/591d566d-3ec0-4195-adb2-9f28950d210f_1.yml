@@ -1,0 +1,41 @@
+title: 'Invoice ###### 05/17/2017 from dontreply@random - url_request'
+id: 7e72f021-4dbc-4f9a-82d7-898457b91c2f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/591d566d-3ec0-4195-adb2-9f28950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://monowheels.ru
+    - http://doppellutz.de
+    - http://herrossoidffr6644qa.top
+    - http://oylumsut.com
+    - http://blackempire.it
+    - http://diytp.com
+    - http://peryskop.biz
+    - http://tenda.it
+    - http://kezakotheatre.com
+    - http://texaslandandlifestyle.com
+    - http://unykmodels.com
+    - http://evasalome.nl
+    - http://easternmas.com
+    - http://sjffonrvcik45bd.info
+    - http://eesiiuroffde445.com
+    - http://pta-babel.net
+    - http://bbz-regeling.nl
+    - http://edazhu.com
+    - http://wxklfy.com
+    - http://ws500.net
+    - http://westprod.fr
+    - http://taure.cz
+    - http://tvapps.ir
+    - http://estimatingservicesinc.com
+  condition: attributes

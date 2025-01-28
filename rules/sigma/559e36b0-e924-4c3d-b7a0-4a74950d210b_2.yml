@@ -1,0 +1,21 @@
+title: OSINT expansion on OSINT - Ding! Your RAT has been delivered by Cisco Talos
+  - dns_query
+id: 6e74fa58-6b0f-4d7f-be42-1a19fb17af55
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/559e36b0-e924-4c3d-b7a0-4a74950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 216.38.2.195
+    - 216.38.2.212
+    - 41.58.104.23
+    - 174.127.99.235
+    - 41.58.219.175
+    - 41.58.102.142
+  condition: attributes

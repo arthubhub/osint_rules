@@ -1,0 +1,43 @@
+title: OSINT The Teenage Mutant Malvertiser Network by FireEye - dns_query
+id: 3c533586-36b0-4351-968c-ed5df6c224f2
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5566bfdf-e550-4b40-8178-4b27950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - buyadvertsort.com
+    - dealsadvdeals.com
+    - millsearch.net
+    - megafinder24.info
+    - news4news14.com
+    - news4news015.com
+    - global-search24.biz
+    - buyadvlist.com
+    - news4news2015.com
+    - news4news15.com
+    - searchwebfind.org
+    - webwebfind.com
+    - superior-movies.com
+    - news4news2014.com
+    - truesearchresults.com
+    - death-tostock.com
+    - searchl.org
+    - integrosearch.com
+    - find-everything.info
+    - find-all.biz
+    - buyadvertview.com
+    - litle-finder.me
+    - ado-global.com
+    IpAddresses:
+    - 199.212.255.137
+    - 199.212.255.138
+    - 199.212.255.136
+    - 199.212.255.139
+    - 199.212.255.140
+  condition: attributes

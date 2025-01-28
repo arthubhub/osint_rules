@@ -1,0 +1,15 @@
+title: OSINT - Octopus-Rex. Evolution of a multi task Botnet - url_request
+id: 5cf021ec-2dba-4989-852a-e21fd3e65f9e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5813ad13-c2fc-427d-b284-44cd02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://thisissecurity.net
+  condition: attributes

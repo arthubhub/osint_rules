@@ -1,0 +1,40 @@
+title: The Million Dollar Dissident - Citizen lab report - dns_query
+id: 673a703d-5cf1-4b76-9f15-b8e6002ddd5d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57bf5c07-6b40-428e-8f68-4a9a02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - alawaeltech.com
+    - icrcworld.com
+    - qaintqa.com
+    - bahrainsms.co
+    - aalaan.tv
+    - asrararablya.com
+    - webadv.co
+    - icloudcacher.com
+    - turkeynewsupdates.com
+    - asrararabiya.co
+    - thainews.asia
+    - smser.net
+    - asrarrarabiya.com
+    - nsoqa.com
+    - redcrossworld.com
+    - kenyasms.org
+    - ooredoodeals.com
+    - topcontactco.com
+    - manoraonline.net
+    IpAddresses:
+    - 54.251.49.214
+    - 82.80.202.200
+    - 52.8.52.166
+    - 162.209.103.68
+    - 82.80.202.204
+    - 52.8.153.44
+  condition: attributes

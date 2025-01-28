@@ -1,0 +1,88 @@
+title: Pivot on What's in a server name (on APT28/Sofacy) by ThreatConnect - url_request
+id: f01289aa-ceaa-4d8e-908d-7cfec9c7fa59
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5783a00e-27d8-4e5a-ac92-aec6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - corcpromotion.com
+    - theguardianpress.com
+    - konrecranes.com
+    - haamltex.com
+    - atosbasena.com
+    - https://threatconnect.com
+    - adamsfinanace.com
+    - cellpack-sg.com
+    - hamnaill.net
+    - microsoft-updates.me
+    - adobeupdatetechnology.com
+    - tostembekary.com
+    - wincodec.com
+    - wm-z.biz
+    - truslt-valves.com
+    - natoadviser.com
+    - diamondscourier.biz
+    - adobeupdater.org
+    - csc-sratori.com
+    - ms-updates.com
+    - expo-consrtuct.com
+    - ghanltootgroup.com
+    - laisve25.com
+    - unjiaya.info
+    - intelsupportcenter.net
+    - wsjworld.com
+    - energyaspacts.com
+    - vortaxworldwlde.com
+    - adobeflashdownload.de
+    - pdf-online-viewer.com
+    - bourquinsa.com
+    - chinagameke.com
+    - chianceforkids.com
+    - goaarmy.org
+    - stratforglobal.net
+    - tracksy.net
+    - akamaitechupdate.com
+    - intelintelligence.org
+    - ferrarlcostruzloni.com
+    - ctbkonline.com
+    - micoft.com
+    - sec-login.com
+    - pedrodonations.co
+    - egypressoffice.com
+    - svroulette.com
+    - intelsupportcenter.com
+    - worldpostjournal.com
+    - nato-org.com
+    - bitfare.org
+    - uninstalled.net
+    - yrauto-tw.com
+    - uniccomvalve.com
+    - theguardiannews.org
+    - e-dates.me
+    - wmepadtech.com
+    - cdncloudflare.com
+    - ms-drivadptrwin.com
+    - swsupporttools.com
+    - ajw-avaition.com
+    - transllead.com
+    - kaunas-city.com
+    - terms-google.com
+    - sec-trusted.com
+    - sec-verified.com
+    - helper-akamai.com
+    - softwaresupportsv.com
+    - win-wnigarden.com
+    - ozverler-tr.com
+    - access-google.com
+    - honeyvvell.co
+    - bisicoind.com
+    - securesystemwin.com
+    - hanmiail.net
+    - pinllive.com
+  condition: attributes

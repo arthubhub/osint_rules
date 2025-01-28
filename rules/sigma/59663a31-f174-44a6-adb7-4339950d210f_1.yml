@@ -1,0 +1,22 @@
+title: OSINT - Spam Campaign Delivers Cross-platform Remote Access Trojan Adwind -
+  url_request
+id: 5dd4c1dd-22e4-4231-a01a-0d32c5f10b8b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59663a31-f174-44a6-adb7-4339950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.adwind_rat
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://nup.pw
+    - https://blog.trendmicro.com
+    - http://ccb-ba.adv.br
+    - http://www.employersfinder.com
+    - http://vacanzaimmobiliare.it
+  condition: attributes

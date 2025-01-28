@@ -1,0 +1,76 @@
+title: 'OSINT - Threat Spotlight: Panda Banker Trojan Targets the US, Canada and Japan
+  - url_request'
+id: 7c9e7404-fead-4fd8-b341-c9cfb56f58ef
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bbe09c9-9040-4415-bd25-45b7950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1185
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - joltter.top
+    - encitimefoan.ru
+    - watercraftuavs.top
+    - inghapwilhe.ru
+    - https://humoronoff.top
+    - humoronoff.top
+    - vudoshakar123123.website
+    - picosloop.top
+    - rombutcading.ru
+    - nybaseballfans.website
+    - dintlasirob.com
+    - vethatnetont.com
+    - https://vudoshakar123123.website
+    - https://threatvector.cylance.com
+    - fullspectrumavs.top
+    - https://uiaoduiiej.chimkent.su
+    - smartnutriment.top
+    - majorhunt.top
+    - rxdirectories.top
+    - downloadmasala.website
+    - rebretaci.com
+    - canariasmotor.top
+    - zanhimnohedt.com
+    - indolentgames.top
+    - hogamotin.com
+    - cebabsebi.com
+    - jecrusandsi.com
+    - lyletening.ru
+    - https://mihecksandca.ru
+    - mystratusstore.xyz
+    - wegmanss.pw
+    - legaleeny.pw
+    - haketsitet.com
+    - antrefurniture.top
+    - theeunload.website
+    - mykeeptake.xyz
+    - bloodskin.website
+    - connectionjump.top
+    - nauseorofte.ru
+    - luxurygoosedown.top
+    - https://mystratusstore.xyz
+    - tailbackuisback.xyz
+    - coloredcredit.pw
+    - https://betrephengu.ru
+    - thevisitorsfilm.top
+    - https://rombutcading.ru
+    - speakeasyclan.top
+    - adshiepkhach.top
+    - mihecksandca.ru
+    - https://myaningmuchme.ru
+    - umirushieteg.website
+    - myaningmuchme.ru
+    - myhubcloud.website
+    - https://adshiepkhach.top
+    - https://nauseorofte.ru
+    - letretuthes.com
+    - gmokkasd.website
+    - akihabrajdu.xyz
+  condition: attributes

@@ -1,0 +1,29 @@
+title: 'Malspam 2016-09-06 (.wsf in .zip) - campaign: "Invoice INV[x]" - dns_query'
+id: c8284c10-e8e4-4027-a11e-84449f042b43
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ceb5e1-bd08-4fbb-9967-4b68950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - tst-technik.de
+    - alians-ekb.ru
+    - sp-moto.ru
+    - bostoncittyregenerww.com
+    IpAddresses:
+    - 88.156.222.94
+    - 186.202.126.199
+    - 188.120.235.214
+    - 23.95.106.213
+    - 85.12.197.61
+    - 208.71.106.48
+    - 200.83.4.62
+    - 81.24.34.9
+    - 213.205.40.169
+    - 81.196.20.134
+  condition: attributes

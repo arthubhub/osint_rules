@@ -1,0 +1,16 @@
+title: OSINT - Malicious Apps Get Back on the Play Store Just by Changing Their Name
+  - url_request
+id: abd2c09a-c13d-4f54-bb3d-58bdbbc1d7f5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5af969eb-2068-40ea-a133-40a9950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

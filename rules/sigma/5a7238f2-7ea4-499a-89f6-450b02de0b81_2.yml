@@ -1,0 +1,140 @@
+title: OSINT - Smominru Monero mining botnet making millions for operators - dns_query
+id: fb129259-a41b-464e-9547-32ce8bd2a786
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a7238f2-7ea4-499a-89f6-450b02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  object_9686:
+    QueryName|contains:
+    - down.down0116.info
+    IpAddresses:
+    - 198.148.80.194
+  object_9687:
+    QueryName|contains:
+    - down.oo000oo.club
+    IpAddresses:
+    - 209.58.186.145
+  object_9688:
+    QueryName|contains:
+    - www.cyg2016.xyz
+    IpAddresses:
+    - 103.95.29.8
+  object_9689:
+    QueryName|contains:
+    - down.mys2016.info
+    IpAddresses:
+    - 103.95.29.8
+  object_9690:
+    QueryName|contains:
+    - wmi.mykings.top.info
+    IpAddresses:
+    - 45.58.140.194
+  object_9691:
+    QueryName|contains:
+    - wmi.oo000oo.club
+    IpAddresses:
+    - 45.58.140.194
+  object_9692:
+    QueryName|contains:
+    - xmr.5b6b7b.ru
+    IpAddresses:
+    - 45.58.140.194
+  object_9693:
+    QueryName|contains:
+    - 64.myxmr.pw
+    IpAddresses:
+    - 170.178.171.162
+  object_9694:
+    QueryName|contains:
+    - wmi.my0709.xyz
+    IpAddresses:
+    - 103.95.30.26
+  object_9695:
+    QueryName|contains:
+    - ftp.ruisgood.ru
+    IpAddresses:
+    - 68.64.166.82
+  object_9696:
+    QueryName|contains:
+    - ftp.oo000oo.me
+    IpAddresses:
+    - 68.64.166.82
+  object_9697:
+    QueryName|contains:
+    - ftp.ftp0118.info
+    IpAddresses:
+    - 68.64.166.82
+  object_9698:
+    QueryName|contains:
+    - js.mys2016.info
+    IpAddresses:
+    - 27.255.79.151
+  object_9699:
+    QueryName|contains:
+    - 64.mymyxmra.ru
+    IpAddresses:
+    - 170.178.171.162
+  object_9700:
+    QueryName|contains:
+    - xmr.xmr5b.ru
+    IpAddresses:
+    - 45.58.140.194
+  object_9701:
+    QueryName|contains:
+    - js.my0115.ru
+  object_9702:
+    QueryName|contains:
+    - wmi.my0115.ru
+    IpAddresses:
+    - 103.95.30.26
+  object_9703:
+    QueryName|contains:
+    - down.my0115.ru
+    IpAddresses:
+    - 103.95.30.26
+  object_9704:
+    QueryName|contains:
+    - down.my0709.xyz
+    IpAddresses:
+    - 103.95.30.26
+  attributes:
+    IpAddresses:
+    - 103.95.30.26
+    - 118.193.27.198
+    - 45.58.140.194
+    - 103.241.229.122
+    - 27.255.79.151
+    - 198.148.80.194
+    - 164.52.13.58
+    - 164.52.25.106
+    - 148.153.38.78
+    - 148.153.8.86
+    - 118.193.29.6
+    - 164.52.11.222
+    - 164.52.1.46
+    - 118.193.81.70
+    - 118.193.28.58
+    - 164.52.1.14
+    - 170.178.171.162
+    - 148.153.24.106
+    - 118.193.31.110
+    - 118.193.31.14
+    - 148.153.39.186
+    - 148.153.24.98
+    - 148.153.14.246
+    - 148.153.44.46
+    - 164.52.12.162
+    - 118.193.22.58
+    - 118.193.21.186
+    - 148.153.34.114
+    - 209.58.186.145
+    - 68.64.166.82
+    - 148.153.36.34
+    - 103.95.29.8
+    - 164.52.12.110
+  condition: 1 of object_* or attributes

@@ -1,0 +1,67 @@
+title: 'Malspam 2016-08-25 (.js in .zip) - campaign: "Contract" - dns_query'
+id: 54420761-27b6-4e88-8ea5-a30d27d7066a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57bea9ac-bb00-4243-be64-bbe9950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - foodbiz-net.com
+    - travoxsb.com
+    - brothermalw.ws
+    - ventkanal.ru
+    - brianzainformatica.it
+    - cbactive.com
+    - sopranolady7.wang
+    - ilkhaberadana.com
+    - selectron.ch
+    - rejoincomp2.in
+    - wangmewang.name
+    - ietern.se
+    - baysigorta.com
+    - amazingbootys.com
+    - provincialpw.com
+    - cap114.fr
+    IpAddresses:
+    - 211.13.196.136
+    - 195.74.38.94
+    - 212.159.9.91
+    - 110.4.45.235
+    - 213.229.74.92
+    - 79.96.61.206
+    - 161.184.245.22
+    - 193.109.184.81
+    - 195.230.109.4
+    - 208.71.106.48
+    - 174.138.170.171
+    - 159.253.46.194
+    - 216.36.236.244
+    - 208.71.106.39
+    - 213.186.33.24
+    - 62.149.142.134
+    - 208.71.106.37
+    - 91.223.89.200
+    - 210.240.104.2
+    - 213.205.40.169
+    - 90.156.201.118
+    - 160.153.54.35
+    - 195.114.0.64
+    - 91.136.8.9
+    - 79.98.45.16
+    - 89.110.146.99
+    - 195.230.160.53
+    - 37.46.73.162
+    - 195.238.0.64
+    - 89.42.39.160
+    - 81.8.0.22
+    - 83.125.22.186
+    - 195.130.132.84
+    - 210.158.149.146
+    - 89.110.144.59
+    - 23.229.171.33
+  condition: attributes

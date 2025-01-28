@@ -1,0 +1,28 @@
+title: Emotet/Trickbot - url_request
+id: 0168e505-dfeb-4b89-a740-deecf80e6479
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e2c4c13-1f64-4e4e-8165-4801950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://207.148.30.186
+    - chekfast.zennolab.com
+    - myexternalip.com
+    - http://155.138.202.17
+    - 2cdajlnnwxfylth4.onion
+    - http://149.28.106.230
+    - 149.28.106.230.vultr.com
+    - https://jomamba.best
+    - https://qwe4dse4.com
+    - api.ipify.org
+    - https://koretycbeeb.com
+    - http://144.202.114.147
+    - updatewinlsass.com
+    - https://updatewinlsass.com
+  condition: attributes

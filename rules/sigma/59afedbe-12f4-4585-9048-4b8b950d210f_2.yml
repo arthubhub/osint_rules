@@ -1,0 +1,19 @@
+title: 'OSINT - Dragonfly: Western energy sector targeted by sophisticated attack
+  group - dns_query'
+id: 0a9f60c3-1906-42b3-8dcf-40bcedc16fe5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59afedbe-12f4-4585-9048-4b8b950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.energetic_bear
+- attack.group.dragonfly
+detection:
+  attributes:
+    IpAddresses:
+    - 184.154.150.66
+  condition: attributes

@@ -1,0 +1,71 @@
+title: Finding Nemo(hosts) from Sofacy by ThreatConnect - url_request
+id: 80b4cc7b-be10-41a4-ac6e-4bb44881743c
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a5de39e-cb60-4839-af53-c1be950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    RequestUrl|contains:
+    - networkxc.net
+    - ndsee.org
+    - ambcomission.com
+    - hostedopenfiles.net
+    - deshcoin.com
+    - news-almasirah.net
+    - platnosci.biz
+    - searchbrain.net
+    - nethostnet.com
+    - knightconsults.com
+    - nemaskalitnium.com
+    - driverfordell.com
+    - sa7efa.com
+    - aljazeera-news.com
+    - neoderb.com
+    - serbview.com
+    - dochardproofing.com
+    - postmarksmtp.com
+    - ckgob.com
+    - kiteim.org
+    - perfect-remote-service.com
+    - showitem.lt
+    - remotemanagesvc.net
+    - hostsvcnet.com
+    - hello76.com
+    - startthedownload.com
+    - unisecproper.org
+    - netcorpscanprotect.com
+    - rhfcoin.com
+    - uploadsforyou.com
+    - probenet.eu
+    - ebramka.info
+    - remnet.org
+    - lopback.com
+    - kremotevn.net
+    - cryptokind.com
+    - https://www.threatconnect.com
+    - wintwinbtc.com
+    - systemfromcuriousmoment.com
+    - zpfgr.com
+    - newsfromsource.com
+    - remonitor.net
+    - dmsclock.org
+    - remsvc.net
+    - 90update.com
+    - spelns.com
+    - connectsmd.net
+    - lasarenas.lt
+    - unitedprosoftcompany.org
+    - wmiapp.com
+    - intelstatistics.com
+    - societyatcuriousteacher.com
+    - fes-auth.com
+    - networkfilehosting.com
+    - megauploadfiles.org
+  condition: attributes

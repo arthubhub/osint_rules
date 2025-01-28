@@ -1,0 +1,19 @@
+title: gsocket.io - Global Socket Relay Network (GSRN) - infrastructure - dns_query
+id: ce7e22d9-c724-4467-89d5-35530647a928
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/08c5fe06-4375-4fce-a555-b02352cef2d6.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 3.130.101.223
+    - 18.116.244.91
+    - 213.202.239.83
+    - 135.181.106.26
+    - 143.198.66.192
+  condition: attributes

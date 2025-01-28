@@ -1,0 +1,91 @@
+title: Malspam 2016-05-27 - Locky (.js in .zip) - dns_query
+id: a3ddd663-6279-4374-8f13-2b183b795503
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57480ad9-8584-45c5-9a20-45d5950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - hamrickenterprise.com
+    - truccoazafatas.com
+    - peptide-manufacturer.com
+    - bstedds.com
+    - greatexam.com
+    - luckybling.com
+    - edelweiss-secretariat.com
+    - ipfnamur.be
+    - desres.net
+    - fabstrands.com
+    - arnold-express.com
+    - aberfoyledental.ca
+    - mr2peter.de
+    - yoursurveillanceware.com
+    - a-aura.com
+    - michaelroll.de
+    - tabskillersmachine.com
+    - researchusainc.com
+    - vonenidan.de
+    - michaeljackzone.com
+    - strstudio.pl
+    - theblackdiamond.net
+    - mycostumedoll.com
+    - sullivancountylawfirm.com
+    - lerens.com
+    - officetechnologies.ge
+    - imagina-es.com
+    - nabatet.com
+    - navasdetolosa.com
+    - norwegianpullovers.com
+    - hobbiebug.com
+    - naskom.com
+    - drugpillstore.com
+    IpAddresses:
+    - 185.53.173.33
+    - 87.98.239.19
+    - 192.185.142.145
+    - 213.247.45.123
+    - 78.110.165.195
+    - 107.180.44.139
+    - 160.153.77.81
+    - 209.59.178.10
+    - 162.210.102.232
+    - 192.186.199.252
+    - 69.156.240.29
+    - 74.220.215.220
+    - 217.76.130.79
+    - 109.237.133.201
+    - 80.244.182.27
+    - 66.23.230.22
+    - 66.7.211.48
+    - 95.110.242.65
+    - 192.163.252.46
+    - 213.186.33.19
+    - 74.63.248.2
+    - 192.124.249.12
+    - 64.40.126.64
+    - 159.253.0.9
+    - 212.227.33.186
+    - 217.73.226.220
+    - 103.21.128.174
+    - 94.76.203.116
+    - 23.229.179.230
+    - 69.90.193.5
+    - 217.76.130.30
+    - 213.171.218.174
+    - 91.212.213.10
+    - 67.20.103.57
+    - 188.93.229.73
+    - 50.62.218.1
+    - 78.109.164.66
+    - 212.227.33.91
+    - 92.222.198.204
+    - 37.46.127.197
+    - 70.39.148.64
+    - 85.25.184.120
+    - 217.73.227.40
+  condition: attributes

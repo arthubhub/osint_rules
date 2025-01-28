@@ -1,0 +1,27 @@
+title: OSINT - New Orangeworm attack group targets the healthcare sector in the U.S.,
+  Europe, and Asia - dns_query
+id: f7f87c7d-9458-4c09-8a64-427ebeb846f1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5adeed17-3124-41c1-91b9-4a97950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.orangeworm
+detection:
+  attributes:
+    IpAddresses:
+    - 13.44.61.126
+    - 18.25.62.70
+    - 16.48.37.37
+    - 118.71.138.69
+    - 91.29.51.11
+    - 117.32.65.101
+    - 33.25.72.21
+    - 92.137.43.17
+    - 65.116.107.24
+    - 56.28.111.63
+  condition: attributes

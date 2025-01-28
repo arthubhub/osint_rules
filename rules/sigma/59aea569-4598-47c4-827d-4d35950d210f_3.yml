@@ -1,0 +1,22 @@
+title: 'OSINT - ShadowPad :  popular server management software hit in supply chain
+  attack - process_creation'
+id: d7f0a46e-8504-48ba-983f-08806883ef19
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59aea569-4598-47c4-827d-4d35950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.shadowpad
+detection:
+  attributes:
+    md5:
+    - 97363d50a279492fda14cbab53429e75
+    sha1:
+    - f1a181d29b38dfe60d8ea487e8ed0ef30f064763
+    sha256:
+    - 462a02a8094e833fd456baf0a6d4e18bb7dab1a9f74d5f163a8334921a4ffde8
+  condition: attributes

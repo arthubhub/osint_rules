@@ -1,0 +1,15 @@
+title: OSINT - The Mad Max DGA - dns_query
+id: aa1ae1c0-2c35-41a3-8171-30284f95c71f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5799af90-d8b4-416a-b5fb-49dc950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 23.253.126.58
+  condition: attributes

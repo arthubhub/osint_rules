@@ -1,0 +1,56 @@
+title: A Slice of 2017 Sofacy Activity by Kaspersky - dns_query
+id: d4404698-5785-4c99-9bb6-4b37ee789a92
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a8d2377-208c-4330-908f-4818950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.strontium
+- attack.group.sofacy
+detection:
+  attributes:
+    QueryName|contains:
+    - viters.org
+    - mvtband.net
+    - audiwheel.com
+    - postlkwarn.com
+    - analyticstest.net
+    - movieultimate.com
+    - lifeofmentalservice.com
+    - nethostnet.com
+    - webcdelivery.com
+    - securityprotectingcorp.com
+    - globalresearching.org
+    - kiteim.org
+    - appexsrv.net
+    - etcrem.net
+    - hostsvcnet.com
+    - meteost.com
+    - netcorpscanprotect.com
+    - sendmevideo.org
+    - adobe-flash-updates.org
+    - liveweatherview.com
+    - righttopregnantpower.com
+    - shcserv.com
+    - fastdataexchange.org
+    - mvband.net
+    - encoder-info.tk
+    - lvueton.com
+    - uniquecorpind.com
+    - adobeupgradeflash.com
+    - satellitedeluxpanorama.com
+    - fsportal.net
+    - wmdmediacodecs.com
+    - analyticsbar.org
+    - versiontask.com
+    - generalsecurityscan.com
+    - online-reggi.com
+    - newfilmts.com
+    - treepastwillingmoment.com
+    - miropc.org
+    - ppcodecs.com
+  condition: attributes

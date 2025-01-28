@@ -1,0 +1,16 @@
+title: Ostap Maldoc Samples - dns_query
+id: 0ae31d07-4de9-44b8-8f95-c0cf30d84d13
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e4f0d23-1c64-49fb-8099-4f000a0a020f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 185.130.104.182
+    - 185.159.82.47
+  condition: attributes

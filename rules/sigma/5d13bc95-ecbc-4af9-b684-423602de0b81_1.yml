@@ -1,0 +1,16 @@
+title: Soft Cell case - guessed indicators (via Twitter discussion) - url_request
+id: 2e3e0dcb-23cf-472e-8235-24d0bff31a6e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d13bc95-ecbc-4af9-b684-423602de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://twitter.com
+    - https://www.cybereason.com
+  condition: attributes

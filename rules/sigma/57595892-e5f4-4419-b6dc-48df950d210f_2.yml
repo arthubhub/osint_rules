@@ -1,0 +1,18 @@
+title: OSINT - LinkedIn information used to spread banking malware in the Netherlands
+  - dns_query
+id: e03f603c-1a8c-4efb-8c48-894b89f078cc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57595892-e5f4-4419-b6dc-48df950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - skorianial.com
+    IpAddresses:
+    - 107.171.187.182
+  condition: attributes

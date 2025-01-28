@@ -1,0 +1,16 @@
+title: 'OSINT  Threat Spotlight: Spam Served With a Side of Dridex from Cisco Talos
+  - url_request'
+id: 782d4a30-cadd-429d-a31f-7198171de133
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55244f19-fc08-42e2-8cd9-42c7950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blogs.cisco.com
+  condition: attributes

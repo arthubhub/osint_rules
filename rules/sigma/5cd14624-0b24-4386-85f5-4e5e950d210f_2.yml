@@ -1,0 +1,72 @@
+title: OSINT - CARBANAK Week - Fire Eye - dns_query
+id: 43f3f044-fd84-4cae-8c14-249776154b34
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cd14624-0b24-4386-85f5-4e5e950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.g0046
+- attack.software.carbanak
+- attack.software.s0030
+- attack.group.anunak
+- attack.group.carbanak
+- attack.group.g0008
+- attack.group.fin7
+detection:
+  object_6444:
+    IpAddresses:
+    - 104.193.252.151
+  object_6445:
+    IpAddresses:
+    - 185.180.196.35
+  object_6446:
+    IpAddresses:
+    - 213.227.155.8
+  object_6447:
+    IpAddresses:
+    - 94.156.133.69
+  object_6448:
+    IpAddresses:
+    - 185.174.172.241
+  object_6449:
+    IpAddresses:
+    - 109.230.199.227
+  object_6450:
+    IpAddresses:
+    - 37.1.212.100
+  object_6451:
+    IpAddresses:
+    - 188.138.98.105
+  object_6452:
+    IpAddresses:
+    - 80.84.49.50
+  object_6453:
+    IpAddresses:
+    - 52.11.125.44
+  object_6454:
+    IpAddresses:
+    - 192.168.0.100
+  object_6455:
+    IpAddresses:
+    - 192.168.0.100
+  object_6456:
+    IpAddresses:
+    - 193.203.48.23
+  attributes:
+    QueryName|contains:
+    - stats10-google.com
+    - qwqreererwere.com
+    - akamai-technologies.org
+    - comixed.org
+    - aaaabbbbccccc.org
+    - hhklhlkhkjhjkjk.org
+    IpAddresses:
+    - 107.181.155.151
+    - 194.146.180.40
+    - 23.253.126.58
+    - 85.25.84.223
+  condition: 1 of object_* or attributes

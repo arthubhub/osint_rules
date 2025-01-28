@@ -1,0 +1,92 @@
+title: 'OSINT -  SWEED: Exposing years of Agent Tesla campaigns - process_creation'
+id: c5d8706a-7251-4387-8cd8-227224e55331
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d2cae34-7564-4049-b9c4-4ae902de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.agent_tesla
+- attack.software.s0331
+- attack.group.agent_tesla
+detection:
+  object_17931:
+    sha256:
+    - 59b15f6ace090d05ac5f7692ef834433d8504352a7f45e80e7feb05298d9c2dd
+  object_17932:
+    sha256:
+    - e397ba1674a6dc470281c0c83acd70fd4d772bf8dcf23bf2c692db6575f6ab08
+  object_17933:
+    sha256:
+    - 8c8f755b427b32e3eb528f5b59805b1532af3f627d690603ac12bf924289f36f
+  object_17935:
+    md5:
+    - bf58485904f69fb91b11cd802f6d76ca
+    sha1:
+    - ae8f8bb3e7cfdeed7317b6eea7ef0cec4113b519
+    sha256:
+    - e397ba1674a6dc470281c0c83acd70fd4d772bf8dcf23bf2c692db6575f6ab08
+  object_17937:
+    md5:
+    - a313f809b1faf1643e0201e29cb4cbc0
+    sha1:
+    - 2dd851466760b8b35226e83b2bfa36a379c03db6
+    sha256:
+    - 59b15f6ace090d05ac5f7692ef834433d8504352a7f45e80e7feb05298d9c2dd
+  object_17939:
+    sha256:
+    - d27a29bdb0492b25bf71e536c8a1fae8373a4b57f01ad7481006f6849b246a97
+  object_17940:
+    sha256:
+    - 65bdd250aa4b4809edc32faeba2781864a3fee7e53e1f768b35a2bdedbb1243b
+  object_17941:
+    sha256:
+    - 111e1fff673466cedaed8011218a8d65f84bee48d5ce6d7e8f62cb37df75e671
+  object_17942:
+    sha256:
+    - 1dd4ac4925b58a2833b5c8969e7c5b5ff5ec590b376d520e6c0a114b941e2075
+  object_17943:
+    sha256:
+    - fa6557302758bbea203967e70477336ac7a054b1df5a71d2fb6d822884e4e34f
+  object_17944:
+    md5:
+    - 8e0b8b5200e879d7a4a62df5ea30253a
+    sha1:
+    - 50c9dea7c3b2f396f22612f14dae00880ceffa9a
+    sha256:
+    - 1dd4ac4925b58a2833b5c8969e7c5b5ff5ec590b376d520e6c0a114b941e2075
+  object_17947:
+    md5:
+    - 675b17eed5c3c5e0bb5ab937753672bb
+    sha1:
+    - 72d382cbf08d3f3fe2429eceed8a706b1b44fd65
+    sha256:
+    - 65bdd250aa4b4809edc32faeba2781864a3fee7e53e1f768b35a2bdedbb1243b
+  object_17949:
+    md5:
+    - f082f44b0f4e52c44a6116e34ecb2a78
+    sha1:
+    - a2b75fce3fc2baf11eae550d05aa1fbe170be546
+    sha256:
+    - 111e1fff673466cedaed8011218a8d65f84bee48d5ce6d7e8f62cb37df75e671
+  object_17951:
+    md5:
+    - fc23bd61f8af13293fd960e6cb202145
+    sha1:
+    - d3e1421263a60abd5e58a49c3f02282710917210
+    sha256:
+    - fa6557302758bbea203967e70477336ac7a054b1df5a71d2fb6d822884e4e34f
+  object_17954:
+    md5:
+    - bcfe2c56500d6f58e8e3f4b5a35fb155
+    sha1:
+    - f36b3a4353cddc2909f534a5dbf4f631c4c941a9
+    sha256:
+    - d27a29bdb0492b25bf71e536c8a1fae8373a4b57f01ad7481006f6849b246a97
+  attributes:
+    sha256:
+    - 8c8f755b427b32e3eb528f5b59805b1532af3f627d690603ac12bf924289f36f
+  condition: 1 of object_* or attributes

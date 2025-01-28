@@ -1,0 +1,86 @@
+title: Diving Deep into UNC4841 Operations Following Barracuda ESG Zero-Day Remediation
+  (CVE-2023-2868) - dns_query
+id: bec1003d-28a6-4b2f-989c-0b15bf312c76
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/fb6f4727-4993-4cc0-a177-56e37a0eddde.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - goldenunder.com
+    - togetheroffway.com
+    - singamofing.com
+    - bestfindthetruth.com
+    - troublendsef.com
+    - gesturefavour.com
+    - singnode.com
+    - fessionalwork.com
+    IpAddresses:
+    - 198.2.254.222
+    - 137.175.28.251
+    - 23.224.78.134
+    - 137.175.30.36
+    - 103.77.192.13
+    - 103.77.192.88
+    - 182.239.114.135
+    - 45.148.16.42
+    - 137.175.60.253
+    - 101.229.146.218
+    - 107.148.223.196
+    - 103.93.78.142
+    - 137.175.60.252
+    - 198.2.254.219
+    - 107.148.219.53
+    - 192.74.226.142
+    - 103.146.179.101
+    - 195.234.82.132
+    - 104.156.229.226
+    - 198.2.254.220
+    - 45.154.253.154
+    - 137.175.53.17
+    - 37.9.35.217
+    - 155.94.160.95
+    - 107.148.149.156
+    - 137.175.30.86
+    - 64.176.4.234
+    - 139.84.227.9
+    - 137.175.53.170
+    - 45.148.16.46
+    - 38.54.113.205
+    - 38.60.254.165
+    - 23.224.78.131
+    - 23.224.78.133
+    - 192.74.254.229
+    - 137.175.51.147
+    - 137.175.78.66
+    - 64.176.7.59
+    - 107.148.219.227
+    - 107.148.219.55
+    - 23.224.78.130
+    - 23.224.42.29
+    - 185.243.41.209
+    - 107.148.219.54
+    - 213.156.153.34
+    - 45.154.253.153
+    - 137.175.19.25
+    - 199.247.23.80
+    - 38.54.1.82
+    - 23.224.78.132
+    - 216.238.112.82
+    - 45.63.76.67
+    - 155.94.160.72
+    - 182.239.114.254
+    - 198.2.254.221
+    - 51.91.79.17
+    - 198.2.254.223
+    - 113.52.106.3
+    - 107.173.62.158
+    - 137.175.53.218
+    - 103.27.108.62
+    - 104.223.20.222
+  condition: attributes

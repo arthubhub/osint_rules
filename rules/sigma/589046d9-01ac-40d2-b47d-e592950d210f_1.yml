@@ -1,0 +1,30 @@
+title: 'OSINT - Flokibot Invades PoS: Trouble in Brazil - url_request'
+id: b84a48d8-2b4c-4ded-bcb5-d4267e00e831
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/589046d9-01ac-40d2-b47d-e592950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.flokibot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - vtraffic.su
+    - shhtunnel.at
+    - blackircd.net
+    - wowsupplier.ga
+    - p0o9i8u7y9.xyz
+    - 4haters.ga
+    - treasurehunter.at
+    - extensivee.bid
+    - springlovee.at
+    - uspal.cf
+    - duparseled.com
+    - sshtunnel02.xyz
+    - adultgirlmail.com
+    - https://www.arbornetworks.com
+  condition: attributes

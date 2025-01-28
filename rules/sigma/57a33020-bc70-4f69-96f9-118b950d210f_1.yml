@@ -1,0 +1,21 @@
+title: OSINT - NANHAISHU RATing the South China Sea - url_request
+id: f2c62f64-4402-4016-ae26-68252b2a2cd0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57a33020-bc70-4f69-96f9-118b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - eholidays.mooo.com
+    - https://blogs.mcafee.com
+    - mintty.ignorelist.com
+    - mines.port0.org
+    - presentation.twilightparadox.com
+    - humans.mooo.info
+    - https://www.f-secure.com
+  condition: attributes

@@ -1,0 +1,94 @@
+title: Malspam 2016-06-23 (Locky) - dns_query
+id: 9030a0ca-9f05-4631-86ba-0fce8215ad65
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/576cee20-2a04-4683-aae1-441c950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - bilgoray.com
+    - ideograph.com
+    - euro-support.be
+    - climatizareonline.ro
+    - babycotsonline.com
+    - empiredeckandfence.com
+    - arogyaforhealth.com
+    - capitalwomanmagazine.ca
+    - focolareostuni.it
+    - cameramartusa.info
+    - dentalshop4you.nl
+    - century21keim.com
+    - climairuk.com
+    - boranwebshop.nl
+    - abligl.com
+    - disneyexperience.com
+    - 4k18.com
+    - aberfoyledental.ca
+    - elviraminkina.com
+    - karl-lee.se
+    - certifiedbanker.org
+    - barum.de
+    - bptec.ir
+    - 3141592.ru
+    - bobbysinghwpg.com
+    - jd-products.nl
+    - freesource.su
+    - mycreativeprint.com
+    - grantica.ru
+    IpAddresses:
+    - 143.95.250.67
+    - 104.152.168.29
+    - 95.38.60.148
+    - 212.46.196.141
+    - 192.185.65.228
+    - 46.226.62.145
+    - 192.185.146.153
+    - 203.132.10.3
+    - 162.210.102.232
+    - 69.156.240.29
+    - 217.76.156.98
+    - 136.243.176.66
+    - 192.185.225.43
+    - 175.45.184.160
+    - 103.6.198.185
+    - 80.78.166.19
+    - 185.149.90.4
+    - 188.40.0.214
+    - 94.247.170.75
+    - 85.25.235.209
+    - 66.175.58.9
+    - 195.208.0.136
+    - 176.62.167.160
+    - 199.241.184.10
+    - 107.180.24.238
+    - 109.234.160.30
+    - 64.29.151.221
+    - 75.119.198.150
+    - 216.120.252.191
+    - 166.63.125.135
+    - 192.186.246.98
+    - 65.39.184.151
+    - 89.36.135.166
+    - 46.226.62.141
+    - 217.73.226.220
+    - 160.153.73.196
+    - 199.204.248.105
+    - 79.174.64.15
+    - 85.118.237.109
+    - 192.254.188.98
+    - 66.33.222.26
+    - 112.140.178.249
+    - 107.6.169.61
+    - 92.53.126.193
+    - 83.96.159.64
+    - 146.120.112.197
+    - 193.203.99.111
+    - 202.124.241.203
+    - 23.229.131.128
+    - 193.203.99.113
+  condition: attributes

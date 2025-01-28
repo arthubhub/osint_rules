@@ -1,0 +1,87 @@
+title: Pivot on What's in a server name (on APT28/Sofacy) by ThreatConnect - dns_query
+id: 7d10f4bc-52b5-496f-a834-4785bf30d8fc
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5783a00e-27d8-4e5a-ac92-aec6950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - intelintelligence.org
+    - ferrarlcostruzloni.com
+    - ctbkonline.com
+    - corcpromotion.com
+    - theguardianpress.com
+    - konrecranes.com
+    - haamltex.com
+    - atosbasena.com
+    - micoft.com
+    - adamsfinanace.com
+    - cellpack-sg.com
+    - hamnaill.net
+    - microsoft-updates.me
+    - sec-login.com
+    - pedrodonations.co
+    - adobeupdatetechnology.com
+    - egypressoffice.com
+    - tostembekary.com
+    - wincodec.com
+    - wm-z.biz
+    - truslt-valves.com
+    - natoadviser.com
+    - diamondscourier.biz
+    - adobeupdater.org
+    - svroulette.com
+    - csc-sratori.com
+    - intelsupportcenter.com
+    - worldpostjournal.com
+    - ms-updates.com
+    - nato-org.com
+    - uninstalled.net
+    - expo-consrtuct.com
+    - yrauto-tw.com
+    - uniccomvalve.com
+    - bitfare.org
+    - ghanltootgroup.com
+    - theguardiannews.org
+    - e-dates.me
+    - laisve25.com
+    - unjiaya.info
+    - wmepadtech.com
+    - intelsupportcenter.net
+    - cdncloudflare.com
+    - wsjworld.com
+    - ms-drivadptrwin.com
+    - adobeflashdownload.de
+    - energyaspacts.com
+    - vortaxworldwlde.com
+    - transllead.com
+    - swsupporttools.com
+    - ajw-avaition.com
+    - pdf-online-viewer.com
+    - bourquinsa.com
+    - terms-google.com
+    - kaunas-city.com
+    - sec-trusted.com
+    - chinagameke.com
+    - sec-verified.com
+    - chianceforkids.com
+    - helper-akamai.com
+    - goaarmy.org
+    - stratforglobal.net
+    - softwaresupportsv.com
+    - win-wnigarden.com
+    - ozverler-tr.com
+    - tracksy.net
+    - access-google.com
+    - honeyvvell.co
+    - bisicoind.com
+    - securesystemwin.com
+    - hanmiail.net
+    - akamaitechupdate.com
+    - pinllive.com
+  condition: attributes

@@ -1,0 +1,24 @@
+title: OSINT - The DiskWriter or UselessDisk BootLocker May Be A Wiper - process_creation
+id: 0baae794-cc50-4726-b464-34494877959b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ac6140f-5964-4eb8-81bd-4095950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.uselessdisk
+detection:
+  object_17769:
+    md5:
+    - 577be8c5b73e59fb71570f632349e5fe
+    sha1:
+    - 363605836bf4ee34d9dfb43a6e71acdfd2b2cebe
+    sha256:
+    - bf664370a287f83a67eb9ec01d575cad3bcdfbec2e2290a5e8d570999566e79e
+  attributes:
+    sha256:
+    - bf664370a287f83a67eb9ec01d575cad3bcdfbec2e2290a5e8d570999566e79e
+  condition: 1 of object_* or attributes

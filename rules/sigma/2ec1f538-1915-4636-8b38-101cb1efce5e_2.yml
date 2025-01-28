@@ -1,0 +1,48 @@
+title: A22-108A TraderTraitor North Korean State-Sponsored APT Targets Blockchain
+  Companies - dns_query
+id: 72f8bbe3-d124-49b2-b187-1a3faa8ba3d2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/2ec1f538-1915-4636-8b38-101cb1efce5e.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.lazarus_group
+- attack.t1552.004
+- attack.t1071.001
+- attack.group.g0032
+- attack.t1566.001
+detection:
+  attributes:
+    QueryName|contains:
+    - dafnefonseca.com
+    - infodigitalnew.com
+    - haciendadeclarevot.com
+    - alticgo.com
+    - sche-eg.org
+    - dafom.dev
+    - greenvideo.nl
+    - creaideck.com
+    - tokenais.com
+    - aideck.net
+    - vinoymas.ch
+    - esilet.com
+    - cryptais.com
+    IpAddresses:
+    - 104.168.98.156
+    - 151.101.64.119
+    - 45.14.227.58
+    - 108.170.55.202
+    - 199.188.103.115
+    - 160.153.235.20
+    - 185.66.41.17
+    - 107.154.160.132
+    - 82.102.31.14
+    - 46.16.62.238
+    - 89.45.4.151
+    - 62.84.240.140
+    - 38.132.124.161
+  condition: attributes

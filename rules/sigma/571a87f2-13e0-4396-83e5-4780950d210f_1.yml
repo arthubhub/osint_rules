@@ -1,0 +1,16 @@
+title: OSINT - New Poison Ivy RAT Variant Targets Hong Kong Pro-Democracy Activists
+  - url_request
+id: 349f8c73-7817-4a60-a458-ba0d0fbbb1d2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/571a87f2-13e0-4396-83e5-4780950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

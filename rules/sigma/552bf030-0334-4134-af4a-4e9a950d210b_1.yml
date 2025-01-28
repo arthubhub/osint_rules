@@ -1,0 +1,22 @@
+title: OSINT APT 30 and the Mechanics of a Long-Running Cyber Espionage Operation
+  by FireEye - url_request
+id: e20b3d1f-a032-4a05-86ed-dbb1061fa684
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/552bf030-0334-4134-af4a-4e9a950d210b.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.apt_30
+detection:
+  attributes:
+    RequestUrl|contains:
+    - km-nyc.com
+    - https://www.fireeye.com
+    - https://www2.fireeye.com
+    - https://github.com
+    - km153.com
+  condition: attributes

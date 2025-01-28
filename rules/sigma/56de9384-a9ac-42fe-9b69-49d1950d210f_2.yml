@@ -1,0 +1,22 @@
+title: TeslaCrypt (2016-03-08) - dns_query
+id: fcee9098-0580-461c-b7fb-ec5f32dd724e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56de9384-a9ac-42fe-9b69-49d1950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - hellomisterbiznesqq.com
+    - greetingsjamajcaff.com
+    - drcordoba.com
+    IpAddresses:
+    - 50.62.125.1
+    - 74.117.183.252
+    - 104.168.62.235
+    - 173.82.74.197
+  condition: attributes

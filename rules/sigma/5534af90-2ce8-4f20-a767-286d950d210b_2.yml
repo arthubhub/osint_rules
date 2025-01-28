@@ -1,0 +1,112 @@
+title: '20150415D: Fareit Malware Targeting Steam Users from ThreatConnect - dns_query'
+id: dcd6e7e4-2dd6-4cb4-8465-8c934c98515a
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5534af90-2ce8-4f20-a767-286d950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - sleamcommuniiy.com
+    - steamcommeunity.com
+    - steamcornmiunity.com
+    - steamcommiuinty.com
+    - steamcommnmity.com
+    - steamcommuniuty.com
+    - steamfommunity.com
+    - steamcommunerity.com
+    - steamummunity.com
+    - steamcomunitty.com
+    - mail.staemcommunitry.com
+    - steamcommunrrity.com
+    - steamconnnunity.com
+    - steamrommunily.com
+    - stearndommunity.com
+    - steamurmmunity.com
+    - staemcommunitv.com
+    - steamcomunily.com
+    - steamvvommunity.com
+    - steamdommunity.com
+    - steauummunity.com
+    - steambommunity.com
+    - steamrommunity.com
+    - steagommunity.com
+    - steamcommunirly.com
+    - steacommurnity.com
+    - steamcommunelty.com
+    - steamcammunitly.com
+    - staemcommuniti.com
+    - steamcommunicty.com
+    - staemcommunety.com
+    - steamcommunitsy.com
+    - steamcommulty.com
+    - steammcommunicty.com
+    - steamcommnuinty.com
+    - steamcommunivy.com
+    - steamcomnmulity.com
+    - steamcommunityi.com
+    - steamtommunity.com
+    - steanommunity.com
+    - steaumcommunity.com
+    - lsteamcommiuntiy.com
+    - steamcommunriity.com
+    - staemcommunitry.com
+    - steamcommurniti.com
+    - steamiommunity.com
+    - steamjommunity.com
+    - steamhommunity.com
+    - steasommunity.com
+    - steamconmunicty.com
+    - steamcomrnunty.com
+    - steamconmunlty.com
+    - steamrnommunity.com
+    - steam-profile.com
+    - steamammunity.com
+    - steamcommunityy.com
+    - steammommunity.com
+    - steamcommumnty.com
+    - steamcommunltly.com
+    - steateamcommunity.com
+    - steamcommunninty.com
+    - steamournmunity.com
+    - staemcommunlty.com
+    - steamcommninuity.com
+    - steamcornmunty.com
+    - steamcommuitny.com
+    - stealommunity.com
+    - steazommunity.com
+    - steamcommunlitiy.com
+    - steamcomrmunity.com
+    - steamcommuenity.com
+    - steamcomminity.com
+    - steamconmonity.com
+    - stearnommunity.com
+    - steaacommunity.com
+    - steamcommununilty.com
+    - stearnommunty.com
+    - steacommunity.com
+    - steamcommueniity.com
+    - steamcommuniti.com
+    IpAddresses:
+    - 37.9.53.211
+    - 46.161.41.83
+    - 144.76.40.132
+    - 62.76.184.57
+    - 94.75.240.109
+    - 46.244.10.252
+    - 46.161.41.39
+    - 46.244.10.161
+    - 208.91.197.66
+    - 46.38.48.11
+    - 46.161.41.148
+    - 46.161.41.158
+    - 5.79.85.10
+    - 91.218.228.248
+    - 5.79.85.8
+    - 46.244.10.224
+    - 46.244.10.227
+  condition: attributes

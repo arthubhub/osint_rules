@@ -1,0 +1,29 @@
+title: 'Malspam 2016-09-30 (.wsf in .zip) - campaign: "Parcel details" - dns_query'
+id: 66e89490-7a19-4dbf-8703-f6b80cad68fb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ee6d8c-0650-4c8a-9dfa-4f31950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - greenshootmedia.com
+    - unityquire.com
+    - drugvacoa.net
+    - puchipuchivirus.com
+    - resboiu.ro
+    - lust-vodka.com
+    - room8008.com
+    IpAddresses:
+    - 190.147.38.2
+    - 31.210.120.156
+    - 66.117.4.26
+    - 85.9.63.225
+    - 107.180.50.231
+    - 23.254.128.73
+    - 103.6.196.150
+  condition: attributes

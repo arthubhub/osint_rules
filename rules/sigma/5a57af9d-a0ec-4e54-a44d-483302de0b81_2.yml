@@ -1,0 +1,88 @@
+title: OSINT - First Kotlin-Developed Malicious App Signs Users Up for Premium SMS
+  Services - process_creation
+id: 3aeb353d-8172-4829-86a6-ed95a3dd159e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a57af9d-a0ec-4e54-a44d-483302de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_11420:
+    md5:
+    - 1d64514bc3391a1c0490d66fd219922e
+    sha1:
+    - 0a2b8a1012fbaeb0285025a43a4e467823eb1b2e
+    sha256:
+    - 5886316c0b54bbb7ce6978acdb1ab4e2cf2b1494647b9d9ad014802e6bf5c7b8
+  object_11422:
+    md5:
+    - d50e0523db467cf821df7ce3d8c0dc75
+    sha1:
+    - 9c79b28664797ae1b8af916226aeebd5060b1760
+    sha256:
+    - 77d0c7dd4b3d87be6d9dfb0a9c371b4d8eeadccb8fde41d942f1c35e5e3ec063
+  object_11424:
+    md5:
+    - c0ffae6b8cdb5148533ea11810fb870e
+    sha1:
+    - 7e7f9e4fcca6f7517b1882e83d2e64470460c815
+    sha256:
+    - 329b9c5670ecdf25248e484e23c21bbc86f943d7573ff131c0dc71bc80812d1c
+  object_11426:
+    md5:
+    - 9c66ff93022d399ab592d5587661c777
+    sha1:
+    - 3ec367d4aea942dbf161aef627f2dc8f3847a3a6
+    sha256:
+    - 7d3e61c2c58906e09d56121be94601744e362e6f8c6b7bf87472b62b0cf8ce57
+  object_11428:
+    md5:
+    - 05c310308d916af4c56a89f8bbe45783
+    sha1:
+    - 2cbffddfbfd727d7595e3c37cc4e1bf588486e2c
+    sha256:
+    - aeef3ff7cc543bbacb6ab4df8da639b98be8f3c225678a4d0935f467bc6d720e
+  object_11430:
+    md5:
+    - 1cf1ed1a16ebe9aa92acd0857a73632a
+    sha1:
+    - d8d9b5b6ee549f842450f5fd73e88ba48c0fb1ba
+    sha256:
+    - ab2c4886a4e0681a55b29c653b506b66721a3f36a1b098afa7f56da6f89bf5de
+  object_11432:
+    md5:
+    - f15f17a6dd14785a12ab4b804cb16d3e
+    sha1:
+    - 3096250fe90826f05aee32474c7e20fe8a268e5b
+    sha256:
+    - 621092856e20e628a577dbe9248649eae78d1af611d9168635b22057c6c7552b
+  object_11434:
+    md5:
+    - 43183779b1da5cb60b949ab38d3c69c0
+    sha1:
+    - 78a6859349f3503c40b54f8706ec97e6272c496c
+    sha256:
+    - b4822eeb71c83e4aab5ddfecfb58459e5c5e10d382a2364da1c42621f58e119b
+  object_11436:
+    md5:
+    - a18a70c259276e30b6a6305f568ed700
+    sha1:
+    - d4743b60452d2ca240f0045fed4b4b90b9a8b638
+    sha256:
+    - 2856f3d1282ddc6bcfe65b0c91a87d998edccb777387e3f998bc3b6f1d0b3342
+  attributes:
+    sha256:
+    - 7d3e61c2c58906e09d56121be94601744e362e6f8c6b7bf87472b62b0cf8ce57
+    - 5886316c0b54bbb7ce6978acdb1ab4e2cf2b1494647b9d9ad014802e6bf5c7b8
+    - aeef3ff7cc543bbacb6ab4df8da639b98be8f3c225678a4d0935f467bc6d720e
+    - 621092856e20e628a577dbe9248649eae78d1af611d9168635b22057c6c7552b
+    - b4822eeb71c83e4aab5ddfecfb58459e5c5e10d382a2364da1c42621f58e119b
+    - 329b9c5670ecdf25248e484e23c21bbc86f943d7573ff131c0dc71bc80812d1c
+    - 77d0c7dd4b3d87be6d9dfb0a9c371b4d8eeadccb8fde41d942f1c35e5e3ec063
+    - ab2c4886a4e0681a55b29c653b506b66721a3f36a1b098afa7f56da6f89bf5de
+    - 4f649e0ea6a6f022e7a5701cecb5b7653d1334eb40918e52db8f3daacfb3b660
+    - 2856f3d1282ddc6bcfe65b0c91a87d998edccb777387e3f998bc3b6f1d0b3342
+  condition: 1 of object_* or attributes

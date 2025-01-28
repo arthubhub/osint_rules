@@ -1,0 +1,93 @@
+title: M2M - new locky - url_request
+id: 12876e36-9192-4432-8c58-54ebe1e20f75
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59b2b505-0c68-4319-8278-7f0b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://pacalik.net
+    - http://shamanic-extracts.biz
+    - http://melospub.hu
+    - http://weekendjevliegen.nl
+    - http://robsacks.com
+    - http://schwellenwertdaten.de
+    - http://qwebytfovhn.info
+    - http://tbba.co.uk
+    - http://socalconsumerlawyers.com
+    - http://peopleiknow.org
+    - http://qxr33qxr.com
+    - http://intelicalls.com
+    - http://autoecolecarnot.com
+    - http://oyqpewwxqsf.work
+    - http://chorleystud.com
+    - http://46.148.20.53
+    - http://brandingforbuyout.com
+    - http://egdevcenter.com
+    - http://sargut.biz
+    - http://cer-torcy.com
+    - http://dueeffepromotion.com
+    - http://jtpsolutions.com.au
+    - http://sonucbirebiregitim.com
+    - http://holmac.co.nz
+    - http://embutidosanezcar.com
+    - http://gnpcodwewcbiuuv.pw
+    - http://ixrxiuhiom.pl
+    - http://qymkhefpfvf.org
+    - http://awholeblueworld.com
+    - http://crda-addenmali.org
+    - http://lgmartinmd.com
+    - http://pktqwaartwhgm.org
+    - http://afdokuqkswcbu.org
+    - http://geolearner.com
+    - http://pack-lines.com
+    - http://mybarracuda.ca
+    - http://ostiavolleyclub.it
+    - http://mercaropa.es
+    - http://yajkiwhvmuupotdpw.work
+    - http://arkberg-design.fi
+    - http://playitmore.com
+    - http://185.67.2.156
+    - http://labkonstrukt.com
+    - http://robbie.ggc-bremen.de
+    - http://pahema.es
+    - http://downstairsonfirst.com
+    - http://carpenteriemcm.com
+    - http://pmpimmobiliare.it
+    - http://schultedesign.de
+    - http://arikglbnfs.pw
+    - http://brianwells.net
+    - http://emailrinkodara.lt
+    - http://blaeberrycabin.com
+    - http://frlybjtvkfyv.xyz
+    - http://etforhartohat.info
+    - http://anloandy.co.uk
+    - http://prmbrvmfn.info
+    - http://pesonamas.co.id
+    - http://lagrangeglassandmirrorco.com
+    - http://mobimento.com
+    - http://suncoastot.com
+    - http://sambad.com.np
+    - http://studiotoscanosrl.it
+    - http://kvfbnygmotcmrhmtj.click
+    - http://handhi.com
+    - http://artesoba.be
+    - http://roadsendretreat.org
+    - http://aac-autoecole.com
+    - http://bit-chasers.com
+    - http://activ-conduite.eu
+    - https://boomstick.emergingthreats.net
+    - http://queerfilms.eu
+    - http://promotamail.co.uk
+    - http://lp-usti.cz
+    - http://montessibooks.com
+    - http://multicolourflyers.co.uk
+  condition: attributes

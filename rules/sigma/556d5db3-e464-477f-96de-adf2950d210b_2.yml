@@ -1,0 +1,60 @@
+title: OSINT 'Paying-Days' CryptoWall 3.0 Campaign via Magnitude EK report by malwarefor.me
+  - dns_query
+id: 2cd3b59b-18de-4cf8-a697-632b6390462d
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/556d5db3-e464-477f-96de-adf2950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - payingdays.me
+    - payingdays.org
+    - ip-addr.es
+    - azquasoft.com
+    - geiliyou.com
+    - katadata.com
+    - payingday.net
+    - filemade.com
+    - judora-ng.com
+    - aseanian.com
+    - tryea.com
+    - hicoop.com
+    - uaru.net
+    - payingdays.net
+    - sloeponline.org
+    - payingday.biz
+    - paying-days.net
+    - paying-days.com
+    - chonburipalms.com
+    IpAddresses:
+    - 66.147.242.171
+    - 49.50.8.213
+    - 37.221.161.69
+    - 182.92.74.222
+    - 95.215.60.75
+    - 85.92.144.16
+    - 217.195.198.180
+    - 46.242.145.92
+    - 188.165.164.184
+    - 217.172.189.239
+    - 64.34.157.174
+    - 95.215.60.69
+    - 150.107.31.61
+    - 217.23.6.131
+    - 31.3.242.100
+    - 136.243.241.21
+    - 27.254.81.96
+    - 103.31.233.237
+    - 94.242.253.106
+    - 31.3.242.103
+    - 150.107.31.55
+    - 95.215.60.68
+    - 31.3.242.101
+    - 217.172.189.238
+    - 31.3.242.106
+  condition: attributes

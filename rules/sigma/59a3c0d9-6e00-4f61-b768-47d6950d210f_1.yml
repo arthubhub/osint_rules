@@ -1,0 +1,19 @@
+title: OSINT - The ZAYKA and NOOB CryptoMix Ransomware Variants Released in Quick
+  Succession - url_request
+id: c635f675-bfc9-4f83-be44-d45a2de5d929
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59a3c0d9-6e00-4f61-b768-47d6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.cryptomix
+- attack.software.cryptomix
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

@@ -1,0 +1,99 @@
+title: RegretLocker - compiled information, activity and samples - process_creation
+id: a6d6c363-93a9-4c99-8775-8ed49ad33b75
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/ffb85ca7-6a43-4b9f-a759-b6a7ea2235f9.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.regretlocker
+- attack.software.regretlocker
+detection:
+  object_16218:
+    md5:
+    - 1e4f92167c3ab2dc2c01650e939055f9
+    sha1:
+    - 4d18b6c125b4668ed00358c002c8a0dfae23db7a
+    sha256:
+    - 3ea51233fc585fcd6772cf677512cb9b06f8a6c971fd5c39b591a2a2d0357fee
+  object_16219:
+    md5:
+    - d4267ed23f4b852d028f443cb4aad133
+    sha1:
+    - e15c846060a20f089f14869bc16992023cd431b7
+    sha256:
+    - 3a64bac9f63b3a6aa3ee4e1ac7c038248dcf2283712c64f740866f0597008735
+  object_16220:
+    md5:
+    - bdac7b3caf4a2640a848c52d56263d6f
+    sha1:
+    - 4074eac2c7cb8f54042d7753fddf79d41e6ba1da
+    sha256:
+    - 0664109a211df95098544312f455035e79988bfbbe7b63dcbba01dfbf88351d3
+  object_16221:
+    md5:
+    - 0182033254ebc8d0593f391d8dc7e6d2
+    sha1:
+    - 7805b24719deb34dd098be5bc8ca6a0a4f6ea53b
+    sha256:
+    - 8ee03e790e04d573a1e2f2c494823c7f5e5892c58ae2b68afd6d635bee4bb58d
+  object_16222:
+    md5:
+    - 9836d373e3e5b2732261fd23de92e9cc
+    sha1:
+    - a02930ef7a4abc95f485dd906b41c9f1b3b4089f
+    sha256:
+    - c044f90946b93915da65196d16dcc4f342273f369630fb419fe0e719ac83f073
+  object_16223:
+    md5:
+    - 3265b2b0afc6d2ad0bdd55af8edb9b37
+    sha1:
+    - 24272beb676d956ec8a65b95a2615c9075fa9869
+    sha256:
+    - a188e147ba147455ce5e3a6eb8ac1a46bdd58588de7af53d4ad542c6986491f4
+  object_16225:
+    md5:
+    - 3872b37a6fbcbb27f80b9639008a708e
+    sha1:
+    - af031fe59567d0fe50d6d047bc0ca7c2869d341f
+    sha256:
+    - 38bcb58a3bf5ead5cf760efb23d404f2f3344bf28d870eb2da94e90bbf2fc77e
+  object_16226:
+    md5:
+    - 3c027f23d1cc821ccef3334303834905
+    sha1:
+    - 97b2bcbb75096510580cfa3eb09ca9f5f99343fe
+    sha256:
+    - ff797adfe7c6c249e809f08493ec5c0bdbebe042acb2b7971987d0301c084240
+  object_16227:
+    md5:
+    - b59be920c1c434664945d142276186b4
+    sha1:
+    - 416438c1a7fd81ee9d69873597d35bd59856e90e
+    sha256:
+    - 60e47720c483c8a6067c98f8cb300aa1ae5c9e6ccded044ef365e459dc2c61ff
+  object_16228:
+    md5:
+    - e9fb469d281b99eb663d16de3582a879
+    sha1:
+    - 7ccdea45c0fa4f3929e9602a53aa9b4bb25b85e4
+    sha256:
+    - 57a185a9643272ce1564c3c82e2bf020872558f1a78f2144406e28f9c6a43f61
+  object_16229:
+    md5:
+    - b2936a508681fdbe1f2d049cb2408c6b
+    sha1:
+    - 3947b42a90beabb11a40581a93b1409bd8167983
+    sha256:
+    - 1b4cc01e63dac842f80de7e005cbe45d0e1ef7dc66392c80e9ec57c47be20421
+  object_16230:
+    md5:
+    - 83153f8ca7f872a1b4abd40a5bd58094
+    sha1:
+    - 6dc183ed1c644dd550207a34ac9e57c6f4b8d350
+    sha256:
+    - c5c7e4f126099586670346024bd37eccf0cce6dd1eb8cfcafbb24530e1c582fa
+  condition: 1 of object_*

@@ -1,0 +1,17 @@
+title: 'Sinkholes servers with http header Server: malware-sinkhole - url_request'
+id: 1544e1bd-d8b1-4564-ba0f-5bc93a840410
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58ad5d57-3058-48b8-8c08-553602de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://censys.io
+    - oraclesoft.net
+    - nicklockluckydog.org
+  condition: attributes

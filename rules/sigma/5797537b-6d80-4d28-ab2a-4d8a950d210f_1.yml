@@ -1,0 +1,35 @@
+title: OSINT - Patchwork cyberespionage group expands targets from governments to
+  wide range of industries - url_request
+id: 28f2b2fd-ca78-41f1-bd3a-fc37aa64088a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5797537b-6d80-4d28-ab2a-4d8a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - epg-cn.com
+    - nudtcn.com
+    - 81-cn.net
+    - info81.com
+    - lujunxinxi.com
+    - nduformation.com
+    - securematrixx.com
+    - milresearchcn.com
+    - newsnstat.com
+    - chinastrats.com
+    - miltechcn.com
+    - extremebolt.com
+    - militaryworkerscn.com
+    - climaxcn.com
+    - miltechweb.com
+    - expatchina.info
+    - cnmilit.com
+    - http://www.symantec.com
+    - modgovcn.com
+    - socialfreakzz.com
+  condition: attributes

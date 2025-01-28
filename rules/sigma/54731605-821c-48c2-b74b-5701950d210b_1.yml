@@ -1,0 +1,45 @@
+title: Expansion based on pDNS + whois from OSINT Roaming tiger by Anton Cherepanov
+  from ESET - url_request
+id: 3f57d60a-db7b-4db5-ae77-fe7b46d2bdeb
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54731605-821c-48c2-b74b-5701950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - tibetwinner.com
+    - mongoliguide.com
+    - mailarchivup.com
+    - wcncsvc.com
+    - kholboo.com
+    - blogmn.com
+    - 0fficeupdate.com
+    - spbmts.com
+    - pcwbhtcling.com
+    - gobimofa.org
+    - sizn-ru.com
+    - cisco-users.com
+    - mskcw.com
+    - bussuu.org
+    - adobeupdated.com
+    - winmax-forums.com
+    - hsats.com
+    - tvsonin.com
+    - wscsvc.com
+    - 0fficeupdated.com
+    - ruojsc.com
+    - drod-tech.com
+    - https://whoisology.com
+    - eturkestan.org
+    - adobesunsupdates.org
+    - husromm.com
+    - wwindowsupdate.com
+    - openwrt-forums.com
+    - obhin.com
+    - mosisp.com
+  condition: attributes

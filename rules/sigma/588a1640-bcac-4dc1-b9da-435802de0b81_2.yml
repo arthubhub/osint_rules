@@ -1,0 +1,17 @@
+title: Malware 2017-01-26 (.js in .zip) - Cerber - dns_query
+id: 27b19e5d-38a4-4fbe-b682-d621c17d8367
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588a1640-bcac-4dc1-b9da-435802de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - sonnystafgy.top
+    IpAddresses:
+    - 54.200.117.224
+  condition: attributes

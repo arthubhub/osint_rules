@@ -1,0 +1,32 @@
+title: OSINT Revealing the Cyber-Kraken (Threat Group 3390 / Emissary Panda) by SecureWorks
+  - url_request
+id: f99ed39f-22bb-4ad4-97bf-f230c84ef597
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55c279fc-e814-4915-96dd-4f19950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - navydocument.com
+    - updatawindows.com
+    - http://www.secureworks.com
+    - update-onlines.org
+    - hotmail-onlines.com
+    - pchomeserver.com
+    - microsoft-outlook.org
+    - google-ana1ytics.com
+    - blackcmd.com
+    - local-test.com
+    - justufogame.com
+    - darkhero.org
+    - hotmailcontact.net
+    - laxness-lab.com
+    - apigmail.com
+    - micr0soft.org
+    - lnip.org
+  condition: attributes

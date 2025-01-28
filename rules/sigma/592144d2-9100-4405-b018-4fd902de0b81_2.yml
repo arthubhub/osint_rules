@@ -1,0 +1,16 @@
+title: OSINT - New SMB Worm Uses Seven NSA Hacking Tools. WannaCry Used Just Two -
+  dns_query
+id: 262143f2-c422-406a-9fa0-8fa7cd8c0b1b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/592144d2-9100-4405-b018-4fd902de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - ubgdgno5eswkhmpy.onion
+  condition: attributes

@@ -1,0 +1,34 @@
+title: 'DangerousSavanna: Two-year long campaign targets financial institutions in
+  French-speaking Africa - dns_query'
+id: 6faa464b-e7df-4533-b20f-e425a79ad118
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/42e5a5d8-59d6-4075-9c9d-2d334b9d74e1.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1566.001
+- attack.group.dangeroussavanna
+- attack.t1193
+detection:
+  attributes:
+    QueryName|contains:
+    - i-development.one
+    - aeternam.me
+    - tf-bank.com
+    IpAddresses:
+    - 35.181.50.113
+    - 13.37.250.144
+    - 20.194.195.96
+    - 192.9.244.42
+    - 20.70.163.11
+    - 137.116.142.70
+    - 170.130.172.46
+    - 3.8.126.182
+    - 192.18.141.199
+    - 15.236.51.204
+    - 13.38.90.3
+  condition: attributes

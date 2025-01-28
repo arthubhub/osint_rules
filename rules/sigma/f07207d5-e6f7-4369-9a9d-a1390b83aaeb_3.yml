@@ -1,0 +1,24 @@
+title: Is Hagga Threat Actor (ab)using FSociety framework ? - process_creation
+id: 9e7edb70-fdc1-47a1-b96c-5ec795ef6903
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f07207d5-e6f7-4369-9a9d-a1390b83aaeb.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_6802:
+    sha256:
+    - 9ea4eebd9cf2a5d4e6343cb559d8c996fae6bf0f3bd7ffada0567053c08acc31
+  object_6803:
+    sha256:
+    - ab5b1989ddf6113fcb50d06234dbef65d871e41ce8d76d5fb5cc72055c1b28ba
+  object_6804:
+    sha256:
+    - 20a53f17071f377d50ad9de30fdddd320d54d00b597bf96565a2b41c15649f76
+  object_6805:
+    sha256:
+    - 5d910ee5697116faa3f4efe230a9d06f6e3f80a7ad2cf8e122546b10e34a0088
+  condition: 1 of object_*

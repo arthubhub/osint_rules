@@ -1,0 +1,29 @@
+title: OSINT - Destructive Shamoon Malware Continues its Return with a New Anti-American
+  Message - process_creation
+id: 49473849-c4d1-4807-a5f0-9fb80ff47f3a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c225981-ae64-4141-8a37-430a02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.shamoon
+detection:
+  object_17731:
+    md5:
+    - d0c3852e376423247ae45c24592880b6
+    sha1:
+    - 7335b8bdc62f35e2579ba18b91dc6227c586ef75
+    sha256:
+    - f2bfe03ebacaa96e2897c8c01339e1ffa8c2222c3d6f89a76827548559b93af9
+  object_17732:
+    md5:
+    - 5711ac3dd15b019f558ec29e68d13ca9
+    sha1:
+    - b18b92a25078aa5f23a9987fd9038440b58b9566
+    sha256:
+    - c617120895646f73bc880c0aca18990deda3db9be03f6b3564013e26dedfa3f9
+  condition: 1 of object_*

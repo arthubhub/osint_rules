@@ -1,0 +1,30 @@
+title: 'OSINT - Bolek: Leaked Carberp KBot Source Code Complicit in New Phishing Campaigns
+  - process_creation'
+id: 5f7b49f6-3086-4e98-8998-5a35b86c8214
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/573efd23-b3a4-4374-9f11-3514950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - e89ff40a8832cd27d2aae48ff7cd67d2
+    - e7047960892f9c8e2123738a087c474f
+    - 24a497e3993289168455f12d11f0430f
+    - 16b36f340a9fbce13ee553b5996442d1
+    - d1449752bbe1e35dea8cc756262d2e7c
+    sha1:
+    - ee8799f864db739fbd51d9447e05a88726fae982
+    - 2c642ae221ae2c5559ba54be8a20b1f92ebba1f1
+    - ea127bb4e0c58902524e11740e15acd46ea71494
+    - b4e4d2b18cc84d8494a1d80c6578544d278df7f6
+    sha256:
+    - 12769a17f85a4c7d56cfe5754184db976b9a361dc7b5d2a8f50e82d7442651aa
+    - 5eccbdae80a1c1e8cb8574986393fc958394b66978ec348d00afe3ec828d20ac
+    - 6e6ef05382010f857ecef17082e9c38b54133380f709b5b25e77afdcacf2b9ca
+    - 62962da720d478bb3510dabc691db37df546749b440caa45d75d9fbfb69d82f9
+  condition: attributes

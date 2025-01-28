@@ -1,0 +1,15 @@
+title: OSINT - UNC2452 / SUNBURST @vxunderground OSINT related findings - url_request
+id: d5449f09-f5c6-4ac4-97fe-03e232349a06
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f78232e7-0b7a-49f7-9e57-1482db2b6335.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://vxug.fakedoma.in
+  condition: attributes

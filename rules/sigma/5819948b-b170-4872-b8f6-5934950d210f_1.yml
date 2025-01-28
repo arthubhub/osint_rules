@@ -1,0 +1,22 @@
+title: 'OSINT - Flying Dragon Eye: Uyghur Themed Threat Activity - url_request'
+id: 3ff6a6a9-8fa5-442e-aa4f-bc358bc33336
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5819948b-b170-4872-b8f6-5934950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.plugx
+detection:
+  attributes:
+    RequestUrl|contains:
+    - turkiyeuyghur.com
+    - freetibet.top
+    - russiauyghur.top
+    - tibettimes.top
+    - uygurinfo.com
+    - https://www.arbornetworks.com
+  condition: attributes

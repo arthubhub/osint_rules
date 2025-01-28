@@ -1,0 +1,27 @@
+title: ServHelper and FlawedGrace - New malware introduced by TA505 - url_request
+id: e6974609-1b88-419e-af98-caea174447c2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c38eb9d-a470-4466-8aa5-461802de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://offficebox.com
+    - http://officemysuppbox.com
+    - http://office365onlinehome.com
+    - https://rgoianrdfa.pw
+    - https://arhidsfderm.pw
+    - https://vesecase.com
+    - https://afgdhjkrm.pw
+    - http://asgaage.pw
+    - http://dedsolutions.bit
+    - http://sghee.pw
+    - https://www.proofpoint.com
+    - http://dedoshop.pw
+    - https://checksolutions.pw
+  condition: attributes

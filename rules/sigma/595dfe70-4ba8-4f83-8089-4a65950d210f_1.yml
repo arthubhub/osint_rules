@@ -1,0 +1,15 @@
+title: OSINT - New KONNI Campaign References North Korean Missile Capabilities - url_request
+id: a21ae915-8b50-476e-a4ac-23fe6b342297
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/595dfe70-4ba8-4f83-8089-4a65950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.talosintelligence.com
+  condition: attributes

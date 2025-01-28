@@ -1,0 +1,17 @@
+title: 'OSINT - FreeMilk: A Highly Targeted Spear Phishing Campaign - url_request'
+id: e94415ab-7495-461c-9567-b217c18b223c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d68cfe-723c-4b5e-b737-fbfd02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://researchcenter.paloaltonetworks.com
+    - http://old.jrchina.com
+    - discgolfglow.com
+  condition: attributes

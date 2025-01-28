@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-09-28 : Affid=3, offline, ".ykcol" : "Scan Data" - "Scan_54321.7z"
+  - process_creation'
+id: 48f3430c-a266-4fff-98a7-f354a7c841fc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59cdf517-df58-40ed-bb9f-47bb950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    md5:
+    - 3806953d0eda6981eb74f6203b418cd1
+    sha1:
+    - e94d31d1e3f9b12fbf10f909dae4aef40538c1d0
+    sha256:
+    - e8088c266a0e536325ff90fd5026a109deafe466d3f8004e6fe9cc83905eaf65
+  condition: attributes

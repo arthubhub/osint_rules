@@ -1,0 +1,24 @@
+title: Locky (2016-03-16) - dns_query
+id: 6b45f37d-ab01-4ae2-8734-593015d1c270
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e986fb-08c0-442c-a3f3-5390950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - vikasartsjodhpur.com
+    IpAddresses:
+    - 51.254.181.122
+    - 195.64.154.114
+    - 78.40.108.39
+    - 199.168.188.178
+    - 91.195.12.187
+    - 62.182.63.62
+    - 188.127.231.116
+    - 149.202.109.205
+  condition: attributes

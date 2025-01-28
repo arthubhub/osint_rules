@@ -1,0 +1,46 @@
+title: OSINT - DarkHydrus delivers new Trojan that can use Google Drive for C2 communications
+  - url_request
+id: f5cceb43-9815-400e-9161-8390018a0403
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c481c61-a718-4051-aacf-4f19950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.g0079
+- attack.group.roguerobin
+- attack.software.s0270
+- attack.software.roguerobin
+- attack.group.darkhydrus
+detection:
+  attributes:
+    RequestUrl|contains:
+    - phicdn.world
+    - corewindows.agency
+    - iecvlist-microsoft.live
+    - akamai.agency
+    - onecs-live.services
+    - sharepoint.agency
+    - akamaiedge.services
+    - t-msedge.world
+    - akamaiedge.live
+    - akdns.live
+    - skydrive.services
+    - https://unit42.paloaltonetworks.com
+    - asimov-win-microsoft.services
+    - 0ffice365.services
+    - skydrive.agency
+    - onedrive.agency
+    - edgekey.live
+    - 0nedrive.agency
+    - 0ffice365.life
+    - data-microsoft.services
+    - 0ffice365.agency
+    - akamaized.live
+    - nsatc.agency
+    - microsoftonline.agency
+    - azureedge.today
+  condition: attributes

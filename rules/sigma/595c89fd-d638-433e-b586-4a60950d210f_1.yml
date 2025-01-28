@@ -1,0 +1,15 @@
+title: "OSINT - Analysis of TeleBots\xE2\u20AC\u2122 cunning backdoor - url_request"
+id: 308a38a8-963e-4f2f-8496-31070098b245
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/595c89fd-d638-433e-b586-4a60950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.welivesecurity.com
+  condition: attributes

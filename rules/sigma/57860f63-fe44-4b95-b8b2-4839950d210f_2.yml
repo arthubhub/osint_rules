@@ -1,0 +1,66 @@
+title: Malspam 2016-07-13 (Locky campaign 'Profile') - dns_query
+id: 11676c0b-2295-4d53-bb00-0d1c50f8fb98
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57860f63-fe44-4b95-b8b2-4839950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - zakagimebel.ru
+    - omnitask.ba
+    - sreinvestment.com
+    - wacker-etm.ru
+    - choogo.net
+    - richard-scissors.com
+    - diablitos.no
+    - nicesound.biz
+    - hiramteran.com
+    - jonathonbelotti.com
+    - tvernedra.ru
+    - stylespiritdubai.com
+    - wineroutes.ru
+    - revengeofsultans.com
+    - jaimelukaz.xyz
+    - eskuvotervezo.hu
+    - kveldeil.no
+    - sindsul.com
+    - mphooseitutu.com
+    IpAddresses:
+    - 157.7.144.96
+    - 187.45.190.58
+    - 191.252.51.21
+    - 198.27.74.207
+    - 192.185.209.37
+    - 88.198.13.104
+    - 195.208.0.109
+    - 69.90.66.130
+    - 5.56.34.14
+    - 181.41.221.184
+    - 210.188.201.42
+    - 31.170.165.95
+    - 203.189.109.227
+    - 187.45.190.82
+    - 77.93.211.244
+    - 210.188.201.167
+    - 197.221.10.206
+    - 85.252.49.19
+    - 31.170.165.33
+    - 112.171.173.157
+    - 216.172.172.187
+    - 77.222.56.73
+    - 46.30.213.188
+    - 169.55.8.36
+    - 112.137.162.118
+    - 192.145.239.20
+    - 119.59.104.26
+    - 195.208.0.16
+    - 66.147.244.138
+    - 195.208.0.118
+    - 195.208.1.123
+    - 31.170.165.187
+  condition: attributes

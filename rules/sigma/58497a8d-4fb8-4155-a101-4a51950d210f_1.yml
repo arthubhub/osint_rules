@@ -1,0 +1,15 @@
+title: OSINT - Astrum Drops - url_request
+id: 7a2dd341-e62f-49a0-a48d-9a1da439b63f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58497a8d-4fb8-4155-a101-4a51950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+  condition: attributes

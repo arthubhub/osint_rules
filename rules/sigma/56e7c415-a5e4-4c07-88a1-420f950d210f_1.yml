@@ -1,0 +1,16 @@
+title: OSINT - Locky Ransomware Arrives via Email Attachment - url_request
+id: 131ceadb-9f44-4905-ac58-2da6c7e80dd5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e7c415-a5e4-4c07-88a1-420f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://olvikt.freedomain.thehost.com.ua
+    - https://blogs.mcafee.com
+  condition: attributes

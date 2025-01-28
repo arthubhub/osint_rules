@@ -1,0 +1,57 @@
+title: A Slice of 2017 Sofacy Activity by Kaspersky - url_request
+id: f94a0fba-688d-49e9-a4b3-3aef3fad19e0
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a8d2377-208c-4330-908f-4818950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.strontium
+- attack.group.sofacy
+detection:
+  attributes:
+    RequestUrl|contains:
+    - viters.org
+    - mvtband.net
+    - audiwheel.com
+    - postlkwarn.com
+    - analyticstest.net
+    - movieultimate.com
+    - lifeofmentalservice.com
+    - nethostnet.com
+    - webcdelivery.com
+    - securityprotectingcorp.com
+    - globalresearching.org
+    - kiteim.org
+    - appexsrv.net
+    - etcrem.net
+    - hostsvcnet.com
+    - meteost.com
+    - netcorpscanprotect.com
+    - sendmevideo.org
+    - adobe-flash-updates.org
+    - liveweatherview.com
+    - righttopregnantpower.com
+    - shcserv.com
+    - fastdataexchange.org
+    - mvband.net
+    - encoder-info.tk
+    - lvueton.com
+    - uniquecorpind.com
+    - adobeupgradeflash.com
+    - satellitedeluxpanorama.com
+    - fsportal.net
+    - wmdmediacodecs.com
+    - analyticsbar.org
+    - versiontask.com
+    - generalsecurityscan.com
+    - https://securelist.com
+    - online-reggi.com
+    - newfilmts.com
+    - treepastwillingmoment.com
+    - miropc.org
+    - ppcodecs.com
+  condition: attributes

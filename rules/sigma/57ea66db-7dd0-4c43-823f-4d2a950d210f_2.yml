@@ -1,0 +1,69 @@
+title: 'Malspam 2016-09-27 (.wsf in .zip) - campaign: "{integer}.zip" - dns_query'
+id: a4a4ca97-1a3e-4be3-bf1d-58e875294f7e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ea66db-7dd0-4c43-823f-4d2a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - homemadebakeryindonesia.com
+    - karacanalbum.com
+    - intardesign.com
+    - grijspaardt.nl
+    - peryskop.biz
+    - amsterdamrent.com
+    - brambory.net
+    - deadly-city.com
+    - dashandling.com
+    - speaklifegreetings.com
+    - cg3dstudio.com
+    - wssunhui.com
+    - cimetieremontroyal.com
+    - fixturesexpress.com
+    - idealuze.com
+    - usedtextilemachinerylive.com
+    - johnlesterart.com
+    - ccaglobal.org
+    - minoritycounselor.com
+    - bezdeals.com
+    - dealerjoin.com
+    - profsonstage.com
+    - maxtherm.net
+    - gouri-gouri.com
+    - mediaalias.com
+    - upav.org
+    - nerosk.ru
+    IpAddresses:
+    - 23.227.132.71
+    - 160.153.32.93
+    - 96.30.36.212
+    - 103.6.196.13
+    - 109.203.104.133
+    - 174.127.105.121
+    - 217.195.193.38
+    - 122.114.108.176
+    - 200.122.128.189
+    - 41.220.216.254
+    - 185.119.173.48
+    - 81.0.217.3
+    - 207.32.188.45
+    - 173.255.131.109
+    - 46.19.218.68
+    - 216.239.140.24
+    - 75.102.25.148
+    - 64.15.152.254
+    - 69.90.163.117
+    - 143.95.33.61
+    - 45.32.233.222
+    - 202.150.213.222
+    - 216.144.240.190
+    - 46.183.167.29
+    - 92.43.113.68
+    - 77.245.155.239
+    - 151.80.185.209
+  condition: attributes

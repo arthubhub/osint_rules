@@ -1,0 +1,16 @@
+title: OSINT - Chinese-language Ransomware Makes An Appearance - url_request
+id: 3cb01125-8da6-4f45-9caa-034c7b083231
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5734dc40-a4f0-45a6-a9e2-4494950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://eqlc75eumpb77ced.onion
+    - http://blog.trendmicro.com
+  condition: attributes

@@ -1,0 +1,20 @@
+title: OSINT - PLEAD Downloader Used by BlackTech - url_request
+id: 00dd6b9c-6572-47a0-844b-68e67be83a95
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b1a247e-2ca0-4132-9210-4b5c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.plead_downloader
+detection:
+  object_9447:
+    RequestUrl|contains:
+    - https://mobile.twitter.com
+  attributes:
+    RequestUrl|contains:
+    - https://blog.jpcert.or.jp
+  condition: 1 of object_* or attributes

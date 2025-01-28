@@ -1,0 +1,43 @@
+title: OSINT - DarkHydrus is launching attacks to targets in Middle East - url_request
+id: fc859b5a-d98e-4867-af43-f3c184a106ee
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c3862bd-cbb4-4373-854a-4507950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.darkhydrus
+detection:
+  object_17582:
+    RequestUrl|contains:
+    - https://mobile.twitter.com
+  attributes:
+    RequestUrl|contains:
+    - phicdn.world
+    - corewindows.agency
+    - akamai.agency
+    - sharepoint.agency
+    - akamaiedge.services
+    - t-msedge.world
+    - akamaiedge.live
+    - microsoftonline.services
+    - akdns.live
+    - skydrive.services
+    - 0ffice365.services
+    - cloudfronts.services
+    - skydrive.agency
+    - onedrive.agency
+    - microsoftonline.agency
+    - edgekey.live
+    - akadns.live
+    - 0nedrive.agency
+    - 0ffice365.life
+    - akamaized.live
+    - trafficmanager.live
+    - nsatc.agency
+    - hotmai1.com
+    - azureedge.today
+  condition: 1 of object_* or attributes

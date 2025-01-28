@@ -1,0 +1,20 @@
+title: OSINT The Ghost Dragon by Cylance - url_request
+id: 88516008-65f5-44d8-988f-52da43416cf7
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/571bd702-031c-400b-a851-43ce02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - winupdate.net
+    - https://blog.cylance.com
+    - searchhappynews.com
+    - swgabeg.com
+    - fhtd.info
+    - http://info.winupdate.net
+  condition: attributes

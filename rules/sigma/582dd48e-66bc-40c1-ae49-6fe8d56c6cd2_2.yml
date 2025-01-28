@@ -1,0 +1,30 @@
+title: "It\u2019s Parliamentary: KeyBoy and the targeting of the Tibetan Community\
+  \ - dns_query"
+id: 05a97ef3-1600-446a-b273-d340ca4b8c55
+description: edit this field when analysing or editing the rule - reported by "CiviCERT"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582dd48e-66bc-40c1-ae49-6fe8d56c6cd2.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.keyboy
+detection:
+  attributes:
+    QueryName|contains:
+    - www.about.jkub.com
+    - tibetvoices.com
+    - www.eleven.mypop3.org
+    - www.backus.myftp.name
+    IpAddresses:
+    - 103.242.134.243
+    - 157.7.84.81
+    - 192.241.149.43
+    - 45.125.12.147
+    - 116.193.154.69
+    - 45.32.47.148
+    - 112.10.117.47
+    - 103.40.102.233
+  condition: attributes

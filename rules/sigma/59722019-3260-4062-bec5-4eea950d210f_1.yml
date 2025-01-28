@@ -1,0 +1,15 @@
+title: 'OSINT - Linux.Bew: un backdoor para el minado de Bitcoin - url_request'
+id: a723ca8f-24ef-4331-b207-cfe60c9fa574
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59722019-3260-4062-bec5-4eea950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.securityartwork.es
+  condition: attributes

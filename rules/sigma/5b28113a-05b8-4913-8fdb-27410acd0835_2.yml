@@ -1,0 +1,30 @@
+title: bank phishing domains - dns_query
+id: d074ee89-5e4e-47dc-b0a1-0d9c0c5f661a
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b28113a-05b8-4913-8fdb-27410acd0835.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - 1infomsgmanagealert.com
+    - freemobilee-fr.com
+    - bancorestadoempresas.com
+    - bancorestadorempresas.com
+    - securemsgadmincip.com
+    - successfull-paypal.com
+    - cipinspectinfoadmin.com
+    - secur-appl.com
+    - freemobil-fr.com
+    - servicesystem-deviceappleid.com
+    - comm2mobileauth.com
+    - craigslist.systems
+    - fr-freemobil.com
+    - customregardingasap.com
+    - homeappleinc.com
+  condition: attributes

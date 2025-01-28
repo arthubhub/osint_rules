@@ -1,0 +1,20 @@
+title: IoT malware - Gafgyt.Gen28 (active) - 20190220 - 20190222 - dns_query
+id: dedad069-c6c3-44fc-9621-28e9e4a3b391
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c6d21e5-bb60-47b7-b892-42e6950d2111.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.gafgyt
+- attack.software.bashlite
+- attack.group.bashlite
+detection:
+  attributes:
+    IpAddresses:
+    - 185.135.82.116
+    - 185.135.80.163
+  condition: attributes

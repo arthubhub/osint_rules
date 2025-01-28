@@ -1,0 +1,20 @@
+title: OSINT -  Protecting customers from a private-sector offensive actor using 0-day
+  exploits and DevilsTongue malware - process_creation
+id: 044dac8e-caa8-47f2-8b81-f91748a63e5e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/21daf42e-7045-461c-8656-ff9894186820.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_9306:
+    md5:
+    - a0e2223868b6133c5712ba5ed20c3e8a
+    sha1:
+    - 17614fdee3b89272e99758983b99111cbb1b312c
+    sha256:
+    - c299063e3eae8ddc15839767e83b9808fd43418dc5a1af7e4f44b97ba53fbd3d
+  condition: 1 of object_*

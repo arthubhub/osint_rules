@@ -1,0 +1,38 @@
+title: 'MISSING LINK: Tibetan Groups Targeted with Mobile Exploits - url_request'
+id: 831cf802-8128-4cf0-816f-1c9e069949f4
+description: edit this field when analysing or editing the rule - reported by "citizenlab"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bec8d43-b990-4129-a9f4-45d08064ab0b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - mailcontactanalysis.online
+    - walkingnote.online
+    - polarismail.services
+    - msap.services
+    - http://news.cmitcsubs.tk
+    - https://www.energy-mail.org
+    - antmoving.online
+    - energy-mail.org
+    - izelense.com
+    - http://bit.ly
+    - https://bit.ly
+    - www.energy-mail.org
+    - http://msap.services
+    - www.msap.services
+    - beemail.online
+    - bf.mk
+    - http://suo.im
+    - mailnotes.online
+    - http://www.msap.services
+    - http://45.76.149.154
+    - gmailapp.me
+    - http://43.251.16.87
+    - rf.mk
+    - mailanalysis.services
+  condition: attributes

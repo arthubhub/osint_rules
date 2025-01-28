@@ -1,0 +1,19 @@
+title: OSINT - NANHAISHU RATing the South China Sea - dns_query
+id: 5c8cf52e-8bac-4241-b3bb-488538200cad
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57a33020-bc70-4f69-96f9-118b950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - eholidays.mooo.com
+    - presentation.twilightparadox.com
+    - humans.mooo.info
+    - mintty.ignorelist.com
+    - mines.port0.org
+  condition: attributes

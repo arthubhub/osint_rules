@@ -1,0 +1,28 @@
+title: "OSINT ScanBox framework \xE2\u20AC\u201C who\xE2\u20AC\u2122s affected, and\
+  \ who\xE2\u20AC\u2122s using it?  by PWC - process_creation"
+id: d103bb89-b1c8-4369-b0aa-914d9783f917
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/546bba61-69d0-4c0e-8066-4942950d210b.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 409ae279d7c44b11156318848ddb4a3f
+    - 9d1f8822b92ad3224db1c9ec89b529ca
+    - 9cf5523da799277a4d40881199eb8325
+    - ef498ea09bf51b002fc7eb3dfd0d19d3
+    - be3a3daa7d0d11df2380d3401696624a
+    sha1:
+    - 809959f390d5a49c8999ad6fff27fdc92ff1b2b0
+    - e8a8ffe39040fe36e95217b4e4f1316177d675ed
+    - f1890cc9d6dc84021426834063394539414f68d8
+    sha256:
+    - 4639c30b3666cb11b3927d5579790a88bff68e8137f18241f4693e0d4539c608
+    - ab58b6aa7dcc25d8f6e4b70a24e0ccede0d5f6129df02a9e61293c1d7d7640a2
+    - 3112420afeb829a575ba46512314c0fab2fc80870c153de35cde4d3140a2dd26
+  condition: attributes

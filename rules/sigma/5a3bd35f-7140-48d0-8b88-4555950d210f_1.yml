@@ -1,0 +1,23 @@
+title: OSINT - Locky Ransomware Pushed Alongside FakeGlobe in Upgraded Spam Campaigns
+  - url_request
+id: 25963d8c-0ef5-4bed-8711-dc9b10721b5b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a3bd35f-7140-48d0-8b88-4555950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://newhostrcm.top
+    - http://blog.trendmicro.com
+    - http://qolseaboomdog.top
+  condition: attributes

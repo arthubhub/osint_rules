@@ -1,0 +1,36 @@
+title: "OSINT - Dans l\xE2\u20AC\u2122\xC5\u201Cil de notre CyberSOC : la campagne\
+  \ malspam Aggah diversifie ses outils - dns_query"
+id: 0722f2bc-7cfd-4b5a-bfba-0c5c23f391d2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5dbae98e-7974-4480-86db-44be950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1053
+- attack.t1056
+- attack.t1106
+- attack.t1140
+- attack.t1064
+- attack.t1055
+- attack.t1065
+- attack.t1059
+- attack.t1060
+- attack.t1170
+- attack.t1113
+- attack.t1081
+- attack.t1086
+detection:
+  object_9613:
+    IpAddresses:
+    - 216.170.126.107
+  object_9640:
+    IpAddresses:
+    - 35.226.30.217
+  object_9641:
+    IpAddresses:
+    - 88.150.221.123
+  condition: 1 of object_*

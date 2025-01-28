@@ -1,0 +1,26 @@
+title: OSINT - Turla renews its arsenal with Topinambour - process_creation
+id: e501002b-b930-42ae-aed4-ebc814bd0b58
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d2deea3-eea0-41ea-91bf-4a8b950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.turla
+- attack.group.turla
+detection:
+  attributes:
+    md5:
+    - 47870ff98164155f088062c95c448783
+    - 6acf316fed472300fa50db54fa6f3cbc
+    - 2c1e73da56f4da619c4c53b521404874
+    - 37dc2eb8ee56aeba4dbd4cf46f87ae9a
+    - d967d96ea5d0962e08844d140c2874e0
+    - 9573f452004b16eabd20fa65a6c2c1c4
+    - 710f729ab26f058f2dbf08664edb3986
+    - a80bbd753c07512b31ab04bd5e3324c2
+    - 3772a34d1b731697e2879bef54967332
+  condition: attributes

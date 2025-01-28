@@ -1,0 +1,97 @@
+title: OSINT - Malicious document targets Vietnamese officials - process_creation
+id: c79d32b9-e015-48c5-9cd1-d3c0296f35f1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b60b046-c0c8-49ce-aa97-437a02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.hellsing
+detection:
+  object_9549:
+    md5:
+    - 56c52e6a3dede484b44d1dbfed8a92f0
+    sha1:
+    - 505bd0f307da1efe9785044fa7dfbe655da231a5
+    sha256:
+    - 9f5da7524817736cd85d87dae93fdbe478385baac1c0aa3102b6ad50d7e5e368
+  object_9551:
+    md5:
+    - d64161db327f4ec91d458a00293c62b0
+    sha1:
+    - 364570ca28e004bed1d9d4e5853befd77b88465f
+    sha256:
+    - 42162c495e835cdf28670661a53d47d12255d9c791c1c5653673b25fb587ffed
+  object_9553:
+    md5:
+    - 62944e26b36b1dcace429ae26ba66164
+    sha1:
+    - 2616da1697f7c764ee7fb558887a6a3279861fac
+    sha256:
+    - f9ebf6aeb3f0fb0c29bd8f3d652476cd1fe8bd9a0c11cb15c43de33bbce0bf68
+  object_9555:
+    sha256:
+    - 597c0c6f397eefb06155abdf5aa9a7476c977c44ef8bd9575b01359e96273486
+  object_9556:
+    sha256:
+    - 11f38b6a69978dad95c9b1479db9a8729ca57329855998bd41befc364657d654
+  object_9557:
+    sha256:
+    - f9ebf6aeb3f0fb0c29bd8f3d652476cd1fe8bd9a0c11cb15c43de33bbce0bf68
+  object_9558:
+    sha256:
+    - b70069e1c8e829bfd7090ba3dfbf0e256fc7dfcefc6acafb3b53abcf2caa2253
+  object_9559:
+    sha256:
+    - 77361b1ca09d6857d68cea052a0bb857e03d776d3e1943897315a80a19f20fc2
+  object_9560:
+    sha256:
+    - 9fba998ab2c1b7fec39da9817b27768ba7892c0613c4be7c525989161981d2e2
+  object_9561:
+    sha256:
+    - 9d239ddd4c925d14e00b5a95827e9191bfda7d59858f141f6f5dcc52329838f0
+  object_9562:
+    sha256:
+    - 087d8bee1db61273a7cd533d52b63265d3a8a8b897526d7849c48bcdba4b22ec
+  object_9563:
+    sha256:
+    - f9ebf6aeb3f0fb0c29bd8f3d652476cd1fe8bd9a0c11cb15c43de33bbce0bf68
+  object_9564:
+    md5:
+    - 88d667cc01c4d8ee32e9de116f3bfdeb
+    sha1:
+    - 5ca26b6eae6bdf038c4ec61b174a3825bcde95fd
+    sha256:
+    - 597c0c6f397eefb06155abdf5aa9a7476c977c44ef8bd9575b01359e96273486
+  object_9566:
+    md5:
+    - 9c7297f032b5c1cfbc2d819815f72f80
+    sha1:
+    - f2bad341629f6e4397158e5a66a94e5f5aea5d48
+    sha256:
+    - b70069e1c8e829bfd7090ba3dfbf0e256fc7dfcefc6acafb3b53abcf2caa2253
+  object_9568:
+    md5:
+    - bd19302a58133803622e119080a5ceda
+    sha1:
+    - 2c0b6a27dd227d18b312c4a42b3e3fbc233ae996
+    sha256:
+    - 77361b1ca09d6857d68cea052a0bb857e03d776d3e1943897315a80a19f20fc2
+  object_9570:
+    md5:
+    - 9ca6d45643f89bf233f08b7d74910346
+    sha1:
+    - 16163b8182d5d55a75f87c10eacb9240fa2de9af
+    sha256:
+    - 9d239ddd4c925d14e00b5a95827e9191bfda7d59858f141f6f5dcc52329838f0
+  attributes:
+    sha256:
+    - dd89d33e275e99e288e4c50bdafbb4584a9565189491af0a66f8a506eaf53859
+    - 9f5da7524817736cd85d87dae93fdbe478385baac1c0aa3102b6ad50d7e5e368
+    - f9ebf6aeb3f0fb0c29bd8f3d652476cd1fe8bd9a0c11cb15c43de33bbce0bf68
+    - 2c60d4312e4416745e56048ee35e694a79e1bc77e7e4d0b5811e64c84a72d2d7
+    - 42162c495e835cdf28670661a53d47d12255d9c791c1c5653673b25fb587ffed
+  condition: 1 of object_* or attributes

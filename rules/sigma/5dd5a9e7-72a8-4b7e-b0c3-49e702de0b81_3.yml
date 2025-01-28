@@ -1,0 +1,23 @@
+title: OSINT - Trojan.ElectrumDoSMiner -  a Trojan responsible for the denial of service
+  attacks against Electrum bitcoin wallets. - process_creation
+id: 890730a3-4eed-4116-9cfb-6338a53f70f9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5dd5a9e7-72a8-4b7e-b0c3-49e702de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_9680:
+    md5:
+    - 1e98d810141f8e0fab4630b7302b2af5
+    sha1:
+    - 597cecc7dcd3c2f01d094a05160a3423565c18b6
+    sha256:
+    - 48dcb183ff97a05fd3e466f76f385543480abb62c9adcae24d1bdbbfc26f9e5a
+  attributes:
+    sha256:
+    - 48dcb183ff97a05fd3e466f76f385543480abb62c9adcae24d1bdbbfc26f9e5a
+  condition: 1 of object_* or attributes

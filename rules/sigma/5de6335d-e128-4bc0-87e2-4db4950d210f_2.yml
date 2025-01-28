@@ -1,0 +1,93 @@
+title: OSINT -  More than a Dozen Obfuscated APT33 Botnets Used for Extreme Narrow
+  Targeting - dns_query
+id: e3b1278e-6337-478d-a263-fbe069665fb0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5de6335d-e128-4bc0-87e2-4db4950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.magnallium
+- attack.group.apt33
+- attack.group.g0064
+detection:
+  object_11315:
+    IpAddresses:
+    - 5.135.120.57
+  object_11316:
+    IpAddresses:
+    - 5.135.199.25
+  object_11317:
+    IpAddresses:
+    - 31.7.62.48
+  object_11318:
+    IpAddresses:
+    - 51.77.11.46
+  object_11319:
+    IpAddresses:
+    - 54.36.73.108
+  object_11320:
+    IpAddresses:
+    - 54.37.48.172
+  object_11321:
+    IpAddresses:
+    - 54.38.124.150
+  object_11322:
+    IpAddresses:
+    - 88.150.221.107
+  object_11323:
+    IpAddresses:
+    - 91.134.203.59
+  object_11324:
+    IpAddresses:
+    - 109.169.89.103
+  object_11325:
+    IpAddresses:
+    - 109.200.24.114
+  object_11326:
+    IpAddresses:
+    - 137.74.80.220
+  object_11327:
+    IpAddresses:
+    - 137.74.157.84
+  object_11328:
+    IpAddresses:
+    - 185.122.56.232
+  object_11329:
+    IpAddresses:
+    - 185.125.204.57
+  object_11330:
+    IpAddresses:
+    - 185.175.138.173
+  object_11331:
+    IpAddresses:
+    - 188.165.119.138
+  object_11332:
+    IpAddresses:
+    - 193.70.71.112
+  object_11333:
+    IpAddresses:
+    - 195.154.41.72
+  object_11334:
+    IpAddresses:
+    - 213.32.113.159
+  object_11335:
+    IpAddresses:
+    - 216.244.93.137
+  attributes:
+    QueryName|contains:
+    - simsoshop.com
+    - update-symantec.com
+    - service-norton.com
+    - qualitweb.com
+    - service-explorer.com
+    - zeverco.com
+    - suncocity.com
+    - zandelshop.com
+    - service-essential.com
+    - oorgans.com
+    - service-eset.com
+  condition: 1 of object_* or attributes

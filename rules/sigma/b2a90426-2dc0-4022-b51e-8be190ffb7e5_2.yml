@@ -1,0 +1,34 @@
+title: 'Operation Cobalt Whisper: Threat Actor Targets Multiple Industries Across
+  Hong Kong and Pakistan. - dns_query'
+id: 0d748ce5-21fc-4767-87ce-14ac03e89450
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/b2a90426-2dc0-4022-b51e-8be190ffb7e5.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1055.002
+- attack.t1204.002
+- attack.t1033
+- attack.t1053.005
+- attack.t1071.001
+- attack.t1059.005
+- attack.t1566.001
+detection:
+  object_17296:
+    IpAddresses:
+    - 139.155.190.84
+  attributes:
+    IpAddresses:
+    - 106.55.77.71
+    - 119.45.2.56
+    - 119.45.67.241
+    - 139.155.190.198
+    - 129.204.98.221
+    - 139.155.190.84
+    - 119.45.2.30
+    - 43.137.69.76
+  condition: 1 of object_* or attributes

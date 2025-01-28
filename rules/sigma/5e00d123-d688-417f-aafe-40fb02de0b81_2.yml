@@ -1,0 +1,15 @@
+title: OSINT - Reversing a real-world 249 bytes backdoor! - dns_query
+id: 860c7bb6-2546-4fd4-8aaf-01ce4ab549fd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e00d123-d688-417f-aafe-40fb02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  object_9436:
+    IpAddresses:
+    - 104.248.237.194
+  condition: 1 of object_*

@@ -1,0 +1,203 @@
+title: "OSINT - Unraveling SloppyLemming\u2019s Operations Across South Asia - dns_query"
+id: f8a1585f-d6d0-4841-ae2b-51a885c58e9a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/1cccd5d8-5d52-4610-b8b7-7bbebd0d6d7b.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.sloppylemming
+detection:
+  object_11070:
+    IpAddresses:
+    - 47.83.23.246
+  object_11071:
+    QueryName|contains:
+    - crec-bd.site
+    IpAddresses:
+    - 47.83.23.246
+  object_11072:
+    QueryName|contains:
+    - jammycanonicalupdates.cloud
+    IpAddresses:
+    - 159.65.6.251
+  object_11073:
+    IpAddresses:
+    - 139.59.109.136
+  object_11074:
+    QueryName|contains:
+    - maldevfudding.com
+    IpAddresses:
+    - 37.27.41.167
+  object_11075:
+    IpAddresses:
+    - 47.237.105.113
+  object_11076:
+    IpAddresses:
+    - 185.249.198.218
+  object_11077:
+    QueryName|contains:
+    - adobefileshare.com
+    IpAddresses:
+    - 185.249.198.218
+  object_11078:
+    QueryName|contains:
+    - quran-books.store
+    IpAddresses:
+    - 8.222.235.145
+  object_11079:
+    QueryName|contains:
+    - aljazeerak.online
+    IpAddresses:
+    - 8.219.169.226
+  object_11080:
+    IpAddresses:
+    - 47.237.20.135
+  object_11081:
+    IpAddresses:
+    - 47.237.20.135
+  object_11082:
+    IpAddresses:
+    - 47.245.56.29
+  object_11083:
+    QueryName|contains:
+    - helpdesk-lab.site
+    IpAddresses:
+    - 47.237.20.201
+  object_11084:
+    IpAddresses:
+    - 47.237.25.198
+  object_11085:
+    IpAddresses:
+    - 47.245.2.77
+  object_11086:
+    IpAddresses:
+    - 47.237.25.198
+  object_11087:
+    QueryName|contains:
+    - hit-pk.org
+    IpAddresses:
+    - 208.85.22.252
+  object_11088:
+    IpAddresses:
+    - 8.219.114.124
+  object_11089:
+    IpAddresses:
+    - 47.236.65.190
+  object_11090:
+    QueryName|contains:
+    - paknavy-pk.org
+    IpAddresses:
+    - 47.236.65.190
+  object_11091:
+    IpAddresses:
+    - 47.245.114.11
+  object_11092:
+    IpAddresses:
+    - 47.236.65.190
+  object_11093:
+    QueryName|contains:
+    - 168-gov.info
+    IpAddresses:
+    - 47.76.61.241
+  object_11094:
+    IpAddresses:
+    - 47.76.61.241
+  object_11095:
+    IpAddresses:
+    - 149.28.153.250
+  object_11096:
+    IpAddresses:
+    - 47.245.42.208
+  object_11097:
+    IpAddresses:
+    - 47.74.84.168
+  object_11098:
+    IpAddresses:
+    - 47.74.87.155
+  object_11099:
+    IpAddresses:
+    - 47.74.87.155
+  object_11100:
+    IpAddresses:
+    - 159.253.120.25
+  object_11101:
+    IpAddresses:
+    - 159.253.120.25
+  object_11102:
+    IpAddresses:
+    - 159.253.120.25
+  object_11103:
+    IpAddresses:
+    - 159.253.120.25
+  object_11104:
+    IpAddresses:
+    - 159.253.120.25
+  object_11105:
+    IpAddresses:
+    - 159.253.120.25
+  object_11106:
+    IpAddresses:
+    - 159.253.120.25
+  object_11107:
+    IpAddresses:
+    - 159.253.120.25
+  object_11108:
+    QueryName|contains:
+    - opensecurity-legacy.com
+    IpAddresses:
+    - 159.253.120.25
+  object_11109:
+    IpAddresses:
+    - 207.148.73.145
+  object_11110:
+    IpAddresses:
+    - 207.148.73.145
+  object_11111:
+    IpAddresses:
+    - 207.148.73.145
+  object_11112:
+    QueryName|contains:
+    - itsupport-gov.com
+    IpAddresses:
+    - 47.254.229.56
+  object_11113:
+    QueryName|contains:
+    - updpcn.online
+    IpAddresses:
+    - 47.76.181.76
+  object_11114:
+    IpAddresses:
+    - 47.74.84.168
+  object_11115:
+    IpAddresses:
+    - 47.245.126.218
+  object_11116:
+    IpAddresses:
+    - 47.74.87.155
+  object_11117:
+    IpAddresses:
+    - 142.93.139.164
+  object_11118:
+    IpAddresses:
+    - 45.137.116.8
+  object_11119:
+    IpAddresses:
+    - 45.137.116.8
+  object_11120:
+    QueryName|contains:
+    - cflayerprotection.com
+    IpAddresses:
+    - 45.137.116.8
+  object_11121:
+    IpAddresses:
+    - 45.137.116.8
+  object_11122:
+    QueryName|contains:
+    - cloudlflares.com
+    IpAddresses:
+    - 45.137.116.8
+  condition: 1 of object_*

@@ -1,0 +1,78 @@
+title: OSINT - Lookout Discovers Two Russian Android Spyware Families from Gamaredon
+  APT - url_request
+id: 46461eca-08a3-4079-8cbf-3ea277c9ac17
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/7cf90d8d-61f0-4e36-8083-15f66e3556ad.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.gamaredon_group
+detection:
+  object_10850:
+    RequestUrl|contains:
+    - https://www.lookout.com
+  attributes:
+    RequestUrl|contains:
+    - ollymap.pw
+    - militrar.ru
+    - witchdors.ru
+    - skymagra.ru
+    - goos.pw
+    - vilitord.ru
+    - makdart.ru
+    - lopert0.ru
+    - kramatl.ru
+    - kaelos.ru
+    - ibragim0.ru
+    - pistons0.ru
+    - milashto.ru
+    - forensit.ru
+    - miltras.ru
+    - vezirgo.ru
+    - hersopa.ru
+    - detroit0.ru
+    - exportan.ru
+    - cicind.ru
+    - ziyaft.ru
+    - bilodon.ru
+    - hornets0.ru
+    - baloglandi.ru
+    - intigm.ru
+    - tilofol.ru
+    - chromat0.ru
+    - molotras.ru
+    - volnaps.ru
+    - drivento.ru
+    - antropa.ru
+    - lugarto.ru
+    - aghsinsa.ru
+    - quyenz0.ru
+    - minhzo.ru
+    - kistrop0n.ru
+    - bartop1.ru
+    - wleak.pw
+    - hydrargyrumo.ru
+    - vasifgo.ru
+    - flashik0.ru
+    - cavaliers0.ru
+    - vipertos.ru
+    - dowrang.ru
+    - snipotas.ru
+    - plumbum0.ru
+    - sabipro.ru
+    - gayad0.ru
+    - bucks0.ru
+    - bishotent.ru
+    - savit1.ru
+    - hitrovana.ru
+    - silentar.ru
+    - batterlas.ru
+    - phoenix0.ru
+    - rakinal.ru
+    - ihsnal.ru
+    - bashardi.ru
+  condition: 1 of object_* or attributes

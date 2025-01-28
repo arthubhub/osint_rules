@@ -1,0 +1,65 @@
+title: 'Malspam 2016-08-24 (.js in .zip) - campaign: "Statement" - dns_query'
+id: b214dcd6-c75c-47e4-883b-6ab90d636344
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57bd7251-390c-4ee2-accd-4f69950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - bormanns-wetter.de
+    - brothermalw.ws
+    - biopocasie.sk
+    - direttaauto.com
+    - selectron.ch
+    - wangmewang.name
+    - rejoincomp2.in
+    - vgweb.ru
+    - djprestige.net
+    - deananddennys.com
+    IpAddresses:
+    - 213.217.149.4
+    - 162.210.101.97
+    - 208.71.106.61
+    - 209.235.144.9
+    - 162.210.101.98
+    - 95.211.80.4
+    - 80.150.6.138
+    - 90.156.201.38
+    - 84.2.38.70
+    - 95.211.144.65
+    - 213.229.74.92
+    - 190.160.0.137
+    - 82.197.131.109
+    - 193.109.184.81
+    - 213.180.150.17
+    - 208.71.106.48
+    - 162.210.101.99
+    - 92.240.253.2
+    - 64.29.151.221
+    - 62.14.3.195
+    - 62.149.142.134
+    - 72.52.99.36
+    - 202.67.211.56
+    - 212.40.179.104
+    - 195.67.82.205
+    - 91.223.89.200
+    - 208.71.106.45
+    - 90.156.201.41
+    - 208.71.106.43
+    - 213.205.40.169
+    - 91.207.44.3
+    - 208.71.106.49
+    - 192.254.232.12
+    - 90.156.201.19
+    - 85.248.42.103
+    - 89.110.146.99
+    - 61.47.40.35
+    - 195.130.132.84
+    - 90.156.201.56
+    - 217.97.216.17
+  condition: attributes

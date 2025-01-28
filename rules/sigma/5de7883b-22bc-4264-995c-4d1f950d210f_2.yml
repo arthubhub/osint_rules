@@ -1,0 +1,30 @@
+title: Malicious PyPI packages - process_creation
+id: e7d6e162-b169-4fa8-85f3-8efa74a7c4c2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5de7883b-22bc-4264-995c-4d1f950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1011
+- attack.t1005
+- attack.t1195
+detection:
+  object_9940:
+    md5:
+    - 132fafca98f58aa3c39b2b6f168c5a9b
+    sha1:
+    - 47bddd8311cc683a401eacce51c5f7df49170fc7
+    sha256:
+    - e8ec763a658519d9a11284f4e000f4be41e86b5c726904b6d178824eefd738da
+  object_9941:
+    md5:
+    - a5ce34545c5b06e98f60c93c0db14be5
+    sha1:
+    - 015fb194428fe47cdf3a2c8eefc5b6518ed1a135
+    sha256:
+    - e4c356b41fe198da888eb9e4964b92883384d3a7070c51d622911f2b7b5947a9
+  condition: 1 of object_*

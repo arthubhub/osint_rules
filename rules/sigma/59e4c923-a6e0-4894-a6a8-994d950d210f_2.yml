@@ -1,0 +1,18 @@
+title: OSINT - BlackOasis APT and new targeted attacks leveraging zero-day exploit
+  - dns_query
+id: 1ce95137-a868-4529-b66f-951fe9698be5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59e4c923-a6e0-4894-a6a8-994d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.finspy
+detection:
+  attributes:
+    IpAddresses:
+    - 89.45.67.107
+  condition: attributes

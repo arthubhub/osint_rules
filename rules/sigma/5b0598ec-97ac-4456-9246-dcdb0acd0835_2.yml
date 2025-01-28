@@ -1,0 +1,30 @@
+title: 'Talos Blog: VPNFilter - dns_query'
+id: 7bbedf12-84ed-4c71-a10f-d935f2dea037
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b0598ec-97ac-4456-9246-dcdb0acd0835.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - toknowall.com
+    IpAddresses:
+    - 91.214.203.144
+    - 94.185.80.82
+    - 62.210.180.229
+    - 91.121.109.209
+    - 217.79.179.14
+    - 217.12.202.40
+    - 82.118.242.124
+    - 91.200.13.76
+    - 195.154.180.60
+    - 46.151.209.33
+    - 5.149.250.54
+    - 94.242.222.68
+    - 95.211.198.231
+  condition: attributes

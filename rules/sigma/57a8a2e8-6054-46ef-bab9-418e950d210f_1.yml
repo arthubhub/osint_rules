@@ -1,0 +1,19 @@
+title: 'OSINT - ProjectSauron: top level cyber-espionage platform covertly extracts
+  encrypted government comms - url_request'
+id: a19c1db1-9b28-4ab4-b645-2ad72ccdbf80
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57a8a2e8-6054-46ef-bab9-418e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+    - bikessport.com
+    - https://kas.pr
+    - rapidcomments.com
+  condition: attributes

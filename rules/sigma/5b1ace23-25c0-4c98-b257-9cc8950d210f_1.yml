@@ -1,0 +1,16 @@
+title: 'OSINT - InvisiMole: surprisingly equipped spyware, undercover since 2013 -
+  url_request'
+id: 7617a796-446d-4091-9a54-2c5093b44165
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b1ace23-25c0-4c98-b257-9cc8950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.welivesecurity.com
+  condition: attributes

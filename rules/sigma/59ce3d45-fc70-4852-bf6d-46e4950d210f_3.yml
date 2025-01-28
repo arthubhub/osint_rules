@@ -1,0 +1,24 @@
+title: 'M2M -  Locky Affid=3/Trickbot "mac1" 2017-09-29 : "Voice Message from ..."
+  - "/voicemsg.html" links - process_creation'
+id: b18ae46a-1cbe-4f00-bcb9-e5f827af71bc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ce3d45-fc70-4852-bf6d-46e4950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.locky
+- attack.software.locky
+- attack.software.trick_bot
+detection:
+  attributes:
+    md5:
+    - 28770e17d1a6bffcaac19a1074b4c2b5
+    sha1:
+    - f78e3e65207d0756e51ef17cdadd2692dc1b85e5
+    sha256:
+    - 006d0ab2844e4df90109fc769cda49fa6eb8e7e033f8e81b60c1e345fb346560
+  condition: attributes

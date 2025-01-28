@@ -1,0 +1,48 @@
+title: OSINT - RTF files for Hancitor utilize exploit for CVE-2017-11882 - process_creation
+id: c48256a5-7377-480c-815e-c92cab60f33d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a69fdaf-0350-429a-b961-062f02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.hancitor
+detection:
+  object_9792:
+    md5:
+    - 773937dec274c21dc962ad3f8d37c08f
+    sha1:
+    - 71b00ac82d7e6ed48197c21d62bf55ab8e6535d6
+    sha256:
+    - 2c506742267dd9d41dc62f2614f6306458da185230fb46cb467c98a8f48317a4
+  object_9794:
+    md5:
+    - 17292469799cbbba73122ab21a292ddb
+    sha1:
+    - 8c3030f403e00e680de749ccdb0628724c5335dd
+    sha256:
+    - 42b02d621696ec33e9140fedcf8b48695059595f9469dbf28daf4667ac0d214f
+  object_9796:
+    md5:
+    - 800edbb09259000697b201ff25d54bd5
+    sha1:
+    - 09e6215f684b5ea268d55d5fe1c0ccddc4efa685
+    sha256:
+    - 8418887655f69ab5a61915bad2af633462760b128d38f53911da020d70e4862e
+  object_9798:
+    md5:
+    - f03bea1ab5ce09c23c147f838b4e8b8d
+    sha1:
+    - 7d7c28b3a679e5763ff1b71b4f0a28394b3b2281
+    sha256:
+    - 6dcbf652b96a7aea16d0c2e72186173d9345f722c9592e62820bcfe477b2b297
+  attributes:
+    sha256:
+    - 2c506742267dd9d41dc62f2614f6306458da185230fb46cb467c98a8f48317a4
+    - 8418887655f69ab5a61915bad2af633462760b128d38f53911da020d70e4862e
+    - 6dcbf652b96a7aea16d0c2e72186173d9345f722c9592e62820bcfe477b2b297
+    - 42b02d621696ec33e9140fedcf8b48695059595f9469dbf28daf4667ac0d214f
+  condition: 1 of object_* or attributes

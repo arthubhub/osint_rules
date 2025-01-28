@@ -1,0 +1,17 @@
+title: A host (hosted in RU) with only phishing websites - dns_query
+id: bc12480a-7679-44d2-a07a-4356a44e4d74
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/4451faac-cba0-4647-8451-d21de2c71f92.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1566
+detection:
+  attributes:
+    IpAddresses:
+    - 213.226.123.172
+  condition: attributes

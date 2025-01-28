@@ -1,0 +1,18 @@
+title: Rhombus - Linux DDoS botnet aims VPS & IoT, w/persistence & dropper - dns_query
+id: 69310337-ef49-4819-a626-0edf3f55d15a
+description: edit this field when analysing or editing the rule - reported by "MalwareMustDie"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e6aa53c-bcf8-4279-9c48-40d0950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 205.185.122.243
+    - 167.172.128.4
+    - 209.126.69.167
+    - 45.135.134.132
+  condition: attributes

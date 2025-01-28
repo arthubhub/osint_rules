@@ -1,0 +1,15 @@
+title: OSINT - Floki Bot and the stealthy dropper - url_request
+id: 0154c8de-ec5d-4e1c-bfea-b602414ec148
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5824e43f-9370-463b-9681-452b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.malwarebytes.com
+  condition: attributes

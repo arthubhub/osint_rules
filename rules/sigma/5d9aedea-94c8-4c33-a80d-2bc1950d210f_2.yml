@@ -1,0 +1,27 @@
+title: 'OSINT - #EmissaryPanda #APT older sample (2018) - process_creation'
+id: 6ee85ec4-642f-4df0-b5c5-5b29c6a4f45e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d9aedea-94c8-4c33-a80d-2bc1950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.emissary_panda
+- attack.group.threat_group-3390
+- attack.group.luckymouse
+- attack.group.g0027
+detection:
+  object_9142:
+    md5:
+    - 931017406b4718d81d2c776165e6ddf0
+  object_9143:
+    md5:
+    - 931017406b4718d81d2c776165e6ddf0
+    sha1:
+    - 6bfabe6eea3be2e59bc52bd69c64be7706e7a391
+    sha256:
+    - ce3424524fd1f482a0339a3f92e440532cff97c104769837fa6ae52869013558
+  condition: 1 of object_*

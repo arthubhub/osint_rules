@@ -1,0 +1,16 @@
+title: OSINT Hacking Team Reloaded? US-Based Ethiopian Journalists Again Targeted
+  with Spyware by Citizen Lab - url_request
+id: ae14362c-39ab-4ba0-86ce-f79f8cb16f08
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55014970-d82c-4b60-ba8e-0958950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://citizenlab.org
+  condition: attributes

@@ -1,0 +1,22 @@
+title: OSINT - Shadowfall - process_creation
+id: d9b22c21-7abe-4cc4-adf7-ff62ea048b54
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5937f449-62bc-460c-a4c6-4bb9950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - f83692698014c9144c4dbecacca28777
+    - 0b14f1e403909435e2a98ddefffd744f
+    sha1:
+    - 06841d0af2d945807c4373ad610c996278d51515
+    - a85c021282ca5f8b6c0f18d3cdc819c44cfbc5ed
+    sha256:
+    - f7124736a95c472f4c98835786daccdbe751bbd0da4cb500fa0b35d7700d46ef
+    - 1ceaccf925911b4da750321be0be31e0a8fe8220f75170725e74d3db7e828bcd
+  condition: attributes

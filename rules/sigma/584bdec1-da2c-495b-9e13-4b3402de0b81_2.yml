@@ -1,0 +1,22 @@
+title: OSINT - Now Mirai Has DGA Feature Built in - dns_query
+id: 3be5e444-ece6-4793-bbbc-2036c05526ee
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/584bdec1-da2c-495b-9e13-4b3402de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.mirai
+detection:
+  attributes:
+    QueryName|contains:
+    - tr069.support
+    - tr069.online
+    - tr069.tech
+    - zugzwang.me
+    IpAddresses:
+    - 93.190.142.201
+  condition: attributes

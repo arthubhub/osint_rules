@@ -1,0 +1,72 @@
+title: 'Malspam 2016-09-16 (.wsf in .zip) - campaign: "(SCAN|FAX|DOC|IMG)_{integer}"
+  - dns_query'
+id: 660a28e2-cd40-49ed-88ca-fbab16d1d9dd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57dc1fe4-0d70-4dde-95fe-46e8950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - honeydavis.us
+    - helpmybathroom.com
+    - markanltd.com
+    - all4supply.com
+    - earnbyemail.com
+    - mahovik-bg.com
+    - chelsea-west.com
+    - akademistcicek.com
+    - lv-nexis.com
+    - xsolution.sk
+    - smt112.com
+    - junhao8.com
+    - mclodesigns.com
+    - 24hourprintshop.com
+    - zesthouse.com
+    - inovsol.com
+    - qarmoo.com
+    - mfcomputer.net
+    - thewebgroup.net
+    - hollystamps.com
+    - sstaswim.com
+    - islamiccollege.org
+    - samenart.com
+    - lanehmontgomery.com
+    - urachart.com
+    - mudelts.com
+    - apro88.com
+    - sanalnet.org
+    IpAddresses:
+    - 203.170.192.184
+    - 97.74.215.143
+    - 143.95.253.117
+    - 183.90.250.22
+    - 88.198.174.188
+    - 188.124.5.33
+    - 176.31.107.185
+    - 23.226.76.25
+    - 162.210.102.89
+    - 69.36.191.199
+    - 119.28.1.30
+    - 212.57.32.7
+    - 107.180.51.107
+    - 160.153.93.132
+    - 72.167.131.224
+    - 193.218.152.239
+    - 185.131.50.176
+    - 192.186.233.9
+    - 175.176.161.34
+    - 157.112.176.54
+    - 100.42.63.88
+    - 173.254.28.47
+    - 173.236.198.12
+    - 199.59.58.6
+    - 92.43.113.68
+    - 212.175.247.30
+    - 198.46.81.169
+    - 43.245.62.130
+  condition: attributes

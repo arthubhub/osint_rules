@@ -1,0 +1,30 @@
+title: OSINT - The Latest Android Overlay Malware Spreading via SMS Phishing in Europe
+  - url_request
+id: 70c67046-6afd-4783-a90e-773904ad6ed5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/577375a9-9ab8-4163-84ab-a395950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://85.93.5.139
+    - http://85.93.5.109
+    - http://91.224.161.102
+    - http://5.61.39.3
+    - http://54.93.101.5
+    - http://85.93.5.108
+    - http://62.138.0.117
+    - mmstildig.com
+    - postdanmark.org
+    - http://37.1.205.193
+    - http://193.105.240.158
+    - http://85.93.5.83
+    - mmstildig.info
+    - http://162.220.246.24
+    - mmstildig.net
+  condition: attributes

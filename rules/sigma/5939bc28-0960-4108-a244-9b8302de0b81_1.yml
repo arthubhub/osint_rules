@@ -1,0 +1,16 @@
+title: OSINT -  The Recorded Future Blog Malicious Android Applications Raise Concerns
+  for Enterprises - url_request
+id: 2e44531f-dbbd-4325-96d9-6e8bbd463daa
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5939bc28-0960-4108-a244-9b8302de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.recordedfuture.com
+  condition: attributes

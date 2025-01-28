@@ -1,0 +1,67 @@
+title: 'Malspam 2016-09-01 (.js in .zip) - campaign: "flight tickets" - dns_query'
+id: 23ec0876-ce83-47ed-8917-70e4d540651d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c7d398-3440-41b9-8339-4e1e950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - powermax.ru
+    - instalserie.pt
+    - timetobuymlw.in
+    - finishcar.de
+    - mambarambaro.ws
+    - virmalw.name
+    - bookinghotworld.ws
+    - csmwwst.de
+    - nibis.de
+    - alc-okadakogyo.com
+    IpAddresses:
+    - 208.71.106.61
+    - 213.23.76.90
+    - 83.220.144.3
+    - 213.186.33.4
+    - 46.20.80.5
+    - 212.159.9.91
+    - 80.150.6.138
+    - 95.211.144.65
+    - 158.69.147.88
+    - 208.71.106.41
+    - 82.197.131.109
+    - 81.88.57.70
+    - 89.31.143.112
+    - 80.109.240.79
+    - 87.238.192.102
+    - 213.180.150.17
+    - 98.129.229.24
+    - 195.78.215.76
+    - 208.71.106.48
+    - 162.210.101.99
+    - 82.145.39.61
+    - 208.71.106.39
+    - 112.140.42.29
+    - 64.29.151.221
+    - 162.210.101.117
+    - 80.73.225.20
+    - 76.74.242.140
+    - 86.65.123.70
+    - 91.194.151.38
+    - 208.71.106.37
+    - 210.157.28.18
+    - 208.71.106.43
+    - 213.205.40.169
+    - 62.173.139.197
+    - 208.71.106.49
+    - 213.158.72.90
+    - 210.161.160.157
+    - 217.148.216.220
+    - 192.99.111.28
+    - 72.47.222.40
+    - 213.189.197.56
+    - 62.42.230.17
+  condition: attributes

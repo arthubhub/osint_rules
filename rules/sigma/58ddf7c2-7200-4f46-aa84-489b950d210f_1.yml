@@ -1,0 +1,18 @@
+title: OSINT - Part I. Russian APT - APT28 collection of samples including OSX XAgent
+  - url_request
+id: f31700b9-920b-4500-b2fc-502ec4369575
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58ddf7c2-7200-4f46-aa84-489b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://contagiodump.blogspot.lu
+  condition: attributes

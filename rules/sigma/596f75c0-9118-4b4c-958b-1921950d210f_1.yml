@@ -1,0 +1,28 @@
+title: OSINT - Recent Winnti Infrastructure and Samples - url_request
+id: 288c3af6-993b-4c16-86f4-7c0c4d0b21e8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/596f75c0-9118-4b4c-958b-1921950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.winnti
+detection:
+  attributes:
+    RequestUrl|contains:
+    - pornsee.tv
+    - aolonline.cc
+    - find2find.com
+    - http://www.clearskysec.com
+    - http://54.245.195.101
+    - facebooknavigation.com
+    - googlecustomservice.com
+    - tiwwter.net
+    - googlerenewals.net
+    - luckhairs.com
+    - igooglefiles.com
+    - googlesoftservice.net
+  condition: attributes

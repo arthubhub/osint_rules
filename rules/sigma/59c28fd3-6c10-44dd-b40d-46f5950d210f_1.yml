@@ -1,0 +1,37 @@
+title: 'M2M -  Locky 2017-09-19 : Affid=3, offline, ".ykcol" : "HERBALIFE Order Number:
+  6N01001234" - "6N01001234_1.7z" - url_request'
+id: 6b015d4f-dcfc-4f4f-ba30-a32a4a785c7d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59c28fd3-6c10-44dd-b40d-46f5950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://conxibit.com
+    - http://cxwebdesign.de
+    - http://download.justowin.it
+    - http://diakoniestation-winnenden.de
+    - http://zionbrand.su
+    - http://arsmakina.org
+    - http://ecofloraholland.nl
+    - http://gui-design.de
+    - http://teracom.co.id
+    - http://felixsolis.mobi
+    - http://secureleads.com
+    - http://highpressurewelding.co.uk
+    - http://ycgrp.jp
+    - http://bnphealthcare.com
+    - http://housecafe-essen.de
+    - http://asiaresearchcenter.org
+    - http://foodbikers.ch
+    - http://g-peer.at
+    - http://isiquest1.com
+  condition: attributes

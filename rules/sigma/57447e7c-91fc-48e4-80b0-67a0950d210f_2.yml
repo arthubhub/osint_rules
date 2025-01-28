@@ -1,0 +1,67 @@
+title: OSINT - Looking Into a Cyber-Attack Facilitator in the Netherlands by Trend
+  Micro - dns_query
+id: 777687ba-4ece-48e5-93f0-06c691b0dea5
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57447e7c-91fc-48e4-80b0-67a0950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - inside-localisation-apple.com
+    - military-info.eu
+    - int-live.com
+    - edit-mail-yahoo.com
+    - securityicloudservice.com
+    - grab2d.com
+    - worldpoliticsreviews.com
+    - itunes-helper.net
+    - service-yahoo.com
+    - webmail-mil.gr
+    - setting-mail.ru
+    - rn-mail.ru
+    - bestapplestore.com
+    - mail-hurriyet.com
+    - inside-apple-localisation.com
+    - euroreport24.com
+    - webmail-gov.me
+    - mailmil.ae
+    - help-yahoo-service.com
+    - mailhost-ut.ee
+    - live-settings.com
+    - account-web.de
+    - mobile-sanoma.net
+    - privacy-facebook.me
+    - privacy-yahooservice.com
+    - cc-yahoo-inc.org
+    - mycloud-mail.ru
+    - redirect2app.cf
+    - wsjworld.com
+    - bit2ly.com
+    - osce-press.com
+    - blu172maillive.com
+    - iraqinews.info
+    - marktingvb.ml
+    - reuters-press.com
+    - mail-navy.ro
+    - options-mail.ru
+    - osce-info.com
+    - defensenews.org
+    - service-ukr.net
+    - accounts-updated-confirmation.com
+    - localiser-icloud.com
+    - unbulletin.com
+    - posta-hurriyet.com
+    - mfagreece.com
+    - nato-news.com
+    - eservicesystems.net
+    - aijazeera.org
+    - pasport-yandex.ru
+    - loqin-yandex.ru
+    - catholicsinaliance.org
+    - electronicfrontierfoundation.org
+  condition: attributes

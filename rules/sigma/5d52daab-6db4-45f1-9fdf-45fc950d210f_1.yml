@@ -1,0 +1,17 @@
+title: OSINT -  Recent Cloud Atlas activity - url_request
+id: 4662f85a-0d2f-41f1-b306-473b2c14cb07
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d52daab-6db4-45f1-9fdf-45fc950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.cloud_atlas
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

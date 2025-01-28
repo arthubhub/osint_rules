@@ -1,0 +1,38 @@
+title: Malspam 2016-09-05 (.wsf in .zip) - url_request
+id: 4cad4add-2fed-4321-b214-3ea15eba7444
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57cd8beb-79e4-4497-931f-4249950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.trzynastkajg.republika.pl
+    - http://www.bals.nichost.ru
+    - http://maxshoppppsr.biz
+    - http://monkeeey.web.fc2.com
+    - http://www.poli-mec.it
+    - http://roadstercrew-nw.homepage.t-online.de
+    - treasure-force.com
+    - http://jvelizg.vtrbandaancha.net
+    - http://yggithuq.utawebhost.at
+    - http://deemc.homepage.t-online.de
+    - http://frumuseanudaniela.go.ro
+    - http://www.equipe4.net
+    - http://www.officinaomc.com
+    - maxshoppppsr.biz
+    - http://tensai.wallst.ru
+    - http://miyufortuneteller.web.fc2.com
+    - http://52433865.fn.freenet-hosting.de
+    - http://treasure-force.com
+    - http://www.yacht-market.eu
+    - http://gregor-weiss.business.t-online.de
+    - http://www.rossorelli.ru
+    - http://mojejeze.republika.pl
+    - http://lcc.vtrbandaancha.net
+    - http://quietvain.nobody.jp
+  condition: attributes

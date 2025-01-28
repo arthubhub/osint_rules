@@ -1,0 +1,23 @@
+title: "OSINT Tracking MiniDionis: CozyCar\xE2\u20AC\u2122s New Ride Is Related to\
+  \ Seaduke by Unit 42 Palo Alto Networks - url_request"
+id: 27c773f8-c563-4d39-87cc-54db54e48d42
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55a8d7b5-9ab8-476f-982f-1e08950d210b.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.apt_29
+- attack.software.trojan.seaduke
+detection:
+  attributes:
+    RequestUrl|contains:
+    - kane-consulting.net
+    - http://researchcenter.paloaltonetworks.com
+    - connectads.com
+    - illuminatistudios.net
+    - visionresearch.com
+  condition: attributes

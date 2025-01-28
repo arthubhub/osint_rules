@@ -1,0 +1,46 @@
+title: 'Malspam 2016-08-26 (.wsf in .zip) - campaign: "Voice Message from Outside
+  Caller" - url_request'
+id: 13ccaa49-9d61-4bc0-9347-775ae008011c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c067b5-4cf0-480d-9409-496d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://qualite.co.jp
+    - http://leinburgermichl-de.homepage.t-online.de
+    - http://m_lena.republika.pl
+    - http://digho.web.fc2.com
+    - http://www.onixfocsani.home.ro
+    - calvaryresort.com
+    - http://www.ristorantelacoppa.it
+    - http://seishinkaikenpo.com
+    - http://mywebsink.homepage.t-online.de
+    - verloskundigedenbosch.nl
+    - http://www.rhanwid.com
+    - atsmedical.net
+    - http://www.ctpconegliano.it
+    - seishinkaikenpo.com
+    - http://verloskundigedenbosch.nl
+    - http://mueller-holz-bau.com
+    - http://gosyuinmeguri.web.fc2.com
+    - http://gibus973.web.ool.fr
+    - http://t3wmueller.homepage.t-online.de
+    - http://freedom0001.web.fc2.com
+    - http://fameoconnor.customer.netspace.net.au
+    - http://atsmedical.net
+    - http://amxbans.dax.ru
+    - http://ecolgp.ru
+    - mueller-holz-bau.com
+    - ecolgp.ru
+    - http://theramom.web.fc2.com
+    - http://gameszonelove.hi2.ro
+    - http://www.drk-lennep.de
+    - http://m-richter.homepage.t-online.de
+    - http://calvaryresort.com
+  condition: attributes

@@ -1,0 +1,31 @@
+title: OSINT -  BattleRoyal, DarkGate Cluster Spreads via Email and Fake Browser Updates
+  - process_creation
+id: 2b6b4368-b6c9-4a06-90ce-93686853f7ca
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f0ef984c-2467-40aa-83c6-7c671a6379cb.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_7078:
+    sha256:
+    - fce452bcf10414ece8eee6451cf52b39211eb65ecaa02a15bc5809c8236369a4
+  object_7079:
+    sha256:
+    - ea8f893c080159a423c9122b239ec389939e4c3c1f218bdee16dde744e08188f
+  object_7080:
+    sha256:
+    - e2a8a53e117f1dda2c09e5b83a13c99b848873a75b14d20823318840e84de243
+  object_7081:
+    sha256:
+    - 96ca146b6bb95de35f61289c2725f979a2957ce54761aff5f37726a85f2f9e77
+  object_7082:
+    sha256:
+    - 7562c213f88efdb119a9bbe95603946ba3beb093c326c3b91e7015ae49561f0f
+  object_7083:
+    sha256:
+    - 2f5af97b13b077a00218c60305b4eee5d88d14a9bd042beed286434c3fc6e084
+  condition: 1 of object_*

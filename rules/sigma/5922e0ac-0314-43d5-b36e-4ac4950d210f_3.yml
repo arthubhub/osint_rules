@@ -1,0 +1,25 @@
+title: 'Jaff 2017-05-22 : "Copy of Invoice 12345678" / "12345678.PDF" - process_creation'
+id: 6be8d6fe-39d8-4603-b508-4e8c971f342d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5922e0ac-0314-43d5-b36e-4ac4950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    md5:
+    - 132d56f533f3a074b441cebff98e7742
+    - 192b829bf7f6829549519168c173c931
+    sha1:
+    - ce62251f9c7b0de95ce324efec94fb703776f4ba
+    - 551f953db4ba48452a4f7de9f5f7149c98ddf52f
+    sha256:
+    - e0573ec5a6ed61a6f38ab209e3d0d309b0c15af9dacc253240476c6899b5690b
+    - 3105bf7916ab2e8bdf32f9a4f798c358b4d18da11bcc16f8f063c4b9c200f8b4
+  condition: attributes

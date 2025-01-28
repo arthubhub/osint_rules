@@ -1,0 +1,16 @@
+title: OSINT -  New Malware with Ties to SunOrcal Discovered - dns_query
+id: 7619a0ad-535a-41ee-8d0f-40b43faf5351
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a0a9aa9-23a4-4607-b6df-41a9950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 104.148.70.217
+    - 98.126.156.210
+  condition: attributes

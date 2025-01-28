@@ -1,0 +1,17 @@
+title: Cerber 5.0 through Google via onion gateway - url_request
+id: 8a9ccc9c-8203-4df1-9ba3-2e99e5930b9d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5836e0bd-461c-4b54-afba-4448950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://pvjk6aukijrdwwqs.onion.to
+    - https://www.google.com
+    - http://ffoqr3ug7m726zou.vofy7f.top
+  condition: attributes

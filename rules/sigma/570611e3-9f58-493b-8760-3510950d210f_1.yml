@@ -1,0 +1,15 @@
+title: OSINT - Most prevalent Android ransomware in the West arrives in Japan - url_request
+id: 0f4274e6-e940-49ee-98f1-626acb1ae935
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/570611e3-9f58-493b-8760-3510950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.symantec.com
+  condition: attributes

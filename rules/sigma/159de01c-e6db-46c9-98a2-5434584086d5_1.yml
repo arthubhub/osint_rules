@@ -1,0 +1,51 @@
+title: "OSINT - M\u0113ris botnet - url_request"
+id: 758f108d-ceae-470e-9fc8-7422abeeebdc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/159de01c-e6db-46c9-98a2-5434584086d5.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - motinkon.com
+    - fanmusic.xyz
+    - 7standby.com
+    - massgames.space
+    - spacewb.tech
+    - takebad1.com
+    - gamedate.xyz
+    - hitsmoby.com
+    - senourth.com
+    - strtbiz.site
+    - wchampmuse.pw
+    - dartspeak.xyz
+    - myphotos.xyz
+    - zancetom.com
+    - audiomain.website
+    - widechanges.best
+    - cloudsond.me
+    - ciskotik.com
+    - picsgifs.xyz
+    - portgame.website
+    - bestony.club
+    - 1abcnews.xyz
+    - mobigifs.xyz
+    - weirdgames.info
+    - spgames.site
+    - globalmoby.xyz
+    - gamesone.xyz
+    - mobstore.xyz
+    - my1story.xyz
+    - specialword.xyz
+    - myfrance.xyz
+    - tryphptoday.com
+    - sitestory.xyz
+    - onlinegt.xyz
+    - 1awesome.net
+    - bestmade.xyz
+    - phonemus.net
+  condition: attributes

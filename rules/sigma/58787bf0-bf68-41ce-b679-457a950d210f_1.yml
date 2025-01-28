@@ -1,0 +1,17 @@
+title: OSINT - shadow-brokers-windows - url_request
+id: c64f8f2e-5eae-4111-9e28-c547cb02dfe3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58787bf0-bf68-41ce-b679-457a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.equation_group
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+  condition: attributes

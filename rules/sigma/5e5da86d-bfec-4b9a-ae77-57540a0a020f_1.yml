@@ -1,0 +1,46 @@
+title: Remcos RAT 02-28-20 - url_request
+id: cd526b17-b4ab-4261-a595-dbafe94cf263
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e5da86d-bfec-4b9a-ae77-57540a0a020f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1036
+- attack.t1193
+- attack.t1099
+- attack.software.remcos
+- attack.t1064
+- attack.group.remcos
+- attack.t1065
+- attack.t1060
+- attack.t1054
+- attack.t1202
+detection:
+  attributes:
+    RequestUrl|contains:
+    - usadroptop2.com
+    - droptop5.com
+    - droptop9.com
+    - https://laskowski-tech.com
+    - droptop7.com
+    - usadroptop6.com
+    - droptop2.com
+    - usadroptop9.com
+    - droptop1.com
+    - droptop3.com
+    - droptop10.com
+    - usadroptop3.com
+    - droptop8.com
+    - droptop4.com
+    - droptop6.com
+    - usadroptop1.com
+    - usadroptop5.com
+    - usadroptop7.com
+    - usadroptop10.com
+    - usadroptop4.com
+    - usadroptop8.com
+  condition: attributes

@@ -1,0 +1,17 @@
+title: "OSINT - Tale of the Two Payloads \xE2\u20AC\u201C TrickBot and Nitol - url_request"
+id: 4b1baff5-d889-46e9-b81d-c08f0e62f47d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/598626ea-83e0-4b11-a9a5-485b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.trick_bot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.trustwave.com
+  condition: attributes

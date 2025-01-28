@@ -1,0 +1,30 @@
+title: OSINT - Matrix Ransomware Spreads to Other PCs Using Malicious Shortcuts -
+  process_creation
+id: 0a13ece8-34a6-4075-9749-fcebc929b5e5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58eb4dde-5254-4163-add1-4d47950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.matrix
+- attack.group.matrix
+detection:
+  object_8459:
+    md5:
+    - 36a0cefeb8b0a606358142d4140ea7cf
+    sha1:
+    - 03ce13b4f60d2fc632b67b41b82b5e8cfaf9939f
+    sha256:
+    - 467c2b23b785df7b45758143387e9cc5a588718ae0640b3f01b1c19679b011be
+  attributes:
+    md5:
+    - 36a0cefeb8b0a606358142d4140ea7cf
+    sha1:
+    - 03ce13b4f60d2fc632b67b41b82b5e8cfaf9939f
+    sha256:
+    - 467c2b23b785df7b45758143387e9cc5a588718ae0640b3f01b1c19679b011be
+  condition: 1 of object_* or attributes

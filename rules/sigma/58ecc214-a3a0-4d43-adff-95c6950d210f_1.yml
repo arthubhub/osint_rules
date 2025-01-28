@@ -1,0 +1,18 @@
+title: OSINT - Unraveling the Lamberts Toolkit An Overview of a Color-coded Multi-Stage
+  Arsenal - url_request
+id: 1c2aeb46-891c-4ae2-9768-8d648ce04599
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58ecc214-a3a0-4d43-adff-95c6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.longhorn
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

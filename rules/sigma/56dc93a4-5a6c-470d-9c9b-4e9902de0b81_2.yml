@@ -1,0 +1,18 @@
+title: OSINT - New OS X Ransomware KeRanger Infected Transmission BitTorrent Client
+  Installer - dns_query
+id: e0a9a3ed-fc85-4885-bb62-7bdaeca2fbd1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56dc93a4-5a6c-470d-9c9b-4e9902de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - lclebb6kvohlkcml.onion.link
+    - bmacyzmea723xyaz.onion.link
+    - nejdtkok7oz5kjoc.onion.link
+  condition: attributes

@@ -1,0 +1,21 @@
+title: 'Malspam 2016-09-06 (.js in .zip) - campaign: "Suspected Purchases" - dns_query'
+id: eed16ec4-32f9-4657-a5cb-c3274ffbe449
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57cfb3b1-dc58-4960-8b55-42fc950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - virmalw.name
+    - donttouchmybaseline.ws
+    - canonsupervideo4k.ws
+    IpAddresses:
+    - 107.173.176.24
+    - 51.255.227.230
+    - 216.244.68.195
+  condition: attributes

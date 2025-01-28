@@ -1,0 +1,21 @@
+title: OSINT - Malicious document targets Vietnamese officials - dns_query
+id: c493acf6-ce2c-416e-98d1-0484e94bb6e0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b60b046-c0c8-49ce-aa97-437a02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.hellsing
+detection:
+  attributes:
+    QueryName|contains:
+    - dulichculao.com
+    - toonganuh.com
+    IpAddresses:
+    - 176.223.165.122
+    - 192.99.181.14
+  condition: attributes

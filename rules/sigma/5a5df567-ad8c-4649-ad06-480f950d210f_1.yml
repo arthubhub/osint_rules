@@ -1,0 +1,79 @@
+title: OSINT Track to the future - How to use historical intelligence to get back
+  to the future and defend your organization (example using APT28) by ThreatConnect
+  - url_request
+id: a0a6e4b0-37a1-4924-979b-1595a44f6a07
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a5df567-ad8c-4649-ad06-480f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    RequestUrl|contains:
+    - networkschecker.com
+    - adobeincorp.com
+    - networkschecker.net
+    - iscellane.org
+    - mailpho.com
+    - reportscanprotecting.org
+    - evbrax.org
+    - highcomission.org
+    - apptaskserver.com
+    - edit-mail-yahoo.com
+    - misdepatrment.com
+    - bitlinkcut.net
+    - securelink1.org
+    - zimbra-servicing.com
+    - outlook-security.org
+    - bmwriting.com
+    - mailer-support.com
+    - joshel.com
+    - carlinocg.com
+    - hotfixmsupload.com
+    - defence-adviser.com
+    - cdn-ch.org
+    - acrobatportable.com
+    - zimbra-servicing.org
+    - lgemon.org
+    - cleanphonetrksftware.com
+    - netcorpscanprotect.com
+    - akamaisoftupdate.com
+    - qov.al
+    - tukangcendol-naikinbuhaji.com
+    - appservicegroup.com
+    - dislocationineconomic.com
+    - applecloudupdate.com
+    - jpoweradmin.com
+    - cvvshop.lv
+    - rapidfileuploader.org
+    - com-statistics.com
+    - trbusinesslink.com
+    - uzbekistan-mfa.com
+    - uniquecorpind.com
+    - vvorthyhands.org
+    - googlegoogie.com
+    - computers0ft.com
+    - lowprt.org
+    - https://www.threatconnect.com
+    - zpfgr.com
+    - akamaisoft.com
+    - mail-account-yahoo.com
+    - events-spot.com
+    - us-mg6-mail-yahoo.com
+    - noticermk.com
+    - login-freemail.com
+    - gtranm.com
+    - runvercheck.com
+    - web-privacy-guardian.com
+    - netcloselysecure.org
+    - gmail-google-accounts.com
+    - zimbra-service.org
+    - ppcodecs.com
+    - security-ukr.net
+    - downloadsstore.net
+  condition: attributes

@@ -1,0 +1,77 @@
+title: 'Malspam 2016-09-14 (.wsf in .zip) - campaign: "payment copy" - dns_query'
+id: a2e8abcb-8bf0-4e58-89cf-3256ffc13d45
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d91d75-0f30-4939-b8dd-48fd950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - adventurevista.com
+    - yourmdb.com
+    - directdesignsny.com
+    - allchannel.net
+    - wholestay.com
+    - asunaz.com
+    - thcsgoxoai.com
+    - kafemar.com
+    - amaranthine-deerplacenta.com
+    - loansbypeople.com
+    - janie-royce.com
+    - webberm.com
+    - dusklounge.com
+    - amicentng.com
+    - msayin.com
+    - narutoshippuuden.org
+    - zipcommander.com
+    - thehostingonline.com
+    - radyohaberleri.com
+    - zagros-group.net
+    - kinabalustudios.com
+    - kristinchurch.ca
+    - sexturbo.ru
+    - ygc1688.com
+    - jaysilverdp.com
+    - feechka.ru
+    - xn--odka862xw00d.com
+    - inventtheworld.com
+    - sspvl.com
+    - jonathankimsey.com
+    - old-sinks.com
+    IpAddresses:
+    - 91.239.206.118
+    - 123.30.208.178
+    - 107.180.51.27
+    - 107.180.50.238
+    - 50.31.162.92
+    - 54.65.230.41
+    - 70.33.241.150
+    - 74.220.202.49
+    - 188.124.5.33
+    - 94.73.146.80
+    - 119.81.24.187
+    - 91.219.194.36
+    - 174.127.105.95
+    - 173.255.131.205
+    - 5.61.32.143
+    - 136.243.70.231
+    - 41.193.54.15
+    - 107.161.191.26
+    - 143.95.41.185
+    - 210.1.61.133
+    - 204.93.193.125
+    - 173.254.14.209
+    - 69.4.86.172
+    - 104.37.35.84
+    - 124.217.255.45
+    - 115.159.97.197
+    - 185.26.144.135
+    - 192.145.239.20
+    - 107.180.51.159
+    - 31.210.74.154
+    - 204.93.163.87
+  condition: attributes

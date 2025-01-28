@@ -1,0 +1,40 @@
+title: OSINT Passive DNS ponmocup malware - 109.74.195.149 in VirusTotal - dns_query
+id: b4e1d4eb-329b-4080-af62-e05220aa40c0
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/566f49f8-1d78-4245-b80c-45b6950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - abccornet.com
+    - borderspot.net
+    - levartnetcom.net
+    - commidrafs.com
+    - subjectssummer.com
+    - google-in-counter.org
+    - frostchecked.com
+    - httpsstarss.in
+    - peeroperkoser.com
+    - tybsyiutnrtvtybdrser.com
+    - zeplost.com
+    - diodepr.in
+    - winupd.com
+    - qweplost.com
+    - checkwebspeed.net
+    - gercourses.com
+    - kosherblogger.com
+    - boltoflexaria.in
+    - frostnetworks.com
+    - surfacechicago.net
+    - kristalers.in
+    - goopndlgvy.com
+    - winsecureserv.com
+    - boltoflex.in
+    IpAddresses:
+    - 109.74.195.149
+  condition: attributes

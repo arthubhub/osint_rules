@@ -1,0 +1,56 @@
+title: 'M2M -  Locky / Trickbot: "Emailing: Scan0xxx" from "Sales" - url_request'
+id: 00c7fa92-85cb-46fe-bb93-e38a144d4955
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59cd3b91-95a4-4efd-9334-4c5b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+- attack.software.trick_bot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://anarakdesert.com
+    - http://fmarson.com
+    - http://mtblanc-let.co.uk
+    - http://flooringforyou.co.uk
+    - http://freevillemusic.com
+    - http://ambrogiauto.com
+    - http://jakuboweb.com
+    - http://conlin-boats.com
+    - http://asnsport-bg.com
+    - http://atlantarecyclingcenters.com
+    - http://augustinechua.com
+    - http://classactionlawsuitnewscenter.com
+    - http://fls-portal.co.uk
+    - http://camerawind.com
+    - http://geeks-online.de
+    - http://plumanns.com
+    - http://poemsan.info
+    - http://evlilikpsikolojisi.com
+    - http://patrickreeves.com
+    - http://autoecoleathena.com
+    - http://davidstephensbanjo.com
+    - http://modaintensa.com
+    - http://givensplace.com
+    - http://mediatrendsistem.com
+    - http://astilleroscotnsa.com
+    - http://jaysonmorrison.com
+    - http://feng-lian.com.tw
+    - http://americanbulldogradio.com
+    - http://fincasoroel.es
+    - http://essenza.co.id
+    - http://autoecole-jeanpierre.com
+    - http://e-westchesterpropertytax.com
+    - http://kailanisilks.com
+    - http://sherylbro.net
+    - http://melting-potes.com
+    - http://felicesfiestas.com.mx
+    - http://financeforautos.com
+    - http://autoecoleboisdesroches.com
+  condition: attributes

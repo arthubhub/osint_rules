@@ -1,0 +1,15 @@
+title: OSINT Puttering into the Future...by Cylance - url_request
+id: 6ce9938c-4b24-491d-b4d4-3d8a3ef53b6c
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56b06135-452c-4b99-bd16-4981950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.cylance.com
+  condition: attributes

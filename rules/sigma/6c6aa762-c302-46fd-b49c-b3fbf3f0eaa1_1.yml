@@ -1,0 +1,18 @@
+title: CobaltStrike C2s on Port 443 - url_request
+id: 7595c57b-28f3-472e-81f3-516a7a67e8cd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/6c6aa762-c302-46fd-b49c-b3fbf3f0eaa1.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.cobalt_strike
+- attack.software.cobalt_strike
+detection:
+  object_10426:
+    RequestUrl|contains:
+    - https://pastebin.com
+  condition: 1 of object_*

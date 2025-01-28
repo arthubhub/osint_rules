@@ -1,0 +1,16 @@
+title: OSINT - Targeted Attacks against Banks in the Middle East - url_request
+id: fc01d7f5-7c0f-4e98-97b4-1855badd41c5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5743f37c-c11c-426d-843b-4d83950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://go0gIe.com
+    - https://www.fireeye.com
+  condition: attributes

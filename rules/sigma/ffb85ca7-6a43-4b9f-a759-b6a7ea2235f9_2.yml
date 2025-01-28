@@ -1,0 +1,21 @@
+title: RegretLocker - compiled information, activity and samples - dns_query
+id: e56eed99-a94c-4523-b738-ec9b4630cdc1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/ffb85ca7-6a43-4b9f-a759-b6a7ea2235f9.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.regretlocker
+- attack.software.regretlocker
+detection:
+  object_16217:
+    QueryName|contains:
+    - regretzjibibtcgb.onion
+  attributes:
+    IpAddresses:
+    - 109.248.203.209
+  condition: 1 of object_* or attributes

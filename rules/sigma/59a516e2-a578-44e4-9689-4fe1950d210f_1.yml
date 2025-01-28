@@ -1,0 +1,15 @@
+title: OSINT - New Nuclear BTCWare Ransomware Released - url_request
+id: 3022885c-bb7e-4bf9-b36a-c09567eaedb8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59a516e2-a578-44e4-9689-4fe1950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

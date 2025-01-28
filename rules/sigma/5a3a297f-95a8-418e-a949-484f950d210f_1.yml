@@ -1,0 +1,15 @@
+title: OSINT - How Mobile Bankbots Disguise as Perfectly Trustworthy Apps - url_request
+id: fc78442b-3ca8-461b-ba94-04fb414c695f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a3a297f-95a8-418e-a949-484f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.riskiq.com
+  condition: attributes

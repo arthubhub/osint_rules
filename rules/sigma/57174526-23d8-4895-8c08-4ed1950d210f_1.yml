@@ -1,0 +1,15 @@
+title: New ransomware - url_request
+id: 21fcf544-f211-40d8-a33a-f4c7117f1e42
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57174526-23d8-4895-8c08-4ed1950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://192.185.16.132
+  condition: attributes

@@ -1,0 +1,18 @@
+title: 'OSINT - Evidence Aurora Operation Still Active Part 2: More Ties Uncovered
+  Between CCleaner Hack & Chinese Hackers - url_request'
+id: 02129ff3-c0a5-4c98-a698-ad4aef71b736
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d34428-803c-4eab-bac7-49c0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.aurora_panda
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.intezer.com
+  condition: attributes

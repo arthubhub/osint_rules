@@ -1,0 +1,19 @@
+title: OSINT Assorted IOCs associated to Andromeda restlesz.su domain - url_request
+id: e77cfaa9-e059-4bd0-94bf-4c88811d860b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5485615b-86f4-4385-a7a3-f894950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.robtex.com
+    - restlesz.su
+    - http://www.scam.cz
+    - devicesta.ru
+    - http://www.phishtank.com
+  condition: attributes

@@ -1,0 +1,23 @@
+title: OSINT - Nemucod downloader spreading via Facebook - url_request
+id: 753d5b51-f07e-46b3-80e3-bd564e36e40d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5832c7f9-9148-4e20-8122-4f19950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - kerman.pw
+    - http://kerman.pw
+    - 8cb5d3e.com
+    - yadozalamom.pw
+    - ukay.pw
+    - http://afisutovu.com
+    - https://8cb5d3e.com
+    - https://bartblaze.blogspot.lu
+    - afisutovu.com
+  condition: attributes

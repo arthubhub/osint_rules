@@ -1,0 +1,20 @@
+title: 'Malspam 2016-09-16 (.js in .zip) - campaign: "Re: request" - dns_query'
+id: 9a007c75-eab7-48cd-8e49-9064662958a3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57dba07b-c36c-4d98-88ac-450e950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - maggycocoa.net
+    - bulkreasy.com
+    - yerndrunk.net
+    IpAddresses:
+    - 37.200.70.6
+    - 178.212.131.10
+  condition: attributes

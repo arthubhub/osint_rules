@@ -1,0 +1,15 @@
+title: 'OSINT - CVE-2015-2545: overview of current threats - url_request'
+id: 6497d6d0-4416-4c7b-bd4e-9ba43758947e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57460863-76dc-4272-8116-4ea302de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

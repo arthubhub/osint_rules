@@ -1,0 +1,98 @@
+title: MalSpam - Locky - 2016-05-25 (.js in .zip) - dns_query
+id: 6a17fe98-7560-4c73-9d92-d0c649a9bf2f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5745b0f7-3af4-4b0f-aa89-456f950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - foxprint.ro
+    - asianplywoods.com
+    - srilaktours.com
+    - mavendiscounts.com
+    - itknowhowhosting.com
+    - samratboutique.com
+    - jeddawy.com
+    - reinovaweb.com
+    - mertistrading.com
+    - meposer.com
+    - ragnohd.it
+    - vilalusa.com
+    - gatorusa.com
+    - republicafashion.ro
+    - idealbuz.com
+    - plazabagus.com
+    - smartwebplayers.com
+    - sch-oolmastersuniforms.com
+    - nikkipicki.com
+    - microchemdirect.com
+    - aristajewellery.com
+    - keidasafrica.com
+    - telenetltd.net
+    - scpremiumbikes.com
+    - leafyrushy.com
+    - skysystems.in
+    - econopaginas.com
+    - sweethomesgroup.com
+    - sarunghmm.com
+    - imarketsavvy.com
+    - starkwares.com
+    - pmincusa.com
+    - licensebuttons.com
+    - logicbuilding.com
+    - tatghorbd.com
+    - hangusaxachtay.com
+    - jandjoilops.com
+    - mustafatufekcioglu.com
+    IpAddresses:
+    - 65.99.205.82
+    - 160.153.16.52
+    - 185.8.33.86
+    - 192.185.170.205
+    - 209.222.76.2
+    - 103.9.101.111
+    - 103.11.189.21
+    - 107.180.2.94
+    - 74.63.197.146
+    - 76.164.214.253
+    - 88.208.252.225
+    - 199.189.248.11
+    - 217.160.230.183
+    - 42.112.36.6
+    - 191.240.255.40
+    - 108.179.252.59
+    - 66.45.227.171
+    - 104.239.143.121
+    - 81.19.186.131
+    - 92.51.242.102
+    - 188.241.117.134
+    - 205.251.133.203
+    - 182.253.238.203
+    - 188.166.41.182
+    - 198.50.243.113
+    - 160.153.54.8
+    - 182.50.154.45
+    - 31.220.110.197
+    - 50.87.153.94
+    - 50.87.152.212
+    - 63.77.93.12
+    - 65.99.225.183
+    - 210.48.153.240
+    - 103.6.198.138
+    - 46.102.232.140
+    - 176.223.121.193
+    - 103.7.8.45
+    - 103.14.120.108
+    - 166.62.27.59
+    - 74.220.215.217
+    - 207.45.179.146
+    - 107.180.34.184
+    - 198.57.246.6
+    - 166.62.28.104
+    - 79.170.44.102
+  condition: attributes

@@ -1,0 +1,29 @@
+title: Active Exploitation of Two Zero-Day Vulnerabilities in Ivanti Connect Secure
+  VPN - process_creation
+id: 5bba7c49-4b11-4511-be65-078780d91767
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/ab1a2393-2d57-46c9-91ab-16a4cc4b0b03.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1190
+detection:
+  object_2615:
+    md5:
+    - 701fdc38b2dc9a605fe3f0877baca62e
+    sha1:
+    - 4602efceb1cca1f2521193a6703362f27d424a91
+    sha256:
+    - a24d442980715a861674d45085c2f2c138c8a2354cc9c2cb02395533f6d37d85
+  object_2616:
+    md5:
+    - da0e21202e53d590e4258a893456ab44
+    sha1:
+    - dec06ef16010de8a3a713d929b33bbc0ca0d4380
+    sha256:
+    - 00161c82ad7b297bb96d06c24706e6688ea1fdd54399aeebc442e36c6cf5bee0
+  condition: 1 of object_*

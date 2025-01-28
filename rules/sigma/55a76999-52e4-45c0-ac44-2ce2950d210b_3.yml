@@ -1,0 +1,26 @@
+title: "OSINT An In-Depth Look at How Pawn Storm\xE2\u20AC\u2122s Java Zero-Day Was\
+  \ Used by Trend Micro - process_creation"
+id: 8b0c3832-4b6b-4435-aad7-3096b59e2c1d
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55a76999-52e4-45c0-ac44-2ce2950d210b.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - afe09fb5a2b97f9e119f70292092604e
+    - 211b7100fd799e9eaabeb13cfa446231
+    - 0c345969a5974e8b1ec6a5e23b2cf777
+    sha1:
+    - b4a515ef9de037f18d96b9b0e48271180f5725b7
+    - 95dc765700f5af406883d07f165011d2ff8dd0fb
+    - 21835aafe6d46840bb697e8b0d4aac06dec44f5b
+    sha256:
+    - 3d13f2e5b241168005425b15410556bcf26d04078da6b2ef42bc0c2be7654bf8
+    - d93f22d46090bfc19ef51963a781eeb864390c66d9347e86e03bba25a1fc29c5
+    - 3f2d8744205b59f7bee5a8f13e6a15201f04663ce2c6f33b1684968778e44349
+  condition: attributes

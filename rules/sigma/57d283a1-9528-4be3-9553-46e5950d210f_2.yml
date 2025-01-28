@@ -1,0 +1,54 @@
+title: 'Malspam 2016-09-09 (.hta in .dzip) - campaign: "Order confirmation" - dns_query'
+id: 382cab0c-035c-4efb-9c3b-655cb4668b67
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d283a1-9528-4be3-9553-46e5950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - iandiinternational.com
+    - rapiderbariyer.com
+    - onlinepurohit.com
+    - goldenladywedding.com
+    - aycilinsaat.com
+    - tipsforall.in
+    - tscbearings.in
+    - webdesignselite.com
+    - webnox.in
+    - marathazhunj.com
+    - biogreentech.in
+    - annurmaheshphotography.in
+    - adasurgical.com
+    - perfectfixuae.com
+    - dashingleather.com
+    - ungelie.com
+    - linosys.info
+    - jmetalloysllp.com
+    - anatoliamaket.com
+    - shagunproperty.com
+    - yesiloglugrup.com
+    - factumtech.com
+    IpAddresses:
+    - 181.224.135.58
+    - 213.142.143.183
+    - 43.242.215.197
+    - 27.123.26.34
+    - 174.142.55.229
+    - 74.124.210.105
+    - 50.87.145.92
+    - 192.185.94.100
+    - 5.10.105.44
+    - 192.185.156.157
+    - 181.224.136.120
+    - 94.73.151.85
+    - 103.231.41.127
+    - 95.130.171.45
+    - 213.142.130.107
+    - 192.185.103.167
+    - 69.163.194.248
+  condition: attributes

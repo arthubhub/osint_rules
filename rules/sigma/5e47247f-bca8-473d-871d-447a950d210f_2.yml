@@ -1,0 +1,33 @@
+title: XMRig & Masscan - process_creation
+id: bf68709c-c6e8-4d70-be69-9ed86d0adf51
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e47247f-bca8-473d-871d-447a950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_8809:
+    md5:
+    - 9f544e2f85d341e7c414174473fd9051
+    sha1:
+    - ce2da00e90c4ef14019f51c07073d126ab5b72c7
+    sha256:
+    - bc3aaf73490a37d0d3c80596ff635ade159bc2a75f43ecd49411ebf591f5386d
+  object_8810:
+    md5:
+    - 81a4bc7617cee5761fd883413a1a26d3
+    sha1:
+    - f63b9e779dc48d49bb13ba0a2c31520d12cf2643
+    sha256:
+    - ba94d5539a4ed65ac7a94a971dbb463a469f8671c767f515d271223078983442
+  object_8811:
+    md5:
+    - e13c006428e3d397c42b3c30122d99cc
+    sha1:
+    - da8c372b94516ddc512bdf60cfb8609ad382702a
+    sha256:
+    - 09b9d59ec4afdd479474db30a3b64e4c974a9e5711ab08e14bae2840e95b9aa1
+  condition: 1 of object_*

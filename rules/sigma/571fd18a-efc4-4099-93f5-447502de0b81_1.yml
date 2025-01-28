@@ -1,0 +1,15 @@
+title: OSINT - Macro Malware Employs Advanced Obfuscation to Avoid Detection - url_request
+id: daaa2d94-3595-4c48-baa2-6af8ae9d620d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/571fd18a-efc4-4099-93f5-447502de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blogs.mcafee.com
+  condition: attributes

@@ -1,0 +1,23 @@
+title: Sample Linux miner - XMring - process_creation
+id: 1ef430c6-1138-46c8-9e9c-12b23ef63c94
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e67e70a-9666-4c32-b3ec-4b51d43a8e4b.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1499.004
+- attack.t1375
+- attack.t1496
+detection:
+  object_17291:
+    md5:
+    - a3d50f130c57b5f9b3c81bb237912c83
+    sha1:
+    - b8e9bb170890e44785cdfbb0b00ea4233ba6dd73
+    sha256:
+    - 31fe8c12206d590afe61ebaff9d277793af34c8f201e9025f10d7a44a7f52e35
+  condition: 1 of object_*

@@ -1,0 +1,16 @@
+title: 'OSINT - On the Economic Significance of Ransomware Campaigns: A Bitcoin Transactions
+  Perspective - url_request'
+id: 8d597c63-0389-4e23-a8b3-332bed69ff15
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ae6cb05-26e0-442f-b430-478b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://arxiv.org
+  condition: attributes

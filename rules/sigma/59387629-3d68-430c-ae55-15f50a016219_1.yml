@@ -1,0 +1,58 @@
+title: Stantinko investigation - url_request
+id: e3af8913-2e5b-40f4-8a71-c8ee97a57716
+description: edit this field when analysing or editing the rule - reported by "ESET"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59387629-3d68-430c-ae55-15f50a016219.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - tmrobo.com
+    - wsaudio.org
+    - wsaudio.net
+    - icloudsrv.info
+    - biosysltd.org
+    - wadgeotrust.com
+    - kbdmai.net
+    - wsslupdate.org
+    - tmrobo.org
+    - udiscounter.org
+    - wupdateservice.us
+    - d3dupdate.com
+    - teddy-protection.com
+    - ultimate-discounter.org
+    - hdr-group.info
+    - superbear.pro
+    - udiscount.net
+    - ghosterystore.com
+    - robothemes.net
+    - teddysave.me
+    - clients3.ultimate-discounter.com
+    - clients1.ultimate-discounter.com
+    - hdr-group.org
+    - judgebear.pro
+    - apihelper.org
+    - ksober.in
+    - rdsbase.com
+    - wsaudio.com
+    - update.ultimate-discounter.com
+    - nvccupdate.com
+    - icloudsrv.com
+    - clients2.ultimate-discounter.com
+    - hdr-group.net
+    - dhtservice.com
+    - safesurfing.me
+    - icloudsrv.org
+    - upd-discounter.com
+    - wsslupd.net
+    - biosysltd.com
+    - icloudsrv.net
+    - wannaupdate.com
+    - vp9codec.com
+    - vp9codec.net
+    - mserrep.org
+  condition: attributes

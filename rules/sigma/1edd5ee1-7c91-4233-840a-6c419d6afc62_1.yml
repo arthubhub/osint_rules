@@ -1,0 +1,15 @@
+title: "OSINT - IronNetInjector: Turla\u2019s New Malware Loading Tool - url_request"
+id: b760803a-30cb-4d96-812a-6594bbabf37b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/1edd5ee1-7c91-4233-840a-6c419d6afc62.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_468:
+    RequestUrl|contains:
+    - https://unit42.paloaltonetworks.com
+  condition: 1 of object_*

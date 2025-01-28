@@ -1,0 +1,26 @@
+title: Hancitor - url_request
+id: 55aff649-4a12-4e93-84be-64cf5626b56e
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b06e5c0-0038-48bf-ae71-c25d0acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.hancitor
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.panageries.com
+    - http://happyellaafter.com
+    - http://dotorsfito.ru
+    - https://robwassotdint.ru
+    - http://grehu.net
+    - http://orgasmosfemeninos.net
+    - http://torsjogeca.com
+    - http://hisbutterof.ru
+    - http://lauragordonblog.com
+  condition: attributes

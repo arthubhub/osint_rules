@@ -1,0 +1,53 @@
+title: "OSINT - Shell Crew Variants Continue to Fly Under Big AV\xE2\u20AC\u2122s\
+  \ Radar - dns_query"
+id: 490be64e-b2fb-4e1e-bc40-fa6d544b0066
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/589d81ee-0348-49fe-9b88-4c48950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.shell_crew
+- attack.software.streamex
+detection:
+  attributes:
+    QueryName|contains:
+    - mail-help.com
+    - time-service.org
+    - allmnz.com
+    - microsoftwww.com
+    - wwgooglewww.com
+    - microsoftupdating.org
+    - mail-issue.top
+    - wwwgooglewww.com
+    - google-helps.com
+    - incsteelkor.com
+    IpAddresses:
+    - 220.73.222.120
+    - 31.210.102.210
+    - 106.185.52.7
+    - 107.151.218.149
+    - 104.148.71.127
+    - 220.73.222.86
+    - 118.193.153.5
+    - 43.249.81.210
+    - 167.160.16.242
+    - 50.115.138.215
+    - 122.10.9.154
+    - 88.208.228.56
+    - 103.214.143.44
+    - 119.57.196.30
+    - 43.249.81.209
+    - 221.139.50.134
+    - 173.231.49.141
+    - 107.161.80.22
+    - 174.139.57.30
+    - 211.58.38.100
+    - 92.242.144.2
+    - 158.69.34.129
+    - 174.139.57.27
+    - 174.139.57.26
+  condition: attributes

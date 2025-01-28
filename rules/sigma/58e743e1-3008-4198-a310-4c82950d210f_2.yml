@@ -1,0 +1,22 @@
+title: OSINT - Off-the-shelf Ransomware Used to Target the Healthcare Sector - process_creation
+id: 6e6457a3-942d-4936-b3c9-6628eea1216d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58e743e1-3008-4198-a310-4c82950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 0a380f789a882f7c4e11a1b4f87bb4fd
+    - 9f86684abeb100455295a9a3f86e0d99
+    sha1:
+    - 7807eecce4b89564901caa1d3abd827f6438fcd5
+    - 448c93e79bf0741798ed99bb3108d1ceb90b6901
+    sha256:
+    - 0e53d65ecd1d6ae5f77500c535b8916f43a1da04b59efde63c1ca593d8363483
+    - 2f5b4ad81d358d57b8076a9b432be0e41ddff729c596b5b8ce5a01039dfaac3c
+  condition: attributes

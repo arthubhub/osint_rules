@@ -1,0 +1,15 @@
+title: OSINT - LuminosityLink RAT - url_request
+id: 5d1f9b77-d0ba-4d50-9dab-f049afb5177e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57a05786-71b8-49a2-892e-32ec950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - zippa.biz
+  condition: attributes

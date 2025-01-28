@@ -1,0 +1,71 @@
+title: OSINT - Potential abuse by Lazarus group using LinkedIn to spread malware -
+  process_creation
+id: 16cc2e43-466e-4278-9b9c-95febe475edd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/ea44bf19-332c-4dd8-8149-cd64a020c460.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.lazarus_group
+- attack.software.nukesped
+detection:
+  object_821:
+    md5:
+    - 7a5a694ac7d4068f580be624ece44f4f
+  object_822:
+    md5:
+    - aad9dcd3a2045dafea47eef776ec5b8a
+  object_823:
+    md5:
+    - 53ec27df858d3d133808ec338df29fc6
+  object_824:
+    md5:
+    - e6d09c7ad340d10109e6781bfb05a319
+  object_825:
+    md5:
+    - f1b78698b108fbf5bfcbb6d7f3bbad76
+  object_826:
+    md5:
+    - fa174cdd22080f11e13844c1e3326cd2
+  object_827:
+    md5:
+    - 97868b884fc9d01c0cb1f3fa4d80b09f
+  object_828:
+    md5:
+    - d3a85f6ccf117fb1cdb506094edddd22
+  object_829:
+    md5:
+    - 46b2cfef633e6e531928a9c606b40b16
+  object_831:
+    md5:
+    - 7a5a694ac7d4068f580be624ece44f4f
+    sha1:
+    - 3e52250148123c5105ce251899cf6ba696657daf
+    sha256:
+    - c09271054916807f78795a7440c6223d05c6dd543b97fd3a32aa44b1e8dc658e
+  object_833:
+    md5:
+    - aad9dcd3a2045dafea47eef776ec5b8a
+    sha1:
+    - b69740225bf9c370ade85120fabff3e0a06ec747
+    sha256:
+    - 1e959131e5964fc47b468bd5b920221a418b660898a692215ee996452d0b741a
+  object_835:
+    md5:
+    - d3a85f6ccf117fb1cdb506094edddd22
+    sha1:
+    - 9be879834f1b2e19adfc342657a70be2da5fb27e
+    sha256:
+    - 5cc1493357886c767354f152b940d63991f07a5010f22a46e8a514a08fbe3b18
+  object_837:
+    md5:
+    - 46b2cfef633e6e531928a9c606b40b16
+    sha1:
+    - 9cacbe18dca9df61f8adffd856193519d45425b2
+    sha256:
+    - f790ad0bfe7a465805b44264c88588e70eb3200806ac290150205a57d28d6b1a
+  condition: 1 of object_*

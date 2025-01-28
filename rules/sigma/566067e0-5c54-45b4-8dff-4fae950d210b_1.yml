@@ -1,0 +1,15 @@
+title: OSINT Yara rules for GlassRAT in Loki IOC Scanner by Florian Roth - url_request
+id: 09e0407b-f10f-4eb4-80ac-cc96e52b7868
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/566067e0-5c54-45b4-8dff-4fae950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+  condition: attributes

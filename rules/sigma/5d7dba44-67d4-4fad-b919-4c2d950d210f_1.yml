@@ -1,0 +1,15 @@
+title: On-memory post exploit payloads from encoded binary - url_request
+id: d7c80174-c0ec-467c-af71-f22679aa4b2d
+description: edit this field when analysing or editing the rule - reported by "MalwareMustDie"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d7dba44-67d4-4fad-b919-4c2d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://pastebin.com
+  condition: attributes

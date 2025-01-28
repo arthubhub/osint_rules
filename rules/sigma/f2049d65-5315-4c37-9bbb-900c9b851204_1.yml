@@ -1,0 +1,21 @@
+title: OSINT - CircleCI incident report for January 4, 2023 security incident - url_request
+id: 193421cc-b8ab-4b85-86d0-bf430570e267
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f2049d65-5315-4c37-9bbb-900c9b851204.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1021.004
+detection:
+  object_10867:
+    RequestUrl|contains:
+    - https://circleci.com
+  attributes:
+    RequestUrl|contains:
+    - potrax.com
+    - ptx.app
+  condition: 1 of object_* or attributes

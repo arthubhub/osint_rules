@@ -1,0 +1,47 @@
+title: Malspam 2016-06-24 (Locky) - dns_query
+id: 0f6343aa-ce2b-472b-ae8f-08e6d27e20b6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/576d3a39-fe90-4921-85cc-4e3c950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - neoventtechnologies.com
+    - formateam-finance.com
+    - layaligroup.com
+    - noriegachiropracticclinics.com
+    - salisburyjc.com
+    - queza.com
+    - pinakfoods.com
+    IpAddresses:
+    - 81.88.57.68
+    - 195.3.96.72
+    - 213.186.33.4
+    - 217.26.70.100
+    - 160.153.35.5
+    - 199.116.77.52
+    - 23.229.137.8
+    - 192.185.36.128
+    - 205.167.142.107
+    - 107.180.51.16
+    - 23.229.235.65
+    - 212.40.5.95
+    - 69.195.124.97
+    - 89.42.39.67
+    - 23.229.191.132
+    - 195.154.187.199
+    - 67.199.50.113
+    - 210.116.102.7
+    - 80.109.240.71
+    - 217.26.70.230
+    - 138.229.65.9
+    - 188.40.80.188
+    - 95.211.230.74
+    - 88.86.117.154
+    - 23.229.171.33
+  condition: attributes

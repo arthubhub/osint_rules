@@ -1,0 +1,22 @@
+title: OSINT Technical Analysis Tracks the Sakula Malware Family by SecureWorks -
+  dns_query
+id: 3b02612f-dd42-4b8a-877a-e0050b8a25f3
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55c2797f-1cd0-4d5f-92b9-4f93950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - sinmoung.com
+    - sharepoint-vaeit.com
+    IpAddresses:
+    - 115.47.35.117
+    - 23.27.112.143
+    - 104.128.233.4
+    - 180.210.206.246
+  condition: attributes

@@ -1,0 +1,71 @@
+title: 'Malspam 2016-09-16 (.wsf in .zip) - campaign: "(SCAN|FAX|DOC|IMG)_{integer}"
+  - url_request'
+id: ec923671-16c3-4161-84b6-6ee3be47e156
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57dc1fe4-0d70-4dde-95fe-46e8950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://mudelts.com
+    - honeydavis.us
+    - http://markanltd.com
+    - helpmybathroom.com
+    - http://mclodesigns.com
+    - http://lanehmontgomery.com
+    - http://24hourprintshop.com
+    - markanltd.com
+    - all4supply.com
+    - http://sstaswim.com
+    - earnbyemail.com
+    - http://mfcomputer.net
+    - http://helpmybathroom.com
+    - http://chelsea-west.com
+    - mahovik-bg.com
+    - chelsea-west.com
+    - http://earnbyemail.com
+    - http://xsolution.sk
+    - akademistcicek.com
+    - http://qarmoo.com
+    - xsolution.sk
+    - lv-nexis.com
+    - smt112.com
+    - http://junhao8.com
+    - junhao8.com
+    - mclodesigns.com
+    - 24hourprintshop.com
+    - zesthouse.com
+    - inovsol.com
+    - http://samenart.com
+    - qarmoo.com
+    - mfcomputer.net
+    - http://urachart.com
+    - http://smt112.com
+    - thewebgroup.net
+    - hollystamps.com
+    - http://hollystamps.com
+    - http://demo.website.pl
+    - sstaswim.com
+    - http://honeydavis.us
+    - http://islamiccollege.org
+    - islamiccollege.org
+    - http://inovsol.com
+    - http://mahovik-bg.com
+    - samenart.com
+    - http://sanalnet.org
+    - http://lv-nexis.com
+    - lanehmontgomery.com
+    - urachart.com
+    - mudelts.com
+    - http://zesthouse.com
+    - http://akademistcicek.com
+    - apro88.com
+    - sanalnet.org
+    - http://thewebgroup.net
+    - http://all4supply.com
+  condition: attributes

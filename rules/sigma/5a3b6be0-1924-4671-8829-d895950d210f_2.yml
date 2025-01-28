@@ -1,0 +1,39 @@
+title: 'OSINT - North Korea Bitten by Bitcoin Bug: Financially motivated campaigns
+  reveal new dimension of the Lazarus Group - dns_query'
+id: 63de4dd0-e433-430a-bdd3-4781e94218c5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a3b6be0-1924-4671-8829-d895950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.lazarus_group
+- attack.software.gh0st
+- attack.software.gh0st_rat
+- attack.software.powerratankba
+- attack.software.powerspritz
+detection:
+  attributes:
+    QueryName|contains:
+    - xn--bitcoingld-lcb.com
+    - xn--bitcoingld-lcb.org
+    - xn--bitcingold-t3b.com
+    - xn--btcongold-g5ad.com
+    - xn--6fgp.com
+    - xn--bitcoingol-4kb.com
+    - xn--bitcoigold-o1b.com
+    - xn--bitcoingod-8yb.com
+    - xn--bitoingold-1ib.com
+    - xn--btcoingold-v8a.com
+    - xn--btcongold-54ad.com
+    - xn--bitcin-zxa.org
+    - xn--bitcoingldwallet-twb.org
+    - xn--bitcingold-jbb.com
+    - xn--bitcingold-hcb.org
+    - xn--electrm-s2a.org
+    IpAddresses:
+    - 198.100.157.239
+  condition: attributes

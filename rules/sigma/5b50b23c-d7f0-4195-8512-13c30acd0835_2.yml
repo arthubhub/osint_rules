@@ -1,0 +1,17 @@
+title: Email Credential Phish, Dropbox Theme - dns_query
+id: c78e8424-4557-4eb1-8d09-cb0806a06b35
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b50b23c-d7f0-4195-8512-13c30acd0835.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - ahqcs.fr
+    - abri.org
+  condition: attributes

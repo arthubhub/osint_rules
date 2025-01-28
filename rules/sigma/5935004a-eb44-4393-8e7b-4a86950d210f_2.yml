@@ -1,0 +1,26 @@
+title: OSINT - Threat actors leverage EternalBlue exploit to deliver non-WannaCry
+  payloads - process_creation
+id: 992f3ec4-82cf-4ee9-a9d7-e9d76c0fa3eb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5935004a-eb44-4393-8e7b-4a86950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.gh0st
+- attack.software.eternalblue
+detection:
+  attributes:
+    md5:
+    - 863877867a84bdb28148c6d871ccf94f
+    - b43006d33d0d33cd4e45f2e761358953
+    sha1:
+    - 220c140c6dc21b39c7ef804a87186ff4a34af1f3
+    - d6f2548e58bd3e3de8c64bba9cdb8f18a66aef36
+    sha256:
+    - 4f49e17b457ef202ab0be905691ef2b2d2b0a086a7caddd1e70dd45e5ed3b309
+    - cba19d228abf31ec8afab7330df3c9da60cd4dae376552b503aea6d7feff9946
+  condition: attributes

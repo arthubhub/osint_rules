@@ -1,0 +1,32 @@
+title: Ransomware Activity Targeting the Healthcare and Public Health Sector - dns_query
+id: 6fd9fcae-0298-4b85-90cd-cbe50c99b5bd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/4dd5ab8b-f4dd-4d69-9873-745dd8196b94.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.ryuk_ransomware
+- attack.software.ryuk_ransomware
+detection:
+  attributes:
+    QueryName|contains:
+    - mangoclone.com
+    - ipecho.net
+    - wtfismyip.com
+    - ipinfo.io
+    - kostunivo.com
+    - myexternalip.com
+    - onixcellent.com
+    - icanhazip.com
+    - chishir.com
+    IpAddresses:
+    - 91.217.137.37
+    - 87.98.175.85
+    - 51.254.25.115
+    - 193.183.98.66
+    - 23.95.97.59
+  condition: attributes

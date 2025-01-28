@@ -1,0 +1,18 @@
+title: OSINT - Kronos Reborn - dns_query
+id: 23d83f26-858a-4c96-8f8c-5878ee5bdde8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b597959-6310-43e8-80b2-4d30950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.smoke_loader
+- attack.software.s0226
+detection:
+  attributes:
+    IpAddresses:
+    - 5.23.54.158
+  condition: attributes

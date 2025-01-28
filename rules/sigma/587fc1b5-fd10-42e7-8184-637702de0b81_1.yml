@@ -1,0 +1,15 @@
+title: OSINT  - New Mac backdoor using antiquated code - url_request
+id: 4f2c8eda-2e0a-4bdb-b69f-47ef5062db82
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/587fc1b5-fd10-42e7-8184-637702de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.malwarebytes.com
+  condition: attributes

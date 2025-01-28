@@ -1,0 +1,23 @@
+title: 'OSINT - LMAOxUS Ransomware: Another Case of Weaponized Open Source Ransomware
+  - process_creation'
+id: 6b88484f-b539-4e83-9ab2-1235ffd22002
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58e60bd5-6874-4210-9419-533c950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 7083de4397b81eca6d1900133700e89c
+    - 2de1f14d07370b9867f252c07637ab40
+    sha1:
+    - ce5d8e0ece4c413757aeb2671e79280d133e30ac
+    - 39691193f80bef53901d1f6589d66e1b35c201fa
+    sha256:
+    - d0d16bb28ed263038358db5c1ae784c43d6ea7993118cf390cb2e7a7466969c2
+    - d3a00a1101f2fa37b0b01bbee1b3c7f683ccf27fa224611721a863573d6e99da
+  condition: attributes

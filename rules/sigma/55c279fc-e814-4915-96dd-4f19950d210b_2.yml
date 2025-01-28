@@ -1,0 +1,57 @@
+title: OSINT Revealing the Cyber-Kraken (Threat Group 3390 / Emissary Panda) by SecureWorks
+  - dns_query
+id: 590e2651-8394-46d6-922e-576af434404e
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55c279fc-e814-4915-96dd-4f19950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - navydocument.com
+    - google-ana1ytics.com
+    - updatawindows.com
+    - hotmailcontact.net
+    - micr0soft.org
+    - blackcmd.com
+    - local-test.com
+    - justufogame.com
+    - update-onlines.org
+    - darkhero.org
+    - microsoft-outlook.org
+    - laxness-lab.com
+    - apigmail.com
+    - pchomeserver.com
+    - hotmail-onlines.com
+    - lnip.org
+    IpAddresses:
+    - 96.44.182.246
+    - 67.215.232.181
+    - 72.11.141.133
+    - 49.143.192.221
+    - 74.63.195.238
+    - 192.161.61.20
+    - 74.63.195.236
+    - 96.44.177.195
+    - 96.44.182.245
+    - 67.215.232.182
+    - 96.44.182.243
+    - 208.115.242.36
+    - 67.215.232.179
+    - 66.63.178.142
+    - 49.143.205.30
+    - 74.63.195.237
+    - 103.24.0.142
+    - 208.115.242.38
+    - 208.115.242.37
+    - 106.187.45.162
+    - 192.161.61.22
+    - 192.161.61.19
+    - 103.24.1.54
+    - 72.11.148.220
+    - 192.151.236.138
+  condition: attributes

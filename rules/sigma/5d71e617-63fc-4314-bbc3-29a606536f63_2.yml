@@ -1,0 +1,20 @@
+title: Malicious comment on GitHub pointing to malware - dns_query
+id: 53e7987e-4d6f-4126-9d0a-0ed00802a9ff
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d71e617-63fc-4314-bbc3-29a606536f63.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1367
+detection:
+  object_8475:
+    QueryName|contains:
+    - mediafire.com
+  object_8484:
+    QueryName|contains:
+    - mediafire.com
+  condition: 1 of object_*

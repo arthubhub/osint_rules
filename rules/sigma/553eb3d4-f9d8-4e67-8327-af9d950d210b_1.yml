@@ -1,0 +1,16 @@
+title: 'OSINT Without a Trace: Fileless Malware Spotted in the Wild by Trend Micro
+  - url_request'
+id: e71647ce-f4fa-459c-ab46-cedea3a30242
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/553eb3d4-f9d8-4e67-8327-af9d950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.trendmicro.com
+  condition: attributes

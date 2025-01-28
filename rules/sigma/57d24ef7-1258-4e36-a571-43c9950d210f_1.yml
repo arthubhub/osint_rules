@@ -1,0 +1,33 @@
+title: 'Malspam 2016-09-08 (.wsf in .zip) - campaign: icloud.com - url_request'
+id: e132e60c-8689-404b-8c47-bde6f60eeba1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d24ef7-1258-4e36-a571-43c9950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://158.195.68.10
+    - http://fidelitas.heimat.eu
+    - http://209.41.183.242
+    - http://www.aldesco.it
+    - josemedina.com
+    - http://www.association-julescatoire.fr
+    - sp-moto.ru
+    - http://www.one-clap.jp
+    - gam-e20.it
+    - http://sitio655.vtrbandaancha.net
+    - http://josemedina.com
+    - http://www.bytove.jadro.szm.com
+    - http://www.ccnprodusenaturiste.home.ro
+    - http://www.idiomestarradellas.com
+    - http://toukontoutaukaiazalea.web.fc2.com
+    - http://www.xolod-teplo.ru
+    - http://srxrun.nobody.jp
+    - http://www.oltransservice.org
+    - http://sp-moto.ru
+  condition: attributes

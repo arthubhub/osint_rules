@@ -1,0 +1,16 @@
+title: 'OSINT Threat Spotlight: Angler Lurking in the Domain Shadows by Cisco Talos
+  group - url_request'
+id: 72f56d67-906e-46d7-81e7-fbe9ea3290b4
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54f8688d-9444-4033-82fb-3c19950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blogs.cisco.com
+  condition: attributes

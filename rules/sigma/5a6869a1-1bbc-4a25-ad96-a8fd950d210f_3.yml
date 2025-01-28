@@ -1,0 +1,28 @@
+title: Fake Job Application incl. Macro - process_creation
+id: 227c333f-db1d-4307-ae81-56d4c4d002c9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a6869a1-1bbc-4a25-ad96-a8fd950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.smoke_loader
+detection:
+  object_265:
+    md5:
+    - 82abe64c84e906789ea4fde853ebb9fc
+    sha1:
+    - 3ef1633d5c068dfeda66d2906daa9ac07715933a
+    sha256:
+    - c53dd04cb0ddfd82076cecdcc38dca16163f2b3d843708e448bd3d8b822ed27d
+  attributes:
+    md5:
+    - 13cc8d0857ee50cbd9fdc38484dc32f2
+    sha1:
+    - f5a0e53dda360c372067d8aa9091f80451ee9eb5
+    sha256:
+    - 954e8e88740fd3e659fd4ad0502982dd173db2d90cfca0718bfc739bf886d51c
+  condition: 1 of object_* or attributes

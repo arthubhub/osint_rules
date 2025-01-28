@@ -1,0 +1,19 @@
+title: 'OSINT - ATMZombie: banking trojan in Israeli waters - url_request'
+id: e352c3f7-5380-4b0f-b3b9-d9a9b14ecb4f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56d42420-c838-4c85-80ee-1365950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - updconfs.com
+    - https://securelist.com
+    - systruster.com
+    - msupdcheck.com
+    - retsback.com
+  condition: attributes

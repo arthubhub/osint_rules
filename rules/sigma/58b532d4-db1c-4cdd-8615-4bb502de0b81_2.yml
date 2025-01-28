@@ -1,0 +1,35 @@
+title: OSINT - The Gamaredon Group Toolset Evolution - dns_query
+id: 13d38e14-1c34-4b28-8e92-ed990908b533
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58b532d4-db1c-4cdd-8615-4bb502de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.gamaredon_group
+detection:
+  attributes:
+    QueryName|contains:
+    - hrome-update.ru
+    - update-service.net
+    - admin-ru.ru
+    - win-restore.ru
+    - hrome-updater.ru
+    - skypeupdate.ru
+    - spread-ss.ru
+    - email-attachments.ru
+    - proxy-spread.ru
+    - check-update.ru
+    - spread-service.ru
+    - umachka.ua
+    - file-attachments.ru
+    - mars-ru.ru
+    - msrestore.ru
+    - winupdateloader.ru
+    - spread-updates.ru
+    - brokbridge.com
+    - skypeemocache.ru
+  condition: attributes

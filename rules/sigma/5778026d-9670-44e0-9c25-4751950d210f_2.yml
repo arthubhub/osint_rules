@@ -1,0 +1,18 @@
+title: OSINT DarkHotel samples at WooYun - dns_query
+id: b9fbb16a-86dc-41b5-bd81-40a74419b494
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5778026d-9670-44e0-9c25-4751950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.darkhotel
+detection:
+  attributes:
+    QueryName|contains:
+    - view-drama-online.com
+    - all-microsoft-control.com
+  condition: attributes

@@ -1,0 +1,29 @@
+title: 'Blog Post: EMOTET INFECTION WITH ICEDID - process_creation'
+id: eeccb51e-3f59-46b1-b6ee-46f600996846
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b337664-88a4-4764-a97f-205b0acd0835.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.emotet
+detection:
+  object_9889:
+    md5:
+    - c4796308953017c9dc69d340689e8efe
+    sha1:
+    - 754bbba270998733bec18a69b64e2c27cc17b7f1
+    sha256:
+    - fcbe9f4e5a8cbb6f74e4408d871ace98282ffc840245abeae3e158cc034cd094
+  object_9890:
+    md5:
+    - 2e2887fca7eb5a2ca32ac7cbaaee12cd
+    sha1:
+    - ac76fa40b2cf525fb13a09560b70093641929523
+    sha256:
+    - 263365202c3905ae95f8a138f22317bb1db30eee0ddee0fd6ecc70f785df9a91
+  condition: 1 of object_*

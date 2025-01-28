@@ -1,0 +1,19 @@
+title: Kinsing cryptomining exploiting Erlang service - dns_query
+id: d8737308-34ed-4b3b-bd45-27afe40fea8d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/10f82b82-84ee-4adf-8565-e0d6d034c2a3.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.kinsing
+- attack.t1190
+- attack.t1562
+detection:
+  object_16184:
+    IpAddresses:
+    - 78.153.140.60
+  condition: 1 of object_*

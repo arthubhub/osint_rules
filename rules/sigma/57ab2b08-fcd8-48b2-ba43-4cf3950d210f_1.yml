@@ -1,0 +1,23 @@
+title: OSINT EFF Report Operation Manul - url_request
+id: 66e3f4c9-eb6b-4e81-b687-d19d84887eca
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ab2b08-fcd8-48b2-ba43-4cf3950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.eff.org
+    - axroot.com
+    - kaliex.net
+    - orange2015.net
+    - adobeair.net
+    - adobeinstall.com
+    - accountslogin.services
+    - dropboxonline.com
+    - mangoco.net
+  condition: attributes

@@ -1,0 +1,17 @@
+title: OSINT - New Crypto-Ransomware JIGSAW Plays Nasty Games - url_request
+id: f8398147-9e8f-49ee-8fc9-9ab0c23c620a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5717777b-a8b4-4876-b060-4339950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - 1fichier.com
+    - http://waldorftrust.com
+    - http://blog.trendmicro.com
+  condition: attributes

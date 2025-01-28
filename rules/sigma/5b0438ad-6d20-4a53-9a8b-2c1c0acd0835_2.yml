@@ -1,0 +1,22 @@
+title: Emotet 5-18-2018 - process_creation
+id: c545718c-71f5-4740-a14c-412c7816e060
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b0438ad-6d20-4a53-9a8b-2c1c0acd0835.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.emotet
+detection:
+  object_2568:
+    md5:
+    - 923a8d46eca1e77e020e0ac0951226d8
+    sha1:
+    - 45ef0de6aa324ebebdf9ba61129cd316e19973ae
+    sha256:
+    - 1b9e1f248b3dd13e0c8668117caa7f8af1e34918f1e9ac6f71d619e50fd91538
+  condition: 1 of object_*

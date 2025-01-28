@@ -1,0 +1,23 @@
+title: 'Malspam 2016-09-14 (.wsf in .zip) - campaign: "Account report" - dns_query'
+id: 47bf8e9f-552f-4566-9716-c66254057690
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d91b04-fabc-46fe-8d05-441d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - citmowra.in
+    - ecadxyst.net
+    - sternhala.com
+    - adzebury.com
+    - sparmsov.org
+    - maydayen.net
+    IpAddresses:
+    - 37.200.70.6
+    - 178.212.131.10
+  condition: attributes

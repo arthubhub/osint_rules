@@ -1,0 +1,41 @@
+title: OSINT phishing sites and php kits - February 2016 - Part 1 by TechHelpList
+  - url_request
+id: c1e2d9ed-e98e-451c-91a8-6e47f9233e58
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56b06cf0-ac30-4472-93dd-44ce950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - icloud-lidt.com
+    - icloud-yunid-apple.com
+    - apple-my-login.com
+    - icloud-tyce.com
+    - icloudidjh.com
+    - apple-lcnappe.com
+    - icloud-applend.com
+    - apple-icloud-can.com
+    - appie-find.com
+    - apple-ip-sir.com
+    - appleid-icloud-vip.com
+    - apple-bu.com
+    - apple-icloud-ns.com
+    - icloud-appleid-photos.com
+    - apple-mor.com
+    - https://techhelplist.com
+    - apple-icloud-safe.com
+    - apple-iphonegps.com
+    - apple-yet.com
+    - apple-sye.com
+    - icloud-apple-ios91.com
+    - apple-bb.com
+    - itunes-lidt.com
+    - apple-gay.com
+    - apple-lidt.com
+    - apple-iappleid.com
+  condition: attributes

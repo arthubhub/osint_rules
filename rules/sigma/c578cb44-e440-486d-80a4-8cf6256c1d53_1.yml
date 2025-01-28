@@ -1,0 +1,16 @@
+title: 'AA23-335A: IRGC-Affiliated Cyber Actors Exploit PLCs in Multiple Sectors,
+  Including U.S. Water and Wastewater Systems Facilities - url_request'
+id: 7710a867-045f-4bd9-ac94-75646fb9e388
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/c578cb44-e440-486d-80a4-8cf6256c1d53.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_7444:
+    RequestUrl|contains:
+    - https://www.cisa.gov
+  condition: 1 of object_*

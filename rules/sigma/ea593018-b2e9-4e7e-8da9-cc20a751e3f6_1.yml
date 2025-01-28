@@ -1,0 +1,42 @@
+title: 'MoustachedBouncer: Espionage against foreign diplomats in Belarus - url_request'
+id: 4d56c980-650e-4da9-ac61-1d9cd26a47e6
+description: edit this field when analysing or editing the rule - reported by "ESET"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/ea593018-b2e9-4e7e-8da9-cc20a751e3f6.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_387:
+    RequestUrl|contains:
+    - updates.microsoft.com
+  object_388:
+    RequestUrl|contains:
+    - http://updates.microsoft.com
+  object_390:
+    RequestUrl|contains:
+    - http://updates.microsoft.com
+  object_393:
+    RequestUrl|contains:
+    - http://updates.microsoft.com
+  object_458:
+    RequestUrl|contains:
+    - securityocspdev.com
+  object_460:
+    RequestUrl|contains:
+    - centrocspupdate.com
+  object_462:
+    RequestUrl|contains:
+    - ocsp-atomsecure.com
+  object_464:
+    RequestUrl|contains:
+    - dervasopssec.com
+  object_466:
+    RequestUrl|contains:
+    - windows.network.troubleshooter.com
+  object_467:
+    RequestUrl|contains:
+    - http://windows.network.troubleshooter.com
+  condition: 1 of object_*

@@ -1,0 +1,29 @@
+title: SNOWYAMBER, HALFRIG, QUARTERRIG - IoC Reference - dns_query
+id: e28b4e4a-2380-43b9-9049-9f34e5f72d01
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/e9bf73b9-f82c-4203-ba04-deacf8d9fbd6.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.snowyamber
+- attack.software.quarterrig
+- attack.software.halfrig
+detection:
+  attributes:
+    QueryName|contains:
+    - sawabfoundation.net
+    - sanjosemotosport.com
+    - gatewan.com
+    - badriatimimi.com
+    - communitypowersports.com
+    - sharpledge.com
+    - pateke.com
+    IpAddresses:
+    - 51.75.210.218
+    - 85.195.89.91
+    - 91.218.183.90
+  condition: attributes

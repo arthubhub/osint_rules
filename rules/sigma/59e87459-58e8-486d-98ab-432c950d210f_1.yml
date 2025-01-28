@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-10-18 : Affid=3, offline, ".asasin" : "Message from 02087654321"
+  - "Voice Message.7z" - url_request'
+id: 3da3ce7b-e3b7-4295-a46a-c35266b5ccf7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59e87459-58e8-486d-98ab-432c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://rateventrithathen.infov
+    - http://petrochemus.com
+    - http://jeangurunlian.com
+    - http://peopleiknow.org
+    - http://stemcellenhancementresearch.com
+  condition: attributes

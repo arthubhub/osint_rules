@@ -1,0 +1,27 @@
+title: Information stealer malware via fake malicious document as "University of Luxembourg"
+  - process_creation
+id: 6d659a1c-a68e-41bb-b89a-b49d353c1a55
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d108ff9-9c70-4fbe-932d-acd8950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_18115:
+    md5:
+    - 8989672db4d283f6c8e5b97eda426ef4
+    sha1:
+    - 7cae4abd0b632e822d3163bf62435e658cab76c4
+    sha256:
+    - c6b68af5a397b24d5573bbcbb6abd8ffe45550e428f2649e7ce99f6ae15148d3
+  object_18116:
+    md5:
+    - 7ddb1d9c25487d85cb687682b8a4fb7d
+    sha1:
+    - 0117724817462bb8e09b5b507155eae32b878449
+    sha256:
+    - e5df9ce468a2510c86d8808083e5c3326385596fba864546491922b2ea9802df
+  condition: 1 of object_*

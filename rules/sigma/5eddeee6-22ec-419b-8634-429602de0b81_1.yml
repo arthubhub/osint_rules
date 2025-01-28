@@ -1,0 +1,18 @@
+title: OSINT - TA505 IoC - 2020-06-06 - url_request
+id: 68017a7a-b10f-4609-96f3-e6d5dfcd5fd4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5eddeee6-22ec-419b-8634-429602de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.ta505
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+    - https://shr-links.com
+  condition: attributes

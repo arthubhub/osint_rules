@@ -1,0 +1,37 @@
+title: OSINT - Cryptocurrency Miner Uses WMI and EternalBlue To Spread Filelessly
+  - process_creation
+id: 8e4839ca-24a0-4833-9057-570a0a4a960b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59b2544f-ada4-4fc3-9d6a-4165950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.eternalblue
+detection:
+  attributes:
+    md5:
+    - b6b68faa706f7740dafd8941c4c5e35a
+    - 98d615c222293ca937ab4b1b4a7c8118
+    - c0602223c09e444c537b0445d6563304
+    - a206d9e633c7d74a735190299b125271
+    - 010a7fa751f4a64c989eacabf58c8fbf
+    - 830b8dc142f16aa928ada0e271a58572
+    sha1:
+    - 806027db01b4997f71aefde8a5dbee5b8d9dbe98
+    - 2db34fb90ec273120afa831cde91a5a7158b8fe6
+    - c7c374073b9631c2ce0345a9ff79bb353bd507c1
+    - 53267b43122ed52aba6ec9faa50397f311a295e8
+    - 2b10fc7ebad4eb93d1a907cc6f5211be6cf73d5e
+    - bec02c55c98612ee716bb5956f68e0dd27cf0afc
+    sha256:
+    - a095f60ff79470c99752b73f8286b78926bc46eb2168b3ecd4783505a204a3b0
+    - e6fc79a24d40aea81afdc7886a05f008385661a518422b22873d34496c3fb36b
+    - 6315657fd523118f51e294e35158f6bd89d032b26fe7749a4de985edc81e5f86
+    - 8c5bb89596cd732af59693b8da021a872fee9b3696927b61d4387b427834c461
+    - f37a0d5f11078ef296a7c032b787f8fa485d73b0115cbd24d62cdf2c1a810625
+    - 674f2df2cdadab5be61271550605163a731a2df8f4c79732481cad532f00525d
+  condition: attributes

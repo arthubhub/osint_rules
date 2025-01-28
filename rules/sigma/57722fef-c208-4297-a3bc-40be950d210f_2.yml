@@ -1,0 +1,19 @@
+title: OSINT - Linux/GafGyt - DVR devices compromised/infected - dns_query
+id: 6ebd34dd-2af6-4a37-b7bb-7cd05cff42a5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57722fef-c208-4297-a3bc-40be950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 74.118.193.239
+    - 208.67.1.15
+    - 149.202.242.80
+    - 92.222.66.214
+    - 69.30.210.254
+  condition: attributes

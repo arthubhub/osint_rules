@@ -1,0 +1,16 @@
+title: OSINT Enterprises Hit by BARTALEX Macro Malware in Recent Spam Outbreak by
+  Trend Micro - url_request
+id: e45fe064-e7c4-4398-863a-16227e999809
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/553ead98-1fb4-4ee6-a8ea-ad6d950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.trendmicro.com
+  condition: attributes

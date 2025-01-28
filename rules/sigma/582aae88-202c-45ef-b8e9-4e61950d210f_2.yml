@@ -1,0 +1,19 @@
+title: OSINT - Hades Locker Ransomware Mimics Locky - process_creation
+id: f15b349c-df0a-4e6a-a0ec-b0ebb763f9f3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582aae88-202c-45ef-b8e9-4e61950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 8f03cf5d3c951cf2711144e84779b590
+    sha1:
+    - 68e8e1eaa7439173362ff42fec37e1149f162662
+    sha256:
+    - 37004c5019db04463248da8469952af8ed742ba00cfa440dd65b2d94d0856809
+  condition: attributes

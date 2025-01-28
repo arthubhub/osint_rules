@@ -1,0 +1,20 @@
+title: Malspam - Locky - 2016-05-26 (.docm) - url_request
+id: cf89f1cf-809b-4270-be4d-a285d4865143
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5746bc01-151c-4f41-a957-4b5b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.abbigliamentotorino.com
+    - http://www.pececitos.com
+    - http://www.citytonight.es
+    - http://www.studioparcianello.com
+    - http://www.johnlodgearchitects.com
+    - http://www.centroinfantilelmolino.com
+  condition: attributes

@@ -1,0 +1,28 @@
+title: 'OSINT Cylance SPEAR Team: A Threat Actor Resurfaces from Cylance - dns_query'
+id: f00c7241-56f2-4f6d-b17d-438cc8559d43
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/555de343-19c0-42e9-b793-ab11950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 64.62.202.82
+    - 103.229.125.157
+    - 108.171.246.140
+    - 199.192.153.72
+    - 64.71.138.240
+    - 103.238.227.69
+    - 64.71.162.70
+    - 121.127.249.97
+    - 162.251.122.216
+    - 118.99.13.184
+    - 173.224.214.12
+    - 180.210.204.157
+    - 203.80.238.183
+    - 59.188.250.161
+  condition: attributes

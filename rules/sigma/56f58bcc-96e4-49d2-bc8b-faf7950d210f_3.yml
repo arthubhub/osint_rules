@@ -1,0 +1,19 @@
+title: OSINT - SURGE IN SPAM CAMPAIGN DELIVERING LOCKY RANSOMWARE DOWNLOADERS - process_creation
+id: 291838d2-c35a-4339-80ea-f8b88b3894e7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f58bcc-96e4-49d2-bc8b-faf7950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 3f118d0b888430ab9f58fc2589207988
+    sha1:
+    - 1231e4a00c3da3ae8001a0620bae1242ef95d095
+    sha256:
+    - f927efd7cd2da3a052d857632f78ccf04b673e2774f6ce9a075e654dfd77d940
+  condition: attributes

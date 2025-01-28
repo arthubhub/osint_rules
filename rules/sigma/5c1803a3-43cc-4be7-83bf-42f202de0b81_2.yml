@@ -1,0 +1,15 @@
+title: OSINT - Password Protected ZIP with Maldoc - dns_query
+id: 25b64ebb-08a9-497e-8e12-cc04479d0a2b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c1803a3-43cc-4be7-83bf-42f202de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - duenexacch.com
+  condition: attributes

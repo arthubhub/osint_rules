@@ -1,0 +1,54 @@
+title: 'MISSING LINK: Tibetan Groups Targeted with Mobile Exploits - process_creation'
+id: cf526582-c853-4ad3-a834-015add7bd90d
+description: edit this field when analysing or editing the rule - reported by "citizenlab"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bec8d43-b990-4129-a9f4-45d08064ab0b.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_11401:
+    md5:
+    - fb7bab3571e557ee7f88309dc472f748
+    sha1:
+    - 68533858c90515369a1d2f36d72cb3537de58437
+    sha256:
+    - b85fe634f3c5b1022a1adbc21f3b85b58451ca2b89e9380fc5f22b9340a18b88
+  object_11403:
+    md5:
+    - 111ba6564931fccb7f4d0e940b492520
+    sha1:
+    - 33ea7c4ad4f6d0b59b7b4de906735483e6e8cff7
+    sha256:
+    - e510c361c8101384277dd95cc2c8e76715dd241f58553f592245b620422beaf3
+  object_11405:
+    md5:
+    - 0d5158b33dc32cfd3c020f9dd13bde55
+    sha1:
+    - df4c6cd8e046d7072cd833575593069f28a02674
+    sha256:
+    - 6977e6098815cd91016be9d76f194ed4622640d03c6cdd66b1032306a2190af7
+  object_11407:
+    md5:
+    - fb713151159601eef43226aadd7bb5a6
+    sha1:
+    - fedb77270570b8c401577b65595a9b32e2fa368a
+    sha256:
+    - 0d13e403303b52edae6beb76a6fe7ed454f340aae1246b9a3f55ca728da2d6aa
+  object_11409:
+    md5:
+    - fa3aeb8ce67077e54b09e0e4c80e3814
+    sha1:
+    - 24ef2efdb2348cf9db3fb5bf79555e1ffe411c68
+    sha256:
+    - 0d2ee9ade24163613772fdda201af985d852ab506e3d3e7f07fb3fa8b0853560
+  attributes:
+    sha256:
+    - b85fe634f3c5b1022a1adbc21f3b85b58451ca2b89e9380fc5f22b9340a18b88
+    - 0d13e403303b52edae6beb76a6fe7ed454f340aae1246b9a3f55ca728da2d6aa
+    - 6977e6098815cd91016be9d76f194ed4622640d03c6cdd66b1032306a2190af7
+    - e510c361c8101384277dd95cc2c8e76715dd241f58553f592245b620422beaf3
+    - 0d2ee9ade24163613772fdda201af985d852ab506e3d3e7f07fb3fa8b0853560
+  condition: 1 of object_* or attributes

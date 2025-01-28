@@ -1,0 +1,19 @@
+title: 'Malspam 2016-09-12 (.js in .zip) - campaign: "Budget report" - url_request'
+id: f6b86bfb-6ed1-4055-aca3-4cade4aa7b79
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d6b9d9-5b3c-4d03-b7a7-4ed2950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - trybttr.ws
+    - one4four1.ws
+    - http://trybttr.ws
+    - lookbookinghotels.ws
+    - http://lookbookinghotels.ws
+  condition: attributes

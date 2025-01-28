@@ -1,0 +1,42 @@
+title: Turla Outlook White Paper - process_creation
+id: 3c11ae28-a774-490c-823c-4489bc69b060
+description: edit this field when analysing or editing the rule - reported by "ESET"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b773e07-e694-458b-b99c-27f30a016219.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1114
+- attack.group.turla_group
+- attack.t1122
+- attack.email_collection
+- attack.component_object_model_hijacking
+detection:
+  object_6811:
+    md5:
+    - 7009af646c6c3e6abc0af744152ca968
+    sha1:
+    - 8a7e2399a61ec025c15d06ecdd9b7b37d6245ec2
+    sha256:
+    - e869c8e7f61d4f49d357d02179ed557e466b1d66ce6993faddbc23d5992ff59b
+  object_6813:
+    md5:
+    - af8889f4705145d4390ee8d581f45436
+    sha1:
+    - cf943895684c6ff8d1e922a76b71a188cfb371d7
+    sha256:
+    - 6a9bc3a1eb4f814af952f27066b70136b9cd7ad980f705dad5bc91b697888b5f
+  object_6814:
+    sha1:
+    - 851dffa6cd611dc70c9a0d5b487ff00bc3853f30
+  object_6816:
+    md5:
+    - ff8c3f362d7c9b9a19cfa09b4b3cfc75
+    sha1:
+    - f992abe8a67120667a01b88cd5bf11ca39d491a0
+    sha256:
+    - 881941ea24e92f4bd4d69d79e27ce1d2b10094172cb3cc93b223daf70ef2d867
+  condition: 1 of object_*

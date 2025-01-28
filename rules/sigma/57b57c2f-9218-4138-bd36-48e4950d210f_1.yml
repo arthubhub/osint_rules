@@ -1,0 +1,19 @@
+title: OSINT Potential CNC base on CCNE activities described in NSA document leak
+  - url_request
+id: b707a092-9540-4c7d-bcae-d139c250d349
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b57c2f-9218-4138-bd36-48e4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.spiegel.de
+    - mcee.org
+    - transpersia.com
+    - sandrogolinelli.net
+  condition: attributes

@@ -1,0 +1,16 @@
+title: OSINT - Cracking Orcus RAT - url_request
+id: e9d8cc93-72d2-4060-8e69-d539534d115c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57aaeefd-0bd4-4a41-87ad-4e17950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.deniable.org
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

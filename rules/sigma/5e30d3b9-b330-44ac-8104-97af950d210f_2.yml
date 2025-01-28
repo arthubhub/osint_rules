@@ -1,0 +1,22 @@
+title: Emotet - Trickbot - CobaltStrike - gtag mor85 - dns_query
+id: b713d1f6-4bcb-41ef-905a-e4456e45dd18
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e30d3b9-b330-44ac-8104-97af950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  object_6925:
+    QueryName|contains:
+    - sophosdefence.com
+    IpAddresses:
+    - 149.248.5.240
+  object_6926:
+    QueryName|contains:
+    - qwe4dse4.com
+    IpAddresses:
+    - 45.32.211.239
+  condition: 1 of object_*

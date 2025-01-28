@@ -1,0 +1,116 @@
+title: Emotet - 5/21/2018 - url_request
+id: 18bde4b7-0c17-4925-838f-2baee232cd97
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b06a4b4-6e74-40b8-ae95-9fc10acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://kunkel5.com
+    - http://animematsuri.com
+    - http://bunt.com
+    - http://deist-online.de
+    - http://ezinet.co.za
+    - http://jamesddunn.com
+    - http://gips-walkenried.de
+    - http://homexxl.de
+    - https://kadow.de
+    - http://casamatamatera.it
+    - http://itmdf.de
+    - http://solid-unit.com
+    - http://k8ir.com
+    - http://edcentric.org
+    - http://leasefor.com
+    - http://jeffarchibald.ca
+    - http://kjg-schiefbahn.de
+    - http://generalbikes.com
+    - http://fischer-itsolutions.de
+    - https://averin.pro
+    - http://crazy-systems.com
+    - http://cyzic.com
+    - http://labmat.pl
+    - http://keithdaley.co.uk
+    - http://aqualuna.jp
+    - https://birgitdresel.de
+    - http://contactclub.com
+    - http://kursy-bhp-sieradz.pl
+    - http://websteroids.ro
+    - http://www.toniruy.ru
+    - http://hygienic.co.th
+    - http://hellmuth-worbs.de
+    - http://dievoigts.com
+    - http://cabola.com.br
+    - http://catbones.com
+    - http://cedecarmona.com
+    - http://dmsta.com
+    - http://heathmarshallhorsemanship.com
+    - http://ginca.jp
+    - http://ergotherapie-gerolstein.de
+    - http://charihome.com
+    - http://flewer.pl
+    - http://fatafati.net
+    - http://czeppel.de
+    - http://josephdutton.com
+    - http://cnajs.com
+    - http://chris-dark.com
+    - http://kflife.com
+    - http://jana-spreen.de
+    - http://detss.com
+    - http://larrysmith.com
+    - http://onfarmsystems.com
+    - https://ibkrentel.de
+    - http://bechner.com
+    - http://h-itshop.de
+    - http://iyioglu.com
+    - http://ivanrivera.com
+    - http://franssmanmedia.nl
+    - http://fantastrick.nl
+    - http://edv-salz.de
+    - http://innervation.com
+    - http://hellogrid.com
+    - http://coromandelhistory.co.nz
+    - https://chergo.es
+    - http://chergo.es
+    - http://fotofolly.com
+    - https://fotofolly.com
+    - http://halcak.sk
+    - http://davehale.co.uk
+    - http://andrescal.com.ar
+    - http://janpolet.nl
+    - https://hillringsberg.com
+    - http://klumpp.me
+    - http://axiscook.com
+    - http://hajdamowicz.com
+    - http://gerbrecha.com
+    - http://data-gel.com
+    - http://imagesbr.com
+    - http://houselight.com.br
+    - https://protonmail.com
+    - http://gsimaging.net
+    - http://eurokarton.pl
+    - http://jvmusic.ca
+    - http://groupevl.ca
+    - https://juergen-dietel.de
+    - http://jeny.nl
+    - http://kevinlombardo.com
+    - http://bmsdesign.com
+    - http://FlorissantFire.com
+    - http://anzo.jp
+    - http://europlastic.de
+    - http://fredmeseck.com
+    - http://hisociety.at
+    - http://ahrensgrabenhorst.de
+    - http://liebner.de
+    - http://lambertons.com
+    - http://429days.com
+    - http://intenseit.com.au
+    - https://frankfurter-blumenbote.de
+  condition: attributes

@@ -1,0 +1,16 @@
+title: 'PSA: Fake CVE-2023-45124 Phishing Scam Tricks Users Into Installing Backdoor
+  Plugin - process_creation'
+id: 266185b1-4ee1-478b-ad1b-7d3c84448695
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/b6084bdd-5570-4e1e-965c-c587c9ae1c77.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    sha256:
+    - ffd5b0344123a984d27c4aa624215fa6452c3849522803b2bc3a6ee0bcb23809
+  condition: attributes

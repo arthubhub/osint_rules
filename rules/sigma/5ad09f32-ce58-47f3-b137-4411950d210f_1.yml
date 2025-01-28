@@ -1,0 +1,18 @@
+title: Vurten Ransomware - url_request
+id: 245a0dc8-defc-4fc1-8533-62de9b2fabde
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ad09f32-ce58-47f3-b137-4411950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.vurten
+- attack.software.vurten
+detection:
+  object_9467:
+    RequestUrl|contains:
+    - https://twitter.com
+  condition: 1 of object_*

@@ -1,0 +1,23 @@
+title: 'OSINT - Danger Close: Fancy Bear Tracking of Ukrainian Field Artillery Units
+  - process_creation'
+id: 429ad2f8-cc24-4ee7-84b4-3178dc2fbc9b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/585bd19b-43a4-4b35-9023-4d60950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.sofacy
+- attack.software.x-agent
+detection:
+  attributes:
+    md5:
+    - 6f7523d3019fa190499f327211e01fcb
+    sha1:
+    - c492d80fc6797b06105a20b98a0263b239d2ea27
+    sha256:
+    - 02de72e43d578c45d9d6359299cb2d47771081617ff01363b736414eb831deea
+  condition: attributes

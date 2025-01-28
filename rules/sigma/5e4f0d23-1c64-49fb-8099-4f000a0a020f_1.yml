@@ -1,0 +1,15 @@
+title: Ostap Maldoc Samples - url_request
+id: 313cab94-d19e-49d6-aea4-6d91141543bb
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e4f0d23-1c64-49fb-8099-4f000a0a020f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://laskowski-tech.com
+  condition: attributes

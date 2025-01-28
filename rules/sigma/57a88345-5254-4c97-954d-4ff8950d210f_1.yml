@@ -1,0 +1,19 @@
+title: 'OSINT - Strider: Cyberespionage group turns eye of Sauron on targets - url_request'
+id: 633596fa-6228-423e-8afe-28f93a689c4a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57a88345-5254-4c97-954d-4ff8950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.myhomemusic.com
+    - http://wildhorses.awardspace.info
+    - http://www.symantec.com
+    - myhomemusic.com
+    - http://flowershop22.110mb.com
+  condition: attributes

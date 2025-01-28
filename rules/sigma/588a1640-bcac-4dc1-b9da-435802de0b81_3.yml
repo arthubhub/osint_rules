@@ -1,0 +1,17 @@
+title: Malware 2017-01-26 (.js in .zip) - Cerber - process_creation
+id: e2b9ffa9-0877-41ea-a89f-2660469627c9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588a1640-bcac-4dc1-b9da-435802de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    sha1:
+    - aa9dc6afeea7d2e580ab57be53d7c5db2633e67c
+    sha256:
+    - 18b47db36839677a9c52150e93e76104ed0c5bd33cd12e5cce99c4727f12c6bc
+  condition: attributes

@@ -1,0 +1,21 @@
+title: M2M -  Malspam 2017-10-19 "Emailed Invoice - ******" - dns_query
+id: 42eb59a8-fae6-4314-a119-d7de19d02fd9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59e8c165-4460-4066-baa8-35d6950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 98.124.251.65
+    - 62.212.154.98
+    - 180.222.185.74
+    - 175.107.146.17
+    - 66.36.173.246
+    - 84.234.64.216
+    - 68.171.62.42
+  condition: attributes

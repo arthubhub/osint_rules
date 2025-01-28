@@ -1,0 +1,40 @@
+title: OSINT Trend Micro Exposes LURID APT - dns_query
+id: 3ed8a134-a4b0-41d5-b3cb-025de4eba48d
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/555dcba2-bdd0-49d6-8c72-4e87950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - zadhc.com
+    - mailru-vip.com
+    - yandex-pro.com
+    - hoticq.com
+    - redhag.com
+    - lasmail.com
+    - ymail-pro.com
+    - mailru-pro.com
+    - hotoicq.com
+    - foxit-pro.com
+    - ymail-vip.com
+    - yandex-vip.com
+    IpAddresses:
+    - 109.123.126.156
+    - 184.22.251.12
+    - 46.23.67.226
+    - 173.212.195.216
+    - 109.123.126.157
+    - 109.123.126.151
+    - 106.123.126.151
+    - 109.123.126.143
+    - 204.12.197.70
+    - 58.64.149.29
+    - 184.95.36.75
+    - 174.139.13.122
+    - 184.22.240.174
+  condition: attributes

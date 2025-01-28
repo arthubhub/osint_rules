@@ -1,0 +1,15 @@
+title: OSINT - Operation Ke3chang Resurfaces With New TidePool Malware - url_request
+id: b5778035-4b60-4b4b-b576-c899298cb7c7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5742ea44-5ff4-4634-99c9-4b32950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

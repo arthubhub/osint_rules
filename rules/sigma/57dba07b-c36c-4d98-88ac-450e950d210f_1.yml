@@ -1,0 +1,20 @@
+title: 'Malspam 2016-09-16 (.js in .zip) - campaign: "Re: request" - url_request'
+id: c52f823e-0602-4c18-b3e3-9ce03de66340
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57dba07b-c36c-4d98-88ac-450e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - maggycocoa.net
+    - http://maggycocoa.net
+    - http://yerndrunk.net
+    - bulkreasy.com
+    - yerndrunk.net
+    - http://bulkreasy.com
+  condition: attributes

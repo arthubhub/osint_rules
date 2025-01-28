@@ -1,0 +1,36 @@
+title: OSINT - New campaign targeting security researchers - url_request
+id: 25d778c1-c30f-4034-88c2-f64aa2159620
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/e82f98b7-0734-44f9-99c4-1ac38805dbad.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1249
+- attack.t1341
+detection:
+  attributes:
+    RequestUrl|contains:
+    - investbooking.de
+    - transferwiser.io
+    - https://www.dronerc.it
+    - http://trophylab.com
+    - https://transplugin.io
+    - https://www.fabioluciani.com
+    - transplugin.io
+    - krakenfolio.com
+    - angeldonationblog.com
+    - http://www.colasprint.com
+    - opsonew3org.sg
+    - https://www.linkedin.com
+    - https://codevexillium.org
+    - codevexillium.org
+    - https://angeldonationblog.com
+    - https://blog.google
+    - https://www.edujikim.com
+    - trophylab.com
+    - https://investbooking.de
+  condition: attributes

@@ -1,0 +1,19 @@
+title: Compromised host delivering malware (Mirai) - dns_query
+id: 459d11c3-6729-4064-8d62-a07d2843c401
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/91a106b2-5ae3-4433-a885-fe3023adb768.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.mirai
+detection:
+  object_17055:
+    QueryName|contains:
+    - teknowmuzical.top
+    IpAddresses:
+    - 37.49.229.172
+  condition: 1 of object_*

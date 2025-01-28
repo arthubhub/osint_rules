@@ -1,0 +1,15 @@
+title: 'OSINT Group5: Syria and the Iranian Connection by Citizen Lab - url_request'
+id: 120e31c8-5efc-46a2-80c7-322c021e1bdb
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57a89edc-e184-41da-8e51-4f98950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://citizenlab.org
+  condition: attributes

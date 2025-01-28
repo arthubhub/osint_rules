@@ -1,0 +1,23 @@
+title: "OSINT  Evilgrab Delivered by Watering Hole Attack on President of Myanmar\xE2\
+  \u20AC\u2122s Website by Palo Alto Unit 42 - dns_query"
+id: c2055bdf-5b8a-45d3-9281-3c1bf02fb9c6
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/557e78b6-91ec-4123-87df-424f950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - websecexp.com
+    IpAddresses:
+    - 61.221.66.199
+    - 59.188.16.135
+    - 59.188.4.106
+    - 211.169.202.2
+    - 59.188.16.130
+    - 218.54.45.220
+  condition: attributes

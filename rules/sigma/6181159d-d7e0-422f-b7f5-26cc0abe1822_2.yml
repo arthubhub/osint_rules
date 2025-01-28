@@ -1,0 +1,123 @@
+title: "[CERT-FR] Campagnes d'hame\xE7onnage du mode op\xE9ratoire d'attaquants Nobelium\
+  \ - dns_query"
+id: 4b8945bf-47df-46e3-b1e8-70e9630ec7e5
+description: edit this field when analysing or editing the rule - reported by "CERT-FR_1510"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/6181159d-d7e0-422f-b7f5-26cc0abe1822.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  object_10891:
+    QueryName|contains:
+    - hanproud.com
+    IpAddresses:
+    - 45.179.89.37
+  object_10892:
+    QueryName|contains:
+    - cbdnewsandreviews.net
+    IpAddresses:
+    - 139.99.167.177
+  object_10893:
+    QueryName|contains:
+    - cityloss.com
+    IpAddresses:
+    - 51.38.85.225
+  object_10894:
+    QueryName|contains:
+    - businesssalaries.com
+    IpAddresses:
+    - 190.183.61.30
+  object_10895:
+    QueryName|contains:
+    - trendignews.com
+    IpAddresses:
+    - 185.243.215.198
+  object_10896:
+    QueryName|contains:
+    - worldhomeoutlet.com
+    IpAddresses:
+    - 192.99.221.77
+  object_10897:
+    QueryName|contains:
+    - giftbox4u.com
+    IpAddresses:
+    - 37.120.247.135
+  object_10898:
+    QueryName|contains:
+    - myexpertforum.com
+    IpAddresses:
+    - 45.80.148.166
+  object_10899:
+    QueryName|contains:
+    - doggroomingnews.com
+    IpAddresses:
+    - 45.135.167.27
+  object_10900:
+    QueryName|contains:
+    - alifemap.com
+    IpAddresses:
+    - 188.68.250.182
+  object_10901:
+    QueryName|contains:
+    - enpport.com
+    IpAddresses:
+    - 54.38.137.218
+  object_10902:
+    QueryName|contains:
+    - theyardservice.com
+    IpAddresses:
+    - 83.171.237.173
+  object_10903:
+    QueryName|contains:
+    - celebsinformation.com
+    IpAddresses:
+    - 37.59.225.51
+  object_10904:
+    QueryName|contains:
+    - dailydews.com
+    IpAddresses:
+    - 31.42.177.114
+  object_10905:
+    QueryName|contains:
+    - ideasofbusiness.com
+    IpAddresses:
+    - 81.17.30.46
+  object_10906:
+    QueryName|contains:
+    - newminigolf.com
+    IpAddresses:
+    - 79.143.87.166
+  object_10907:
+    QueryName|contains:
+    - rchosts.com
+    IpAddresses:
+    - 51.89.50.153
+  object_10908:
+    QueryName|contains:
+    - stockmarketon.com
+    IpAddresses:
+    - 51.254.241.158
+  object_10909:
+    QueryName|contains:
+    - stonecrestnews.com
+    IpAddresses:
+    - 91.234.254.144
+  object_10910:
+    QueryName|contains:
+    - teachingdrive.com
+    IpAddresses:
+    - 194.135.81.18
+  object_10911:
+    QueryName|contains:
+    - newstepsco.com
+    IpAddresses:
+    - 185.158.250.239
+  object_10912:
+    QueryName|contains:
+    - tacomanewspaper.com
+    IpAddresses:
+    - 195.206.181.169
+  condition: 1 of object_*

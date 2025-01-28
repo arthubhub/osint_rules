@@ -1,0 +1,22 @@
+title: OSINT - Macro Malware Employs Advanced Obfuscation to Avoid Detection - process_creation
+id: a30fe03c-657b-454f-8b21-8da478ac98bb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/571fd18a-efc4-4099-93f5-447502de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - d80c15fd4ee1b10512d81bde32daaf30
+    - c1787d80ad7beb46646d5c20cdd7eff2
+    sha1:
+    - c779587e7280121be0725fbecef2e449607f5833
+    - 2f0219710dd785f94f7970b87c6ec19ba1635fc5
+    sha256:
+    - 25f7bf9246534c7aad3b728c0bad60dd62e31d9bd7695de8ac0ec7ec0270f104
+    - 1fcdc054fbd0ecefbb895502d271c94e4733dbb5dc0a0152d8d4864ce82cd916
+  condition: attributes

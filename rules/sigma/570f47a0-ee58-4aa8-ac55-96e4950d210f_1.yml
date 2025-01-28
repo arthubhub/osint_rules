@@ -1,0 +1,15 @@
+title: Malspam via Spambots (2016-04-14) - url_request
+id: a59dbb1c-4ee5-44e6-9a41-e8110ba9aabd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/570f47a0-ee58-4aa8-ac55-96e4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://onlineaccess.bleutree.us
+  condition: attributes

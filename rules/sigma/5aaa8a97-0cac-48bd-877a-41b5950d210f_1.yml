@@ -1,0 +1,25 @@
+title: OSINT - Alert (TA18-074A) Russian Government Cyber Activity Targeting Energy
+  and Other Critical Infrastructure Sectors - url_request
+id: f55410eb-1fdd-48e1-beb3-5ede9a693b7e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aaa8a97-0cac-48bd-877a-41b5950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://167.114.44.147
+    - bit.ly
+    - https://www.us-cert.gov
+    - http://www.csemag.com
+    - imageliners.com
+    - http://www.plantengineering.com
+    - http://www.oilandgaseng.com
+    - http://187.130.251.249
+    - http://www.controleng.com
+    - tinyurl.com
+  condition: attributes

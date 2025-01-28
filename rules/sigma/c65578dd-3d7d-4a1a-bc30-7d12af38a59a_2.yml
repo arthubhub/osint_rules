@@ -1,0 +1,81 @@
+title: 'TraderTraitor: North Korean State-Sponsored APT Targets Blockchain Companies
+  - dns_query'
+id: 67ffeec9-a4d7-4cfc-ac49-e22186ad66ff
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/c65578dd-3d7d-4a1a-bc30-7d12af38a59a.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.g0032
+- attack.group.lazarus_group
+detection:
+  object_2632:
+    QueryName|contains:
+    - dafom.dev
+    IpAddresses:
+    - 45.14.227.58
+  object_2634:
+    QueryName|contains:
+    - tokenais.com
+    IpAddresses:
+    - 199.188.103.115
+  object_2636:
+    QueryName|contains:
+    - cryptais.com
+    IpAddresses:
+    - 82.102.31.14
+  object_2637:
+    QueryName|contains:
+    - alticgo.com
+    IpAddresses:
+    - 108.170.55.202
+  object_2638:
+    QueryName|contains:
+    - esilet.com
+    IpAddresses:
+    - 104.168.98.156
+  object_2639:
+    QueryName|contains:
+    - greenvideo.nl
+    IpAddresses:
+    - 62.84.240.140
+  object_2640:
+    QueryName|contains:
+    - dafnefonseca.com
+    IpAddresses:
+    - 151.101.64.119
+  object_2641:
+    QueryName|contains:
+    - haciendadeclarevot.com
+    IpAddresses:
+    - 185.66.41.17
+  object_2642:
+    QueryName|contains:
+    - sche-eg.org
+    IpAddresses:
+    - 160.153.235.20
+  object_2643:
+    QueryName|contains:
+    - www.vinoymas.ch
+    IpAddresses:
+    - 46.16.62.238
+  object_2644:
+    QueryName|contains:
+    - infodigitalnew.com
+    IpAddresses:
+    - 107.154.160.132
+  object_2645:
+    QueryName|contains:
+    - creaideck.com
+    IpAddresses:
+    - 38.132.124.161
+  object_2646:
+    QueryName|contains:
+    - aideck.net
+    IpAddresses:
+    - 89.45.4.151
+  condition: 1 of object_*

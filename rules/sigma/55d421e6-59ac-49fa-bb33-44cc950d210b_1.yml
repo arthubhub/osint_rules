@@ -1,0 +1,15 @@
+title: "OSINT New Hacking Team IOC\xE2\u20AC\u2122s Released by Rook security - url_request"
+id: 561319e9-aafb-422d-9279-c45ea1ba43b1
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55d421e6-59ac-49fa-bb33-44cc950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.rooksecurity.com
+  condition: attributes

@@ -1,0 +1,22 @@
+title: OSINT - Black Ruby Ransomware Skips Victims in Iran and Adds a Miner for Good
+  Measure - url_request
+id: 092427f4-5b28-4613-a0a0-71c0bc0b7343
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ac763c9-0ba0-413e-ae2a-4de3950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.black_ruby
+- attack.software.black_ruby
+detection:
+  object_18443:
+    RequestUrl|contains:
+    - de01.supportxmr.com
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: 1 of object_* or attributes

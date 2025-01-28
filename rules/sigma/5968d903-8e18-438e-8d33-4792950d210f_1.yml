@@ -1,0 +1,18 @@
+title: 'M2M -  #trickbot Lloyds Bank - url_request'
+id: 570c1f7f-ff6d-4ff2-befc-e76d86258547
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5968d903-8e18-438e-8d33-4792950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.trick_bot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://kgshrestha.com.np
+    - http://armor-conduite.com
+  condition: attributes

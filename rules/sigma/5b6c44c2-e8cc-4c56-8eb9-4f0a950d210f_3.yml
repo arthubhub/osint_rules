@@ -1,0 +1,35 @@
+title: OSINT -  Familiar Feeling A Malware Campaign Targeting the Tibetan Diaspora
+  Resurfaces - process_creation
+id: e0c80b64-ae9e-4106-ac91-8d46719e800e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b6c44c2-e8cc-4c56-8eb9-4f0a950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1193
+- attack.t1086
+detection:
+  object_9533:
+    md5:
+    - 11e0f3e1c7d8855ed7f1dcfce4b7702a
+  object_9537:
+    sha1:
+    - 6a4690f454c91fdc559a223d43f0a77d40b59b2a
+  object_9538:
+    sha1:
+    - e55cea25ecc118fd798f84eb5395be0678bdbc51
+  object_9539:
+    sha1:
+    - cdd2fd64a4996b7d901d4a899d660cc5ff118e73
+  object_9545:
+    md5:
+    - 11e0f3e1c7d8855ed7f1dcfce4b7702a
+    sha1:
+    - 9bb47262664b10b60a853002eace4db083ee10af
+    sha256:
+    - 1b156c7d2cc651d0a58c8dac1353332614b489e4d21e51ca7a0a929295e6ad40
+  condition: 1 of object_*

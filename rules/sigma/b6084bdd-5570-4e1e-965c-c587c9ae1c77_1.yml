@@ -1,0 +1,19 @@
+title: 'PSA: Fake CVE-2023-45124 Phishing Scam Tricks Users Into Installing Backdoor
+  Plugin - url_request'
+id: 5601e0ee-e2bf-4773-807f-7eda5d45ce66
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/b6084bdd-5570-4e1e-965c-c587c9ae1c77.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_10808:
+    RequestUrl|contains:
+    - https://www.wordfence.com
+  attributes:
+    RequestUrl|contains:
+    - en-gb-wordpress.org
+  condition: 1 of object_* or attributes

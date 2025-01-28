@@ -1,0 +1,20 @@
+title: 'OSINT - Bad Rabbit: Not-Petya is back with improved ransomware - dns_query'
+id: 42720a2e-2dbf-47ac-abbf-50ab7b886a69
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59f049c0-aae0-47d2-a888-4021950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.bad_rabbit
+- attack.group.bad_rabbit
+detection:
+  attributes:
+    QueryName|contains:
+    - 1dnscontrol.com
+    IpAddresses:
+    - 185.149.120.3
+  condition: attributes

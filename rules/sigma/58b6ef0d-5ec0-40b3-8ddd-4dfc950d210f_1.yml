@@ -1,0 +1,15 @@
+title: OSINT - Malware Leveraging PowerSploit - url_request
+id: 8a7756ea-94b0-438f-a18a-21908a3e8480
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58b6ef0d-5ec0-40b3-8ddd-4dfc950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.jpcert.or.jp
+  condition: attributes

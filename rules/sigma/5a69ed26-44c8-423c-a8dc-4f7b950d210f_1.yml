@@ -1,0 +1,49 @@
+title: OSINT - Dark Caracal Cyber-espionage at a Global Scale - url_request
+id: 9cc3f845-47a3-49b9-ba2b-817660332aab
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a69ed26-44c8-423c-a8dc-4f7b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.dark_caracal
+detection:
+  attributes:
+    RequestUrl|contains:
+    - planethdx.com
+    - orange2015.net
+    - roxsoft.net
+    - tweetsfb.com
+    - opwalls.com
+    - adobeair.net
+    - etn9.com
+    - skypeupdate.com
+    - arabpublisherslb.com
+    - ecowatchasia.com
+    - iceteapeach.com
+    - globalmic.net
+    - ancmax.com
+    - flexberry.com
+    - nvidiaupdate.com
+    - secureandroid.info
+    - gsec.in
+    - axroot.com
+    - kaliex.net
+    - mecodata.com
+    - watermelon2017.com
+    - tenoclock.net
+    - arablivenews.com
+    - dropboxonline.com
+    - https://info.lookout.com
+    - playermea.com
+    - megadeb.com
+    - fbarticles.com
+    - sabisint.com
+    - fbtweets.net
+    - adobeinstall.com
+    - accountslogin.services
+    - mangoco.net
+  condition: attributes

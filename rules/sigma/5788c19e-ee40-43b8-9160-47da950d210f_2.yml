@@ -1,0 +1,16 @@
+title: Malspam 2016-07-15 .zip/.jse - dns_query
+id: bf04a692-30be-4e67-b171-1b01175f11fd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5788c19e-ee40-43b8-9160-47da950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 104.238.213.26
+    - 216.170.117.124
+  condition: attributes

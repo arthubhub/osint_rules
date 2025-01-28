@@ -1,0 +1,101 @@
+title: Malspam (2016-06-22) - .js in .zip - Locky is back - dns_query
+id: 58a572d0-8d53-46ec-aca9-fafdd4c1a2e8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/576a3d71-3fec-423a-86cd-3470950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - komplettraeder-24.de
+    - arabian-star.com
+    - totalsportnetwork.com
+    - allchannel.net
+    - ding-a-ling-tel.com
+    - hyip-all.com
+    - depaardestal.nl
+    - hrlpk.com
+    - kitchenconceptagra.com
+    - stbb.pt
+    - futuretech-iq.net
+    - aloprint.com
+    - clerici.info
+    - infocuscreative.net
+    - heavenboundministry.com
+    - cbactive.com
+    - beluxfurniture.com
+    - otolocphat.com
+    - percorsipsicoarte.com
+    - vantagenetsvc.com
+    - marxforschung.de
+    - passagegoldtravel.com
+    - iminlife.com
+    - reginamargherita96.net
+    - vinabuhmwoo.com
+    - scpremiumbikes.com
+    - innatesynergy.com
+    - wasearch.us
+    - wbksis.com
+    - pub-voiture.com
+    - racedayworld.com
+    - stckwt.net
+    - handicraftmag.com
+    - searchforamy.com
+    - easysupport.us
+    - jasoncoroy.com
+    - samrhamburg.com
+    - fuji-mig.com
+    - yourworshipspace.com
+    - akdenizozalit.com
+    IpAddresses:
+    - 112.78.2.153
+    - 103.6.198.219
+    - 50.87.144.196
+    - 123.242.226.30
+    - 64.124.16.204
+    - 193.203.99.112
+    - 89.107.186.4
+    - 85.128.210.66
+    - 149.115.19.219
+    - 192.186.209.5
+    - 216.55.149.9
+    - 45.40.143.233
+    - 94.73.146.80
+    - 144.76.82.6
+    - 193.203.99.114
+    - 142.4.60.226
+    - 109.71.40.52
+    - 203.124.43.226
+    - 129.121.5.191
+    - 216.117.166.34
+    - 94.73.151.190
+    - 162.213.157.131
+    - 160.153.77.2
+    - 160.153.73.4
+    - 93.190.41.97
+    - 23.229.182.198
+    - 192.186.200.134
+    - 23.229.133.197
+    - 91.186.0.4
+    - 198.58.93.28
+    - 46.30.213.77
+    - 103.6.198.138
+    - 27.254.33.31
+    - 213.205.38.24
+    - 123.30.145.20
+    - 204.232.192.84
+    - 23.229.189.110
+    - 91.239.232.79
+    - 77.55.97.84
+    - 213.205.38.28
+    - 195.14.0.150
+    - 217.160.177.243
+    - 64.69.219.91
+    - 213.205.38.25
+    - 193.203.99.113
+    - 23.229.171.33
+  condition: attributes

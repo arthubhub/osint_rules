@@ -1,0 +1,41 @@
+title: 'Malspam 2016-07-21 .wsf (campaign: "fixed invoice") - url_request'
+id: 2890a3e6-0b12-4440-8c41-db8ee8586e0f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5790e667-46bc-453e-bb78-44d0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://sealionnn.web.fc2.com
+    - http://bizforward.ru
+    - klausschuster.at
+    - http://oldim.lviv.ua
+    - http://vkt-rus.com
+    - http://dou104.rybadm.ru
+    - http://kveldeil.no
+    - mebel-bogatyr.ru
+    - vkt-rus.com
+    - http://krisnela.50webs.com
+    - choogo.net
+    - strojdom33.ru
+    - http://strojdom33.ru
+    - http://voisin-sa.com
+    - http://choogo.net
+    - http://pixel.sportsontheweb.net
+    - http://forum-droid.16mb.com
+    - http://klausschuster.at
+    - http://wusromania.home.ro
+    - kveldeil.no
+    - http://www.chipo.republika.pl
+    - http://mebel-bogatyr.ru
+    - bizforward.ru
+    - premiuminformation.org
+    - http://premiuminformation.org
+    - http://www.redimec.com
+    - voisin-sa.com
+  condition: attributes

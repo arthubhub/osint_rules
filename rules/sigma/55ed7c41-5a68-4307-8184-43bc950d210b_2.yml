@@ -1,0 +1,30 @@
+title: "OSINT Threat Research Team Goes \xE2\u20AC\u0153Beyond the Exploit\xE2\u20AC\
+  \x9D in Search of Payloads from MS15-093 by bit9 - dns_query"
+id: a0e09c17-3575-444b-8517-e2519912e263
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55ed7c41-5a68-4307-8184-43bc950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - gotoiknowledge.com
+    IpAddresses:
+    - 180.210.207.133
+    - 103.249.28.6
+    - 103.224.81.131
+    - 146.71.100.211
+    - 184.164.70.96
+    - 216.139.227.86
+    - 104.151.10.100
+    - 106.185.34.29
+    - 107.183.149.75
+    - 23.228.204.6
+    - 27.255.94.74
+    - 103.249.28.5
+    - 23.27.192.115
+  condition: attributes

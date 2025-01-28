@@ -1,0 +1,47 @@
+title: OSINT The Sofacy plot thickens by PwC - dns_query
+id: 9c5dfb49-3b75-4138-ad30-5544a6dff191
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55355951-0354-4d8a-8148-1bf9950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    QueryName|contains:
+    - nato-info.com
+    - privacy-live.com
+    - nato-int.com
+    - brnlv-gv.eu
+    - globalnewsweekly.com
+    - netassistcache.com
+    - natopress.com
+    - aolnets.com
+    - militaryobserver.net
+    - settings-live.com
+    - asus-service.net
+    - bmlv-gv.eu
+    - foreignreview.com
+    - defencereview.net
+    - techcruncln.com
+    - privacy-yahoo.com
+    - settings-yahoo.com
+    - natopress.org
+    - intelsupport.net
+    - defencereview.eu
+    - osce-military.org
+    - osce-oscc.org
+    - nato-hq.com
+    - mediarea.org
+    - europeanda.com
+    - iacr-tcc.org
+    - westinqhousenuclear.com
+    - enisa-europa.com
+    - softupdates.info
+    - delivery-yahoo.com
+    - enisa-europa.org
+  condition: attributes

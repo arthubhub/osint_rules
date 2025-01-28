@@ -1,0 +1,104 @@
+title: QUARTERRIG - Malware Analysis Report - process_creation
+id: a7d25d28-b5a5-410a-a3dc-0e250a35e8a9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/04e8bb1e-b445-40a6-a68a-1ce85e32d229.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1204.002
+- attack.t1566.002
+- attack.t1574.002
+- attack.t1547.001
+- attack.t1204
+- attack.t1140
+- attack.t1027.006
+- attack.t1583.003
+- attack.software.quarterrig
+- attack.t1574.001
+- attack.t1566.001
+- attack.t1566
+- attack.t1553.005
+- attack.t1584
+detection:
+  object_16945:
+    md5:
+    - 22adbffd1dbf3e13d036f936049a2e98
+    sha1:
+    - 52932be0bd8e381127aab9c639e6699fd1ecf268
+    sha256:
+    - c03292fca415b51d08da32e2f7226f66382eb391e19d53e3d81e3e3ba73aa8c1
+  object_16946:
+    md5:
+    - b1820abc3a1ce2d32af04c18f9d2bfc3
+    sha1:
+    - b260d80fa81885d63565773480ca1e436ab657a0
+    sha256:
+    - 6c55195f025fb895f9d0ec3edbf58bc0aa46c43eeb246cfb88eef1ae051171b3
+  object_16947:
+    md5:
+    - db2d9d2704d320ecbd606a8720c22559
+    sha1:
+    - ca1ef3aeed9c0c5cfa355b6255a5ab238229a051
+    sha256:
+    - 18cc4c1577a5b3793ecc1e14db2883ffc6bf7c9792cf22d953c1482ffc124f5a
+  object_16948:
+    md5:
+    - 166f7269c2a69d8d1294a753f9e53214
+    sha1:
+    - 02cd4148754c9337dfa2c3b0c31d9fdd064616a0
+    sha256:
+    - 3c4c2ade1d7a2c55d3df4c19de72a9a6f68d7a281f44a0336e55b6d0f54ec36a
+  object_16949:
+    md5:
+    - 1609bcb75babd9a3e823811b4329b3b9
+    sha1:
+    - 86dcdf623d0951e2f804c9fb4ef816fa5e6a22c3
+    sha256:
+    - 91b42488d1b8e5b547b945714c76c2af16b9566b35757bf055cec1fee9dff1b0
+  object_16950:
+    md5:
+    - d2027751280330559d1b42867e063a0f
+    sha1:
+    - 15511f1944d96b6b51291e3a68a2a1a560d95305
+    sha256:
+    - 35271a5d3b8e046546417d174abd0839b9b5adfc6b89990fc67c852aafa9ebb0
+  object_16951:
+    md5:
+    - bd4cbcd9161e365067d0279b63a784ac
+    sha1:
+    - b91e71d8867ed8bf33ec39d07f4f7fa2c1eeb386
+    sha256:
+    - 673f91a2085358e3266f466845366f30cf741060edeb31e9a93e2c92033bba28
+  object_16952:
+    md5:
+    - 8dcac7513d569ca41126987d876a9940
+    sha1:
+    - 1f65d068d0fbaec88e6bcce5f83771ab42a7a8c5
+    sha256:
+    - 9c6683fbb0bf44557472bcef94c213c25a56df539f46449a487a40eecb828a14
+  object_16953:
+    md5:
+    - 3aca0abdd7ec958a539705d5a4244196
+    sha1:
+    - bacb46d2ce5dfcaf8544125903f69f01091bc3d6
+    sha256:
+    - 10f1c5462eb006246cb7af5d696163db5facc452befbfd525f72507bb925131d
+  object_16954:
+    md5:
+    - 9159d3c58c5d970ed25c2db9c9487d7a
+    sha1:
+    - 6382ae2061c865ddcb9337f155ae2d036e232dfe
+    sha256:
+    - a42dd6bea439b79db90067b84464e755488b784c3ee2e64ef169b9dcdd92b069
+  object_16955:
+    md5:
+    - bc4b0bd5da76b683cc28849b1eed504d
+    sha1:
+    - b3ff6376baa180cff13ae76672c669cc8f45c130
+    sha256:
+    - 15d6036b6b8283571f947d325ea77364c9d48bfa064a865cd24678a466aa5e38
+  condition: 1 of object_*

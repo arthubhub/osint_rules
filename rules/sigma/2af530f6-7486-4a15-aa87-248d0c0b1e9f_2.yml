@@ -1,0 +1,50 @@
+title: Charting TA2541's Flight - dns_query
+id: b896f066-1cd2-4c3c-aeee-88466d20860c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/2af530f6-7486-4a15-aa87-248d0c0b1e9f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.ta2541
+detection:
+  object_17748:
+    QueryName|contains:
+    - joelthomas.linkpc.net
+  object_17749:
+    QueryName|contains:
+    - rick63.publicvm.com
+  object_17750:
+    QueryName|contains:
+    - kimjoy.ddns.net
+  object_17751:
+    QueryName|contains:
+    - h0pe.ddns.net
+  object_17752:
+    QueryName|contains:
+    - 6001dc.ddns.net
+  object_17753:
+    QueryName|contains:
+    - bigdips0n.publicvm.com
+  object_17754:
+    QueryName|contains:
+    - bodmas01.zapto.org
+  object_17755:
+    QueryName|contains:
+    - e29rava.ddns.net
+  object_17756:
+    QueryName|contains:
+    - akconsult.ddns.net
+  object_17757:
+    QueryName|contains:
+    - grace5321.publicvm.com
+  object_17758:
+    QueryName|contains:
+    - grace5321.publicvm.com
+  object_17759:
+    QueryName|contains:
+    - tq744.publicvm.com
+  condition: 1 of object_*

@@ -1,0 +1,57 @@
+title: 'OSINT -  Jaff Ransomware: Player 2 Has Entered The Game - url_request'
+id: 0072236b-f3d9-479c-8625-f9a20c3d039e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59189548-f120-4050-be33-46b9950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - boaevents.com
+    - biolume.nl
+    - koreancars-club.ru
+    - taddboxers.com
+    - julian-g.ro
+    - geo-zamer.ru
+    - diejosch.de
+    - demelkwegtuk.nl
+    - panaceya-n.ru
+    - babil117.com
+    - kitchenandgifts.com
+    - byydei74fg43ff4f.net
+    - takanashi.jp
+    - villa31.com
+    - etadjewellery.com
+    - oklahomagunlawyers.com
+    - trialinsider.com
+    - balprodukt.ru
+    - 5hdnnd74fffrottd.com
+    - wipersdirect.com
+    - kbelgesi.net
+    - enboite.be
+    - vscard.net
+    - jisrcenter.com
+    - prystel.com
+    - thegoldclubs.com
+    - trans-atm.com
+    - phinamco.com
+    - trebleimp.com
+    - edluke.com
+    - volley-bal.be
+    - techno-kar.ru
+    - takipediliyoruz.com
+    - bitsslab.com
+    - pgringette.ca
+    - jomajaco.com
+    - outback-cycles.de
+    - easysupport.us
+    - tending.info
+    - tiskr.com
+    - http://blog.talosintelligence.com
+    - domainway.de
+    - monowheels.ru
+  condition: attributes

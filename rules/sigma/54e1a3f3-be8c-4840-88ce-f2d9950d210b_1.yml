@@ -1,0 +1,20 @@
+title: OSINT MSRT February update from Microsoft - url_request
+id: 8da6f794-11fc-4dc9-95c9-dd639e69748d
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54e1a3f3-be8c-4840-88ce-f2d9950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - dailygiftclub.info
+    - http://blogs.technet.com
+    - dailygiftclub1.info
+    - priv8darkshop.com
+    - http://www.microsoft.com
+    - sopvps.hk
+  condition: attributes

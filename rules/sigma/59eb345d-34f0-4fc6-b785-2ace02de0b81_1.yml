@@ -1,0 +1,17 @@
+title: OSINT - JadeRAT mobile surveillanceware spikes in espionage activity - url_request
+id: 5811f147-6103-4517-9c03-f9de51367c07
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59eb345d-34f0-4fc6-b785-2ace02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.jaderat
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.lookout.com
+  condition: attributes

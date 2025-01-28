@@ -1,0 +1,17 @@
+title: OSINT - Emotet Trojan Acts as Loader, Spreads Automatically - url_request
+id: 670b9142-59d7-4be5-92e9-08c986ffed1d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ad5d34-5dc0-46fb-8ecf-47a9950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securingtomorrow.mcafee.com
+  condition: attributes

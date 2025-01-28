@@ -1,0 +1,18 @@
+title: OSINT - Destructive Shamoon Malware Continues its Return with a New Anti-American
+  Message - url_request
+id: c0f035b2-e215-4c14-99b7-0c71bcb77e3b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c225981-ae64-4141-8a37-430a02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.shamoon
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.anomali.com
+  condition: attributes

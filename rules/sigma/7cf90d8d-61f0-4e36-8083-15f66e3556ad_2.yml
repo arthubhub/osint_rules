@@ -1,0 +1,84 @@
+title: OSINT - Lookout Discovers Two Russian Android Spyware Families from Gamaredon
+  APT - dns_query
+id: f0623504-2aca-4e31-84a0-0a7ac7593745
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/7cf90d8d-61f0-4e36-8083-15f66e3556ad.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.gamaredon_group
+detection:
+  attributes:
+    QueryName|contains:
+    - ollymap.pw
+    - militrar.ru
+    - witchdors.ru
+    - skymagra.ru
+    - goos.pw
+    - vilitord.ru
+    - makdart.ru
+    - lopert0.ru
+    - kramatl.ru
+    - kaelos.ru
+    - ibragim0.ru
+    - pistons0.ru
+    - milashto.ru
+    - forensit.ru
+    - miltras.ru
+    - vezirgo.ru
+    - hersopa.ru
+    - detroit0.ru
+    - exportan.ru
+    - cicind.ru
+    - ziyaft.ru
+    - bilodon.ru
+    - hornets0.ru
+    - baloglandi.ru
+    - intigm.ru
+    - tilofol.ru
+    - chromat0.ru
+    - molotras.ru
+    - volnaps.ru
+    - drivento.ru
+    - antropa.ru
+    - lugarto.ru
+    - aghsinsa.ru
+    - quyenz0.ru
+    - minhzo.ru
+    - kistrop0n.ru
+    - bartop1.ru
+    - wleak.pw
+    - hydrargyrumo.ru
+    - vasifgo.ru
+    - flashik0.ru
+    - cavaliers0.ru
+    - vipertos.ru
+    - dowrang.ru
+    - snipotas.ru
+    - plumbum0.ru
+    - sabipro.ru
+    - gayad0.ru
+    - bucks0.ru
+    - bishotent.ru
+    - savit1.ru
+    - hitrovana.ru
+    - silentar.ru
+    - batterlas.ru
+    - phoenix0.ru
+    - rakinal.ru
+    - ihsnal.ru
+    - bashardi.ru
+    IpAddresses:
+    - 89.185.84.81
+    - 185.247.184.63
+    - 195.133.88.3
+    - 89.185.84.46
+    - 194.87.31.3
+    - 212.192.14.34
+    - 34.98.99.30
+    - 194.87.216.136
+  condition: attributes

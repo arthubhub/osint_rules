@@ -1,0 +1,20 @@
+title: OSINT - New Carbanak / Anunak Attack Methodology - url_request
+id: e6e90a7c-4241-44f0-b6c5-8bacb9641447
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582c134f-c358-455c-935e-4598950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.anunak
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://juste-travel.com
+    - https://www.trustwave.com
+    - http://revital-travel.com
+    - http://park-travels.com
+  condition: attributes

@@ -1,0 +1,22 @@
+title: OSINT - 0000 Cryptomix Ransomware Variant Released - process_creation
+id: b3821870-80dc-4d9a-ae28-604a09a0be8a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a142fcd-cb4c-4b8b-99c5-0efd950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.cryptomix
+- attack.software.cryptomix
+detection:
+  attributes:
+    md5:
+    - 7f3f613651f070bca3e212ecddf84e1f
+    sha1:
+    - 0b79a93d4a57cfd2d1f9d328c90e04136edd80c0
+    sha256:
+    - 7bbd1d047b5cb3d7f073e3a5cfbf81cdb8fee970fe62ee4135f56e68245eba2f
+  condition: attributes

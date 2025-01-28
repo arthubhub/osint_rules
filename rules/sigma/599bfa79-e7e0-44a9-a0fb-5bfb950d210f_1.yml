@@ -1,0 +1,37 @@
+title: OSINT - Emotet, New high-volume spam campaign has links pointing to malicious
+  documents that download banking Trojan - url_request
+id: b56cea5d-1636-497a-ad6d-5224a81f00d0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/599bfa79-e7e0-44a9-a0fb-5bfb950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://laguapafilms.com
+    - http://hercom.cl
+    - http://natech.com.br
+    - http://elabora.org
+    - http://era.lt
+    - http://johnstonwells.com
+    - http://omnisrecordings.com
+    - http://dusk.be
+    - http://absoluteart.biz
+    - http://magicians.co.nz
+    - http://dekormc.pl
+    - https://polishbikers.com
+    - http://addidesign.com
+    - http://glacierhills.org
+    - http://net5.com.au
+    - http://kntfilms.com.ar
+    - http://poshevents.net
+    - https://twitter.com
+    - http://yamtech.com.sa
+    - http://showreggaeton.com
+  condition: attributes

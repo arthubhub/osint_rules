@@ -1,0 +1,16 @@
+title: OSINT - Doctor Web detects several thousand infected Linux devices  Linux.Proxy.10
+  - url_request
+id: dc91f120-75ee-4066-8253-b89478ad7279
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/589718fa-353c-411d-bbee-4c1902de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://news.drweb.com
+  condition: attributes

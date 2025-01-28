@@ -1,0 +1,40 @@
+title: OSINT - DarkHydrus is launching attacks to targets in Middle East - dns_query
+id: f59f1f6d-833c-41a9-8a6c-5b6e36ed2aa0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c3862bd-cbb4-4373-854a-4507950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.darkhydrus
+detection:
+  attributes:
+    QueryName|contains:
+    - phicdn.world
+    - corewindows.agency
+    - akamai.agency
+    - hotmai1.com
+    - akamaiedge.services
+    - t-msedge.world
+    - akamaiedge.live
+    - 0ffice365.services
+    - cloudfronts.services
+    - akadns.live
+    - nsatc.agency
+    - sharepoint.agency
+    - microsoftonline.services
+    - akdns.live
+    - skydrive.services
+    - skydrive.agency
+    - onedrive.agency
+    - edgekey.live
+    - 0nedrive.agency
+    - 0ffice365.life
+    - akamaized.live
+    - trafficmanager.live
+    - microsoftonline.agency
+    - azureedge.today
+  condition: attributes

@@ -1,0 +1,29 @@
+title: OSINT - revengeRAT targeting France - process_creation
+id: 072ccf0d-b475-4fb8-a8ed-2cf38354e05c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e6f3fa2-ed28-484c-97ad-4b9e02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1192
+- attack.group.revenge_rat
+- attack.software.revenge_rat
+detection:
+  object_9885:
+    sha256:
+    - fe53c08e692d7ef6bfd379f9f34d48bd1f4b8c1c72c6d8d33d6e9ca234414aa9
+  object_9888:
+    md5:
+    - 7434cdc8b2e9b33d195a38ce795a06e5
+    sha1:
+    - 2544b6f5ed98151d36d466d2377897703c85a12e
+    sha256:
+    - fe53c08e692d7ef6bfd379f9f34d48bd1f4b8c1c72c6d8d33d6e9ca234414aa9
+  attributes:
+    sha256:
+    - fe53c08e692d7ef6bfd379f9f34d48bd1f4b8c1c72c6d8d33d6e9ca234414aa9
+  condition: 1 of object_* or attributes

@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-10-09 : Affid=3, offline, ".ykcol" : "Invoice IP1234567"
+  - "Invoice-IP1234567.7z" - process_creation'
+id: 4a1b400c-53b6-4434-92a5-6341bfd00f1c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59db5cbe-a944-425b-b60a-473b950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    md5:
+    - 3aeeb55f8239b731603f5c907113a34f
+    sha1:
+    - 517c3203aed9a4229d6260a796f03e448250e0a3
+    sha256:
+    - 203ee7bc02c3d2b01584efc23b5240fdbc37c56a99b17cef8983ff59f564ab18
+  condition: attributes

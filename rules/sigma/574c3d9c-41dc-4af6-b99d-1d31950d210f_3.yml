@@ -1,0 +1,23 @@
+title: "OSINT - Keep Calm and (Don\xE2\u20AC\u2122t) Enable Macros: A New Threat Actor\
+  \ Targets UAE Dissidents - process_creation"
+id: 4ffd915d-56c6-4e43-a948-6586b365c26e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/574c3d9c-41dc-4af6-b99d-1d31950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 87e1df6f36b96b56186444e37e2a1ef5
+    - 80e8ef78b9e28015cde4205aaa65da97
+    sha1:
+    - f25466e4820404c817eaf75818b7177891735886
+    - 1c3757006f972ca957d925accf8bbb3023550d1b
+    sha256:
+    - 4320204d577ef8b939115d16110e97ff04cb4f7d1e77ba5ce011d43f74abc7be
+    - 5a372b45285fe6f3df3ba277ee2de55d4a30fc8ef05de729cf464103632db40f
+  condition: attributes

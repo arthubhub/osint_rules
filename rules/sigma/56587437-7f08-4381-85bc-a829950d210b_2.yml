@@ -1,0 +1,15 @@
+title: OSINT - Botnet bruteforcing Point Of Sale terminals via Remote Desktop - dns_query
+id: 059ececf-bed8-4c7c-b412-eeeaba2724b7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56587437-7f08-4381-85bc-a829950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 78.154.54.42
+  condition: attributes

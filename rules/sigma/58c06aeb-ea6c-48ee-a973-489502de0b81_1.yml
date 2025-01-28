@@ -1,0 +1,49 @@
+title: 'OSINT - Crypt0l0cker (TorrentLocker): Old Dog, New Tricks - url_request'
+id: df14e982-b5cd-464f-a8b7-dc951d73c8f2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58c06aeb-ea6c-48ee-a973-489502de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.torrentlocker
+- attack.software.torrentlocker
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://48f4339.js2-order.pl
+    - http://iuhd873.omniheart.pl
+    - http://www.girokonto.club
+    - http://flyanairliner.com
+    - http://rubbishinteriors.com
+    - http://gidrostroy-nn.ru
+    - http://ltmp.joymes.pl
+    - http://mayaastro.com
+    - http://glutenfreeworks.com
+    - http://ltmp.applepice.pl
+    - http://ansagoldcoast.com
+    - http://drjacobberger.com
+    - http://arkatechknowledges.com
+    - http://blisunn.com
+    - http://www.mmgmarketing.com
+    - http://prorubim.com
+    - http://fms-uchet.ru
+    - http://cyjt.com
+    - http://humannecessityfoundation.com
+    - http://fanrp.com
+    - http://biotechclinical.com
+    - http://nji.fileserver4390.org
+    - http://ileriteknikservis.com
+    - http://saudail-alpin.no
+    - http://4839.js2-order.pl
+    - http://staracer.com.br
+    - http://activmedia.net
+    - http://blog.talosintelligence.com
+    - http://partylimobusnj.com
+    - http://saunabau.sk
+    - http://quatang.thackhoi.com
+    - http://directory.submitlocally.com
+  condition: attributes

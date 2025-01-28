@@ -1,0 +1,16 @@
+title: OSINT - Still stealing - url_request
+id: 0eb730da-feb0-49a5-a525-694111b12868
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a38ca48-6680-437d-9e0f-483c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+    - guest-stat.com
+  condition: attributes

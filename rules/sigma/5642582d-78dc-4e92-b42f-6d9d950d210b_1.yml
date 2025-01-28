@@ -1,0 +1,16 @@
+title: 'OSINT Bookworm Trojan: A Model of Modular Architecture by Palo Alto Unit 42
+  - url_request'
+id: fce16271-f4d7-40cc-9b80-8166053c7336
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5642582d-78dc-4e92-b42f-6d9d950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

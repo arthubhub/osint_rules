@@ -1,0 +1,80 @@
+title: OSINT Analysis of malcious CHM file by OpenDNS - dns_query
+id: 1f2e100c-6c2f-4dd3-b01e-4ed2c20f3fb0
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54f8662f-c7f0-4f59-a42a-a9a9950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - perviyclass.su
+    - rozoviyzakat.ru
+    - shumelkamish.ru
+    - techetreka.ru
+    - trusliviyzayac.ru
+    - tomniyvecher.su
+    - utliycheln.su
+    - igloofire.com
+    - lasiren.su
+    - letniydozhd.ru
+    - jopanikstor.com
+    - nsserver-noserver.com
+    - korichneviyrassvet.su
+    - perviylich.ru
+    - korichneviyrassvet.ru
+    - krugovayaporuka.su
+    - eplayavodka.ru
+    - techetreka.su
+    - truhlyaviypen.su
+    - krugovayaporuka.ru
+    - truhlyaviypen.ru
+    - cvelasiren.ru
+    - gromkiyzvuk.su
+    - nogaknoge.su
+    - silniygrom.ru
+    - temnayanoch.su
+    - johny-mrroinson.com
+    - teplayavodka.ru
+    - dnsservice7736.com
+    - rozoviyzakat.su
+    - financeoutfeet.com
+    - utliycheln.ru
+    - tihiyshepot.su
+    - nogaknoge.ru
+    - temnayanoch.ru
+    - holodnoepivo.su
+    - krepkiystul.su
+    - teplayavodka.su
+    - trusliviyzayac.su
+    - dnskkop12.com
+    - shumelkamish.su
+    - temniyles.su
+    - dnsbbbbdns.com
+    - tomniyvecher.ru
+    - perviylich.su
+    - perviysneg.ru
+    - temniyles.ru
+    - dns-pupkin-vasya.com
+    - jhon-russel.com
+    - tihiyshepot.ru
+    - nick-stoll.com
+    - dobroeutro.su
+    - silniygrom.su
+    - krepkiystul.ru
+    - podliyvrag.su
+    - horoshiyden.su
+    - letniydozhd.su
+    - cvelasiren.su
+    - dobriytsar.ru
+    - dnsdomainserv12.com
+    - gromkiyzvuk.ru
+    - horoshiyden.ru
+    - dobriytsar.su
+    IpAddresses:
+    - 193.169.86.178
+    - 62.76.187.73
+  condition: attributes

@@ -1,0 +1,35 @@
+title: OSINT - Javascript malware hosted on US government site which launches powershell
+  to connect to C2. - process_creation
+id: b1801b95-0642-4256-afe7-45c3eaf1e2a4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ac43b3-d8a8-4fcf-9543-4a8f02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_2599:
+    md5:
+    - c714ca63fc9fccce002941c171c07e4d
+    sha1:
+    - 898e4131496d0ae8eb3fd2a742a30830be3989f6
+    sha256:
+    - 1e6851e6e0ff2e0e430e882c8326334471ab2e35ebbac4104bd2aa27128ea6bd
+  object_2601:
+    md5:
+    - 61bcd1f3233b857be0aee9ceba6779f3
+    sha1:
+    - f996046fea268074d2edd430e628f23942d7b5b6
+    sha256:
+    - 1f15415da53df8a8e0197aa7e17e594d24ea6d7fbe80fe3bb4a5cd41bc8f09f6
+  attributes:
+    md5:
+    - c714ca63fc9fccce002941c171c07e4d
+    sha1:
+    - 898e4131496d0ae8eb3fd2a742a30830be3989f6
+    sha256:
+    - 1e6851e6e0ff2e0e430e882c8326334471ab2e35ebbac4104bd2aa27128ea6bd
+    - 1f15415da53df8a8e0197aa7e17e594d24ea6d7fbe80fe3bb4a5cd41bc8f09f6
+  condition: 1 of object_* or attributes

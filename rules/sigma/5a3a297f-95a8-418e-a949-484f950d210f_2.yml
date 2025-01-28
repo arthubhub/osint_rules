@@ -1,0 +1,15 @@
+title: OSINT - How Mobile Bankbots Disguise as Perfectly Trustworthy Apps - dns_query
+id: f8e099fd-30fb-41b4-b06d-5d94c1cca92f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a3a297f-95a8-418e-a949-484f950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 91.226.11.200
+  condition: attributes

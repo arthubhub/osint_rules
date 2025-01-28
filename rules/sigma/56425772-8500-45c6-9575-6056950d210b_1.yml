@@ -1,0 +1,39 @@
+title: OSINT Macro documents with XOR Encoded Payloads by PhishMe - url_request
+id: 369defa8-e601-4318-bda0-ebbfebbd0e68
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56425772-8500-45c6-9575-6056950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://camelcap.com
+    - http://zilibrinixs.net
+    - http://yeebay.co
+    - http://phishme.com
+    - http://juskinsandfo.ru
+    - http://fievenghapun.ru
+    - http://castuning.ru
+    - http://helloalliance.net
+    - http://vintageselects.com
+    - http://pausephone.com
+    - http://finehotels.net
+    - http://hybridtrend.com
+    - http://guesstrade.com
+    - http://ninthclub.com
+    - http://ideagreens.com
+    - http://webshop.outsourcing4work.de
+    - http://beheutsi.ru
+    - http://seaboy.net
+    - http://basislabel.com
+    - http://gourmet.pergaz.com
+    - http://textidea.com
+    - http://mgsmedia.ru
+    - http://hungphatea.com.au
+    - http://circlewear.net
+    - http://wildclick.net
+  condition: attributes

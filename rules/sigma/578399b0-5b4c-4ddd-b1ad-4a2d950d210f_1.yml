@@ -1,0 +1,75 @@
+title: What's in a server name (on APT28/Sofacy) by ThreatConnect - url_request
+id: e5b6b276-f831-4dd7-afe7-ad79899c5132
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/578399b0-5b4c-4ddd-b1ad-4a2d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    RequestUrl|contains:
+    - academl.com
+    - adoble.net
+    - intelintelligence.org
+    - winsyscheck.com
+    - misdepatrment.com
+    - theguardianpress.com
+    - natoexhibitionff14.com
+    - windowsnewupdated.com
+    - govsh.net
+    - log-in-osce.org
+    - micoft.com
+    - https://threatconnect.com
+    - microsoft-updates.me
+    - adobeflashplayer.me
+    - adobeupdatetechnology.com
+    - egypressoffice.com
+    - winninggroup-sg.com
+    - cloudfiare.com
+    - wincodec.com
+    - wm-z.biz
+    - natoadviser.com
+    - cdn-google.com
+    - adobeupdater.org
+    - intelsupportcenter.com
+    - militaryobserver.net
+    - ms-sus6.com
+    - ms-updates.com
+    - nato-org.com
+    - trademarkarea.com
+    - theguardiannews.org
+    - euronews24.info
+    - wmepadtech.com
+    - carbon2u.com
+    - intelsupportcenter.net
+    - cdncloudflare.com
+    - wsjworld.com
+    - marshmallow-google.com
+    - adobeflashdownload.de
+    - thehufflngtonpost.com
+    - ms-drivadptrwin.com
+    - pdf-online-viewer.com
+    - terms-google.com
+    - tolonevvs.com
+    - sec-verified.com
+    - sysprofsvc.com
+    - helper-akamai.com
+    - eurosatory2014.com
+    - xtraorbit.com
+    - goaarmy.org
+    - webmail-saic.com
+    - akamaitechnologysupport.com
+    - win-wnigarden.com
+    - vice-news.com
+    - access-google.com
+    - honeyvvell.co
+    - securesystemwin.com
+    - naoasch.com
+    - akamaitechupdate.com
+    - services-gov.co.uk
+  condition: attributes

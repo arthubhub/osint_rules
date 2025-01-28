@@ -1,0 +1,76 @@
+title: 'OSINT -  SWEED: Exposing years of Agent Tesla campaigns - dns_query'
+id: b6885ebd-769d-4076-928e-2fd7ef8f6b68
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d2cae34-7564-4049-b9c4-4ae902de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.agent_tesla
+- attack.software.s0331
+- attack.group.agent_tesla
+detection:
+  attributes:
+    QueryName|contains:
+    - worldjaquar.com
+    - sweed-viki.ru
+    - aidanube.com
+    - blssleel.com
+    - regionaitradeinspections.com
+    - rsaqencies.com
+    - wlttraco.com
+    - mti-transt.com
+    - serec.us
+    - evegreen-shipping.com
+    - bwayachtng.com
+    - jltqroup.com
+    - anernostat.com
+    - intermodaishipping.net
+    - profbuiiders.com
+    - oralbdentaltreatment.tk
+    - cablsol.com
+    - dougiasbarwick.com
+    - spedaqinterfreight.com
+    - gufageneys.com
+    - repotc.com
+    - willistoweswatson.com
+    - xlnya-cn.com
+    - snapqata.com
+    - samhwansleel.com
+    - quycarp.com
+    - supe-lab.com
+    - zurieh.com
+    - candqre.com
+    - cawus-coskunsu.com
+    - aelna.com
+    - virdtech.com
+    - leocouriercompany.com
+    - sukrltiv.com
+    - crosspoiimeri.com
+    - erieil.com
+    - mglt-mea.com
+    - jyexports.com
+    - etqworld.com
+    - zarpac.us
+    - catalanoshpping.com
+    - kn-habour.com
+    - lnnovalues.com
+    - sweeddehacklord.us
+    - aiaininsurance.com
+    - hybru.com
+    - usarmy-mill.com
+    - kayneslnterconnection.com
+    IpAddresses:
+    - 198.54.125.61
+    - 209.99.40.222
+    - 208.91.197.91
+    - 151.80.88.242
+    - 46.21.144.100
+    - 185.26.122.68
+    - 84.38.134.121
+    - 154.80.172.212
+    - 209.99.40.223
+  condition: attributes

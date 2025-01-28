@@ -1,0 +1,62 @@
+title: 'Malspam 2016-08-31 (.js in .zip) - campaign: "bank transactions" - dns_query'
+id: c04cb953-36bb-49b6-ad6a-e906c5194bbf
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c6cb1f-5d40-49cc-a24a-4cb2950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - two-capitals.com
+    - foodbiz-net.com
+    - gebetech.at
+    - izeinstruments.com
+    - abufarha.net
+    - akeseverin.com
+    - akristall.ru
+    - cybersocialization.ru
+    - impregui.com
+    IpAddresses:
+    - 81.88.57.68
+    - 211.13.196.136
+    - 52.208.197.252
+    - 80.241.232.207
+    - 213.208.133.41
+    - 187.45.240.5
+    - 212.34.140.236
+    - 62.173.164.20
+    - 95.211.144.65
+    - 91.201.41.217
+    - 81.177.139.111
+    - 193.109.184.81
+    - 212.26.129.68
+    - 207.210.232.52
+    - 94.25.37.27
+    - 212.159.8.91
+    - 64.71.34.45
+    - 206.188.192.236
+    - 66.147.240.193
+    - 195.208.1.136
+    - 64.29.151.221
+    - 176.32.162.200
+    - 134.0.11.184
+    - 86.65.123.70
+    - 195.91.160.34
+    - 212.104.43.3
+    - 79.96.153.93
+    - 210.240.104.2
+    - 213.205.40.169
+    - 66.230.196.22
+    - 85.248.42.103
+    - 52.209.246.67
+    - 217.107.219.83
+    - 62.42.230.17
+    - 195.208.0.121
+    - 195.130.132.84
+    - 92.63.216.53
+    - 216.251.43.17
+  condition: attributes

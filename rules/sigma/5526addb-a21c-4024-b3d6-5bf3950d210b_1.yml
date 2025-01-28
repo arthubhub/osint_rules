@@ -1,0 +1,17 @@
+title: OSINT Angler Exploit Kit Utilizing 302 Cushioning and Domain Shadowing by Zscaler
+  - url_request
+id: e92c2bf5-b661-4e24-902b-1e0407e9f899
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5526addb-a21c-4024-b3d6-5bf3950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://pastebin.com
+    - http://research.zscaler.com
+  condition: attributes

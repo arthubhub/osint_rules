@@ -1,0 +1,18 @@
+title: OSINT Tinted CVE decoy spearphising attempt on Central Bank of Armenia employees
+  by BlueCoat - url_request
+id: 31430a79-dc19-43b6-8a2a-25b440f6d086
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55dc126c-1580-44c0-a6bd-44ba950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - adobe-dns-3-adobe.com
+    - https://www.bluecoat.com
+    - https://otx.alienvault.com
+  condition: attributes

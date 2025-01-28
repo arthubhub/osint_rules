@@ -1,0 +1,21 @@
+title: 'OSINT - Buckeye: Espionage Outfit Used Equation Group Tools Prior to Shadow
+  Brokers Leak - url_request'
+id: 2cc9d480-b619-4719-9dae-3f19c0dcf451
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cd2ec29-16fc-4842-b954-282902de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.ups
+- attack.group.g0022
+- attack.software.htran
+- attack.group.htran
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.symantec.com
+  condition: attributes

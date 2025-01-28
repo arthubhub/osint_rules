@@ -1,0 +1,16 @@
+title: OSINT Additional yara rules for detection Project Sauron by Florian Roth -
+  url_request
+id: 1f4e4f69-b78f-49df-873c-078f63080bfa
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b327b9-18c8-40f9-b5b8-4bf8950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+  condition: attributes

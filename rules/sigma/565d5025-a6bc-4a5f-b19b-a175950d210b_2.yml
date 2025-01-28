@@ -1,0 +1,30 @@
+title: "OSINT - PlugX-\xD1\u201A \xD3\xA9\xD1\u20AC\xD1\u201A\xD1\x81\xD3\xA9\xD0\xBD\
+  \ \xD1\x81\xD0\xB8\xD1\x81\xD1\u201A\xD0\xB5\xD0\xBC\xD0\xB8\xD0\xB9\xD0\xB3 \xD1\
+  \u2020\xD1\x8D\xD0\xB2\xD1\x8D\xD1\u20AC\xD0\xBB\xD1\x8D\xD1\u2026 \xD0\xBD\xD1\u0152\
+  \ - dns_query"
+id: f9b4da10-c8d8-4b7f-b0bf-1d55fc178ba6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/565d5025-a6bc-4a5f-b19b-a175950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - heritageblog.org
+    - goodmongol.com
+    - firefox-sync.com
+    - mol-government.com
+    - mongolbaatar.net
+    - molnews.net
+    - baatarhuu.com
+    - teever.mn
+    IpAddresses:
+    - 104.207.152.11
+    - 45.32.64.183
+    - 173.208.206.172
+    - 98.126.24.12
+  condition: attributes

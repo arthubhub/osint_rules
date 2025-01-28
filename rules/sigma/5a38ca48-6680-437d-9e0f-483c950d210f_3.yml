@@ -1,0 +1,77 @@
+title: OSINT - Still stealing - process_creation
+id: 6c368b78-6ecb-48f7-a97b-546b64f791f8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a38ca48-6680-437d-9e0f-483c950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_17609:
+    md5:
+    - f5f8df1f35a942f9092bde9f277b7120
+  object_17610:
+    md5:
+    - 6b55af8c4fb6968082ca2c88745043a1
+  object_17611:
+    md5:
+    - c70dcf9f0441e3230f2f338467cd9cb7
+  object_17612:
+    md5:
+    - 6d6b0b97facaa2e6d4e985fa5e3332a1
+  object_17613:
+    md5:
+    - 1a623b3784256105333962ddca50785f
+  object_17614:
+    md5:
+    - 1a7b22616c3b8223116b542d5afd5c05
+  object_17615:
+    md5:
+    - 053e2cf49a5d818663d9010344aa3329
+  object_17616:
+    md5:
+    - 2b39b22ef2384f0aa529705af68b1192
+  object_17617:
+    md5:
+    - 6974770565c5f0ffdd52fc74f1bca732
+  object_17618:
+    md5:
+    - 6cbc63cbe753b2e4cb6b9a8505775389
+  object_17619:
+    md5:
+    - 2b39b22ef2384f0aa529705af68b1192
+    sha1:
+    - e6a359421d85dbe4a76d6f8ecbabd9342b32c3d7
+    sha256:
+    - 05d2ac540006db560136980bcf2a2e35e64b96fd5b05667e889d9d1bf9d40f3e
+  object_17621:
+    md5:
+    - f5f8df1f35a942f9092bde9f277b7120
+    sha1:
+    - 57e780a86937f4da1f600c4f6aec143a84b15e73
+    sha256:
+    - 76fabb56d9d69031b7fefcdd365c4a4d866d3c417976121a63e8336d29b6128d
+  object_17623:
+    md5:
+    - 6974770565c5f0ffdd52fc74f1bca732
+    sha1:
+    - 9647ded84a636970cdfc5b309f7b1885e7c0f15b
+    sha256:
+    - 3834596ab1de92836c539a475b7035df8e038de9eede848bdfc266ebffae9a49
+  object_17625:
+    md5:
+    - 6cbc63cbe753b2e4cb6b9a8505775389
+    sha1:
+    - 107cd146af97cd0659eacaacb10cda054622a572
+    sha256:
+    - e82d7b592bc5b1c8f239dfa1c98af7669e80752f81440d78387ba1feba52cd9f
+  object_17627:
+    md5:
+    - 1a7b22616c3b8223116b542d5afd5c05
+    sha1:
+    - 0dd50c4c97c3525be94cecb30cf4488760abbb25
+    sha256:
+    - d96840ea4eba1115b545324ac2df85078a9dced6d855fd94341a3aba97822d31
+  condition: 1 of object_*

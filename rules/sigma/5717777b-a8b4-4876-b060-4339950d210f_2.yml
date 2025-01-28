@@ -1,0 +1,15 @@
+title: OSINT - New Crypto-Ransomware JIGSAW Plays Nasty Games - dns_query
+id: af6bf490-295a-444b-8f1e-d45e3eadbbab
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5717777b-a8b4-4876-b060-4339950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - 1fichier.com
+  condition: attributes

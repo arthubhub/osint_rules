@@ -1,0 +1,18 @@
+title: Fake amf-fr.org website delivering malicious Word document and binaries - dns_query
+id: f8741266-b7e4-437f-9bfa-af32584fc8ea
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c687cb3-08c4-46d3-9981-093702de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1179
+- attack.t1035
+detection:
+  attributes:
+    IpAddresses:
+    - 51.38.150.171
+  condition: attributes

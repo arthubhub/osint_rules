@@ -1,0 +1,25 @@
+title: "OSINT - \xE8\u201A\u0161\xE8\u201E\u2018\xE8\u2122\xAB\xE7\xBB\u201E\xE7\xBB\
+  \u2021\xEF\xBC\u02C6APT-C-35\xEF\xBC\u2030\xE7\xA7\xBB\xE5\u0160\xA8\xE7\xAB\xAF\
+  \xE6\u201D\xBB\xE5\u2021\xBB\xE6\xB4\xBB\xE5\u0160\xA8\xE6\x8F\xAD\xE9\u0153\xB2\
+  \ - dns_query"
+id: b880181b-3039-4ea0-b143-dad5d4d4ef9f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b746d63-8c10-46b5-8c1a-49ec02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.apt-c-35
+detection:
+  attributes:
+    IpAddresses:
+    - 95.85.15.131
+    - 85.204.74.117
+    - 138.68.81.74
+    - 46.101.204.168
+    - 206.189.42.61
+    - 139.59.46.35
+  condition: attributes

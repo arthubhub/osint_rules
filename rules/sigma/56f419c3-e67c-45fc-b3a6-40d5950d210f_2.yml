@@ -1,0 +1,16 @@
+title: OSINT - Malware is being signed with multiple digital certificates to evade
+  detection - dns_query
+id: b3816741-423d-477e-b587-3e2ea09d60fd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f419c3-e67c-45fc-b3a6-40d5950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 154.16.138.74
+  condition: attributes

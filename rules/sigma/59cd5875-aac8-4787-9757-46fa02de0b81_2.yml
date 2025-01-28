@@ -1,0 +1,17 @@
+title: OSINT - Threat Actors Target Government of Belarus Using CMSTAR Trojan - dns_query
+id: ba4872cb-b723-4b76-bbd3-a7f1a0ee6585
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59cd5875-aac8-4787-9757-46fa02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.cmstar
+detection:
+  attributes:
+    QueryName|contains:
+    - oeiowidfla22.com
+  condition: attributes

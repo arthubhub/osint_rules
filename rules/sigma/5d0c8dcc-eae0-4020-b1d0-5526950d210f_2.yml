@@ -1,0 +1,82 @@
+title: "OSINT - Hide \xE2\u20AC\u02DCN Seek Botnet Updates Arsenal with Exploits Against\
+  \ Nexus Repository Manager & ThinkPHP - process_creation"
+id: 78f08ebf-8c2b-4321-a7e0-c5fe32da58f7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d0c8dcc-eae0-4020-b1d0-5526950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.hide_and_seek
+- attack.software.hide_and_seek
+detection:
+  object_17144:
+    sha256:
+    - 49495c9aa08d7859fec1f99f487560b59d8a8914811746181e4e7edbee85341f
+  object_17145:
+    sha256:
+    - d068e8f781879774f0bcc1f2a116211d41194b67024fe45966c8272a8038a7a1
+  object_17146:
+    sha256:
+    - 1583fd1c6607b77f51411c4ad7c9225324fd1b069645062a348cd885de0ac382
+  object_17147:
+    sha256:
+    - c082c39e595c7f23c04ce0d6597657d6e649585d5da49b5bd896e664b712e60d
+  object_17148:
+    sha256:
+    - 0b05202f4da9bbe1af1811707a76544453282c4f3c0ac9b353759c86742f4369
+  object_17149:
+    sha256:
+    - 73df4e952c581afc427fa18fa2d0bcfa409c1814cd872a3ccf05d44f934ce780
+  object_17150:
+    sha256:
+    - 500dd4c1a5c24495c3bb8173ce5c7b15ba3344aef855090b9b9585b2bfeea974
+  object_17151:
+    sha256:
+    - 7e20c6cea88ade6a6c4a08ce48fe4ac2451069b7662a8dda4362a304b4854ec7
+  object_17152:
+    md5:
+    - cc4662e589e8fa58d26f1a8d1c0da21f
+    sha1:
+    - 15c5554d24169096e756beee8c15e96c6708f06c
+    sha256:
+    - 1583fd1c6607b77f51411c4ad7c9225324fd1b069645062a348cd885de0ac382
+  object_17154:
+    md5:
+    - 01a9c99b6c8b812b61ddda76ee5c1899
+    sha1:
+    - e919ad0e40298f1f79d67c2e8ccdbb0acdde5a2b
+    sha256:
+    - 7e20c6cea88ade6a6c4a08ce48fe4ac2451069b7662a8dda4362a304b4854ec7
+  object_17156:
+    md5:
+    - 6de70812923df430cff73fcf66830e6d
+    sha1:
+    - 13cc834fbf30e32146ae1be4a6bbba5b7be41ae3
+    sha256:
+    - 49495c9aa08d7859fec1f99f487560b59d8a8914811746181e4e7edbee85341f
+  object_17158:
+    md5:
+    - f54c7e19bc1db3b3897b6fe81a403db0
+    sha1:
+    - 20ee3e5634a7a826a68ec858474f65cd58190870
+    sha256:
+    - 0b05202f4da9bbe1af1811707a76544453282c4f3c0ac9b353759c86742f4369
+  object_17160:
+    md5:
+    - 7c48b82ee08fbf7b4f4190b0973dfd5c
+    sha1:
+    - 1b278755efb2fefde2c32be6d0aa329ae35a9fc6
+    sha256:
+    - d068e8f781879774f0bcc1f2a116211d41194b67024fe45966c8272a8038a7a1
+  object_17162:
+    md5:
+    - 784ab23904c34c2033b8ab3fbb18645d
+    sha1:
+    - 75374fe86e63b1c60b02be4ebe3770a58a4423e1
+    sha256:
+    - c082c39e595c7f23c04ce0d6597657d6e649585d5da49b5bd896e664b712e60d
+  condition: 1 of object_*

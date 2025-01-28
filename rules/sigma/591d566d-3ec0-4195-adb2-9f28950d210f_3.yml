@@ -1,0 +1,23 @@
+title: 'Invoice ###### 05/17/2017 from dontreply@random - process_creation'
+id: a7140067-3cce-46ee-b2fb-6793d8b2e456
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/591d566d-3ec0-4195-adb2-9f28950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    md5:
+    - 716165fb5e07ecc95d45e8761b10ab30
+    - f3d9b2cb51e81d12ff3d5faaca231041
+    - 3f6c1a2735a8595cb1b03260bec9cb1b
+    - 14d05276125e70d43e710ef186261c95
+    sha256:
+    - 86061f2ae8ba5250c38f20070ba446513918c23dfe35f0670ae555910a94c181
+  condition: attributes

@@ -1,0 +1,35 @@
+title: 'M2M -  Locky 2017-09-25 : Affid=3, offline, ".ykcol" : "12_Invoice_3456" -
+  "001_1234.7z" - url_request'
+id: d24449f8-6801-4925-8cd9-a499019c0908
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59c9fbf8-5908-4837-a5e7-4724950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://tertrodefordown.info
+    - http://bergslotnieuws.nl
+    - http://baptistown-nj.com
+    - http://barwisecountryhampers.co.uk
+    - http://bayarealandmark.com
+    - http://belloisetropical.com
+    - http://be-blu.it
+    - http://bevtec.ch
+    - http://bdholdings.com
+    - http://automatedlogic.com.au
+    - http://baskisanati.com
+    - http://billdickeymasonry.com
+    - http://bibliotheque-sur-mesure.com
+    - http://bishbosh.com
+    - http://babyemozioni.it
+    - http://blassagephotography.com
+    - http://billwinephotography.com
+  condition: attributes

@@ -1,0 +1,20 @@
+title: Malspam 2017-09-12 - 'Your Amazon.co.uk order' phishing - dns_query
+id: 185fd6b7-8b49-458d-8f32-12dc58903441
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59b7cbde-92e8-4e1d-bd1d-4049950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - tarimsalteknoloji.com
+    - rossfranklinarchitecture.com
+    IpAddresses:
+    - 103.53.172.3
+    - 109.104.88.126
+    - 185.150.128.21
+  condition: attributes

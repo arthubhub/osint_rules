@@ -1,0 +1,15 @@
+title: 'Malspam 2016-07-18 .wsf->.gif (campaign: "RE: firstname.lastname") - url_request'
+id: c8bef7d2-4672-43f4-bfb8-369a7ffbc1c1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/578cd192-e448-45a8-abca-497a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://hotgoolrw.top
+  condition: attributes

@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-11-08 : Affid=3, offline, ".asasin" : "Invoice AX1234567"
+  - "Invoice-AX1234567.doc" - process_creation'
+id: 115073d1-c296-4633-9603-7df75496541f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a0451dc-4468-4b5a-9175-473a950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    md5:
+    - 1676f1817d6ed6d76fbde105f88e615a
+    sha1:
+    - 1059d2c82c859eb87797fe2b39d8c24faa9a7747
+    sha256:
+    - 73673004e913a77a47d8f7565354e92b70338da639a76708424ddcaac70b1005
+  condition: attributes

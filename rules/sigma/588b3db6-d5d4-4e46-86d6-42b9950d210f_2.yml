@@ -1,0 +1,21 @@
+title: Malspam targeting github users - process_creation
+id: 53f383c8-83f0-4443-983e-2af58449e8f1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588b3db6-d5d4-4e46-86d6-42b9950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    sha1:
+    - 4ec4258cb17ab4e297f72d6bcb27399a3f5786e8
+    - 80ac1d4ae82a4f9a3f0068c79b96483fb7a7c16d
+    - 724919041f87beeff2b68421cd2bf6b00399af2a
+    sha256:
+    - 2690dc4ebde17e460aa9fb7c96fdaedba0702cc9737186af6efa66d1c92974ad
+    - bae5d104f1c18d59a4a92b4d0269a85cd00c8a8e3c67a7daa15dc01ad89157bd
+    - 6b9af3290723f081e090cd29113c8755696dca88f06d072dd75bf5560ca9408e
+  condition: attributes

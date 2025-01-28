@@ -1,0 +1,16 @@
+title: Malspam 2017-08-24 'Bill-' - url_request
+id: 4b6f1751-635a-441d-b9c2-e1b840557716
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/599fc9cd-7108-4567-9b01-4426950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - kabbionionsesions.net
+    - http://kabbionionsesions.net
+  condition: attributes

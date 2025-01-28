@@ -1,0 +1,17 @@
+title: 'OSINT - Shamoon 2: Delivering Disttrack - url_request'
+id: f2104aaa-ca54-4aa8-97da-e0244c08b07e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58d8fea3-e924-4905-9a11-4ea6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.shamoon
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

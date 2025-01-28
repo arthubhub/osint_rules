@@ -1,0 +1,18 @@
+title: OSINT - APT29 Domain Fronting With TOR - url_request
+id: f43226fd-6e67-4629-b4bb-7f5264a99ef0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58d90481-e090-4900-96f4-600b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.apt_29
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.fireeye.com
+    - https://meek-reflect.appspot.com
+  condition: attributes

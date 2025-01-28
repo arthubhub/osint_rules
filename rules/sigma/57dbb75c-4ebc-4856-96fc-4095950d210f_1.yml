@@ -1,0 +1,15 @@
+title: OSINT - ELF.Rex - url_request
+id: c06c1333-0392-4b60-aaf1-f20c2153e50a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57dbb75c-4ebc-4856-96fc-4095950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://twitter.com
+  condition: attributes

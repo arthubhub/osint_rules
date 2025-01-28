@@ -1,0 +1,34 @@
+title: 'OSINT Black Vine: Formidable cyberespionage group targeted aerospace, healthcare
+  since 2012 by Symantec - dns_query'
+id: 4d423e8a-cd24-41e6-bb97-08ab9ad2db08
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55b7c901-614c-44d1-a638-440e950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - facefuture.us
+    - sinmoung.com
+    - prennera.com
+    - ssl-vait.com
+    - wiki-vaeit.com
+    - careflrst.com
+    - assso.net
+    - sharepoint-vaeit.com
+    - ameteksen.com
+    - we11point.com
+    - polarroute.com
+    - topsec2014.com
+    - healthslie.com
+    - empireb1ue.com
+    - caref1rst.com
+    - icbcqsz.com
+    - vipreclod.com
+    - ssl-vaeit.com
+    - savmpet.com
+  condition: attributes

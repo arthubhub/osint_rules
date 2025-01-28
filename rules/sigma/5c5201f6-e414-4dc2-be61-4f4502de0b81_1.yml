@@ -1,0 +1,16 @@
+title: OSINT - Cisco Job Posting Targets Korean Candidates - url_request
+id: a540bce3-5a1b-4f9e-bb47-f99c64838067
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c5201f6-e414-4dc2-be61-4f4502de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - ilovesvc.com
+    - https://blog.talosintelligence.com
+  condition: attributes

@@ -1,0 +1,23 @@
+title: VBS Downloader and Defender Control - dns_query
+id: 84993d4d-1dd2-4244-988b-3f8a32a21c3b
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e33608b-9604-494a-b9b7-4fa6950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 185.81.114.49
+    - 185.96.88.29
+    - 195.123.245.141
+    - 212.129.62.232
+    - 204.13.164.118
+    - 62.210.83.207
+    - 200.219.222.205
+    - 130.89.149.57
+    - 217.160.141.52
+  condition: attributes

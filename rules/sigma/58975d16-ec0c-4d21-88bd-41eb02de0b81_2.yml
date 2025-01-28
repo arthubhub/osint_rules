@@ -1,0 +1,15 @@
+title: OSINT - From RTF to Cobalt Strike passing via Flash - dns_query
+id: 0a118edd-cd62-4bcd-824b-64262c801201
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58975d16-ec0c-4d21-88bd-41eb02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 193.238.152.198
+  condition: attributes

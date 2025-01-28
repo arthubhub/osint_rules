@@ -1,0 +1,28 @@
+title: 'Malspam 2016-09-30 (.wsf in .zip) - campaign: "Parcel details" - url_request'
+id: c74775b5-b47b-46de-a4ac-89adc6145269
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ee6d8c-0650-4c8a-9dfa-4f31950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - greenshootmedia.com
+    - http://drugvacoa.net
+    - unityquire.com
+    - drugvacoa.net
+    - http://greenshootmedia.com
+    - http://puchipuchivirus.com
+    - puchipuchivirus.com
+    - resboiu.ro
+    - http://lust-vodka.com
+    - http://room8008.com
+    - http://resboiu.ro
+    - lust-vodka.com
+    - room8008.com
+    - http://unityquire.com
+  condition: attributes

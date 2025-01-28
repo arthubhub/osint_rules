@@ -1,0 +1,17 @@
+title: 'OSINT - CVE-2017-0199: In the Wild Attacks Leveraging HTA Handler - url_request'
+id: 31f5e06e-0ff8-4315-9be6-788f081a47e6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58ed2c42-04f0-44b7-baa4-9f1f02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.fireeye.com
+    - http://95.141.38.110
+    - http://www.modani.com
+  condition: attributes

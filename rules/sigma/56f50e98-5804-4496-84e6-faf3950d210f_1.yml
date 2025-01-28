@@ -1,0 +1,16 @@
+title: OSINT - PETYA Crypto-ransomware Overwrites MBR to Lock Users Out of Their Computers
+  - url_request
+id: 3796d80b-3fc8-408b-96cb-23c25e890a1c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f50e98-5804-4496-84e6-faf3950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.trendmicro.com
+  condition: attributes

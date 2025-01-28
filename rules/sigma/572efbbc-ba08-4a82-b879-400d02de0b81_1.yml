@@ -1,0 +1,15 @@
+title: Fake scan campaings (20160505 - 20160507) using docm - Dridex - url_request
+id: c85be843-5019-4880-8da0-4f90afdb8af3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/572efbbc-ba08-4a82-b879-400d02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://meregivo.com.ua
+  condition: attributes

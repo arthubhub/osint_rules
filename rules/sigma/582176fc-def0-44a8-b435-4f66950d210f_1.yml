@@ -1,0 +1,16 @@
+title: "OSINT - Exaspy \xE2\u20AC\u201C Commodity Android Spyware Targeting High-level\
+  \ Executives - url_request"
+id: 0fcd200a-9c87-46c5-9187-53d546968ad7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582176fc-def0-44a8-b435-4f66950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.skycure.com
+  condition: attributes

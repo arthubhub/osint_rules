@@ -1,0 +1,15 @@
+title: Dever Ransomware - url_request
+id: a446bea9-ca56-4f10-8d49-0a720acdd434
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e471206-3fb8-43d3-adfd-4806950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.wilbursecurity.com
+  condition: attributes

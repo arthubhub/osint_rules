@@ -1,0 +1,22 @@
+title: OSINT - Nemucod downloader spreading via Facebook - dns_query
+id: 88a8e374-61f2-4452-8c7b-d13cb49e9a9d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5832c7f9-9148-4e20-8122-4f19950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - kerman.pw
+    - 8cb5d3e.com
+    - yadozalamom.pw
+    - ukay.pw
+    - afisutovu.com
+    IpAddresses:
+    - 139.59.153.214
+    - 178.32.125.10
+  condition: attributes

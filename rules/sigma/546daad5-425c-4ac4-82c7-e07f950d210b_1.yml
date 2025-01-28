@@ -1,0 +1,17 @@
+title: Turla digging using TotalHash - url_request
+id: 5c6ac195-e083-4a6f-aa58-b5de71646960
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/546daad5-425c-4ac4-82c7-e07f950d210b.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.turla
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://totalhash.com
+  condition: attributes

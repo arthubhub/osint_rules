@@ -1,0 +1,17 @@
+title: OSINT The Path to Mass-Producing Cyber Attacks by FireEye - url_request
+id: 5a04948c-5dac-4ee6-aa80-51c82fa76bd2
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/552e7e46-62f4-4908-9fd6-488f950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - jpaols.com
+    - https://www.fireeye.com
+    - ndbssh.com
+  condition: attributes

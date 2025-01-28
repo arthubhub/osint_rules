@@ -1,0 +1,32 @@
+title: OSINT - Malware Campaign Using Google Docs Intercepted, Thousands of Users
+  Affected - process_creation
+id: 7cb91d5c-97f3-42a2-9a28-2b19d4d7e403
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57205b50-c19c-4411-ae0e-4414950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 64b5c6b20e2d758a008812df99a5958e
+    - 65b4bdba2d3b3e92b8b96d7d9ba7f88e
+    - a0869b751e4a0bf27685f2f8677f9c62
+    - 495f05d7ebca1022da2cdd1700aeac39
+    - 68abd8a3a8c18c59f638e50ab0c386a4
+    sha1:
+    - 9cf70b8ba95e606e7e3fff44230c4d014688396e
+    - 3b5417b1a045e382658fcf6c4d46b79265ab0d61
+    - f476d4197ec7c59b1ecb25362f00a8fb2f4c93b7
+    - ae1caf7ed76f4f412ff5c469cd61379d911a1da6
+    - dc2f8e277d45446077e6891bec2530317d8dbbfd
+    sha256:
+    - 16b6fdb28b3aebc369760c9561bfd00d34362039836dee455550606d96e97d5d
+    - 8f9eaae6fef0657cb4bdd25d386e3696f79ae5a1a944a4c329f3bdc4e8421ec7
+    - 1d81d9e9724c9cd333beb128a3a347ff2cc3cc71500486853fd0045db2539d5d
+    - 34230e2479d02dddc73b6e42784e6363f7b3a4192f939cf5f98b302a86070b07
+    - c218a2e5a46d40df832f5a735e272465a798a4d19c8fb88ac6a2d0d40ec9dd36
+  condition: attributes

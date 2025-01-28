@@ -1,0 +1,38 @@
+title: 'M2M -  Locky 2017-09-28 : Affid=3, offline, ".ykcol" : "Scan Data" - "Scan_54321.7z"
+  - url_request'
+id: 64042802-5623-4748-a7e6-b067e0f027c9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59cdf517-df58-40ed-bb9f-47bb950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://ostiavolleyclub.it
+    - http://brandingforbuyout.com
+    - http://envirotambang.com
+    - http://geocean.co.id
+    - http://yamanashi-jyujin.jp
+    - http://dueeffepromotion.com
+    - http://paulcruse.com
+    - http://jns.co.th
+    - http://homecarpetshopping.com
+    - http://centurythis.com
+    - http://henweekendsbirmingham.co.uk
+    - http://qxr33qxr.com
+    - http://bit-chasers.com
+    - http://glostrap.com
+    - http://sherylbro.net
+    - http://autoecoleautonome.com
+    - http://autoecolecarces.com
+    - http://lpdata.com
+    - http://accessyouraudience.com
+    - http://richarddrakeconstruction.com
+  condition: attributes

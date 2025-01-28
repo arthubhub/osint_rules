@@ -1,0 +1,19 @@
+title: OSINT - Goblin Panda continues to target Vietnam - dns_query
+id: 572f4b26-8e02-4270-aa36-173f6ca477b9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ccaeddb-dc84-4cc2-9f73-4a70950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.newcore_rat
+- attack.group.hellsing
+- attack.group.newcore_rat
+detection:
+  attributes:
+    IpAddresses:
+    - 193.29.56.62
+  condition: attributes

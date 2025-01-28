@@ -1,0 +1,15 @@
+title: OSINT The Casino Malvertising Campaign by MalwareBytes - url_request
+id: 206ac332-f9bd-4ace-865b-b0815f8fa76d
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/566f47dd-e7d4-4b1f-9f65-764f950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.malwarebytes.org
+  condition: attributes

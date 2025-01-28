@@ -1,0 +1,60 @@
+title: 'Malspam 2016-09-13 (.hta in .zip) - campaign: "Accounts Documentation - Invoices"
+  - dns_query'
+id: b046c966-29c9-4c80-bd0c-a4980adcde98
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d8036b-cd24-431c-bfbf-4ff4950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - allcateringservices.in
+    - safiazsports.com
+    - rapiderbariyer.com
+    - onlinepurohit.com
+    - tipsforall.in
+    - micaraland.com
+    - tscbearings.in
+    - webdesignselite.com
+    - adasurgical.com
+    - sulyok-t.hu
+    - dashingleather.com
+    - ungelie.com
+    - flexfitent.com
+    - jmetalloysllp.com
+    - anatoliamaket.com
+    - utsavi.net
+    - icloudrepublic.com
+    - shagunproperty.com
+    - fashionpark-nakamichi.com
+    - agileprojects.ro
+    - factumtech.com
+    IpAddresses:
+    - 118.127.45.5
+    - 50.87.145.92
+    - 5.10.105.44
+    - 202.40.164.200
+    - 210.172.183.41
+    - 174.142.55.229
+    - 74.124.210.105
+    - 192.185.196.50
+    - 66.147.244.75
+    - 118.127.45.134
+    - 213.142.130.107
+    - 212.52.182.45
+    - 192.185.196.41
+    - 192.185.118.130
+    - 43.242.215.197
+    - 192.185.118.129
+    - 208.43.236.106
+    - 103.231.41.127
+    - 31.170.165.111
+    - 95.130.171.45
+    - 192.185.103.167
+    - 182.18.143.140
+    - 93.114.64.41
+  condition: attributes

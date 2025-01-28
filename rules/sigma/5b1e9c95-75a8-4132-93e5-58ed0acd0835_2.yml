@@ -1,0 +1,30 @@
+title: 'Trend Micro Blog: New KillDisk Variant Hits Latin American Financial Organizations
+  Again - process_creation'
+id: 8c539067-82c9-46b5-8e58-9ca4b44761bf
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b1e9c95-75a8-4132-93e5-58ed0acd0835.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.killdisk_wiper
+detection:
+  object_9684:
+    md5:
+    - 9e33143916f648ec338f209eb0bd4789
+    sha1:
+    - 2aa3803869edee7fa1ab7cf96d992ccfecc89e7b
+    sha256:
+    - a3f2c60aa5af9d903a31ec3c1d02eeeb895c02fcf3094a049a3bdf3aa3d714c8
+  object_9685:
+    md5:
+    - c1831baa5505f5a557380e0ab3f60f48
+    sha1:
+    - 2766d7eaf2003f435f1a868b3687355823d34470
+    sha256:
+    - 1a09b182c63207aa6988b064ec0ee811c173724c33cf6dfe36437427a5c23446
+  condition: 1 of object_*

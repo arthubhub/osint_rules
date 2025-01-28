@@ -1,0 +1,16 @@
+title: 'OSINT New Variants of Agent.BTZ/ComRAT Found: The Threat That Hit The Pentagon
+  In 2008 Still Evolving by Intezer - url_request'
+id: cd4d1439-e2a2-420e-8bc4-f427e9a1d278
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ba805d-d674-4156-bcc6-473b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.intezer.com
+  condition: attributes

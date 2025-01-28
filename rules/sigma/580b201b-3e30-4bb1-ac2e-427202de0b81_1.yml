@@ -1,0 +1,15 @@
+title: OSINT -  The new .LNK between spam and Locky infection - url_request
+id: 02468680-f7f2-4950-bf7e-b920dc7a7bfd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/580b201b-3e30-4bb1-ac2e-427202de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blogs.technet.microsoft.com
+  condition: attributes

@@ -1,0 +1,21 @@
+title: OSINT - CARBANAK GROUP USES GOOGLE FOR MALWARE COMMAND-AND-CONTROL - url_request
+id: 121b6ac7-b7e9-4943-b8a4-c0fbf3b89f68
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/587e787d-c9f8-4132-9673-4d8402de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.anunak
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://docs.google.com
+    - http://138.201.44.4
+    - https://script.google.com
+    - http://atlantis-bahamas.com
+    - https://blogs.forcepoint.com
+  condition: attributes

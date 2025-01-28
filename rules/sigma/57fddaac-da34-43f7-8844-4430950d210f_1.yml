@@ -1,0 +1,15 @@
+title: 'OSINT - Odinaff: New Trojan used in high level financial attacks - url_request'
+id: 3cd0752b-78a6-4910-8c95-e120a348adff
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57fddaac-da34-43f7-8844-4430950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.symantec.com
+  condition: attributes

@@ -1,0 +1,53 @@
+title: Prynt Stealer Spotted In the Wild - A New Info Stealer Performing Clipper And
+  Keylogger Activities - process_creation
+id: 88656bd6-730f-4a9e-a878-caeca8554b1e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/4b1c186d-8bf2-4297-9cbc-f8f00192770b.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.prynt_stealer
+- attack.t1057
+- attack.t1007
+- attack.t1124
+- attack.t1539
+- attack.t1204
+- attack.t1497.001
+- attack.t1071
+- attack.t1555
+- attack.t1552
+- attack.t1567
+- attack.software.prynt_stealer
+- attack.t1518
+- attack.t1614
+- attack.t1041
+- attack.t1528
+- attack.t1113
+- attack.t1087
+detection:
+  object_9877:
+    md5:
+    - ab913c26832cd6e038625e30ebd38ec2
+    sha1:
+    - 719873f61eeb769493ac17d61603a6023a3db6dd
+    sha256:
+    - 1283c477e094db7af7d912ba115c77c96223208c03841768378a10d1819422f2
+  object_9878:
+    md5:
+    - 0b75113f8a78dcc1dea18d0e9aabc10a
+    sha1:
+    - 269e61eed692911c3a886a108374e2a6d155c8d1
+    sha256:
+    - 808385d902d8472046e5899237e965d8087da09d623149ba38b3814659689906
+  object_9879:
+    md5:
+    - 661842995f7fdd2e61667dbc2f019ff3
+    sha1:
+    - 1a638a81b9135340bc7d1f5e7eae5f3f06667a42
+    sha256:
+    - 4569670aca0cc480903b07c7026544e7e15b3f293e7c1533273c90153c46cc87
+  condition: 1 of object_*

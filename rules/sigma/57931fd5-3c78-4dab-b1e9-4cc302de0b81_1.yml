@@ -1,0 +1,23 @@
+title: OSINT - Kovter becomes almost file-less, creates a new file type, and gets
+  some new certificates - url_request
+id: 7a0b8f61-5f21-4aa1-935c-30ec503a3b76
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57931fd5-3c78-4dab-b1e9-4cc302de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://zaixovinmonopolet.net
+    - https://uchuhfsbox.net
+    - https://deequglutenfreeclub.org
+    - https://ierairosihanari.org
+    - https://eepheverseoftheday.org
+    - https://anayimovilyeuros.net
+    - https://blogs.technet.microsoft.com
+    - https://feehacitysocialising.net
+  condition: attributes

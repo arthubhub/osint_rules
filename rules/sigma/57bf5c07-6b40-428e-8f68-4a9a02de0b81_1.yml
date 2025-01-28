@@ -1,0 +1,36 @@
+title: The Million Dollar Dissident - Citizen lab report - url_request
+id: 88477332-a20e-4170-af00-2edaf7ba37a9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57bf5c07-6b40-428e-8f68-4a9a02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - alawaeltech.com
+    - icrcworld.com
+    - qaintqa.com
+    - http://fb-accounts.com
+    - bahrainsms.co
+    - http://unonoticias.net
+    - topcontactco.com
+    - aalaan.tv
+    - asrararablya.com
+    - webadv.co
+    - https://smser.net
+    - icloudcacher.com
+    - turkeynewsupdates.com
+    - nsoqa.com
+    - redcrossworld.com
+    - asrararabiya.co
+    - thainews.asia
+    - kenyasms.org
+    - ooredoodeals.com
+    - asrarrarabiya.com
+    - manoraonline.net
+    - smser.net
+  condition: attributes

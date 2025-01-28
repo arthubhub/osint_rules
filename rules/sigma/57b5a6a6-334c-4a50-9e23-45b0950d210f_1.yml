@@ -1,0 +1,19 @@
+title: 'OSINT Shark Ransomware: Ransomware as a service - url_request'
+id: 94198997-347a-4447-9f6d-724597e55618
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b5a6a6-334c-4a50-9e23-45b0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - system.net
+    - https://otx.alienvault.com
+    - 1729studios.com
+    - system.io
+    - https://www.hybrid-analysis.com
+  condition: attributes

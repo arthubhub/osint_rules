@@ -1,0 +1,59 @@
+title: "OSINT ScanBox framework \xE2\u20AC\u201C who\xE2\u20AC\u2122s affected, and\
+  \ who\xE2\u20AC\u2122s using it?  by PWC - dns_query"
+id: c83df9f1-25ba-48fd-b402-c4055ea9f2fb
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/546bba61-69d0-4c0e-8066-4942950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - googlecaches.com
+    - webmailgoogle.com
+    - educationel.com
+    - foundationssl.com
+    - mailaunch.com
+    - googlewebcache.com
+    - 9aaa.info
+    - windowsautoupdate.com
+    - hudsononlinenews.com
+    - lifewalden.com
+    - msdnblog.com
+    - outlookssl.com
+    - qoog1e.com
+    IpAddresses:
+    - 192.161.61.10
+    - 176.53.22.143
+    - 198.96.92.108
+    - 103.255.61.39
+    - 69.197.183.142
+    - 210.0.176.23
+    - 122.10.9.109
+    - 103.255.61.114
+    - 180.210.206.225
+    - 210.209.127.32
+    - 122.10.10.210
+    - 69.197.183.159
+    - 184.82.123.222
+    - 118.193.153.201
+    - 69.197.183.189
+    - 113.10.201.124
+    - 210.209.86.145
+    - 69.197.183.152
+    - 210.209.127.39
+    - 58.96.172.209
+    - 103.246.247.246
+    - 204.152.198.100
+    - 210.0.176.21
+    - 69.197.146.80
+    - 184.22.163.121
+    - 123.108.111.209
+    - 184.82.46.5
+    - 66.197.231.62
+    - 210.209.127.53
+    - 210.209.127.114
+  condition: attributes

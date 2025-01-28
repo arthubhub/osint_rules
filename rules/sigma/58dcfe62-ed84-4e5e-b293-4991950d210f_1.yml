@@ -1,0 +1,24 @@
+title: "OSINT - Carbon Paper: Peering into Turla\xE2\u20AC\u2122s second stage backdoor\
+  \ - url_request"
+id: 70265286-4285-4a02-8f5f-ddc13a73bf87
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58dcfe62-ed84-4e5e-b293-4991950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.turla
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://jucheafrica.com
+    - http://soheylistore.ir
+    - http://tazohor.com
+    - http://doctorshand.org
+    - https://www.welivesecurity.com
+    - http://www.lasac.eu
+    - http://61paris.fr
+  condition: attributes

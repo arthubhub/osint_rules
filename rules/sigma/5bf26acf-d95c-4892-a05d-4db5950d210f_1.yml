@@ -1,0 +1,27 @@
+title: "OSINT - CozyBear \xE2\u20AC\u201C In from the Cold? - url_request"
+id: 65072d4a-7131-4a1c-974a-566445f083d6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bf26acf-d95c-4892-a05d-4db5950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.apt29
+- attack.group.apt_29
+- attack.group.g0016
+- attack.software.s0154
+- attack.software.cobalt_strike
+- attack.software.cozycar
+- attack.group.cobalt_strike
+detection:
+  object_1:
+    RequestUrl|contains:
+    - mx1.era.citon.com
+  attributes:
+    RequestUrl|contains:
+    - pandorasong.com
+    - https://pylos.co
+  condition: 1 of object_* or attributes

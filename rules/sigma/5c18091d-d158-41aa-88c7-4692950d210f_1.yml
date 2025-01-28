@@ -1,0 +1,53 @@
+title: OSINT - The Return of The Charming Kitten - url_request
+id: 13e81830-cbfa-49a4-b18a-43d26dc8199e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c18091d-d158-41aa-88c7-4692950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.charming_kitten
+detection:
+  attributes:
+    RequestUrl|contains:
+    - invitation-to-messenger.space
+    - com-messengersaccount.name
+    - us2-mail-login-profile.site
+    - mobile-messengerplus.network
+    - confirm-session-identifier.info
+    - https://blog.certfa.com
+    - login-users-account.site
+    - broadcastnews.pro
+    - support-recoverycustomers.services
+    - session-management.info
+    - my-scribdinc.online
+    - customize-identity.info
+    - sessions-identifier-memberemailid.network
+    - identifier-sessions-mailactivityid.site
+    - podcastmedia.online
+    - broadcast-news.info
+    - mobilecontinue.network
+    - confirmation-service.info
+    - accounts-support.services
+    - confirm-session-identification.info
+    - com-identifier-userservicelog.com
+    - users-account.site
+    - documentofficupdate.info
+    - com-messengercenters.name
+    - confirm-identification.name
+    - confirm-verification-process.systems
+    - continue-session-identifier.info
+    - email-delivery.info
+    - recoveryusercustomer.info
+    - account-profile-users.info
+    - notificationapp.info
+    - com-identifier-servicelog.name
+    - confirm-identity.net
+    - documentsfilesharing.cloud
+    - customer-recovery.info
+    - document-share.info
+    - com-identifier-servicelog.info
+  condition: attributes

@@ -1,0 +1,47 @@
+title: 'OSINT Leviathan: Espionage actor spearphishes maritime and defense targets
+  - dns_query'
+id: 31593550-5d25-4d61-a439-16759a24da30
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59fc621f-6728-41c4-9cf3-4561950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.nanhaishu
+detection:
+  attributes:
+    QueryName|contains:
+    - dryversdocumentsatsettingswins.com
+    - dryversdocumentsandfullcloud.com
+    - dryversdocumentofficescloud.com
+    - dryversdocumentsandfullburomxcloud.com
+    - dryversdocumentsandfullbmxro.com
+    - hihitler.click
+    - dryversdocumentsandcustoms.com
+    - opendrivecouldrsafinder.com
+    - dryversdocumentsandfullcustomsoft.com
+    - dryversdocumentsolutionscloud.com
+    - cloudrsaservicesdriveoffic.com
+    - dryversdocumentsandcustomer.com
+    - dryversdocumentsandcustom.com
+    - dryversdocumentsandcustomsoft.com
+    - mycloudtoolzshop.net
+    - rsafinderfirewall.com
+    - dryversdocumentsettingswins.com
+    - cloudsfullversionooficcekey.com
+    IpAddresses:
+    - 187.155.135.38
+    - 189.149.244.88
+    - 91.224.23.174
+    - 201.130.60.117
+    - 187.136.81.160
+    - 187.155.40.22
+    - 189.150.247.88
+    - 187.155.82.29
+    - 187.136.42.150
+    - 189.215.55.232
+    - 187.136.85.252
+  condition: attributes

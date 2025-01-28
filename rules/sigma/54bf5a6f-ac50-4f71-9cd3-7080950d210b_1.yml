@@ -1,0 +1,18 @@
+title: "OSINT  Analysis of Project Cobra Another extensible framework used by the\
+  \ Uroburos\xE2\u20AC\u2122 actors from Gdata - url_request"
+id: 71a2b63a-0d6f-4996-be04-241b980b725b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54bf5a6f-ac50-4f71-9cd3-7080950d210b.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.turla_group
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.gdatasoftware.com
+  condition: attributes

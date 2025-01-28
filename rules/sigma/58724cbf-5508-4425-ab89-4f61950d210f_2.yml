@@ -1,0 +1,18 @@
+title: OSINT  - Fancy Bear Source Code - dns_query
+id: 2543681a-c680-4b5c-89e5-982626f3933f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58724cbf-5508-4425-ab89-4f61950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.strontium
+- attack.group.sofacy
+detection:
+  attributes:
+    IpAddresses:
+    - 104.152.187.66
+  condition: attributes

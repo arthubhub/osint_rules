@@ -1,0 +1,18 @@
+title: "Malware Analysis Report (AR18-165A) MAR-10135536-12 \xE2\u20AC\u201C North\
+  \ Korean Trojan: TYPEFRAME - url_request"
+id: 4a517260-040e-4c23-bece-d3018ea41070
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b265497-b458-4c11-a57c-45db02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.lazarus_group
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.us-cert.gov
+  condition: attributes

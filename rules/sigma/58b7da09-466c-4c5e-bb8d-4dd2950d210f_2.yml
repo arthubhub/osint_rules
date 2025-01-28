@@ -1,0 +1,15 @@
+title: OSINT - Google Play Apps Infected with Malicious IFrames - dns_query
+id: 38bdbcd7-b0bd-4da0-a417-378f7918ff11
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58b7da09-466c-4c5e-bb8d-4dd2950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - brenz.pl
+  condition: attributes

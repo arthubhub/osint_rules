@@ -1,0 +1,89 @@
+title: Fessleak before It Was Cool by OpenDNS - dns_query
+id: 538b668c-568c-4007-8b20-79254a9a62d4
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54eee0da-d1c8-441e-a760-3839950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - azurf.org
+    - landors.org
+    - relom.org
+    - webpertzo.org
+    - inpoucher.com
+    - labutinra.org
+    - uvreno.com
+    - tunim.net
+    - podin.net
+    - ramonza.org
+    - zhonte.org
+    - pinkavuz.org
+    - bizono.org
+    - lemptyzp.org
+    - pazumala.org
+    - penneza.com
+    - ankapootle.org
+    - shivue.org
+    - venitial.org
+    - ferom.org
+    - bracino.org
+    - beatrinko.org
+    - retilio.com
+    - fermentzone.com
+    - prosoknf.com
+    - marzie.org
+    - ontiq.com
+    - dovimos.org
+    - vectallies.org
+    - kabur.org
+    - ingoarten.org
+    - pizzanetp.com
+    - anster.net
+    - grandemab.org
+    - penazhef.org
+    - binjer.org
+    - rampoyak.org
+    - zelti.net
+    - deinq.com
+    - flaris.net
+    - tesuin.org
+    - timarols.org
+    - pondoq.org
+    - zibond.com
+    - litpou.org
+    - vemisaio.org
+    - fersob.org
+    - eltisc.net
+    - viceon.net
+    - namille.org
+    - wonkobu.org
+    - zarafint.org
+    - ermuz.com
+    - chebroom.com
+    - lemdingo.com
+    - hevpazana.org
+    - estuty.com
+    - romaldi.com
+    - orsai.net
+    - rliner.org
+    - pequrio.org
+    - montiza.net
+    - ztopp.org
+    - fenoli.net
+    - elimi.net
+    - kenthopm.org
+    - ferko.org
+    - binachio.org
+    - gladolimo.com
+    IpAddresses:
+    - 64.34.127.134
+    - 216.151.221.212
+    - 64.34.127.86
+    - 216.157.99.25
+    - 216.157.99.23
+  condition: attributes

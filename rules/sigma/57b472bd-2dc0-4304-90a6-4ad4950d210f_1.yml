@@ -1,0 +1,25 @@
+title: 'Malspam 2016-08-17 (.docm) - campaign: "Order Confirmation-" - url_request'
+id: 82803c06-0882-4587-8054-350b4b3690fb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b472bd-2dc0-4304-90a6-4ad4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://joopvandenheuvel.nl
+    - http://sora1221.web.fc2.com
+    - http://allgaeu-papparatzi.de
+    - http://cronininc.us
+    - joopvandenheuvel.nl
+    - http://alynawebx.go.ro
+    - cronininc.us
+    - http://rund-ums-haus-rosner.de
+    - allgaeu-papparatzi.de
+    - rund-ums-haus-rosner.de
+    - http://www.dog-portrait.com
+  condition: attributes

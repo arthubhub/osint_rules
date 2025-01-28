@@ -1,0 +1,18 @@
+title: OSINT CryptoWall v4 Emerges Days After Cyber Threat Alliance Report by Palo
+  Alto Networks Unit 42 - url_request
+id: 4923343a-3258-4d9f-b05f-2e396d0671cd
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/564264fe-1794-4894-878f-68b5950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://46.30.45.110
+    - http://researchcenter.paloaltonetworks.com
+    - http://46.30.43.183
+  condition: attributes

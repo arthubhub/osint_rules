@@ -1,0 +1,23 @@
+title: OSINT - ConnectWise ScreenConnect attacks deliver malware - process_creation
+id: 5cbfddfd-79ab-495e-bc3b-861b9bff37db
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f8912a82-2870-4de2-9663-5fdbee0ed401.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1190
+detection:
+  object_10810:
+    sha256:
+    - 2da975fee507060baa1042fb45e8467579abf3f348f1fd37b86bb742db63438a
+  object_10811:
+    sha256:
+    - a50d9954c0a50e5804065a8165b18571048160200249766bfa2f75d03c8cb6d0
+  object_10812:
+    sha256:
+    - c94038781c56ab85d2f110db4f45b86ccf269e77a3ff4b9133b96745ff97d25f
+  condition: 1 of object_*

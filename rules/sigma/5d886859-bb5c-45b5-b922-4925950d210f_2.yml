@@ -1,0 +1,579 @@
+title: OSINT - Emotet Updated C2 Info 9/20 - dns_query
+id: b0e746d5-cc73-46bb-8e1e-57ff6e18869f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d886859-bb5c-45b5-b922-4925950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.emotet
+- attack.software.s0367
+- attack.group.geodo
+- attack.group.emotet
+- attack.software.geodo
+detection:
+  object_18138:
+    IpAddresses:
+    - 190.117.206.153
+  object_18139:
+    IpAddresses:
+    - 179.62.18.56
+  object_18140:
+    IpAddresses:
+    - 123.168.4.66
+  object_18141:
+    IpAddresses:
+    - 178.249.187.151
+  object_18142:
+    IpAddresses:
+    - 217.199.160.224
+  object_18143:
+    IpAddresses:
+    - 62.75.150.240
+  object_18144:
+    IpAddresses:
+    - 71.244.60.230
+  object_18145:
+    IpAddresses:
+    - 119.59.124.163
+  object_18146:
+    IpAddresses:
+    - 211.229.116.97
+  object_18147:
+    IpAddresses:
+    - 190.38.14.52
+  object_18148:
+    IpAddresses:
+    - 217.113.27.158
+  object_18149:
+    IpAddresses:
+    - 203.25.159.3
+  object_18150:
+    IpAddresses:
+    - 190.19.42.131
+  object_18151:
+    IpAddresses:
+    - 187.188.166.192
+  object_18152:
+    IpAddresses:
+    - 51.15.8.192
+  object_18153:
+    IpAddresses:
+    - 23.92.22.225
+  object_18154:
+    IpAddresses:
+    - 189.166.68.89
+  object_18155:
+    IpAddresses:
+    - 88.250.223.190
+  object_18156:
+    IpAddresses:
+    - 189.129.4.186
+  object_18157:
+    IpAddresses:
+    - 86.42.166.147
+  object_18158:
+    IpAddresses:
+    - 46.163.144.228
+  object_18159:
+    IpAddresses:
+    - 109.104.79.48
+  object_18160:
+    IpAddresses:
+    - 181.81.143.108
+  object_18161:
+    IpAddresses:
+    - 183.82.97.25
+  object_18162:
+    IpAddresses:
+    - 190.230.60.129
+  object_18163:
+    IpAddresses:
+    - 81.169.140.14
+  object_18164:
+    IpAddresses:
+    - 79.143.182.254
+  object_18165:
+    IpAddresses:
+    - 109.169.86.13
+  object_18166:
+    IpAddresses:
+    - 187.155.233.46
+  object_18167:
+    IpAddresses:
+    - 87.106.77.40
+  object_18168:
+    IpAddresses:
+    - 62.75.160.178
+  object_18169:
+    IpAddresses:
+    - 149.62.173.247
+  object_18170:
+    IpAddresses:
+    - 190.1.37.125
+  object_18171:
+    IpAddresses:
+    - 190.221.50.210
+  object_18172:
+    IpAddresses:
+    - 217.199.175.216
+  object_18173:
+    IpAddresses:
+    - 46.28.111.142
+  object_18174:
+    IpAddresses:
+    - 5.196.35.138
+  object_18175:
+    IpAddresses:
+    - 46.21.105.59
+  object_18176:
+    IpAddresses:
+    - 200.57.102.71
+  object_18177:
+    IpAddresses:
+    - 151.80.142.33
+  object_18178:
+    IpAddresses:
+    - 138.68.106.4
+  object_18179:
+    IpAddresses:
+    - 119.92.51.40
+  object_18180:
+    IpAddresses:
+    - 89.188.124.145
+  object_18181:
+    IpAddresses:
+    - 178.79.163.131
+  object_18182:
+    IpAddresses:
+    - 200.21.90.6
+  object_18183:
+    IpAddresses:
+    - 114.79.134.129
+  object_18184:
+    IpAddresses:
+    - 190.200.64.180
+  object_18185:
+    IpAddresses:
+    - 190.104.253.234
+  object_18186:
+    IpAddresses:
+    - 71.244.60.231
+  object_18187:
+    IpAddresses:
+    - 91.205.215.57
+  object_18188:
+    IpAddresses:
+    - 189.187.141.15
+  object_18189:
+    IpAddresses:
+    - 91.83.93.124
+  object_18190:
+    IpAddresses:
+    - 46.29.183.211
+  object_18191:
+    IpAddresses:
+    - 183.87.87.73
+  object_18192:
+    IpAddresses:
+    - 212.71.237.140
+  object_18193:
+    IpAddresses:
+    - 62.75.143.100
+  object_18194:
+    IpAddresses:
+    - 185.86.148.222
+  object_18195:
+    IpAddresses:
+    - 77.245.101.134
+  object_18196:
+    IpAddresses:
+    - 79.127.57.42
+  object_18197:
+    IpAddresses:
+    - 159.203.204.126
+  object_18198:
+    IpAddresses:
+    - 190.230.60.129
+  object_18199:
+    IpAddresses:
+    - 201.184.65.229
+  object_18200:
+    IpAddresses:
+    - 181.188.149.134
+  object_18201:
+    IpAddresses:
+    - 181.36.42.205
+  object_18202:
+    IpAddresses:
+    - 80.85.87.122
+  object_18203:
+    IpAddresses:
+    - 77.55.211.77
+  object_18204:
+    IpAddresses:
+    - 186.83.133.253
+  object_18205:
+    IpAddresses:
+    - 50.28.51.143
+  object_18206:
+    IpAddresses:
+    - 200.58.171.51
+  object_18207:
+    IpAddresses:
+    - 46.41.151.103
+  object_18208:
+    IpAddresses:
+    - 201.163.74.202
+  object_18209:
+    IpAddresses:
+    - 5.77.13.70
+  object_18210:
+    IpAddresses:
+    - 149.167.86.174
+  object_18211:
+    IpAddresses:
+    - 181.164.8.25
+  object_18212:
+    IpAddresses:
+    - 181.143.194.138
+  object_18213:
+    IpAddresses:
+    - 192.241.250.202
+  object_18214:
+    IpAddresses:
+    - 63.142.253.122
+  object_18215:
+    IpAddresses:
+    - 178.254.6.27
+  object_18216:
+    IpAddresses:
+    - 92.222.125.16
+  object_18217:
+    IpAddresses:
+    - 142.44.162.209
+  object_18218:
+    IpAddresses:
+    - 86.98.25.30
+  object_18219:
+    IpAddresses:
+    - 31.172.240.91
+  object_18220:
+    IpAddresses:
+    - 149.202.153.252
+  object_18221:
+    IpAddresses:
+    - 201.250.11.236
+  object_18222:
+    IpAddresses:
+    - 189.129.231.76
+  object_18223:
+    IpAddresses:
+    - 182.76.6.2
+  object_18224:
+    IpAddresses:
+    - 189.209.217.49
+  object_18225:
+    IpAddresses:
+    - 87.106.136.232
+  object_18226:
+    IpAddresses:
+    - 91.205.215.66
+  object_18227:
+    IpAddresses:
+    - 212.71.234.16
+  object_18228:
+    IpAddresses:
+    - 178.79.161.166
+  object_18229:
+    IpAddresses:
+    - 162.243.125.212
+  object_18230:
+    IpAddresses:
+    - 173.212.203.26
+  object_18231:
+    IpAddresses:
+    - 85.104.59.244
+  object_18232:
+    IpAddresses:
+    - 186.4.172.5
+  object_18233:
+    IpAddresses:
+    - 169.239.182.217
+  object_18234:
+    IpAddresses:
+    - 37.157.194.134
+  object_18235:
+    IpAddresses:
+    - 190.18.146.70
+  object_18236:
+    IpAddresses:
+    - 87.230.19.21
+  object_18237:
+    IpAddresses:
+    - 186.4.172.5
+  object_18238:
+    IpAddresses:
+    - 103.97.95.218
+  object_18239:
+    IpAddresses:
+    - 206.189.98.125
+  object_18240:
+    IpAddresses:
+    - 181.143.53.227
+  object_18241:
+    IpAddresses:
+    - 185.94.252.13
+  object_18242:
+    IpAddresses:
+    - 190.145.67.134
+  object_18243:
+    IpAddresses:
+    - 136.243.177.26
+  object_18244:
+    IpAddresses:
+    - 94.205.247.10
+  object_18245:
+    IpAddresses:
+    - 95.128.43.213
+  object_18246:
+    IpAddresses:
+    - 159.65.25.128
+  object_18247:
+    IpAddresses:
+    - 222.214.218.192
+  object_18248:
+    IpAddresses:
+    - 104.236.246.93
+  object_18249:
+    IpAddresses:
+    - 217.160.182.191
+  object_18250:
+    IpAddresses:
+    - 59.152.93.46
+  object_18251:
+    IpAddresses:
+    - 138.201.140.110
+  object_18252:
+    IpAddresses:
+    - 45.33.49.124
+  object_18253:
+    IpAddresses:
+    - 78.188.105.159
+  object_18254:
+    IpAddresses:
+    - 92.222.216.44
+  object_18255:
+    IpAddresses:
+    - 185.129.92.210
+  object_18256:
+    IpAddresses:
+    - 47.41.213.2
+  object_18257:
+    IpAddresses:
+    - 144.139.247.220
+  object_18258:
+    IpAddresses:
+    - 46.105.131.87
+  object_18259:
+    IpAddresses:
+    - 62.75.187.192
+  object_18260:
+    IpAddresses:
+    - 88.156.97.210
+  object_18261:
+    IpAddresses:
+    - 177.246.193.139
+  object_18262:
+    IpAddresses:
+    - 188.166.253.46
+  object_18263:
+    IpAddresses:
+    - 80.11.163.139
+  object_18264:
+    IpAddresses:
+    - 41.220.119.246
+  object_18265:
+    IpAddresses:
+    - 31.12.67.62
+  object_18266:
+    IpAddresses:
+    - 45.123.3.54
+  object_18267:
+    IpAddresses:
+    - 179.32.19.219
+  object_18268:
+    IpAddresses:
+    - 190.226.44.20
+  object_18269:
+    IpAddresses:
+    - 87.106.139.101
+  object_18270:
+    IpAddresses:
+    - 182.176.132.213
+  object_18271:
+    IpAddresses:
+    - 190.201.164.223
+  object_18272:
+    IpAddresses:
+    - 190.53.135.159
+  object_18273:
+    IpAddresses:
+    - 78.24.219.147
+  object_18274:
+    IpAddresses:
+    - 5.196.74.210
+  object_18275:
+    IpAddresses:
+    - 37.208.39.59
+  object_18276:
+    IpAddresses:
+    - 187.144.189.58
+  object_18277:
+    IpAddresses:
+    - 190.106.97.230
+  object_18278:
+    IpAddresses:
+    - 186.75.241.230
+  object_18279:
+    IpAddresses:
+    - 182.176.106.43
+  object_18280:
+    IpAddresses:
+    - 175.100.138.82
+  object_18281:
+    IpAddresses:
+    - 190.186.203.55
+  object_18282:
+    IpAddresses:
+    - 91.92.191.134
+  object_18283:
+    IpAddresses:
+    - 211.63.71.72
+  object_18284:
+    IpAddresses:
+    - 104.131.11.150
+  object_18285:
+    IpAddresses:
+    - 186.4.194.153
+  object_18286:
+    IpAddresses:
+    - 190.79.251.99
+  object_18287:
+    IpAddresses:
+    - 189.245.216.217
+  object_18288:
+    IpAddresses:
+    - 189.189.214.1
+  object_18289:
+    IpAddresses:
+    - 62.75.171.248
+  object_18290:
+    IpAddresses:
+    - 133.130.73.156
+  object_18291:
+    IpAddresses:
+    - 203.150.19.63
+  object_18292:
+    IpAddresses:
+    - 216.154.222.52
+  object_18293:
+    IpAddresses:
+    - 149.202.153.251
+  object_18294:
+    IpAddresses:
+    - 5.189.148.98
+  object_18295:
+    IpAddresses:
+    - 83.110.75.153
+  object_18296:
+    IpAddresses:
+    - 95.178.241.254
+  object_18297:
+    IpAddresses:
+    - 190.55.39.215
+  object_18298:
+    IpAddresses:
+    - 70.45.30.28
+  object_18299:
+    IpAddresses:
+    - 181.230.126.152
+  object_18300:
+    IpAddresses:
+    - 83.169.33.157
+  object_18301:
+    IpAddresses:
+    - 190.55.86.138
+  object_18302:
+    IpAddresses:
+    - 201.113.23.175
+  object_18303:
+    IpAddresses:
+    - 113.52.135.33
+  object_18304:
+    IpAddresses:
+    - 139.59.242.76
+  object_18305:
+    IpAddresses:
+    - 190.171.105.158
+  object_18306:
+    IpAddresses:
+    - 176.58.93.123
+  object_18307:
+    IpAddresses:
+    - 190.13.146.47
+  object_18308:
+    IpAddresses:
+    - 143.95.101.72
+  object_18309:
+    IpAddresses:
+    - 138.197.140.163
+  object_18310:
+    IpAddresses:
+    - 190.10.194.42
+  object_18311:
+    IpAddresses:
+    - 190.92.103.7
+  object_18312:
+    IpAddresses:
+    - 78.109.34.178
+  object_18313:
+    IpAddresses:
+    - 45.33.1.161
+  object_18314:
+    IpAddresses:
+    - 108.179.216.46
+  object_18315:
+    IpAddresses:
+    - 152.168.220.188
+  object_18316:
+    IpAddresses:
+    - 159.69.211.211
+  object_18317:
+    IpAddresses:
+    - 94.177.253.126
+  object_18318:
+    IpAddresses:
+    - 93.78.205.196
+  object_18319:
+    IpAddresses:
+    - 190.146.81.138
+  object_18320:
+    IpAddresses:
+    - 46.32.229.152
+  object_18321:
+    IpAddresses:
+    - 181.113.229.139
+  object_18322:
+    IpAddresses:
+    - 178.249.187.150
+  object_18323:
+    IpAddresses:
+    - 216.70.88.55
+  object_18324:
+    IpAddresses:
+    - 200.82.147.93
+  condition: 1 of object_*

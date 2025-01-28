@@ -1,0 +1,18 @@
+title: OSINT - Ursnif variant found using mouse movement for decryption and evasion
+  - dns_query
+id: a64c5727-e5c3-4adc-96c5-61754a62c517
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59a3bc82-f214-4bef-ab11-461b950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.snifula
+detection:
+  attributes:
+    QueryName|contains:
+    - 0x7293c971.ru
+  condition: attributes

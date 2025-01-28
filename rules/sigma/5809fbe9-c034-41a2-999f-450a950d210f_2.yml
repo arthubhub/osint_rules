@@ -1,0 +1,16 @@
+title: OSINT - Malspam delivers NanoCore RAT - dns_query
+id: c395615c-071a-4a82-bb1a-5122f165167c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5809fbe9-c034-41a2-999f-450a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 119.18.103.60
+    - 137.74.157.90
+  condition: attributes

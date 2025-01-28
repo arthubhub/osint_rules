@@ -1,0 +1,25 @@
+title: 'OSINT - PSA: Conference Invite used as a Lure by Operation Lotus Blossom Actors
+  - process_creation'
+id: 9cbf623f-e76b-4279-ac4f-b42814f6992f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58179275-f030-4dce-a626-4c9802de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.lotus_blossom
+detection:
+  attributes:
+    md5:
+    - 20c96609d10b2d497031e1e42970913a
+    - 9c06ac2eabd50ebfdd988df3b1a633fe
+    sha1:
+    - 6f2688d24c67b766c4e3fc5de08e3f2137b71fad
+    - 93352181787450e9147ef40124ebde818a361947
+    sha256:
+    - 61de3df463f94f8583934edb227b174c7e4473b89bd110a6f6ba44fad8c41943
+    - aefa519feab9c8741af98ae2ddc287c404117e208cecd6479ee427f682814286
+  condition: attributes

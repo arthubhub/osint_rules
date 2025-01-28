@@ -1,0 +1,23 @@
+title: 'OSINT  Threat Spotlight: Spam Served With a Side of Dridex from Cisco Talos
+  - dns_query'
+id: d32dc265-2a66-4e2b-898a-faa8ccdbb17b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55244f19-fc08-42e2-8cd9-42c7950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 45.55.154.235
+    - 93.26.217.203
+    - 199.201.121.169
+    - 193.26.217.203
+    - 185.91.175.64
+    - 185.39.149.21
+    - 77.74.103.150
+    - 31.41.45.197
+  condition: attributes

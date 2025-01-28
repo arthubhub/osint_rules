@@ -1,0 +1,67 @@
+title: Brazil malspam pushes Astaroth (Guildma) malware - dns_query
+id: 1a7a222a-f1d9-4967-8f83-3635877f2e0e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/19b55cd3-2c7f-4bb5-805c-308b412958b0.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.guildma
+- attack.software.astaroth
+- attack.software.s0373
+- attack.group.astaroth
+detection:
+  object_9060:
+    QueryName|contains:
+    - w7oaer.infocloudgruposolucaoecia.link
+    IpAddresses:
+    - 172.67.217.95
+  object_9061:
+    IpAddresses:
+    - 172.67.212.174
+  object_9062:
+    IpAddresses:
+    - 104.21.11.4
+  object_9063:
+    IpAddresses:
+    - 104.21.11.4
+  object_9064:
+    IpAddresses:
+    - 104.21.11.4
+  object_9065:
+    IpAddresses:
+    - 104.21.11.4
+  object_9066:
+    IpAddresses:
+    - 104.21.11.4
+  object_9067:
+    IpAddresses:
+    - 104.21.11.4
+  object_9068:
+    IpAddresses:
+    - 104.21.11.4
+  object_9069:
+    IpAddresses:
+    - 104.21.11.4
+  object_9070:
+    IpAddresses:
+    - 104.21.11.4
+  object_9071:
+    IpAddresses:
+    - 104.21.11.4
+  object_9072:
+    IpAddresses:
+    - 104.21.11.4
+  object_9073:
+    IpAddresses:
+    - 104.21.11.4
+  object_9074:
+    IpAddresses:
+    - 104.21.25.34
+  object_9075:
+    IpAddresses:
+    - 172.67.165.46
+  condition: 1 of object_*

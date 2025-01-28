@@ -1,0 +1,41 @@
+title: Malspam 2017-08-25 'Your Sage subscription invoice is ready' - url_request
+id: 0a30bd90-551c-461a-80cc-ad9c09168581
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/599fc448-9ed0-46eb-89ae-93c2950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://hausgerhard.com
+    - bromesterionod.net
+    - haboosh-law.com
+    - hbwconsultants.nl
+    - haleshomesales.com
+    - http://bromesterionod.net
+    - http://heimatverein-menne.de
+    - http://haleshomesales.com
+    - http://hecam.de
+    - gumart.com
+    - hartwig-mau.de
+    - http://haboosh-law.com
+    - hecam.de
+    - heimatverein-menne.de
+    - hausgadum.de
+    - http://hausgadum.de
+    - go-coo.jp
+    - hausgerhard.com
+    - http://gumart.com
+    - http://hbwconsultants.nl
+    - http://go-coo.jp
+    - http://hartwig-mau.de
+    - http://hansstock.de
+    - hansstock.de
+  condition: attributes

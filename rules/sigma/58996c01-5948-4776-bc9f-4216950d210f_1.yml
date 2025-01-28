@@ -1,0 +1,25 @@
+title: OSINT -  When A Pony Walks Out Of A Pub - url_request
+id: 5d859595-1f30-42d9-9522-b855b1313dd5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58996c01-5948-4776-bc9f-4216950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://kbfvzoboss.bid
+    - alphastand.trade
+    - http://blog.talosintel.com
+    - alphastand.top
+    - http://195.22.127.233
+    - http://alphastand.trade
+    - http://alphastand.top
+    - http://alphastand.win
+    - alphastand.win
+    - kbfvzoboss.bid
+    - http://5.200.52.198
+  condition: attributes

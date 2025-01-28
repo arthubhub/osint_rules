@@ -1,0 +1,34 @@
+title: 'Malspam 2016-08-31 (.js in .zip) - campaign: "bank transactions" - url_request'
+id: e8108bdc-d12f-4a3e-9e82-0326cebc1fe3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c6cb1f-5d40-49cc-a24a-4cb2950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - two-capitals.com
+    - http://alci.dommel.be
+    - http://210.240.104.2
+    - http://robbeottoy.dommel.be
+    - gebetech.at
+    - http://www.galleriacolonna.org
+    - abufarha.net
+    - impregui.com
+    - cybersocialization.ru
+    - http://www.robtozier.com
+    - foodbiz-net.com
+    - http://80.241.232.207
+    - izeinstruments.com
+    - akeseverin.com
+    - http://www.instalacionesjosearteaga.com
+    - akristall.ru
+    - http://my.st21.ru
+    - http://01ad681.netsolhost.com
+    - http://cybersocialization.ru
+    - http://www.jenohorvath.be
+  condition: attributes

@@ -1,0 +1,17 @@
+title: 'Information stealer: Fareit - dns_query'
+id: a55cb1bb-4520-47aa-9e6f-cc503a305f23
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57062927-2a54-4d6a-89c4-37ea950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - fifterax.com
+    IpAddresses:
+    - 185.130.7.22
+  condition: attributes

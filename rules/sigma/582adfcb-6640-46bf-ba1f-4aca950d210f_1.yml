@@ -1,0 +1,15 @@
+title: OSINT -  HackingTeam back for your Androids, now extra insecure! - url_request
+id: 36d27515-a169-4015-893c-79aca4b58a26
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582adfcb-6640-46bf-ba1f-4aca950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://rednaga.io
+  condition: attributes

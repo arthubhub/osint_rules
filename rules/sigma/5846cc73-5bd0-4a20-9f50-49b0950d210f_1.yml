@@ -1,0 +1,17 @@
+title: 'OSINT - Another story of Unix Trojan: Tsunami/Kaiten.c (IRC/Bot) w/ Flooder,
+  Backdoor at a hacked xBSD - url_request'
+id: de2e3c68-3519-4aea-a078-9fd84e357834
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5846cc73-5bd0-4a20-9f50-49b0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - cvv4you.ru
+    - http://blog.malwaremustdie.org
+  condition: attributes

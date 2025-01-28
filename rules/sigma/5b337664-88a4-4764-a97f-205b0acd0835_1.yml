@@ -1,0 +1,55 @@
+title: 'Blog Post: EMOTET INFECTION WITH ICEDID - url_request'
+id: 2dbe4975-549d-4d2b-9a93-1d3157c52661
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b337664-88a4-4764-a97f-205b0acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://88.79.210.243
+    - http://www.dotlenieni.pl
+    - http://www.chipsroofingloveland.com
+    - http://jitkla.com
+    - urnachay.com
+    - http://www.orderauto.es
+    - http://69.193.199.50
+    - http://r2consulting.net
+    - thectrl24.com
+    - https://ift.tt
+    - http://turski.eu
+    - https://www.malware-traffic-analysis.net
+    - http://cosmo-medica.pl
+    - http://www.database.z-flooring.com
+    - percalabia.com
+    - http://carricusa.com
+    - http://www.ar.mtcuae.com
+    - http://csszsz.hu
+    - http://www.cosmo-medica.pl
+    - http://hydrodom.org
+    - http://melondisc.co.th
+    - http://www.trinityempire.org
+    - http://www.ambassade-de-russie.fr
+    - http://tasomedia.com
+    - http://iconholidays.com.bd
+    - http://110.143.116.201
+    - http://alpinewebgroup.com
+    - http://www.cycle-film.com
+    - http://ipsupportonline.com
+    - http://wolffy.net
+    - http://thectrl24.com
+    - http://tomsnyder.net
+    - http://www.chalet12.de
+    - http://gtechuae.com
+    - http://amplajf.com.br
+    - http://www.earthlinks.co.in
+    - http://www.afpols-seminaires.fr
+    - sandearth.com
+  condition: attributes

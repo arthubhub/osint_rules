@@ -1,0 +1,36 @@
+title: 'OSINT - Hildegard: New TeamTNT Malware Targeting Kubernetes - dns_query'
+id: a77a5953-a1af-4d16-b894-eb18c240e9ac
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/2e29b34e-9558-46ba-96b2-211295ece344.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  object_7001:
+    IpAddresses:
+    - 45.9.150.36
+  object_7002:
+    IpAddresses:
+    - 147.75.47.199
+  object_7003:
+    IpAddresses:
+    - 45.9.148.108
+  object_7004:
+    IpAddresses:
+    - 45.9.148.108
+  object_7005:
+    IpAddresses:
+    - 123.245.9.147
+  object_7006:
+    IpAddresses:
+    - 13.245.9.147
+  object_7007:
+    IpAddresses:
+    - 164.68.106.96
+  object_7008:
+    IpAddresses:
+    - 62.234.121.105
+  condition: 1 of object_*

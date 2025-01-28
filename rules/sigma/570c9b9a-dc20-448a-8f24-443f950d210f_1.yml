@@ -1,0 +1,15 @@
+title: Rokku Ransomware shows possible link with Chimera - url_request
+id: b02d95ee-d99b-4a8c-9e00-34c24a0d7f23
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/570c9b9a-dc20-448a-8f24-443f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.malwarebytes.org
+  condition: attributes

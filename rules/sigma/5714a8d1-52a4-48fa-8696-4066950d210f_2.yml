@@ -1,0 +1,15 @@
+title: OSINT - Retefe is back in town - dns_query
+id: adefd602-4748-4984-a888-2bd7a32ff320
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5714a8d1-52a4-48fa-8696-4066950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 81.19.145.97
+  condition: attributes

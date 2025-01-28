@@ -1,0 +1,18 @@
+title: OSINT - A North Korean Monero Cryptocurrency Miner - dns_query
+id: e756e9ec-0b58-4bdf-b9f1-98d17244d3fa
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a54778c-3dac-4d36-b7c3-4d6e02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  object_9308:
+    IpAddresses:
+    - 175.45.178.19
+  attributes:
+    IpAddresses:
+    - 175.45.178.19
+  condition: 1 of object_* or attributes

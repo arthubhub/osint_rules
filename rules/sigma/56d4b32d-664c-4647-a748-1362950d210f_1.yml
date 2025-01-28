@@ -1,0 +1,15 @@
+title: OSINT - New Hacking team samples (OSX) - url_request
+id: 1c386f47-d21a-414e-9879-556560a3d824
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56d4b32d-664c-4647-a748-1362950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://reverse.put.as
+  condition: attributes

@@ -1,0 +1,24 @@
+title: 'OSINT - Striking Oil: A Closer Look at Adversary Infrastructure - url_request'
+id: 18d04ed9-db00-4868-87a5-b3f53b3f838e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59cab250-1480-406f-8e7a-4c7e02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.twoface
+detection:
+  attributes:
+    RequestUrl|contains:
+    - owa-insss-org-ill-owa-authen.ml
+    - my-mailcoil.ml
+    - webmaiil-tau-ac-il.ml
+    - https://researchcenter.paloaltonetworks.com
+    - webmail-tidhar-co-il.ml
+    - logn-micrsftonine-con.ml
+    - so-cc-hujii-ac-il.ml
+    - mail-macroadvisorypartners.ml
+  condition: attributes

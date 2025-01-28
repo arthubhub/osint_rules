@@ -1,0 +1,17 @@
+title: "OSINT - Houdini\xE2\u20AC\u2122s Magic Reappearance - dns_query"
+id: 09ee6a72-4c36-4a16-8c07-f74eed1964e8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/580fcef3-28fc-42e2-aec1-4978950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 136.243.104.200
+    - 52.42.161.75
+    - 78.47.96.17
+  condition: attributes

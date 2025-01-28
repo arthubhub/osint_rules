@@ -1,0 +1,43 @@
+title: 'OSINT Angler EK: More Obfuscation, Fake Extensions, and Other Nonsense by
+  Talos - url_request'
+id: 7261196e-8d39-4843-99ba-3de3d58c9c9a
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55749a9b-1880-4351-803c-47fc950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - buroroebers.nl
+    - atlantacustomwork.com
+    - redstarfuochicinesi.it
+    - andreiprundeanu.eu
+    - tarifair.fr
+    - ancientvoyages.com
+    - sweetthangzdesserts.com
+    - jandchousecleaning.com
+    - alsblueshelpt.nl
+    - asambleadedios.org
+    - doggonesigns.com
+    - 4042shopping.com
+    - asadiag.com
+    - beijerlandsekelnerrace.nl
+    - gonavarro.com
+    - 99mkb.com
+    - blationmedia.com
+    - buhtime.by
+    - hostyoursitehere.com
+    - http://blogs.cisco.com
+    - brandgriffin.com
+    - americanfamilyenergy.com
+    - traditionetgourmandises.fr
+    - alebehr.com
+    - bezpiecznaswinka.pl
+    - alchemyofpresence.com
+    - braingame.biz
+    - jeanrey.fr
+  condition: attributes

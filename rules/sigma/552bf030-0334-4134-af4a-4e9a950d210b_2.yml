@@ -1,0 +1,19 @@
+title: OSINT APT 30 and the Mechanics of a Long-Running Cyber Espionage Operation
+  by FireEye - dns_query
+id: d2d81aef-c116-4d40-854b-c82d2a1117ae
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/552bf030-0334-4134-af4a-4e9a950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.apt_30
+detection:
+  attributes:
+    QueryName|contains:
+    - km-nyc.com
+    - km153.com
+  condition: attributes

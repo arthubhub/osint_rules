@@ -1,0 +1,18 @@
+title: 'OSINT -  Hunt Case Study: Hunting Campaign Indicators on Privacy Protected
+  Attack Infrastructure - url_request'
+id: e2b5e7ba-6971-42ab-8948-2af37d8883e4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58d39c29-8244-4fcf-a48b-40db950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - primeminister-goverment-techcenter.tech
+    - https://blog.domaintools.com
+    - http://ssl.pmo.gov.il-dana-naauthurl1-welcome.cgi.primeminister-goverment-techcenter.tech
+  condition: attributes

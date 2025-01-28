@@ -1,0 +1,20 @@
+title: OSINT - Lojack Becomes a Double-Agent - dns_query
+id: cd71dc83-a1e8-41c1-9628-7a815330d971
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aec6eea-74a4-43f9-8910-498d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.apt28
+detection:
+  attributes:
+    QueryName|contains:
+    - lxwo.org
+    - elaxo.org
+    - sysanalyticweb.com
+    - ikmtrust.com
+  condition: attributes

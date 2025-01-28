@@ -1,0 +1,115 @@
+title: OSINT - Qwerty Ransomware Utilizes GnuPG to Encrypt a Victims Files - process_creation
+id: 1a3a35ea-4b70-4c09-9520-dc58f301dbd7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aaa3126-0b38-4bd7-960a-4e48950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.qwerty_ransomware
+- attack.software.qwerty_ransomware
+detection:
+  object_10074:
+    sha256:
+    - 39c510bc504a647ef8fa1da8ad3a34755a762f1be48e200b9ae558a41841e502
+  object_10075:
+    md5:
+    - 2b605abf796481bed850f35d007dad24
+  object_10076:
+    sha256:
+    - aa9ec502e20b927d236e19036b40a5da5ddd4ae030553a6608f821becd646efb
+  object_10077:
+    sha256:
+    - 554c6198a015dc87e394c4fc74bf5040c48829d793e302632f9eec663733a09e
+  object_10078:
+    sha256:
+    - 3ec2d1a924ef6f19f2db45e48b9cf4b74a904af5720100e3da02182eee3bcf02
+  object_10079:
+    sha256:
+    - b92377f1ecb1288467e81abe286d1fd12946d017e74bd1ab5fb2f11e46955154
+  object_10080:
+    sha256:
+    - d06ffa2b486cd0601409db821d38334d0958bf8978f677330908a4c3c87a2b48
+  object_10081:
+    sha256:
+    - dc1f6d197904a59894a9b9e66f0f6674766c49151a8ced2344dfaadaf54330b8
+  object_10082:
+    sha256:
+    - 6a6722b3b177426ec9ebb27898ef2340208c5644eb56eb5b064f2b2e34bf20bf
+  object_10083:
+    sha256:
+    - 7eae0a885c7ef8a019b80d55a00e82af2e9a9465b052156490ff822ac68bc23a
+  object_10084:
+    md5:
+    - 2b605abf796481bed850f35d007dad24
+    sha1:
+    - 25079e98ad1b522317666a14a79ccfd7aab2d3ed
+    sha256:
+    - 5b4c71b22e76e6837f9b089dd14d338ebaf2315e10cf012bc830d9b6b5878c4a
+  object_10086:
+    md5:
+    - db7aabf38d66b4f8152f12e0f313d00c
+    sha1:
+    - da234dd17ce248c70159cfa4e469ef9767a978d0
+    sha256:
+    - b92377f1ecb1288467e81abe286d1fd12946d017e74bd1ab5fb2f11e46955154
+  object_10088:
+    md5:
+    - 907e90207d24165c18eeeabdc302b573
+    sha1:
+    - 0eecc45461479a9ad957e7f5f9eedd352e3eb4a2
+    sha256:
+    - 6a6722b3b177426ec9ebb27898ef2340208c5644eb56eb5b064f2b2e34bf20bf
+  object_10090:
+    md5:
+    - c133be470967f3101f3432b4a3bc96b0
+    sha1:
+    - 463a27d1aaa9466c1f7ffceccd44d69d8cb03b96
+    sha256:
+    - d06ffa2b486cd0601409db821d38334d0958bf8978f677330908a4c3c87a2b48
+  object_10092:
+    md5:
+    - 80fc4b8f0d1efd52410b3bc95a83d4c6
+    sha1:
+    - 02bf13e56f45ea3ef815e49b22fea59205751240
+    sha256:
+    - 554c6198a015dc87e394c4fc74bf5040c48829d793e302632f9eec663733a09e
+  object_10094:
+    md5:
+    - d7cbbedfad7ad68e12bf6ffcc01c3080
+    sha1:
+    - a21c860b81ed158e91b2b921b752f48fda6d6f1e
+    sha256:
+    - aa9ec502e20b927d236e19036b40a5da5ddd4ae030553a6608f821becd646efb
+  object_10096:
+    md5:
+    - 331f570aa7c20bc93deb7b237b21cc9c
+    sha1:
+    - 2d9ff158ffa0161aac3aa2197c361bc56369a308
+    sha256:
+    - 3ec2d1a924ef6f19f2db45e48b9cf4b74a904af5720100e3da02182eee3bcf02
+  object_10098:
+    md5:
+    - 37303cc85bef139191e0271dd1fedc47
+    sha1:
+    - 0038f011d534d07bc8916c1e3b959247ed8c3ab0
+    sha256:
+    - 39c510bc504a647ef8fa1da8ad3a34755a762f1be48e200b9ae558a41841e502
+  object_10100:
+    md5:
+    - 858bdb5307c721172e707af361e2bb82
+    sha1:
+    - b40bba596c0d3360cc5bea81879da7e011036470
+    sha256:
+    - 7eae0a885c7ef8a019b80d55a00e82af2e9a9465b052156490ff822ac68bc23a
+  object_10102:
+    md5:
+    - 0176181331d6452cd721da29fc6f218e
+    sha1:
+    - 6041cba17ba9ebcb630b1b3b406e7dc37cd69564
+    sha256:
+    - dc1f6d197904a59894a9b9e66f0f6674766c49151a8ced2344dfaadaf54330b8
+  condition: 1 of object_*

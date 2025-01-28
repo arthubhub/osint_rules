@@ -1,0 +1,116 @@
+title: OSINT Track to the future - How to use historical intelligence to get back
+  to the future and defend your organization (example using APT28) by ThreatConnect
+  - dns_query
+id: 8d4101ae-6070-482b-9bf9-26767a10c13a
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a5df567-ad8c-4649-ad06-480f950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    QueryName|contains:
+    - networkschecker.com
+    - adobeincorp.com
+    - networkschecker.net
+    - iscellane.org
+    - mailpho.com
+    - reportscanprotecting.org
+    - evbrax.org
+    - highcomission.org
+    - apptaskserver.com
+    - edit-mail-yahoo.com
+    - misdepatrment.com
+    - bitlinkcut.net
+    - securelink1.org
+    - zimbra-servicing.com
+    - outlook-security.org
+    - bmwriting.com
+    - mailer-support.com
+    - joshel.com
+    - carlinocg.com
+    - hotfixmsupload.com
+    - defence-adviser.com
+    - cdn-ch.org
+    - acrobatportable.com
+    - zimbra-servicing.org
+    - lgemon.org
+    - cleanphonetrksftware.com
+    - netcorpscanprotect.com
+    - akamaisoftupdate.com
+    - qov.al
+    - tukangcendol-naikinbuhaji.com
+    - appservicegroup.com
+    - dislocationineconomic.com
+    - applecloudupdate.com
+    - jpoweradmin.com
+    - cvvshop.lv
+    - rapidfileuploader.org
+    - com-statistics.com
+    - trbusinesslink.com
+    - uzbekistan-mfa.com
+    - uniquecorpind.com
+    - vvorthyhands.org
+    - googlegoogie.com
+    - computers0ft.com
+    - lowprt.org
+    - zpfgr.com
+    - akamaisoft.com
+    - mail-account-yahoo.com
+    - events-spot.com
+    - us-mg6-mail-yahoo.com
+    - noticermk.com
+    - login-freemail.com
+    - gtranm.com
+    - runvercheck.com
+    - web-privacy-guardian.com
+    - netcloselysecure.org
+    - gmail-google-accounts.com
+    - zimbra-service.org
+    - ppcodecs.com
+    - security-ukr.net
+    - downloadsstore.net
+    IpAddresses:
+    - 94.177.12.157
+    - 185.25.50.117
+    - 86.105.227.212
+    - 46.102.152.132
+    - 173.243.112.202
+    - 185.86.151.180
+    - 89.45.67.12
+    - 185.86.148.212
+    - 130.255.184.196
+    - 131.72.136.165
+    - 86.105.1.13
+    - 95.215.47.162
+    - 45.32.129.185
+    - 62.113.232.197
+    - 146.0.43.98
+    - 89.42.212.141
+    - 86.104.15.105
+    - 103.41.177.44
+    - 89.45.67.189
+    - 89.33.64.123
+    - 92.114.92.102
+    - 86.105.1.136
+    - 62.113.232.196
+    - 46.102.152.172
+    - 185.156.173.70
+    - 86.104.15.165
+    - 213.251.187.145
+    - 167.114.214.63
+    - 89.45.67.20
+    - 86.105.18.113
+    - 86.105.1.102
+    - 86.106.93.111
+    - 94.177.12.74
+    - 95.215.47.226
+    - 86.105.1.111
+    - 95.215.44.38
+    - 89.37.226.120
+  condition: attributes

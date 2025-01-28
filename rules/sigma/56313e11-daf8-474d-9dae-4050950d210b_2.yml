@@ -1,0 +1,18 @@
+title: 'OSINT Digging for Groundhogs: Holes in Your Linux Server by Checkpoint - dns_query'
+id: 8f8c981a-48a7-44c3-b0d1-4ea629ba2a99
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56313e11-daf8-474d-9dae-4050950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - wangzongfacai.com
+    - navert0p.com
+    IpAddresses:
+    - 211.110.1.32
+  condition: attributes

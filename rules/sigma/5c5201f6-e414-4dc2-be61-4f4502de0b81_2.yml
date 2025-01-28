@@ -1,0 +1,15 @@
+title: OSINT - Cisco Job Posting Targets Korean Candidates - dns_query
+id: 6c9b210d-7080-47ab-9ad1-9ed193962c10
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c5201f6-e414-4dc2-be61-4f4502de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - ilovesvc.com
+  condition: attributes

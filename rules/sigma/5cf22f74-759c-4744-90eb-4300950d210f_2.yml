@@ -1,0 +1,24 @@
+title: Linux server infection with coinminers (derived from original post with iptables
+  rules) - dns_query
+id: 74307d48-8f58-47cb-ab13-507aebd67060
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cf22f74-759c-4744-90eb-4300950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.coinminer
+- attack.software.coinminer
+- attack.t1496
+- attack.t1059
+detection:
+  object_11381:
+    IpAddresses:
+    - 165.227.140.184
+  object_11392:
+    IpAddresses:
+    - 45.77.54.157
+  condition: 1 of object_*

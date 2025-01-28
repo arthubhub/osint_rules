@@ -1,0 +1,15 @@
+title: 'OSINT - TeamXRat: Brazilian cybercrime meets ransomware - url_request'
+id: 8838cf64-3fcb-4e3d-84d9-81f84c4da80b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/580dabb4-0938-48b7-abf9-4e37950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

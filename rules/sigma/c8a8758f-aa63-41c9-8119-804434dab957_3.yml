@@ -1,0 +1,35 @@
+title: OSINT - Linux malware found on a single compromised Linux host - process_creation
+id: 9e355085-5632-4944-a722-4acf148b0654
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/c8a8758f-aa63-41c9-8119-804434dab957.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1190
+detection:
+  object_700:
+    md5:
+    - e0326a65fe383ef78e3a3f0ef30b7c61
+    sha1:
+    - dca8095a8e72eba3e74ae1b0d63fa246a5452df2
+    sha256:
+    - 1135057eef768103e46e03c05f685a7f3df5e2fb81dd757bb8add2fdcd935f84
+  object_701:
+    md5:
+    - 56055eedc519fa0fbe57d856d71dd646
+    sha1:
+    - a3a554e8d21b6a5cbf92a38003c3f2f348ddd69d
+    sha256:
+    - fb91fc1fd3cb6d11fb188b46759588a210964291e24e0b71c10f6de6527501fa
+  object_702:
+    md5:
+    - a066afbab53965b008afea05a4a69001
+    sha1:
+    - 064470147ed00ab33f3e70ad218607f014687811
+    sha256:
+    - eb8826bac873442045a6a05f1fa25b410ca18db6942053f6d146467c00d5338d
+  condition: 1 of object_*

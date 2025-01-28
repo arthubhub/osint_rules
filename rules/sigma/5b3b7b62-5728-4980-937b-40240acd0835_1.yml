@@ -1,0 +1,16 @@
+title: Clipboard CryptoCoin Hijacker - url_request
+id: fe69ec18-dcda-49c0-a29b-966439d13d7f
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b3b7b62-5728-4980-937b-40240acd0835.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

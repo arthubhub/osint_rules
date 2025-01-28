@@ -1,0 +1,15 @@
+title: 'OSINT - Locky: the encryptor taking the world by storm - url_request'
+id: 5c527ce4-7707-497f-81f8-a4c54d485e87
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5707b73d-02e4-4c52-9eee-4872950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

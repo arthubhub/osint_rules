@@ -1,0 +1,16 @@
+title: OSINT - How Malformed RTF Defeats Security Engines - url_request
+id: 9a8d338f-3b9d-4c47-970f-78187274727e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58d3f093-d6f4-44d1-93ac-3449950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.talosintelligence.com
+    - http://paneltestghelp.xyz
+  condition: attributes

@@ -1,0 +1,145 @@
+title: FormBook campaign - url_request
+id: b620f96a-7341-49a4-b0ad-bce4e2836c03
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f45fe125-7f3f-4335-bf74-5ab61eb5b645.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1566.001
+- attack.software.formbook
+- attack.t1193
+detection:
+  attributes:
+    RequestUrl|contains:
+    - 66563.se
+    - hilltopspice.com
+    - abovegame.biz
+    - famousleaked.site
+    - http://www.uyruio.xyz
+    - katskateringllc.com
+    - coinnspoo.com
+    - http://www.80b80.app
+    - bokenco.com
+    - http://www.coinnspoo.com
+    - http://www.austmactrading.com
+    - http://www.capturecreativeproductions.com
+    - http://www.calliebarrows.online
+    - horsesnarrowboatsrabbits.com
+    - http://www.iratewonderhandstore.africa
+    - http://www.96mvipmy.com
+    - busybody.app
+    - http://www.chopsbyzarah.com
+    - fantiplumbing.com
+    - http://www.bokenco.com
+    - family-doctor-54927.com
+    - http://www.bestridelabs.com
+    - http://www.ayq6cn.shop
+    - http://www.jiayi-x.com
+    - brippa.store
+    - http://www.horsesnarrowboatsrabbits.com
+    - hbcumicbrophone.com
+    - azart-player.ru
+    - dashfashion.store
+    - ayq6cn.shop
+    - innerlovefest.com
+    - lermansalesmarketing.com
+    - http://www.motorsolutionswithmakro.co.uk
+    - http://www.lab1207.com
+    - http://www.dashfashion.store
+    - http://www.hilltopspice.com
+    - http://www.jaafil.com
+    - http://www.graphicstudio53.com
+    - http://www.discounthub.xyz
+    - http://www.addmusthaveoppprofit.online
+    - huashi366.com
+    - http://www.getv3apparel.com
+    - http://www.demonstrate-suppress.net
+    - 3dgamesource.com
+    - hissy.shop
+    - http://www.innerlovefest.com
+    - http://www.68i81.top
+    - http://www.apatriotspeaks.com
+    - awesomeessential.com
+    - moosemunch.boo
+    - uyruio.xyz
+    - eatit.click
+    - calliebarrows.online
+    - http://www.huashi366.com
+    - http://www.busybody.app
+    - http://www.micdavevtuportal.africa
+    - getv3apparel.com
+    - betonyventures.com
+    - http://www.wemakebelieve.africa
+    - http://www.hbcumicbrophone.com
+    - austmactrading.com
+    - 80b80.app
+    - http://www.doordelivery.life
+    - lab1207.com
+    - jaafil.com
+    - http://www.1wihug.top
+    - damcostafreda12.cat
+    - blueridgebedracks.com
+    - http://www.66y143.xyz
+    - androidrehber.com
+    - bxsh.cloud
+    - wemakebelieve.africa
+    - http://www.vestby.net
+    - http://www.mybunnylawn.com
+    - http://www.famousleaked.site
+    - calandrainmanlaw.com
+    - http://www.azart-player.ru
+    - http://www.awesomeessential.com
+    - http://www.66563.se
+    - http://www.eatit.click
+    - http://www.betonyventures.com
+    - discounthub.xyz
+    - chopsbyzarah.com
+    - graphicstudio53.com
+    - http://www.addonysfitwear.com
+    - designroom.app
+    - 96mvipmy.com
+    - mybunnylawn.com
+    - addonysfitwear.com
+    - capturecreativeproductions.com
+    - http://www.jogo.africa
+    - bestrosetoy.com
+    - demonstrate-suppress.net
+    - furadventure.com
+    - bestridelabs.com
+    - vestby.net
+    - http://www.bestrosetoy.com
+    - apatriotspeaks.com
+    - 68i81.top
+    - http://www.damcostafreda12.cat
+    - http://www.blueridgebedracks.com
+    - http://www.abovegame.biz
+    - http://www.designroom.app
+    - http://www.furadventure.com
+    - micdavevtuportal.africa
+    - http://www.katskateringllc.com
+    - http://www.bxsh.cloud
+    - http://www.lermansalesmarketing.com
+    - jiayi-x.com
+    - http://www.family-doctor-54927.com
+    - http://www.ourfturehealth.org.uk
+    - xn--etherealsoires-mkb.com
+    - addmusthaveoppprofit.online
+    - iratewonderhandstore.africa
+    - http://www.calandrainmanlaw.com
+    - http://www.fantiplumbing.com
+    - http://www.3dgamesource.com
+    - http://www.chateaufinewines.com
+    - http://www.hissy.shop
+    - chateaufinewines.com
+    - 66y143.xyz
+    - http://www.androidrehber.com
+    - http://www.moosemunch.boo
+    - http://www.xn--etherealsoires-mkb.com
+    - http://www.brippa.store
+    - 1wihug.top
+    - jogo.africa
+  condition: attributes

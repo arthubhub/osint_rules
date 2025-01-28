@@ -1,0 +1,21 @@
+title: OSINT -  When A Pony Walks Out Of A Pub - dns_query
+id: 07c170d0-33f9-4787-99b2-3d69c9c8b7f6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58996c01-5948-4776-bc9f-4216950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - alphastand.trade
+    - alphastand.win
+    - kbfvzoboss.bid
+    - alphastand.top
+    IpAddresses:
+    - 195.22.127.233
+    - 5.200.52.198
+  condition: attributes

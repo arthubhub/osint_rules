@@ -1,0 +1,24 @@
+title: 'OSINT - Cutting Edge, Part 2: Investigating Ivanti Connect Secure VPN Zero-Day
+  Exploitation - process_creation'
+id: 87c4e659-0125-40bd-b901-913aa5c70f0d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/34237efb-adf4-452b-a322-0cbed70c7b33.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1190
+detection:
+  object_6951:
+    md5:
+    - 3d97f55a03ceb4f71671aa2ecf5b24e9
+  object_6952:
+    md5:
+    - 3045f5b3d355a9ab26ab6f44cc831a83
+  object_6953:
+    md5:
+    - 2ec505088b942c234f39a37188e80d7a
+  condition: 1 of object_*

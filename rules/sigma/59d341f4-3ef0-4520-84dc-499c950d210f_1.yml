@@ -1,0 +1,24 @@
+title: Malspam 2017-10-03 - url_request
+id: 8d06d70d-103d-4e2c-b1b9-2a912faa77ea
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d341f4-3ef0-4520-84dc-499c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://opara.co.za
+    - goodmansbbq.com
+    - http://tomax.hk
+    - tomax.hk
+    - https://en.wikipedia.org
+    - http://ctmket.com
+    - http://q-productions.com
+    - toolgeeker.com
+  condition: attributes

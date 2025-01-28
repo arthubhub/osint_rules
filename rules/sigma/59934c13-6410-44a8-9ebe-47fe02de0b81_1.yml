@@ -1,0 +1,27 @@
+title: OSINT - ShadowPad in corporate networks - url_request
+id: 9a7a4a55-ee40-493a-807f-6f4dbafdfdaf
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59934c13-6410-44a8-9ebe-47fe02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - bafyvoruzgjitwr.com
+    - techniciantext.com
+    - operatingbox.com
+    - https://securelist.com
+    - xmponmzmxkxkh.com
+    - ribotqtonut.com
+    - notped.com
+    - paniesx.com
+    - tczafklirkl.com
+    - jkvmdmjyfcvkf.com
+    - https://www.netsarang.com
+    - nylalobghyhirgh.com
+    - dnsgogle.com
+  condition: attributes

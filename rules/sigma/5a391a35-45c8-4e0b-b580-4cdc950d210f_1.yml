@@ -1,0 +1,18 @@
+title: 'OSINT - The Emotet Banking Trojan: Analysis of Dropped Malware Morphing at
+  Scale - url_request'
+id: 8fcc2650-dd17-4707-8565-8c7157825b4c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a391a35-45c8-4e0b-b580-4cdc950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blogs.bromium.com
+  condition: attributes

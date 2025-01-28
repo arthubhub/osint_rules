@@ -1,0 +1,64 @@
+title: OSINT - A journey to Zebrocy land - process_creation
+id: a54ae331-58be-4dc6-a3ff-2a203d5693b2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ce6aa86-9cd8-4302-9dc9-4a59950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1074
+- attack.t1012
+- attack.t1083
+- attack.t1107
+- attack.t1053
+- attack.t1204
+- attack.t1132
+- attack.t1079
+- attack.t1085
+- attack.t1060
+- attack.software.zebrocy
+- attack.t1024
+- attack.t1089
+- attack.t1057
+- attack.t1039
+- attack.t1032
+- attack.software.zebrocy_autoit
+- attack.t1025
+- attack.t1041
+- attack.t1020
+- attack.t1043
+- attack.t1192
+- attack.group.zebrocy_autoit
+- attack.group.zebrocy
+- attack.software.s0251
+- attack.t1082
+- attack.t1001
+- attack.t1047
+- attack.t1005
+- attack.t1022
+- attack.t1056
+- attack.t1071
+- attack.t1122
+- attack.t1008
+- attack.t1113
+detection:
+  object_17918:
+    sha1:
+    - 48f8b152b86bed027b9152725505fbf4a24a39fd
+  object_17919:
+    sha1:
+    - 1e9f40ef81176190e1ed9a0659473b2226c53f57
+  object_17920:
+    sha1:
+    - bfa26857575c49abb129aac87207f03f2b062e07
+  object_17921:
+    md5:
+    - 5e4e8cab7fcb43ed39b2feac92ddc2e7
+    sha1:
+    - 48f8b152b86bed027b9152725505fbf4a24a39fd
+    sha256:
+    - b677cce4a844495a20eed2486ef71f4782c06630df34a6ce085880a045a07902
+  condition: 1 of object_*

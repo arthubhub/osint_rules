@@ -1,0 +1,27 @@
+title: Hancitor Intel - url_request
+id: 83e97a23-89a1-4933-98bb-13fac8c6b642
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b577bf2-48d4-492f-bd9d-c7f90acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.hancitor
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://hadsparmirat.com
+    - http://wohislinghes.ru
+    - http://saferoomreviews.com
+    - http://thesmartdinar.com
+    - http://recsincalge.com
+    - http://k317.org
+    - http://nyconstructionaccidentattorneys.net
+    - http://jamble.org
+    - http://buthissandwil.ru
+    - https://linghapsittoft.ru
+  condition: attributes

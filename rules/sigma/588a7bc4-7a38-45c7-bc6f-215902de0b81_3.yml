@@ -1,0 +1,21 @@
+title: OSINT - Dridex Banking Trojan Returns, Leverages New UAC Bypass Method - process_creation
+id: 8ddff91d-29e5-4d62-a0ab-57c8c0741456
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588a7bc4-7a38-45c7-bc6f-215902de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.dridex
+detection:
+  attributes:
+    md5:
+    - 6233778c733daa00ce5b9b25aae0a3cb
+    sha1:
+    - 1bfd0ac86f1bf52a5e8814dafb4a9bc4d3628384
+    sha256:
+    - 103a9e26e8d69cbbde4e871dd6cb1b0ee863a8265746aa7d77cd1106025c2d7c
+  condition: attributes

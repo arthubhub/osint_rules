@@ -1,0 +1,45 @@
+title: '2019-01-25: Lazarus Pakistan Toolkits - process_creation'
+id: 83a00a91-a5b9-42d1-aed2-4c9e70f8214f
+description: edit this field when analysing or editing the rule - reported by "VK-Intel"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c4cb9a7-0454-42eb-8f63-383368f8e8cf.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.lazarus_group
+- attack.group.lazarus
+- attack.group.g0032
+- attack.software.powerratankba
+- attack.software.lazarus
+- attack.group.powerratankba
+detection:
+  object_6497:
+    md5:
+    - c9ed87e9f99c631cda368f6f329ee27e
+    sha1:
+    - 943feef623db1143f4b9c957fee4c94753cfb6a5
+    sha256:
+    - 802efe9c41909354921009bd54be7dcf1ee14fcfaf62dacbcdaafbe051a711e3
+  object_6499:
+    md5:
+    - 2025d91c1cdd33db576b2c90ef4067c7
+    sha1:
+    - ec80c302c91c6caf5343cfd3fabf43b0bbd067a5
+    sha256:
+    - bed916831e8c9babfb6d08644058a61e3547d621f847c081309f616aed06c2fe
+  object_6501:
+    md5:
+    - 5cc28f3f32e7274f13378a724a5ec33a
+    sha1:
+    - 32292b4e125287a6567e3879d53d0d8d82bcdf01
+    sha256:
+    - 18f0ad8c58558d6eb8129f32cbc2905d0b63822185506b7c3bca49d423d837c7
+  attributes:
+    md5:
+    - c9ed87e9f99c631cda368f6f329ee27e
+    - 5cc28f3f32e7274f13378a724a5ec33a
+    - 2025d91c1cdd33db576b2c90ef4067c7
+  condition: 1 of object_* or attributes

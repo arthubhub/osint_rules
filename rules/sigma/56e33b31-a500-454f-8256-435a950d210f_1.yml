@@ -1,0 +1,21 @@
+title: OSINT - PowerSniff Malware Used in Macro-based Attacks - url_request
+id: d92bff9b-425e-4f74-97ef-7b04c9b4a1f8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e33b31-a500-454f-8256-435a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - starwoodhotels.pw
+    - http://researchcenter.paloaltonetworks.com
+    - supratimewest.com
+    - letterinklandoix.net
+    - oklinjgreirestacks.biz
+    - supratimewest.biz
+    - brookmensoklinherz.org
+  condition: attributes

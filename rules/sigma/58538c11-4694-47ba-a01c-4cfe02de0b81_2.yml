@@ -1,0 +1,19 @@
+title: 'OSINT - One, if by email, and two, if by EK: The Cerbers are coming! - dns_query'
+id: 36ceeb01-2133-48b8-bdbe-6644e0925c8c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58538c11-4694-47ba-a01c-4cfe02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 194.165.16.0
+    - 55.15.15.0
+    - 185.45.192.155
+    - 1.11.32.0
+    - 195.133.49.182
+  condition: attributes

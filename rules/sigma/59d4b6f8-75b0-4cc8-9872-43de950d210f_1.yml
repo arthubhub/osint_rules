@@ -1,0 +1,31 @@
+title: 'M2M -  Locky 2017-10-04 : Affid=3, offline, ".ykcol" : "Copy of invoice A1234567890..."
+  - "InvoiceA1234567890.7z" - url_request'
+id: c2c99729-27f0-4a05-a153-b50408348be3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d4b6f8-75b0-4cc8-9872-43de950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://pciholog.ru
+    - http://derainlay.info
+    - http://tailer.it
+    - http://cutwell.ca
+    - http://spazioireos.it
+    - http://smarterbaby.com
+    - http://shopsshops.de
+    - http://turfschiploge.nl
+    - http://tecnigrafite.com
+    - http://tarimsalteknoloji.com
+    - http://schoensigns.com
+    - http://scouting-bvb.nl
+    - http://ericweb.co.za
+  condition: attributes

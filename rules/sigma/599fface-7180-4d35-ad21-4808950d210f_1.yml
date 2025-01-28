@@ -1,0 +1,18 @@
+title: "OSINT - New Version of \xE2\u20AC\u0153Trickbot\xE2\u20AC\x9D Adds Worm Propagation\
+  \ Module - url_request"
+id: caded1ec-39e9-4148-bb2f-b1da20aeea0d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/599fface-7180-4d35-ad21-4808950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.trick_bot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.flashpoint-intel.com
+  condition: attributes

@@ -1,0 +1,15 @@
+title: OSINT - How Stampado Ransomware Analysis Led To Yara Improvements - url_request
+id: 463c7ef4-0233-48cd-89a3-38252c30072b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57fc8ec7-2c10-4c24-8565-452002de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.trendmicro.com
+  condition: attributes

@@ -1,0 +1,15 @@
+title: OSINT - Hunting Libyan Scorpions - url_request
+id: cbe20fb3-c075-4677-ae06-1f02fbd1bf03
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57e634d4-4e48-4a7b-82de-46be950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://cyberkov.com
+  condition: attributes

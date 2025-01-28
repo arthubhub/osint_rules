@@ -1,0 +1,40 @@
+title: 'M2M -  Jaff 2017-06-06 : "Order" - "MX-2310U_20170606_123456.pdf" - dns_query'
+id: 9a4fc255-e3e5-44d8-8072-01100d6cdf9c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/593a41df-b920-4f52-bbc3-4abd950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    IpAddresses:
+    - 184.154.159.194
+    - 93.90.178.67
+    - 119.28.85.128
+    - 87.239.14.40
+    - 103.211.216.130
+    - 107.180.4.132
+    - 192.124.249.5
+    - 149.126.4.78
+    - 94.102.7.15
+    - 120.76.113.75
+    - 69.90.161.10
+    - 195.178.14.13
+    - 178.237.37.39
+    - 62.113.208.201
+    - 208.91.198.19
+    - 107.154.106.172
+    - 103.26.99.147
+    - 103.53.43.45
+    - 81.88.48.95
+    - 104.219.248.47
+    - 193.70.95.56
+    - 193.68.112.65
+    - 107.154.105.172
+  condition: attributes

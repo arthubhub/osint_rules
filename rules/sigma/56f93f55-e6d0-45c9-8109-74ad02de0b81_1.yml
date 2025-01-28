@@ -1,0 +1,36 @@
+title: Locky of the day (20160328) -  affid=3 - url_request
+id: 5c550a8b-dafb-40d6-af33-a6924ceb6b78
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f93f55-e6d0-45c9-8109-74ad02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - store.brugomug.co.uk
+    - http://distrazur.com
+    - comprecaldas.com
+    - sandbox.bottlestore.com
+    - http://sandbox.bottlestore.com
+    - http://homedesire.co.uk
+    - dragonex.com
+    - http://comprecaldas.com
+    - http://dragonex.com
+    - scorpena.com
+    - orkneyhampers.co.uk
+    - http://store.brugomug.co.uk
+    - http://lascelta.com
+    - pockettypewriter.co.uk
+    - http://scorpena.com
+    - http://wholesale.undercovermama.com
+    - lascelta.com
+    - http://orkneyhampers.co.uk
+    - distrazur.com
+    - http://pockettypewriter.co.uk
+    - homedesire.co.uk
+    - wholesale.undercovermama.com
+  condition: attributes

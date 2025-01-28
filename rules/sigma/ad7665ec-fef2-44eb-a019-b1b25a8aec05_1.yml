@@ -1,0 +1,27 @@
+title: Malware Discovered in Popular NPM Package, ua-parser-js - url_request
+id: 3f9ffc4b-27c0-4b5d-9ce2-dddf97ee3d99
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/ad7665ec-fef2-44eb-a019-b1b25a8aec05.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1195.001
+- attack.t1195.002
+detection:
+  object_8316:
+    RequestUrl|contains:
+    - https://us-cert.cisa.gov
+  object_8317:
+    RequestUrl|contains:
+    - citationsherbe.at
+  attributes:
+    RequestUrl|contains:
+    - http://159.148.186.228
+    - https://github.com
+    - https://citationsherbe.at
+    - citationsherbe.at
+  condition: 1 of object_* or attributes

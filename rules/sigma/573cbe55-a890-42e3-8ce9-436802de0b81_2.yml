@@ -1,0 +1,21 @@
+title: 'OSINT -  Operation Groundbait: Espionage in Ukrainian war zones - dns_query'
+id: ccdfdd49-f7d9-4c11-abf5-6e2afd73ccad
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/573cbe55-a890-42e3-8ce9-436802de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - bolepaund.com
+    - celebrat.net
+    - lefting.org
+    IpAddresses:
+    - 54.175.208.187
+    - 52.23.164.7
+    - 54.152.171.48
+  condition: attributes

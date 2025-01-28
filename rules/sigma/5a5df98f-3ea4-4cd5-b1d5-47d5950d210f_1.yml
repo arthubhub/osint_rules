@@ -1,0 +1,26 @@
+title: 'OSINT Phantom of the Opaera: New KASPERAGENT Malware Campaign by ThreatConnect
+  - url_request'
+id: 7d550f8e-2876-4cfc-8ecb-5717af09758e
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a5df98f-3ea4-4cd5-b1d5-47d5950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - www.windowsnewupdates.com
+    - http://www.windowsnewupdates.com
+    - windowsnewupdates.com
+    - https://app.threatconnect.com
+    - https://www.threatconnect.com
+    - mailsinfo.net
+    - www.treestower.com
+    - upfile2box.com
+    - http://www.treestower.com
+    - 7aga.net
+    - treestower.com
+  condition: attributes

@@ -1,0 +1,21 @@
+title: OSINT - RIG exploit kit distributes Princess ransomware - dns_query
+id: a7ff3698-a7c6-4edf-bc60-745915394b47
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a3797c2-e770-4722-9435-4350950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.princess_locker
+- attack.group.princess_locker
+detection:
+  attributes:
+    QueryName|contains:
+    - royall6qpvndxlsj.onion
+    IpAddresses:
+    - 185.198.164.152
+    - 188.225.84.28
+  condition: attributes

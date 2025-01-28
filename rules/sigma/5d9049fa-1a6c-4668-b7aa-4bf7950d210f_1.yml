@@ -1,0 +1,20 @@
+title: 'New IoT multiplatform Linux malware: Linux/AirDropBot - dns_query'
+id: 56e9a747-7f60-482c-b563-e4ed68016611
+description: edit this field when analysing or editing the rule - reported by "MalwareMustDie"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d9049fa-1a6c-4668-b7aa-4bf7950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 147.135.124.113
+    - 179.43.149.189
+    - 185.244.25.200
+    - 192.168.0.14
+    - 185.244.25.201
+    - 185.244.25.202
+  condition: attributes

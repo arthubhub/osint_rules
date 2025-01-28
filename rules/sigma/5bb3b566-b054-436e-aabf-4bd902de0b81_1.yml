@@ -1,0 +1,19 @@
+title: "OSINT - CIG Circular 66  \xE2\u20AC\u201C FASTCash  ATM Cash  Out Campaign\
+  \ - dns_query"
+id: be52bc6e-799b-4ba2-840a-36e364297898
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bb3b566-b054-436e-aabf-4bd902de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 180.235.133.108
+    - 75.99.63.27
+    - 219.255.99.9
+    - 167.114.33.205
+  condition: attributes

@@ -1,0 +1,17 @@
+title: OSINT The Dyre Wolf report from IBM - url_request
+id: 477257f4-d32a-4f87-a924-14d8871d9da2
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/551e8745-ace0-461c-b9eb-ce36950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://portal.sec.ibm.com
+    - http://securityintelligence.com
+    - metflex.uk.com
+  condition: attributes

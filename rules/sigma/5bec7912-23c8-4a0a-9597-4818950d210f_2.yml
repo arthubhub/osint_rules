@@ -1,0 +1,83 @@
+title: 'OSINT - Big Game Hunting: The Evolution of INDRIK SPIDER From Dridex Wire
+  Fraud to BitPaymer Targeted Ransomware - process_creation'
+id: 43ff277b-18d8-4278-b0c6-725156ecdd8c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bec7912-23c8-4a0a-9597-4818950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.indrik_spider
+detection:
+  object_6305:
+    md5:
+    - 2f698222f435a172c253efd8823a44e9
+    sha1:
+    - ffd9a2358ca91092f9971ab9f2371355c29aecfa
+    sha256:
+    - 8943356b0288b9463e96d6d0f4f24db068ea47617299071e6124028a8160db9c
+  object_6307:
+    md5:
+    - a7940a68ec460c278530e7dac0e763f5
+    sha1:
+    - e2a10004f3a561b0154558e18220015ed513ee0b
+    sha256:
+    - f0e600bdca5c6a5eae155cc82aad718fe68d7571b7c106774b4c731baa01a50c
+  object_6309:
+    md5:
+    - aa62e73c5be24dbce7c07179faa0da63
+    sha1:
+    - 40908d3d0c30a4189767fcd3e90d59ea05ee159b
+    sha256:
+    - f1d69b69f53af9ea83fe8281e5c1745737fd42977597491f942755088c994d8e
+  object_6311:
+    md5:
+    - e7430c45f8e5d247e58516dccd9d4446
+    sha1:
+    - 0c47af6e89778d78fdc427897e6790611b2a5478
+    sha256:
+    - 17526923258ff290ff5ca553248b5952a65373564731a2b8a0cff10e56c293a4
+  object_6313:
+    md5:
+    - c785093151fa52d84c53dbd0683dcd77
+    sha1:
+    - 8ae1c1869c42daa035032341804aefc3e7f3caf1
+    sha256:
+    - c7f8c6e833243519cdc8dd327942d62a627fe9c0793d899448938a3f10149481
+  object_6315:
+    md5:
+    - b4142bf602459ebb2eafe3727bcf802d
+    sha1:
+    - 89482b5eb043b53fbf603edf2cbc2764e03a37be
+    sha256:
+    - 13209680c091e180ed1d9a87090be9c10876db403c40638a24b5bc893fd87587
+  object_6317:
+    md5:
+    - c1a7ed250f66368c19abe07ca0283fb5
+    sha1:
+    - 38718bfaf0aa3e87e17d240257e3dd118fb080f7
+    sha256:
+    - b44e61de54b97c0492babbf8c56fad0c1f03cb2b839bad8c1c8d3bcd0591a010
+  object_6319:
+    md5:
+    - 28945b625617cfdcc444b428de0a7a00
+    sha1:
+    - 9cab670cd0d11e901cdb3f197aa18f1a6e2930ba
+    sha256:
+    - 282b7a6d1648e08c02846820324d932ccc224affe94793e9d63ff46818003636
+  attributes:
+    sha256:
+    - c7f8c6e833243519cdc8dd327942d62a627fe9c0793d899448938a3f10149481
+    - f1d69b69f53af9ea83fe8281e5c1745737fd42977597491f942755088c994d8e
+    - 8943356b0288b9463e96d6d0f4f24db068ea47617299071e6124028a8160db9c
+    - 91c0c6ab8a1fe428958f33da590bdd52baec868c7011461da8a8972c3d989d42
+    - 282b7a6d1648e08c02846820324d932ccc224affe94793e9d63ff46818003636
+    - 17526923258ff290ff5ca553248b5952a65373564731a2b8a0cff10e56c293a4
+    - 39e7a9b0ea00316b232b3d0f8c511498ca5b6aee95abad0c3f1275ef029a0bef
+    - b44e61de54b97c0492babbf8c56fad0c1f03cb2b839bad8c1c8d3bcd0591a010
+    - f0e600bdca5c6a5eae155cc82aad718fe68d7571b7c106774b4c731baa01a50c
+    - 13209680c091e180ed1d9a87090be9c10876db403c40638a24b5bc893fd87587
+  condition: 1 of object_* or attributes

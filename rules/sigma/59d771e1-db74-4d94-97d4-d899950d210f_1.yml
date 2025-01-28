@@ -1,0 +1,33 @@
+title: 'M2M -  Locky 2017-10-06 : Affid=3, offline, ".ykcol" : "Your Remittance Advice"
+  - "12345 Remittance.7z" - url_request'
+id: 5536ce98-af99-4434-a856-734d034e1d9e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d771e1-db74-4d94-97d4-d899950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://3e.com.pt
+    - http://asheardontheradiogreens.com
+    - http://2-wave.com
+    - http://allesandradesigns.com
+    - http://PamelaSparrowChilds.com
+    - http://agriturismobellaria.net
+    - http://thedarkpvp.net
+    - http://appartement-sailer.at
+    - http://a-host.co.uk
+    - http://9ninewright.net
+    - http://agricom.it
+    - http://alexandre-azaria.com
+    - http://agriturismo-1001ulivo.it
+    - http://andresarlemijn.nl
+    - http://felixsolis.mobi
+  condition: attributes

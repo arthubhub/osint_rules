@@ -1,0 +1,29 @@
+title: 'M2M -  Locky 2017-09-26 : Affid=3, offline, ".ykcol" : "Invoice PIS1234567"
+  - "InvoicePIS1234567.7z" - dns_query'
+id: 2430dbc3-78e1-4d9f-bf73-867d4500baaf
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59cb4da3-c614-4e43-a0aa-4989950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    IpAddresses:
+    - 80.172.241.35
+    - 87.118.114.57
+    - 78.46.92.133
+    - 216.55.186.90
+    - 149.210.143.182
+    - 185.18.198.158
+    - 89.140.72.171
+    - 72.4.145.228
+    - 74.116.0.194
+    - 103.53.172.3
+    - 85.214.82.5
+  condition: attributes

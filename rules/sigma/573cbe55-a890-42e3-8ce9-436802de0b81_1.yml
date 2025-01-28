@@ -1,0 +1,19 @@
+title: 'OSINT -  Operation Groundbait: Espionage in Ukrainian war zones - url_request'
+id: a22a793c-44fe-44e1-b76b-0a16d100df7f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/573cbe55-a890-42e3-8ce9-436802de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - lefting.org
+    - http://www.welivesecurity.com
+    - bolepaund.com
+    - https://github.com
+    - celebrat.net
+  condition: attributes

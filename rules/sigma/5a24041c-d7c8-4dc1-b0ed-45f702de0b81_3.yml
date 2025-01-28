@@ -1,0 +1,23 @@
+title: OSINT - Android Malware Appears Linked to Lazarus Cybercrime Group - process_creation
+id: 059bb82e-f8e1-468b-bb4b-911e64087c07
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a24041c-d7c8-4dc1-b0ed-45f702de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.lazarus_group
+detection:
+  attributes:
+    md5:
+    - 9ce9a0b3876aacbf0e8023c97fd0a21d
+    - 24f61120946ddac5e1d15cd64c48b7e6
+    - 8b98bdf2c6a299e1fed217889af54845
+    sha1:
+    - 903e3421a8cec914a41e851a31bd5a385f8d95b1
+    sha256:
+    - 800f9ffd063dd2526a4a43b7370a8b04fbb9ffeff9c578aa644c44947d367266
+  condition: attributes

@@ -1,0 +1,79 @@
+title: Malspam 2016-07-12 (Locky campaign 'Fw:') - dns_query
+id: 262d1bc1-3411-4396-92e4-c6892f1867aa
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/578601ff-dbd8-49c2-b148-4870950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - zakagimebel.ru
+    - omnitask.ba
+    - wacker-etm.ru
+    - dealsbro.com
+    - choogo.net
+    - ostrovokkrasoty.ru
+    - ferozsons-labs.com
+    - globaldveri.ru
+    - richard-scissors.com
+    - diablitos.no
+    - nicesound.biz
+    - zoomwalls.com
+    - tvernedra.ru
+    - stylespiritdubai.com
+    - wineroutes.ru
+    - revengeofsultans.com
+    - eskuvotervezo.hu
+    - kveldeil.no
+    - samaju.se
+    - sindsul.com
+    - ialri.net
+    - mphooseitutu.com
+    - aerosfera.ru
+    - valsystem.cl
+    IpAddresses:
+    - 203.183.200.158
+    - 204.93.172.128
+    - 186.202.153.56
+    - 157.7.144.96
+    - 160.153.16.56
+    - 191.252.51.21
+    - 198.27.74.207
+    - 192.185.209.37
+    - 217.150.253.193
+    - 195.208.0.109
+    - 158.69.125.29
+    - 88.198.13.104
+    - 31.220.104.134
+    - 5.56.34.14
+    - 181.41.221.184
+    - 210.188.201.42
+    - 217.116.47.122
+    - 195.208.1.164
+    - 195.208.0.119
+    - 51.254.121.231
+    - 173.236.228.227
+    - 77.93.211.244
+    - 210.188.201.167
+    - 195.208.1.141
+    - 197.221.10.206
+    - 85.252.49.19
+    - 191.252.51.33
+    - 94.231.103.104
+    - 112.171.173.157
+    - 77.222.56.73
+    - 46.30.213.188
+    - 186.202.153.39
+    - 112.137.162.118
+    - 192.145.239.20
+    - 195.208.0.16
+    - 175.206.240.94
+    - 62.42.230.17
+    - 195.208.0.118
+    - 195.208.1.123
+    - 199.231.76.123
+  condition: attributes

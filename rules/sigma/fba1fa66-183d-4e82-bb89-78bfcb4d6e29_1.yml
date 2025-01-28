@@ -1,0 +1,29 @@
+title: OSINT of Exchange 0-day campaign (Atos) - url_request
+id: feda92d6-b08c-4fa7-8a55-b46103e54b8e
+description: edit this field when analysing or editing the rule - reported by "Centre
+  for Cyber security Belgium"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/fba1fa66-183d-4e82-bb89-78bfcb4d6e29.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - openingfile.net
+    - auth0rization.cloud
+    - rkn-redirect.net
+    - northapollon.com
+    - tr-redirect.net
+    - united-nation-news.com
+    - united-nations-news.com
+    - openfile-attachment.com
+    - application-download.net
+    - openattachment.net
+    - web-document.com
+    - akipress.news
+    - mfa-tj.download
+    - byannika.com
+  condition: attributes

@@ -1,0 +1,18 @@
+title: 'OSINT - IoT_reaper: A Rappid Spreading New IoT Botnet - dns_query'
+id: a7d8dd25-557d-4fec-b0f8-d3b0db258b23
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59e9ec59-a888-48e4-afb4-441602de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 162.211.183.192
+    - 222.112.82.231
+    - 119.82.26.157
+    - 27.102.101.121
+  condition: attributes

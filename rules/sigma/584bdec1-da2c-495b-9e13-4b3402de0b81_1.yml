@@ -1,0 +1,21 @@
+title: OSINT - Now Mirai Has DGA Feature Built in - url_request
+id: c4d2a180-dcad-4258-b7bc-4eaf0095939b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/584bdec1-da2c-495b-9e13-4b3402de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.mirai
+detection:
+  attributes:
+    RequestUrl|contains:
+    - tr069.support
+    - tr069.online
+    - tr069.tech
+    - http://blog.netlab.360.com
+    - zugzwang.me
+  condition: attributes

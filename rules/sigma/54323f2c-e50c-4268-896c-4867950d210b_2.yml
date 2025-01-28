@@ -1,0 +1,17 @@
+title: OSINT New Indicators of Compromise for APT Group Nitro Uncovered blog post
+  by Palo Alto Networks - dns_query
+id: 12e0b208-3bfb-4108-a790-eed70e5eaf8e
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54323f2c-e50c-4268-896c-4867950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 223.25.233.248
+    - 196.45.144.12
+  condition: attributes

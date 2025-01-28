@@ -1,0 +1,17 @@
+title: OSINT - Trojan.Mirai.1 for Microsoft Windows - url_request
+id: a79a98d3-9c8f-4c4c-837a-ae0ca1484ecf
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/589b97f0-1e74-420b-bb3e-f4f302de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.mirai
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://vms.drweb.com
+  condition: attributes

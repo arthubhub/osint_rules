@@ -1,0 +1,22 @@
+title: 'M2M -  Locky 2017-09-14 : Affid=3, ".lukitus" : "Copy of Invoice 12345" -
+  /invoice.html links - process_creation'
+id: 276241a0-2b4f-4a23-aa3f-90049f331351
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ba873e-5c9c-4b00-9c3b-422d950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    md5:
+    - 6d1b4226335c29c83c6818bb80f614ef
+    - 794389948dfbb33a481314ffef122d94
+    - 0baa76aff41923c511bb56f88fe949cf
+    - 3d85861c5895e9761ac54a6384b1b6d0
+  condition: attributes

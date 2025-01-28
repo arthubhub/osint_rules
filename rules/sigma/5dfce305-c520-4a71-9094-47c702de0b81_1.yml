@@ -1,0 +1,28 @@
+title: OSINT - TA505 evolves ServHelper, uses Predator The Thief and Team Viewer Hijacking
+  - url_request
+id: f70550c8-4ce1-492f-8bca-1168272e66f3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5dfce305-c520-4a71-9094-47c702de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.ta505
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://kuarela.xyz
+    - http://supremeconnect.xyz
+    - http://96.9.211.157
+    - http://gabardine.xyz
+    - http://foxlnklnk.xyz
+    - https://www.blueliv.com
+    - https://soul-fly.xyz
+    - http://letitbe.icu
+    - http://cafafafa.xyz
+    - http://0926tv.xyz
+    - https://artrolife.club
+  condition: attributes

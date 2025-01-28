@@ -1,0 +1,31 @@
+title: 'Malspam 2016-09-06 (.wsf in .zip) - campaign: "Invoice INV[x]" - url_request'
+id: 94c409cb-5f75-4b46-9116-5a252544ef27
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ceb5e1-bd08-4fbb-9967-4b68950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - tst-technik.de
+    - http://mixup0813.web.fc2.com
+    - http://www.cmg-ingegneria.it
+    - http://www.vanetti.it
+    - http://www.vilastefania.go.ro
+    - http://tst-technik.de
+    - http://www.lnowak.tkdami.net
+    - sp-moto.ru
+    - http://sitio655.vtrbandaancha.net
+    - http://bostoncittyregenerww.com
+    - http://www.montegelato.it
+    - alians-ekb.ru
+    - bostoncittyregenerww.com
+    - http://alians-ekb.ru
+    - http://www.oltransservice.org
+    - http://sp-moto.ru
+    - http://portadeenrolar.ind.br
+  condition: attributes

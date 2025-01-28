@@ -1,0 +1,21 @@
+title: OSINT - Trochilus and New MoonWind RATs Used In Attack Against Thai Organizations
+  - dns_query
+id: 0f49182a-1c77-4c2c-9302-310a21cf4452
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58dd02b3-cfa8-4044-b533-4935950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.trochilus
+- attack.software.moonwind
+detection:
+  attributes:
+    QueryName|contains:
+    - webswindows.com
+    IpAddresses:
+    - 192.225.226.195
+  condition: attributes

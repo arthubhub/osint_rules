@@ -1,0 +1,23 @@
+title: 'OSINT - ikittens: iranian actor resurfaces with malware for mac (macdownloader)
+  - process_creation'
+id: cd0be072-063f-4eeb-ba4f-389e7a19b5a7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5898af07-fb0c-4135-b908-491b950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - f8e4cab429263406fbf11b41fd539839
+    - 787d664e842961f2a335139407f91a70
+    sha1:
+    - a323168f95d1a1c65186888c6dd16cd2f9f8539a
+    - 5b5a34dfc102f0c18b0b0e83c6fda431969e7957
+    sha256:
+    - 52efcfe30f96a85c9c068880c20663db64f0e08346e0f3b59c2e5bbcb41ba73c
+    - 7a9cdb9d608b88bd7afce001cb285c2bb2ae76f5027977e8635aa04bd064ffb7
+  condition: attributes

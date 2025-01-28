@@ -1,0 +1,39 @@
+title: OSINT Trojanized PuTTY Software by Cisco CSIRT - url_request
+id: a8a1df30-74d8-4d5a-bdce-862199e90d9b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/555ddeca-3ecc-40e3-9ebd-177c950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://stabryl.home.pl
+    - http://ofbcorporation.com
+    - http://helpmydiabetes.info
+    - http://podspeak.net
+    - http://snailmailrecall.com
+    - http://stonarov.wz.cz
+    - http://spriebel.de
+    - http://starsretail.com
+    - http://kangasquads.com.au
+    - http://stc-castelnaudary.fr
+    - http://holidaystennisclub.com
+    - http://straydogwinter.com
+    - http://prfc.com.au
+    - http://mohsenfeshari.com
+    - aliserv2013.ru
+    - go-upload.ru
+    - http://nwedigital.com
+    - http://sistemaysoporte.es
+    - http://stephensimmer.com
+    - http://yumyums.comcastbiz.net
+    - ngusto-uro.ru
+    - http://siteweb.olympe.in
+    - http://steveacker.com
+    - http://biznetbrokers.com
+    - http://blogs.cisco.com
+  condition: attributes

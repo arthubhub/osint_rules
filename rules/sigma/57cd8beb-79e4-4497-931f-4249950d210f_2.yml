@@ -1,0 +1,35 @@
+title: Malspam 2016-09-05 (.wsf in .zip) - dns_query
+id: abdf958e-2e07-4cfa-b036-809869f8b064
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57cd8beb-79e4-4497-931f-4249950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - treasure-force.com
+    - maxshoppppsr.biz
+    IpAddresses:
+    - 158.69.147.89
+    - 195.248.63.109
+    - 112.140.42.29
+    - 81.169.145.153
+    - 68.65.121.203
+    - 213.180.150.17
+    - 78.110.50.113
+    - 195.238.0.64
+    - 23.95.106.213
+    - 80.150.6.138
+    - 195.208.0.121
+    - 200.83.4.62
+    - 208.71.106.37
+    - 212.46.196.141
+    - 213.205.40.169
+    - 208.71.106.62
+    - 185.33.52.18
+    - 81.196.20.134
+  condition: attributes

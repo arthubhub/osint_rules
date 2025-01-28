@@ -1,0 +1,17 @@
+title: OSINT - NetTraveler APT Targets Russian, European Interests - url_request
+id: cb31b3c0-9237-48e6-ba8b-43f9a0150687
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5784f9df-02ac-4e17-92bc-7e4502de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.info-spb.com
+    - https://www.proofpoint.com
+    - http://www.interfaxru.com
+  condition: attributes

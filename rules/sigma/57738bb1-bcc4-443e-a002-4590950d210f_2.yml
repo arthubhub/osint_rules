@@ -1,0 +1,81 @@
+title: "OSINT - Prince of Persia \xE2\u20AC\u201C Game Over - dns_query"
+id: 639cb43a-f7bb-4533-814f-94a7d9e5d54b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57738bb1-bcc4-443e-a002-4590950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - bestupdateserver2.com
+    - box4057.net
+    - box4086.net
+    - box4040.net
+    - box4064.net
+    - updateserver1.com
+    - box4067.net
+    - box4075.net
+    - box4070.net
+    - youripinfo.com
+    - box4063.net
+    - box4048.net
+    - box4087.net
+    - box4044.net
+    - box4082.net
+    - box4058.net
+    - box4042.net
+    - box4039.net
+    - box4047.net
+    - bestbox3.com
+    - box4066.net
+    - box4046.net
+    - box4059.net
+    - box4078.net
+    - box4084.net
+    - box4051.net
+    - box4071.net
+    - box4072.net
+    - box4085.net
+    - box4068.net
+    - updatebox4.com
+    - box4060.net
+    - box4050.net
+    - bestupdateserver.com
+    - box4055.net
+    - box4061.net
+    - box4043.net
+    - box4089.net
+    - box4056.net
+    - box4079.net
+    - box4081.net
+    - box4088.net
+    - box4038.net
+    - box4049.net
+    - box4036.net
+    - updateserver3.com
+    - box4054.net
+    - box4045.net
+    - box4041.net
+    - box4080.net
+    - box4090.net
+    - box4065.net
+    - box4069.net
+    - safehostline.com
+    - box4062.net
+    - box4053.net
+    - box4035.net
+    - box4052.net
+    - box4083.net
+    - box4037.net
+    IpAddresses:
+    - 138.201.47.150
+    - 138.201.47.153
+    - 138.201.47.158
+    - 138.201.0.134
+    - 5.9.94.34
+    - 144.76.250.205
+  condition: attributes

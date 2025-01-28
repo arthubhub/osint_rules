@@ -1,0 +1,15 @@
+title: Malspam 2017-09-08 - 'Emailed Invoice -' - .html attachment - url_request
+id: 001caa45-bc9e-4a1a-8cce-9ea275d9cafe
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59b2ada6-f428-4476-b218-7c5a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://old.tsg-upravdom.ru
+  condition: attributes

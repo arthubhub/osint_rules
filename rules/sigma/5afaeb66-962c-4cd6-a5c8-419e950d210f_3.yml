@@ -1,0 +1,355 @@
+title: 'OSINT -  RAT Gone Rogue: Meet ARS VBS Loader - process_creation'
+id: bc99b508-e4fd-4d6e-bff2-06ccc71545af
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5afaeb66-962c-4cd6-a5c8-419e950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.ars_vbs_loader
+- attack.software.ars_vbs_loader
+detection:
+  object_6698:
+    sha256:
+    - 7dd3252bbe36caec6c9e4d263e48603a08b0aeca852a582c434dd899b9167e40
+  object_6699:
+    sha256:
+    - f9357a84d1688315416db12d3a1461b3fb2aee9d8dc749c33d39fc2d90b292da
+  object_6700:
+    sha256:
+    - c6115fcc183b642820bb4ef43353b2a15d3b9c5d41dee833d45715a43e538246
+  object_6701:
+    sha256:
+    - 4cfb17b9b34703128d63aa0c57cef234469f64f1331dd6382d82b0d2f7768b1a
+  object_6702:
+    sha256:
+    - 8d0237e262cacd529c6ca49dc1b105f1e4043942cc0b6d39d8c33871d7659194
+  object_6703:
+    sha256:
+    - 35fb0e1be5b295f2c50a361c112f6573150c4b5e3fb7d244e02aee39f76b1782
+  object_6704:
+    sha256:
+    - efee338bd78d0b87174078a27bc9d2b290cfbd3363e94e67964976488d74d585
+  object_6705:
+    sha256:
+    - f93503be098993f8be5d76a641d3c322724ce4eb347bac6ab9500a7649d59da0
+  object_6706:
+    sha256:
+    - a23efd2b532958cb2206e75919577cde1efd2e75109a481cee3778740491b895
+  object_6707:
+    sha256:
+    - 44cf09f2ddc1157f085a84a57d34ec184582f6a8e94f40b033c754c699afe0f0
+  object_6708:
+    sha256:
+    - adefdc3772dc115ec278a300f2ec8373d71824c3fe021f1ea91f61813a6ce5cb
+  object_6709:
+    sha256:
+    - c8073d26fae3220e7e7d866d9e612506d25821efc36882ef90ef6a97268a78ec
+  object_6710:
+    sha256:
+    - 9aa6a80f04aab3a87c4082f24bb6f5327dc7ca2ab852c8edb943ced7d2190874
+  object_6711:
+    sha256:
+    - 6b871eef7890967f66b071390c60e0d3a033414df01341821627fe1fffeebcf0
+  object_6712:
+    sha256:
+    - 1322625bdf1765aec6ebac62bd6911b1264d814c639be7c3ce959aa850b59436
+  object_6713:
+    sha256:
+    - c110060c58380156489ff52f9a6fe0a362a7195fe68cf1fc6c27bff5498c8d82
+  object_6714:
+    sha256:
+    - 2dc4f6b2d9f63bc0da746bd8d36f7c7f116a6b5e25e90ebbb7901415a9eb5d0f
+  object_6715:
+    sha256:
+    - 45dd58018c3208c084f27611ff99ec5622010a370bda8359974f784451fe517d
+  object_6716:
+    sha256:
+    - fa3d5a1a6dcfd3db42674adb860ac9bb08507bc5a614f9509946c9ca9db23c11
+  object_6717:
+    sha256:
+    - d440a31955f763ccf5a07367783d67927a6817fb50a0e88ee986171d407cfcd6
+  object_6718:
+    sha256:
+    - f18b705500532fcd32be985ff878851d64f700d9872564daaf05c57aecc2bb45
+  object_6719:
+    sha256:
+    - bde4835c5c8fd1c9d7b471161618051a30c5e3df7e919d66cf6062f74e47eb7c
+  object_6720:
+    sha256:
+    - 5608c2b49ae8b8325f902e8a2e1a63cfde0a606ee580e392b7abaedba02d8e25
+  object_6721:
+    sha256:
+    - b8be8355fdab0987fd4f67768b425322b75849fe8b47945c6bda9b0bea2d904e
+  object_6722:
+    sha256:
+    - b78cdb90d9a945686d367419f439d44c1f868051b6ce16c2e1008082bee750c1
+  object_6723:
+    sha256:
+    - 01675c7ab0f4a5807ec4b04c03c5636d01ff0958c64e6a3792463f6ce16a7af7
+  object_6724:
+    sha256:
+    - 969a02e8eb029553784b46cc0577009118b79cdba13ccc0afae8ac3f32b2fd9a
+  object_6725:
+    sha256:
+    - cb0a1eda5d199f88dd2cd4ed464398f68c5999b825bdd101060938f1f5bac01f
+  object_6726:
+    sha256:
+    - b67b84986c1563c78d452eed8c050a124040974efec655920c905d64964fde4f
+  object_6727:
+    sha256:
+    - 54cb7f331bb2feec0ac51be79366b17a1d8ecc0ecc8cbb9a08e58ee54f1049a9
+  object_6728:
+    sha256:
+    - 92346d628a862e7b8e18779331094f9bbca723f531d7f9cd87f6fef4d0d0b064
+  object_6729:
+    sha256:
+    - 3d6ce8062c14ad6a7abed4ba8ba373db9d09ba9b202d37ed4ab9eb62a711721c
+  object_6730:
+    sha256:
+    - 64c5c30f1aebdf1dfc59855e579d99e212ca9b3b5296c801f9a3f22c186bb354
+  object_6731:
+    sha256:
+    - 6229a180fb9000cf7ad023f3b74361fba83375c3973ac31428574de5c3f78790
+  object_6732:
+    md5:
+    - 627ee1dfa0bc963c4ba89e4013630c2e
+    sha1:
+    - b07ae354fec6005d4844b3c64c3e6f4dcf7540b1
+    sha256:
+    - 1322625bdf1765aec6ebac62bd6911b1264d814c639be7c3ce959aa850b59436
+  object_6734:
+    md5:
+    - 3ce2e8012dd556883eb27c3931a16c14
+    sha1:
+    - 1b83853f7ec1714807857072a6ac0512f6cf0c89
+    sha256:
+    - 64c5c30f1aebdf1dfc59855e579d99e212ca9b3b5296c801f9a3f22c186bb354
+  object_6736:
+    md5:
+    - dc1eeaa99ad020c5eec705b02593fb0e
+    sha1:
+    - bf9d63751dd2cdfdb24e85bc918fe5c55ee0318a
+    sha256:
+    - 6229a180fb9000cf7ad023f3b74361fba83375c3973ac31428574de5c3f78790
+  object_6738:
+    md5:
+    - c898c7febc4c1cc55d5f17a66868de06
+    sha1:
+    - 3a74eb84b564583430e58fd388f10f6a1a08c7b1
+    sha256:
+    - adefdc3772dc115ec278a300f2ec8373d71824c3fe021f1ea91f61813a6ce5cb
+  object_6740:
+    md5:
+    - f157f83b1556a118504b340406cc5633
+    sha1:
+    - 16d11103fa9792f9745b7dd0a21b1cdb2f4f61de
+    sha256:
+    - efee338bd78d0b87174078a27bc9d2b290cfbd3363e94e67964976488d74d585
+  object_6742:
+    md5:
+    - 81600266fc940c61c590e1c27c2605ee
+    sha1:
+    - ed1af846015854ed83be389673a35f0927b07269
+    sha256:
+    - f9357a84d1688315416db12d3a1461b3fb2aee9d8dc749c33d39fc2d90b292da
+  object_6744:
+    md5:
+    - 715c8a236a41b078cd032f5aa9bcff03
+    sha1:
+    - ffe9a1d1721276df525d01d7facea8a7f16a274f
+    sha256:
+    - 9aa6a80f04aab3a87c4082f24bb6f5327dc7ca2ab852c8edb943ced7d2190874
+  object_6746:
+    md5:
+    - d3ea69adf242199195da416adef6fd4b
+    sha1:
+    - 31866b972a0b5ca8186958e96ba617e449c8e201
+    sha256:
+    - 5608c2b49ae8b8325f902e8a2e1a63cfde0a606ee580e392b7abaedba02d8e25
+  object_6748:
+    md5:
+    - e3dc901f99f08c3b7198f71d8e583882
+    sha1:
+    - f39815148252b7b134e0843726770b779e5f1393
+    sha256:
+    - bde4835c5c8fd1c9d7b471161618051a30c5e3df7e919d66cf6062f74e47eb7c
+  object_6750:
+    md5:
+    - 917d0038c6dc129891e96146ca65d52b
+    sha1:
+    - 2ded6393a3b523708cc084dd1c7cf70504dc6e20
+    sha256:
+    - b67b84986c1563c78d452eed8c050a124040974efec655920c905d64964fde4f
+  object_6752:
+    md5:
+    - 7891d9231fb15c96be52f57762a27ab9
+    sha1:
+    - 3011e4f63184ba676da55551a06138d68cfd4b85
+    sha256:
+    - 6b871eef7890967f66b071390c60e0d3a033414df01341821627fe1fffeebcf0
+  object_6754:
+    md5:
+    - d80a48c80be4e8558df1ea5b568082c3
+    sha1:
+    - 96f558cf79c4570f749d6463c95b4d188452dadb
+    sha256:
+    - 3d6ce8062c14ad6a7abed4ba8ba373db9d09ba9b202d37ed4ab9eb62a711721c
+  object_6756:
+    md5:
+    - 3048853c134cbbed51fc62829882198a
+    sha1:
+    - 9487abdc69b90ba332d07deb72660b630f43ddf7
+    sha256:
+    - 35fb0e1be5b295f2c50a361c112f6573150c4b5e3fb7d244e02aee39f76b1782
+  object_6758:
+    md5:
+    - d4258390bc32171d136612a7088cda9d
+    sha1:
+    - 76029fd2ef902687b66c6e26dd85387ea62f439b
+    sha256:
+    - 45dd58018c3208c084f27611ff99ec5622010a370bda8359974f784451fe517d
+  object_6760:
+    md5:
+    - 074bfed6c3797e46d88d64c1f57a6a7f
+    sha1:
+    - 2f587614bc10a802c4675075ab818bf30a8a72ce
+    sha256:
+    - f18b705500532fcd32be985ff878851d64f700d9872564daaf05c57aecc2bb45
+  object_6762:
+    md5:
+    - 63d30e1c9c014c36afac1303ecaa186b
+    sha1:
+    - 91d156e40c9e7bfbccc4fa88b1897240e5dc6bbd
+    sha256:
+    - fa3d5a1a6dcfd3db42674adb860ac9bb08507bc5a614f9509946c9ca9db23c11
+  object_6764:
+    md5:
+    - 901d3d0705fac0c41343f891cba3afeb
+    sha1:
+    - 418b7328c68577b925e99d92fbfdb877deb17eeb
+    sha256:
+    - d440a31955f763ccf5a07367783d67927a6817fb50a0e88ee986171d407cfcd6
+  object_6766:
+    md5:
+    - c7675e036e80691a108d8f336458b282
+    sha1:
+    - eb9e4269eeabdaff3e5cf2357ea20ae5228985d2
+    sha256:
+    - c110060c58380156489ff52f9a6fe0a362a7195fe68cf1fc6c27bff5498c8d82
+  object_6768:
+    md5:
+    - babb80883aa9284e54550c3b8f9f7c66
+    sha1:
+    - a8a92cdfa770fd83ed85980cf7ed6ef3ff9a8d42
+    sha256:
+    - 8d0237e262cacd529c6ca49dc1b105f1e4043942cc0b6d39d8c33871d7659194
+  object_6770:
+    md5:
+    - 19fdfd55045eb8603d4da84633fcd612
+    sha1:
+    - 93c0104229b3add41e11a7a0dbeeafd812031e62
+    sha256:
+    - f93503be098993f8be5d76a641d3c322724ce4eb347bac6ab9500a7649d59da0
+  object_6772:
+    md5:
+    - 9ecf853d6db3dd2cd82c640200caaee2
+    sha1:
+    - 66cb85038dba5e9f40e30e9874fc270ebcc5de74
+    sha256:
+    - a23efd2b532958cb2206e75919577cde1efd2e75109a481cee3778740491b895
+  object_6774:
+    md5:
+    - 03f182668e5af2047b9efe1133f0ae52
+    sha1:
+    - 1bca79c1e8539ed69ea9629ea730dbab7b3fd963
+    sha256:
+    - b8be8355fdab0987fd4f67768b425322b75849fe8b47945c6bda9b0bea2d904e
+  object_6776:
+    md5:
+    - 876ed66c71945fcb3b7df1387137f0f0
+    sha1:
+    - dcbe261011ee997c0ffa46b5ff7b6280ff8fe853
+    sha256:
+    - 2dc4f6b2d9f63bc0da746bd8d36f7c7f116a6b5e25e90ebbb7901415a9eb5d0f
+  object_6778:
+    md5:
+    - 926cc8a4981587eb55dd7152cf244401
+    sha1:
+    - cefc04e1b622c36e0d65bdad3191d9737921b082
+    sha256:
+    - 7dd3252bbe36caec6c9e4d263e48603a08b0aeca852a582c434dd899b9167e40
+  object_6780:
+    md5:
+    - f9ee6f7f49f0b175f1ddea33a5eee401
+    sha1:
+    - d1a036c70f29e3d89d22cb630e57d2c510a72cf2
+    sha256:
+    - c6115fcc183b642820bb4ef43353b2a15d3b9c5d41dee833d45715a43e538246
+  object_6782:
+    md5:
+    - f64208cfe7233d7fda733b1f34762cff
+    sha1:
+    - 8139484ccbb67b133d6e608608f59945390dd3c7
+    sha256:
+    - 4cfb17b9b34703128d63aa0c57cef234469f64f1331dd6382d82b0d2f7768b1a
+  object_6784:
+    md5:
+    - a7b85c263611b66d93859ad25305c1c9
+    sha1:
+    - ba4bbce0576f227b1484fbdfa1eab632475dbf4f
+    sha256:
+    - 92346d628a862e7b8e18779331094f9bbca723f531d7f9cd87f6fef4d0d0b064
+  object_6786:
+    md5:
+    - 734d5bcc52ba2d7dc4c5d61b22ecfca1
+    sha1:
+    - ed845ccaf593419288f2e0f83b464e55caaed622
+    sha256:
+    - 44cf09f2ddc1157f085a84a57d34ec184582f6a8e94f40b033c754c699afe0f0
+  object_6788:
+    md5:
+    - 5e3f5d3f9bd5b3bfa65731d8d3184cd6
+    sha1:
+    - c22aeb9ca9e60d0c579549fa1430904dc453cfa8
+    sha256:
+    - cb0a1eda5d199f88dd2cd4ed464398f68c5999b825bdd101060938f1f5bac01f
+  object_6790:
+    md5:
+    - 4f977db6063bcb43505f7da2437a2d67
+    sha1:
+    - 48539976e7400fca42a71a58910e584fed3ed60b
+    sha256:
+    - b78cdb90d9a945686d367419f439d44c1f868051b6ce16c2e1008082bee750c1
+  object_6792:
+    md5:
+    - 2bc23bb6f305c4da8c75bb92d3f0c1cb
+    sha1:
+    - 5c8dcc3eedb17fe796befd978ca39b535b4c5089
+    sha256:
+    - c8073d26fae3220e7e7d866d9e612506d25821efc36882ef90ef6a97268a78ec
+  object_6794:
+    md5:
+    - 683c753dd3a7cb5fa5ff5fa3a0f5e5de
+    sha1:
+    - 362acc479033806ca0f8128e765205c791a0593f
+    sha256:
+    - 54cb7f331bb2feec0ac51be79366b17a1d8ecc0ecc8cbb9a08e58ee54f1049a9
+  object_6796:
+    md5:
+    - 0059c514d28f0cf7c42669ed4d9a2510
+    sha1:
+    - 1f9d5043582a24114a4a97ac3e77a424d74af0c0
+    sha256:
+    - 01675c7ab0f4a5807ec4b04c03c5636d01ff0958c64e6a3792463f6ce16a7af7
+  object_6798:
+    md5:
+    - d2361e4684a00774eeac70196dbfc2a4
+    sha1:
+    - fedd21b12e4878d2de0c8aa592ead0d9af0019e9
+    sha256:
+    - 969a02e8eb029553784b46cc0577009118b79cdba13ccc0afae8ac3f32b2fd9a
+  condition: 1 of object_*

@@ -1,0 +1,67 @@
+title: 'Malspam 2016-08-26 (.js in .zip) - campaign: "monthly report" - dns_query'
+id: 8a09e643-5b65-44da-b9b7-4268c78f42ad
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c43d9b-61a4-43b7-985b-4558950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - cmt.ro
+    - brothermalw.ws
+    - shagunproperty.com
+    - gebetech.at
+    - rejoincomp2.in
+    - abufarha.net
+    - anotherstandard.com
+    - domyte.com
+    - impregui.com
+    - berndburgdorf.de
+    - clubofmalw.ws
+    - theuniongroup.com
+    IpAddresses:
+    - 162.210.101.97
+    - 52.208.197.252
+    - 80.241.232.207
+    - 187.45.240.5
+    - 162.210.101.95
+    - 212.34.140.236
+    - 134.0.11.154
+    - 212.159.9.90
+    - 208.71.106.51
+    - 81.169.145.223
+    - 213.229.74.92
+    - 91.201.41.217
+    - 134.0.10.146
+    - 193.109.184.81
+    - 94.25.37.27
+    - 208.71.106.35
+    - 206.188.192.236
+    - 50.63.202.54
+    - 66.147.240.193
+    - 64.29.151.221
+    - 134.0.11.184
+    - 204.174.223.203
+    - 159.90.60.215
+    - 82.165.58.15
+    - 213.186.33.19
+    - 72.52.99.36
+    - 64.33.128.71
+    - 104.232.35.136
+    - 86.65.123.70
+    - 195.91.160.34
+    - 79.96.153.93
+    - 213.205.40.169
+    - 91.136.8.9
+    - 85.248.42.103
+    - 195.230.160.53
+    - 52.209.246.67
+    - 62.42.230.17
+    - 212.40.179.94
+    - 195.130.132.84
+    - 92.63.216.53
+  condition: attributes

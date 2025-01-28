@@ -1,0 +1,26 @@
+title: 'OSINT - New Linux/Rakos threat: devices and servers under SSH scan (again)
+  - dns_query'
+id: dddcd45a-906e-4f72-8c90-8c7734cd2cda
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/585b9a80-9910-4d24-a695-4ac4950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 195.123.210.100
+    - 185.82.216.125
+    - 217.12.203.31
+    - 5.34.180.64
+    - 217.12.208.28
+    - 46.8.44.55
+    - 193.169.245.68
+    - 185.20.184.117
+    - 185.14.29.65
+    - 5.34.183.231
+    - 185.14.30.78
+  condition: attributes

@@ -1,0 +1,17 @@
+title: Cerber Ransomware - process_creation
+id: d1103e9d-b646-4bbd-99fc-6ca2dfea5f6b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e12e66-f01c-41be-afea-4d9a950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    sha1:
+    - 0af6bde11eaa699604aa92cce9a6210dfce70f42
+    sha256:
+    - a5ff5f861bbb1ac7c6fd44f303f735fac01273ce2ae43a8acb683076192fcfcc
+  condition: attributes

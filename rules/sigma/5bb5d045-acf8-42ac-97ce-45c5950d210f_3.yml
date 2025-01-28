@@ -1,0 +1,100 @@
+title: OSINT - Indicators of Compromise for Malware used by APT28 - process_creation
+id: 075904f9-2ea0-4aff-8151-c9208d775509
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bb5d045-acf8-42ac-97ce-45c5950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.strontium
+- attack.group.sofacy
+- attack.software.x-agent
+- attack.software.x-tunnel
+detection:
+  object_9771:
+    md5:
+    - 5086989639aed17227b8d6b041ef3163
+    sha1:
+    - 5fa9f62b9616849e1f23ae3582f7d72eff030768
+    sha256:
+    - c5f8236e578a2b877fe538b2ef6f4aeceeb1b9cb73bba4d02fd368a5eb85cfab
+  object_9773:
+    md5:
+    - 8dbe37dfb0d498f96fb7f1e09e9e5c8f
+    sha1:
+    - 4c1f39ae7ac7cafc3554790b0d3cdc0136dc43d2
+    sha256:
+    - fc224a6cca956a59812a13e53ba08a279996ea2ee194fe20fb10170ca5c2db6a
+  object_9775:
+    md5:
+    - 10036063be45f92a9a743425fbf5abc7
+    sha1:
+    - d70db6a6d660aae58ccfc688a2890391fd873bfb
+    sha256:
+    - 3f48dbbf86f29e01809550f4272a894ff4b09bd48b0637bd6745db84d2cec2b6
+  object_9777:
+    md5:
+    - d29899195c604f0615885bc6c2fdf7a8
+    sha1:
+    - fa695e88c87843ca0ba9fc04b176899ff90e9ac5
+    sha256:
+    - 86a588672837afdc1900ad9e78c7d0ae7a842bdd972dbdc5bdff2574a37f5acc
+  object_9779:
+    md5:
+    - fc0cb1dbab4bc6504e644f311d9bb4a1
+    sha1:
+    - c53930772beb2779d932655d6c3de5548810af3d
+    sha256:
+    - a1c73ce193ffa5323aaef73fbabbc2a984e10900f09cf9fcb0cb11606a23c402
+  object_9781:
+    md5:
+    - b50640a28a1d4f2acdce93adf2ea326c
+    sha1:
+    - b758c7775d9bcdc0473fc2e738b32f05b464b175
+    sha256:
+    - 2b19497db8cb05cd3d22996efe5af8eac0f2ea51e80f606b7b8a79dfaa2f58e2
+  object_9783:
+    md5:
+    - 4fa6cd01571905b9c7c8fc9a359b655e
+    sha1:
+    - 46e2957e699fae6de1a212dd98ba4e2bb969497d
+    sha256:
+    - b814fdbb7cfe6e5192fe1126835b903354d75bfb15a6c262ccc2caf13a8ce4b6
+  object_9785:
+    md5:
+    - 961e79a33f432ea96d2c8bf9eb010006
+    sha1:
+    - 913ac13ff245baeff843a99dc2cbc1ff5f8c025c
+    sha256:
+    - a15a4e21fe3b06870d52f7383ef45e4ac0dde727b02b3d340f0ba6346b43add1
+  object_9787:
+    md5:
+    - 809cbf6cfded8d571d20fe27d6cf91f9
+    sha1:
+    - 046a8adc2ef0f68107e96babc59f41b6f0a57803
+    sha256:
+    - 001d65185910ae8cd9e7e2472745e593be62b98eae3f5f2266a29c37e56daa1d
+  object_9789:
+    md5:
+    - be6f600e05d6d958a9f614fc415ecba1
+    sha1:
+    - 3e7dfe9a8d5955a825cb51cb6eec0cd07c569b41
+    sha256:
+    - a6576282d17cca390e35306a423dcb5ac9276c28eaba63f74001757edc3688df
+  attributes:
+    md5:
+    - 8dbe37dfb0d498f96fb7f1e09e9e5c8f
+    - 5086989639aed17227b8d6b041ef3163
+    sha1:
+    - c53930772beb2779d932655d6c3de5548810af3d
+    - b758c7775d9bcdc0473fc2e738b32f05b464b175
+    - 46e2957e699fae6de1a212dd98ba4e2bb969497d
+    - 913ac13ff245baeff843a99dc2cbc1ff5f8c025c
+    - fa695e88c87843ca0ba9fc04b176899ff90e9ac5
+    - d70db6a6d660aae58ccfc688a2890391fd873bfb
+    - 3e7dfe9a8d5955a825cb51cb6eec0cd07c569b41
+    - 046a8adc2ef0f68107e96babc59f41b6f0a57803
+  condition: 1 of object_* or attributes

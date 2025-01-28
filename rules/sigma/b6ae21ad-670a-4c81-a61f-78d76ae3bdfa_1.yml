@@ -1,0 +1,20 @@
+title: The Golden Tax Department and the Emergence of GoldenSpy Malware - url_request
+id: cccbea89-d5d0-401a-a5c4-8ca99a9f7c8e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/b6ae21ad-670a-4c81-a61f-78d76ae3bdfa.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1195.002
+detection:
+  object_8829:
+    RequestUrl|contains:
+    - ningzhidata.com
+  attributes:
+    RequestUrl|contains:
+    - http://upgrade.i-xinnuo.com
+  condition: 1 of object_* or attributes

@@ -1,0 +1,20 @@
+title: OSINT A deeper look into ScanBox TLP:WHITE report from PWC UK - url_request
+id: e8269e62-83fb-4f7c-b4d3-fc1eccea8d0c
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54ec3439-7154-48e4-ae1e-4c1c950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - gokbayrak.com
+    - googlecaches.com
+    - webmailgoogle.com
+    - macanna.com.tw
+    - http://pwc.blogs.com
+    - qoog1e.com
+  condition: attributes

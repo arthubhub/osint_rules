@@ -1,0 +1,26 @@
+title: OSINT - [Emering] FIN7 JScript Loader Malware - process_creation
+id: 77a961ea-2b0b-49d7-8ed9-1f81bd7e5f40
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cda6599-990c-4803-8c89-45e4950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.fin7
+- attack.group.anunak
+- attack.group.g0046
+detection:
+  object_9829:
+    sha256:
+    - 1fe27e0a84a5bd2e433360fd2da5b1cad8d142ca2acbf3e256f0c99d99cb57f1
+  object_9830:
+    md5:
+    - b136fed01acf1b7e7e43dfa2db292623
+    sha1:
+    - d8206bc4bc2efc4062b0f173e8841508c95ed0e4
+    sha256:
+    - 1fe27e0a84a5bd2e433360fd2da5b1cad8d142ca2acbf3e256f0c99d99cb57f1
+  condition: 1 of object_*

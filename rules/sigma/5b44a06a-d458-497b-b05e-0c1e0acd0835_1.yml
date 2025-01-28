@@ -1,0 +1,18 @@
+title: 'Trend Micro Blog: Malicious Macro Hijacks Desktop Shortcuts to Deliver Backdoor
+  - url_request'
+id: a4dc1982-1b7b-49ea-b33d-0e841b12bd7d
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b44a06a-d458-497b-b05e-0c1e0acd0835.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://raw.githubusercontent.com
+    - https://blog.trendmicro.com
+  condition: attributes

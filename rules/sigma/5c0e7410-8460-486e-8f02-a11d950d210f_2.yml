@@ -1,0 +1,20 @@
+title: OSINT - Sextortion with a side of ransomware - dns_query
+id: 2f582d34-5be1-48ee-8adf-e4dc1efa44fe
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c0e7410-8460-486e-8f02-a11d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.azorult
+- attack.software.win.gandcrab
+- attack.software.azorult
+- attack.group.win.gandcrab
+detection:
+  attributes:
+    QueryName|contains:
+    - gandcrabmfe6mnef.onion
+  condition: attributes

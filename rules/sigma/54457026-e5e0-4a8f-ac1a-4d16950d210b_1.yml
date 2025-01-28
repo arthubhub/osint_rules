@@ -1,0 +1,15 @@
+title: OSINT OrcaRAT - A whale of a tale blog post by PWC - url_request
+id: 539473c9-fd29-418e-ae07-cf25b5e02690
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54457026-e5e0-4a8f-ac1a-4d16950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://pwc.blogs.com
+  condition: attributes

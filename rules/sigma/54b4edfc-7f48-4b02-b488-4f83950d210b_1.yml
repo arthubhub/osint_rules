@@ -1,0 +1,17 @@
+title: 'OSINT DTL-12012015-01: Hong Kong SWC attack from Dragon Threat Labs - url_request'
+id: b0b9e71d-0e5b-445a-b87a-4475f493955f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54b4edfc-7f48-4b02-b488-4f83950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+    - aoemvp.com
+    - http://blog.dragonthreatlabs.com
+  condition: attributes

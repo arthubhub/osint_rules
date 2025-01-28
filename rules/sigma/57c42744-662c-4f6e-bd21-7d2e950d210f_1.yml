@@ -1,0 +1,46 @@
+title: 'Malspam 2016-08-29 (.wsf in .zip) - campaign: "Please find attached invoice
+  no" - url_request'
+id: c3b7105c-5d2a-4dbf-9d15-332a380d3928
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c42744-662c-4f6e-bd21-7d2e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.bluedizioni.com
+    - http://www.jan-wallner.de
+    - http://www.saumi.jazztel.es
+    - http://jamesm.co.uk
+    - http://xelagon.50webs.org
+    - http://www.agenziadini.it
+    - http://immobilien1000.de
+    - http://www.lagottoromagnolo.be
+    - http://job.atspace.org
+    - http://vicariassicurazioni.it
+    - http://www.fenit.net
+    - bypetra.de
+    - http://sektori.pp.fi
+    - http://www.agriturismoigirasoli.it
+    - immobilien1000.de
+    - http://www.kurtoskalacs.go.ro
+    - http://www.culturalheritagemanagement.org
+    - http://www.epikal.go.ro
+    - vicariassicurazioni.it
+    - http://www.webcam-bild.de
+    - http://spaceinn.co.jp
+    - http://www.planet-intv.com
+    - http://ach-dziennik.cba.pl
+    - http://www.qualityacoustic.comcastbiz.net
+    - http://club.konjiki.jp
+    - http://www.dondana.com
+    - http://bypetra.de
+    - http://www.dialektika.extra.hu
+    - http://iesjaumei.edu.gva.es
+    - http://conserpa.vtrbandaancha.net
+    - http://lokum1985.republika.pl
+  condition: attributes

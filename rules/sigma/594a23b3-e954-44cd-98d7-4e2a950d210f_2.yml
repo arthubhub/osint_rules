@@ -1,0 +1,19 @@
+title: Malspam 2017-06-21 'Job Application' - process_creation
+id: fed60ea8-d87d-4be3-a61c-ed3fda6b4e1c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/594a23b3-e954-44cd-98d7-4e2a950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    sha1:
+    - 6d275d237668f13ab001a295c0d3233129c058a1
+    - 61ac6d00c979026eacf4b28fcb70969d5dc6a3a2
+    sha256:
+    - 524ad16ac80b196a5507fc45adfff6edc2938d498bc8e736ac69a8be7e5e8034
+    - 0ca31353ae0438503a2ad9ade37d463eef08cdeed35fac4feba5924eb127f32b
+  condition: attributes

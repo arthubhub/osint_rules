@@ -1,0 +1,19 @@
+title: "CISA - Malware Analysis Report (AR22-055A) - MAR\u201310369127\u20131.v1 -\
+  \ MuddyWater - url_request"
+id: 610cdb30-c7af-47cf-afac-e4b3f0538c36
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5dd2ce03-5651-47c6-9e96-633c5fbc2c90.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.g0069
+- attack.group.muddywater
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.cisa.gov
+  condition: attributes

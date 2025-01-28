@@ -1,0 +1,23 @@
+title: Malspam (2016-03-10) - Locky, TeslaCrypt - url_request
+id: 36b34d94-1cc3-4ced-b4f4-bf315bf0b886
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e17b23-c61c-42e8-9f33-463e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - tele-channel.com
+    - http://tele-channel.com
+    - http://iwear.md
+    - http://behrozan.ir
+    - http://ncrweb.in
+    - http://svet.md
+    - http://iogwedoil.ru
+    - http://hellomississmithqq.com
+    - http://mommycantakeff.com
+  condition: attributes

@@ -1,0 +1,25 @@
+title: 'Malspam 2016-08-31 (.wsf in .zip) - campaign: "Image|Picture|Photos|Photo|Document"
+  - url_request'
+id: 87458ae8-6558-42a5-ab81-532a4cfa72c4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c6ac4c-c60c-4f79-a38f-b666950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - og-kaiserslautern-kft.de
+    - alians-ekb.ru
+    - http://rmpst.republika.pl
+    - http://stanflorin10.go.ro
+    - http://www.welt-weit.info
+    - onlineportal-2012.de
+    - http://www.auret.at
+    - http://www.roboticapc.com
+    - http://www.lindenkapelle.de
+    - http://www.hiederer.de
+  condition: attributes

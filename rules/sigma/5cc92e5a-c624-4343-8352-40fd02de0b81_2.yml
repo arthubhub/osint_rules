@@ -1,0 +1,15 @@
+title: OSINT - Kernel Mode Malicious Loader - dns_query
+id: cfa3bf84-65bd-4072-badf-7f0edaa18c41
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cc92e5a-c624-4343-8352-40fd02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 45.227.252.54
+  condition: attributes

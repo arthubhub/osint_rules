@@ -1,0 +1,20 @@
+title: OSINT Microsoft Office Zero-Day CVE-2015-2424 Leveraged By Tsar Team report
+  by iSight - dns_query
+id: 177dbe8d-1e81-43e7-931b-8fbd4e6d98e8
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5761398f-31d0-46b0-808f-41de950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - tabsync.net
+    - wscapi.com
+    - storsvc.org
+    IpAddresses:
+    - 66.172.11.207
+  condition: attributes

@@ -1,0 +1,51 @@
+title: OSINT - Sofacy Uses DealersChoice to Target European Government Agency - process_creation
+id: 38958208-ca37-4787-95a1-72c4cb084deb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aac24b9-0404-4877-8b3f-425e02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.strontium
+- attack.group.sofacy
+detection:
+  object_9105:
+    sha256:
+    - 0cd9ac328d858d8d83c9eb73bfdc59a958873b3d71b24c888d7408d9512a41d7
+  object_9106:
+    md5:
+    - 87d7c3096ae4167a19c10d0d204c4609
+    sha1:
+    - 7204be1059d404ecb81a20c89f9448f599aa9cfe
+    sha256:
+    - 0cd9ac328d858d8d83c9eb73bfdc59a958873b3d71b24c888d7408d9512a41d7
+  object_9108:
+    md5:
+    - f52ea8f238e57e49bfae304bd656ad98
+    sha1:
+    - 169c8f3e3d22e192c108bc95164d362ce5437465
+    sha256:
+    - efb235776851502672dba5ef45d96cc65cb9ebba1b49949393a6a85b9c822f52
+  object_9110:
+    md5:
+    - 94b288154e3d0225f86bb3c012fa8d63
+    sha1:
+    - 4873bafe44cff06845faa0ce7c270c4ce3c9f7b9
+    sha256:
+    - e5511b22245e26a003923ba476d7c36029939b2d1936e17a9b35b396467179ae
+  object_9112:
+    md5:
+    - 085be1b8b8f3e90be00f6a3bcea2879f
+    sha1:
+    - cc7607015cd7a1a4452acd3d87adabdd7e005bd7
+    sha256:
+    - c4be15f9ccfecf7a463f3b1d4a17e7b4f95de939e057662c3f97b52f7fa3c52f
+  attributes:
+    sha256:
+    - efb235776851502672dba5ef45d96cc65cb9ebba1b49949393a6a85b9c822f52
+    - c4be15f9ccfecf7a463f3b1d4a17e7b4f95de939e057662c3f97b52f7fa3c52f
+    - e5511b22245e26a003923ba476d7c36029939b2d1936e17a9b35b396467179ae
+  condition: 1 of object_* or attributes

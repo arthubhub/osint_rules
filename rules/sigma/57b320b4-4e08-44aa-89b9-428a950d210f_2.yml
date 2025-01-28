@@ -1,0 +1,23 @@
+title: 'Malspam 2016-08-16 (.wsf in .zip) - campaign: ''Blank 2'' - dns_query'
+id: 41905946-cca7-4fef-9201-bc33b2838687
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b320b4-4e08-44aa-89b9-428a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - muznavolge.ru
+    IpAddresses:
+    - 112.140.42.29
+    - 212.72.183.216
+    - 92.38.227.7
+    - 192.151.153.26
+    - 213.205.40.169
+    - 95.211.144.65
+    - 77.244.243.38
+  condition: attributes

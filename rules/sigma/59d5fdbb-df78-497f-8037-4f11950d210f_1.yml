@@ -1,0 +1,35 @@
+title: 'M2M -  Locky 2017-10-05 : Affid=3, offline, ".ykcol" : "Invoice" - "1234567.7z"
+  - url_request'
+id: 52916cd1-7526-4bb7-8bf9-cb67b860dc88
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d5fdbb-df78-497f-8037-4f11950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://173.83.200.79
+    - http://physicallyfocused.biz
+    - http://formationdirecte.ca
+    - http://www.mariodigregorio.it
+    - http://ristorantetrefontane.it
+    - http://173.83.200.78
+    - http://LeadingWare.us
+    - http://www.cioccolatopaolillo.it
+    - http://maitreandre.com
+    - http://hutterstock.org
+    - http://kimberlyvargasauthor.com
+    - http://adamjarekelk.freehost.pl
+    - http://www.gentechimpianti.com
+    - http://comtecav.co.uk
+    - http://www.emtech-canada.com
+    - http://gandmco.com
+    - http://ernestoangiolini.com
+  condition: attributes

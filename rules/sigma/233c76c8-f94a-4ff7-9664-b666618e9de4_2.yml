@@ -1,0 +1,18 @@
+title: 'OSINT - Ivanti Connect Secure: Journey to the core of the DSLog backdoor -
+  dns_query'
+id: f3d6ab52-c717-4358-a510-a9d7e7357d21
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/233c76c8-f94a-4ff7-9664-b666618e9de4.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1190
+detection:
+  attributes:
+    IpAddresses:
+    - 159.65.123.122
+  condition: attributes

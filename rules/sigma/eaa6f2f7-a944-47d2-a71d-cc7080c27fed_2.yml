@@ -1,0 +1,29 @@
+title: Lumma Stealer Malware (delivered via GitHub Spam) - Pandora analysis (l6E.exe)
+  - dns_query
+id: a625ef3b-172a-4250-ad06-03773e348381
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/eaa6f2f7-a944-47d2-a71d-cc7080c27fed.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.lumma_stealer
+- attack.group.lumma_stealer
+detection:
+  object_17490:
+    QueryName|contains:
+    - tesecuuweqo.shop
+    - licenseodqwmqn.shop
+    - eemmbryequo.shop
+    - tendencctywop.shop
+    - tryyudjasudqo.shop
+    - keennylrwmqlw.shop
+    - reggwardssdqw.shop
+    - relaxatinownio.shop
+  object_17491:
+    QueryName|contains:
+    - github-scanner.com
+  condition: 1 of object_*

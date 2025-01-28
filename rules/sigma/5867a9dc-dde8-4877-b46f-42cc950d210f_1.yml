@@ -1,0 +1,19 @@
+title: "OSINT - GRIZZLY STEPPE \xE2\u20AC\u201C Additional expansion - url_request"
+id: 4ca47b63-642f-40b4-9479-f75a04f35e78
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5867a9dc-dde8-4877-b46f-42cc950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://twitter.com
+    - https://raw.githubusercontent.com
+    - http://pastebin.com
+  condition: attributes

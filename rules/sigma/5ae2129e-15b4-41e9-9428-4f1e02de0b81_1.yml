@@ -1,0 +1,25 @@
+title: 'OSINT - Analyzing Operation GhostSecret: Attack Seeks to Steal Data Worldwide
+  - url_request'
+id: c68eb554-a648-4e13-8d51-46765a790749
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ae2129e-15b4-41e9-9428-4f1e02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1057
+- attack.t1107
+- attack.t1124
+- attack.t1005
+- attack.t1043
+- attack.t1035
+- attack.t1119
+- attack.t1041
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securingtomorrow.mcafee.com
+  condition: attributes

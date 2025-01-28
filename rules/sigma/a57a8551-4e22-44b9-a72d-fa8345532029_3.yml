@@ -1,0 +1,68 @@
+title: HALFRIG - Malware Analysis Report - process_creation
+id: 9bf3a070-8223-4220-a9ad-441b8e32d8b7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/a57a8551-4e22-44b9-a72d-fa8345532029.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1204.002
+- attack.t1574.002
+- attack.software.halfrig
+- attack.t1547.001
+- attack.t1204
+- attack.t1140
+- attack.t1027.006
+- attack.t1583.003
+- attack.t1574.001
+- attack.t1566.001
+- attack.t1566
+- attack.t1553.005
+- attack.t1584
+detection:
+  object_10434:
+    md5:
+    - 83863beee3502e42ced7e4b6dacb9eac
+    sha1:
+    - d9d40cb3e2fe05cf223dc0b592a592c132340042
+    sha256:
+    - cb470d77087518ed7bc53ca624806c265ae2485d40ec212acc2559720940fb27
+  object_10435:
+    md5:
+    - 0e5ed33778ee9c020aa067546384abcb
+    sha1:
+    - fbb482415f5312ed64b3a0ebee7fed5e6610c21a
+    sha256:
+    - d1455c42553fab54e78c874525c812aaefb1f3cc69f9c314649bd6e4e57b9fa9
+  object_10436:
+    md5:
+    - f532c0247b683de8936982e86876093b
+    sha1:
+    - f61e0d09be2fc81d6f325aa7041be6136a747c2d
+    sha256:
+    - ddf218e4e7ccd5e8bd502fb115d1e7fbfaa393fb7e0b3b9001168caebc771c50
+  object_10437:
+    md5:
+    - abc87df854f31725dd1d7231f6f07354
+    sha1:
+    - e418d37fdcf4c288884bfe744b416cbdb0243a9e
+    sha256:
+    - efeb7d9d0fabe464a32c4e33fe756d6ef7a9b369c0f1462b3dd573b6b667488e
+  object_10438:
+    md5:
+    - 2ffaa8cbc7f0d21d03d3dd897d974dba
+    sha1:
+    - 6dff9a9f13300a5ce72a70d907ff7854599e990a
+    sha256:
+    - cfa65036aff012d7478694ea733e3e882cf8e18f336af5fba3ed2ef29160d45b
+  object_10439:
+    md5:
+    - 5b6d8a474c556fe327004ed8a33edcdb
+    sha1:
+    - a677b6aa958fe02cac0730d36e8123648e02884f
+    sha256:
+    - 86edfd6c7a2fab8c50a372494e3d5b08c032cca754396f6e288d5d4c5738cb4c
+  condition: 1 of object_*

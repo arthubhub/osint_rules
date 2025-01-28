@@ -1,0 +1,80 @@
+title: FormBook campaign - dns_query
+id: e023daac-109a-4748-9094-498c42e41424
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f45fe125-7f3f-4335-bf74-5ab61eb5b645.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1566.001
+- attack.software.formbook
+- attack.t1193
+detection:
+  attributes:
+    QueryName|contains:
+    - 66563.se
+    - damcostafreda12.cat
+    - hilltopspice.com
+    - blueridgebedracks.com
+    - abovegame.biz
+    - famousleaked.site
+    - katskateringllc.com
+    - coinnspoo.com
+    - bokenco.com
+    - androidrehber.com
+    - bxsh.cloud
+    - wemakebelieve.africa
+    - horsesnarrowboatsrabbits.com
+    - calandrainmanlaw.com
+    - busybody.app
+    - fantiplumbing.com
+    - family-doctor-54927.com
+    - discounthub.xyz
+    - chopsbyzarah.com
+    - brippa.store
+    - graphicstudio53.com
+    - hbcumicbrophone.com
+    - designroom.app
+    - 96mvipmy.com
+    - mybunnylawn.com
+    - addonysfitwear.com
+    - ayq6cn.shop
+    - dashfashion.store
+    - innerlovefest.com
+    - azart-player.ru
+    - lermansalesmarketing.com
+    - capturecreativeproductions.com
+    - bestrosetoy.com
+    - demonstrate-suppress.net
+    - furadventure.com
+    - bestridelabs.com
+    - huashi366.com
+    - vestby.net
+    - austmactrading.com
+    - 3dgamesource.com
+    - hissy.shop
+    - apatriotspeaks.com
+    - 68i81.top
+    - micdavevtuportal.africa
+    - awesomeessential.com
+    - jiayi-x.com
+    - moosemunch.boo
+    - uyruio.xyz
+    - eatit.click
+    - xn--etherealsoires-mkb.com
+    - addmusthaveoppprofit.online
+    - iratewonderhandstore.africa
+    - calliebarrows.online
+    - getv3apparel.com
+    - betonyventures.com
+    - chateaufinewines.com
+    - 66y143.xyz
+    - 80b80.app
+    - 1wihug.top
+    - lab1207.com
+    - jaafil.com
+    - jogo.africa
+  condition: attributes

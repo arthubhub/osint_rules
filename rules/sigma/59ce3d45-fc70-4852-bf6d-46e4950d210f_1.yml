@@ -1,0 +1,56 @@
+title: 'M2M -  Locky Affid=3/Trickbot "mac1" 2017-09-29 : "Voice Message from ..."
+  - "/voicemsg.html" links - url_request'
+id: 8a8aa680-a30f-4886-aff3-46db87374c6a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ce3d45-fc70-4852-bf6d-46e4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.locky
+- attack.software.locky
+- attack.software.trick_bot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://team-bobcat.org
+    - http://simonline.nl
+    - http://sgtenterprises.com
+    - http://hashigosha.com
+    - http://resortphotographics.com
+    - http://zik-et-dance.com
+    - http://missinglynxsystems.com
+    - http://estudiperceptiva.com
+    - http://mueblesamedidamalaga.com
+    - http://norsky.pt
+    - http://louisawong.net
+    - http://maule.biz
+    - http://weloveflowers.co.uk
+    - http://vincent-farben.de
+    - http://alucmuhendislik.com
+    - http://sunny-voices.de
+    - http://agregate-cariera.ro
+    - http://parquetroman.com
+    - http://agrourbis.com
+    - http://fortcollins-accounting.com
+    - http://pagosdelrey.mobi
+    - http://shineindian.com
+    - http://mobius-group.com
+    - http://afslearnenglish.com
+    - http://pinkyardflamingos.com
+    - http://kalorsystem.com
+    - http://ferienwohnung-schitter.at
+    - http://profigera.pt
+    - http://ilnumeroverde.it
+    - http://monroepoa.org
+    - http://somallc.com
+    - http://datenhaus.info
+    - http://wwwa.su
+    - http://moroplinghaptan.info
+    - http://monstermx.com
+    - http://recturf.com.au
+    - http://auto-ecolecoccinelle.com
+  condition: attributes

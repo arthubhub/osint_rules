@@ -1,0 +1,25 @@
+title: OSINT - The WhiteRose Ransomware Is Decryptable & Tells A Strange Story - process_creation
+id: a114f3a0-7ae6-4086-b461-da1b1445a28a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ac7752d-a430-4606-8d2b-06b4950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.whiterose
+- attack.group.whiterose
+detection:
+  object_17739:
+    md5:
+    - 00bd67cfccf7141c8fb6c622442bd419
+    sha1:
+    - 0d642ea85680b932e6dd45620c9c12d1060b46fd
+    sha256:
+    - 9614b9bc6cb2d06d261f97ba25743a89df44906e750c52398b5dbdbcb66a9415
+  attributes:
+    sha256:
+    - 9614b9bc6cb2d06d261f97ba25743a89df44906e750c52398b5dbdbcb66a9415
+  condition: 1 of object_* or attributes

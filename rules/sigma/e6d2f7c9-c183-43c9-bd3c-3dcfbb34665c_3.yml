@@ -1,0 +1,57 @@
+title: 'OSINT Threat Advisory: SolarWinds supply chain attack - process_creation'
+id: 6a12ab12-0f4d-4bd3-be08-c9731574be21
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/e6d2f7c9-c183-43c9-bd3c-3dcfbb34665c.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_9457:
+    md5:
+    - 02af7cec58b9a5da1c542b5a32151ba1
+    sha1:
+    - 1b476f58ca366b54f34d714ffce3fd73cc30db1a
+    sha256:
+    - d0d626deb3f9484e649294a8dfa814c5568f846d5aa02d4cdad5d041a29d5600
+  object_9459:
+    md5:
+    - 2c4a910a1299cdae2a4e55988a2f102e
+    sha1:
+    - 2f1a5a7411d015d01aaee4535835400191645023
+    sha256:
+    - 019085a76ba7126fff22770d71bd901c325fc68ac55aa743327984e89f4b0134
+  object_9461:
+    md5:
+    - 56ceb6d0011d87b6e4d7023d7ef85676
+    sha1:
+    - 75af292f34789a1c782ea36c7127bf6106f595e8
+    sha256:
+    - c15abaf51e78ca56c0376522d699c978217bf041a3bd3c71d09193efa5717c71
+  object_9463:
+    md5:
+    - b91ce2fa41029f6955bff20079468448
+    sha1:
+    - 76640508b1e7759e548771a5359eaed353bf1eec
+    sha256:
+    - 32519b85c0b422e4656de6e6c41878e95fd95026267daab4215ee59c107d6c77
+  object_9465:
+    md5:
+    - 846e27a652a5e1bfbd0ddd38a16dc865
+    sha1:
+    - d130bd75645c2433f88ac03e73395fba172ef676
+    sha256:
+    - ce77d116a074dab7a22a0fd4f2c1ab475f16eec42e1ded3c0b0aa8211fe858d6
+  attributes:
+    sha256:
+    - 019085a76ba7126fff22770d71bd901c325fc68ac55aa743327984e89f4b0134
+    - c09040d35630d75dfef0f804f320f8b3d16a481071076918e9b236a321c1ea77
+    - ce77d116a074dab7a22a0fd4f2c1ab475f16eec42e1ded3c0b0aa8211fe858d6
+    - dab758bf98d9b36fa057a66cd0284737abf89857b73ca89280267ee7caf62f3b
+    - 32519b85c0b422e4656de6e6c41878e95fd95026267daab4215ee59c107d6c77
+    - ac1b2b89e60707a20e9eb1ca480bc3410ead40643b386d624c5d21b47c02917c
+    - c15abaf51e78ca56c0376522d699c978217bf041a3bd3c71d09193efa5717c71
+    - d0d626deb3f9484e649294a8dfa814c5568f846d5aa02d4cdad5d041a29d5600
+  condition: 1 of object_* or attributes

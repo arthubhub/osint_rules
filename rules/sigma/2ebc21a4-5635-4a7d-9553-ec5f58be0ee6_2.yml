@@ -1,0 +1,24 @@
+title: "OSINT - Kobalos \u2013 A complex Linux threat to high performance computing\
+  \ infrastructure - dns_query"
+id: 3840a92b-9734-4d76-ac60-295fce0507d7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/2ebc21a4-5635-4a7d-9553-ec5f58be0ee6.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1070.006
+- attack.t1554
+- attack.t1205
+- attack.t1027.002
+- attack.t1070.003
+- attack.t1573
+- attack.t1090
+detection:
+  object_6524:
+    IpAddresses:
+    - 151.80.57.191
+  condition: 1 of object_*

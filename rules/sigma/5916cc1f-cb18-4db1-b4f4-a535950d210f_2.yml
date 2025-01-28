@@ -1,0 +1,26 @@
+title: 'OSINT -  Player 3 Has Entered the Game: Say Hello to ''WannaCry'' - dns_query'
+id: 540ca6ef-f0eb-4790-a7d1-30e5175fe6a5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5916cc1f-cb18-4db1-b4f4-a535950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.wannacry
+- attack.group.wannacry
+detection:
+  attributes:
+    IpAddresses:
+    - 213.61.66.116
+    - 79.172.193.32
+    - 38.229.72.16
+    - 212.47.232.237
+    - 217.79.179.77
+    - 128.31.0.39
+    - 81.30.158.223
+    - 89.45.235.21
+    - 188.138.33.220
+  condition: attributes

@@ -1,0 +1,18 @@
+title: OSINT - SURGE IN SPAM CAMPAIGN DELIVERING LOCKY RANSOMWARE DOWNLOADERS - dns_query
+id: 3e4e8d3c-6c4e-4fc2-82de-5f8e54e3d3f0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f58bcc-96e4-49d2-bc8b-faf7950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 5.34.183.136
+    - 91.121.97.170
+    - 31.41.47.37
+    - 188.138.88.184
+  condition: attributes

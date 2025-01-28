@@ -1,0 +1,16 @@
+title: Malicious Emails Outlook Themed - url_request
+id: 86541f74-87bf-4af3-92e8-163dc1fc97c2
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b366652-b0a4-4faa-a58b-c6040acd0835.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://outlookindex11000.weebly.com
+  condition: attributes

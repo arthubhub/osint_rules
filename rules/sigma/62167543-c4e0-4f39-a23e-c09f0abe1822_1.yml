@@ -1,0 +1,44 @@
+title: '[NCSC-UK] Cyclops blink - dns_query'
+id: ea5d4fe4-d141-4d80-a3b0-dbf127a4d371
+description: edit this field when analysing or editing the rule - reported by "CERT-FR_1510"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/62167543-c4e0-4f39-a23e-c09f0abe1822.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.iridium
+- attack.group.telebots
+- attack.group.sandworm
+- attack.group.electrum
+detection:
+  attributes:
+    IpAddresses:
+    - 212.202.147.10
+    - 185.82.169.99
+    - 90.63.245.175
+    - 81.4.177.118
+    - 93.51.177.66
+    - 78.134.89.167
+    - 80.155.38.210
+    - 50.255.126.65
+    - 208.81.37.50
+    - 100.43.220.234
+    - 212.234.179.113
+    - 188.152.254.170
+    - 37.99.163.162
+    - 70.62.153.174
+    - 96.80.68.193
+    - 109.192.30.125
+    - 80.153.75.103
+    - 2.230.110.137
+    - 37.71.147.186
+    - 105.159.248.137
+    - 151.0.169.250
+    - 212.103.208.182
+    - 24.199.247.222
+    - 217.57.80.18
+    - 80.15.113.188
+  condition: attributes

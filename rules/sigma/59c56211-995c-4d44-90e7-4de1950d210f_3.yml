@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-09-21/22 : Affid=3, offline, ".ykcol" : "PIC_1234" - "PIC_1234.7z"
+  - process_creation'
+id: beebe879-86a9-42ff-97f5-cb210ab2a359
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59c56211-995c-4d44-90e7-4de1950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    md5:
+    - 0719037c7f5631c5d8551232a3a874a5
+    sha1:
+    - 91df407e36acfae75e7c7659ec2cbbd25d6aa0a5
+    sha256:
+    - 56081040edb1e713c2abd6ef38f3f5f9e7abc4c723dc19f598b67d536a2db9a1
+  condition: attributes

@@ -1,0 +1,64 @@
+title: Targeted phishing - PDF documents / phishkit - process_creation
+id: e4e968d0-47cb-46cf-b5f0-ab4b750938e7
+description: edit this field when analysing or editing the rule - reported by "EUROLEA"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cdd3938-7134-4908-9552-173cc0a8016e.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1192
+- attack.t1193
+detection:
+  object_8461:
+    md5:
+    - 9a58b7f8ba04c32c027126379456e444
+    sha1:
+    - b49d7b503f9e1cd1a22a4933fb1f1a1e0b56f214
+    sha256:
+    - 28f73ae365bde8c03d0f93ef73f71c086a026ac58f72b82bb2384c3a5ab42d02
+  object_8462:
+    md5:
+    - 164db8d1fe5f2ea9dd3ea826b2f0b808
+    sha1:
+    - 890efaa698f4d43aad15c3dbacb6c01544fd3e27
+    sha256:
+    - 56a73192c75130550294b327b36c051841d3780bd3732b410e0c190db6f9d936
+  object_8463:
+    md5:
+    - 08b49fb9882bfc8f69beb594fa543c8a
+    sha1:
+    - 201e85d6bc519ecc6dece75b2586e761a56db6a7
+    sha256:
+    - ddcf49145d8c78198138a488b7f99bb4f760777be41b293138e4d5b531cebc73
+  object_8464:
+    md5:
+    - 1baa024f9cfab48b92c297aa406c91b5
+    sha1:
+    - 7d5a1dc90d535e3cc552d0db02841d28fb1ae773
+    sha256:
+    - 0fb825db2262d98e29846fa67171e3450666af9c0a6c31eaf8d7c84539be9132
+  object_8465:
+    md5:
+    - da877f4f7335264b03ac72fca5b305dc
+    sha1:
+    - 435aa871cdd772072390d9baceaa8d832208d710
+    sha256:
+    - c052025b442995f04a68b1b6b2007c36dbf47448c08dc249219a7f3eebd369c2
+  object_8466:
+    md5:
+    - b830fd2997e1f124f34d77ff1fa9b89e
+    sha1:
+    - ea43350c37e0c266c12d0fd53643cf94dd58c1f7
+    sha256:
+    - f2676b94952018c220ee352b9857bc5ad62195b2d15cdfaf54fa5c5985d6934a
+  object_8467:
+    md5:
+    - b7245bf657e792328aaacbc6f75d1555
+    sha1:
+    - bc32ff3213011db8278bfcd21b1dc432ded499d3
+    sha256:
+    - 9c4f9755fc183f6ad4ad4d600a0a3ed9230900152245f924b9106202ce543c58
+  condition: 1 of object_*

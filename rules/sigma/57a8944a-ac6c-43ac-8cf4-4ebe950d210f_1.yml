@@ -1,0 +1,40 @@
+title: Expansion on OSINT Lost your iPhone? Be on guard for a perfectly-timed Apple
+  ID phishing attack by Hot For Security - url_request
+id: 76c0e193-cac0-44bc-beba-8bb59783e234
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57a8944a-ac6c-43ac-8cf4-4ebe950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - verify-iphone-location.com
+    - microexperts.xyz
+    - fmidevice-location.com
+    - forum.liveplays.net
+    - lcloud-location-map.com
+    - alert-map.com
+    - verify-apple-id.us
+    - locationteam-icloud.com
+    - iphone-service.us
+    - hamedia.net
+    - alert-support.com
+    - apple-map-locate.com
+    - findmyiphones-team.com
+    - https://www.passivetotal.org
+    - mmison.xyz
+    - trackingiphonelocation.com
+    - icloud-find.us
+    - apple-support-apple.com
+    - show-iphone-location.com
+    - icloudsecurelogin.com
+    - fmi-verify-lost.com
+    - rakgrs.xyz
+    - findmyiphone-system.com
+    - icloudview.com
+    - security-ios.net
+  condition: attributes

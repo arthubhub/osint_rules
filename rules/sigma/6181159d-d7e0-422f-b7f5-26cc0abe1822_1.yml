@@ -1,0 +1,79 @@
+title: "[CERT-FR] Campagnes d'hame\xE7onnage du mode op\xE9ratoire d'attaquants Nobelium\
+  \ - url_request"
+id: 155efea2-ef66-45b0-b1e9-27bcef67a44f
+description: edit this field when analysing or editing the rule - reported by "CERT-FR_1510"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/6181159d-d7e0-422f-b7f5-26cc0abe1822.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_10891:
+    RequestUrl|contains:
+    - hanproud.com
+  object_10892:
+    RequestUrl|contains:
+    - cbdnewsandreviews.net
+  object_10893:
+    RequestUrl|contains:
+    - cityloss.com
+  object_10894:
+    RequestUrl|contains:
+    - businesssalaries.com
+  object_10895:
+    RequestUrl|contains:
+    - trendignews.com
+  object_10896:
+    RequestUrl|contains:
+    - worldhomeoutlet.com
+  object_10897:
+    RequestUrl|contains:
+    - giftbox4u.com
+  object_10898:
+    RequestUrl|contains:
+    - myexpertforum.com
+  object_10899:
+    RequestUrl|contains:
+    - doggroomingnews.com
+  object_10900:
+    RequestUrl|contains:
+    - alifemap.com
+  object_10901:
+    RequestUrl|contains:
+    - enpport.com
+  object_10902:
+    RequestUrl|contains:
+    - theyardservice.com
+  object_10903:
+    RequestUrl|contains:
+    - celebsinformation.com
+  object_10904:
+    RequestUrl|contains:
+    - dailydews.com
+  object_10905:
+    RequestUrl|contains:
+    - ideasofbusiness.com
+  object_10906:
+    RequestUrl|contains:
+    - newminigolf.com
+  object_10907:
+    RequestUrl|contains:
+    - rchosts.com
+  object_10908:
+    RequestUrl|contains:
+    - stockmarketon.com
+  object_10909:
+    RequestUrl|contains:
+    - stonecrestnews.com
+  object_10910:
+    RequestUrl|contains:
+    - teachingdrive.com
+  object_10911:
+    RequestUrl|contains:
+    - newstepsco.com
+  object_10912:
+    RequestUrl|contains:
+    - tacomanewspaper.com
+  condition: 1 of object_*

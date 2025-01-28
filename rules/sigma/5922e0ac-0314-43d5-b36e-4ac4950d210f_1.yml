@@ -1,0 +1,38 @@
+title: 'Jaff 2017-05-22 : "Copy of Invoice 12345678" / "12345678.PDF" - url_request'
+id: 69dd0898-33d8-4c2f-b402-c14c71052795
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5922e0ac-0314-43d5-b36e-4ac4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://electua.org
+    - http://boomroom.jp
+    - http://herrossoidffr6644qa.top
+    - http://knowyourmarketing.com
+    - http://trollitrancessions.net
+    - http://way2lab.com
+    - http://endosuitepartners.com
+    - http://essensworld.cz
+    - http://f1toh1.com
+    - http://everstruct.com.au
+    - http://joesrv.com
+    - http://brotexxshferrogd.net
+    - http://dewatch.de
+    - http://thegardiners.ca
+    - http://primary-ls.ru
+    - http://tipografia.by
+    - http://tayangfood.com
+    - http://tjhangtai.com
+    - http://pattumalamatha.com
+    - http://byuscorp.com
+    - http://datadunyasi.com
+  condition: attributes

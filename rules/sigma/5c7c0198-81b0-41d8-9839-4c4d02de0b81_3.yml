@@ -1,0 +1,104 @@
+title: OSINT - The Supreme Backdoor Factory - process_creation
+id: 52b11706-12f8-420b-92cf-28f5648a318c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c7c0198-81b0-41d8-9839-4c4d02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1195
+detection:
+  object_9658:
+    md5:
+    - 65579b8ed47ca163fae2b3dffd8b4d5a
+    sha1:
+    - a4fe0a43cdb2cba8180c68fa94a42bdd399f52cf
+    sha256:
+    - 86a3802ad5f35262d01efe6b678585db356121807bc28105f43019cbbd0f23fb
+  object_9660:
+    md5:
+    - 6ee28018e7d31aef0b4fd6940dff1d0a
+    sha1:
+    - 02d82f20c1c8ac76c118ec995b00171480b4ebe2
+    sha256:
+    - c0313523c28288d01ba52289680b2405c1005ee7bbd0143cf116b0263245d8ba
+  object_9662:
+    md5:
+    - 815db0de2c6a610797c6735511eaaaf9
+    sha1:
+    - 6a143db1b43ecb2d28016fe41d9c5a7714453a76
+    sha256:
+    - 03722893c4990e0233c464e709943fb929b5cc70920c76b84a75f730f052f563
+  object_9664:
+    md5:
+    - dd3a38ee6b5b6340acd3bb8099f928a8
+    sha1:
+    - 5cd1c492a1d51689f749f3d9caa6076872f2f3ff
+    sha256:
+    - b935aaa10a5b53184f33dfbc7f0314fd0ee11fb740711ce93b5a1c51d8fa1153
+  object_9666:
+    md5:
+    - 7fce12d2cc785f7066f86314836c95ec
+    sha1:
+    - 84afdf87894eb0389dfdbdde6278f36e9348457a
+    sha256:
+    - 5e3bba9a94ff757400ce5a0f2a2a43076c515bc0e3728964b4f58f503ed9917c
+  object_9668:
+    md5:
+    - 0489493aeb26b6772bf3653aedf75d2a
+    sha1:
+    - 058c864831b0631ba18a9b02700a0a38529f7ff8
+    sha256:
+    - 21a5f6b003886b26c769132a8ffa06d607260980895a1e7484744fe3107ee099
+  object_9670:
+    md5:
+    - 9d4aeb737179995a397d675f41e5f97f
+    sha1:
+    - cebe3862bd477e78bdbb020b3a53da91a1fa747d
+    sha256:
+    - 955904c82e953113183aad6a60fef962847549d02f531a62bf00d724c3c482c3
+  object_9672:
+    md5:
+    - 4d18388a9b351907be4a9f91785c9997
+    sha1:
+    - ee2b18a7413579bd18acc19d33fa307e8a6662c4
+    sha256:
+    - d1b19801e477f6297e41bfa040f5fb09e5f34b1e24b2bd90c960dd09a2be85f9
+  object_9674:
+    md5:
+    - c78ccfc45bfba703cce0fc0c75c0f6af
+    sha1:
+    - 17c0bec9c6f16d9af7ba0a7146749f9f3d17e0a8
+    sha256:
+    - 2859b86854018bb4db2226e1ff14a4de4aa0187cd563c705d4ae1dbda0c07086
+  object_9676:
+    md5:
+    - 533ac97f44b4aea1a35481d963cc9106
+    sha1:
+    - 63489869fa9c5b1ed627bf9140b6824cb68efef6
+    sha256:
+    - 536eb0c00f1d4a39ddf9a2eca508897eb2064b4e28e25a3327626b53bad0319d
+  object_9678:
+    md5:
+    - d7c4a1d4f75045a2a1e324ae5114ea17
+    sha1:
+    - 7db7ff3b685c3fa5d7dd5ac394a7ccb3e8b42d76
+    sha256:
+    - 210d12b9fcead69094ca2046c55333c121451f7eec782dd42e220ff11fe7d349
+  attributes:
+    md5:
+    - 9d4aeb737179995a397d675f41e5f97f
+    - c78ccfc45bfba703cce0fc0c75c0f6af
+    - dd3a38ee6b5b6340acd3bb8099f928a8
+    - 65579b8ed47ca163fae2b3dffd8b4d5a
+    - 4d18388a9b351907be4a9f91785c9997
+    - 0489493aeb26b6772bf3653aedf75d2a
+    - 815db0de2c6a610797c6735511eaaaf9
+    - 533ac97f44b4aea1a35481d963cc9106
+    - d7c4a1d4f75045a2a1e324ae5114ea17
+    - 7fce12d2cc785f7066f86314836c95ec
+    - 6ee28018e7d31aef0b4fd6940dff1d0a
+  condition: 1 of object_* or attributes

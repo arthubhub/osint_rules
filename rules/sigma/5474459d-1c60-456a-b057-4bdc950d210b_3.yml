@@ -1,0 +1,18 @@
+title: OSINT Operation Double Tap from FireEye - process_creation
+id: 0707bc43-cfbf-49f7-9326-22dc1c6a9f8b
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5474459d-1c60-456a-b057-4bdc950d210b.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 492a839a3bf9c61b7065589a18c5aa8d
+    - 5a0c4e1925c76a959ab0588f683ab437
+    - 5c08957f05377004376e6a622406f9aa
+    - 744a17a3bc6dbd535f568ef1e87d8b9a
+  condition: attributes

@@ -1,0 +1,79 @@
+title: 'OSINT - Mamba 2FA: A new contender in the AiTM phishing ecosystem - dns_query'
+id: a854858b-8c8f-497b-bf2c-f0715296799d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/308d9f5c-4650-4548-9e2a-38a33a0a4c9a.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1566
+detection:
+  attributes:
+    QueryName|contains:
+    - 10decadesmen.com
+    - voltampereactive.com
+    - 11beamgools.com
+    - thirdmandomavis.com
+    - seven-oranges.com
+    - 8boomandool.com
+    - twomancake.com
+    - copefood.xyz
+    - tenetur.top
+    - 5poleanalhy.com
+    - fourmanchurch.com
+    - onemanforest.com
+    - sixmanteams.com
+    - 7motionmansa.com
+    - winstnet80nss.cfd
+    - fourthmanservice.com
+    - ccokies2mangoes.com
+    - fiveradio-newbam.com
+    - 11cyclesforest.com
+    - 10trioneyue8ss.com
+    - threemanshop.com
+    - nine9manforest.com
+    - sevenmanjungle.com
+    - tenetur.xyz
+    - 9cantronnfit.com
+    - 2moniunesson.com
+    - drensyoons1sedt.com
+    - 6treesmangle.com
+    - m3mas-apicookies.com
+    - 88mansession.com
+    - 1messisnfarm.com
+    - m2fes-apicookies.com
+    - 3alphabetjay.com
+    - winss0conect.click
+    - 4sessionmoon.com
+    - ccokies3tomatoes.com
+    - sandoom2notnt.com
+    - grastoonm3vides.com
+    - copelustration.xyz
+    - sithchibb.com
+    - m1tis-apicookies.com
+    - fivemanchool.com
+    - planchereserver.com
+    - ccokies1cakes.com
+    - hypexfinancial.com
+    IpAddresses:
+    - 172.86.97.78
+    - 172.86.97.165
+    - 172.86.105.59
+    - 172.86.104.33
+    - 45.61.130.11
+    - 172.86.104.64
+    - 23.26.35.67
+    - 45.9.153.102
+    - 172.86.96.128
+    - 45.61.169.4
+    - 172.86.104.178
+    - 45.86.54.206
+    - 172.86.64.212
+    - 172.86.96.84
+    - 23.26.206.99
+    - 172.86.105.72
+    - 172.86.106.94
+  condition: attributes

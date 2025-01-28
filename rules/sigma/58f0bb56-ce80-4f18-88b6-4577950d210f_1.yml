@@ -1,0 +1,61 @@
+title: OSINT - Callisto Group - url_request
+id: 8d4e9f51-6508-4dc2-9973-86d2be88dd36
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58f0bb56-ce80-4f18-88b6-4577950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - fco-gov.pw
+    - prevention-aol.link
+    - support-mail.pw
+    - login-livecom.in
+    - updatemail.in
+    - login-livecom.info
+    - live-login.info
+    - live-com.pw
+    - login-live.review
+    - support-mail.top
+    - authentification-request.top
+    - drive-meet-goodle.ru
+    - fco-net.pw
+    - auth-login.top
+    - https://www.f-secure.com
+    - google-plus.top
+    - google-service.eu
+    - service-mail.asia
+    - screenname-aol.pw
+    - qooqle-support-mail.pw
+    - store-icloud.link
+    - support-gmail.pw
+    - prevention-icloud.link
+    - emailapp.pw
+    - yahoocentermail.info
+    - misrcosofts.com
+    - drive-login.com
+    - shared-docs.pw
+    - hotmail-online.eu
+    - node005-prevention-aol.link
+    - node03-prevention-icloud.link
+    - prevention-aol.top
+    - secure-store-lcloud.top
+    - accounts-google.eu
+    - yahoocentermail.pw
+    - screenname.click
+    - yahoomailfree.pw
+    - accounts-mail.asia
+    - service-mail.in
+    - icloud-service.pw
+    - secure-lcloud.accountant
+    - login-live-com.pw
+    - google-accounts.eu
+    - go-veryfication.link
+    - serv-login-com.pw
+    - login-access.top
+    - platforma.link
+  condition: attributes

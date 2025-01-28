@@ -1,0 +1,26 @@
+title: CISA - MAR-10459736.r1.v1 - WHIRLPOOL Variant - process_creation
+id: c7b9c377-7a05-4813-a971-75df8e522d2e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/6b6fa46d-4a17-44a4-a234-d69487b04597.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_10104:
+    md5:
+    - 77e1e9bf69b09ed0840534adb8258540
+    sha1:
+    - deadca9bd85ee5c4e086fd81eee09407b769e9b6
+    sha256:
+    - 0af253e60456b03af49cc675f71d47b2dd9a48f50a927e43b9d8116985c06459
+  object_10105:
+    md5:
+    - 77e1e9bf69b09ed0840534adb8258540
+    sha1:
+    - deadca9bd85ee5c4e086fd81eee09407b769e9b6
+    sha256:
+    - 0af253e60456b03af49cc675f71d47b2dd9a48f50a927e43b9d8116985c06459
+  condition: 1 of object_*

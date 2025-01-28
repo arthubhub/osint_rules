@@ -1,0 +1,18 @@
+title: 'OSINT - Shifting Tactics: Tracking changes in years-long espionage campaign
+  against Tibetans - url_request'
+id: d8f35f5b-1e96-4c84-bd64-5e2e70238cba
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e177ef-38cc-441b-a398-4f66950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://filegoogle.firewall-gateway.com
+    - https://citizenlab.org
+    - http://accountgoogle.firewall-gateway.com
+  condition: attributes

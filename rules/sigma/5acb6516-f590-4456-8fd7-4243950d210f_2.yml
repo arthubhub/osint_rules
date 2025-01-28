@@ -1,0 +1,21 @@
+title: OSINT - New Matrix Ransomware Variants Installed Via Hacked Remote Desktop
+  Services - dns_query
+id: f84b27d3-59ea-4286-bb03-599611721c09
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5acb6516-f590-4456-8fd7-4243950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.matrix
+- attack.group.matrix
+detection:
+  object_9320:
+    QueryName|contains:
+    - murik.xyz
+    IpAddresses:
+    - 212.8.244.111
+  condition: 1 of object_*

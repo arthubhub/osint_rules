@@ -1,0 +1,84 @@
+title: OSINT - LoJax Command and Control Domains Still Active - url_request
+id: 709ef13b-1f39-4ec1-8d76-fabe3c35eb8c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c4073ea-ed74-44e6-8965-d558950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.lojax
+detection:
+  object_10507:
+    RequestUrl|contains:
+    - moldstream.md
+  object_10508:
+    RequestUrl|contains:
+    - webstp.com
+  object_10509:
+    RequestUrl|contains:
+    - oiagives.com
+  object_10510:
+    RequestUrl|contains:
+    - elaxo.org
+  object_10511:
+    RequestUrl|contains:
+    - peacefund.eu
+  object_10512:
+    RequestUrl|contains:
+    - jflynci.com
+  object_10513:
+    RequestUrl|contains:
+    - hp-apps.com
+  object_10514:
+    RequestUrl|contains:
+    - vsnet.co
+  object_10515:
+    RequestUrl|contains:
+    - remotepx.net
+  object_10516:
+    RequestUrl|contains:
+    - sysanalyticweb.com
+  object_10517:
+    RequestUrl|contains:
+    - unigymboom.com
+  object_10518:
+    RequestUrl|contains:
+    - treckanalytics.com
+  object_10519:
+    RequestUrl|contains:
+    - msfontserver.com
+  object_10520:
+    RequestUrl|contains:
+    - oiatribe.com
+  object_10521:
+    RequestUrl|contains:
+    - ntpstatistics.com
+  object_10522:
+    RequestUrl|contains:
+    - regvirt.com
+  object_10523:
+    RequestUrl|contains:
+    - visualrates.com
+  object_10524:
+    RequestUrl|contains:
+    - unigymboom.com
+  object_10525:
+    RequestUrl|contains:
+    - ntpstatistics.com
+  object_10526:
+    RequestUrl|contains:
+    - moldstream.md
+  object_10527:
+    RequestUrl|contains:
+    - vsnet.co
+  object_10528:
+    RequestUrl|contains:
+    - visualrates.com
+  attributes:
+    RequestUrl|contains:
+    - https://asert.arbornetworks.com
+    - https://www.bleepingcomputer.com
+  condition: 1 of object_* or attributes

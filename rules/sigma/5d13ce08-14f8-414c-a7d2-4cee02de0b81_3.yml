@@ -1,0 +1,25 @@
+title: An Analysis of Linux.Ngioweb Botnet - process_creation
+id: 01696e89-3eb5-4175-9fd4-68308d5e61ab
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d13ce08-14f8-414c-a7d2-4cee02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.ngioweb
+- attack.group.ngioweb
+detection:
+  object_6457:
+    md5:
+    - 827ecf99001fa66de513fe5281ce064d
+    sha1:
+    - a92299b76c99a5915760e91f9bf52429415f4fb9
+    sha256:
+    - 0b213e1f92a2613f7cebff82e8ffbdae985e3446960bf4bd365b5751efa08b53
+  attributes:
+    md5:
+    - 827ecf99001fa66de513fe5281ce064d
+  condition: 1 of object_* or attributes

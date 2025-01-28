@@ -1,0 +1,16 @@
+title: OSINT - Evolution of SamSa Malware Suggests New Ransomware Tactics In Play
+  - url_request
+id: e5192a92-0d2e-4af5-b645-d1cd7ef2cbc8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f4497b-6134-468e-807e-fc08950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

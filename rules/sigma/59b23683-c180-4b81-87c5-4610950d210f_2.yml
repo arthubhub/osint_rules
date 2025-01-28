@@ -1,0 +1,20 @@
+title: OSINT -  New multi platform malware/adware spreading via Facebook Messenger
+  - process_creation
+id: 1c013690-381c-4706-8b74-94081d48fd7e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59b23683-c180-4b81-87c5-4610950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - ebc117c0cf03ad4b13184d1253862586
+    sha1:
+    - a6f1d1e11c4399dd280fbdba3309357da94ec500
+    sha256:
+    - ad1b11cb053df4e8cb890872fa4a25057d514a8c2778b6b745c5aaf5b3f984cd
+  condition: attributes

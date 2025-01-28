@@ -1,0 +1,68 @@
+title: OSINT IOC from ponmocup malware - url_request
+id: 41d29d56-364e-429d-9c8f-5cd8e51f38af
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/566f4900-9da4-4ee7-b237-8a63950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - postdone.com
+    - enckfeld.net
+    - abccornet.com
+    - adertisecorp.com
+    - familyinteresting.com
+    - picasootoolbar.com
+    - piclbumestream.com
+    - traffictradexpert.com
+    - directiculture.com
+    - britishfederal.org
+    - separtila.com
+    - himmeding.com
+    - https://malwrpost.wordpress.com
+    - contentdeliveryorg.net
+    - streamingadv.com
+    - highlytraditional.org
+    - searchforthat.net
+    - directlyvast.com
+    - imagesharehost.com
+    - yaltimate.com
+    - culminaccessful.com
+    - standardbay.net
+    - meetinglimited.com
+    - howeveraged.net
+    - detroportans.com
+    - dogmationation.com
+    - illegedly.com
+    - recising.com
+    - virtualsearches.com
+    - cybernan.net
+    - netdiscovery.org
+    - dynodns.org
+    - veristats.net
+    - affilipcorp.com
+    - hydroelection.net
+    - fasternation.net
+    - workerssan.net
+    - contextexpert.org
+    - anexcorp.org
+    - claimsreference.net
+    - clickoptimiser.net
+    - ratilovskoye.com
+    - sectionsfear.com
+    - ternations.com
+    - thomaslaid.net
+    - leadwriting.com
+    - descriptioned.com
+    - headedpicked.com
+    - twicecitizens.com
+    - freewayreg.com
+    - headedpicked.net
+    - changinessmen.com
+    - defenciclovis.com
+    - continuatu.com
+  condition: attributes

@@ -1,0 +1,18 @@
+title: Crypren Ransomware - url_request
+id: fadc1a27-dcb4-42d5-9990-bdaa07468d20
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ad0ae92-71c4-44bb-a47d-4c17950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.crypren
+- attack.software.crypren
+detection:
+  object_9508:
+    RequestUrl|contains:
+    - https://twitter.com
+  condition: 1 of object_*

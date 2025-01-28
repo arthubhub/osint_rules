@@ -1,0 +1,42 @@
+title: OSINT Expansion on Rotten Tomato campaign - url_request
+id: 693403c1-adeb-4a1e-913c-4a2c1e0328cb
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5464bf96-1f14-43f1-af86-08ce950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - hpnewsup.net
+    - soundxarab.com
+    - micronewsup.net
+    - buyfunny.net
+    - ahaaa0.com
+    - ahasss.com
+    - arabdnsc.com
+    - heihacc.com
+    - arabidc.com
+    - financenewsu.net
+    - dellnewsup.net
+    - interidc0.com
+    - bfinancea.net
+    - dellindustry.com
+    - enhenxx.net
+    - newsupdatea.net
+    - futuresgolda.com
+    - xraies.com
+    - micr0industry.com
+    - dnsqaz.com
+    - dnsedc.com
+    - futuresidc.com
+    - redtubea.net
+    - googltrend.com
+    - http://www.whoismind.com
+    - dibaigold.com
+    - hopewoodes.com
+    - googlenewsup.net
+  condition: attributes

@@ -1,0 +1,25 @@
+title: OSINT - ShadowPad in corporate networks - dns_query
+id: 5b60205f-5d7a-4b78-b1b2-075b3fc90b15
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59934c13-6410-44a8-9ebe-47fe02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - bafyvoruzgjitwr.com
+    - techniciantext.com
+    - operatingbox.com
+    - xmponmzmxkxkh.com
+    - ribotqtonut.com
+    - notped.com
+    - paniesx.com
+    - tczafklirkl.com
+    - jkvmdmjyfcvkf.com
+    - nylalobghyhirgh.com
+    - dnsgogle.com
+  condition: attributes

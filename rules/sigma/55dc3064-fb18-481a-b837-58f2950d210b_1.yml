@@ -1,0 +1,25 @@
+title: "OSINT The Curious Case of the Document Exploiting an Unknown Vulnerability\
+  \ \xE2\u20AC\u201C Part 2: RATs, Hackers and Rihanna by Fortinet - url_request"
+id: 5c81d75e-07ec-42ff-972b-2215308124ae
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55dc3064-fb18-481a-b837-58f2950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://84.19.27.254
+    - kuwota.com
+    - http://notyourbusiness.net
+    - http://creditbeuar.com
+    - http://173.208.195.150
+    - http://149.86.66.9
+    - http://blog.fortinet.com
+    - http://www.creditbeuar.com
+    - http://kuwota.com
+    - notyourbusiness.net
+  condition: attributes

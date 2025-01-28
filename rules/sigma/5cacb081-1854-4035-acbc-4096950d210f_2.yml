@@ -1,0 +1,18 @@
+title: OSINT - Mirai Compiled for New Processors Surfaces in the Wild - dns_query
+id: f4d4b3b3-fc38-4f38-9bc9-c193a9674515
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cacb081-1854-4035-acbc-4096950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.mirai
+- attack.group.mirai
+detection:
+  attributes:
+    IpAddresses:
+    - 178.62.227.13
+  condition: attributes

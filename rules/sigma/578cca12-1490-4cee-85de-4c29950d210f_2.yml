@@ -1,0 +1,51 @@
+title: 'Malspam 2016-07-18 .wsf (campaign: "bank account report") - dns_query'
+id: 6001de3a-8376-422b-a538-535097ba27eb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/578cca12-1490-4cee-85de-4c29950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - benavidezhoy.com
+    - my-result.ru
+    - christian-view.com
+    - blackdildo.net
+    - ecpi.ro
+    - ilkhaberadana.com
+    - rsxxx.com
+    - fusofrance.fr
+    - bizconsulting.ro
+    - kouzoncorporation.com
+    - aquatixbottle.com
+    - deanstum.com
+    - findmobileauto.com
+    - bigislandhawaiihilorealestate.com
+    - matthewmccright.org
+    - provincialpw.com
+    IpAddresses:
+    - 60.234.42.102
+    - 69.16.243.28
+    - 69.50.139.6
+    - 89.42.223.64
+    - 213.186.33.40
+    - 192.185.24.133
+    - 69.90.163.170
+    - 103.226.221.161
+    - 208.71.106.216
+    - 187.17.98.182
+    - 86.35.15.215
+    - 192.185.85.237
+    - 159.253.46.194
+    - 192.186.229.69
+    - 107.180.13.17
+    - 192.185.196.208
+    - 160.153.54.35
+    - 50.31.160.94
+    - 192.186.212.231
+    - 95.163.18.88
+  condition: attributes

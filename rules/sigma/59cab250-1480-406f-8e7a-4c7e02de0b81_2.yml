@@ -1,0 +1,25 @@
+title: 'OSINT - Striking Oil: A Closer Look at Adversary Infrastructure - dns_query'
+id: c14b6800-f3f1-4e10-9df0-33f5ef8eb455
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59cab250-1480-406f-8e7a-4c7e02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.twoface
+detection:
+  attributes:
+    QueryName|contains:
+    - webmail-tidhar-co-il.ml
+    - mail-macroadvisorypartners.ml
+    - logn-micrsftonine-con.ml
+    - so-cc-hujii-ac-il.ml
+    - owa-insss-org-ill-owa-authen.ml
+    - my-mailcoil.ml
+    - webmaiil-tau-ac-il.ml
+    IpAddresses:
+    - 137.74.131.208
+  condition: attributes

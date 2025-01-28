@@ -1,0 +1,31 @@
+title: OSINT - Reversing a real-world 249 bytes backdoor! - process_creation
+id: 833d1edb-fea6-4ec5-88db-805a399667fc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e00d123-d688-417f-aafe-40fb02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_9437:
+    md5:
+    - 93363683dcf1ccc4db296fa5fde69b71
+    sha1:
+    - 0d4570ae80f9fca2d4b68a7f4b88dd0eb2df3573
+  object_9438:
+    md5:
+    - 93363683dcf1ccc4db296fa5fde69b71
+    sha1:
+    - 0d4570ae80f9fca2d4b68a7f4b88dd0eb2df3573
+    sha256:
+    - 5141d29d0278c8da4eac177126cbf4d15623502d4763abd6d3a4dca2a3ea616e
+  object_9440:
+    md5:
+    - 93363683dcf1ccc4db296fa5fde69b71
+    sha1:
+    - 0d4570ae80f9fca2d4b68a7f4b88dd0eb2df3573
+    sha256:
+    - 5141d29d0278c8da4eac177126cbf4d15623502d4763abd6d3a4dca2a3ea616e
+  condition: 1 of object_*

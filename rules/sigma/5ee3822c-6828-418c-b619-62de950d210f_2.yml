@@ -1,0 +1,27 @@
+title: Dharma Ransomware Event - dns_query
+id: a2c8d357-9c94-4b7b-a837-a300e17571d1
+description: edit this field when analysing or editing the rule - reported by "The
+  DFIR Report"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ee3822c-6828-418c-b619-62de950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.dharma
+- attack.t1083
+- attack.t1486
+- attack.group.dharma_ransomware
+- attack.group.dharma
+- attack.t1064
+- attack.t1133
+- attack.t1135
+- attack.software.dharma_ransomware
+- attack.t1078
+detection:
+  attributes:
+    IpAddresses:
+    - 217.138.202.116
+  condition: attributes

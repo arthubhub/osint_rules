@@ -1,0 +1,17 @@
+title: 'OSINT - Persirai: New Internet of Things (IoT) Botnet Targets IP Cameras -
+  dns_query'
+id: 3d66df7e-1400-48cd-90f3-df237d106599
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bb61071-d0ac-4b8a-8bba-4dc8950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 95.85.38.103
+    - 185.62.189.232
+  condition: attributes

@@ -1,0 +1,20 @@
+title: 'OSINT - A Mole exposing itself to sunlight Snake: Coming soon in Mac OS X
+  flavour - dns_query'
+id: 35afef64-dc5d-49ae-8699-0c8472573082
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/590b172d-c8f4-4cdd-88cf-4443950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.turla
+- attack.group.sofacy
+- attack.group.apt_29
+detection:
+  attributes:
+    IpAddresses:
+    - 83.229.87.11
+  condition: attributes

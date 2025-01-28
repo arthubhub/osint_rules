@@ -1,0 +1,41 @@
+title: 'OSINT - Bolek: Leaked Carberp KBot Source Code Complicit in New Phishing Campaigns
+  - dns_query'
+id: bf6fe74a-8a42-4be3-ad3a-b2c982b745be
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/573efd23-b3a4-4374-9f11-3514950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - tangerine-ca.com
+    - cibc-clients.com
+    - android-securityupdate.com
+    - ogrthuvwfdcfri5euwg.com
+    - rogers-clients.com
+    - signin-rogers.com
+    - rogers-ca.com
+    - signin-tangerine.com
+    - tangerine-security.com
+    - tangerine-zone.com
+    - knutesecos.com
+    - ogrthuvfewfdcfri5euwg.com
+    - cibc-security.com
+    - tangerine-can.com
+    - mensabuxus.net
+    IpAddresses:
+    - 45.30.53.96
+    - 191.101.239.161
+    - 160.202.168.105
+    - 217.28.218.217
+    - 64.235.33.221
+    - 141.105.69.251
+    - 50.125.238.102
+    - 52.74.127.205
+    - 46.32.254.136
+    - 93.111.155.134
+  condition: attributes

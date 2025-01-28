@@ -1,0 +1,15 @@
+title: OSINT - Wikileaks Vault7 JQJSNICKER code leak - url_request
+id: df526c48-f705-4e79-b84f-8d911393f4ba
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58c2fcf1-283c-45fa-b289-45ae02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://marcmaiffret.com
+  condition: attributes

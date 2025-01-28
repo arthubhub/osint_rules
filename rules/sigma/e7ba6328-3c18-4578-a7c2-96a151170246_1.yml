@@ -1,0 +1,26 @@
+title: 'OSINT - Reservations Requested: TA558 Targets Hospitality and Travel - url_request'
+id: 97db83ae-b6d6-4421-8390-683a5792684a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/e7ba6328-3c18-4578-a7c2-96a151170246.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.ta558
+detection:
+  object_9765:
+    RequestUrl|contains:
+    - https://www.proofpoint.com
+  object_9766:
+    RequestUrl|contains:
+    - https://otx.alienvault.com
+  attributes:
+    RequestUrl|contains:
+    - http://hypemediardf.com.pl
+    - http://cdtmaster.com.br
+    - http://maringareservas.com.br
+    - http://corporated.com
+  condition: 1 of object_* or attributes

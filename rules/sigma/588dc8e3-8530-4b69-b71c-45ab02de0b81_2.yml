@@ -1,0 +1,19 @@
+title: OSINT - Spotlight on Shamoon - dns_query
+id: e6288373-20bc-45e0-9fd4-41bcf81d0305
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588dc8e3-8530-4b69-b71c-45ab02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.shamoon
+detection:
+  attributes:
+    QueryName|contains:
+    - winappupdater.com
+    IpAddresses:
+    - 58.158.177.102
+  condition: attributes

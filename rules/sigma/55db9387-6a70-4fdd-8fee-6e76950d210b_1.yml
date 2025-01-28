@@ -1,0 +1,23 @@
+title: OSINT New activity of the Blue Termite APT by AlienVault - url_request
+id: 60d89b6c-3fbb-403e-85b8-897e4ce76c74
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55db9387-6a70-4fdd-8fee-6e76950d210b.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.blue_termite
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.n-fit-sub.com
+    - http://www.pikogrm.jp
+    - http://www.upgs.com
+    - http://www.motoavanti.com
+    - http://www.nichiiko-golf.com
+    - https://otx.alienvault.com
+    - http://www.ishopsg.com
+  condition: attributes

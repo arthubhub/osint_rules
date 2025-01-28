@@ -1,0 +1,17 @@
+title: OSINT - Malware That Hit Pyeongchang Olympics Deployed in New Attacks - url_request
+id: 20da7b5d-2641-4fd1-a859-ed8fa23b654c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b28ffbe-0118-409f-8f26-4f0e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.olympic_destroyer
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

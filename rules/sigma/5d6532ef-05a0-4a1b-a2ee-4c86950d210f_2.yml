@@ -1,0 +1,15 @@
+title: OSINT - Mirai - Loligang bot - dns_query
+id: 0f9bd06d-613c-4015-8471-77deb6065827
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d6532ef-05a0-4a1b-a2ee-4c86950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 165.22.153.245
+  condition: attributes

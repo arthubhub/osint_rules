@@ -1,0 +1,23 @@
+title: OSINT - El Machete's Malware Attacks Cut Through LATAM - url_request
+id: 0a1581ee-0aad-4d29-b532-52f1046603bb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/594e5f0a-da78-4d3c-b9d4-4f8502de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.el_machete
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://almuerzowordaula3.16mb.com
+    - https://www.cylance.com
+    - http://actualizacion.esy.es
+    - http://flipjbl.esy.es
+    - http://carolinaz25.esy.es
+    - http://informesanddocumentos.esy.es
+    - http://cristianoo.esy.es
+  condition: attributes

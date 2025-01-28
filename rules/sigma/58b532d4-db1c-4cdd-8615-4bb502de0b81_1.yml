@@ -1,0 +1,40 @@
+title: OSINT - The Gamaredon Group Toolset Evolution - url_request
+id: 49ef57a3-47b1-498e-8ae4-c4172882217a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58b532d4-db1c-4cdd-8615-4bb502de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.gamaredon_group
+detection:
+  attributes:
+    RequestUrl|contains:
+    - proxy-spread.ru
+    - http://viberload.ddns.net
+    - check-update.ru
+    - spread-service.ru
+    - umachka.ua
+    - hrome-update.ru
+    - file-attachments.ru
+    - update-service.net
+    - admin-ru.ru
+    - mars-ru.ru
+    - msrestore.ru
+    - http://researchcenter.paloaltonetworks.com
+    - winupdateloader.ru
+    - win-restore.ru
+    - http://umachka.ua
+    - hrome-updater.ru
+    - skypeupdate.ru
+    - spread-updates.ru
+    - brokbridge.com
+    - http://childrights.in.ua
+    - http://prestigeclub.frantov.com.ua
+    - skypeemocache.ru
+    - spread-ss.ru
+    - email-attachments.ru
+  condition: attributes

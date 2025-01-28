@@ -1,0 +1,17 @@
+title: OSINT - Off-the-shelf Ransomware Used to Target the Healthcare Sector - url_request
+id: 19cba30e-9e39-485d-b626-a69bdf338238
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58e743e1-3008-4198-a310-4c82950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://87i03clk4zcw06uy1cv5.nl
+    - https://kaspersky.dattodrive.com
+    - https://blogs.forcepoint.com
+  condition: attributes

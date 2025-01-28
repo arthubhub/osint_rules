@@ -1,0 +1,16 @@
+title: Fake booking.com website - Lookyloo Capture (https://booking-0ef4-8213-ae7f-3fec3e22.1facc.pw/?stays=superb-apartment-to-rent-in-central-nijmegen&sid=9648547963&id=376818034&awg_dvm=FCgjGHuw8y)
+  - dns_query
+id: 49c4d7b2-32cd-4d22-8944-41be42676bce
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/e7ec6346-b312-48da-ba1c-8004d3e80eb1.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  object_16523:
+    QueryName|contains:
+    - 1facc.pw
+  condition: 1 of object_*

@@ -1,0 +1,26 @@
+title: OSINT - Sednit espionage group now using custom exploit kit - dns_query
+id: 3dadb548-d8a4-45c3-b5e1-e5dd672781a6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a3cc84d-2434-4ae6-8d76-c328950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - mfapress.com
+    - armypress.org
+    - azureon-line.com
+    - defenceiq.us
+    - foreignaffairs.com
+    - caciltd.com
+    - caci.com
+    - defenceiq.com
+    - mfapress.org
+    - windows-updater.com
+    - armytime.com
+    - msonlinelive.com
+  condition: attributes

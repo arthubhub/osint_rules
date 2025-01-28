@@ -1,0 +1,24 @@
+title: OSINT Beware of what you download. Recent purported CEIEC document dump booby-trapped
+  by Shadow Server - dns_query
+id: 86f58243-c10c-4503-a946-994c6332e2e4
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5566caa6-0590-4956-81bf-4179950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 216.70.255.201
+    - 73.252.204.85
+    - 58.137.153.115
+    - 123.120.105.120
+    - 112.112.147.16
+    - 64.56.70.254
+    - 222.172.238.174
+    - 216.70.128.124
+    - 64.56.70.253
+  condition: attributes

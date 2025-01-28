@@ -1,0 +1,28 @@
+title: 'M2M -  Locky 2017-10-10 : Affid=3, offline, ".asasin" : "Document ... is complete"
+  - "invoice_1234_sign_and_return.7z" - dns_query'
+id: c9d28a23-4a08-44f6-904e-1734960ccc13
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59dc90da-d970-4168-901d-45c3950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    IpAddresses:
+    - 37.59.210.47
+    - 208.85.1.220
+    - 67.227.187.239
+    - 91.210.80.160
+    - 91.192.195.226
+    - 185.57.172.213
+    - 89.96.90.14
+    - 86.109.170.66
+    - 86.109.170.20
+    - 41.207.64.13
+  condition: attributes

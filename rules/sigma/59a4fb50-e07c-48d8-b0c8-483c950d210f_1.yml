@@ -1,0 +1,26 @@
+title: Malspam 2017-08-28 'IMG-' - url_request
+id: 6baa706c-8f62-43e3-bb07-d1de357487b1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59a4fb50-e07c-48d8-b0c8-483c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://hendrikvankerkhove.be
+    - http://halley-informatica.com
+    - griffithphoto.com
+    - http://grlarquitectura.com
+    - gotcaughtdui.com
+    - halley-informatica.com
+    - hendrikvankerkhove.be
+    - drommtoinononcechangerrer.info
+    - http://drommtoinononcechangerrer.info
+    - http://gotcaughtdui.com
+    - grlarquitectura.com
+    - http://griffithphoto.com
+  condition: attributes

@@ -1,0 +1,15 @@
+title: CISA.gov - AA21-062A Mitigate Microsoft Exchange Server Vulnerabilities - url_request
+id: 5312b4ea-0eaa-4031-b11f-2ad644c1cb3a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/eb8ec4e4-ea78-4cf5-80bc-974e765f08df.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_255:
+    RequestUrl|contains:
+    - https://us-cert.cisa.gov
+  condition: 1 of object_*

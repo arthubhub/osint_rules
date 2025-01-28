@@ -1,0 +1,35 @@
+title: Spam week 43 (mule acquisition) - probably related to Locky resources - url_request
+id: 8887e8d8-8098-4ce8-8caf-bd0dce7e7355
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58046227-00a0-47fb-a125-c025950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - billfoundation.org
+    - http://belevtsev.net
+    - belevtsev.net
+    - http://bestedates.com
+    - http://bdgtest.bluedoor.com.cn
+    - festiv-bras.com
+    - http://getdeone.com
+    - http://bbwsa.com
+    - bestedates.com
+    - feeltohealfitness.com
+    - bbwsa.com
+    - http://faithfulwebhosting.com
+    - http://festiv-bras.com
+    - http://fazzini.missionline.org
+    - http://canaryislands.website
+    - faithfulwebhosting.com
+    - benavent.cat
+    - http://billfoundation.org
+    - http://feeltohealfitness.com
+    - http://benavent.cat
+    - getdeone.com
+  condition: attributes

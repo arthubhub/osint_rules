@@ -1,0 +1,45 @@
+title: 'Malspam 2016-09-01 (.wsf in .zip) - campaign: "Please find attached invoice
+  no:" - dns_query'
+id: e68b3352-7a3f-4415-9fb3-75c879e4eacb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c821ca-f2ac-43e7-a2e4-4470950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - rodewelshcobs.com
+    - dcqoutlet.es
+    - hotcarshhhs6632.com
+    - rhanwid.com
+    IpAddresses:
+    - 31.22.4.108
+    - 158.195.68.10
+    - 185.64.219.7
+    - 95.211.144.65
+    - 208.71.106.41
+    - 62.250.4.180
+    - 213.180.150.17
+    - 134.0.11.123
+    - 192.151.153.26
+    - 208.71.106.62
+    - 112.140.42.29
+    - 213.186.33.24
+    - 86.65.123.70
+    - 208.71.106.45
+    - 187.45.193.139
+    - 91.207.44.3
+    - 213.205.40.169
+    - 195.238.0.64
+    - 62.42.230.17
+    - 23.95.106.193
+    - 208.71.106.42
+    - 193.231.238.4
+    - 185.64.219.5
+    - 82.165.38.131
+    - 162.210.101.91
+  condition: attributes

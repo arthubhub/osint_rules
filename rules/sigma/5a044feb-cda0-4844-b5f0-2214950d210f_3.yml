@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-11-03 : Affid=3, offline, ".asasin" : "Scanned image from
+  MX-2600N" - "20171103_123456.doc" - process_creation'
+id: 176f138d-0834-4df8-8961-d60e32afc27d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a044feb-cda0-4844-b5f0-2214950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.locky
+- attack.software.locky
+detection:
+  attributes:
+    md5:
+    - 1f608125c16f3396000f6ec9d929d6c9
+    sha1:
+    - 1fd9f901ab7f51a542e455b51e6442040d3fa39c
+    sha256:
+    - 73e8748f6a3a584a41ebc691083f060ff6fd030729415e5f12a6e8b0294990d0
+  condition: attributes

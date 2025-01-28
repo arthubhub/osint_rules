@@ -1,0 +1,15 @@
+title: OSINT - BLACKGEAR Espionage Campaign Evolves, Adds Japan To Target List - url_request
+id: 038b0549-5d73-4247-b267-31da93d898e9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5813b05e-cd38-401b-8b21-449502de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.trendmicro.com
+  condition: attributes

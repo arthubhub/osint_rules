@@ -1,0 +1,18 @@
+title: OSINT - New Variant of Petya Ransomware Spreading Like Wildfire - url_request
+id: a2f27126-46da-4bbe-8eb5-4efa684dd937
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/01/28
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5952d18c-b4f4-4a20-8373-443802de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.petya
+- attack.software.petya
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securingtomorrow.mcafee.com
+  condition: attributes
