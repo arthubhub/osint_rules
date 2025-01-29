@@ -1,6 +1,6 @@
 title: CVE-2023-46604 (Apache ActiveMQ) Vulnerability Exploited to Infect Systems
   With Cryptominers and Rootkits - process_creation
-id: b729a35f-984f-473f-b959-34d44043a6c8
+id: b60a20f1-9ef9-48c6-89dd-518caccb470a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,8 +10,8 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1496
 - attack.group.kinsing
+- attack.t1496
 detection:
   object_16343:
     md5:
@@ -37,8 +37,8 @@ detection:
   attributes:
     sha256:
     - 787e2c94e6d9ce5ec01f5cbe9ee2518431eca8523155526d6dc85934c9c5787c
-    - 0cc60a0c480e4d898fa77ab501bbd2afaf3f5fb89a2917a31e7f5fdaa6c3879c
     - c38c21120d8c17688f9aeb2af5bdafb6b75e1d2673b025b720e50232f888808a
-    - d8f55bbbcc20e81e46b9bf78f93b73f002c76a8fcdb4dc2ae21b8609445c14f9
     - c6fbd6896d162a12d9c900056781eb82f44649945808b7b009646b5397bcf6bf
+    - 0cc60a0c480e4d898fa77ab501bbd2afaf3f5fb89a2917a31e7f5fdaa6c3879c
+    - d8f55bbbcc20e81e46b9bf78f93b73f002c76a8fcdb4dc2ae21b8609445c14f9
   condition: 1 of object_* or attributes

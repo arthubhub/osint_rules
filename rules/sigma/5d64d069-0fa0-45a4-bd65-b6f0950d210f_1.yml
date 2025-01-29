@@ -1,5 +1,5 @@
 title: OSINT - Gamaredon group - url_request
-id: e1b4467e-41d2-48bd-8c14-ac1613a29fcb
+id: 45bbe67a-a900-499e-aef1-d50c27123d06
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,14 +9,14 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.t1064
+- attack.group.gamaredon_group
+- attack.t1106
+- attack.t1053
 - attack.t1112
-- attack.t1012
 - attack.group.g0047
 - attack.t1059
-- attack.t1053
-- attack.t1106
-- attack.group.gamaredon_group
-- attack.t1064
+- attack.t1012
 detection:
   object_9262:
     RequestUrl|contains:

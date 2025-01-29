@@ -1,6 +1,6 @@
 title: Financial - socgen-compliance.com fake website delivering malicious documents
   - process_creation
-id: 35ea1498-6091-47d7-910c-fa764ec9411e
+id: 67b9d10c-8d27-4e08-81ee-2e8832ffdac4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,11 +10,11 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1112
-- attack.t1065
-- attack.t1179
-- attack.t1137
 - attack.t1055
+- attack.t1137
+- attack.t1179
+- attack.t1065
+- attack.t1112
 detection:
   object_535:
     md5:
@@ -32,6 +32,6 @@ detection:
     - b991288ecd158e84076f7cc38d4ecbcd18cccc580f1971b0dfdd7c88b78e0794
   attributes:
     sha256:
-    - 25ae00c80a4ec85cb548c891598cf76d131b168a70116a84cb62b4defa3f698c
     - b991288ecd158e84076f7cc38d4ecbcd18cccc580f1971b0dfdd7c88b78e0794
+    - 25ae00c80a4ec85cb548c891598cf76d131b168a70116a84cb62b4defa3f698c
   condition: 1 of object_* or attributes

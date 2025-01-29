@@ -1,5 +1,5 @@
 title: 'OSINT -  Wrong hashes (from getmonero.org) #6151 - malicious binaries - url_request'
-id: a448ec98-d98e-4ade-8213-f330add370fb
+id: 796fe362-b55b-4c88-a21e-7d2c38bb22ac
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,17 +9,17 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1195
 - attack.t1199
+- attack.t1195
 detection:
   attributes:
     RequestUrl|contains:
-    - xmrsupport.co
+    - https://bartblaze.blogspot.com
     - https://thehackernews.com
+    - https://91.210.104.245
+    - https://web.getmonero.org
+    - xmrsupport.co
     - https://old.reddit.com
     - https://github.com
-    - https://bartblaze.blogspot.com
     - hashmonero.com
-    - https://web.getmonero.org
-    - https://91.210.104.245
   condition: attributes

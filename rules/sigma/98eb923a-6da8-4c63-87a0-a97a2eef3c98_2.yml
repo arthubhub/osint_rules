@@ -1,5 +1,5 @@
 title: 'CustomerLoader: a new malware distributing a wide variety of payloads - dns_query'
-id: ba34776a-6d62-4699-83d4-9affc732f6ba
+id: 22572b34-4869-40a2-821c-e7f10c02da7d
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -10,47 +10,47 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.bitrat
-- attack.group.stealc
-- attack.t1071.001
-- attack.software.ave_maria
-- attack.group.darkcloud_stealer
-- attack.group.asyncrat
-- attack.software.lgoogloader
-- attack.software.bitrat
-- attack.software.s0670
-- attack.software.xloader
-- attack.software.redline_stealer
-- attack.t1027
-- attack.t1129
 - attack.group.redline_stealer
-- attack.group.ave_maria
+- attack.software.bitrat
+- attack.group.agent_tesla
 - attack.t1027.007
-- attack.group.lgoogloader
+- attack.software.xloader
+- attack.software.s0331
+- attack.group.stealc
 - attack.software.darkcloud_stealer
-- attack.group.xloader
-- attack.software.vidar
-- attack.t1562
-- attack.t1105
-- attack.t1132.001
-- attack.t1620
-- attack.software.stealc
+- attack.software.sectoprat
 - attack.software.s0366
+- attack.t1140
 - attack.software.s0262
 - attack.software.formbook
-- attack.software.sectoprat
-- attack.software.s0331
-- attack.t1566.001
-- attack.t1573.001
-- attack.t1562.001
-- attack.group.vidar
-- attack.t1140
-- attack.software.asyncrat
-- attack.group.agent_tesla
-- attack.software.agent_tesla
 - attack.software.s0332
+- attack.group.xloader
+- attack.t1027
+- attack.software.ave_maria
+- attack.software.s0670
+- attack.group.bitrat
+- attack.t1566.001
+- attack.t1105
+- attack.software.vidar
+- attack.t1562.001
 - attack.group.sectoprat
+- attack.group.ave_maria
+- attack.t1573.001
+- attack.group.darkcloud_stealer
 - attack.t1001
+- attack.t1562
+- attack.group.vidar
+- attack.software.agent_tesla
+- attack.group.asyncrat
+- attack.t1071.001
+- attack.software.stealc
+- attack.t1132.001
+- attack.t1620
+- attack.software.lgoogloader
+- attack.software.asyncrat
+- attack.group.lgoogloader
+- attack.software.redline_stealer
+- attack.t1129
 detection:
   object_17988:
     IpAddresses:
@@ -60,56 +60,56 @@ detection:
     - 5.42.65.69
   attributes:
     QueryName|contains:
-    - get-b.pw
-    - self-games.space
-    - adanagram.com
-    - self-games.site
-    - cmd2.pw
-    - slackmessenger.site
-    - get-c.pw
-    - kyliansuperm92139124.sbs
-    - self-games.host
+    - vbs1.pw
     - seif-games.com
     - macrospro.pw
-    - get-d.pw
-    - vbs3.pw
-    - self-games.pw
-    - crypt1.pw
-    - cmd1.pw
-    - bin-a.pw
-    - get-vbs.com
-    - hautegaleria.com
-    - vpnsget.com
-    - vbs2.pw
-    - mymine.pw
-    - plugin4free.net
-    - vbs1.pw
-    - bin-d.pw
-    - bin-c.pw
-    - soft-got.com
-    - cmd22.pw
-    - jacksmanual.com
-    - vbs22.pw
-    - macros-pro.net
-    - soft-got.pw
-    - soft-got.net
-    - vpnsget.pw
-    - soft-got.co
     - get-a.pw
-    - minemy.pw
-    - slackmessenger.pw
-    - self-games.com
     - vstdw.com
-    - hardcoverradio.com
-    - vst-dw.com
-    - vstget.com
-    - get-i.pw
-    - gethere.pw
-    - bin-b.pw
-    - get-y.com
+    - vpnsget.com
+    - self-games.com
+    - vbs2.pw
     - plugin4free.com
+    - slackmessenger.site
+    - self-games.pw
+    - soft-got.pw
+    - soft-got.com
+    - jacksmanual.com
+    - get-d.pw
+    - get-y.com
+    - bin-b.pw
+    - adanagram.com
+    - slackmessenger.pw
+    - gethere.pw
+    - hautegaleria.com
+    - bin-c.pw
+    - soft-got.co
+    - vpnsget.pw
+    - get-c.pw
+    - vbs22.pw
+    - self-games.host
+    - mymine.pw
+    - kyliansuperm92139124.sbs
+    - minemy.pw
+    - get-vbs.com
+    - cmd1.pw
+    - get-b.pw
+    - vbs3.pw
+    - self-games.space
+    - vstget.com
+    - soft-got.net
+    - cmd2.pw
+    - cmd22.pw
+    - macros-pro.net
+    - crypt1.pw
+    - get-i.pw
+    - vst-dw.com
+    - hardcoverradio.com
+    - bin-d.pw
+    - bin-a.pw
+    - plugin4free.net
+    - self-games.site
     IpAddresses:
     - 179.43.170.241
-    - 77.91.124.25
     - 5.42.94.169
+    - 77.91.124.25
   condition: 1 of object_* or attributes

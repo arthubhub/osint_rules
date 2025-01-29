@@ -1,6 +1,6 @@
 title: OSINT -  Familiar Feeling A Malware Campaign Targeting the Tibetan Diaspora
   Resurfaces - url_request
-id: 35722505-0848-4e18-920a-f1791c1f7251
+id: 1f3da7c8-9dd8-4a4c-843c-6a7a720222f3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -24,12 +24,12 @@ detection:
     - google.comemail.email
   attributes:
     RequestUrl|contains:
-    - daynew.today
-    - tibetnews.info
     - comemails.email
-    - commail.co
-    - https://citizenlab.ca
-    - tibetnews.today
     - tibethouse.info
     - daynews.today
+    - https://citizenlab.ca
+    - commail.co
+    - tibetnews.today
+    - tibetnews.info
+    - daynew.today
   condition: 1 of object_* or attributes

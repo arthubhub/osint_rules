@@ -1,6 +1,6 @@
 title: OSINT - DarkHydrus delivers new Trojan that can use Google Drive for C2 communications
   - url_request
-id: 686f1a71-6e50-46d7-a13c-0b73697f144a
+id: a1408b95-6b90-4dd6-8ce1-fc78c211c5b9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,36 +11,36 @@ logsource:
   category: url_request
 tags:
 - attack.group.g0079
-- attack.software.s0270
-- attack.software.roguerobin
 - attack.group.darkhydrus
 - attack.group.roguerobin
+- attack.software.s0270
+- attack.software.roguerobin
 detection:
   attributes:
     RequestUrl|contains:
-    - corewindows.agency
-    - akamai.agency
-    - microsoftonline.agency
-    - data-microsoft.services
-    - skydrive.agency
+    - phicdn.world
     - t-msedge.world
-    - azureedge.today
-    - 0ffice365.agency
-    - asimov-win-microsoft.services
-    - akamaiedge.services
     - 0ffice365.services
-    - nsatc.agency
+    - 0ffice365.agency
+    - onecs-live.services
     - https://unit42.paloaltonetworks.com
-    - 0nedrive.agency
     - akamaiedge.live
     - akamaized.live
-    - sharepoint.agency
-    - onedrive.agency
-    - onecs-live.services
+    - data-microsoft.services
     - 0ffice365.life
-    - edgekey.live
-    - phicdn.world
-    - skydrive.services
-    - akdns.live
+    - microsoftonline.agency
     - iecvlist-microsoft.live
+    - sharepoint.agency
+    - akamai.agency
+    - skydrive.services
+    - nsatc.agency
+    - corewindows.agency
+    - edgekey.live
+    - 0nedrive.agency
+    - asimov-win-microsoft.services
+    - akamaiedge.services
+    - skydrive.agency
+    - akdns.live
+    - onedrive.agency
+    - azureedge.today
   condition: attributes

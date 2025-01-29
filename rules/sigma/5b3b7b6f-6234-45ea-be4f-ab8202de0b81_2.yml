@@ -1,5 +1,5 @@
 title: 'OSINT -  Down but Not Out: A Look Into Recent Exploit Kit Activities - dns_query'
-id: 1eefd31a-df92-48ab-94d2-c16835860047
+id: 17334063-fe99-49f5-bb9c-c0dbfecf22bd
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,19 +11,19 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - carder.bit
-    - taxhuge.com
-    - fedpart.website
     - addrole.space
+    - carder.bit
+    - fedpart.website
+    - taxhuge.com
     IpAddresses:
     - 200.74.240.219
-    - 64.188.10.44
-    - 167.114.33.110
+    - 149.56.159.203
     - 54.37.57.152
     - 188.225.37.242
     - 167.114.191.124
     - 193.23.181.154
-    - 185.244.150.110
-    - 149.56.159.203
     - 139.60.161.51
+    - 185.244.150.110
+    - 167.114.33.110
+    - 64.188.10.44
   condition: attributes

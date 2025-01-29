@@ -1,5 +1,5 @@
 title: Malicious ELF binary (Mirai) - 2018-12-22 (collected on a router) - dns_query
-id: 245e7045-9679-438f-99b3-a6b16d36b9d6
+id: aba7ee4a-05be-4129-b52d-79870cc909fd
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -14,15 +14,15 @@ tags:
 detection:
   attributes:
     QueryName|contains:
-    - gpon8080.sh
-    - rce.trade
-    - tutos.sh
-    - realtek.sh
-    - dlink.sh
-    - adb.sh
-    - dzs.sh
-    - airlink.sh
     - purenetworks.com
+    - dzs.sh
+    - realtek.sh
+    - airlink.sh
+    - dlink.sh
+    - gpon8080.sh
+    - tutos.sh
+    - adb.sh
+    - rce.trade
     IpAddresses:
     - 145.239.138.69
   condition: attributes

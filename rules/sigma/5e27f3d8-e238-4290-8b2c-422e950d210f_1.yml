@@ -1,5 +1,5 @@
 title: Muhstik Botnet Attacks Tomato Routers - url_request
-id: 10b592c0-cb1c-436a-a582-454893f58348
+id: 957e8479-1070-4407-b543-885996f354ac
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.tsunami_elf
 - attack.software.tsunami_elf
+- attack.group.tsunami_elf
 detection:
   attributes:
     RequestUrl|contains:
-    - http://y.fd6fq54s6df541q23sdxfg.eu
     - https://unit42.paloaltonetworks.com
     - http://159.89.156.190
+    - http://y.fd6fq54s6df541q23sdxfg.eu
   condition: attributes

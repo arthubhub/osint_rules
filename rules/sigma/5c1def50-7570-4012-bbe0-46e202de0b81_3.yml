@@ -1,5 +1,5 @@
 title: Malicious ELF binary (Mirai) - 2018-12-22 (collected on a router) - process_creation
-id: cce00d48-bc8c-490d-9725-e1b0c656e44e
+id: b59938a0-69e3-492c-a86e-84e5087756c1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -84,13 +84,13 @@ detection:
     - 5c03fa1d9b7d551f738fa8cf0937aff842b019789ffa15cb97823f921dcdedcb
   attributes:
     sha256:
+    - e82a45de78fbf8b1b9577270924b100d1c094c6d1a84086a168543aed23c264b
+    - 5c03fa1d9b7d551f738fa8cf0937aff842b019789ffa15cb97823f921dcdedcb
     - dd56f13b244a2b8a33fe5a112156fd89c9157406198f053354e6471b75c24554
-    - f57ad9b7c5ca6bf64b32860298a88e2912800ce564890e4f44da46490af205a4
+    - 22c6b6bd77ee2fcd16dcbb3f2ae400eafd741a4fc92a5ee167445334145e4242
     - 6f81576fe9e215ab361150385eb0542e3fe07507f8a96fd2642d70ac3568106a
+    - 21c8d8ca54284ca7aa92f5d1c2f8b931c13150cc8561f5bab4dc21cebba1fb27
     - cd31099d2dd701e259ab0bf490467a5fcf6ecebeb387e7b6b295ad53e5f83687
     - 0a1c9cc1d2ff521996cf46fe40e0ba9dc010a9b67b45f56bc4824a8e6c505524
-    - 22c6b6bd77ee2fcd16dcbb3f2ae400eafd741a4fc92a5ee167445334145e4242
-    - e82a45de78fbf8b1b9577270924b100d1c094c6d1a84086a168543aed23c264b
-    - 21c8d8ca54284ca7aa92f5d1c2f8b931c13150cc8561f5bab4dc21cebba1fb27
-    - 5c03fa1d9b7d551f738fa8cf0937aff842b019789ffa15cb97823f921dcdedcb
+    - f57ad9b7c5ca6bf64b32860298a88e2912800ce564890e4f44da46490af205a4
   condition: 1 of object_* or attributes

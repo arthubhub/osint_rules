@@ -1,6 +1,6 @@
 title: 'OSINT -  Operation AppleJeus: Lazarus hits cryptocurrency exchange with fake
   installer and macOS malware - url_request'
-id: 5fc264a1-9f19-4147-a55f-5947de388614
+id: f9ccfc35-3e53-4312-92d6-e8dc6b925137
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,12 +10,12 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.fallchill
 - attack.group.lazarus_group
 - attack.t1005
-- attack.software.fallchill
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.celasllc.com
     - https://securelist.com
+    - https://www.celasllc.com
   condition: attributes

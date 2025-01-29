@@ -1,5 +1,5 @@
 title: OSINT - Babuk Ransomware - url_request
-id: ef1bc5a9-45bd-4473-a4e9-99618b76c80e
+id: ac8f7c9a-62ac-41d1-8ea5-246f2bc28f2b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.babuk_ranomsware
 - attack.group.babuk_ranomsware
+- attack.software.babuk_ranomsware
 detection:
   attributes:
     RequestUrl|contains:
+    - https://bazaar.abuse.ch
     - http://chuongdong.com
     - https://twitter.com
-    - https://bazaar.abuse.ch
   condition: attributes

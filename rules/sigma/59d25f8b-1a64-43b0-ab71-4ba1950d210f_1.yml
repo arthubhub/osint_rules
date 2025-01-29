@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-10-02 : Affid=3, offline, ".ykcol" : "Emailed Invoice -
   123456" - "I_123456.7z" - url_request'
-id: 8194360e-b10e-4c2d-916e-d1e5121886e9
+id: 8ae987a3-31b2-416c-b0b3-b949fce035d6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,24 +10,24 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://ichinose.de
+    - http://robsacks.com
     - http://alexandradickman.com
+    - http://petrochemus.com
+    - http://goliathstoneindustries.com
+    - http://theceocforeporter.com
     - http://honeypot.egdevcenter.com
     - http://wallstproperties.com
-    - http://sherylbro.net
-    - http://petrochemus.com
-    - http://theceocforeporter.com
-    - http://goliathstoneindustries.com
-    - http://leightonbrothers.co.uk
-    - http://robsacks.com
-    - http://motifahsap.com
-    - http://ichinose.de
-    - http://skyehoppus.com
     - http://kartprinterleri.com
+    - http://leightonbrothers.co.uk
+    - http://sherylbro.net
+    - http://motifahsap.com
     - http://pacalik.net
+    - http://skyehoppus.com
     - http://schwellenwertdaten.de
   condition: attributes

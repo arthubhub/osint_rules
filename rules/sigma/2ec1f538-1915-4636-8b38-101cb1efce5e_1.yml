@@ -1,6 +1,6 @@
 title: A22-108A TraderTraitor North Korean State-Sponsored APT Targets Blockchain
   Companies - url_request
-id: 4d20ea55-8748-4a23-bf77-6bdb618e2158
+id: 257548eb-b33f-4e50-a14f-bd5e28c79a63
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,29 +10,29 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1071.001
-- attack.group.g0032
+- attack.t1566.001
 - attack.group.lazarus_group
 - attack.t1552.004
-- attack.t1566.001
+- attack.group.g0032
+- attack.t1071.001
 detection:
   attributes:
     RequestUrl|contains:
-    - haciendadeclarevot.com
+    - cryptais.com
     - https://aideck.net
-    - aideck.net
-    - greenvideo.nl
-    - dafnefonseca.com
-    - https://www.alticgo.com
-    - esilet.com
+    - haciendadeclarevot.com
+    - dafom.dev
+    - sche-eg.org
+    - infodigitalnew.com
     - vinoymas.ch
     - alticgo.com
     - creaideck.com
-    - dafom.dev
-    - https://www.esilet.com
-    - sche-eg.org
-    - cryptais.com
-    - infodigitalnew.com
-    - https://github.com
+    - dafnefonseca.com
     - tokenais.com
+    - https://www.esilet.com
+    - https://github.com
+    - https://www.alticgo.com
+    - aideck.net
+    - esilet.com
+    - greenvideo.nl
   condition: attributes

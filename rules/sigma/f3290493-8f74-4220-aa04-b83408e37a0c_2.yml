@@ -1,5 +1,5 @@
 title: Phishing targeting Luxembourg services (hosted and served on/from AWS) - dns_query
-id: 6302f2ae-d6ad-40f6-8165-44eecdc68ed8
+id: 1dbcc553-f487-471d-9ee8-b7f6a6e15a91
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -91,19 +91,19 @@ detection:
     - 3.79.3.191
   attributes:
     QueryName|contains:
-    - www-cns-lu.com
-    - cns-lu.com
     - luxtrust-unlock.com
     - luxtrust.help
-    - ccss-public.com
-    - www-cns.com
-    - ccss-sante-lu.com
-    - luxtrust-cancel.com
     - luxtrust.support
+    - www-cns.com
+    - cns-lu.com
+    - ccss-sante-lu.com
+    - ccss-public.com
+    - www-cns-lu.com
+    - luxtrust-cancel.com
     IpAddresses:
-    - 51.20.69.186
-    - 35.177.103.239
-    - 18.117.184.102
-    - 54.93.211.218
     - 3.71.1.255
+    - 51.20.69.186
+    - 18.117.184.102
+    - 35.177.103.239
+    - 54.93.211.218
   condition: 1 of object_* or attributes

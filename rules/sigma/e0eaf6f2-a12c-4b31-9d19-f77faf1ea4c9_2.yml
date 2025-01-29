@@ -1,6 +1,6 @@
 title: Kaseya ransomware attack - indicators and information publicly available -
   dns_query
-id: 9fe2d9ed-cc6a-4255-8339-cd3f6c5f5509
+id: e918db7c-f7c3-4fa1-9a48-31ef7045dc88
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,53 +10,53 @@ logsource:
   product: windows
   category: dns_query
 tags:
+- attack.t1486
 - attack.group.sodinokibi
 - attack.software.sodinokibi
-- attack.t1486
 detection:
   object_10852:
     IpAddresses:
     - 161.35.239.148
   attributes:
     QueryName|contains:
-    - candyhouseusa.com
-    - 12starhd.online
     - bxdf.info
-    - 35-40konkatsu.net
-    - blossombeyond50.com
-    - simoneblum.de
-    - 123vrachi.ru
-    - 4youbeautysalon.com
-    - 1team.es
-    - 101gowrie.com
-    - filmstreamingvfcomplet.be
-    - cerebralforce.net
-    - southeasternacademyofprosthodontics.org
-    - 365questions.org
-    - bierensgebakkramen.nl
-    - c2e-poitiers.com
-    - fotoscondron.com
-    - facettenreich27.de
-    - milestoneshows.com
-    - smartypractice.com
-    - myhostcloud.com
-    - homng.net
     - cursosgratuitosnainternet.com
-    - tanzschule-kieber.de
-    - kaotikkustomz.com
-    - gmto.fr
-    - fannmedias.com
-    - thomasvicino.com
-    - gonzalezfornes.es
-    - faroairporttransfers.net
-    - daklesa.de
-    - mindpackstudios.com
-    - 4net.guru
-    - sw1m.ru
-    - tonelektro.nl
-    - pasvenska.se
-    - ncuccr.org
-    - iqbalscientific.com
-    - 8449nohate.org
     - blgr.be
+    - thomasvicino.com
+    - pasvenska.se
+    - fotoscondron.com
+    - c2e-poitiers.com
+    - milestoneshows.com
+    - gmto.fr
+    - 8449nohate.org
+    - 4youbeautysalon.com
+    - 123vrachi.ru
+    - iqbalscientific.com
+    - kaotikkustomz.com
+    - 1team.es
+    - cerebralforce.net
+    - 101gowrie.com
+    - 365questions.org
+    - mindpackstudios.com
+    - filmstreamingvfcomplet.be
+    - fannmedias.com
+    - facettenreich27.de
+    - smartypractice.com
+    - homng.net
+    - simoneblum.de
+    - myhostcloud.com
+    - southeasternacademyofprosthodontics.org
+    - candyhouseusa.com
+    - daklesa.de
+    - 4net.guru
+    - tonelektro.nl
+    - ncuccr.org
+    - 12starhd.online
+    - faroairporttransfers.net
+    - tanzschule-kieber.de
+    - 35-40konkatsu.net
+    - sw1m.ru
+    - gonzalezfornes.es
+    - blossombeyond50.com
+    - bierensgebakkramen.nl
   condition: 1 of object_* or attributes

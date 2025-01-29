@@ -1,5 +1,5 @@
 title: 'OSINT - Ryuk Ransomware: Extensive Attack Infrastructure Revealed - dns_query'
-id: 7d4a6d97-b1ef-4c30-9527-10df388a79c6
+id: 90049ef4-6ee3-4d2c-b209-f9bbec098e1e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,52 +9,52 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.ryuk_ransomware
 - attack.group.ryuk_ransomware
+- attack.software.ryuk_ransomware
 detection:
   attributes:
     QueryName|contains:
-    - servicemusthave.com
-    - webxyz.net
-    - myobtain.com
-    - raingamess.com
-    - starcyclone.com
     - bukaguka.com
-    - primeviref.com
-    - nasmasterservice.com
     - balanarr.com
-    - daemon-update.com
-    - toyotacamryy.com
+    - starcyclone.com
     - hunbabe.com
     - hotlable.com
+    - servicemusthave.com
+    - daemon-update.com
+    - toyotacamryy.com
+    - nasmasterservice.com
+    - raingamess.com
+    - primeviref.com
+    - webxyz.net
+    - myobtain.com
     IpAddresses:
-    - 96.9.209.156
-    - 142.93.122.23
-    - 45.138.172.51
-    - 45.141.86.207
-    - 96.9.209.215
-    - 45.147.228.77
-    - 96.9.209.161
-    - 88.119.174.130
-    - 149.28.215.46
-    - 157.245.88.69
-    - 96.9.209.177
-    - 94.177.12.161
-    - 5.2.70.149
-    - 88.119.174.131
-    - 64.44.131.107
-    - 88.119.175.237
-    - 159.89.53.108
-    - 88.119.174.129
-    - 192.81.211.69
-    - 45.147.230.241
-    - 45.32.134.62
-    - 45.147.229.128
-    - 213.252.246.185
-    - 134.122.114.248
     - 45.141.86.136
-    - 45.141.86.146
     - 45.147.230.30
-    - 88.119.174.132
+    - 5.2.70.149
+    - 96.9.209.177
+    - 88.119.174.129
+    - 45.141.86.207
+    - 45.147.229.128
+    - 45.147.230.241
+    - 45.141.86.146
+    - 96.9.209.161
+    - 96.9.209.215
+    - 192.81.211.69
     - 45.141.86.194
+    - 88.119.175.237
+    - 142.93.122.23
+    - 159.89.53.108
+    - 149.28.215.46
+    - 64.44.131.107
+    - 213.252.246.185
+    - 45.138.172.51
+    - 157.245.88.69
+    - 88.119.174.130
+    - 88.119.174.131
+    - 88.119.174.132
+    - 134.122.114.248
+    - 45.147.228.77
+    - 96.9.209.156
+    - 45.32.134.62
+    - 94.177.12.161
   condition: attributes

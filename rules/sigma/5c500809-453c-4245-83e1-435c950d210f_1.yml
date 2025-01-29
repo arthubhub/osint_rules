@@ -1,5 +1,5 @@
 title: '2019-01-28: APT28 XTunnel Backdoor - url_request'
-id: 97a6d9a5-621a-4fe7-87d4-ed9e6a784adc
+id: 2246b304-71b2-440a-be07-a08cb613f5b5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.xtunnel
-- attack.group.g0007
-- attack.software.s0117
-- attack.group.apt28
 - attack.group.strontium
+- attack.group.g0007
 - attack.group.sofacy
+- attack.group.apt28
+- attack.software.s0117
+- attack.software.xtunnel
 detection:
   object_16539:
     RequestUrl|contains:

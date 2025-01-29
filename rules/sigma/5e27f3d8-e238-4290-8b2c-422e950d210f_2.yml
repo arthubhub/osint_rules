@@ -1,5 +1,5 @@
 title: Muhstik Botnet Attacks Tomato Routers - dns_query
-id: 1a0c55fc-2d1d-43a9-b260-98fdc14723d5
+id: 0d0bbad9-bf48-4bc3-8037-72dcbd4dd3fe
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.tsunami_elf
 - attack.software.tsunami_elf
+- attack.group.tsunami_elf
 detection:
   attributes:
     IpAddresses:
-    - 68.66.253.100
     - 46.149.233.35
+    - 68.66.253.100
     - 185.61.149.22
   condition: attributes

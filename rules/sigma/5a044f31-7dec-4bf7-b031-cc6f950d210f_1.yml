@@ -1,5 +1,5 @@
 title: 'M2M -  Locky Affid=3, ".asasin" 2017-11-02 : "Scan" - "Scan00123.doc" - url_request'
-id: f74b8778-c79e-4a76-b9d3-ee7e5886e840
+id: 3e890dfe-9bbc-4df7-b440-9e8d97ddf15b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,24 +9,24 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://minascriptandart.nl
+    - http://heart-sp.com
+    - http://laslechuzas.cl
+    - http://nikom.be
+    - http://olafpleuger.de
+    - http://jimhalltreeservice.com
+    - http://lvps212-67-205-60.vps.webfusion.co.uk
+    - http://m.monteschiavo.com
+    - http://l-up.net
     - http://maeserdruck.com
     - http://internet-webshops.de
-    - http://matternomatter.com
-    - http://l-up.net
-    - http://jimhalltreeservice.com
     - http://verwadirephen.info
-    - http://olafpleuger.de
-    - http://m.monteschiavo.com
-    - http://nikom.be
-    - http://minascriptandart.nl
     - http://hilaryandsavio.com
-    - http://lvps212-67-205-60.vps.webfusion.co.uk
-    - http://laslechuzas.cl
-    - http://heart-sp.com
     - http://ist-profy.ru
+    - http://matternomatter.com
   condition: attributes

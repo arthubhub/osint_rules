@@ -1,5 +1,5 @@
 title: ESET Turla LightNeuron Research - process_creation
-id: 3d8f53b0-7e0e-4e87-92ba-46a42b49e0de
+id: e0f3980c-6ca6-4a1c-9c6d-e7ed0a35748e
 description: edit this field when analysing or editing the rule - reported by "ESET"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,47 +9,47 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1005
-- attack.t1029
-- attack.t1022
-- attack.t1086
-- attack.t1016
-- attack.t1078
-- attack.t1071
-- attack.t1114
-- attack.t1119
-- attack.t1020
-- attack.group.turla_group
 - attack.t1032
-- attack.t1001
 - attack.t1041
+- attack.t1005
+- attack.t1071
+- attack.t1029
+- attack.t1016
+- attack.t1114
+- attack.group.turla_group
+- attack.t1086
+- attack.t1078
+- attack.t1020
+- attack.t1022
+- attack.t1001
+- attack.t1119
 detection:
   attributes:
     md5:
-    - e1fdde61d9db9d6875994e4a412987f7
-    - 2b14f9f3c758a2cf842a61aca6a3455d
-    - 5924eac8af1f3e3f1f825998bc59c062
-    - 9ed3438587e25073c17e82958010a3aa
-    - 32d92f9c125816c5ffd407577ad3ccc2
     - 7519b8c8ed36ec0840112bf9581717a3
-    - c86e40e1fd2bd477a7f0cfed63fbca4a
+    - 32d92f9c125816c5ffd407577ad3ccc2
+    - e1fdde61d9db9d6875994e4a412987f7
     - 55319464e46e2c31d22b39b46d5477fb
+    - 5924eac8af1f3e3f1f825998bc59c062
+    - c86e40e1fd2bd477a7f0cfed63fbca4a
+    - 2b14f9f3c758a2cf842a61aca6a3455d
+    - 9ed3438587e25073c17e82958010a3aa
     sha1:
     - 76ee1802a6c920cbeb3a1053a4ec03c71b7e46f8
     - a4d1a34fe5effd90ccb6897679586ddc07fbc5cd
-    - 556674f08ecca84d19a8a756e3457dbf6aff4a1c
     - ff28b53b55bc77a5b4626f9db856e67ac598c787
     - 0a9f10925af42df94925d07112f303d57392c908
-    - c1ff6804fdb8656ab08928d187837d28060a552f
-    - f9d52bb5a30b42fc2d1763be586cee8a57424732
     - 3c851e239fbf67a03e0dae8f63eee702b330db6c
+    - 556674f08ecca84d19a8a756e3457dbf6aff4a1c
+    - f9d52bb5a30b42fc2d1763be586cee8a57424732
+    - c1ff6804fdb8656ab08928d187837d28060a552f
     sha256:
-    - 14f530e16e8c6dbac02f1bde53594f01b7edab9c45c4c371a3093120276ffaf1
-    - ce01c8087368b7938175b217e9d4e2b50bbd3007d6f9b786d9b86a38a1acbc85
-    - 88c90c2b123a357423ab3241624cba49d57122ee3b8ff4130504090c174bb09d
-    - 92af9451d6809e035246869e53a56e1717224b28e8e96af4d80573264435d524
     - d01745a8f454fbf173c8b410f279a84fd3b2dace379c1d67ba9b40c9813b200d
-    - 25facbc4265ca90f0508e77e97e1e6fcc7e46f6cca316b251b06d41232f6360c
-    - fec68a0fea0019c878c8a348976c0ec0b8ecf6e7c63fe99afabfff2b7e6d4b11
+    - ce01c8087368b7938175b217e9d4e2b50bbd3007d6f9b786d9b86a38a1acbc85
+    - 14f530e16e8c6dbac02f1bde53594f01b7edab9c45c4c371a3093120276ffaf1
     - c730d1af146bc420a1dfbbc647e53133a95cc87e9e519f37a01a413410e16498
+    - fec68a0fea0019c878c8a348976c0ec0b8ecf6e7c63fe99afabfff2b7e6d4b11
+    - 92af9451d6809e035246869e53a56e1717224b28e8e96af4d80573264435d524
+    - 88c90c2b123a357423ab3241624cba49d57122ee3b8ff4130504090c174bb09d
+    - 25facbc4265ca90f0508e77e97e1e6fcc7e46f6cca316b251b06d41232f6360c
   condition: attributes

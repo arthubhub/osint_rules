@@ -1,5 +1,5 @@
 title: Ursnif Campaign f1.pipen.at - dns_query
-id: f1225bfd-0472-47b3-82c7-3bf4c6dbfbc0
+id: 44aac560-cf2d-4d3b-add3-cb9f60468e1c
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
@@ -10,41 +10,41 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1112
-- attack.t1170
-- attack.t1043
-- attack.group.gozi
-- attack.t1500
 - attack.t1192
-- attack.t1204
+- attack.group.gozi
+- attack.t1043
+- attack.t1500
 - attack.t1071
-- attack.software.gozi
+- attack.t1170
+- attack.t1112
 - attack.t1117
+- attack.software.gozi
+- attack.t1204
 detection:
   attributes:
     QueryName|contains:
-    - ahonpot.at
-    - deem.dianer.at
-    - been.dianer.at
-    - api5.malorun.at
-    - pipen.at
-    - ahah100.at
-    - api10.dianer.at
     - vv.malorun.at
-    - free.up100n.at
-    - two.ahah100.at
-    - targoo.at
-    - mobify.at
-    - www.kamalak.at
     - kamalak.at
     - dxdeedle.host
+    - free.up100n.at
+    - www.kamalak.at
+    - targoo.at
+    - two.ahah100.at
     - f1.pipen.at
     - dianer.at
+    - mobify.at
+    - ahah100.at
+    - api5.malorun.at
+    - ahonpot.at
+    - pipen.at
+    - api10.dianer.at
+    - deem.dianer.at
+    - been.dianer.at
     IpAddresses:
-    - 47.241.106.208
-    - 89.39.107.106
-    - 8.208.90.28
-    - 93.190.138.35
     - 162.244.35.233
+    - 47.241.106.208
+    - 8.208.90.28
+    - 89.39.107.106
+    - 93.190.138.35
     - 23.81.246.22
   condition: attributes

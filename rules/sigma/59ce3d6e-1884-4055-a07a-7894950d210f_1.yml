@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-09-29 : Affid=3, offline, ".ykcol" : "Invoice" - "123456.7z"
   - url_request'
-id: 29a8cdff-fdc8-48b3-b1e7-e2a6d308cc37
+id: 0a4cebca-db69-475d-a932-05bea1f3e633
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,25 +10,25 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://xploramail.com
-    - http://long-an.com.tw
-    - http://lp-usti.cz
-    - http://m-tensou.net
     - http://sdr.co.nz
-    - http://awholeblueworld.com
-    - http://autoecolecarnot.com
-    - http://bacota.es
-    - http://ip032.es
-    - http://miamirecyclecenters.com
-    - http://littleulearning.com
     - http://associationlachaloupe.com
-    - http://autoecolejeanluc.com
+    - http://long-an.com.tw
     - http://poemsan.info
-    - http://suncoastot.com
+    - http://m-tensou.net
+    - http://lp-usti.cz
     - http://peep-call.com
+    - http://autoecolecarnot.com
+    - http://suncoastot.com
+    - http://xploramail.com
+    - http://ip032.es
+    - http://bacota.es
+    - http://autoecolejeanluc.com
+    - http://littleulearning.com
+    - http://miamirecyclecenters.com
+    - http://awholeblueworld.com
   condition: attributes

@@ -1,5 +1,5 @@
 title: OSINT - revengeRAT targeting France - url_request
-id: 0d4f7590-0353-40c7-aa64-783d937b1c34
+id: fe62244a-0018-4677-bac6-8de0df18cd97
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,18 +10,18 @@ logsource:
   category: url_request
 tags:
 - attack.t1192
-- attack.software.revenge_rat
 - attack.group.revenge_rat
+- attack.software.revenge_rat
 detection:
   object_9887:
     RequestUrl|contains:
     - https://twitter.com
   attributes:
     RequestUrl|contains:
-    - chez-le-pepert.xyz
     - chez-le-pepere.club
-    - chezlepertrbhyyrevbtt.xyz
-    - https://www.bleepingcomputer.com
     - https://any.run
+    - https://www.bleepingcomputer.com
     - chezlepepertrtr.xyz
+    - chez-le-pepert.xyz
+    - chezlepertrbhyyrevbtt.xyz
   condition: 1 of object_* or attributes

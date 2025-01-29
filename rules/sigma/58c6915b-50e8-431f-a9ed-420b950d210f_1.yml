@@ -1,5 +1,5 @@
 title: OSINT - New Linux Malware Exploits CGI Vulnerability - url_request
-id: caaec5bb-d776-494a-944b-04e3e326eb43
+id: 9264cc6a-8a24-4f69-b67b-3a173b6351cb
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,8 +11,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://192.154.108.2
-    - http://172.247.116.21
-    - http://blog.trendmicro.com
     - http://172.247.116.3
+    - http://blog.trendmicro.com
+    - http://172.247.116.21
+    - http://192.154.108.2
   condition: attributes

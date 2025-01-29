@@ -1,6 +1,6 @@
 title: Kaseya ransomware attack - indicators and information publicly available -
   url_request
-id: 7d1d862d-86c0-4c76-ac78-1f7bbac96c24
+id: 7973aa2c-500a-4ff0-ad1e-7ea053bae17f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,57 +10,57 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.t1486
 - attack.group.sodinokibi
 - attack.software.sodinokibi
-- attack.t1486
 detection:
   object_10859:
     RequestUrl|contains:
     - https://us-cert.cisa.gov
   attributes:
     RequestUrl|contains:
-    - candyhouseusa.com
-    - 12starhd.online
     - bxdf.info
+    - cursosgratuitosnainternet.com
+    - blgr.be
+    - thomasvicino.com
+    - pasvenska.se
+    - fotoscondron.com
+    - c2e-poitiers.com
+    - milestoneshows.com
+    - gmto.fr
+    - 8449nohate.org
+    - https://helpdesk.kaseya.com
+    - 4youbeautysalon.com
+    - 123vrachi.ru
+    - iqbalscientific.com
+    - kaotikkustomz.com
+    - 1team.es
+    - cerebralforce.net
+    - 101gowrie.com
+    - 365questions.org
+    - mindpackstudios.com
+    - filmstreamingvfcomplet.be
+    - fannmedias.com
+    - facettenreich27.de
+    - smartypractice.com
+    - homng.net
+    - simoneblum.de
+    - myhostcloud.com
+    - southeasternacademyofprosthodontics.org
+    - candyhouseusa.com
+    - daklesa.de
+    - https://community.sophos.com
+    - 4net.guru
+    - https://github.com
+    - tonelektro.nl
+    - ncuccr.org
+    - 12starhd.online
+    - faroairporttransfers.net
+    - tanzschule-kieber.de
     - 35-40konkatsu.net
+    - sw1m.ru
+    - gonzalezfornes.es
     - blossombeyond50.com
     - https://twitter.com
-    - simoneblum.de
-    - 123vrachi.ru
-    - 4youbeautysalon.com
-    - 1team.es
-    - 101gowrie.com
-    - filmstreamingvfcomplet.be
-    - cerebralforce.net
-    - southeasternacademyofprosthodontics.org
-    - 365questions.org
     - bierensgebakkramen.nl
-    - c2e-poitiers.com
-    - fotoscondron.com
-    - facettenreich27.de
-    - milestoneshows.com
-    - smartypractice.com
-    - myhostcloud.com
-    - homng.net
-    - cursosgratuitosnainternet.com
-    - tanzschule-kieber.de
-    - kaotikkustomz.com
-    - gmto.fr
-    - https://helpdesk.kaseya.com
-    - fannmedias.com
-    - thomasvicino.com
-    - gonzalezfornes.es
-    - faroairporttransfers.net
-    - daklesa.de
-    - mindpackstudios.com
-    - 4net.guru
-    - sw1m.ru
-    - https://community.sophos.com
-    - tonelektro.nl
-    - pasvenska.se
-    - ncuccr.org
-    - https://github.com
-    - iqbalscientific.com
-    - 8449nohate.org
-    - blgr.be
   condition: 1 of object_* or attributes

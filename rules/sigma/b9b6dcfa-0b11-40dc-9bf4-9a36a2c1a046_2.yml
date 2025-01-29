@@ -1,6 +1,6 @@
 title: HermeticWiper | New Destructive Malware Used In Cyber Attacks on Ukraine -
   process_creation
-id: 9628a6ef-97e0-4455-a5b4-125a99d68b77
+id: b7d54a7b-6db8-4e09-9034-7c1e58b26687
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -11,11 +11,11 @@ logsource:
   product: windows
   category: process_creation
 tags:
+- attack.t1561.002
+- attack.t1485
 - attack.t1490
 - attack.t1218
 - attack.t1484.001
-- attack.t1485
-- attack.t1561.002
 detection:
   object_17165:
     md5:
@@ -36,7 +36,7 @@ detection:
     - a952e288a1ead66490b3275a807f52e5
   attributes:
     md5:
+    - 095a1678021b034903c85dd5acb447ad
     - 231b3385ac17e41c5bb1b1fcb59599c4
     - eb845b7a16ed82bd248e395d9852f467
-    - 095a1678021b034903c85dd5acb447ad
   condition: 1 of object_* or attributes

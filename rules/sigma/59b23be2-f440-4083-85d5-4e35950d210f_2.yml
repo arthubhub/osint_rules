@@ -1,6 +1,6 @@
 title: OSINT - Votiro Labs exposed a new hacking campaign targeting Vietnamese organisations
   using weaponized Word documents - dns_query
-id: c3d1b75c-d77e-4ed7-b408-654b799b5bc0
+id: 364aec45-35cb-48ea-851b-0090a404fd6b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -12,13 +12,13 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - dcsvn.org
     - dulichovietnam.net
+    - dcsvn.org
     IpAddresses:
     - 188.42.254.112
-    - 60.251.29.40
     - 176.223.165.165
     - 209.58.176.46
-    - 66.154.125.145
     - 209.58.179.202
+    - 60.251.29.40
+    - 66.154.125.145
   condition: attributes

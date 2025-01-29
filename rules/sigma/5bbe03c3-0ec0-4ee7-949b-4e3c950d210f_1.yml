@@ -1,5 +1,5 @@
 title: OSINT -  MuddyWater expands operations - url_request
-id: 82cba966-457e-4889-988d-5980aed8e480
+id: f552f712-88dd-48fc-9370-7ad708c13e2f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,19 +9,19 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.g0069
-- attack.t1193
 - attack.t1064
 - attack.group.muddywater
+- attack.group.g0069
+- attack.t1193
 detection:
   attributes:
     RequestUrl|contains:
-    - http://hubinasia.com
-    - https://benangin.com
-    - http://gtme.ae
-    - http://adibf.ae
-    - http://www.cankayasrc.com
     - https://securelist.com
     - https://www.adfg.ae
+    - http://www.cankayasrc.com
+    - http://hubinasia.com
+    - https://benangin.com
     - http://ektamservis.com
+    - http://adibf.ae
+    - http://gtme.ae
   condition: attributes

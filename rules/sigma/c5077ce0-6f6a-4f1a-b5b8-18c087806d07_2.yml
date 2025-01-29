@@ -1,6 +1,6 @@
 title: AA22-138B Threat Actors Chaining VMware Vulnerabilities for Full System Control
   - dns_query
-id: 6e75e7f4-ebbb-4173-a5a3-b648b4f13ab6
+id: 0073beb7-93cc-4ad2-af0e-b3944c384e49
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,44 +10,44 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1203
-- attack.t1560
-- attack.t1588.001
-- attack.t1068
-- attack.t1071.001
-- attack.t1222.002
-- attack.t1003.008
-- attack.t1573.001
 - attack.t1070.003
-- attack.t1505.003
-- attack.t1059.002
 - attack.t1090
+- attack.t1059.002
 - attack.t1105
+- attack.t1071.001
+- attack.t1003.008
+- attack.t1505.003
+- attack.t1588.001
+- attack.t1222.002
+- attack.t1560
+- attack.t1068
 - attack.t1059.004
+- attack.t1203
+- attack.t1573.001
 detection:
   attributes:
     QueryName|contains:
-    - 149.248.35.200.sslip.io
     - sslip.io
+    - 149.248.35.200.sslip.io
     IpAddresses:
-    - 51.79.171.53
-    - 194.31.98.141
-    - 20.232.97.189
-    - 160.20.145.225
-    - 45.72.112.245
-    - 83.84.74.155
-    - 172.94.89.112
-    - 100.14.239.83
-    - 192.241.67.12
-    - 186.233.187.245
-    - 191.102.179.197
-    - 149.248.35.200
-    - 212.227.198.95
-    - 136.243.75.136
-    - 115.167.53.141
-    - 45.72.85.172
-    - 209.127.110.126
     - 85.203.36.66
-    - 84.38.133.149
+    - 212.227.198.95
+    - 209.127.110.126
+    - 172.94.89.112
+    - 194.31.98.141
+    - 149.248.35.200
+    - 45.72.85.172
+    - 186.233.187.245
+    - 192.241.67.12
+    - 191.102.179.197
+    - 100.14.239.83
     - 8.45.41.114
+    - 51.79.171.53
+    - 115.167.53.141
+    - 20.232.97.189
+    - 84.38.133.149
+    - 83.84.74.155
+    - 160.20.145.225
+    - 136.243.75.136
+    - 45.72.112.245
   condition: attributes

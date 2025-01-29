@@ -1,6 +1,6 @@
 title: OSINT - Sigma Ransomware Being Distributed Using Fake Craigslist Malspam -
   process_creation
-id: 7196cf5e-3e11-4c2a-a2f1-9292e8b9f151
+id: 017def75-56e6-44ac-aff0-c7b5c698a5b4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,13 +10,13 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1193
 - attack.t1192
-- attack.t1204
-- attack.software.sigma_ransomware
-- attack.t1027
-- attack.group.sigma_ransomware
 - attack.t1064
+- attack.software.sigma_ransomware
+- attack.group.sigma_ransomware
+- attack.t1027
+- attack.t1193
+- attack.t1204
 detection:
   object_10070:
     sha256:

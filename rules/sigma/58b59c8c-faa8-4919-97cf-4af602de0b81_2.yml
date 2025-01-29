@@ -1,5 +1,5 @@
 title: OSINT - Android malware on the rise - dns_query
-id: 29ff9e45-4b38-4acc-a1f9-445ed5c1c0b2
+id: c5153f4d-6b1b-48f6-a02a-609ffac79207
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,16 +11,16 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - i-app4.online
     - dhl-tracking.online
-    - app01.at
-    - ap11.at
-    - app12.at
-    - i-app5.online
-    - alza-shop.online
-    - app-id3.online
     - i-app1.online
+    - app-id3.online
+    - ap11.at
+    - i-app5.online
+    - app12.at
+    - i-app4.online
+    - alza-shop.online
+    - app01.at
     IpAddresses:
-    - 132.148.73.154
     - 91.235.143.206
+    - 132.148.73.154
   condition: attributes

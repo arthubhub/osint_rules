@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-10-10 : Affid=3, offline, ".asasin" : "Document ... is complete"
   - "invoice_1234_sign_and_return.7z" - url_request'
-id: 6b3977fa-d2ef-4872-ab95-0a7abeabe6cb
+id: 7ad6cd3f-c160-4caf-b45e-8a5636df1113
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,20 +10,20 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://henweekendsbirmingham.co.uk
-    - http://shahanabiomedicals.com
-    - http://agrourbis.com
-    - http://xploramail.com
-    - http://likiihillschool.com
     - http://axtes.com
-    - http://test.sisap.ro
+    - http://likiihillschool.com
+    - http://shahanabiomedicals.com
     - http://dueeffepromotion.com
+    - http://test.sisap.ro
+    - http://agrourbis.com
     - http://deltasec.net
-    - http://nsaflow.info
+    - http://henweekendsbirmingham.co.uk
     - http://mastertenniscoach.com
+    - http://nsaflow.info
+    - http://xploramail.com
   condition: attributes

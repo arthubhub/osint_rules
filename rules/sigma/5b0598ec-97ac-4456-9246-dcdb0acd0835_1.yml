@@ -1,5 +1,5 @@
 title: 'Talos Blog: VPNFilter - url_request'
-id: 02a31ac0-0356-4166-a273-2615430d9f51
+id: 039f5922-c650-42c5-a024-e02c220b2707
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
@@ -12,8 +12,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://zuh3vcyskd4gipkm.onion
     - toknowall.com
-    - http://photobucket.com
     - https://blog.talosintelligence.com
+    - http://photobucket.com
+    - http://zuh3vcyskd4gipkm.onion
   condition: attributes

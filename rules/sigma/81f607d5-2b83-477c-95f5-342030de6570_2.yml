@@ -1,5 +1,5 @@
 title: Chinese Threat Actors Targeting Europe in SmugX Campaign - dns_query
-id: 6a98f94e-fca9-4735-8a5f-8c9984e759aa
+id: 3e27a4e6-95f1-4885-be2b-25a3f7969798
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,20 +10,20 @@ logsource:
   category: dns_query
 tags:
 - attack.group.reddelta
-- attack.group.mustang_panda
 - attack.group.g0129
+- attack.software.plugx
+- attack.group.mustang_panda
 - attack.software.reddelta
 - attack.group.plugx
-- attack.software.plugx
 detection:
   attributes:
     QueryName|contains:
-    - newsmailnet.com
     - jcswcd.com
+    - newsmailnet.com
     IpAddresses:
-    - 45.90.58.69
-    - 217.12.207.164
     - 152.152.12.12
+    - 45.90.58.69
     - 45.134.83.29
     - 62.233.57.136
+    - 217.12.207.164
   condition: attributes

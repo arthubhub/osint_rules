@@ -1,5 +1,5 @@
 title: Lokibot Equation Editor Sample - url_request
-id: 4a10c1e2-a4a2-4df8-a7ab-372e2be686fd
+id: 5a8578a5-f0fc-4f8a-95ec-699cbd3bfb23
 description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,14 +10,14 @@ logsource:
   category: url_request
 tags:
 - attack.software.loki_password_stealer_pws
-- attack.group.loki_password_stealer_pws
 - attack.software.lokibot
+- attack.group.loki_password_stealer_pws
 - attack.group.lokibot
 detection:
   attributes:
     RequestUrl|contains:
-    - https://wws.cert-ist.com
-    - https://laskowski-tech.com
-    - http://23.95.132.48
     - http://shgshg9nationalobjwsdyindustrialgoogler.duckdns.org
+    - http://23.95.132.48
+    - https://laskowski-tech.com
+    - https://wws.cert-ist.com
   condition: attributes

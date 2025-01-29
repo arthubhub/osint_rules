@@ -1,5 +1,5 @@
 title: Ransomware spreading through SMB attacking multiple companies - dns_query
-id: 2b13b034-feea-465d-916d-0132f8d72e29
+id: b82a4388-78d0-42c2-9d65-430168efcd7c
 description: edit this field when analysing or editing the rule - reported by "INCIBE"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,14 +10,14 @@ logsource:
   category: dns_query
 tags:
 - attack.software.wannacry
-- attack.software.eternalblue
 - attack.group.wannacry
+- attack.software.eternalblue
 detection:
   attributes:
     QueryName|contains:
-    - 76jdd2ir2embyv47.onion
-    - 57g7spgrzlojinas.onion
-    - xxlvbrloxvriy2c5.onion
     - cwwnhwhlz52maqm7.onion
+    - xxlvbrloxvriy2c5.onion
+    - 57g7spgrzlojinas.onion
+    - 76jdd2ir2embyv47.onion
     - gx7ekbenv2riucmf.onion
   condition: attributes

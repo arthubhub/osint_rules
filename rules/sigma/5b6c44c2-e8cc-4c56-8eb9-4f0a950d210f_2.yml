@@ -1,6 +1,6 @@
 title: OSINT -  Familiar Feeling A Malware Campaign Targeting the Tibetan Diaspora
   Resurfaces - dns_query
-id: d9d0cb17-1d77-452c-8ecc-2bcb4c496a21
+id: 5efcbeb8-831e-4245-80cb-53ce20ea9bd1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -42,17 +42,17 @@ detection:
     - 203.189.232.207
   attributes:
     QueryName|contains:
-    - daynew.today
-    - tibetnews.info
     - commail.co
-    - tibetnews.today
-    - tibethouse.info
-    - daynews.today
     - comemails.email
+    - tibethouse.info
+    - tibetnews.today
+    - daynews.today
+    - tibetnews.info
+    - daynew.today
     IpAddresses:
     - 115.126.86.151
     - 45.127.97.222
     - 203.189.232.207
-    - 27.126.186.222
     - 103.55.24.196
+    - 27.126.186.222
   condition: 1 of object_* or attributes

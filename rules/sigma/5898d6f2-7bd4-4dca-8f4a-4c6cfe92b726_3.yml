@@ -1,5 +1,5 @@
 title: Gamaredon Group (common notes from McAfee and other sources) - process_creation
-id: 47c4bce8-4574-490a-9819-8c57176b7d3c
+id: 23849cb3-7ca8-4b8b-a8a4-576aef8c01e3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,8 +9,8 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.g0047
 - attack.group.gamaredon_group
+- attack.group.g0047
 detection:
   object_7048:
     md5:
@@ -112,18 +112,18 @@ detection:
     - 436d2e6da753648cbf7b6b13f0dc855adf51c014e6a778ce1901f2e69bd16360
   attributes:
     md5:
-    - c2c1ecc75fd35bef590adce02bfe3a6e
-    - f69122c6f70990f75dc0886f0befaf5e
-    - c37c827c3d32f3ca56ea15a74e004bdf
-    - 04490fb43c9adbfdee9d7918e3db0af5
-    - 8e6a988814519656b90f109ac61ee84b
-    - 0199651f5aa4f89b90f1e9ced0f3dda5
-    - cd55737e61ea54f258c5fae807716b0f
-    - be75ac1d9f26bee3cfdc7bdd977c0cdd
-    - cc54d83d4d27fa74b5e7274345cae2be
     - 8c064e73325d96a12e8c6a32b0f61400
-    - fbc037e68f5988df9190cdadf7424752
-    - dc4cc7f6960cadd0a9b0881378452413
     - 5fa2bf7ae2665a8141f4cb76158efc3b
+    - fbc037e68f5988df9190cdadf7424752
+    - be75ac1d9f26bee3cfdc7bdd977c0cdd
+    - 8e6a988814519656b90f109ac61ee84b
+    - dc4cc7f6960cadd0a9b0881378452413
+    - 0199651f5aa4f89b90f1e9ced0f3dda5
+    - c2c1ecc75fd35bef590adce02bfe3a6e
+    - cd55737e61ea54f258c5fae807716b0f
+    - f69122c6f70990f75dc0886f0befaf5e
+    - cc54d83d4d27fa74b5e7274345cae2be
+    - 04490fb43c9adbfdee9d7918e3db0af5
+    - c37c827c3d32f3ca56ea15a74e004bdf
     - 7e0cad3d42f87fda2658dbee7af8f939
   condition: 1 of object_* or attributes

@@ -1,5 +1,5 @@
 title: OSINT Infected Korean Website Installs Banking Malware by Cyphort - url_request
-id: 0dcbb095-283a-4c04-bbe2-597a052b68d7
+id: 4a411e5a-48c2-45b6-9cf6-9cc984b9bbef
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,18 +11,18 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://142.0.137.67
-    - soriaudio.co.kr
-    - joara.com
-    - gomsee.com
-    - http://142.0.137.68
     - koreamanse.com
-    - insight.co.kr
-    - filecity.co.kr
-    - filehon.com
-    - hometax.go.kr
     - nggol.com
     - koreatimes.com
+    - gomsee.com
     - http://www.cyphort.com
     - lottoplay.co.kr
+    - insight.co.kr
+    - http://142.0.137.67
+    - filehon.com
+    - soriaudio.co.kr
+    - filecity.co.kr
+    - joara.com
+    - hometax.go.kr
+    - http://142.0.137.68
   condition: attributes

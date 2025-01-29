@@ -1,5 +1,5 @@
 title: OSINT - Making a Ransomware Payment? It May Now Violate U.S. Sanctions - url_request
-id: f94cc9c2-a615-4776-9165-4b15625bb658
+id: eae84c7e-8f5d-4b6e-b2ad-b5b581b33671
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.samas-samsam
+- attack.group.samsam
 - attack.software.samsam
 - attack.group.samas-samsam
-- attack.group.samsam
+- attack.software.samas-samsam
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.blockchain.com
     - https://www.bleepingcomputer.com
+    - https://www.blockchain.com
   condition: attributes

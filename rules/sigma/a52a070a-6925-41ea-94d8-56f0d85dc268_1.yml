@@ -1,5 +1,5 @@
 title: An Analysis of Infrastructure linked to the Hagga Threat Actor - url_request
-id: 75216be5-2075-47d6-9d48-b13f292abf2b
+id: 702b915d-bff7-4c33-9507-ab4f388a5f66
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1219
 - attack.t1571
+- attack.t1219
 detection:
   object_18075:
     RequestUrl|contains:
     - https://www.team-cymru.com
   attributes:
     RequestUrl|contains:
-    - heavy-dutyindustry.shop
     - newbotv4.monster
     - workflowstatus.live
+    - heavy-dutyindustry.shop
   condition: 1 of object_* or attributes

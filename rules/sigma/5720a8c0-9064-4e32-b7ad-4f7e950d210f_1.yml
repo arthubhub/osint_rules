@@ -1,6 +1,6 @@
 title: 'OSINT - RuMMS: The Latest Family of Android Malware Attacking Users in Russia
   Via SMS Phishing - url_request'
-id: 373e70f3-f7d3-4d21-a8a1-31269f4d615f
+id: 483621a1-69a5-4967-b12e-9b49f2442f40
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -12,9 +12,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - http://5.45.73.20
     - https://www.fireeye.com
     - http://5.45.75.4
-    - http://37.1.207.115
     - http://37.1.207.31
-    - http://5.45.73.20
+    - http://37.1.207.115
   condition: attributes

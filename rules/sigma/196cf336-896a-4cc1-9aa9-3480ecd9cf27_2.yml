@@ -1,6 +1,6 @@
 title: BatLoader Continues to Abuse Google Search Ads to Deliver Vidar Stealer and
   Ursnif - dns_query
-id: 13a72385-e2ef-4b02-9261-7e3a42f7abf3
+id: d9a19ef3-d126-49bb-aa7b-300d8bb6a3e3
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -11,44 +11,44 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1059
+- attack.t1064
+- attack.group.vidar
+- attack.software.s0386
 - attack.t1410
 - attack.software.vidar
 - attack.t1059.001
-- attack.group.vidar
-- attack.t1064
-- attack.software.s0386
 - attack.t1059.006
+- attack.t1059
 detection:
   attributes:
     QueryName|contains:
-    - isoridkf.ru
-    - anydesk-o.com
-    - chatgpt-t.com
-    - freecad-l.com
-    - shvarcnegerhistory.com
-    - adobe-a.com
-    - openoffice-a.com
-    - tableau-r.com
-    - microso-t.com
-    - spotify-uss.com
-    - adobe-l.com
-    - visualstudio-t.com
-    - basecamp-a.com
-    - pixelarmada.su
     - reggy914.ru
-    - jhgfdlkjhaoiu.su
-    - reggy506.ru
+    - adobe-a.com
+    - bitwarden-t.com
+    - anydesk-r.com
+    - microso-t.com
+    - tableau-r.com
+    - chatgpt-t.com
+    - uelcoskdi.ru
     - gimp-t.com
     - java-s.com
-    - bitwarden-t.com
-    - adobe-e.com
-    - anydesk-r.com
-    - java-r.com
-    - quickbooks-q.com
-    - uelcoskdi.ru
+    - adobe-l.com
     - iujdhsndjfks.ru
-    - zoomvideor.com
-    - gameindikdowd.ru
+    - anydesk-o.com
+    - shvarcnegerhistory.com
+    - basecamp-a.com
+    - adobe-e.com
+    - reggy506.ru
+    - java-r.com
     - java-a.com
+    - gameindikdowd.ru
+    - visualstudio-t.com
+    - freecad-l.com
+    - zoomvideor.com
+    - isoridkf.ru
+    - openoffice-a.com
+    - spotify-uss.com
+    - jhgfdlkjhaoiu.su
+    - pixelarmada.su
+    - quickbooks-q.com
   condition: attributes

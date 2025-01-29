@@ -1,5 +1,5 @@
 title: OSINT -  DNSpionage brings out the Karkoff - dns_query
-id: d6273a82-6dc6-4902-9bb3-d68a8fcd982e
+id: d622f47b-5b5a-4cd7-acfb-c0741cc7a3ca
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,16 +9,16 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.dnspionage
-- attack.software.dnspionage
 - attack.software.karkoff
+- attack.software.dnspionage
+- attack.group.dnspionage
 detection:
   attributes:
     QueryName|contains:
     - coldfart.com
-    - rimrun.com
     - kuternull.com
+    - rimrun.com
     IpAddresses:
-    - 74.118.138.192
     - 108.62.141.247
+    - 74.118.138.192
   condition: attributes

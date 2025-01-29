@@ -1,6 +1,6 @@
 title: OSINT Banking Trojan DRIDEX Uses Macros for Infection blog post from Trend
   Micro - url_request
-id: 5780e9aa-77ff-4275-aa2f-1768586d0afe
+id: 2502f613-8a38-4c1e-854f-e4087b2da593
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/01/29
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://malwr.com
-    - http://blog.trendmicro.com
     - http://www.trendmicro.com
+    - http://blog.trendmicro.com
+    - https://malwr.com
   condition: attributes

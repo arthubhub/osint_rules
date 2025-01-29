@@ -1,5 +1,5 @@
 title: '2019-01-25: Lazarus Pakistan Toolkits - process_creation'
-id: 87a85cc2-26ad-4a49-93f4-21ea243dd62c
+id: 3aba8203-21a5-41c5-aeaf-aa44410e081f
 description: edit this field when analysing or editing the rule - reported by "VK-Intel"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,10 +11,10 @@ logsource:
 tags:
 - attack.group.lazarus_group
 - attack.group.g0032
-- attack.group.powerratankba
-- attack.software.lazarus
 - attack.software.powerratankba
+- attack.software.lazarus
 - attack.group.lazarus
+- attack.group.powerratankba
 detection:
   object_6497:
     md5:
@@ -39,7 +39,7 @@ detection:
     - 18f0ad8c58558d6eb8129f32cbc2905d0b63822185506b7c3bca49d423d837c7
   attributes:
     md5:
+    - 5cc28f3f32e7274f13378a724a5ec33a
     - 2025d91c1cdd33db576b2c90ef4067c7
     - c9ed87e9f99c631cda368f6f329ee27e
-    - 5cc28f3f32e7274f13378a724a5ec33a
   condition: 1 of object_* or attributes

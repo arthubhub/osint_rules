@@ -1,5 +1,5 @@
 title: Nanocore 20210816 - process_creation
-id: 9f14ab9a-b4af-4ecf-a5e7-4e8bca79edff
+id: f39195e4-786f-4d56-8d31-6c80aae59c0b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,9 +9,9 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.nanocore_rat
-- attack.group.nanocore_rat
 - attack.software.nanocorerat
+- attack.group.nanocore_rat
+- attack.software.nanocore_rat
 detection:
   object_9471:
     md5:
@@ -43,14 +43,14 @@ detection:
     - afdcfeac16d321fef57c2aae9b001952544a53fc785ba78a6ad794a81bef0c05
   attributes:
     md5:
-    - d915f9f8421aa34dfd88d1595249f954
     - cab3529dc19b4c630163a24759125fd7
+    - d915f9f8421aa34dfd88d1595249f954
     sha1:
     - 716c942e237ebe40e5e0bf443bf2128e5a883197
     - ec958c2d48c6719238780878d1621b8af18c4b65
     sha256:
-    - 2a2c0a635beba215a9e3f21c398d684dc1d2ad487356e29140247b14f2c6838f
-    - afdcfeac16d321fef57c2aae9b001952544a53fc785ba78a6ad794a81bef0c05
     - 060dc5124e4d0f8869856b52016cbed32339b8ac456b8cb5fea50f628961fc73
     - 67b695b139106a73c333aa2fdd0f08ae160ff5ee38d843cb9999146ad605da73
+    - afdcfeac16d321fef57c2aae9b001952544a53fc785ba78a6ad794a81bef0c05
+    - 2a2c0a635beba215a9e3f21c398d684dc1d2ad487356e29140247b14f2c6838f
   condition: 1 of object_* or attributes

@@ -1,6 +1,6 @@
 title: 'M2M -  Locky Affid=3, ".asasin" 2017-11-01 : "Emailing: AZ123 - 01.11.2017"
   - "AZ123 - 01.11.2017.doc" - url_request'
-id: fb744095-734d-4b1a-a8d8-d5d18fe0f5ab
+id: 4dc29a8f-02b8-4eee-990f-1e147202a523
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,23 +10,23 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://3overpar.com
+    - http://lopezfranco.com
+    - http://fuettern24.de
+    - http://localesynavesalquiler.com
     - http://zahntechnik-imlau.de
     - http://first-paris-properties.com
-    - http://kvonline
-    - http://localesynavesalquiler.com
-    - http://heckhegrijus.net
-    - http://fuettern24.de
     - http://apply.pam-innovation.com
-    - http://mercurysound.es
-    - http://spooner-motorsport.com
-    - http://pciholog.ru
-    - http://3overpar.com
     - http://dvprojekt.hr
-    - http://lopezfranco.com
+    - http://mercurysound.es
+    - http://pciholog.ru
+    - http://spooner-motorsport.com
     - http://ist-profy.ru
+    - http://kvonline
+    - http://heckhegrijus.net
   condition: attributes

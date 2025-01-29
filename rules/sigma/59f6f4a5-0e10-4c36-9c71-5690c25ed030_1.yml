@@ -1,5 +1,5 @@
 title: Evasive Sage 2.2 Ransomware - url_request
-id: 58f272c5-3f90-4069-bf33-e9705229ffff
+id: 01ac7f6a-b159-4ece-9f59-e4e02daec229
 description: edit this field when analysing or editing the rule - reported by "CERT-RLP"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.sage_2.2
 - attack.software.sage_2.2
+- attack.group.sage_2.2
 detection:
   attributes:
     RequestUrl|contains:
-    - http://blog.fortinet.com
-    - http://indiasoujapa.info
-    - http://johnmoplan.top
-    - http://sutranjsdf.info
     - http://xxxkeyoplw.top
+    - http://sutranjsdf.info
+    - http://indiasoujapa.info
+    - http://blog.fortinet.com
     - http://mondayyesha.info
+    - http://johnmoplan.top
   condition: attributes

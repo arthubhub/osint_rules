@@ -1,6 +1,6 @@
 title: TinyTurla - Turla deploys new malware to keep a secret backdoor on victim machines
   - url_request
-id: 0ceb623a-5f3b-4f26-bb2f-318891253665
+id: 3f524d1d-8353-47f2-9bde-884e218c7ae1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,8 +10,8 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.g0010
 - attack.group.turla_group
+- attack.group.g0010
 detection:
   object_6602:
     RequestUrl|contains:

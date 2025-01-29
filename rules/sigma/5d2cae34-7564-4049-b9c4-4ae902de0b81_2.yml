@@ -1,5 +1,5 @@
 title: 'OSINT -  SWEED: Exposing years of Agent Tesla campaigns - dns_query'
-id: 5c95d8e6-b72b-409f-b81a-b65b053d6853
+id: 5d6a2560-3b25-431b-804e-23ac035b709f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,68 +9,68 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.s0331
-- attack.group.agent_tesla
 - attack.software.agent_tesla
+- attack.group.agent_tesla
+- attack.software.s0331
 detection:
   attributes:
     QueryName|contains:
-    - serec.us
-    - usarmy-mill.com
-    - zurieh.com
-    - aiaininsurance.com
-    - virdtech.com
-    - sukrltiv.com
-    - leocouriercompany.com
-    - repotc.com
-    - erieil.com
-    - cawus-coskunsu.com
-    - wlttraco.com
-    - oralbdentaltreatment.tk
-    - profbuiiders.com
-    - rsaqencies.com
-    - snapqata.com
-    - quycarp.com
-    - bwayachtng.com
-    - dougiasbarwick.com
-    - kayneslnterconnection.com
-    - cablsol.com
     - intermodaishipping.net
-    - willistoweswatson.com
-    - hybru.com
-    - blssleel.com
-    - supe-lab.com
-    - spedaqinterfreight.com
-    - aelna.com
-    - gufageneys.com
-    - catalanoshpping.com
-    - jltqroup.com
-    - sweeddehacklord.us
-    - sweed-viki.ru
-    - lnnovalues.com
-    - candqre.com
-    - kn-habour.com
-    - regionaitradeinspections.com
     - crosspoiimeri.com
-    - jyexports.com
-    - aidanube.com
-    - mglt-mea.com
-    - etqworld.com
-    - anernostat.com
-    - worldjaquar.com
-    - samhwansleel.com
-    - xlnya-cn.com
+    - erieil.com
     - zarpac.us
-    - evegreen-shipping.com
+    - zurieh.com
+    - gufageneys.com
+    - regionaitradeinspections.com
+    - willistoweswatson.com
+    - sweed-viki.ru
+    - jltqroup.com
+    - quycarp.com
+    - wlttraco.com
+    - candqre.com
+    - hybru.com
+    - jyexports.com
+    - sweeddehacklord.us
+    - blssleel.com
+    - bwayachtng.com
+    - supe-lab.com
+    - kayneslnterconnection.com
+    - aidanube.com
+    - cawus-coskunsu.com
+    - lnnovalues.com
+    - oralbdentaltreatment.tk
+    - aiaininsurance.com
     - mti-transt.com
+    - spedaqinterfreight.com
+    - snapqata.com
+    - repotc.com
+    - xlnya-cn.com
+    - virdtech.com
+    - rsaqencies.com
+    - catalanoshpping.com
+    - profbuiiders.com
+    - anernostat.com
+    - cablsol.com
+    - aelna.com
+    - leocouriercompany.com
+    - usarmy-mill.com
+    - mglt-mea.com
+    - worldjaquar.com
+    - evegreen-shipping.com
+    - samhwansleel.com
+    - sukrltiv.com
+    - kn-habour.com
+    - serec.us
+    - etqworld.com
+    - dougiasbarwick.com
     IpAddresses:
-    - 209.99.40.222
+    - 209.99.40.223
     - 198.54.125.61
     - 185.26.122.68
-    - 84.38.134.121
-    - 46.21.144.100
     - 151.80.88.242
     - 154.80.172.212
+    - 84.38.134.121
     - 208.91.197.91
-    - 209.99.40.223
+    - 209.99.40.222
+    - 46.21.144.100
   condition: attributes

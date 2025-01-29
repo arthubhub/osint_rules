@@ -1,5 +1,5 @@
 title: OSINT - Mobile Devices Used to Execute DNS Malware Against Home Routers - url_request
-id: 19137a84-a624-4b50-9bf6-4287a841e068
+id: 109ab3e1-acae-4f92-bc2c-81e68192966d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,8 +11,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - http://dns.tongjj.info
     - http://lib.tongjii.us
     - http://blog.trendmicro.com
     - http://cn.tongjii.us
-    - http://dns.tongjj.info
   condition: attributes

@@ -1,5 +1,5 @@
 title: Kinsing & Dark.IoT botnet among threats targeting CVE-2022-26134 - url_request
-id: deb57595-fea5-4806-97cc-cada69f72cc5
+id: a7927be2-eafc-45cc-8af8-db24ff743207
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.hezb
-- attack.software.s0599
-- attack.group.dark
-- attack.software.kinsing
 - attack.software.dark
+- attack.software.s0599
+- attack.software.kinsing
 - attack.group.kinsing
+- attack.group.hezb
+- attack.group.dark
 detection:
   object_16532:
     RequestUrl|contains:

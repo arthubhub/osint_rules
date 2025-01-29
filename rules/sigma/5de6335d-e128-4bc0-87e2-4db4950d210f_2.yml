@@ -1,6 +1,6 @@
 title: OSINT -  More than a Dozen Obfuscated APT33 Botnets Used for Extreme Narrow
   Targeting - dns_query
-id: 4fa754b9-988d-424a-b7f6-73420ba4521e
+id: df17f679-9af8-47f0-b9a7-a7b4ce359e30
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -79,15 +79,15 @@ detection:
     - 216.244.93.137
   attributes:
     QueryName|contains:
-    - oorgans.com
-    - zandelshop.com
-    - qualitweb.com
-    - simsoshop.com
-    - zeverco.com
-    - service-essential.com
-    - service-norton.com
-    - update-symantec.com
     - service-explorer.com
     - service-eset.com
+    - service-essential.com
+    - simsoshop.com
+    - zeverco.com
+    - zandelshop.com
+    - oorgans.com
+    - update-symantec.com
     - suncocity.com
+    - service-norton.com
+    - qualitweb.com
   condition: 1 of object_* or attributes

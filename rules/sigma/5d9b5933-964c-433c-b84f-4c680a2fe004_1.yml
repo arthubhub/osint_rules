@@ -1,5 +1,5 @@
 title: Emotet in Depth TTP 10-07-19 - url_request
-id: 0a5ca816-5c8d-4766-a0eb-70b3017a4b8a
+id: 8d5cee6e-f499-4b50-9b2d-36804199e7c2
 description: edit this field when analysing or editing the rule - reported by "MiSOC"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,38 +9,38 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1482
-- attack.t1193
-- attack.t1043
-- attack.t1059
-- attack.t1047
-- attack.t1086
-- attack.t1053
-- attack.software.emotet
-- attack.t1087
-- attack.t1071
-- attack.t1033
-- attack.software.s0154
-- attack.t1060
-- attack.software.s0363
-- attack.t1032
-- attack.t1050
-- attack.t1064
 - attack.t1055
+- attack.t1064
+- attack.t1043
+- attack.t1033
+- attack.t1047
+- attack.t1032
+- attack.software.s0363
+- attack.t1071
+- attack.t1060
+- attack.software.s0154
+- attack.t1053
+- attack.t1050
+- attack.t1086
+- attack.software.emotet
+- attack.t1193
+- attack.t1087
+- attack.t1482
+- attack.t1059
 detection:
   attributes:
     RequestUrl|contains:
     - http://dulich.goasiatravel.com
-    - http://142.44.162.209
-    - http://201.184.105.242
-    - http://104.131.11.150
-    - http://latestgovernment.com
     - http://45.123.3.54
-    - http://178.254.6.27
-    - https://edealsadvisor.com
     - https://drewnianazagroda.pl
-    - https://kurumsalinternetsitesi.com
-    - http://80.79.23.144
-    - https://github.com
     - http://192.254.173.31
+    - http://178.254.6.27
+    - http://latestgovernment.com
+    - https://kurumsalinternetsitesi.com
+    - https://edealsadvisor.com
+    - http://142.44.162.209
+    - https://github.com
+    - http://80.79.23.144
+    - http://104.131.11.150
+    - http://201.184.105.242
   condition: attributes

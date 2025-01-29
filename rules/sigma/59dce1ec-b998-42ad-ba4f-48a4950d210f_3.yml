@@ -1,6 +1,6 @@
 title: 'M2M -  Locky Affid=3, "asasin" / Trickbot "mac1" 2017-10-10 : "Status of invoice
   A2171234-56" - "A2171234-56.html" - process_creation'
-id: ba924f90-4ec3-47a1-9d89-8f175ed0400f
+id: 1f07d233-683d-46bf-a0bc-e2deea26ca0b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,18 +10,18 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.trick_bot
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
+- attack.software.trick_bot
 detection:
   attributes:
     md5:
-    - a85fa294fa2d4d48565cd78b4950695d
     - 554a8eabcb28deeb57d70a3c1d6c3a5d
+    - a85fa294fa2d4d48565cd78b4950695d
     sha1:
-    - 0db85dd510c03b3642bd7d1f214bade1a2574106
     - 47dde438bfb84ef917b8beadf5fde3f0f503c013
+    - 0db85dd510c03b3642bd7d1f214bade1a2574106
     sha256:
-    - 10bed3e54c61088d5dc0d1be55da154efbcb32130ebf228e446fc97f5787e7a0
     - aace7044f2f3cd7bb109a2e5d494ac86d952e0eaa13ce8d6abd7e4744f2ede10
+    - 10bed3e54c61088d5dc0d1be55da154efbcb32130ebf228e446fc97f5787e7a0
   condition: attributes

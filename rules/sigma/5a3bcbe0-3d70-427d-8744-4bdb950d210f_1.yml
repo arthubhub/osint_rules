@@ -1,5 +1,5 @@
 title: 'OSINT - DownAndExec: Banking malware utilizes CDNs in Brazil - url_request'
-id: 7c0ffc00-45a3-4734-9a48-588c52ad3b43
+id: 865db0bd-4848-4684-94b0-96d38a5cd8b9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - https://1402712571.rsc.cdn77.org
     - https://www.welivesecurity.com
     - https://1356485243.rsc.cdn77.org
-    - https://1402712571.rsc.cdn77.org
   condition: attributes

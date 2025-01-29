@@ -1,6 +1,6 @@
 title: '[TLP:WHITE] Joint CSA: North Korean State-Sponsored Cyber Actors Use Maui
   Ransomware to Target the Healthcare and Public Health Sector - process_creation'
-id: b5719ef7-b40e-4e77-b664-5e4b5763c021
+id: ae4c106a-c5af-488c-84c8-736bca1b0575
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,29 +10,29 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.maui_ransomware
 - attack.group.maui_ransomware
+- attack.software.maui_ransomware
 detection:
   object_8323:
     sha256:
     - 5b7ecf7e9d0715f1122baf4ce745c5fcd769dee48150616753fec4d6da16e99e
   attributes:
     md5:
-    - c50b839f2fc3ce5a385b9ae1c05def3a
-    - 4118d9adce7350c3eedeb056a3335346
-    - 2d02f5499d35a8dffb4c8bc0b7fec5c2
-    - a6e1efd70a077be032f052bb75544358
-    - a452a5f693036320b580d28ee55ae2a3
-    - 9b0e7c460a80f740d455a7521f0eada1
     - 802e7d6e80d7a60e17f9ffbd62fcbbeb
     - fda3a19afa85912f6dc8452675245d6b
+    - a6e1efd70a077be032f052bb75544358
+    - a452a5f693036320b580d28ee55ae2a3
+    - 4118d9adce7350c3eedeb056a3335346
+    - 9b0e7c460a80f740d455a7521f0eada1
+    - c50b839f2fc3ce5a385b9ae1c05def3a
+    - 2d02f5499d35a8dffb4c8bc0b7fec5c2
     sha256:
     - 3b9fe1713f638f85f20ea56fd09d20a96cd6d288732b04b073248b56cdaef878
-    - 5b7ecf7e9d0715f1122baf4ce745c5fcd769dee48150616753fec4d6da16e99e
-    - 99b0056b7cc2e305d4ccb0ac0a8a270d3fceb21ef6fc2eb13521a930cea8bd9f
-    - 56925a1f7d853d814f80e98a1c4890b0a6a84c83a8eded34c585c98b2df6ab19
-    - 458d258005f39d72ce47c111a7d17e8c52fe5fc7dd98575771640d9009385456
-    - 87bdb1de1dd6b0b75879d8b8aef80b562ec4fad365d7abbc629bcfc1d386afa6
-    - 830207029d83fd46a4a89cd623103ba2321b866428aa04360376e6a390063570
     - 45d8ac1ac692d6bb0fe776620371fca02b60cac8db23c4cc7ab5df262da42b78
+    - 458d258005f39d72ce47c111a7d17e8c52fe5fc7dd98575771640d9009385456
+    - 5b7ecf7e9d0715f1122baf4ce745c5fcd769dee48150616753fec4d6da16e99e
+    - 830207029d83fd46a4a89cd623103ba2321b866428aa04360376e6a390063570
+    - 56925a1f7d853d814f80e98a1c4890b0a6a84c83a8eded34c585c98b2df6ab19
+    - 87bdb1de1dd6b0b75879d8b8aef80b562ec4fad365d7abbc629bcfc1d386afa6
+    - 99b0056b7cc2e305d4ccb0ac0a8a270d3fceb21ef6fc2eb13521a930cea8bd9f
   condition: 1 of object_* or attributes

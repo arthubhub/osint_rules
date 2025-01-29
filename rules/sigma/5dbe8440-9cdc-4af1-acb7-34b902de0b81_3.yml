@@ -1,6 +1,6 @@
 title: OSINT - Chrome 0-day exploit CVE-2019-13720 used in Operation WizardOpium -
   process_creation
-id: 52772c6c-fd6f-4528-a581-0c850101b3b5
+id: 190b0ebc-606f-422f-b916-5682a3746257
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,16 +10,16 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1203
 - attack.group.operation_wizardopium
+- attack.t1203
 detection:
   attributes:
     md5:
+    - f614909fbd57ece81d00b01958338ec2
     - 8f3cd9299b2f241daf1f5057ba0b9054
     - 27e941683d09a7405a9e806cc7d156c9
-    - f614909fbd57ece81d00b01958338ec2
     sha256:
     - 8fb2558765cf648305493e1dfea7a2b26f4fc8f44ff72c95e9165a904a9a6a48
-    - 35373d07c2e408838812ff210aa28d90e97e38f2d0132a86085b0d54256cc1cd
     - cafe8f704095b1f5e0a885f75b1b41a7395a1c62fd893ef44348f9702b3a0deb
+    - 35373d07c2e408838812ff210aa28d90e97e38f2d0132a86085b0d54256cc1cd
   condition: attributes

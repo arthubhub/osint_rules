@@ -1,5 +1,5 @@
 title: "OSINT - A Look Into Fysbis: Sofacy\xE2\u20AC\u2122s Linux Backdoor - dns_query"
-id: ff917d7f-cfca-4b4e-ab73-00dd989a01b3
+id: 5b58580c-0cf8-4d68-a709-83928aa7ac4a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - mozillaplagins.com
-    - mozilla-plugins.com
     - azureon-line.com
+    - mozilla-plugins.com
+    - mozillaplagins.com
     IpAddresses:
     - 198.105.125.74
   condition: attributes

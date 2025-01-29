@@ -1,6 +1,6 @@
 title: "OSINT -  Threat Actor \xE2\u20AC\u0153Cold River\xE2\u20AC\x9D: Network Traffic\
   \ Analysis and a Deep Dive on Agent Drable - url_request"
-id: b6127a50-6e3c-4e35-926e-89c85f8acfba
+id: 1739e9ba-8d82-4fcf-9d36-7d219c6994cc
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -18,10 +18,10 @@ detection:
   attributes:
     RequestUrl|contains:
     - hr-suncor.com
-    - 0ffice36o.com
-    - https://crt.sh
-    - https://www.lastline.com
-    - microsoftonedrive.org
-    - files-sender.com
     - hr-wipro.com
+    - https://www.lastline.com
+    - https://crt.sh
+    - microsoftonedrive.org
+    - 0ffice36o.com
+    - files-sender.com
   condition: 1 of object_* or attributes

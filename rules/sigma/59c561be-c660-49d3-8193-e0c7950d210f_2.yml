@@ -1,6 +1,6 @@
 title: "M2M -  Locky: \"Invoice RE-2017-09-21-00xxx\"\tfrom \"Amazon Marketplace\"\
   \ - dns_query"
-id: 38e2544c-1d79-442e-93db-e6e24ba7e1c9
+id: afeab753-2517-49aa-8b9e-8c5350740662
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,20 +10,20 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     IpAddresses:
-    - 80.88.87.95
-    - 87.230.26.149
-    - 65.182.174.12
     - 178.255.99.134
     - 117.55.235.14
-    - 203.83.241.105
+    - 80.88.87.95
+    - 213.165.96.3
+    - 65.182.174.12
+    - 151.1.140.206
     - 85.236.207.83
     - 195.225.168.230
-    - 213.165.96.3
-    - 151.1.140.206
+    - 203.83.241.105
     - 185.4.135.15
+    - 87.230.26.149
   condition: attributes

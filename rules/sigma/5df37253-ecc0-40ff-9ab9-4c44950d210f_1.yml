@@ -1,5 +1,5 @@
 title: 'OSINT -  GALLIUM: Targeting global telecom - url_request'
-id: c715a9c7-e094-46d4-8e28-05ea57baa188
+id: f556f343-e689-43dd-8b32-36e33c3c1473
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,28 +9,28 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.s0012
-- attack.software.s0020
 - attack.software.htran
-- attack.software.windows_credential_editor
-- attack.software.netcat
-- attack.group.gallium
-- attack.software.poisonivy
-- attack.software.poison_ivy
-- attack.software.s0005
-- attack.software.nbtscan
-- attack.group.poison_ivy
-- attack.software.mimikatz
-- attack.software.s0029
 - attack.group.mimikatz
+- attack.software.s0012
 - attack.software.s0002
-- attack.software.psexec
-- attack.software.china_chopper
+- attack.group.poison_ivy
+- attack.software.s0029
+- attack.software.poison_ivy
+- attack.software.mimikatz
 - attack.group.htran
+- attack.software.china_chopper
 - attack.software.s0040
+- attack.software.nbtscan
+- attack.software.netcat
+- attack.software.psexec
+- attack.software.s0005
+- attack.group.gallium
+- attack.software.s0020
+- attack.software.poisonivy
+- attack.software.windows_credential_editor
 detection:
   attributes:
     RequestUrl|contains:
-    - https://github.com
     - https://www.microsoft.com
+    - https://github.com
   condition: attributes

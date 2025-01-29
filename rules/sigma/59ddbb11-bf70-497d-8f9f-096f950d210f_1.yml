@@ -1,6 +1,6 @@
 title: 'M2M -  Locky Affid=3, ".asasin"/Trickbot "mac1" 2017-10-05 : "Invoice INV0000123"
   - "Invoice INV0000123.7z" - url_request'
-id: 2770458c-a257-4bdd-88a7-23c591deb5cd
+id: 1f177462-78d3-4512-8f54-906322b52363
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,28 +10,28 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.trick_bot
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
+- attack.software.trick_bot
 detection:
   attributes:
     RequestUrl|contains:
     - http://logica-info.com
-    - http://yamanashi-jyujin.jp
-    - http://m-tensou.net
-    - http://estudiperceptiva.com
-    - http://qxr33qxr.com
-    - http://paulcruse.com
-    - http://nsaflow.info
-    - http://bjp.co.id
     - http://smi-wi.com
-    - http://mh-service.ru
-    - http://monstermx.com
-    - http://handhi.com
-    - http://hexacam.com
-    - http://centurythis.com
-    - http://mtblanc-let.co.uk
-    - http://bit-chasers.com
     - http://alucmuhendislik.com
+    - http://estudiperceptiva.com
+    - http://handhi.com
+    - http://m-tensou.net
+    - http://hexacam.com
+    - http://mh-service.ru
+    - http://bjp.co.id
+    - http://bit-chasers.com
+    - http://nsaflow.info
     - http://suncoastot.com
+    - http://monstermx.com
+    - http://mtblanc-let.co.uk
+    - http://paulcruse.com
+    - http://qxr33qxr.com
+    - http://centurythis.com
+    - http://yamanashi-jyujin.jp
   condition: attributes

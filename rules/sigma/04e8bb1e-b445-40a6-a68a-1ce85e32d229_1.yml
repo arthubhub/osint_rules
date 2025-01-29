@@ -1,5 +1,5 @@
 title: QUARTERRIG - Malware Analysis Report - url_request
-id: 5bf73a6e-d972-4812-bb8a-6d18e00a88c1
+id: 72b088e1-2e99-4d40-8822-532aa37f9e5c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,20 +9,20 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1547.001
-- attack.t1574.001
 - attack.t1583.003
-- attack.t1027.006
+- attack.t1566.001
+- attack.t1553.005
+- attack.t1574.001
 - attack.t1574.002
 - attack.t1566
-- attack.t1204
-- attack.t1566.001
+- attack.t1027.006
 - attack.software.quarterrig
-- attack.t1566.002
-- attack.t1553.005
+- attack.t1584
 - attack.t1204.002
 - attack.t1140
-- attack.t1584
+- attack.t1566.002
+- attack.t1547.001
+- attack.t1204
 detection:
   object_16944:
     RequestUrl|contains:

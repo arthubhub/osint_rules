@@ -1,5 +1,5 @@
 title: OSINT - Indicators of Compromise for Malware used by APT28 - url_request
-id: fc55e952-a36a-4c2e-a7b1-c804144164ad
+id: 65c4612b-f616-4544-9522-652daa940ed6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,39 +9,39 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.group.sofacy
+- attack.group.strontium
 - attack.software.x-agent
 - attack.software.x-tunnel
-- attack.group.strontium
-- attack.group.sofacy
 detection:
   attributes:
     RequestUrl|contains:
-    - politicweekend.com
-    - coindmarket.com
-    - beststreammusic.com
-    - fundseats.com
-    - iboxmit.com
-    - daysheduler.org
+    - thepiratecinemaclub.org
+    - georgia-travel.org
+    - moldtravelgroup.com
+    - worldimagebucket.com
     - bbcweather.org
     - narrowpass.net
-    - topcinemaclub.com
-    - thepiratecinemaclub.org
-    - powernoderesources.com
-    - creekcounty.net
-    - escochart.com
-    - globaltechengineers.org
-    - genericnetworkaddress.com
-    - https://www.ncsc.gov.uk
-    - malaytravelgroup.com
-    - virtsvc.com
-    - truefashionnews.com
-    - bulgariatripholidays.com
-    - moderntips.org
-    - moldtravelgroup.com
-    - georgia-travel.org
-    - protonhardstorage.com
-    - worldimagebucket.com
+    - fundseats.com
+    - coindmarket.com
     - pointtk.com
-    - loungecinemaclub.com
+    - https://www.ncsc.gov.uk
+    - politicweekend.com
+    - creekcounty.net
+    - bulgariatripholidays.com
+    - daysheduler.org
+    - genericnetworkaddress.com
+    - powernoderesources.com
     - brownvelocity.org
+    - globaltechengineers.org
+    - virtsvc.com
+    - loungecinemaclub.com
+    - beststreammusic.com
+    - iboxmit.com
+    - truefashionnews.com
+    - protonhardstorage.com
+    - malaytravelgroup.com
+    - escochart.com
+    - moderntips.org
+    - topcinemaclub.com
   condition: attributes

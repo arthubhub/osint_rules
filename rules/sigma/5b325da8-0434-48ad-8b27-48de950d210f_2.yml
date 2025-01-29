@@ -1,6 +1,6 @@
 title: 'OSINT - RANCOR: Targeted Attacks in South East Asia Using PLAINTEE and DDKONG
   Malware Families - dns_query'
-id: 8999474c-00bc-488a-96e5-c36d87426990
+id: 832cab4a-309f-4a9b-bb61-c17a9348c7a5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,9 +10,9 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1193
 - attack.group.rancor
 - attack.software.khrat
+- attack.t1193
 detection:
   object_797:
     QueryName|contains:
@@ -21,12 +21,12 @@ detection:
     - 89.46.222.97
   attributes:
     IpAddresses:
-    - 103.75.189.74
-    - 45.76.176.236
-    - 103.75.191.177
     - 131.153.48.146
-    - 45.121.146.26
-    - 89.46.222.97
     - 199.247.6.253
+    - 45.121.146.26
+    - 45.76.176.236
+    - 103.75.189.74
     - 103.75.191.75
+    - 103.75.191.177
+    - 89.46.222.97
   condition: 1 of object_* or attributes

@@ -1,5 +1,5 @@
 title: OSINT Tibetan Uprising Day Malware Attacks by Citizen Labs - dns_query
-id: 4f702006-a028-4003-a591-f54e506859f6
+id: a3b40110-6bfa-4429-b14c-739e71c00918
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,12 +11,12 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - convmail.info
     - semamail.info
     - conamail.info
-    - convmail.info
     - fifamp3.info
     IpAddresses:
+    - 23.27.127.200
     - 122.10.117.152
     - 122.10.117.5
-    - 23.27.127.200
   condition: attributes

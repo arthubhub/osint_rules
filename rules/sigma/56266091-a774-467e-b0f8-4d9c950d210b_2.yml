@@ -1,6 +1,6 @@
 title: "OSINT Pay No Attention to the Server Behind the Proxy: Mapping FinFisher\xE2\
   \u20AC\u2122s Continuing Proliferation by Citizen Lab - dns_query"
-id: 67150d62-61ee-4af5-8a5d-df857b0501f0
+id: 5b0c2a2f-149c-4402-a6ef-232dba23ffe9
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/01/29
@@ -12,23 +12,23 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - shop8d.net
     - pal2me.net
-    - pal4u.net
-    - to70.org
-    - verify-login.net
-    - uae.kim
-    - workingulf.net
     - news-youm7.com
+    - shop8d.net
+    - workingulf.net
+    - pal4u.net
+    - uae.kim
+    - verify-login.net
+    - to70.org
     IpAddresses:
-    - 172.227.95.162
-    - 131.72.136.28
-    - 192.161.48.59
-    - 200.74.241.111
     - 37.123.112.169
-    - 212.59.240.98
+    - 131.72.136.28
     - 37.123.112.5
-    - 23.229.3.37
-    - 162.220.246.117
     - 198.105.125.158
+    - 162.220.246.117
+    - 192.161.48.59
+    - 172.227.95.162
+    - 23.229.3.37
+    - 200.74.241.111
+    - 212.59.240.98
   condition: attributes

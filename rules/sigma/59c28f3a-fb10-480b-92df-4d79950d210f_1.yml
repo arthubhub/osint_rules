@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-09-20 : Affid=3, offline, ".ykcol" : "Status of invoice
   A2171234-56" - "A2171234-56.rar" - url_request'
-id: 4e04647d-f86e-4f46-8201-773cc980a3c0
+id: 79406504-991b-4f9e-9fe5-08ae0ed2c5ea
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,19 +10,19 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://68.171.49.151
+    - http://mariamandrioli.com
+    - http://digiviews.co.uk
+    - http://ryterorrephat.info
+    - http://hellonwheelsthemovie.com
     - http://hard-grooves.com
     - http://wilvreeburg.nl
-    - http://mariamandrioli.com
-    - http://rockrak.com
-    - http://68.171.49.151
-    - http://ryterorrephat.info
     - http://viwa.homelinux.com
-    - http://hellonwheelsthemovie.com
     - http://pyefittedfurniture.co.uk
-    - http://digiviews.co.uk
+    - http://rockrak.com
   condition: attributes

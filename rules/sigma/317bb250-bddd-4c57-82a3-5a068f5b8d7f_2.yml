@@ -1,5 +1,5 @@
 title: 'CISA - AA24-242A #StopRansomware: RansomHub Ransomware - dns_query'
-id: b2ec1b55-5080-4811-9596-a2376a520d9d
+id: dc4455dd-a01f-439f-b862-6c8c8f09f4b5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,24 +9,24 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.ransomhub
-- attack.group.ransomhub
-- attack.software.cyclops
 - attack.group.cyclops
-- attack.software.knight
 - attack.group.knight
+- attack.group.ransomhub
+- attack.software.ransomhub
+- attack.software.cyclops
+- attack.software.knight
 detection:
   attributes:
     QueryName|contains:
     - samuelelena.co
     IpAddresses:
-    - 45.95.67.41
-    - 188.34.188.7
-    - 45.134.140.69
-    - 89.23.96.203
-    - 8.211.2.97
-    - 193.233.254.21
-    - 193.124.125.78
     - 193.106.175.107
+    - 45.95.67.41
+    - 193.124.125.78
+    - 188.34.188.7
+    - 193.233.254.21
+    - 8.211.2.97
+    - 89.23.96.203
     - 45.135.232.2
+    - 45.134.140.69
   condition: attributes

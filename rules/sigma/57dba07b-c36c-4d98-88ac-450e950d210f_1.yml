@@ -1,5 +1,5 @@
 title: 'Malspam 2016-09-16 (.js in .zip) - campaign: "Re: request" - url_request'
-id: e3ad8235-9817-4291-a953-06ce1a13e61b
+id: 10e490b2-00d8-46b9-a2d6-e5e5aba21bf5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,10 +11,10 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - bulkreasy.com
     - http://bulkreasy.com
     - http://maggycocoa.net
     - yerndrunk.net
-    - bulkreasy.com
-    - http://yerndrunk.net
     - maggycocoa.net
+    - http://yerndrunk.net
   condition: attributes

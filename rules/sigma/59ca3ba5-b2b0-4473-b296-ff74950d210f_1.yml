@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-09-26 : Affid=3, offline, ".ykcol":"INVOICE" - "A1234567890.7z"
   - url_request'
-id: 3d9d35e3-6254-47b9-8852-c95c521a6864
+id: b652b6cd-32d3-4bff-a926-f1c969dac52a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,21 +10,21 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://boetsebiltong.co.za
+    - http://bsfotodesign.com
+    - http://bodywork-sf.net
     - http://brendo.biz
     - http://bredabeckerle.com
-    - http://bodywork-sf.net
-    - http://boetsebiltong.co.za
+    - http://playbrief.info
     - http://brascopperchile.cl
     - http://cadsangiorgio.com
-    - http://playbrief.info
+    - http://caldas-cca.com
     - http://bouwpartnerzaagenschaaf.nl
     - http://brand-online.eu
-    - http://caldas-cca.com
     - http://broadcastaudiodevices.com
-    - http://bsfotodesign.com
   condition: attributes

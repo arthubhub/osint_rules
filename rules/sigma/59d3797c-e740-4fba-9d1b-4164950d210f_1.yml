@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-10-03 : Affid=3, offline, ".ykcol" : "INVOICE" - "A_1234567890.7z"
   - url_request'
-id: 907f879e-ff86-4a30-9fb8-df103bb09fae
+id: 0d798f33-3198-41bf-a7b0-c4765014b171
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,23 +10,23 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://3overpar.com
+    - http://enixgaming.de
+    - http://aimonino.info
+    - http://crack-attack.net
+    - http://bridleridgehorses.com
+    - http://pesonamas.co.id
+    - http://jtpsolutions.com.au
     - http://fbl.com.sg
     - http://bibtic.net
-    - http://aimonino.info
-    - http://enixgaming.de
-    - http://kitami-ansin.com
-    - http://bridleridgehorses.com
-    - http://embutidosanezcar.com
     - http://basedow-bilder.de
-    - http://crack-attack.net
-    - http://charter-base.de
-    - http://jtpsolutions.com.au
-    - http://pesonamas.co.id
     - http://debralittleart.com
-    - http://3overpar.com
+    - http://charter-base.de
+    - http://kitami-ansin.com
+    - http://embutidosanezcar.com
   condition: attributes

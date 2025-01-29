@@ -1,5 +1,5 @@
 title: OSINT - 2018-10-09 - HANCITOR INFECTION WITH ZEUS PANDA BANKER - dns_query
-id: 04389855-37f1-40b0-95ca-a7da6a0346be
+id: 3384a45a-960a-49ca-9668-1b032a0f7b38
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,34 +9,34 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1022
-- attack.t1193
-- attack.t1041
 - attack.t1056
+- attack.t1022
+- attack.t1041
+- attack.t1193
 detection:
   object_6482:
     IpAddresses:
     - 46.36.220.116
   attributes:
     QueryName|contains:
-    - genesisofindiana.com
-    - sellittooxmoor.com
-    - genesisatoxmoor.com
-    - oxmoorusedcars.com
+    - selltooxmoor.com
     - genesiseastlouisville.com
-    - 275aacaa1610.net
-    - genesisofeaslouisville.com
     - nobotanri.ru
-    - carvanamemphis.com
-    - hehenforfi.ru
+    - genesisofindiana.com
     - carvanadenver.com
     - sincirewdo.ru
-    - genesisofwestlouisville.com
-    - veintitna.ru
-    - hersjustretleft.ru
+    - hehenforfi.ru
+    - carvanamemphis.com
     - 275aacaa1698.net
-    - selltooxmoor.com
-    - fornetodu.com
-    - lachistontfi.ru
+    - hersjustretleft.ru
+    - oxmoorusedcars.com
+    - sellittooxmoor.com
     - carvananashville.com
+    - veintitna.ru
+    - fornetodu.com
+    - genesisofeaslouisville.com
+    - lachistontfi.ru
+    - genesisatoxmoor.com
+    - 275aacaa1610.net
+    - genesisofwestlouisville.com
   condition: 1 of object_* or attributes

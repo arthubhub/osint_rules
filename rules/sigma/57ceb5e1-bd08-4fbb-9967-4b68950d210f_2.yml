@@ -1,5 +1,5 @@
 title: 'Malspam 2016-09-06 (.wsf in .zip) - campaign: "Invoice INV[x]" - dns_query'
-id: a8621dda-7363-462a-baca-f52ff508b9df
+id: b59d8be3-67c2-4af7-aa20-31f9b81a58b3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -11,19 +11,19 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - tst-technik.de
-    - bostoncittyregenerww.com
     - alians-ekb.ru
+    - tst-technik.de
     - sp-moto.ru
+    - bostoncittyregenerww.com
     IpAddresses:
-    - 85.12.197.61
-    - 188.120.235.214
-    - 186.202.126.199
+    - 200.83.4.62
+    - 208.71.106.48
     - 81.196.20.134
     - 213.205.40.169
-    - 200.83.4.62
-    - 23.95.106.213
-    - 88.156.222.94
-    - 208.71.106.48
     - 81.24.34.9
+    - 23.95.106.213
+    - 186.202.126.199
+    - 85.12.197.61
+    - 188.120.235.214
+    - 88.156.222.94
   condition: attributes

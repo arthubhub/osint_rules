@@ -1,5 +1,5 @@
 title: OSINT - Spam Warns about Boeing 737 Max Crashes While Pushing Malware - url_request
-id: d1fc0cd2-0a3f-4c17-9a13-ea3b85b86c77
+id: c93b7065-337d-4722-99db-ad86d389e7d7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,19 +9,19 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.adwind
-- attack.software.h-worm
-- attack.software.h-w0rm
 - attack.software.adwind
-- attack.software.adwind_rat
 - attack.software.s0283
+- attack.group.adwind
+- attack.software.h-w0rm
+- attack.software.h-worm
+- attack.software.adwind_rat
 detection:
   object_16446:
     RequestUrl|contains:
     - https://twitter.com
   attributes:
     RequestUrl|contains:
-    - brothersjoy.nl
-    - pm2bitcoin.com
     - https://www.bleepingcomputer.com
+    - pm2bitcoin.com
+    - brothersjoy.nl
   condition: 1 of object_* or attributes

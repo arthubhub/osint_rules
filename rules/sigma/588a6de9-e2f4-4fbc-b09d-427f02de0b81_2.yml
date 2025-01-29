@@ -1,6 +1,6 @@
 title: "OSINT - EITest Nabbing Chrome Users with a \xE2\u20AC\u0153Chrome Font\xE2\
   \u20AC\x9D Social Engineering Scheme - dns_query"
-id: 3f68832e-3297-4884-84cb-971ae907ca8a
+id: 1b425bb3-0dd3-4dd1-952e-973246354377
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -12,23 +12,23 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - techgnews.com
+    - vidvi.cf
     - starrer.com
-    - twittertravels.com
     - e5b57288.com
     - 9507c4e8.com
-    - shareyourfashion.net
-    - techgnews.com
-    - 54dfa1cb.com
+    - twittertravels.com
     - 33db9538.com
+    - shareyourfashion.net
     - askcom.me
-    - vidvi.cf
+    - 54dfa1cb.com
     IpAddresses:
     - 198.37.112.248
-    - 209.126.103.104
     - 173.224.124.110
-    - 31.184.192.163
-    - 209.126.118.146
+    - 209.126.123.39
     - 48.251.102.176
     - 209.239.115.50
-    - 209.126.123.39
+    - 209.126.118.146
+    - 31.184.192.163
+    - 209.126.103.104
   condition: attributes

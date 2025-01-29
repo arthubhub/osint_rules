@@ -1,5 +1,5 @@
 title: OSINT- WinRAR Zero-day (CVE-2018-20250) Abused in Multiple Campaigns - process_creation
-id: a6c1450e-b244-439f-bca3-30f830381dc5
+id: f39bbc71-482f-4065-8fd9-e3b2bab0c560
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.s0198
-- attack.software.razy
-- attack.software.s0262
-- attack.group.azorult
-- attack.software.quasar_rat
 - attack.group.razy
 - attack.software.azorult
-- attack.group.quasar_rat
+- attack.software.quasar_rat
+- attack.group.azorult
 - attack.software.netwire
+- attack.group.quasar_rat
+- attack.software.s0262
+- attack.software.razy
+- attack.software.s0198
 detection:
   object_7339:
     md5:

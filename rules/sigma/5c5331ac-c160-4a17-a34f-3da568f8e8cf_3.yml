@@ -1,5 +1,5 @@
 title: '2019-01-31: ISFB v2 Installs Dridex "3101" - process_creation'
-id: 977b101f-98a7-4a06-9fc3-b2cb8f8a236c
+id: 324fb4b1-f221-48dc-a8df-672f1381a7fc
 description: edit this field when analysing or editing the rule - reported by "VK-Intel"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,14 +9,14 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.dridex
 - attack.group.dridex
+- attack.software.dridex
 detection:
   attributes:
     md5:
-    - 80c732191c362d74f1bad004335e4432
-    - 96deee3639b433eedebbbbc15ee56787
     - d987c99fb2afc70bf0df8e05216da356
+    - 80c732191c362d74f1bad004335e4432
     - d81e207b6ab5630b9f77b8ef383d9adc
+    - 96deee3639b433eedebbbbc15ee56787
     - dc0cf61f5118914e13699fc94419815a
   condition: attributes

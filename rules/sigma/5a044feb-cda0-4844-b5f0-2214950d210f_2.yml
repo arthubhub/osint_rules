@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-11-03 : Affid=3, offline, ".asasin" : "Scanned image from
   MX-2600N" - "20171103_123456.doc" - dns_query'
-id: 4e1349c0-5f9c-446a-8558-f7f384aca29e
+id: 18c1f50d-32b8-4976-b756-89cd5964e623
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -10,19 +10,19 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     IpAddresses:
-    - 212.223.152.138
-    - 85.25.242.138
-    - 41.72.154.151
     - 219.94.169.237
-    - 50.21.229.37
-    - 212.220.124.233
-    - 27.254.148.14
-    - 5.135.178.149
-    - 77.243.131.16
     - 31.47.74.202
+    - 5.135.178.149
+    - 50.21.229.37
+    - 27.254.148.14
+    - 85.25.242.138
+    - 212.223.152.138
+    - 77.243.131.16
+    - 41.72.154.151
+    - 212.220.124.233
   condition: attributes

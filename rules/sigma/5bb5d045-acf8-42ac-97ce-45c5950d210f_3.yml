@@ -1,5 +1,5 @@
 title: OSINT - Indicators of Compromise for Malware used by APT28 - process_creation
-id: 3d2142a2-7935-4ac6-910b-439ce19250ed
+id: 63ec162d-905c-4f2a-9b51-5d8b3aaaf560
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,10 +9,10 @@ logsource:
   product: windows
   category: process_creation
 tags:
+- attack.group.sofacy
+- attack.group.strontium
 - attack.software.x-agent
 - attack.software.x-tunnel
-- attack.group.strontium
-- attack.group.sofacy
 detection:
   object_9771:
     md5:
@@ -86,15 +86,15 @@ detection:
     - a6576282d17cca390e35306a423dcb5ac9276c28eaba63f74001757edc3688df
   attributes:
     md5:
-    - 5086989639aed17227b8d6b041ef3163
     - 8dbe37dfb0d498f96fb7f1e09e9e5c8f
+    - 5086989639aed17227b8d6b041ef3163
     sha1:
-    - 046a8adc2ef0f68107e96babc59f41b6f0a57803
-    - fa695e88c87843ca0ba9fc04b176899ff90e9ac5
     - d70db6a6d660aae58ccfc688a2890391fd873bfb
-    - b758c7775d9bcdc0473fc2e738b32f05b464b175
+    - 046a8adc2ef0f68107e96babc59f41b6f0a57803
     - c53930772beb2779d932655d6c3de5548810af3d
     - 3e7dfe9a8d5955a825cb51cb6eec0cd07c569b41
+    - fa695e88c87843ca0ba9fc04b176899ff90e9ac5
+    - b758c7775d9bcdc0473fc2e738b32f05b464b175
     - 913ac13ff245baeff843a99dc2cbc1ff5f8c025c
     - 46e2957e699fae6de1a212dd98ba4e2bb969497d
   condition: 1 of object_* or attributes

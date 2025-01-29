@@ -1,5 +1,5 @@
 title: 'OSINT - Maktub ransomware: possibly rebranded as Iron - url_request'
-id: 525c8315-684a-4383-9a8a-e88891e8bf4a
+id: b71de5b3-3f7e-4d20-8e7b-393cc47a14ba
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/01/29
@@ -9,11 +9,11 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.maktublocker
 - attack.software.maktublocker
+- attack.group.maktublocker
 detection:
   attributes:
     RequestUrl|contains:
-    - http://y5mogzal2w25p6bn.ml
     - https://bartblaze.blogspot.lu
+    - http://y5mogzal2w25p6bn.ml
   condition: attributes
