@@ -1,16 +1,16 @@
 title: OSINT - New Arena Crysis Ransomware Variant Released - url_request
-id: cee9ef87-062b-4192-9208-7875179e0384
+id: ec2c8e51-6283-45dc-aaf2-2a2ada202d0a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59a3d08d-5dc8-4153-bc7c-456d950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.dharma_ransomware
 - attack.software.dharma_ransomware
+- attack.group.dharma_ransomware
 detection:
   attributes:
     RequestUrl|contains:

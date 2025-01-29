@@ -1,20 +1,20 @@
 title: OSINT - NGate Android malware relays NFC traffic to steal cash - dns_query
-id: 14b30255-a9a1-433c-8185-fedeac5f9bd5
+id: 85c9c776-5efb-4b71-bac0-92d6b80f36da
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/3594b211-1c7c-4e20-8c85-62564c2e7267.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1426
-- attack.t1509
-- attack.t1437.001
 - attack.t1644
-- attack.t1417.002
+- attack.t1437.001
+- attack.t1509
 - attack.t1660
+- attack.t1417.002
+- attack.t1426
 detection:
   object_18111:
     QueryName|contains:

@@ -1,30 +1,30 @@
 title: OSINT - McAfee Uncovers Operation Honeybee, a Malicious Document Campaign Targeting
   Humanitarian Aid Groups - process_creation
-id: 5f322b7b-3801-45be-b42f-35efb5998215
+id: ba9284ca-5a8d-4e99-832c-3287d0f463c7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a9c4472-55e8-4734-b23b-401702de0b81.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.file_deletion
-- attack.code_signing
-- attack.data_from_local_system
-- attack.deobfuscate_or_decode_files_or_information
 - attack.data_encrypted
-- attack.service_execution
-- attack.modify_existing_service
-- attack.system_information_discovery
-- attack.scripting
-- attack.command-line_interface
-- attack.process_discovery
-- attack.automated_exfiltration
 - attack.bypass_user_account_control
 - attack.rundll32
 - attack.commonly_used_port
+- attack.system_information_discovery
+- attack.modify_existing_service
+- attack.process_discovery
+- attack.service_execution
+- attack.data_from_local_system
+- attack.file_deletion
+- attack.deobfuscate_or_decode_files_or_information
+- attack.code_signing
+- attack.scripting
+- attack.automated_exfiltration
+- attack.command-line_interface
 detection:
   object_14:
     md5:
@@ -189,27 +189,27 @@ detection:
     - 42a782d342fb70169b07a5c2be054af49f88ffa92d04243b070b5b939eaa4465
   attributes:
     sha1:
-    - f684e15dd2e84bac49ea9b89f9b2646dc32a2477
-    - 0e4a7c0242b98723dc2b8cce1fbf1a43dd025cf0
-    - 7113aaab61cacb6086c5531a453adf82ca7e7d03
-    - d41daba0ebfa55d0c769ccfc03dbf6a5221e006a
-    - 1dc50bfcab2bc80587ac900c03e23afcbe243f64
-    - f3b62fea38cb44e15984d941445d24e6b309bc7b
-    - 66d2cea01b46c3353f4339a986a97b24ed89ee18
-    - 5a6ad7a1c566204a92dd269312d1156d51e61dc4
-    - bca861a46d60831a3101c50f80a6d626fa99bf16
-    - 85e2453b37602429596c9681a8c58a5c6faf8d0c
-    - 01530adb3f947fabebae5d9c04fb69f9000c3cef
-    - e87de3747d7c12c1eea9e73d3c2fb085b5ae8b42
-    - 4c7e975f95ebc47423923b855a7530af52977f57
-    - 1d280a77595a2d2bbd36b9b5d958f99be20f8e06
-    - 35ab747c15c20da29a14e8b46c07c0448cef4999
-    - 19d9573f0b2c2100accd562cc82d57adb12a57ec
-    - 003e21b02be3248ff72cc2bfcd05bb161b6a2356
-    - 9b7c3c48bcef6330e3086de592b3223eb198744a
-    - 25f4819e7948086d46df8de2eeeaa2b9ec6eca8c
     - fe32d29fa16b1b71cd27b23a78ee9f6b7791bff3
-    - 9b832dda912cce6b23da8abf3881fcf4d2b7ce09
     - 4229896d61a5ad57ed5c247228606ce62c7032d0
+    - 7113aaab61cacb6086c5531a453adf82ca7e7d03
+    - e87de3747d7c12c1eea9e73d3c2fb085b5ae8b42
+    - f3b62fea38cb44e15984d941445d24e6b309bc7b
+    - 9b832dda912cce6b23da8abf3881fcf4d2b7ce09
+    - 5a6ad7a1c566204a92dd269312d1156d51e61dc4
+    - 9b7c3c48bcef6330e3086de592b3223eb198744a
     - f90a2155ac492c3c2d5e1d83e384e1a734e59cc0
+    - bca861a46d60831a3101c50f80a6d626fa99bf16
+    - 01530adb3f947fabebae5d9c04fb69f9000c3cef
+    - 1dc50bfcab2bc80587ac900c03e23afcbe243f64
+    - 0e4a7c0242b98723dc2b8cce1fbf1a43dd025cf0
+    - 003e21b02be3248ff72cc2bfcd05bb161b6a2356
+    - 35ab747c15c20da29a14e8b46c07c0448cef4999
+    - 25f4819e7948086d46df8de2eeeaa2b9ec6eca8c
+    - 66d2cea01b46c3353f4339a986a97b24ed89ee18
+    - 85e2453b37602429596c9681a8c58a5c6faf8d0c
+    - 4c7e975f95ebc47423923b855a7530af52977f57
+    - f684e15dd2e84bac49ea9b89f9b2646dc32a2477
+    - d41daba0ebfa55d0c769ccfc03dbf6a5221e006a
+    - 1d280a77595a2d2bbd36b9b5d958f99be20f8e06
+    - 19d9573f0b2c2100accd562cc82d57adb12a57ec
   condition: 1 of object_* or attributes

@@ -1,17 +1,17 @@
 title: "Remcos RAT New TTPS \u2013 Detection & Response - url_request"
-id: 2137c7bc-5970-44c8-99d8-4738dd73f8ef
+id: b7190eb9-5798-4af1-889b-979edd832ea7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/be8c3307-4b09-4ddf-af24-41c2385d8036.json
 logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.remcos
 - attack.software.s0332
 - attack.group.remcos
-- attack.software.remcos
 detection:
   object_16448:
     RequestUrl|contains:

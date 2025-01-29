@@ -1,22 +1,22 @@
 title: '2019-01-10: North Korea Lazarus Targeting REDBANC - dns_query'
-id: 03e56ea2-f453-49c5-9635-971eb98beec1
+id: afb17a95-f4d0-4dfb-8873-afd52e3ef109
 description: edit this field when analysing or editing the rule - reported by "VK-Intel"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c3c4a6d-15f0-4133-baff-3c2c68f8e8cf.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1047
 - attack.t1005
-- attack.t1053
 - attack.t1199
+- attack.t1047
+- attack.t1053
 - attack.t1132
+- attack.t1050
 - attack.t1064
 - attack.t1041
-- attack.t1050
 detection:
   attributes:
     QueryName|contains:

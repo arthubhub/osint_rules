@@ -1,8 +1,8 @@
 title: Malspam 2017-10-03 - dns_query
-id: fbb9b813-5af9-4c33-8907-e3576a4d6889
+id: d53d9c53-bc07-4404-8baf-1a2245d7cb1e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59d341f4-3ef0-4520-84dc-499c950d210f.json
 logsource:
@@ -13,12 +13,12 @@ tags:
 detection:
   attributes:
     QueryName|contains:
+    - toolgeeker.com
     - goodmansbbq.com
     - tomax.hk
-    - toolgeeker.com
     IpAddresses:
+    - 203.135.130.135
+    - 208.91.199.145
     - 216.117.177.69
     - 197.221.2.8
-    - 208.91.199.145
-    - 203.135.130.135
   condition: attributes

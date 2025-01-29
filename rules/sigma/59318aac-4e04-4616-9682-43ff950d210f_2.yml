@@ -1,36 +1,36 @@
 title: 'M2M -  Jaff 2017-06-02 : "Invoice INV-1234" - "Invoice INV-1234.pdf" - dns_query'
-id: 52311468-3334-450c-b355-f9c5e24509a0
+id: 72f7b929-4da2-4a50-9c55-249d4096348f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59318aac-4e04-4616-9682-43ff950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.jaff
 - attack.group.jaff
+- attack.software.jaff
 detection:
   attributes:
     IpAddresses:
-    - 104.27.177.10
     - 143.95.239.62
-    - 81.169.145.86
-    - 104.27.176.10
-    - 103.24.0.218
-    - 193.70.38.218
-    - 103.21.59.168
-    - 112.213.85.78
     - 192.185.5.93
-    - 108.179.228.212
-    - 69.49.101.51
-    - 109.232.220.235
     - 182.160.158.62
+    - 81.169.145.86
     - 103.11.75.13
-    - 5.101.66.85
     - 27.124.113.33
+    - 109.232.220.235
+    - 103.21.59.168
     - 124.150.140.96
+    - 69.49.101.51
+    - 104.27.176.10
+    - 112.213.85.78
+    - 193.70.38.218
     - 13.58.5.152
+    - 103.24.0.218
     - 81.177.139.23
+    - 108.179.228.212
+    - 5.101.66.85
+    - 104.27.177.10
   condition: attributes

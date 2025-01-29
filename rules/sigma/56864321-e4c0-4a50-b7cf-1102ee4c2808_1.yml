@@ -1,38 +1,38 @@
 title: 'RegretLocker - VMRay Analyzer Report for Sample #1500977 - url_request'
-id: 8ed3261e-0b1a-471c-ba95-e8d303488e1f
+id: 76842c3f-55f3-4fc9-a559-4837321ec221
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56864321-e4c0-4a50-b7cf-1102ee4c2808.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.regretlocker
-- attack.vmray_use_encryption_api
-- attack.vmray_install_scheduled_task_by_schtasks
-- attack.vmray_av_malicious_match
-- attack.vmray_create_named_mutex
-- attack.software.regretlocker
-- attack.vmray_delay_by_scheduled_task_delayed
 - attack.vmray_establish_http_connection
-- attack.vmray_tcp_out_connection
 - attack.vmray_check_external_ip
-- attack.vmray_known_suspicious_file
-- attack.vmray_modify_windows_backup_settings
-- attack.vmray_enumerate_processes
-- attack.vmray_create_process_with_hidden_window
-- attack.vmray_delay_execution_by_sleep
-- attack.vmray_dynamic_api_usage_by_api
-- attack.vmray_request_dns_by_name
-- attack.vmray_drop_pe_file
-- attack.vmray_change_folder_appearance
 - attack.vmray_install_startup_script_by_registry
+- attack.vmray_request_dns_by_name
+- attack.vmray_modify_windows_backup_settings
+- attack.vmray_av_malicious_match
+- attack.vmray_delay_by_scheduled_task_delayed
+- attack.vmray_delay_execution_by_sleep
+- attack.vmray_change_folder_appearance
+- attack.vmray_install_scheduled_task_by_schtasks
+- attack.vmray_known_suspicious_file
+- attack.group.regretlocker
+- attack.vmray_dynamic_api_usage_by_api
+- attack.vmray_create_process_with_hidden_window
+- attack.software.regretlocker
+- attack.vmray_tcp_out_connection
+- attack.vmray_create_named_mutex
+- attack.vmray_use_encryption_api
+- attack.vmray_drop_pe_file
+- attack.vmray_enumerate_processes
 detection:
   attributes:
     RequestUrl|contains:
-    - elb097307-934924932.us-east-1.elb.amazonaws.com
-    - nagano-19599.herokussl.com
     - api.ipify.org
+    - nagano-19599.herokussl.com
+    - elb097307-934924932.us-east-1.elb.amazonaws.com
   condition: attributes

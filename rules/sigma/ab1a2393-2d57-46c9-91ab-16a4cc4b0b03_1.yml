@@ -1,9 +1,9 @@
 title: Active Exploitation of Two Zero-Day Vulnerabilities in Ivanti Connect Secure
   VPN - url_request
-id: b543e46b-6515-42d3-9089-b580fa927bd9
+id: c8bb9a59-7e88-4a68-baba-98be3ca37a23
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/ab1a2393-2d57-46c9-91ab-16a4cc4b0b03.json
 logsource:
@@ -17,7 +17,7 @@ detection:
     - https://www.volexity.com
   attributes:
     RequestUrl|contains:
-    - symantke.com
     - gpoaccess.com
+    - symantke.com
     - webb-institute.com
   condition: 1 of object_* or attributes

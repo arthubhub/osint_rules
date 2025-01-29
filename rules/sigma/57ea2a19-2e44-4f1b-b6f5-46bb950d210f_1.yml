@@ -1,9 +1,9 @@
 title: "OSINT - Sofacy\xE2\u20AC\u2122s \xE2\u20AC\u02DCKomplex\xE2\u20AC\u2122 OS\
   \ X Trojan by Palo Alto networks - url_request"
-id: 8f8187ec-54fc-4086-8944-f3f00d6a73bc
+id: f8402c2b-643a-408a-8d1a-26457eb3f4a2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57ea2a19-2e44-4f1b-b6f5-46bb950d210f.json
 logsource:
@@ -12,8 +12,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - apple-iclouds.net
     - appleupdate.org
     - http://researchcenter.paloaltonetworks.com
+    - apple-iclouds.net
     - itunes-helper.net
   condition: attributes

@@ -1,22 +1,22 @@
 title: "OSINT - Let\xE2\u20AC\u2122s play (again) with Predator the thief \xE2\u20AC\
   \u201C Fumik0_'s box - process_creation"
-id: 71dadd66-6303-43fb-83f1-cb311f0e98d5
+id: 178cebf0-12d1-4fe4-b7b3-62be0d5853fa
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e04e696-4e74-4be0-a8e1-4cee02de0b81.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.predator_the_thief
-- attack.t1212
-- attack.t1003
 - attack.group.predator_the_thief
-- attack.t1503
-- attack.t1214
+- attack.t1003
+- attack.t1212
 - attack.t1081
+- attack.t1214
+- attack.t1503
+- attack.software.predator_the_thief
 detection:
   object_17469:
     md5:
@@ -76,15 +76,15 @@ detection:
     - 21ebdc3a58f3d346247b2893d41c80126edabb060759af846273f9c9d0c92a9a
   attributes:
     md5:
-    - 9110e59b6c7ced21e194d37bb4fc14b2
     - fe6125adb3cc69aa8c97ab31a0e7f5f8
-    - 51e1924ac4c3f87553e9e9c712348ac8
-    - a86f18fa2d67415ac2d576e1cd5ccad8
     - 02484e00e248da80c897e2261e65d275
-    - ed3893c96decc3aa798be93192413d28
     - 3861a092245655330f0f1ffec75aca67
+    - a86f18fa2d67415ac2d576e1cd5ccad8
+    - ed3893c96decc3aa798be93192413d28
+    - 9110e59b6c7ced21e194d37bb4fc14b2
+    - 51e1924ac4c3f87553e9e9c712348ac8
     sha256:
     - 01ef26b464faf08081fceeeb2cdff7a66ffdbd31072fe47b4eb43c219da287e8
-    - 21ebdc3a58f3d346247b2893d41c80126edabb060759af846273f9c9d0c92a9a
     - 6e27a2b223ef076d952aaa7c69725c831997898bebcd2d99654f4a1aa3358619
+    - 21ebdc3a58f3d346247b2893d41c80126edabb060759af846273f9c9d0c92a9a
   condition: 1 of object_* or attributes

@@ -1,18 +1,18 @@
 title: "OSINT - Analyzing OilRig\xE2\u20AC\u2122s Ops Tempo from Testing to Weaponization\
   \ to Delivery - url_request"
-id: 4f0305b1-2e2b-418f-b063-0c7333ea0a60
+id: 09833d46-2df4-4a17-a3dd-d4c369433b19
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bf26a1e-c40c-4977-92bf-49b5950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.bondupdater
 - attack.group.oilrig
 - attack.software.bondupdater
+- attack.group.bondupdater
 detection:
   attributes:
     RequestUrl|contains:

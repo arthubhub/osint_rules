@@ -1,17 +1,17 @@
 title: Revenge Ransomware, a CryptoMix Variant, Being Distributed by RIG Exploit Kit
   - url_request
-id: a216f18f-e564-40c3-99df-9a161bdfce42
+id: ba62641d-bff1-4538-8bc3-3b504a4ee5e4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58ca5f56-3da4-4ed9-a13f-0804950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.cryptomix
 - attack.software.cryptomix
+- attack.group.cryptomix
 detection:
   attributes:
     RequestUrl|contains:

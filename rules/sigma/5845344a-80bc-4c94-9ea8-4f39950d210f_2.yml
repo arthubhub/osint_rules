@@ -1,9 +1,9 @@
 title: 'OSINT - MMD-0033-2015 - Linux/XorDDoS infection incident report (CNC: HOSTASA.ORG)
   - dns_query'
-id: 2c2e95e4-ba38-48b8-805e-1a7b0a607e59
+id: 0edcb27f-20cd-465f-bffb-b40ea3754981
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5845344a-80bc-4c94-9ea8-4f39950d210f.json
 logsource:
@@ -14,10 +14,10 @@ detection:
     QueryName|contains:
     - 44ro4.cn
     IpAddresses:
-    - 107.182.141.40
-    - 192.126.126.64
-    - 103.240.141.54
-    - 23.234.60.143
     - 103.240.140.152
+    - 192.126.126.64
+    - 107.182.141.40
+    - 23.234.60.143
     - 198.15.234.66
+    - 103.240.141.54
   condition: attributes

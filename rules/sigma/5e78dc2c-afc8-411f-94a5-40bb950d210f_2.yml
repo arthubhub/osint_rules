@@ -1,54 +1,54 @@
 title: Trickbot to Ryuk in Two Hours - dns_query
-id: abf1d04c-02bf-466c-9f50-f7334fe8c225
+id: 64ec7896-e49c-4cc6-95f4-011b6f0bd0be
 description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e78dc2c-afc8-411f-94a5-40bb950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1486
-- attack.t1053
-- attack.t1003
-- attack.t1064
-- attack.t1085
-- attack.t1135
-- attack.t1484
-- attack.t1089
-- attack.t1076
-- attack.t1057
-- attack.t1049
-- attack.t1055
 - attack.t1482
-- attack.t1087
-- attack.t1102
-- attack.t1018
-- attack.t1046
-- attack.t1063
 - attack.t1043
-- attack.t1105
-- attack.t1077
-- attack.t1021
-- attack.t1119
-- attack.t1078
-- attack.t1082
-- attack.t1027
+- attack.t1085
+- attack.t1003
 - attack.t1158
+- attack.t1484
+- attack.t1087
 - attack.t1518
+- attack.t1027
+- attack.t1064
+- attack.t1018
+- attack.t1057
+- attack.t1078
+- attack.t1089
+- attack.t1105
+- attack.t1102
+- attack.t1049
+- attack.t1053
+- attack.t1082
+- attack.t1076
+- attack.t1077
+- attack.t1063
+- attack.t1046
+- attack.t1486
+- attack.t1021
+- attack.t1135
+- attack.t1119
+- attack.t1055
 detection:
   attributes:
     QueryName|contains:
     - norulless.com
     IpAddresses:
-    - 5.255.96.187
-    - 195.123.239.67
-    - 185.62.188.159
-    - 146.185.253.178
-    - 64.44.51.113
-    - 206.81.5.253
-    - 203.176.135.102
     - 190.214.13.2
+    - 185.62.188.159
+    - 203.176.135.102
+    - 5.255.96.187
     - 195.123.242.48
+    - 195.123.239.67
+    - 64.44.51.113
+    - 146.185.253.178
+    - 206.81.5.253
   condition: attributes

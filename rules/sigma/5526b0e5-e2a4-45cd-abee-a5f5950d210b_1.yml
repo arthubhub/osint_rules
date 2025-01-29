@@ -1,8 +1,8 @@
 title: 'OSINT Analysis of KRIPTOVOR: Infostealer+Ransomware by FireEye - url_request'
-id: abcb5f3f-5949-43eb-af96-c3876409b45f
+id: f693c68c-319d-4e3e-8ef2-011642dfe0eb
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5526b0e5-e2a4-45cd-abee-a5f5950d210b.json
 logsource:
@@ -11,15 +11,15 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - jackropely.org
-    - ripola.net
-    - valanoice.org
-    - http://ripola.net
-    - http://valanoice.org
-    - http://plantsroyal.org
-    - https://www.fireeye.com
-    - http://jackropely.org
-    - http://valanoice..org
     - plantsroyal.org
     - adorephoto.org
+    - http://jackropely.org
+    - http://plantsroyal.org
+    - http://valanoice.org
+    - valanoice.org
+    - http://valanoice..org
+    - jackropely.org
+    - https://www.fireeye.com
+    - http://ripola.net
+    - ripola.net
   condition: attributes

@@ -1,8 +1,8 @@
 title: 'Malspam 2016-07-21 .wsf (campaign: "fixed invoice") - dns_query'
-id: 759d8c00-1844-422d-bd25-4c90ac96d4f0
+id: 299f05fb-d592-48c5-8916-9f6d6053ec26
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5790e667-46bc-453e-bb78-44d0950d210f.json
 logsource:
@@ -11,32 +11,32 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - klausschuster.at
-    - kveldeil.no
-    - bizforward.ru
-    - premiuminformation.org
-    - mebel-bogatyr.ru
     - vkt-rus.com
+    - klausschuster.at
     - choogo.net
-    - strojdom33.ru
+    - premiuminformation.org
     - voisin-sa.com
+    - strojdom33.ru
+    - mebel-bogatyr.ru
+    - bizforward.ru
+    - kveldeil.no
     IpAddresses:
-    - 141.8.192.63
-    - 162.210.101.97
-    - 91.194.41.32
-    - 86.59.107.231
-    - 83.125.22.208
-    - 213.180.150.17
-    - 193.232.240.10
-    - 192.254.188.66
-    - 141.8.194.9
-    - 112.171.173.157
-    - 85.252.49.19
-    - 81.196.20.133
-    - 91.201.210.24
-    - 84.246.225.155
-    - 213.205.40.169
-    - 208.71.106.49
-    - 195.208.0.15
     - 31.220.16.180
+    - 112.171.173.157
+    - 83.125.22.208
+    - 141.8.192.63
+    - 213.205.40.169
+    - 141.8.194.9
+    - 86.59.107.231
+    - 213.180.150.17
+    - 84.246.225.155
+    - 195.208.0.15
+    - 91.201.210.24
+    - 162.210.101.97
+    - 208.71.106.49
+    - 193.232.240.10
+    - 91.194.41.32
+    - 81.196.20.133
+    - 192.254.188.66
+    - 85.252.49.19
   condition: attributes

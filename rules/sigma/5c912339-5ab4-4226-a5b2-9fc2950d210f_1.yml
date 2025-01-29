@@ -1,16 +1,16 @@
 title: LockerGoga  - yara rules - url_request
-id: 12770345-2489-4131-a2ef-e11a877ca7ff
+id: bf5af9ad-2219-4cb1-9408-9f20dc724375
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c912339-5ab4-4226-a5b2-9fc2950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.lockergoga
 - attack.software.lockergoga
+- attack.group.lockergoga
 detection:
   attributes:
     RequestUrl|contains:

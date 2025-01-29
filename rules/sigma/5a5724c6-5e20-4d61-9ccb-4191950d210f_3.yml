@@ -1,29 +1,29 @@
 title: OSINT - Mac Malware of 2017 - process_creation
-id: 16db697e-8d7b-45e6-ac0a-34b0b14dd4e5
+id: dd62762b-1349-4cff-82d2-12aab67d2609
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a5724c6-5e20-4d61-9ccb-4191950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.macransom
 - attack.group.macransom
-- attack.software.cpumeaner
-- attack.software.filecoder
-- attack.software.pwnet
 - attack.software.macspy
 - attack.software.xagentosx
+- attack.software.empyre
+- attack.software.macransom
 - attack.software.x-agent
-- attack.software.proton
 - attack.software.turla
+- attack.software.proton
+- attack.software.filecoder
+- attack.group.filecoder
+- attack.software.fruitfly
 - attack.software.macdownloader
 - attack.software.mughthesec
-- attack.software.fruitfly
-- attack.software.empyre
-- attack.group.filecoder
+- attack.software.cpumeaner
+- attack.software.pwnet
 detection:
   object_6323:
     sha256:
@@ -373,17 +373,17 @@ detection:
   attributes:
     sha1:
     - ef5a11a1bb5b2423554309688aa7947f4afa5388
-    - 10a09c09fd5dd76202e308718a357abc7de291b5
     - 30d77908ac9d37c4c14d32ea3e0b8df4c7e75464
+    - 10a09c09fd5dd76202e308718a357abc7de291b5
     sha256:
-    - 3f0130cfd7bf61b8e8226dd4775319c7376a08ec019f9df12875e9ea55992e94
-    - 7819ae7d72fa045baa77e9c8e063a69df439146b27f9c3bb10aef52dcc77c145
-    - 4131d4737fe8dfe66d407bfd0a0df18a4a77b89347471cc012da8efc93c661a5
-    - 4252e482c9801463e6f684c71f70cb64a17ae74957ed8986f2401c653acae1d7
     - befa9bfe488244c64db096522b4fad73fc01ea8c4cd0323f1cbdee81ba008271
+    - 4252e482c9801463e6f684c71f70cb64a17ae74957ed8986f2401c653acae1d7
     - 128814f2b057aef1dd3e00f3749aed2a81e5ed03737311f2b1faab4ab2e6e2fe
     - 2a854997a44f4ba7e307d408ea2d9c1d84dde035c5dab830689aa45c5b5746ea
-    - cd93142f1e0bac1d73235515bc127f5f9634eafde0bea2d6c294bf3549d612b7
+    - 7819ae7d72fa045baa77e9c8e063a69df439146b27f9c3bb10aef52dcc77c145
     - 694b15d69264062e82d43e8ddb4a5efe4435574f8d91e29523c4298894b70c26
+    - cd93142f1e0bac1d73235515bc127f5f9634eafde0bea2d6c294bf3549d612b7
     - 94cc470c0fdd60570e58682aa7619d665eb710e3407d1f9685b7b00bf26f9647
+    - 3f0130cfd7bf61b8e8226dd4775319c7376a08ec019f9df12875e9ea55992e94
+    - 4131d4737fe8dfe66d407bfd0a0df18a4a77b89347471cc012da8efc93c661a5
   condition: 1 of object_* or attributes

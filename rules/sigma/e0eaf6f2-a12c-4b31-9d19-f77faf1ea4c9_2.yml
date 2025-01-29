@@ -1,62 +1,62 @@
 title: Kaseya ransomware attack - indicators and information publicly available -
   dns_query
-id: 9fddf89d-a62a-41aa-91ef-3de7faff937b
+id: 9fe2d9ed-cc6a-4255-8339-cd3f6c5f5509
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e0eaf6f2-a12c-4b31-9d19-f77faf1ea4c9.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1486
-- attack.software.sodinokibi
 - attack.group.sodinokibi
+- attack.software.sodinokibi
+- attack.t1486
 detection:
   object_10852:
     IpAddresses:
     - 161.35.239.148
   attributes:
     QueryName|contains:
-    - 8449nohate.org
-    - 4net.guru
-    - kaotikkustomz.com
-    - 101gowrie.com
-    - simoneblum.de
-    - fannmedias.com
-    - c2e-poitiers.com
-    - 123vrachi.ru
-    - 35-40konkatsu.net
-    - facettenreich27.de
-    - blgr.be
     - candyhouseusa.com
     - 12starhd.online
+    - bxdf.info
+    - 35-40konkatsu.net
+    - blossombeyond50.com
+    - simoneblum.de
+    - 123vrachi.ru
+    - 4youbeautysalon.com
+    - 1team.es
+    - 101gowrie.com
+    - filmstreamingvfcomplet.be
+    - cerebralforce.net
+    - southeasternacademyofprosthodontics.org
+    - 365questions.org
+    - bierensgebakkramen.nl
+    - c2e-poitiers.com
+    - fotoscondron.com
+    - facettenreich27.de
+    - milestoneshows.com
+    - smartypractice.com
+    - myhostcloud.com
+    - homng.net
+    - cursosgratuitosnainternet.com
+    - tanzschule-kieber.de
+    - kaotikkustomz.com
+    - gmto.fr
+    - fannmedias.com
     - thomasvicino.com
     - gonzalezfornes.es
-    - fotoscondron.com
-    - mindpackstudios.com
-    - tonelektro.nl
-    - iqbalscientific.com
-    - 4youbeautysalon.com
-    - tanzschule-kieber.de
-    - myhostcloud.com
-    - 365questions.org
-    - cursosgratuitosnainternet.com
-    - daklesa.de
-    - cerebralforce.net
-    - homng.net
-    - 1team.es
-    - pasvenska.se
-    - southeasternacademyofprosthodontics.org
     - faroairporttransfers.net
-    - ncuccr.org
-    - bxdf.info
+    - daklesa.de
+    - mindpackstudios.com
+    - 4net.guru
     - sw1m.ru
-    - bierensgebakkramen.nl
-    - milestoneshows.com
-    - gmto.fr
-    - filmstreamingvfcomplet.be
-    - smartypractice.com
-    - blossombeyond50.com
+    - tonelektro.nl
+    - pasvenska.se
+    - ncuccr.org
+    - iqbalscientific.com
+    - 8449nohate.org
+    - blgr.be
   condition: 1 of object_* or attributes

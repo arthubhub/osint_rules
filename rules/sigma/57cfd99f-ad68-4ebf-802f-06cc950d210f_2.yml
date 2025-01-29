@@ -1,8 +1,8 @@
 title: 'Malspam 2016-09-07 (.js in .zip) - campaign: "Agreement form" - dns_query'
-id: bf1e5f55-976c-4ee4-98b1-2d269ff2df5f
+id: ebdbe752-8c3c-4aec-925b-0cc0024ab4a0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57cfd99f-ad68-4ebf-802f-06cc950d210f.json
 logsource:
@@ -11,12 +11,12 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - donttouchmybaseline.ws
     - virmalw.name
-    - bookinghotworld.ws
     - canonsupervideo4k.ws
+    - donttouchmybaseline.ws
+    - bookinghotworld.ws
     - clubofmalw.ws
     IpAddresses:
-    - 51.255.227.230
     - 216.244.68.195
+    - 51.255.227.230
   condition: attributes

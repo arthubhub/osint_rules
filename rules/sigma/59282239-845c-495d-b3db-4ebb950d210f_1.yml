@@ -1,8 +1,8 @@
 title: OSINT - Analysis of Emotet v4 - url_request
-id: afee4867-6e25-4f96-9d89-7f64bfa025c8
+id: 494373ed-8412-4ec9-90d4-0809ef363ffe
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59282239-845c-495d-b3db-4ebb950d210f.json
 logsource:
@@ -13,17 +13,17 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.cert.pl
-    - http://203.121.145.40
-    - http://173.255.229.121
-    - http://88.198.50.221
-    - http://5.196.73.150
-    - http://188.68.58.8
-    - http://87.106.105.76
-    - http://5.39.84.48
-    - http://79.170.95.202
-    - http://162.214.11.56
-    - http://178.79.177.141
     - http://46.165.212.76
+    - http://178.79.177.141
+    - https://www.cert.pl
+    - http://88.198.50.221
+    - http://5.39.84.48
+    - http://173.255.229.121
+    - http://203.121.145.40
+    - http://79.170.95.202
+    - http://188.68.58.8
+    - http://5.196.73.150
     - http://206.214.220.79
+    - http://87.106.105.76
+    - http://162.214.11.56
   condition: attributes

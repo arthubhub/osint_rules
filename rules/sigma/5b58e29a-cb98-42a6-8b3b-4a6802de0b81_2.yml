@@ -1,9 +1,9 @@
 title: 'OSINT - Leafminer: New Espionage Campaigns Targeting Middle Eastern Regions
   - dns_query'
-id: 82aa42de-4f73-416c-8fe3-3d418a5f4b88
+id: 6da3dbb0-e557-4f15-a210-3c00ebbacc3f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b58e29a-cb98-42a6-8b3b-4a6802de0b81.json
 logsource:
@@ -14,10 +14,10 @@ tags:
 detection:
   attributes:
     QueryName|contains:
-    - ilhost.in
-    - adobe-flash.us
-    - iqhost.us
     - microsoft-office-free-templates.in
-    - offiice365.us
     - adobe-plugin.bid
+    - iqhost.us
+    - offiice365.us
+    - adobe-flash.us
+    - ilhost.in
   condition: attributes

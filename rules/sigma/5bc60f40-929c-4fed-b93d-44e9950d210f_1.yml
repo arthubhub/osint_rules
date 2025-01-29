@@ -1,8 +1,8 @@
 title: OSINT - 2018-10-09 - HANCITOR INFECTION WITH ZEUS PANDA BANKER - url_request
-id: 34eeabcf-dedb-4e61-a5fc-6b3c992b17ad
+id: 841e0170-f875-40ac-bb4e-f17514b2fbb9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bc60f40-929c-4fed-b93d-44e9950d210f.json
 logsource:
@@ -10,37 +10,37 @@ logsource:
   category: url_request
 tags:
 - attack.t1022
+- attack.t1193
 - attack.t1041
 - attack.t1056
-- attack.t1193
 detection:
   attributes:
     RequestUrl|contains:
-    - 275aacaa1610.net
-    - fornetodu.com
-    - 275aacaa1698.net
-    - carvanamemphis.com
-    - http://muneersiddiqui.com
-    - http://lonestarportablebuildings.com
-    - http://keywestresortsadvice.com
-    - oxmoorusedcars.com
-    - sincirewdo.ru
-    - carvanadenver.com
-    - genesisatoxmoor.com
-    - http://surfsongnorthwildwood.com
-    - hehenforfi.ru
     - http://merisela.ru
-    - sellittooxmoor.com
-    - https://www.malware-traffic-analysis.net
-    - http://www.socialmanagers.com
-    - lachistontfi.ru
     - genesisofindiana.com
-    - veintitna.ru
-    - selltooxmoor.com
-    - genesisofeaslouisville.com
-    - hersjustretleft.ru
-    - nobotanri.ru
-    - genesiseastlouisville.com
-    - carvananashville.com
+    - carvanadenver.com
+    - sincirewdo.ru
+    - http://www.socialmanagers.com
+    - sellittooxmoor.com
+    - http://surfsongnorthwildwood.com
+    - https://www.malware-traffic-analysis.net
     - genesisofwestlouisville.com
+    - veintitna.ru
+    - hersjustretleft.ru
+    - genesisatoxmoor.com
+    - oxmoorusedcars.com
+    - 275aacaa1698.net
+    - genesiseastlouisville.com
+    - http://keywestresortsadvice.com
+    - http://lonestarportablebuildings.com
+    - selltooxmoor.com
+    - carvananashville.com
+    - fornetodu.com
+    - carvanamemphis.com
+    - lachistontfi.ru
+    - 275aacaa1610.net
+    - genesisofeaslouisville.com
+    - http://muneersiddiqui.com
+    - nobotanri.ru
+    - hehenforfi.ru
   condition: attributes

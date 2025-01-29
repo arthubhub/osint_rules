@@ -1,31 +1,31 @@
 title: OSINT - CYBER THREATSCAPE  REPORT 2018 - MIDYEAR CYBERSECURITY  RISK REVIEW
   - dns_query
-id: dffa425d-a052-46ce-b21e-896d9ac2afb5
+id: a39f7cc1-34de-4952-b391-c449571c45d5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b6aad49-a01c-4070-aba8-4b32950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.black_ruby
-- attack.group.cobalt
-- attack.software.tyrant
 - attack.group.wannasmile
-- attack.software.black_ruby
-- attack.software.rastakhiz
-- attack.group.anunak
-- attack.software.wannasmile
-- attack.group.rastakhiz
-- attack.group.tyrant
+- attack.software.tyrant
 - attack.group.fin7
+- attack.group.black_ruby
+- attack.software.wannasmile
+- attack.group.tyrant
+- attack.group.anunak
+- attack.group.cobalt
+- attack.software.rastakhiz
+- attack.group.rastakhiz
+- attack.software.black_ruby
 detection:
   attributes:
     QueryName|contains:
-    - webmoney.ir
     - toshiba.org.kz
-    - swift-fraud.com
     - exchange.ir
+    - webmoney.ir
+    - swift-fraud.com
   condition: attributes

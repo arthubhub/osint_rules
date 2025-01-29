@@ -1,8 +1,8 @@
 title: OSINT EFF Report Operation Manul - dns_query
-id: aad6e87d-357a-40d6-bf2a-0007a545bcf9
+id: 0c33051f-c13f-448d-8cc3-aa8b00b25351
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57ab2b08-fcd8-48b2-ba43-4cf3950d210f.json
 logsource:
@@ -11,32 +11,32 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - axroot.com
-    - kaliex.net
     - orange2015.net
-    - adobeair.net
-    - adobeinstall.com
-    - accountslogin.services
     - dropboxonline.com
+    - kaliex.net
     - mangoco.net
+    - axroot.com
+    - accountslogin.services
+    - adobeinstall.com
+    - adobeair.net
     IpAddresses:
-    - 65.19.141.204
+    - 50.62.160.216
+    - 50.63.202.94
     - 50.63.197.10
+    - 68.178.232.99
+    - 176.32.230.24
+    - 64.202.189.170
+    - 184.168.221.61
+    - 111.90.140.11
+    - 209.99.40.225
     - 208.73.210.29
     - 208.73.211.167
     - 174.120.120.15
-    - 68.178.232.99
-    - 111.90.140.11
-    - 50.63.202.94
-    - 176.32.230.24
-    - 74.208.167.252
-    - 209.99.40.220
-    - 209.99.40.225
-    - 184.168.221.61
-    - 64.202.189.170
-    - 209.99.40.224
-    - 50.62.160.216
-    - 111.90.150.70
     - 111.90.150.221
+    - 209.99.40.220
+    - 209.99.40.224
+    - 111.90.150.70
     - 5.39.10.93
+    - 65.19.141.204
+    - 74.208.167.252
   condition: attributes

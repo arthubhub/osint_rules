@@ -1,9 +1,9 @@
 title: OSINT - Android-based Smart TVs Hit By Backdoor Spread Via Malicious App -
   url_request
-id: 3cce9473-4b5b-40c5-9f10-c4dc46d85b6a
+id: f71c35d6-18a8-490f-b141-9011483cbb73
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/568e62b7-0930-4398-a617-4147950d210f.json
 logsource:
@@ -12,12 +12,12 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://yaz.e3wsv.com
-    - http://pf3a.res4f.com
-    - http://blog.trendmicro.com
-    - http://meiz.le2ui.com
-    - http://mak.wak2p.com
-    - http://www.htvmarket.com
-    - http://wh.waks2.com
     - https://sites.google.com
+    - http://blog.trendmicro.com
+    - http://www.htvmarket.com
+    - http://meiz.le2ui.com
+    - http://yaz.e3wsv.com
+    - http://mak.wak2p.com
+    - http://pf3a.res4f.com
+    - http://wh.waks2.com
   condition: attributes

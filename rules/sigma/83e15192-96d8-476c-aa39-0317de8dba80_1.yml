@@ -1,31 +1,31 @@
 title: OSINT - Uber Breach & Attack Analysis - url_request
-id: 158a51df-d4aa-40d7-ac5d-464554d7ec6d
+id: a47e22e9-8dac-43cc-9c77-0365717eade0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/83e15192-96d8-476c-aa39-0317de8dba80.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1136.002
-- attack.t1078.002
-- attack.t1552.001
-- attack.t1566.003
-- attack.t1589.001
-- attack.t1586
-- attack.t1621
-- attack.t1194
 - attack.t1048
 - attack.t1133
+- attack.t1078
+- attack.t1136.002
+- attack.t1081
 - attack.t1135
 - attack.t1087.002
-- attack.t1078
-- attack.t1081
+- attack.t1552.001
+- attack.t1589.001
+- attack.t1078.002
+- attack.t1586
+- attack.t1566.003
+- attack.t1194
+- attack.t1621
 detection:
   object_10985:
     RequestUrl|contains:
-    - https://twitter.com
     - https://whimsical.com
+    - https://twitter.com
   condition: 1 of object_*

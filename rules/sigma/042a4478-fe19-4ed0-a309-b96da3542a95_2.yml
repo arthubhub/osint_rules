@@ -1,9 +1,9 @@
 title: "Analysis of FG-IR-22-398 \u2013 FortiOS - heap-based buffer overflow in SSLVPNd\
   \ - dns_query"
-id: c44a6008-a732-4f1e-847f-7218a6eafce1
+id: 6eafa6f8-311b-4e25-9fe3-270aa1428baf
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/042a4478-fe19-4ed0-a309-b96da3542a95.json
 logsource:
@@ -30,23 +30,23 @@ detection:
     - 188.34.130.40
   attributes:
     IpAddresses:
-    - 45.86.229.220
-    - 66.42.91.32
-    - 156.251.162.76
-    - 158.247.221.101
-    - 185.174.136.20
-    - 156.251.163.122
-    - 194.62.42.105
-    - 45.86.231.71
-    - 139.99.37.119
-    - 156.251.162.111
-    - 137.175.30.138
-    - 139.180.128.142
-    - 155.138.224.122
-    - 139.99.35.116
-    - 156.251.163.19
-    - 185.250.149.32
     - 107.148.27.117
+    - 194.62.42.105
+    - 139.180.128.142
+    - 45.86.231.71
+    - 156.251.162.76
+    - 185.174.136.20
+    - 66.42.91.32
+    - 139.99.37.119
+    - 139.99.35.116
     - 146.70.157.133
+    - 156.251.163.19
+    - 158.247.221.101
+    - 155.138.224.122
+    - 156.251.162.111
     - 139.180.184.197
+    - 185.250.149.32
+    - 137.175.30.138
+    - 45.86.229.220
+    - 156.251.163.122
   condition: 1 of object_* or attributes

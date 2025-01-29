@@ -1,8 +1,8 @@
 title: OSINT - UBoatRAT Navigates East Asia - url_request
-id: ca5e293e-e213-494d-ae66-e7c7e1334645
+id: b88bb145-5593-4331-a12c-beb5b84c019b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a1e6e1d-4cc0-4ce6-aeba-7e44950d210f.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://www.ak
     - https://raw.githubusercontent.com
+    - http://www.ak
     - http://elsakrblog.blogspot.hk
   condition: attributes

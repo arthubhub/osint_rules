@@ -1,17 +1,17 @@
 title: 'TraderTraitor: North Korean State-Sponsored APT Targets Blockchain Companies
   - url_request'
-id: ee96babe-512d-46d7-a288-7836f924e59f
+id: 72a7d699-18c1-4051-a412-d3d059bf5817
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/c65578dd-3d7d-4a1a-bc30-7d12af38a59a.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.g0032
 - attack.group.lazarus_group
+- attack.group.g0032
 detection:
   object_2630:
     RequestUrl|contains:
@@ -60,14 +60,14 @@ detection:
     - aideck.net
   attributes:
     RequestUrl|contains:
-    - https://haciendadeclarevot.com
-    - https://www.esilet.com
-    - https://greenvideo.nl
-    - https://sche
-    - https://dafnefonseca.com
-    - https://infodigitalnew.com
     - https://aideck.net
-    - https://www.vinoymas.ch
+    - https://greenvideo.nl
     - https://www.alticgo.com
+    - https://dafnefonseca.com
+    - https://www.vinoymas.ch
+    - https://infodigitalnew.com
+    - https://www.esilet.com
     - https://github.com
+    - https://sche
+    - https://haciendadeclarevot.com
   condition: 1 of object_* or attributes

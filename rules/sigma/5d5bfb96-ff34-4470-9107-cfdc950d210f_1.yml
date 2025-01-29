@@ -1,20 +1,20 @@
 title: 'OSINT - Ruby/Gem Warning! is rest-client 1.6.13 hijacked? #713 - url_request'
-id: ec2cf030-1fb5-452c-aa1f-82a032d6b39c
+id: ba05e9d1-2a93-46d4-8cc9-82753fd26136
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d5bfb96-ff34-4470-9107-cfdc950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
+- attack.t1138
 - attack.t1022
 - attack.t1133
-- attack.t1195
 - attack.t1020
+- attack.t1195
 - attack.t1041
-- attack.t1138
 detection:
   attributes:
     RequestUrl|contains:

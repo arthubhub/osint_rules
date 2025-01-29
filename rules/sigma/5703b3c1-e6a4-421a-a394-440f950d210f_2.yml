@@ -1,8 +1,8 @@
 title: Malspam (2016-04-05) - TeslaCrypt - dns_query
-id: 7da7bbc4-b516-43b2-8877-aacfb152383c
+id: da11e37c-5ea2-42d6-b164-eb21fe3251ec
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5703b3c1-e6a4-421a-a394-440f950d210f.json
 logsource:
@@ -11,31 +11,31 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - keldon.info
-    - closerdaybyday.info
-    - thejonesact.com
-    - marvellrulescc.asia
-    - marvellrulesqq.com
-    - studiosundaytv.com
     - coldheartedny.com
+    - marvellrulesqq.com
+    - closerdaybyday.info
+    - studiosundaytv.com
+    - marvellrulescc.asia
     - addagapublicschool.com
+    - keldon.info
+    - thejonesact.com
     IpAddresses:
-    - 23.229.239.227
-    - 192.185.151.39
     - 107.180.26.75
-    - 185.14.19.104
-    - 192.186.220.8
-    - 91.241.249.226
+    - 76.162.168.113
     - 109.254.59.207
-    - 194.228.3.204
+    - 176.36.174.59
     - 195.66.218.139
+    - 91.241.249.226
+    - 23.229.239.227
+    - 185.14.19.104
+    - 54.212.162.6
+    - 88.135.116.226
     - 91.197.19.167
     - 185.118.142.154
-    - 88.135.116.226
-    - 193.107.174.29
-    - 176.36.174.59
-    - 54.212.162.6
-    - 37.25.109.92
     - 194.58.191.55
-    - 76.162.168.113
+    - 192.185.151.39
+    - 37.25.109.92
+    - 192.186.220.8
+    - 194.228.3.204
+    - 193.107.174.29
   condition: attributes

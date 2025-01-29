@@ -1,8 +1,8 @@
 title: 'Sinkholes servers with http header Server: malware-sinkhole - dns_query'
-id: 36704157-027e-478e-ae3f-000fd201a6f6
+id: bdeb078e-8481-47d9-8d32-1c7cd16b2516
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58ad5d57-3058-48b8-8c08-553602de0b81.json
 logsource:
@@ -11,10 +11,10 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - oraclesoft.net
     - nicklockluckydog.org
+    - oraclesoft.net
     IpAddresses:
-    - 209.249.180.246
-    - 67.205.153.100
     - 209.249.180.243
+    - 67.205.153.100
+    - 209.249.180.246
   condition: attributes

@@ -1,8 +1,8 @@
 title: 'Malspam 2016-08-24 (.hta in .zip) - campaign: "Emailing{N}.jpg" - dns_query'
-id: 0f76e041-c433-4584-9374-bb7cb4b895bd
+id: b6f06426-6994-42d9-b93c-afb00bcaea8b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57bd9b3a-c354-481c-b414-424e950d210f.json
 logsource:
@@ -11,15 +11,15 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - ficonline.cat
     - brunnenburg.de
+    - ficonline.cat
     IpAddresses:
-    - 112.140.42.29
-    - 212.40.179.74
-    - 88.222.0.5
     - 69.27.174.10
-    - 193.144.125.70
     - 134.0.14.63
     - 213.205.40.169
+    - 212.40.179.74
+    - 88.222.0.5
     - 95.211.144.65
+    - 112.140.42.29
+    - 193.144.125.70
   condition: attributes

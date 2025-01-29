@@ -1,8 +1,8 @@
 title: ServHelper and FlawedGrace - New malware introduced by TA505 - process_creation
-id: db534f74-2c06-4214-941b-e5ba4ab14fd2
+id: 0b14a2c4-c3a8-4443-84e7-8866fbd19a30
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c38eb9d-a470-4466-8aa5-461802de0b81.json
 logsource:
@@ -74,13 +74,13 @@ detection:
     - d56429d6d0222022fe8f4cb35a28cd4fb83f87b666a186eb54d9785f01bb4b58
   attributes:
     sha256:
-    - f4b9219f329803dd45afd5646351de456e608dd946830c961ec66c6c25e52cac
     - d56429d6d0222022fe8f4cb35a28cd4fb83f87b666a186eb54d9785f01bb4b58
-    - 9fccd107bd0aee3a2f39ad76a49758309c95545d8154b808eec24d2b51dc4579
-    - a9492312f1258567c3633ed077990fe053776cd576aa60ac7589c6bd7829d549
     - eb66ebb95a3dcecae64c61f611a9332fbf460d1b8039d3ab7e4f220104a4bec4
-    - 3cd7e0a8321259e8446b2a9da775aae674715c74ff4923cfc8ec5102f380d41a
+    - f4b9219f329803dd45afd5646351de456e608dd946830c961ec66c6c25e52cac
+    - a9492312f1258567c3633ed077990fe053776cd576aa60ac7589c6bd7829d549
     - efcee275d23b6e71589452b1cb3095ff92b10ab68cd07957b2ad6be587647b74
-    - 52c72a9de2f6e892f07827add85ad913b0541cd5c8449aadc2722f8eb75e548c
     - 1b0859ddbdebcb9d2bb46de00d73aa21bc617614b8123054426556783b211bc8
+    - 3cd7e0a8321259e8446b2a9da775aae674715c74ff4923cfc8ec5102f380d41a
+    - 52c72a9de2f6e892f07827add85ad913b0541cd5c8449aadc2722f8eb75e548c
+    - 9fccd107bd0aee3a2f39ad76a49758309c95545d8154b808eec24d2b51dc4579
   condition: 1 of object_* or attributes

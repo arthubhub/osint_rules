@@ -1,8 +1,8 @@
 title: 'OSINT Arid Viper: Gaza vs Israel Cyber Conflict by Trend Micro - dns_query'
-id: cd7e9801-5bc4-488a-b1de-3fbd0e582c0c
+id: c8db5795-d7e9-4dd0-91a4-1c4803de8c47
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/54e1a7eb-4190-424f-bb4a-4d65950d210b.json
 logsource:
@@ -11,20 +11,20 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - pstcmedia.com
-    - advtravel.info
-    - linksis.info
     - mediahitech.info
-    - mixedwork.com
+    - advtravel.info
+    - ahmedfaiez.info
+    - pstcmedia.com
+    - plmedgroup.com
+    - ineltdriver.com
     - flushupdate.com
     - flushupate.com
-    - ahmedfaiez.info
-    - ineltdriver.com
-    - plmedgroup.com
+    - linksis.info
+    - mixedwork.com
     IpAddresses:
     - 188.40.75.132
+    - 192.254.132.26
+    - 188.40.106.84
     - 54.255.143.112
     - 188.40.81.136
-    - 188.40.106.84
-    - 192.254.132.26
   condition: attributes

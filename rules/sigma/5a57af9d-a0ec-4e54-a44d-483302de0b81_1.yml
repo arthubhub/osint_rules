@@ -1,9 +1,9 @@
 title: OSINT - First Kotlin-Developed Malicious App Signs Users Up for Premium SMS
   Services - url_request
-id: cfd6b943-28ff-49ac-b2b3-15febc371c1e
+id: aec872e5-3d38-4db9-82b6-cd4ff5f40b10
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a57af9d-a0ec-4e54-a44d-483302de0b81.json
 logsource:
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://adx.gmpmobi.com
-    - http://blog.trendmicro.com
     - http://52.76.80.41
+    - http://blog.trendmicro.com
+    - http://adx.gmpmobi.com
   condition: attributes

@@ -1,50 +1,50 @@
 title: Ursnif Campaign f1.pipen.at - dns_query
-id: 781625a1-c7ba-4b83-ae2f-e075e523cd37
+id: f1225bfd-0472-47b3-82c7-3bf4c6dbfbc0
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ea0b0dc-45d0-4d5e-bed5-4271950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1500
-- attack.t1204
-- attack.group.gozi
-- attack.t1043
-- attack.t1117
-- attack.t1071
-- attack.software.gozi
-- attack.t1192
 - attack.t1112
 - attack.t1170
+- attack.t1043
+- attack.group.gozi
+- attack.t1500
+- attack.t1192
+- attack.t1204
+- attack.t1071
+- attack.software.gozi
+- attack.t1117
 detection:
   attributes:
     QueryName|contains:
+    - ahonpot.at
+    - deem.dianer.at
+    - been.dianer.at
     - api5.malorun.at
-    - dianer.at
+    - pipen.at
+    - ahah100.at
+    - api10.dianer.at
+    - vv.malorun.at
+    - free.up100n.at
+    - two.ahah100.at
+    - targoo.at
     - mobify.at
     - www.kamalak.at
-    - pipen.at
-    - ahonpot.at
-    - dxdeedle.host
-    - api10.dianer.at
-    - f1.pipen.at
-    - two.ahah100.at
-    - ahah100.at
-    - targoo.at
-    - vv.malorun.at
     - kamalak.at
-    - free.up100n.at
-    - been.dianer.at
-    - deem.dianer.at
+    - dxdeedle.host
+    - f1.pipen.at
+    - dianer.at
     IpAddresses:
     - 47.241.106.208
-    - 8.208.90.28
-    - 162.244.35.233
-    - 93.190.138.35
     - 89.39.107.106
+    - 8.208.90.28
+    - 93.190.138.35
+    - 162.244.35.233
     - 23.81.246.22
   condition: attributes

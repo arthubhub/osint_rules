@@ -1,9 +1,9 @@
 title: OSINT - New Wekby Attacks Use DNS Requests As Command and Control Mechanism
   - dns_query
-id: 6a204727-cf69-4f88-ac01-5bde54c7009d
+id: 0378ad84-711e-4ecf-86cd-941bd67250c7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57454ee0-3294-407a-8468-493c950d210f.json
 logsource:
@@ -12,6 +12,6 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - intranetwabcam.com
     - globalprint-us.com
+    - intranetwabcam.com
   condition: attributes

@@ -1,9 +1,9 @@
 title: "OSINT - Keep Calm and (Don\xE2\u20AC\u2122t) Enable Macros: A New Threat Actor\
   \ Targets UAE Dissidents - url_request"
-id: eb97d240-cae4-4bce-899c-bc9efd0554d6
+id: 6fab732a-f338-4bce-a99d-f2b3a6efc671
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/574c3d9c-41dc-4af6-b99d-1d31950d210f.json
 logsource:
@@ -12,17 +12,17 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - edgecacheimagehosting.com
-    - https://citizenlab.org
-    - http://goo.gl
-    - adhostingcache.com
-    - https://edgecacheimagehosting.com
+    - adhostingcaches.com
     - optimizedimghosting.com
+    - edgecacheimagehosting.com
+    - http://goo.gl
     - http://adhostingcache.com
+    - https://edgecacheimagehosting.com
+    - https://incapsulawebcache.com
     - https://cloud.openmailbox.org
     - http://optimizedimghosting.com
     - http://aax.me
-    - https://incapsulawebcache.com
+    - https://citizenlab.org
     - incapsulawebcache.com
-    - adhostingcaches.com
+    - adhostingcache.com
   condition: attributes

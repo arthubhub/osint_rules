@@ -1,8 +1,8 @@
 title: OINT - Hunting the LockBit Gang's Exfiltration Infrastructures - process_creation
-id: 5eb94f51-60c9-482b-8113-60ba333714b7
+id: 71a817c1-983b-4425-8e47-a719678d09dd
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/67a072d6-3d20-4024-a987-e8fdd226a075.json
 logsource:
@@ -64,10 +64,10 @@ detection:
   attributes:
     sha256:
     - 3407f26b3d69f1dfce76782fee1256274cf92f744c65aa1ff2d3eaaaf61b0b1d
-    - 2f18e61e3d9189f6ff5cc95252396bebaefe0d76596cc51cf0ade6a5156c6f66
     - ced3de74196b2fac18e010d2e575335e2af320110d3fdaff09a33165edb43ca2
+    - 2f18e61e3d9189f6ff5cc95252396bebaefe0d76596cc51cf0ade6a5156c6f66
     - 107d9fce05ff8296d0417a5a830d180cd46aa120ced8360df3ebfd15cb550636
-    - 07a3dcb8d9b062fb480692fa33d12da05c21f544492cbaf9207956ac647ba9ae
-    - 4db7eeed852946803c16373a085c1bb5f79b60d2122d6fc9a2703714cdd9dac0
     - bd14872dd9fdead89fc074fdc5832caea4ceac02983ec41f814278130b3f943e
+    - 4db7eeed852946803c16373a085c1bb5f79b60d2122d6fc9a2703714cdd9dac0
+    - 07a3dcb8d9b062fb480692fa33d12da05c21f544492cbaf9207956ac647ba9ae
   condition: 1 of object_* or attributes

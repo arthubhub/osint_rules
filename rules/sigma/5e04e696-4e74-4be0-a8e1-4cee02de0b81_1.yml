@@ -1,22 +1,22 @@
 title: "OSINT - Let\xE2\u20AC\u2122s play (again) with Predator the thief \xE2\u20AC\
   \u201C Fumik0_'s box - url_request"
-id: ad94b4f1-c3cc-482c-bd07-adc3ba25f05d
+id: 199e56f2-b002-4928-b968-95e1706d5a66
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e04e696-4e74-4be0-a8e1-4cee02de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.predator_the_thief
-- attack.t1212
-- attack.t1003
 - attack.group.predator_the_thief
-- attack.t1503
-- attack.t1214
+- attack.t1003
+- attack.t1212
 - attack.t1081
+- attack.t1214
+- attack.t1503
+- attack.software.predator_the_thief
 detection:
   attributes:
     RequestUrl|contains:

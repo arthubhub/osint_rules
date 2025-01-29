@@ -1,8 +1,8 @@
 title: 'OSINT - Flying Dragon Eye: Uyghur Themed Threat Activity - dns_query'
-id: 62b41a71-7dce-4bac-a807-a2a72b528f57
+id: 68bb86f1-e1fc-4def-a386-01a937c5708d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5819948b-b170-4872-b8f6-5934950d210f.json
 logsource:
@@ -14,14 +14,14 @@ detection:
   attributes:
     QueryName|contains:
     - russiauyghur.top
-    - turkiyeuyghur.com
     - freetibet.top
     - tibettimes.top
     - uygurinfo.com
+    - turkiyeuyghur.com
     IpAddresses:
-    - 210.209.118.87
-    - 59.188.83.144
     - 118.193.225.133
-    - 118.193.240.195
+    - 210.209.118.87
     - 118.193.240.218
+    - 59.188.83.144
+    - 118.193.240.195
   condition: attributes

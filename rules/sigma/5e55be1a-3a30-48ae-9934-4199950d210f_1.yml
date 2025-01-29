@@ -1,28 +1,28 @@
 title: Interesting Recon Script - url_request
-id: b70f1cbc-b271-409d-b1aa-c805918f66e6
+id: df3ccfe3-297b-4cad-b202-a3df965e4ceb
 description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e55be1a-3a30-48ae-9934-4199950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1082
-- attack.t1057
-- attack.t1083
-- attack.t1018
 - attack.t1012
-- attack.t1049
-- attack.t1204
-- attack.t1064
-- attack.t1069
+- attack.t1018
 - attack.t1482
 - attack.t1059
-- attack.t1135
-- attack.t1518
+- attack.t1049
+- attack.t1057
+- attack.t1082
 - attack.t1087
+- attack.t1204
+- attack.t1135
+- attack.t1083
+- attack.t1069
+- attack.t1518
+- attack.t1064
 detection:
   attributes:
     RequestUrl|contains:

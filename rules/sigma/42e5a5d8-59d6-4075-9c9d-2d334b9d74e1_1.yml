@@ -1,9 +1,9 @@
 title: 'DangerousSavanna: Two-year long campaign targets financial institutions in
   French-speaking Africa - url_request'
-id: a103f9c4-bd31-46dd-b0e9-2fa664360915
+id: ead2681d-f6ba-4359-a45d-d3ad2dd11764
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/42e5a5d8-59d6-4075-9c9d-2d334b9d74e1.json
 logsource:
@@ -11,16 +11,16 @@ logsource:
   category: url_request
 tags:
 - attack.t1566.001
-- attack.group.dangeroussavanna
 - attack.t1193
+- attack.group.dangeroussavanna
 detection:
   object_8785:
     RequestUrl|contains:
     - https://research.checkpoint.com
   attributes:
     RequestUrl|contains:
-    - i-development.one
+    - tf-bank.com
     - aeternam.me
     - https://3.8.126.182
-    - tf-bank.com
+    - i-development.one
   condition: 1 of object_* or attributes

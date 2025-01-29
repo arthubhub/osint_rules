@@ -1,46 +1,46 @@
 title: 'M2M -  Locky Affid=3, ".asasin"/Trickbot "mac1" 2017-10-11 : "Emailing: 12345678"
   - "12345678.7z" - url_request'
-id: 8f420935-362c-4dcc-a235-631560815958
+id: d63ee340-583f-45fd-9160-7f1d1a8d6c61
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59df77e7-2420-4c6c-bc2c-44ce950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.trick_bot
 - attack.group.locky
 - attack.software.locky
-- attack.software.trick_bot
 detection:
   attributes:
     RequestUrl|contains:
-    - http://pacalik.net
-    - http://sgtenterprises.com
-    - http://arkberg-design.fi
-    - http://download.justowin.it
-    - http://shamanic-extracts.biz
-    - http://missiegeslaagd.nl
-    - http://lacosturera.es
-    - http://signlight.com.au
-    - http://stemcellenhancementresearch.com
-    - http://enmee.net
-    - http://centralbaptistchurchnj.org
-    - http://sambad.com.np
-    - http://ryanbaptistchurch.com
-    - http://itsmaterial.us
-    - http://hair-select.jp
-    - http://secundaria50.edu.mx
-    - http://fls-portal.co.uk
-    - http://enixgaming.de
     - http://alexandradickman.com
+    - http://itsmaterial.us
     - http://petrochemus.com
-    - http://motifahsap.com
+    - http://enixgaming.de
+    - http://missiegeslaagd.nl
+    - http://stemcellenhancementresearch.com
+    - http://signlight.com.au
     - http://peopleiknow.org
-    - http://basedow-bilder.de
-    - http://fetchstats.net
     - http://agriturismoviridarium.it
-    - http://jeangurunlian.com
+    - http://motifahsap.com
+    - http://secundaria50.edu.mx
     - http://sci-eye.com
+    - http://enmee.net
+    - http://jeangurunlian.com
+    - http://ryanbaptistchurch.com
+    - http://pacalik.net
+    - http://centralbaptistchurchnj.org
+    - http://lacosturera.es
+    - http://sambad.com.np
+    - http://sgtenterprises.com
+    - http://fls-portal.co.uk
+    - http://fetchstats.net
+    - http://download.justowin.it
+    - http://basedow-bilder.de
+    - http://shamanic-extracts.biz
+    - http://hair-select.jp
+    - http://arkberg-design.fi
   condition: attributes

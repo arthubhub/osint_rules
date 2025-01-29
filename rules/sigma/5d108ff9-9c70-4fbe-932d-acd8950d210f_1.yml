@@ -1,9 +1,9 @@
 title: Information stealer malware via fake malicious document as "University of Luxembourg"
   - url_request
-id: 67ca6460-af33-4530-8ee1-9408bbe35149
+id: 3c941cad-08cd-46c0-86fb-b1336e5f270b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d108ff9-9c70-4fbe-932d-acd8950d210f.json
 logsource:
@@ -12,6 +12,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://192.210.146.35
     - http://tikonainternetservices.co.in
+    - http://192.210.146.35
   condition: attributes

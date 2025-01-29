@@ -1,30 +1,30 @@
 title: 'OSINT - Ryuk Ransomware: Extensive Attack Infrastructure Revealed - url_request'
-id: b6d6e91b-84cf-4cb7-a13d-88d827f8bd40
+id: b0c3d514-12ea-416a-9466-225102e52c2b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/cd8b9093-e319-4719-81b3-04a275b2f048.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.ryuk_ransomware
 - attack.software.ryuk_ransomware
+- attack.group.ryuk_ransomware
 detection:
   attributes:
     RequestUrl|contains:
     - servicemusthave.com
+    - webxyz.net
+    - myobtain.com
+    - raingamess.com
+    - starcyclone.com
+    - bukaguka.com
     - primeviref.com
+    - nasmasterservice.com
+    - balanarr.com
+    - daemon-update.com
+    - toyotacamryy.com
     - hunbabe.com
     - hotlable.com
-    - nasmasterservice.com
-    - raingamess.com
-    - balanarr.com
-    - starcyclone.com
-    - toyotacamryy.com
-    - daemon-update.com
-    - bukaguka.com
-    - myobtain.com
-    - webxyz.net
   condition: attributes

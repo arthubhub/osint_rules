@@ -1,33 +1,33 @@
 title: 'OSINT -  GALLIUM: Targeting global telecom - process_creation'
-id: 5b9e3434-392d-4913-b203-622c826138fc
+id: 23ffa8fb-93e9-44c4-bb49-31d64a601f37
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5df37253-ecc0-40ff-9ab9-4c44950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.windows_credential_editor
-- attack.group.mimikatz
-- attack.group.poison_ivy
-- attack.software.poison_ivy
-- attack.group.htran
-- attack.software.poisonivy
 - attack.software.s0012
-- attack.software.s0005
-- attack.group.gallium
-- attack.software.s0002
-- attack.software.china_chopper
-- attack.software.htran
-- attack.software.s0040
 - attack.software.s0020
-- attack.software.s0029
-- attack.software.psexec
-- attack.software.mimikatz
+- attack.software.htran
+- attack.software.windows_credential_editor
 - attack.software.netcat
+- attack.group.gallium
+- attack.software.poisonivy
+- attack.software.poison_ivy
+- attack.software.s0005
 - attack.software.nbtscan
+- attack.group.poison_ivy
+- attack.software.mimikatz
+- attack.software.s0029
+- attack.group.mimikatz
+- attack.software.s0002
+- attack.software.psexec
+- attack.software.china_chopper
+- attack.group.htran
+- attack.software.s0040
 detection:
   object_9330:
     sha256:

@@ -1,8 +1,8 @@
 title: Malspam 2017-10-03 - url_request
-id: 8d06d70d-103d-4e2c-b1b9-2a912faa77ea
+id: f22a9ec4-5278-4f6b-84e9-ee09e8c4e92f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59d341f4-3ef0-4520-84dc-499c950d210f.json
 logsource:
@@ -13,12 +13,12 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
+    - toolgeeker.com
+    - http://ctmket.com
     - http://opara.co.za
+    - https://en.wikipedia.org
     - goodmansbbq.com
     - http://tomax.hk
-    - tomax.hk
-    - https://en.wikipedia.org
-    - http://ctmket.com
     - http://q-productions.com
-    - toolgeeker.com
+    - tomax.hk
   condition: attributes

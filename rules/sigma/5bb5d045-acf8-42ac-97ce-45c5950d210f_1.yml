@@ -1,47 +1,47 @@
 title: OSINT - Indicators of Compromise for Malware used by APT28 - url_request
-id: 2d015050-f0b7-47e8-ae1f-02284315fca5
+id: fc55e952-a36a-4c2e-a7b1-c804144164ad
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bb5d045-acf8-42ac-97ce-45c5950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.strontium
-- attack.group.sofacy
 - attack.software.x-agent
 - attack.software.x-tunnel
+- attack.group.strontium
+- attack.group.sofacy
 detection:
   attributes:
     RequestUrl|contains:
-    - topcinemaclub.com
-    - coindmarket.com
-    - moldtravelgroup.com
-    - malaytravelgroup.com
-    - fundseats.com
-    - moderntips.org
-    - protonhardstorage.com
-    - georgia-travel.org
-    - daysheduler.org
-    - creekcounty.net
-    - https://www.ncsc.gov.uk
-    - thepiratecinemaclub.org
-    - worldimagebucket.com
-    - escochart.com
-    - bulgariatripholidays.com
-    - bbcweather.org
-    - truefashionnews.com
-    - pointtk.com
-    - narrowpass.net
-    - beststreammusic.com
-    - powernoderesources.com
     - politicweekend.com
+    - coindmarket.com
+    - beststreammusic.com
+    - fundseats.com
     - iboxmit.com
-    - genericnetworkaddress.com
+    - daysheduler.org
+    - bbcweather.org
+    - narrowpass.net
+    - topcinemaclub.com
+    - thepiratecinemaclub.org
+    - powernoderesources.com
+    - creekcounty.net
+    - escochart.com
     - globaltechengineers.org
-    - brownvelocity.org
-    - loungecinemaclub.com
+    - genericnetworkaddress.com
+    - https://www.ncsc.gov.uk
+    - malaytravelgroup.com
     - virtsvc.com
+    - truefashionnews.com
+    - bulgariatripholidays.com
+    - moderntips.org
+    - moldtravelgroup.com
+    - georgia-travel.org
+    - protonhardstorage.com
+    - worldimagebucket.com
+    - pointtk.com
+    - loungecinemaclub.com
+    - brownvelocity.org
   condition: attributes

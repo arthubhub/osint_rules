@@ -1,8 +1,8 @@
 title: OSINT - APT Case RUAG Technical Report - url_request
-id: 8e2ff9dc-b345-49e7-b76b-74a87340d826
+id: 9b062697-d3ad-46fc-91b7-919e013dc446
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5742bb17-ec60-4c81-8b62-45f3950d210f.json
 logsource:
@@ -15,12 +15,12 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://securelist.com
     - https://www.symantec.com
-    - https://blog.gdatasoftware.com
+    - https://www.circl.lu
+    - http://artemonsecurity.com
     - http://www.symantec.com
     - http://www.kaspersky.com
-    - http://artemonsecurity.com
+    - https://securelist.com
     - https://www.melani.admin.ch
-    - https://www.circl.lu
+    - https://blog.gdatasoftware.com
   condition: attributes

@@ -1,23 +1,23 @@
 title: OSINT -  MuddyWater expands operations - dns_query
-id: 911f2220-c50a-40c3-8e99-34a46a5b2615
+id: 61da10c0-21d3-4266-b888-35181e888e68
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bbe03c3-0ec0-4ee7-949b-4e3c950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1064
 - attack.group.g0069
-- attack.group.muddywater
 - attack.t1193
+- attack.t1064
+- attack.group.muddywater
 detection:
   attributes:
     IpAddresses:
     - 5.9.0.155
-    - 104.237.255.212
     - 104.237.233.60
+    - 104.237.255.212
     - 104.237.233.40
   condition: attributes

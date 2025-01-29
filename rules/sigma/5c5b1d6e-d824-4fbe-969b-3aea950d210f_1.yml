@@ -1,16 +1,16 @@
 title: Malicious XLS claiming to be from Deloitte - url_request
-id: 960d5887-39b3-44b9-b61e-89a379150c06
+id: 86ebe8b4-d20b-4eab-b9a9-15c192762289
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c5b1d6e-d824-4fbe-969b-3aea950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1064
 - attack.t1193
+- attack.t1064
 detection:
   attributes:
     RequestUrl|contains:

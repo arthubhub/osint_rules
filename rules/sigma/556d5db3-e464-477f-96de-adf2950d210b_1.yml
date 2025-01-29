@@ -1,9 +1,9 @@
 title: OSINT 'Paying-Days' CryptoWall 3.0 Campaign via Magnitude EK report by malwarefor.me
   - url_request
-id: cd7723b9-b007-4640-b830-b31e4a25c4b8
+id: 37ae630d-5cde-4ea4-b5d9-777bdb6f6747
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/556d5db3-e464-477f-96de-adf2950d210b.json
 logsource:
@@ -12,25 +12,25 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - payingday.biz
+    - payingdays.me
     - aseanian.com
     - https://www.dropbox.com
-    - tryea.com
-    - hicoop.com
-    - uaru.net
-    - payingdays.me
-    - payingdays.org
-    - ip-addr.es
-    - azquasoft.com
-    - payingdays.net
-    - sloeponline.org
-    - geiliyou.com
-    - katadata.com
-    - payingday.biz
-    - payingday.net
-    - paying-days.net
-    - http://malwarefor.me
-    - paying-days.com
-    - filemade.com
-    - judora-ng.com
     - chonburipalms.com
+    - uaru.net
+    - azquasoft.com
+    - judora-ng.com
+    - hicoop.com
+    - payingday.net
+    - ip-addr.es
+    - http://malwarefor.me
+    - filemade.com
+    - tryea.com
+    - payingdays.net
+    - katadata.com
+    - paying-days.net
+    - payingdays.org
+    - sloeponline.org
+    - paying-days.com
+    - geiliyou.com
   condition: attributes

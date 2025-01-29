@@ -1,8 +1,8 @@
 title: Trickbot and AdFind Recon - url_request
-id: 75d7faff-ba47-4b59-b754-9b655d2a33bb
+id: cc389c7c-6360-4fa2-9780-54c5c543afd8
 description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e4b486e-9968-4af1-87dc-4ff4950d210f.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.wilbursecurity.com
-    - https://app.any.run
     - http://support-it.online
+    - https://app.any.run
+    - https://www.wilbursecurity.com
   condition: attributes

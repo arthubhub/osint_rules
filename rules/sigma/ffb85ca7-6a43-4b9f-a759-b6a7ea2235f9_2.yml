@@ -1,16 +1,16 @@
 title: RegretLocker - compiled information, activity and samples - dns_query
-id: e56eed99-a94c-4523-b738-ec9b4630cdc1
+id: 6acb0f39-775f-4f57-ae48-8918b17ac478
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/ffb85ca7-6a43-4b9f-a759-b6a7ea2235f9.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.regretlocker
 - attack.software.regretlocker
+- attack.group.regretlocker
 detection:
   object_16217:
     QueryName|contains:

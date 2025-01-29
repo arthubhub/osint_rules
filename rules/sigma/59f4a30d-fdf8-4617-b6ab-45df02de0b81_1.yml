@@ -1,9 +1,9 @@
 title: OSINT - Bahamut Revisited, More Cyber Espionage in the Middle East and South
   Asia - url_request
-id: e4ef1614-9080-4008-9211-38a1c9735578
+id: 4e803635-86c4-4a04-9615-03325e90a550
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59f4a30d-fdf8-4617-b6ab-45df02de0b81.json
 logsource:
@@ -15,22 +15,22 @@ detection:
     - i3mode.com
   attributes:
     RequestUrl|contains:
-    - login-asmx.com
-    - session-service.com
-    - session-en.com
-    - goolg-en.com
-    - string2port.com
-    - devotedtohumanity-fif.info
-    - mxiplayer.com
-    - squre39-cld.info
-    - kashmir-weather-info.com
-    - session-owa.com
-    - sa-google.com
-    - data-covery.com
-    - rnail-aspx.com
-    - singin-go-olge.com
-    - https://www.bellingcat.com
-    - insidecloud-aspx.com
-    - host-auth.com
     - myinfocheck.com
+    - data-covery.com
+    - mxiplayer.com
+    - rnail-aspx.com
+    - host-auth.com
+    - login-asmx.com
+    - https://www.bellingcat.com
+    - goolg-en.com
+    - singin-go-olge.com
+    - string2port.com
+    - session-en.com
+    - session-owa.com
+    - kashmir-weather-info.com
+    - insidecloud-aspx.com
+    - squre39-cld.info
+    - devotedtohumanity-fif.info
+    - sa-google.com
+    - session-service.com
   condition: 1 of object_* or attributes

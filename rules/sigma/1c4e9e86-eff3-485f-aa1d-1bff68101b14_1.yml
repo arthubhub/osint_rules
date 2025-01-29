@@ -1,8 +1,8 @@
 title: OSINT - CobaltStrike C2s Dec2020_10 - url_request
-id: d7266e39-513e-4f0e-a65c-d8bf51198dd6
+id: c7eec951-14e6-4d56-8181-63952db99c44
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/1c4e9e86-eff3-485f-aa1d-1bff68101b14.json
 logsource:
@@ -17,6 +17,6 @@ detection:
     - https://pastebin.com
   attributes:
     RequestUrl|contains:
-    - http://daiwa-cm-us.azureedge.net
     - http://scripts.completelyinnocuousdomain.com
+    - http://daiwa-cm-us.azureedge.net
   condition: 1 of object_* or attributes

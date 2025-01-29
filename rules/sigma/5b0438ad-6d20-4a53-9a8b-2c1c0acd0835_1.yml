@@ -1,9 +1,9 @@
 title: Emotet 5-18-2018 - url_request
-id: a7ceb5bc-f5ca-496e-86eb-907e27c4f0a5
+id: 89c32ddf-5980-4c69-9365-033e4e50c5e5
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b0438ad-6d20-4a53-9a8b-2c1c0acd0835.json
 logsource:
@@ -14,10 +14,10 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://e-muhr.de
-    - http://lemat.sk
-    - http://sweatshop.org
-    - http://www.gardonyrefhir.hu
-    - http://columbiainstitute.org
     - http://emulsiflex.com
+    - http://columbiainstitute.org
+    - http://lemat.sk
+    - http://www.gardonyrefhir.hu
+    - http://e-muhr.de
+    - http://sweatshop.org
   condition: attributes

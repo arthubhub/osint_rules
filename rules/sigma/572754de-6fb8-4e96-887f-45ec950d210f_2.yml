@@ -1,9 +1,9 @@
 title: 'OSINT - Prince of Persia: Infy Malware Active In Decade of Targeted Attacks
   - dns_query'
-id: 39f178d1-bd61-4ec5-9496-bb0af6237ce9
+id: 00b98903-de88-4b02-93b9-b39460834b92
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/572754de-6fb8-4e96-887f-45ec950d210f.json
 logsource:
@@ -12,18 +12,18 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - fastupdate.net
+    - updateserver1.com
+    - short-url20.com
     - updatebox4.com
-    - bestupdateserver2.com
-    - short-name.com
-    - bestupdateserver.com
+    - youripinfo.com
     - safehostonline.com
+    - bestupdateserver2.com
+    - box4054.net
     - myblog2000.com
     - bestbox3.com
-    - updateserver1.com
+    - short-name.com
+    - bestupdateserver.com
     - bestwebstat.com
-    - fastupdate.net
-    - box4054.net
-    - youripinfo.com
-    - short-url20.com
     - updateserver3.com
   condition: attributes

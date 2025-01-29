@@ -1,18 +1,18 @@
 title: Dharma Ransomware sample - process_creation
-id: fc5b1e68-5ce0-43f9-96f1-fe3488d8aec1
+id: df01d7ab-45b1-41f1-84d6-edb80b982d46
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cffb200-f430-44b2-83a2-c922950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.virus-encoder
-- attack.group.dharma_ransomware
-- attack.software.dharma_ransomware
 - attack.software.virus-encoder
+- attack.group.virus-encoder
+- attack.software.dharma_ransomware
+- attack.group.dharma_ransomware
 detection:
   object_17271:
     md5:

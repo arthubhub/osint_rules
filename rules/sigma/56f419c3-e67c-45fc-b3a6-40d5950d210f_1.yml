@@ -1,9 +1,9 @@
 title: OSINT - Malware is being signed with multiple digital certificates to evade
   detection - url_request
-id: 199c032b-a94a-42da-93e5-8cae8b732344
+id: c9121983-85f1-4c0c-b225-ef9a0936a5a0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56f419c3-e67c-45fc-b3a6-40d5950d210f.json
 logsource:
@@ -12,6 +12,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://malwr.com
     - http://www.symantec.com
+    - https://malwr.com
   condition: attributes

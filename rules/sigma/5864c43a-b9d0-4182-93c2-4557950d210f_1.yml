@@ -1,8 +1,8 @@
 title: Android spyware - url_request
-id: 803c43f7-2a93-4f77-8f7c-68a45d9fb8f9
+id: 7933aa3f-6dac-4eaa-8d49-b211c4ac819e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5864c43a-b9d0-4182-93c2-4557950d210f.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://bit.ly
     - http://185.38.248.94
+    - http://bit.ly
   condition: attributes

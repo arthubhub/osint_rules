@@ -1,42 +1,42 @@
 title: 'Talos Blog: Multiple Cobalt Personality Disorder - url_request'
-id: dfe3c1e9-10e1-4ab2-94a2-87546919967e
+id: 3ab955a7-7524-4193-86ce-8b544caea3f8
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b61a496-b034-4321-9406-e0330acd0835.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.cobalt
 - attack.t1193
-- attack.t1086
-- attack.t1117
-- attack.t1064
 - attack.t1191
+- attack.t1086
+- attack.group.cobalt
+- attack.t1064
+- attack.t1117
 detection:
   attributes:
     RequestUrl|contains:
-    - https://s3.sovereigncars.org.uk
-    - https://95.142.39.109
-    - http://api.miria.kz
-    - http://mail.halcyonih.com
-    - https://mcafeecloud.us
-    - http://95.142.39.109
     - https://blog.talosintelligence.com
+    - http://nl.web-cdn.kz
+    - http://secure.n-document.biz
     - https://kaspersky-security.com
     - http://api.fujitsu.org.kz
-    - http://secure.n-document.biz
-    - https://wws.cert-ist.com
-    - http://cloud.pallets32.com
-    - http://cloud.yourdocument.biz
-    - https://api.outlook.kz
-    - http://api.toshiba.org.kz
-    - http://xstorage.biz
-    - http://nl.web-cdn.kz
+    - https://s3.sovereigncars.org.uk
     - http://cloud-direct.biz
+    - https://95.142.39.109
+    - http://xstorage.biz
     - http://document.cdn-one.biz
+    - https://api.outlook.kz
+    - http://95.142.39.109
+    - http://cloud.pallets32.com
+    - https://wws.cert-ist.com
+    - http://cloud.yourdocument.biz
+    - http://api.toshiba.org.kz
+    - http://api.miria.kz
+    - http://mail.halcyonih.com
     - http://api.asus.org.kz
+    - https://mcafeecloud.us
   condition: attributes

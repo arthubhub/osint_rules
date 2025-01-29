@@ -1,54 +1,54 @@
 title: BatLoader Continues to Abuse Google Search Ads to Deliver Vidar Stealer and
   Ursnif - dns_query
-id: 19c26a74-cedb-4c37-bea6-6d71b0da8e84
+id: 13a72385-e2ef-4b02-9261-7e3a42f7abf3
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/196cf336-896a-4cc1-9aa9-3480ecd9cf27.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.s0386
-- attack.t1059.001
-- attack.software.vidar
-- attack.t1064
-- attack.t1059.006
-- attack.group.vidar
-- attack.t1410
 - attack.t1059
+- attack.t1410
+- attack.software.vidar
+- attack.t1059.001
+- attack.group.vidar
+- attack.t1064
+- attack.software.s0386
+- attack.t1059.006
 detection:
   attributes:
     QueryName|contains:
-    - jhgfdlkjhaoiu.su
-    - openoffice-a.com
-    - iujdhsndjfks.ru
-    - java-a.com
-    - reggy506.ru
-    - pixelarmada.su
-    - tableau-r.com
     - isoridkf.ru
-    - java-r.com
-    - uelcoskdi.ru
-    - anydesk-r.com
-    - gameindikdowd.ru
-    - reggy914.ru
-    - adobe-l.com
-    - zoomvideor.com
-    - shvarcnegerhistory.com
     - anydesk-o.com
+    - chatgpt-t.com
+    - freecad-l.com
+    - shvarcnegerhistory.com
     - adobe-a.com
+    - openoffice-a.com
+    - tableau-r.com
+    - microso-t.com
     - spotify-uss.com
+    - adobe-l.com
+    - visualstudio-t.com
+    - basecamp-a.com
+    - pixelarmada.su
+    - reggy914.ru
+    - jhgfdlkjhaoiu.su
+    - reggy506.ru
+    - gimp-t.com
+    - java-s.com
     - bitwarden-t.com
     - adobe-e.com
-    - gimp-t.com
-    - visualstudio-t.com
+    - anydesk-r.com
+    - java-r.com
     - quickbooks-q.com
-    - basecamp-a.com
-    - chatgpt-t.com
-    - java-s.com
-    - freecad-l.com
-    - microso-t.com
+    - uelcoskdi.ru
+    - iujdhsndjfks.ru
+    - zoomvideor.com
+    - gameindikdowd.ru
+    - java-a.com
   condition: attributes

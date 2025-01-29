@@ -1,17 +1,17 @@
 title: CVE-2023-46604 (Apache ActiveMQ) Vulnerability Exploited to Infect Systems
   With Cryptominers and Rootkits - dns_query
-id: 7ae0eb08-e1d9-419f-ae95-308f9f5b8ab9
+id: f0b45ca2-6d16-43fa-96e3-bbf834ae0e91
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/df7b7020-9f17-4a3c-9824-1baa4ff67cb1.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.kinsing
 - attack.t1496
+- attack.group.kinsing
 detection:
   object_16357:
     QueryName|contains:

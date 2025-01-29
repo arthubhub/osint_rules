@@ -1,8 +1,8 @@
 title: OSINT - Additional Insights on Shamoon2 - dns_query
-id: 3350d3be-ce7f-4cc8-9263-e8d2c613cba6
+id: b7ad2f85-4abc-417e-999b-86e89689622b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58ad3fed-cc40-4087-a6f8-3ca5950d210f.json
 logsource:
@@ -13,12 +13,12 @@ tags:
 detection:
   attributes:
     QueryName|contains:
-    - analytics-google.org
     - go-microstf.com
+    - analytics-google.org
     IpAddresses:
-    - 45.63.10.99
+    - 5.254.100.200
     - 104.218.120.128
+    - 45.63.10.99
     - 69.87.223.26
     - 104.238.184.252
-    - 5.254.100.200
   condition: attributes

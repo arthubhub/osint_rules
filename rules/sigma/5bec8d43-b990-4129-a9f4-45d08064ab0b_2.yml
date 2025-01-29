@@ -1,8 +1,8 @@
 title: 'MISSING LINK: Tibetan Groups Targeted with Mobile Exploits - dns_query'
-id: 2badbd7e-e69e-40b2-ba15-2556508a3e19
+id: 1a309917-e950-428f-b12b-1e22f1aa255d
 description: edit this field when analysing or editing the rule - reported by "citizenlab"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bec8d43-b990-4129-a9f4-45d08064ab0b.json
 logsource:
@@ -11,32 +11,32 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - energy-mail.org
-    - izelense.com
-    - mailcontactanalysis.online
-    - walkingnote.online
-    - polarismail.services
-    - msap.services
-    - www.energy-mail.org
-    - mailanalysis.services
-    - www.msap.services
-    - beemail.online
-    - bf.mk
-    - gmailapp.me
     - mailnotes.online
-    - rf.mk
+    - walkingnote.online
+    - msap.services
+    - mailanalysis.services
+    - mailcontactanalysis.online
+    - www.energy-mail.org
     - antmoving.online
+    - beemail.online
+    - www.msap.services
+    - polarismail.services
+    - bf.mk
+    - izelense.com
+    - rf.mk
+    - gmailapp.me
+    - energy-mail.org
     IpAddresses:
-    - 45.32.75.217
-    - 45.76.53.26
-    - 144.202.59.23
-    - 95.169.2.57
     - 45.32.91.137
-    - 66.42.58.59
-    - 140.82.17.222
-    - 43.251.16.87
-    - 45.78.79.100
-    - 206.189.65.198
     - 149.28.93.11
     - 45.76.149.154
+    - 95.169.2.57
+    - 45.32.75.217
+    - 140.82.17.222
+    - 66.42.58.59
+    - 43.251.16.87
+    - 144.202.59.23
+    - 206.189.65.198
+    - 45.78.79.100
+    - 45.76.53.26
   condition: attributes

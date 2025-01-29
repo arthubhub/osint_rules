@@ -1,8 +1,8 @@
 title: 'Malspam 2016-08-17 (.docm) - campaign: "Order Confirmation-" - dns_query'
-id: 3bc3820d-622d-4fa0-9326-fa5f77919c43
+id: db3c1eba-44cf-48e7-a466-ff8ce59a33f4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57b472bd-2dc0-4304-90a6-4ad4950d210f.json
 logsource:
@@ -12,15 +12,15 @@ detection:
   attributes:
     QueryName|contains:
     - allgaeu-papparatzi.de
-    - cronininc.us
-    - rund-ums-haus-rosner.de
     - joopvandenheuvel.nl
+    - rund-ums-haus-rosner.de
+    - cronininc.us
     IpAddresses:
-    - 208.71.106.39
     - 64.29.151.221
-    - 83.96.159.39
-    - 217.119.54.214
-    - 213.205.40.169
     - 217.119.54.212
+    - 83.96.159.39
     - 81.196.20.134
+    - 213.205.40.169
+    - 217.119.54.214
+    - 208.71.106.39
   condition: attributes

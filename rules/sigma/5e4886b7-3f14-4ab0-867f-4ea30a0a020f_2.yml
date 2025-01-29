@@ -1,32 +1,32 @@
 title: IRS Doc Malware - dns_query
-id: 148a49b1-8869-471b-95ce-4c59429badf6
+id: 73cf841b-7f7c-499a-9440-794fc61acf85
 description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e4886b7-3f14-4ab0-867f-4ea30a0a020f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1032
 - attack.t1193
-- attack.t1197
 - attack.t1043
-- attack.t1064
-- attack.t1060
 - attack.t1059
 - attack.t1086
+- attack.t1197
+- attack.t1060
+- attack.t1032
+- attack.t1064
 detection:
   attributes:
     QueryName|contains:
-    - siliconmadeinhk.com
     - binupload.com
+    - siliconmadeinhk.com
     IpAddresses:
-    - 172.105.154.72
     - 199.188.200.112
-    - 172.105.81.149
     - 89.208.229.55
-    - 185.222.202.237
     - 89.208.196.16
+    - 172.105.81.149
+    - 185.222.202.237
+    - 172.105.154.72
   condition: attributes

@@ -1,8 +1,8 @@
 title: Dridex of the day (2016-03-16) - botnet 120 - url_request
-id: 2279a0d7-8ca9-4ff5-8a58-7cfd805b2cb7
+id: f8be1c9d-7da4-47be-beed-4453a7ecfea8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56e962e9-ed10-48d8-b885-4bcd950d210f.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://api.holycrossservices.info
     - http://api.holycrossservices.org
     - http://api.holycrossservices.net
+    - http://api.holycrossservices.info
   condition: attributes

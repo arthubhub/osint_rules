@@ -1,16 +1,16 @@
 title: OSINT - Crypter-as-a-Service Helps jRAT Fly Under The Radar - process_creation
-id: d030bec8-bf5e-4953-bdd8-61ce2648d6ff
+id: 845fccb7-a3c2-49bf-8b9a-396302c8eb36
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5abf6421-c1b8-477b-a9d2-9c0902de0b81.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.qrat
 - attack.software.quaverse
+- attack.software.qrat
 - attack.software.jrat
 detection:
   object_519:
@@ -71,12 +71,12 @@ detection:
     - a0c261c86f3e46f1b6ccd5bc8f706ffe77ff70528ca7961fd8fbd6529a1be993
   attributes:
     md5:
-    - 1eb3f344a0274bfa38c67f6b10650dcf
-    - 2f021a10804ac5db5ceb43b42f785a23
-    - c52247ecffb2f7a42ef6fa0336671545
-    - 64d72c5c86d3638034cd83178abcb82f
-    - 6392741705126cb97a837cbb046cfe73
-    - daa0833d16cd9b6937803d1637284ad1
     - 8ae2c573bc0e0492efeabe78495c591e
+    - 64d72c5c86d3638034cd83178abcb82f
+    - c52247ecffb2f7a42ef6fa0336671545
+    - daa0833d16cd9b6937803d1637284ad1
+    - 1eb3f344a0274bfa38c67f6b10650dcf
     - ae77ffba57049418e5a720bf77d178a5
+    - 2f021a10804ac5db5ceb43b42f785a23
+    - 6392741705126cb97a837cbb046cfe73
   condition: 1 of object_* or attributes

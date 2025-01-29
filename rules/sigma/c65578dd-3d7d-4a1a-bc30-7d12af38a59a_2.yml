@@ -1,17 +1,17 @@
 title: 'TraderTraitor: North Korean State-Sponsored APT Targets Blockchain Companies
   - dns_query'
-id: 67ffeec9-a4d7-4cfc-ac49-e22186ad66ff
+id: d1b0cafd-2686-4a77-8f29-716421280dd6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/c65578dd-3d7d-4a1a-bc30-7d12af38a59a.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.g0032
 - attack.group.lazarus_group
+- attack.group.g0032
 detection:
   object_2632:
     QueryName|contains:

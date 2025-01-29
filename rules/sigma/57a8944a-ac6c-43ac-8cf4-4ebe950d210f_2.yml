@@ -1,9 +1,9 @@
 title: Expansion on OSINT Lost your iPhone? Be on guard for a perfectly-timed Apple
   ID phishing attack by Hot For Security - dns_query
-id: 0e21e490-8573-43b7-9ed8-a9d4d80ed252
+id: 5be4f866-3362-4237-a24c-7ef764765592
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57a8944a-ac6c-43ac-8cf4-4ebe950d210f.json
 logsource:
@@ -12,31 +12,31 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - verify-iphone-location.com
-    - microexperts.xyz
     - lcloud-location-map.com
     - alert-map.com
-    - verify-apple-id.us
-    - locationteam-icloud.com
-    - iphone-service.us
-    - hamedia.net
-    - apple-map-locate.com
-    - mmison.xyz
-    - apple-support-apple.com
-    - fmi-verify-lost.com
+    - microexperts.xyz
     - findmyiphone-system.com
-    - icloudview.com
-    - security-ios.net
-    - fmidevice-location.com
-    - forum.liveplays.net
-    - alert-support.com
-    - findmyiphones-team.com
-    - trackingiphonelocation.com
-    - icloud-find.us
-    - show-iphone-location.com
     - icloudsecurelogin.com
+    - verify-apple-id.us
+    - forum.liveplays.net
+    - fmi-verify-lost.com
+    - hamedia.net
+    - apple-support-apple.com
+    - fmidevice-location.com
+    - verify-iphone-location.com
+    - findmyiphones-team.com
     - rakgrs.xyz
+    - locationteam-icloud.com
+    - icloud-find.us
+    - mmison.xyz
+    - iphone-service.us
+    - alert-support.com
+    - security-ios.net
+    - show-iphone-location.com
+    - apple-map-locate.com
+    - icloudview.com
+    - trackingiphonelocation.com
     IpAddresses:
-    - 162.210.99.240
     - 5.189.140.84
+    - 162.210.99.240
   condition: attributes

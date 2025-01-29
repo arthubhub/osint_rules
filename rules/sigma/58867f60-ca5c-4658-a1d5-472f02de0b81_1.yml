@@ -1,8 +1,8 @@
 title: 'OSINT - A Whale of a Tale: HummingBad Returns - url_request'
-id: 0d72de19-08b5-4831-8569-13822e26c4f5
+id: be7aa1b4-1ab0-48a4-be44-a49c6057919b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58867f60-ca5c-4658-a1d5-472f02de0b81.json
 logsource:
@@ -13,6 +13,6 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://blog.checkpoint.com
     - https://apis.groupteamapi.com
+    - http://blog.checkpoint.com
   condition: attributes

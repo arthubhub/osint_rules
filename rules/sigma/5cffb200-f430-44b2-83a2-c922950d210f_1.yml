@@ -1,18 +1,18 @@
 title: Dharma Ransomware sample - url_request
-id: a6214fb9-8c36-49ad-b4c8-58b68d3c1be4
+id: 1fdbe5d8-a4ce-43c4-99f8-34f8aff88302
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cffb200-f430-44b2-83a2-c922950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.virus-encoder
-- attack.group.dharma_ransomware
-- attack.software.dharma_ransomware
 - attack.software.virus-encoder
+- attack.group.virus-encoder
+- attack.software.dharma_ransomware
+- attack.group.dharma_ransomware
 detection:
   attributes:
     RequestUrl|contains:

@@ -1,8 +1,8 @@
 title: Malspam 2017-08-28 'IMG-' - dns_query
-id: bab4c289-91a2-486f-9938-adb08635f113
+id: 475ff2ea-5069-4656-a2c8-1f3592fbf07a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59a4fb50-e07c-48d8-b0c8-483c950d210f.json
 logsource:
@@ -11,17 +11,17 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - griffithphoto.com
-    - gotcaughtdui.com
-    - halley-informatica.com
-    - hendrikvankerkhove.be
-    - drommtoinononcechangerrer.info
     - grlarquitectura.com
+    - halley-informatica.com
+    - griffithphoto.com
+    - drommtoinononcechangerrer.info
+    - hendrikvankerkhove.be
+    - gotcaughtdui.com
     IpAddresses:
+    - 47.89.249.74
     - 212.227.136.197
-    - 89.255.9.102
+    - 72.32.177.50
     - 212.89.16.143
     - 104.238.99.64
-    - 47.89.249.74
-    - 72.32.177.50
+    - 89.255.9.102
   condition: attributes

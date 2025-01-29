@@ -1,8 +1,8 @@
 title: OSINT - Veil-Framework Infects Victims of Targeted OWA Phishing Attack - url_request
-id: d1570c06-3ec3-494e-98fc-8e024b131b04
+id: 8c2d150a-19cb-4c27-ba2e-074b34476722
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/581fadbd-7acc-4907-9133-4380950d210f.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.proofpoint.com
     - http://www2.sendsecuremail.com
+    - https://www.proofpoint.com
   condition: attributes

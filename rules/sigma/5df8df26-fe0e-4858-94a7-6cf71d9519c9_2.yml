@@ -1,62 +1,62 @@
 title: 'UEFI threats moving to the ESP: Introducing ESPecter bootkit - dns_query'
-id: 33944d2f-b295-480f-b387-0808b90304d1
+id: 6b4fbc07-f2c9-49dc-8b58-ca69886570ee
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5df8df26-fe0e-4858-94a7-6cf71d9519c9.json
 logsource:
   product: windows
   category: dns_query
 tags:
+- attack.t1071.001
+- attack.t1426
+- attack.t1542
+- attack.t1513
+- attack.t1564.005
+- attack.t1420
+- attack.t1542.003
 - attack.t1497.003
-- attack.t1036.003
-- attack.t1012
-- attack.t1083
-- attack.t1124
+- attack.t1553.006
+- attack.software.especter_bootkit
+- attack.t1564.001
+- attack.t1562
+- attack.t1105
+- attack.t1424
+- attack.t1601.001
+- attack.t1120
+- attack.t1029
+- attack.t1113
+- attack.t1056.001
 - attack.t1010
 - attack.t1055.001
-- attack.t1106
-- attack.t1601.001
-- attack.t1112
-- attack.t1513
 - attack.t1573.001
-- attack.t1029
-- attack.t1564.001
-- attack.t1424
-- attack.t1140
-- attack.t1025
-- attack.t1027.002
-- attack.t1041
-- attack.t1020
-- attack.t1542.003
-- attack.t1547
-- attack.t1553.006
-- attack.t1426
-- attack.t1105
-- attack.t1056.001
-- attack.t1564.005
-- attack.t1562
-- attack.t1406
 - attack.t1104
-- attack.t1542
-- attack.t1119
-- attack.t1417
-- attack.t1056
-- attack.t1071.001
+- attack.t1124
+- attack.t1106
+- attack.t1140
+- attack.t1041
+- attack.t1027.002
+- attack.t1112
+- attack.t1012
+- attack.t1406
 - attack.t1074.001
-- attack.t1120
-- attack.t1420
-- attack.software.especter_bootkit
-- attack.t1113
+- attack.t1056
+- attack.t1083
+- attack.t1119
+- attack.t1025
+- attack.t1020
 - attack.t1095
+- attack.t1036.003
+- attack.t1417
+- attack.t1547
 detection:
   attributes:
     QueryName|contains:
     - crystalnba.com
     IpAddresses:
-    - 103.212.69.175
     - 61.178.79.69
-    - 196.1.2.111
     - 183.90.187.65
+    - 103.212.69.175
+    - 196.1.2.111
   condition: attributes

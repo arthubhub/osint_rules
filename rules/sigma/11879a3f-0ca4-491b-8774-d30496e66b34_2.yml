@@ -1,40 +1,40 @@
 title: 'OSINT - #StopRansomware: Akira Ransomware - process_creation'
-id: 1f5a02ec-e692-443a-b54d-65482bfc313e
+id: 1177ce5f-fcda-4d24-8129-c27831330942
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/11879a3f-0ca4-491b-8774-d30496e66b34.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1003.001
-- attack.t1486
-- attack.t1190
-- attack.t1560.001
-- attack.group.akira
-- attack.t1133
-- attack.t1537
-- attack.t1490
-- attack.t1219
-- attack.t1057
-- attack.t1566.002
-- attack.t1069.001
 - attack.t1482
-- attack.t1090
+- attack.group.akira
 - attack.software.akira
-- attack.t1003.008
-- attack.t1018
+- attack.t1490
 - attack.t1136.002
-- attack.t1562.001
-- attack.t1567.002
-- attack.t1566.001
-- attack.t1078
-- attack.t1082
-- attack.t1069.002
-- attack.t1016
+- attack.t1018
 - attack.t1048
+- attack.t1003.008
+- attack.t1057
+- attack.t1133
+- attack.t1078
+- attack.t1003.001
+- attack.t1069.001
+- attack.t1560.001
+- attack.t1537
+- attack.t1219
+- attack.t1082
+- attack.t1566.001
+- attack.t1566.002
+- attack.t1562.001
+- attack.t1090
+- attack.t1486
+- attack.t1567.002
+- attack.t1016
+- attack.t1069.002
+- attack.t1190
 detection:
   object_7430:
     sha256:
@@ -77,17 +77,17 @@ detection:
     - 7a647af3c112ad805296a22b2a276e7c
   attributes:
     sha256:
-    - 9585af44c3ff8fd921c713680b0c2b3bbc9d56add848ed62164f7c9b9f23d065
     - 95477703e789e6182096a09bc98853e0a70b680a4f19fa2bf86cbb9280e8ec5a
     - 2f629395fdfa11e713ea8bf11d40f6f240acf2f5fcf9a2ac50b6f7fbc7521c83
-    - 0ee1d284ed663073872012c7bde7fac5ca1121403f1a5d2d5411317df282796c
+    - 9585af44c3ff8fd921c713680b0c2b3bbc9d56add848ed62164f7c9b9f23d065
     - ffd9f58e5fe8502249c67cad0123ceeeaa6e9f69b4ec9f9e21511809849eb8fc
-    - 3298d203c2acb68c474e5fdad8379181890b4403d6491c523c13730129be3f75
+    - c9c94ac5e1991a7db42c7973e328fceeb6f163d9f644031bdfd4123c7b3898b0
     - 7f731cc11f8e4d249142e99a44b9da7a48505ce32c4ee4881041beeddb3760be
-    - 0c0e0f9b09b80d87ebc88e2870907b6cacb4cd7703584baf8f2be1fd9438696d
     - 9f393516edf6b8e011df6ee991758480c5b99a0efbfd68347786061f0e04426c
     - dfe6fddc67bdc93b9947430b966da2877fda094edf3e21e6f0ba98a84bc53198
-    - c9c94ac5e1991a7db42c7973e328fceeb6f163d9f644031bdfd4123c7b3898b0
-    - 5e1e3bf6999126ae4aa52146280fdb913912632e8bac4f54e98c58821a307d32
     - 131da83b521f610819141d5c740313ce46578374abb22ef504a7593955a65f07
+    - 0ee1d284ed663073872012c7bde7fac5ca1121403f1a5d2d5411317df282796c
+    - 5e1e3bf6999126ae4aa52146280fdb913912632e8bac4f54e98c58821a307d32
+    - 0c0e0f9b09b80d87ebc88e2870907b6cacb4cd7703584baf8f2be1fd9438696d
+    - 3298d203c2acb68c474e5fdad8379181890b4403d6491c523c13730129be3f75
   condition: 1 of object_* or attributes

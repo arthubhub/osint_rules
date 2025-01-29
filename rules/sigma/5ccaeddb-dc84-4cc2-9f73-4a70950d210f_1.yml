@@ -1,17 +1,17 @@
 title: OSINT - Goblin Panda continues to target Vietnam - url_request
-id: e702ef12-7a4d-4fa0-9f44-1483d7d4aabd
+id: a8ae21d9-dfa7-42fe-b7bc-992d9501ec76
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ccaeddb-dc84-4cc2-9f73-4a70950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.newcore_rat
 - attack.group.hellsing
 - attack.group.newcore_rat
+- attack.software.newcore_rat
 detection:
   attributes:
     RequestUrl|contains:

@@ -1,77 +1,77 @@
 title: Operation Ghost - White Paper - url_request
-id: bfe986d0-ff18-4719-9142-111bcf0d0101
+id: 7ad537d0-985f-4059-9824-7b7c709bf486
 description: edit this field when analysing or editing the rule - reported by "ESET"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d9b516c-e5f0-4e7c-a958-5d8c0a019371.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1083
-- attack.t1107
-- attack.t1053
-- attack.t1106
-- attack.t1064
-- attack.t1085
-- attack.t1060
-- attack.t1112
-- attack.t1135
-- attack.t1057
-- attack.t1049
-- attack.t1039
-- attack.t1129
-- attack.t1140
-- attack.t1025
-- attack.t1041
-- attack.t1090
-- attack.t1102
 - attack.t1193
-- attack.t1077
-- attack.t1084
-- attack.t1078
-- attack.t1001
-- attack.t1005
-- attack.group.apt_29
+- attack.t1085
 - attack.t1027
-- attack.t1071
-- attack.t1035
+- attack.t1064
+- attack.t1084
+- attack.group.apt_29
+- attack.t1107
 - attack.t1008
+- attack.t1129
+- attack.t1057
+- attack.t1078
+- attack.t1102
+- attack.t1049
 - attack.t1045
+- attack.t1053
 - attack.t1086
+- attack.t1077
+- attack.t1106
+- attack.t1060
+- attack.t1039
+- attack.t1090
+- attack.t1140
+- attack.t1041
+- attack.t1112
+- attack.t1005
+- attack.t1071
+- attack.t1135
+- attack.t1083
+- attack.t1025
+- attack.t1001
+- attack.t1035
 detection:
   attributes:
     RequestUrl|contains:
+    - coachandcook.at
     - sistemikan.com
     - ministernetwork.org
-    - http://www.kiwibox.com
-    - http://www.fotolog.com
-    - http://www.reddit.com
-    - fisioterapiabb.it
-    - http://ibb.co
-    - motherlodebulldogclub.com
-    - busseylawoffice.com
-    - https://www.welivesecurity.com
-    - rulourialuminiu.co.uk
-    - http://jack998899jack.imgbb.com
-    - http://simp.ly
-    - http://thinkery.me
-    - skagenyoga.com
-    - mavin21c.dothome.co.kr
-    - lorriratzlaff.com
-    - coachandcook.at
-    - http://www.evernote.com
-    - salesappliances.com
-    - powerpolymerindustry.com
-    - ceycarb.com
-    - acciaio.com.br
-    - http://imgur.com
-    - varuhusmc.org
-    - fairfieldsch.org
-    - bandabonga.fr
-    - http://twitter.com
-    - westmedicalgroup.net
-    - ecolesndmessines.org
     - publiccouncil.org
+    - http://ibb.co
+    - skagenyoga.com
+    - http://jack998899jack.imgbb.com
+    - acciaio.com.br
+    - http://www.reddit.com
+    - http://twitter.com
+    - http://simp.ly
+    - ecolesndmessines.org
+    - http://thinkery.me
+    - http://www.fotolog.com
+    - salesappliances.com
+    - https://www.welivesecurity.com
+    - http://www.kiwibox.com
+    - lorriratzlaff.com
+    - mavin21c.dothome.co.kr
+    - motherlodebulldogclub.com
+    - rulourialuminiu.co.uk
+    - varuhusmc.org
+    - powerpolymerindustry.com
+    - westmedicalgroup.net
+    - busseylawoffice.com
+    - ceycarb.com
+    - http://www.evernote.com
+    - bandabonga.fr
+    - fairfieldsch.org
+    - http://imgur.com
+    - fisioterapiabb.it
   condition: attributes

@@ -1,8 +1,8 @@
 title: OSINT OSX/Pintsized Backdoor Additional Details by Zataz / Eric Romang - url_request
-id: 96edd0ce-ffbd-454d-8655-37c25bc61da2
+id: 44cf6651-5835-41b8-be5b-cfb90701718e
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/559f66e6-6e10-468f-9025-81c0950d210b.json
 logsource:
@@ -11,11 +11,11 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - jdk-update.com
-    - digitalinsight-ltd.com
-    - cloudbox-storage.com
-    - corp-appl.com
     - fbcbn.net
+    - jdk-update.com
     - clust12-akmai.net
+    - cloudbox-storage.com
     - http://eromang.zataz.com
+    - corp-appl.com
+    - digitalinsight-ltd.com
   condition: attributes

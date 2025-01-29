@@ -1,19 +1,19 @@
 title: OSINT - Emotet Updated C2 Info 9/20 - dns_query
-id: b0e746d5-cc73-46bb-8e1e-57ff6e18869f
+id: a1ccb0eb-b32e-4220-9cee-8d4e2d643b45
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d886859-bb5c-45b5-b922-4925950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
+- attack.group.geodo
+- attack.software.geodo
 - attack.software.emotet
 - attack.software.s0367
-- attack.group.geodo
 - attack.group.emotet
-- attack.software.geodo
 detection:
   object_18138:
     IpAddresses:

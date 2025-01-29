@@ -1,9 +1,9 @@
 title: 'OSINT In Pursuit of Optical Fibers and Troop Intel: Targeted Attack Distributes
   PlugX in Russia by ProofPoint - dns_query'
-id: 2172d113-0854-4388-a7f4-5fc54b62d620
+id: a5a9dde2-71d4-4c7a-ab37-7e57847cae39
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/55fc725a-6828-4ffe-a197-4e6f950d210b.json
 logsource:
@@ -12,17 +12,17 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - leeghost.com
-    - forum-mil.net
     - tvzvezda.net
-    - rusarmy.net
-    - dicemention.com
-    - militarynewes.com
     - notebookhk.net
+    - leeghost.com
+    - dicemention.com
     - arms-expo.net
     - patriotp.com
+    - militarynewes.com
+    - forum-mil.net
     - pressmil.com
+    - rusarmy.net
     IpAddresses:
-    - 43.252.175.119
     - 123.254.104.50
+    - 43.252.175.119
   condition: attributes

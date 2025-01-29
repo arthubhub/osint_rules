@@ -1,9 +1,9 @@
 title: OSINT Domains and IPs involved in JS ransomware delivered through email by
   burberry on AlienVault OTX - dns_query
-id: 84004e16-ce8a-46e4-b047-07e869abc3bd
+id: 2ec89402-3a5e-47a0-b8a1-f159a3b1cf0c
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57b5c11a-d2a0-455f-b409-4851950d210f.json
 logsource:
@@ -12,10 +12,10 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - coonectio.com
     - nedvigymost.com
     - kianebime.com
     - oneviewcontrols.com
+    - coonectio.com
     IpAddresses:
     - 178.157.0.35
   condition: attributes

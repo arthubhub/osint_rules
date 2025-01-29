@@ -1,8 +1,8 @@
 title: OSINT -  Clickjacking Campaign Plays on European Cookie Law - dns_query
-id: b8b6132e-7636-4880-be19-be4bbe8fce4b
+id: 3deb0b12-0150-4ebe-9db7-3d799461a3a7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/568ee522-23ac-4002-b82d-4d1402de0b81.json
 logsource:
@@ -12,9 +12,9 @@ detection:
   attributes:
     QueryName|contains:
     - elitewebhostings.com
+    - ivirtualcloudhost.com
+    - hotcartop.online
     - featurewebhosting.com
     - popcash.net
-    - hotcartop.online
-    - ivirtualcloudhost.com
     - bestcartoday.info
   condition: attributes

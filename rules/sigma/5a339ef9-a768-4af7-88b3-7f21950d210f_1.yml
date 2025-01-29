@@ -1,8 +1,8 @@
 title: OSINT - File Spider Ransomware Targeting the Balkans With Malspam - url_request
-id: 814d83a9-1d53-4b19-a847-77d09215e923
+id: d97f2cc2-192d-4ad1-8c3b-a73e02dee163
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a339ef9-a768-4af7-88b3-7f21950d210f.json
 logsource:
@@ -11,8 +11,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://vid.me
     - http://spiderwjzbmsmu7y.onion
-    - https://www.bleepingcomputer.com
+    - https://vid.me
     - http://yourjavascript.com
+    - https://www.bleepingcomputer.com
   condition: attributes

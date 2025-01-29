@@ -1,8 +1,8 @@
 title: Malspam 2016-07-05 (subject 'Scanned image'), .docm - dns_query
-id: 2ee76e41-d18c-446d-809e-dc0e1340c3f2
+id: c5f76fe1-619e-4ec9-b3e6-6bdffcc7c45d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/577bcda2-5e64-43a9-9b1c-4609950d210f.json
 logsource:
@@ -11,16 +11,16 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - sgi-shipping.com
-    - mundoescolarrd.com
     - lojaeberlin.com
-    - brazilmart.com
+    - mundoescolarrd.com
+    - sgi-shipping.com
     - flyingcarts.com
+    - brazilmart.com
     IpAddresses:
+    - 160.153.74.199
     - 108.175.149.16
-    - 209.222.76.36
     - 103.9.170.53
     - 50.63.136.152
     - 160.153.45.1
-    - 160.153.74.199
+    - 209.222.76.36
   condition: attributes

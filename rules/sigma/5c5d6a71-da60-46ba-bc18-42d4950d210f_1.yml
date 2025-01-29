@@ -1,16 +1,16 @@
 title: OSINT - DanaBot updated with new C&C communication - url_request
-id: 40ad9d02-dbbf-420a-b19c-e323367613b1
+id: a34d54d6-52b0-4f25-8c66-085a95491b2f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c5d6a71-da60-46ba-bc18-42d4950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.danabot
 - attack.software.danabot
+- attack.group.danabot
 detection:
   attributes:
     RequestUrl|contains:

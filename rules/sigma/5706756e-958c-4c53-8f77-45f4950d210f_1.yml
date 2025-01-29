@@ -1,8 +1,8 @@
 title: 'PWS: Win32/Kegotip.C - url_request'
-id: 97a907d4-7208-4360-a89a-f1e772d6b571
+id: 52810c4c-d322-476c-8054-5c73aeb05f0a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5706756e-958c-4c53-8f77-45f4950d210f.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - localeventit.pro
     - https://www.microsoft.com
     - gefuret.org
+    - localeventit.pro
   condition: attributes

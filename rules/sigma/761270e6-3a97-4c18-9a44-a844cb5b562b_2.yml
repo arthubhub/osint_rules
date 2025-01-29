@@ -1,57 +1,57 @@
 title: 'Chiseling In: Lorenz Ransomware Group Cracks MiVoice And Calls Back For Free
   - dns_query'
-id: c99aa94b-7dd3-4481-b890-271a3ce4e406
+id: a13c6302-f5b9-463d-ae27-68d336766752
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/761270e6-3a97-4c18-9a44-a844cb5b562b.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1003.001
-- attack.t1083
-- attack.t1486
-- attack.t1053
-- attack.group.lorenz
-- attack.t1053.005
-- attack.t1190
-- attack.group.lorenz_ransomware
-- attack.t1112
-- attack.t1078.003
-- attack.t1078.002
-- attack.software.chisel_windows
-- attack.t1021.001
 - attack.t1529
-- attack.t1059.003
-- attack.t1090
-- attack.software.chisel_elf
-- attack.software.lorenz_ransomware
-- attack.group.chisel_windows
-- attack.t1518.001
-- attack.t1587.001
-- attack.t1505.003
-- attack.group.chisel_elf
-- attack.t1048.002
-- attack.t1070.001
-- attack.t1059.001
-- attack.t1027
-- attack.t1016
 - attack.t1573
+- attack.t1518.001
 - attack.software.lorenz
+- attack.t1048.002
+- attack.t1505.003
+- attack.t1078.002
+- attack.t1027
+- attack.software.lorenz_ransomware
 - attack.t1588.002
+- attack.t1078.003
+- attack.t1059.001
+- attack.group.chisel_elf
+- attack.t1003.001
+- attack.group.chisel_windows
+- attack.t1053
+- attack.group.lorenz_ransomware
+- attack.t1021.001
+- attack.t1090
+- attack.t1112
+- attack.t1486
+- attack.t1016
+- attack.t1053.005
+- attack.t1083
+- attack.t1070.001
+- attack.t1059.003
+- attack.group.lorenz
+- attack.software.chisel_windows
 - attack.t1095
+- attack.t1587.001
+- attack.t1190
+- attack.software.chisel_elf
 detection:
   object_11000:
     IpAddresses:
     - 137.184.181.252
   attributes:
     IpAddresses:
-    - 138.68.19.94
     - 159.65.248.159
+    - 138.68.19.94
     - 206.188.197.125
-    - 138.68.59.16
     - 64.190.113.100
+    - 138.68.59.16
     - 138.197.218.11
   condition: 1 of object_* or attributes

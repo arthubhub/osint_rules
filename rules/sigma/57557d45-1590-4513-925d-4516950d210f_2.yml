@@ -1,8 +1,8 @@
 title: OSINT - Lame proxychanger, apparently related to a clickfraud botnet. - dns_query
-id: a8715cf9-6a06-459b-93df-b437f4ee80b8
+id: 7a3f32eb-4e1b-4b07-a4fc-eca643e07081
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57557d45-1590-4513-925d-4516950d210f.json
 logsource:
@@ -11,8 +11,8 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - xn--koa.net
     - xn--51haaa.ml
+    - xn--koa.net
     IpAddresses:
     - 93.190.137.240
   condition: attributes

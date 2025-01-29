@@ -1,10 +1,10 @@
 title: Massive Malvertising Campaign Discovered Attempting 40,000 Infections per Week
   - dns_query
-id: 61e78ebd-e473-4873-8787-a5ea6ec1de9c
+id: 80c2d0fc-83c9-4445-82b2-d2b69e7885da
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b608c59-6328-49e7-af04-22de0acd0835.json
 logsource:
@@ -13,12 +13,12 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - hibids10.com
-    - onclkds.com
-    - junnify.com
+    - bikinisgroup.com
+    - exoclick.com
     - bestadbid.com
     - sloi1.com
-    - exoclick.com
-    - bikinisgroup.com
+    - hibids10.com
+    - junnify.com
     - cpm10.com
+    - onclkds.com
   condition: attributes

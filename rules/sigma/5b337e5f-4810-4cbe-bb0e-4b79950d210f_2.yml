@@ -1,17 +1,17 @@
 title: 'OSINT - RedAlpha: New Campaigns Discovered Targeting the Tibetan Community
   - dns_query'
-id: d1453357-188b-4527-b982-96be255887d4
+id: 478383eb-6bbd-4fe7-85ed-12a17e3f7f1a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b337e5f-4810-4cbe-bb0e-4b79950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.redalpha
 - attack.software.njrat
+- attack.group.redalpha
 detection:
   object_9955:
     QueryName|contains:
@@ -263,8 +263,8 @@ detection:
     QueryName|contains:
     - tk.u2xu2.com
     IpAddresses:
-    - 27.126.179.159
     - 103.20.193.156
+    - 27.126.179.159
   object_10043:
     IpAddresses:
     - 103.20.193.156
@@ -281,16 +281,16 @@ detection:
     - drive-accounts-gooogle.com
   attributes:
     IpAddresses:
+    - 103.20.192.248
+    - 103.20.192.4
+    - 103.30.7.77
+    - 103.20.195.140
+    - 103.245.22.124
+    - 27.126.179.160
     - 122.10.84.146
     - 142.4.62.249
-    - 103.245.22.117
-    - 103.20.195.140
-    - 103.20.192.59
-    - 103.30.7.76
-    - 103.20.192.4
-    - 27.126.179.160
-    - 103.20.192.248
     - 27.126.179.156
-    - 103.30.7.77
-    - 103.245.22.124
+    - 103.30.7.76
+    - 103.20.192.59
+    - 103.245.22.117
   condition: 1 of object_* or attributes

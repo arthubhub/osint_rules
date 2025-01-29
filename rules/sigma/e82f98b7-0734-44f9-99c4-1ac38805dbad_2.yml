@@ -1,25 +1,25 @@
 title: OSINT - New campaign targeting security researchers - dns_query
-id: 6a663de5-b2f8-461d-ba7c-826625bae7a2
+id: 98e50eee-807e-4120-a7e1-3a67082ef575
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e82f98b7-0734-44f9-99c4-1ac38805dbad.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1249
 - attack.t1341
+- attack.t1249
 detection:
   attributes:
     QueryName|contains:
-    - investbooking.de
-    - angeldonationblog.com
-    - opsonew3org.sg
-    - transferwiser.io
-    - codevexillium.org
-    - trophylab.com
-    - transplugin.io
     - krakenfolio.com
+    - transplugin.io
+    - trophylab.com
+    - codevexillium.org
+    - transferwiser.io
+    - opsonew3org.sg
+    - angeldonationblog.com
+    - investbooking.de
   condition: attributes

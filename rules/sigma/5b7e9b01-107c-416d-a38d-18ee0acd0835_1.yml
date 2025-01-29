@@ -1,9 +1,9 @@
 title: 'TALOS Blog: Picking Apart Remcos Botnet-In-A-Box - url_request'
-id: e56afe88-58ba-4bb0-8a8a-b0a9d27383e3
+id: 1fc0a442-8c67-4f09-a636-0e3266dd7eea
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b7e9b01-107c-416d-a38d-18ee0acd0835.json
 logsource:
@@ -12,9 +12,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - streetz.club
-    - unifscon.com
     - https://blog.talosintelligence.com
-    - timmason2.com
+    - streetz.club
     - uploadtops.is
+    - timmason2.com
+    - unifscon.com
   condition: attributes

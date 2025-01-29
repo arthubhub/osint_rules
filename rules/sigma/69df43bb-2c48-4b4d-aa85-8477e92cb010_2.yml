@@ -1,8 +1,8 @@
 title: I-Soon / Anxun data leak in Github - dns_query
-id: 8b115497-6c0a-41bb-98dd-6fa70c40db3b
+id: 36a4c683-6a47-4710-89d4-5e26ef7dd4f0
 description: edit this field when analysing or editing the rule - reported by "THA-CERT"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/69df43bb-2c48-4b4d-aa85-8477e92cb010.json
 logsource:
@@ -16,13 +16,13 @@ detection:
     - 74.120.172.10
   attributes:
     IpAddresses:
-    - 66.98.127.105
-    - 118.31.3.116
-    - 1.192.194.162
     - 8.218.67.52
-    - 171.88.142.148
     - 101.219.17.111
+    - 171.88.142.148
+    - 118.31.3.116
+    - 66.98.127.105
+    - 171.88.143.72
     - 171.88.143.37
     - 221.13.74.218
-    - 171.88.143.72
+    - 1.192.194.162
   condition: 1 of object_* or attributes

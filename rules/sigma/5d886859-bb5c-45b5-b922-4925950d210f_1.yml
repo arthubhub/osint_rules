@@ -1,19 +1,19 @@
 title: OSINT - Emotet Updated C2 Info 9/20 - url_request
-id: 08e5a587-5aa5-4eb0-abb9-fdd629360c57
+id: 5dde09d9-df7d-46f8-903a-585db5404d57
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d886859-bb5c-45b5-b922-4925950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
+- attack.group.geodo
+- attack.software.geodo
 - attack.software.emotet
 - attack.software.s0367
-- attack.group.geodo
 - attack.group.emotet
-- attack.software.geodo
 detection:
   object_18137:
     RequestUrl|contains:

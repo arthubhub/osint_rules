@@ -1,56 +1,56 @@
 title: 'M2M -  Locky Affid=3/Trickbot "mac1" 2017-09-29 : "Voice Message from ..."
   - "/voicemsg.html" links - url_request'
-id: 8a8aa680-a30f-4886-aff3-46db87374c6a
+id: b66db875-154e-4a5e-add1-0f723b280e4f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59ce3d45-fc70-4852-bf6d-46e4950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.trick_bot
 - attack.group.locky
 - attack.software.locky
-- attack.software.trick_bot
 detection:
   attributes:
     RequestUrl|contains:
-    - http://team-bobcat.org
-    - http://simonline.nl
-    - http://sgtenterprises.com
-    - http://hashigosha.com
-    - http://resortphotographics.com
-    - http://zik-et-dance.com
-    - http://missinglynxsystems.com
-    - http://estudiperceptiva.com
-    - http://mueblesamedidamalaga.com
-    - http://norsky.pt
-    - http://louisawong.net
-    - http://maule.biz
-    - http://weloveflowers.co.uk
-    - http://vincent-farben.de
-    - http://alucmuhendislik.com
-    - http://sunny-voices.de
-    - http://agregate-cariera.ro
-    - http://parquetroman.com
-    - http://agrourbis.com
-    - http://fortcollins-accounting.com
-    - http://pagosdelrey.mobi
-    - http://shineindian.com
-    - http://mobius-group.com
-    - http://afslearnenglish.com
-    - http://pinkyardflamingos.com
-    - http://kalorsystem.com
-    - http://ferienwohnung-schitter.at
     - http://profigera.pt
-    - http://ilnumeroverde.it
-    - http://monroepoa.org
-    - http://somallc.com
-    - http://datenhaus.info
-    - http://wwwa.su
+    - http://pagosdelrey.mobi
     - http://moroplinghaptan.info
-    - http://monstermx.com
+    - http://shineindian.com
+    - http://ilnumeroverde.it
+    - http://mobius-group.com
+    - http://ferienwohnung-schitter.at
+    - http://zik-et-dance.com
     - http://recturf.com.au
+    - http://parquetroman.com
+    - http://missinglynxsystems.com
+    - http://kalorsystem.com
+    - http://datenhaus.info
+    - http://somallc.com
+    - http://mueblesamedidamalaga.com
+    - http://alucmuhendislik.com
+    - http://maule.biz
+    - http://team-bobcat.org
+    - http://vincent-farben.de
+    - http://agregate-cariera.ro
+    - http://agrourbis.com
+    - http://hashigosha.com
+    - http://estudiperceptiva.com
+    - http://fortcollins-accounting.com
+    - http://monroepoa.org
     - http://auto-ecolecoccinelle.com
+    - http://afslearnenglish.com
+    - http://wwwa.su
+    - http://pinkyardflamingos.com
+    - http://sgtenterprises.com
+    - http://monstermx.com
+    - http://norsky.pt
+    - http://resortphotographics.com
+    - http://weloveflowers.co.uk
+    - http://simonline.nl
+    - http://sunny-voices.de
+    - http://louisawong.net
   condition: attributes

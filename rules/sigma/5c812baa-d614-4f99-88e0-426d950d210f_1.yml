@@ -1,16 +1,16 @@
 title: OSINT -  New SLUB Backdoor Uses GitHub, Communicates via Slack - url_request
-id: cfe75ee5-9aef-4ee4-acf9-363e499a337b
+id: 2aa53328-4a0c-4ce2-8a9b-92dfd73b3bd3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c812baa-d614-4f99-88e0-426d950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1064
 - attack.t1048
+- attack.t1064
 detection:
   attributes:
     RequestUrl|contains:

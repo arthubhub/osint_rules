@@ -1,9 +1,9 @@
 title: OSINT - Uiwix Ransomware Using EternalBlue SMB Exploit To Infect Victims -
   url_request
-id: 7f2bfc29-f38c-41b5-a8cf-502b0c6731fd
+id: cc3abc88-e4b9-45f2-9b32-7841f0df965d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/591d952f-ff4c-4fae-92dd-4a9e950d210f.json
 logsource:
@@ -15,11 +15,11 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://4ujngbdqqm6t2c53.onion.cab
-    - https://www.bleepingcomputer.com
-    - https://netcologne.dl.sourceforge.net
-    - http://4ujngbdqqm6t2c53.onion
-    - http://sqlite.org
     - https://4ujngbdqqm6t2c53.onion.to
+    - https://netcologne.dl.sourceforge.net
     - https://4ujngbdqqm6t2c53.onion.nu
+    - https://www.bleepingcomputer.com
+    - http://sqlite.org
+    - https://4ujngbdqqm6t2c53.onion.cab
+    - http://4ujngbdqqm6t2c53.onion
   condition: attributes

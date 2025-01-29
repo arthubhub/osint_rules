@@ -1,16 +1,16 @@
 title: OSINT - Mirai Compiled for New Processors Surfaces in the Wild - url_request
-id: fd74a3a2-a4c6-44b5-a7df-325bcc11fec4
+id: 7ef8f842-943a-4ca6-be96-ee4f1d11cf51
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cacb081-1854-4035-acbc-4096950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.mirai
 - attack.group.mirai
+- attack.software.mirai
 detection:
   attributes:
     RequestUrl|contains:

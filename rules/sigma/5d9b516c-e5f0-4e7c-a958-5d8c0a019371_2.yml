@@ -1,66 +1,66 @@
 title: Operation Ghost - White Paper - dns_query
-id: 40432055-8eee-475b-a19d-06031849a3a1
+id: b42d9f1d-8638-4c67-9b72-e90f237ccac8
 description: edit this field when analysing or editing the rule - reported by "ESET"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d9b516c-e5f0-4e7c-a958-5d8c0a019371.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1083
-- attack.t1107
-- attack.t1053
-- attack.t1106
-- attack.t1064
-- attack.t1085
-- attack.t1060
-- attack.t1112
-- attack.t1135
-- attack.t1057
-- attack.t1049
-- attack.t1039
-- attack.t1129
-- attack.t1140
-- attack.t1025
-- attack.t1041
-- attack.t1090
-- attack.t1102
 - attack.t1193
-- attack.t1077
-- attack.t1084
-- attack.t1078
-- attack.t1001
-- attack.t1005
-- attack.group.apt_29
+- attack.t1085
 - attack.t1027
-- attack.t1071
-- attack.t1035
+- attack.t1064
+- attack.t1084
+- attack.group.apt_29
+- attack.t1107
 - attack.t1008
+- attack.t1129
+- attack.t1057
+- attack.t1078
+- attack.t1102
+- attack.t1049
 - attack.t1045
+- attack.t1053
 - attack.t1086
+- attack.t1077
+- attack.t1106
+- attack.t1060
+- attack.t1039
+- attack.t1090
+- attack.t1140
+- attack.t1041
+- attack.t1112
+- attack.t1005
+- attack.t1071
+- attack.t1135
+- attack.t1083
+- attack.t1025
+- attack.t1001
+- attack.t1035
 detection:
   attributes:
     QueryName|contains:
-    - sistemikan.com
-    - motherlodebulldogclub.com
-    - mavin21c.dothome.co.kr
     - coachandcook.at
+    - acciaio.com.br
+    - salesappliances.com
+    - motherlodebulldogclub.com
+    - rulourialuminiu.co.uk
     - powerpolymerindustry.com
+    - bandabonga.fr
+    - sistemikan.com
+    - ministernetwork.org
+    - publiccouncil.org
+    - skagenyoga.com
+    - ecolesndmessines.org
+    - lorriratzlaff.com
+    - mavin21c.dothome.co.kr
+    - varuhusmc.org
+    - westmedicalgroup.net
+    - busseylawoffice.com
     - ceycarb.com
     - fairfieldsch.org
-    - bandabonga.fr
-    - westmedicalgroup.net
-    - ministernetwork.org
     - fisioterapiabb.it
-    - busseylawoffice.com
-    - rulourialuminiu.co.uk
-    - skagenyoga.com
-    - lorriratzlaff.com
-    - salesappliances.com
-    - acciaio.com.br
-    - varuhusmc.org
-    - ecolesndmessines.org
-    - publiccouncil.org
   condition: attributes

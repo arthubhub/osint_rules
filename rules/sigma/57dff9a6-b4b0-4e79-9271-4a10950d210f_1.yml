@@ -1,9 +1,9 @@
 title: OSINT - Malicious Macros Add Sandbox Evasion Techniques to Distribute New Dridex
   - url_request
-id: 5f01a3f4-40ff-40f6-9368-e846c576ed91
+id: a40ea642-95c5-4ba1-ba63-7169f44415a7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57dff9a6-b4b0-4e79-9271-4a10950d210f.json
 logsource:
@@ -12,8 +12,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://arabtradenet.com
-    - https://www.proofpoint.com
-    - http://onehealthpublishing.com
     - http://britcart.com
+    - http://arabtradenet.com
+    - http://onehealthpublishing.com
+    - https://www.proofpoint.com
   condition: attributes

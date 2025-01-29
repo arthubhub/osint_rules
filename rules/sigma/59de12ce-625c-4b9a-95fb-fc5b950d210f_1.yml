@@ -1,46 +1,46 @@
 title: 'M2M -  Locky Affid=3, ".asasin"/Trickbot "mac1" 2017-10-11 : "Supplement payment
   1234567890" - "F1234567890_11102017.7z" - url_request'
-id: f93774ff-c5f9-4109-9652-b0373bff9cdc
+id: a409432a-dfa6-46cd-a9d1-26013ffd2085
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59de12ce-625c-4b9a-95fb-fc5b950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.trick_bot
 - attack.group.locky
 - attack.software.locky
-- attack.software.trick_bot
 detection:
   attributes:
     RequestUrl|contains:
+    - http://highlandfamily.org
     - http://team-bobcat.org
-    - http://supremocartuchos.com
-    - http://georginabringas.com
-    - http://wiskundebijles.nu
-    - http://pdj.co.id
-    - http://vithos.de
-    - http://globoart.es
-    - http://resortphotographics.com
-    - http://missinglynxsystems.com
+    - http://bnphealthcare.com
+    - http://accessyouraudience.com
+    - http://jns.co.th
+    - http://highpressurewelding.co.uk
     - http://bdbl.com.np
     - http://eurecas.org
+    - http://georginabringas.com
+    - http://demopowerindo.com
+    - http://areanuova.it
+    - http://wiskundebijles.nu
+    - http://pdj.co.id
+    - http://dispjutr.nl
+    - http://supremocartuchos.com
+    - http://missinglynxsystems.com
     - http://old.tuttoggi.info
     - http://t-plesk.com
-    - http://jns.co.th
-    - http://louisawong.net
-    - http://maule.biz
-    - http://areanuova.it
-    - http://teracom.co.id
-    - http://demopowerindo.com
-    - http://highpressurewelding.co.uk
-    - http://abdulhamit.org
-    - http://bnphealthcare.com
-    - http://dispjutr.nl
+    - http://resortphotographics.com
     - http://fetchstats.net
-    - http://highlandfamily.org
-    - http://accessyouraudience.com
+    - http://abdulhamit.org
+    - http://globoart.es
     - http://holidaypools.com.au
+    - http://louisawong.net
+    - http://teracom.co.id
+    - http://vithos.de
+    - http://maule.biz
   condition: attributes

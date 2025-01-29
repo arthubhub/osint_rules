@@ -1,25 +1,25 @@
 title: Dharma Ransomware Event - process_creation
-id: f398540f-285b-4eb3-9d68-a51bbee70944
+id: eb151f3a-52be-4133-877e-bf21054c2bae
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ee3822c-6828-418c-b619-62de950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.dharma
-- attack.t1083
+- attack.group.dharma
 - attack.t1486
 - attack.group.dharma_ransomware
-- attack.group.dharma
-- attack.t1064
 - attack.t1133
-- attack.t1135
-- attack.software.dharma_ransomware
 - attack.t1078
+- attack.t1083
+- attack.t1135
+- attack.software.dharma
+- attack.software.dharma_ransomware
+- attack.t1064
 detection:
   object_8:
     md5:

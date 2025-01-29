@@ -1,17 +1,17 @@
 title: 'OSINT - Threat Spotlight: Ratsnif - New Network Vermin from OceanLotus - dns_query'
-id: e16edd03-e75f-43f3-8f13-4ae1fa17564d
+id: a0259487-4508-443b-9fac-78626e299d64
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d1dc7d2-8c8c-40d8-9eb9-ba1d950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
+- attack.t1094
 - attack.t1043
 - attack.group.apt32
-- attack.t1094
 detection:
   attributes:
     IpAddresses:

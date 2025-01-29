@@ -1,9 +1,9 @@
 title: OSINT - Votiro Labs exposed a new hacking campaign targeting Vietnamese organisations
   using weaponized Word documents - url_request
-id: f24bfb8a-23a6-4ecd-b6b6-c9187a7a9354
+id: aed36329-46f9-492c-b24c-150ab8adf11f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59b23be2-f440-4083-85d5-4e35950d210f.json
 logsource:
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - dulichovietnam.net
     - https://www.votiro.com
     - dcsvn.org
+    - dulichovietnam.net
   condition: attributes

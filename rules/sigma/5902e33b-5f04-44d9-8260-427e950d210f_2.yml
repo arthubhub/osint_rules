@@ -1,73 +1,73 @@
 title: OSINT - Alert (TA17-117A) Intrusions Affecting Multiple Victims Across Multiple
   Sectors - dns_query
-id: 4c85a426-5c15-4c49-8605-14ac2ae82beb
+id: ba3e5ad7-ec2e-486a-aacb-cf19d8d9afa4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5902e33b-5f04-44d9-8260-427e950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.plugx
 - attack.software.redleaves
+- attack.software.plugx
 detection:
   attributes:
     QueryName|contains:
-    - jica-go-jp.biz
-    - jica-go-jp.bike
-    - jimin-jp.biz
-    - ccfchrist.com
-    - cwiinatonal.com
-    - sindeali.com
-    - incloud-go.com
-    - microsoft.got
     - vmmini.com
-    - incloud-obert.com
-    - cloud-maste.com
-    - bdoncloud.com
-    - salvaiona.com
-    - cloud-kingl.com
-    - mofa-go-jp.com
-    - unhamj.com
-    - catholicmmb.com
-    - wchildress.com
     - meiji-ac-jp.com
+    - wchildress.com
+    - cloud-kingl.com
+    - ccfchrist.com
+    - microsoft.got
+    - incloud-go.com
+    - cwiinatonal.com
+    - jica-go-jp.bike
+    - incloud-obert.com
+    - jimin-jp.biz
+    - jica-go-jp.biz
+    - salvaiona.com
+    - cloud-maste.com
+    - catholicmmb.com
+    - mofa-go-jp.com
+    - sindeali.com
+    - bdoncloud.com
+    - unhamj.com
     IpAddresses:
-    - 160.202.163.78
-    - 185.117.88.78
-    - 160.202.163.91
-    - 31.184.198.23
-    - 151.101.100.73
-    - 162.243.6.98
-    - 185.117.88.77
-    - 158.255.208.61
-    - 110.10.176.181
-    - 160.202.163.82
-    - 86.106.102.3
-    - 31.184.198.38
-    - 109.237.108.150
-    - 151.236.20.16
-    - 95.183.52.57
-    - 185.141.25.33
-    - 158.255.208.170
-    - 103.208.86.129
-    - 185.133.40.63
-    - 107.181.160.109
-    - 183.134.11.84
-    - 185.14.185.189
-    - 185.117.88.82
-    - 61.97.241.239
-    - 109.248.222.85
-    - 95.47.156.86
-    - 158.255.208.189
-    - 109.237.111.175
-    - 109.237.108.202
-    - 185.117.88.81
-    - 81.176.239.56
     - 92.242.144.2
+    - 109.248.222.85
+    - 160.202.163.91
+    - 151.236.20.16
+    - 109.237.108.202
+    - 183.134.11.84
+    - 185.117.88.77
+    - 151.101.100.73
+    - 185.14.185.189
+    - 81.176.239.56
+    - 86.106.102.3
+    - 158.255.208.61
+    - 95.47.156.86
+    - 107.181.160.109
     - 211.110.17.209
-    - 160.202.163.90
+    - 185.133.40.63
+    - 61.97.241.239
+    - 109.237.108.150
     - 160.202.163.79
+    - 185.117.88.82
+    - 160.202.163.82
+    - 31.184.198.23
+    - 185.117.88.78
+    - 160.202.163.78
+    - 158.255.208.189
+    - 185.117.88.81
+    - 185.141.25.33
+    - 31.184.198.38
+    - 103.208.86.129
+    - 160.202.163.90
+    - 110.10.176.181
+    - 109.237.111.175
+    - 158.255.208.170
+    - 162.243.6.98
+    - 95.183.52.57
   condition: attributes

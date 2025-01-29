@@ -1,17 +1,17 @@
 title: OSINT -  US CERT TA17-293A report - renamed PsExec execution (sigma/SIEM ruleset)
   - url_request
-id: 9a517f12-ca68-40ec-a960-6cefa800e9f9
+id: 57c63927-5326-4294-aed0-5f8b44053dd8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59ec91ee-ae0c-4d5a-b149-4c0d02de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.energetic_bear
 - attack.group.dragonfly
+- attack.group.energetic_bear
 detection:
   attributes:
     RequestUrl|contains:

@@ -1,9 +1,9 @@
 title: 'OSINT YiSpecter: First iOS Malware That Attacks Non-jailbroken Apple iOS Devices
   by Abusing Private APIs by Palo Alto Networks Unit 42 - url_request'
-id: 081568a0-60b5-41a7-84ad-dac70709b257
+id: 8ec98507-5c21-4a72-906e-07eb44d8bc15
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56122e52-72c0-4614-83ff-4d3c950d210b.json
 logsource:
@@ -12,6 +12,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - bb800.com
     - http://researchcenter.paloaltonetworks.com
+    - bb800.com
   condition: attributes

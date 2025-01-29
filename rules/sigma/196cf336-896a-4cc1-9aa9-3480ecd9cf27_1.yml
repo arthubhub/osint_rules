@@ -1,54 +1,54 @@
 title: BatLoader Continues to Abuse Google Search Ads to Deliver Vidar Stealer and
   Ursnif - url_request
-id: ee115ec6-13f4-4911-ab79-6ebef5c40714
+id: be9f3344-d31d-421a-8b36-d2cf7b05549f
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/196cf336-896a-4cc1-9aa9-3480ecd9cf27.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.s0386
-- attack.t1059.001
-- attack.software.vidar
-- attack.t1064
-- attack.t1059.006
-- attack.group.vidar
-- attack.t1410
 - attack.t1059
+- attack.t1410
+- attack.software.vidar
+- attack.t1059.001
+- attack.group.vidar
+- attack.t1064
+- attack.software.s0386
+- attack.t1059.006
 detection:
   attributes:
     RequestUrl|contains:
-    - jhgfdlkjhaoiu.su
-    - adobe-a.com
-    - iujdhsndjfks.ru
-    - java-a.com
-    - spotify-uss.com
-    - chatgpt-t.com
-    - reggy506.ru
-    - pixelarmada.su
-    - tableau-r.com
     - isoridkf.ru
-    - java-r.com
-    - bitwarden-t.com
-    - uelcoskdi.ru
-    - anydesk-r.com
-    - gameindikdowd.ru
-    - reggy914.ru
+    - anydesk-o.com
+    - chatgpt-t.com
     - adobe-e.com
-    - gimp-t.com
+    - freecad-l.com
+    - anydesk-r.com
+    - shvarcnegerhistory.com
+    - adobe-a.com
+    - openoffice-a.com
+    - tableau-r.com
+    - java-r.com
+    - quickbooks-q.com
+    - microso-t.com
+    - uelcoskdi.ru
+    - spotify-uss.com
     - adobe-l.com
     - visualstudio-t.com
-    - zoomvideor.com
-    - shvarcnegerhistory.com
-    - anydesk-o.com
-    - quickbooks-q.com
     - basecamp-a.com
-    - openoffice-a.com
+    - iujdhsndjfks.ru
+    - pixelarmada.su
+    - zoomvideor.com
+    - gameindikdowd.ru
+    - reggy914.ru
+    - jhgfdlkjhaoiu.su
+    - reggy506.ru
+    - java-a.com
+    - gimp-t.com
     - java-s.com
-    - freecad-l.com
-    - microso-t.com
+    - bitwarden-t.com
   condition: attributes

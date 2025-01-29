@@ -1,8 +1,8 @@
 title: OSINT -  Uncovering the Inner Workings of EyePyramid - url_request
-id: 1b2cf48d-731d-4ca9-831e-a2ddde3af982
+id: 36164574-e54e-4ba9-81f9-a75d574c22fe
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58806a6c-14a4-49a9-8d6c-49e6950d210f.json
 logsource:
@@ -14,11 +14,11 @@ detection:
   attributes:
     RequestUrl|contains:
     - https://webdav1.storegate.com
-    - https://webdav.cloudme.com
-    - http://webdav.hidrive.strato.com
     - http://blog.trendmicro.com
-    - http://webdav1.storegate.com
-    - https://webdav.hidrive.strato.com
     - http://guess515.fastmail.fm
+    - https://webdav.cloudme.com
+    - http://webdav1.storegate.com
     - http://webdav.cloudme.com
+    - http://webdav.hidrive.strato.com
+    - https://webdav.hidrive.strato.com
   condition: attributes

@@ -1,9 +1,9 @@
 title: 'Blog Post: EMOTET INFECTION WITH ICEDID - dns_query'
-id: a30d0e1d-0b44-4e3b-b26f-4d7e0029caa8
+id: c809ec79-6222-4ab1-9018-3aae8ea46b58
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b337664-88a4-4764-a97f-205b0acd0835.json
 logsource:
@@ -15,9 +15,9 @@ detection:
   attributes:
     QueryName|contains:
     - thectrl24.com
-    - urnachay.com
-    - percalabia.com
     - sandearth.com
+    - percalabia.com
+    - urnachay.com
     IpAddresses:
     - 111.118.185.16
   condition: attributes

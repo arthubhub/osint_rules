@@ -1,20 +1,20 @@
 title: "Remcos RAT New TTPS \u2013 Detection & Response - dns_query"
-id: 5d05a37e-c078-4583-be83-edcc4bf1f326
+id: 86c06d57-54a7-4083-9c9d-1a0edd205a4c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/be8c3307-4b09-4ddf-af24-41c2385d8036.json
 logsource:
   product: windows
   category: dns_query
 tags:
+- attack.software.remcos
 - attack.software.s0332
 - attack.group.remcos
-- attack.software.remcos
 detection:
   attributes:
     IpAddresses:
-    - 194.147.140.29
     - 178.237.33.50
+    - 194.147.140.29
   condition: attributes

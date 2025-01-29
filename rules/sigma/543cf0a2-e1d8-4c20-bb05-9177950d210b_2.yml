@@ -1,8 +1,8 @@
 title: OSINT Shellshock exploitation from Red Sky Weekly blog post - dns_query
-id: 96c2d323-6432-4b1f-998f-68bda5e50827
+id: f14f4d57-9a02-4604-aae1-26d6394dfa8c
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/543cf0a2-e1d8-4c20-bb05-9177950d210b.json
 logsource:
@@ -13,23 +13,23 @@ detection:
     QueryName|contains:
     - google-traffic-analytics.com
     IpAddresses:
+    - 117.218.186.16
+    - 190.82.114.190
+    - 118.172.123.111
     - 78.15.20.81
+    - 14.163.12.119
+    - 119.130.114.154
     - 77.29.189.34
+    - 93.139.212.67
+    - 88.253.229.151
+    - 112.156.18.40
+    - 190.49.241.220
     - 109.227.100.189
     - 79.136.130.110
-    - 113.171.116.163
-    - 119.130.114.154
-    - 112.156.18.40
-    - 223.206.54.26
-    - 78.161.195.166
-    - 118.172.123.111
-    - 190.49.241.220
-    - 88.253.229.151
     - 124.123.75.68
-    - 190.82.114.190
-    - 93.139.212.67
-    - 117.218.186.16
+    - 78.161.195.166
+    - 113.171.116.163
     - 178.121.79.68
-    - 14.163.12.119
     - 178.120.175.81
+    - 223.206.54.26
   condition: attributes

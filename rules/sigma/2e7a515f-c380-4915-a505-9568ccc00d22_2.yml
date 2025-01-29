@@ -1,20 +1,20 @@
 title: 'DeftTorero: tactics, techniques and procedures of intrusions revealed - process_creation'
-id: 20a38a47-470c-4d7c-a5cd-a26c183d5423
+id: ad2b066e-23ba-4ecf-af7a-ab8cc834eaf2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/2e7a515f-c380-4915-a505-9568ccc00d22.json
 logsource:
   product: windows
   category: process_creation
 tags:
+- attack.group.volatile_cedar
+- attack.software.s0002
 - attack.group.g0123
 - attack.software.mimikatz
-- attack.software.s0002
-- attack.group.volatile_cedar
-- attack.group.mimikatz
 - attack.software.netcat
+- attack.group.mimikatz
 detection:
   object_9413:
     md5:
@@ -87,16 +87,16 @@ detection:
     - 3437e3e59fda82cdb09eab711ba7389d
   attributes:
     md5:
-    - 53ee31c009e96d4b079ebe3267d0ae8e
-    - ed50613683b5a4196e0d5fd2687c56da
     - 54ebc45137ba5b9f5ece35ca40267100
+    - ed50613683b5a4196e0d5fd2687c56da
     - e952ec767d872ea08d8555cbc162f3dc
     - a955b45e14d082f71e01ebc52cf13db8
+    - 53ee31c009e96d4b079ebe3267d0ae8e
     sha256:
     - a16bdcfa4cc73f87f6eea9795acb75b6b40f80e0bba6394b39f37b7b1fd1f4ad
+    - b42725211240828ccc505d193d8ea5915e395c9f43e71496ff0ece4f72e3e4ab
+    - 8737f06d7374ff54a9ad728f53c09f89070beca02a305f11fc1e26c8fb33f049
     - f0e6510103deefce338777a81cbfb7529eefa69bafad0d6fd63b4944f916c076
     - c1f43b7cf46ba12cfc1357b17e4f5af408740af7ae70572c9cf988ac50260ce1
     - ed2f501408a7a6e1a854c29c4b0bc5648a6aa8612432df829008931b3e34bf56
-    - b42725211240828ccc505d193d8ea5915e395c9f43e71496ff0ece4f72e3e4ab
-    - 8737f06d7374ff54a9ad728f53c09f89070beca02a305f11fc1e26c8fb33f049
   condition: 1 of object_* or attributes

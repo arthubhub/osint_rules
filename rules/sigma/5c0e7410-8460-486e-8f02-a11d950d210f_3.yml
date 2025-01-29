@@ -1,17 +1,17 @@
 title: OSINT - Sextortion with a side of ransomware - process_creation
-id: cd973ae8-5d09-4dcd-b364-e94a25c57760
+id: ea2e049f-14d9-4497-84c1-fa5825d8fb4b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c0e7410-8460-486e-8f02-a11d950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.azorult
-- attack.software.win.gandcrab
 - attack.software.azorult
+- attack.software.win.gandcrab
+- attack.group.azorult
 - attack.group.win.gandcrab
 detection:
   object_6916:
@@ -58,7 +58,7 @@ detection:
     - a7ba2c9def86e54086f0624a73597865a90cb93aa72dec7fdf264f655cf1bb56
   attributes:
     sha256:
-    - ef07905923461ce13a3ca18ef6eb1833a8c8d327d47e9cc8641a2ca3d5ce97f3
     - a7ba2c9def86e54086f0624a73597865a90cb93aa72dec7fdf264f655cf1bb56
     - 29b42b0ecd874bcad5a5d9d03ed8f8dee320892305312b4898a0b64f9fbde93a
+    - ef07905923461ce13a3ca18ef6eb1833a8c8d327d47e9cc8641a2ca3d5ce97f3
   condition: 1 of object_* or attributes

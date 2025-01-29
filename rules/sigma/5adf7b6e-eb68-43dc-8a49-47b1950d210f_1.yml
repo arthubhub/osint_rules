@@ -1,46 +1,46 @@
 title: 'OSINT - Sednit update: Analysis of Zebrocy - url_request'
-id: 6c783a2c-48e1-4ed4-a7ef-c652aaef7b21
+id: 3ffdc020-df1f-4c16-b3ae-48704c492870
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5adf7b6e-eb68-43dc-8a49-47b1950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.strontium
 - attack.group.apt28
+- attack.group.strontium
 - attack.group.sofacy
 detection:
   attributes:
     RequestUrl|contains:
-    - http://213.103.67.193
-    - http://86.105.18.106
     - http://185.25.51.164
-    - http://93.113.131.155
-    - https://www.welivesecurity.com
-    - http://89.249.65.166
-    - http://188.241.68.121
-    - http://89.40.181.126
-    - http://194.187.249.126
+    - http://80.255.6.5
+    - http://93.115.38.132
+    - http://185.77.129.152
+    - http://213.252.245.132
+    - http://86.105.18.111
+    - http://185.25.51.198
+    - http://89.45.67.153
+    - http://46.183.223.227
+    - http://93.113.131.117
     - http://142.0.68.2
     - http://86.106.131.177
-    - http://185.25.51.198
-    - http://185.77.129.152
+    - http://rammatica.com
+    - http://188.241.68.121
+    - https://www.welivesecurity.com
     - http://220.158.216.127
-    - http://89.249.65.234
-    - http://46.183.223.227
-    - http://213.252.245.132
-    - http://93.113.131.117
-    - http://93.115.38.132
-    - http://222.15.23.121
     - http://185.25.51.114
     - http://46.102.152.127
-    - http://185.25.50.93
+    - http://86.105.18.106
     - http://213.252.244.219
-    - http://86.105.18.111
-    - http://89.45.67.153
-    - http://rammatica.com
-    - http://80.255.6.5
+    - http://185.25.50.93
+    - http://213.103.67.193
+    - http://93.113.131.155
+    - http://89.249.65.234
+    - http://194.187.249.126
+    - http://89.40.181.126
+    - http://89.249.65.166
+    - http://222.15.23.121
   condition: attributes

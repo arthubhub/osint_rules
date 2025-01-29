@@ -1,22 +1,22 @@
 title: OSINT - Turla APT actor refreshes KopiLuwak JavaScript backdoor for use in
   G20-themed attack - url_request
-id: cbce9715-5044-4670-8985-de8ed570fa2b
+id: 7fa2a500-90c5-49c8-a36d-40163f9c4841
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/599aa9ab-dd20-4ae1-a3fa-41b5950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.wipbot
 - attack.group.turla
+- attack.software.wipbot
 - attack.group.turla_group
 detection:
   attributes:
     RequestUrl|contains:
-    - http://tresor-rare.com.hk
-    - https://www.proofpoint.com
     - http://www.huluwa.uk
+    - https://www.proofpoint.com
+    - http://tresor-rare.com.hk
   condition: attributes

@@ -1,16 +1,16 @@
 title: OSINT -  Analysis of an IRC based Botnet - process_creation
-id: 72f74b74-a69e-4351-b966-e43707a48147
+id: 575c3cb9-38ab-44c9-96b2-16af160c09ad
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cc410a0-be10-4990-acf6-44cc02de0b81.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.tsunami
 - attack.group.tsunami
+- attack.software.tsunami
 detection:
   object_6955:
     md5:
@@ -91,15 +91,15 @@ detection:
     - 3549fca31abf602a78f645d3406ad075e02c7ea9a6aa9cec243ba6cb58b5e39f
   attributes:
     sha256:
-    - 49fd1cb22e0325c1f9038160da534fc23672e5509e903a94ce5bcddc893eb2c0
-    - 62997b5ecc8bb785f16803cdd04d2b4209476e457d9a46cbb1f7fae0a6a8108d
-    - 32776a1a3eb8914855b57972c94750e0bb1dedd3ed161fdb53098cdfcee74ce3
+    - 284bde3fc80d81eb2cf644770df64c59cc444f283bd4ab96f64431fef735879a
+    - 34fa4705a10ca0d940762f5f594bbf93fe79f1df2bf4a1fb69fe9b00ff79b2fe
     - 3efdd1461af3cf4039bd7a3ababcf71c5df08a1c232a36287d9ae1f0bd7509cc
-    - fd43c0abfaa6e6203e24bdb015613801f4a23894aba9586b0bdf1e70736883e5
+    - 976e948ccec98ffd36115d0240c2a438dccd4e15d220284e6356e3fcb0f2548c
     - 31784de70d7b55b2ee48a9ae359f7c67c82fb9a814279e0944a9dee01ed3f756
     - 3549fca31abf602a78f645d3406ad075e02c7ea9a6aa9cec243ba6cb58b5e39f
-    - 284bde3fc80d81eb2cf644770df64c59cc444f283bd4ab96f64431fef735879a
-    - 976e948ccec98ffd36115d0240c2a438dccd4e15d220284e6356e3fcb0f2548c
     - f031d926d80805795c20d1a7b280759d1393e736a85f7fd2e02d2088f2fb0221
-    - 34fa4705a10ca0d940762f5f594bbf93fe79f1df2bf4a1fb69fe9b00ff79b2fe
+    - 32776a1a3eb8914855b57972c94750e0bb1dedd3ed161fdb53098cdfcee74ce3
+    - fd43c0abfaa6e6203e24bdb015613801f4a23894aba9586b0bdf1e70736883e5
+    - 49fd1cb22e0325c1f9038160da534fc23672e5509e903a94ce5bcddc893eb2c0
+    - 62997b5ecc8bb785f16803cdd04d2b4209476e457d9a46cbb1f7fae0a6a8108d
   condition: 1 of object_* or attributes

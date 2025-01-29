@@ -1,27 +1,27 @@
 title: '2019-01-10: North Korea Lazarus Targeting REDBANC - process_creation'
-id: d1dd3943-8ce1-4a0c-be47-3bd3ae29e66c
+id: 7315f8da-168d-4589-ae01-4c17fc6c2277
 description: edit this field when analysing or editing the rule - reported by "VK-Intel"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c3c4a6d-15f0-4133-baff-3c2c68f8e8cf.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1047
 - attack.t1005
-- attack.t1053
 - attack.t1199
+- attack.t1047
+- attack.t1053
 - attack.t1132
+- attack.t1050
 - attack.t1064
 - attack.t1041
-- attack.t1050
 detection:
   attributes:
     sha256:
-    - f12db45c32bda3108adb8ae7363c342fdd5f10342945b115d830701f95c54fa9
     - 0f56ebca33efe0a2755d3b380167e1f5eab4e6180518c03b28d5cffd5b675d26
-    - a1f06d69bd6379e310b10a364d689f21499953fa1118ec699a25072779de5d9b
+    - f12db45c32bda3108adb8ae7363c342fdd5f10342945b115d830701f95c54fa9
     - 20d94f7d8ee2c4367443a930370d5685789762b1d11794810dc0ac6c626ad78e
+    - a1f06d69bd6379e310b10a364d689f21499953fa1118ec699a25072779de5d9b
   condition: attributes

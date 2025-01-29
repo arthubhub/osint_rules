@@ -1,9 +1,9 @@
 title: Spam 2016-10-16 (mule acquisition) - probably related to Locky resources -
   url_request
-id: ac2e7c9d-da48-4eae-b628-4026cb496d29
+id: b470e303-cd93-413f-9439-eaaf08875666
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58030b52-b52c-41e7-93f6-43ae950d210f.json
 logsource:
@@ -12,12 +12,12 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - bidprogroup.com
+    - http://bikebreeze.com
     - billfoundation.org
     - bigway.com
-    - http://bigway.com
-    - http://bikebreeze.com
-    - bikebreeze.com
     - http://billfoundation.org
     - http://bidprogroup.com
-    - bidprogroup.com
+    - bikebreeze.com
+    - http://bigway.com
   condition: attributes

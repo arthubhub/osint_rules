@@ -1,23 +1,23 @@
 title: OSINT - Threat Actor TA505 Targets Financial Enterprises Using LOLBins and
   a New Backdoor Malware - url_request
-id: a6ba9c8b-e65c-4ee2-ab91-72c25c84dc78
+id: 1ab4706c-21ab-45f3-9f09-a69b9cc17426
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cc209b3-82e0-4d0e-980d-4a6002de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.ta505
-- attack.t1041
 - attack.t1193
+- attack.t1041
+- attack.group.ta505
 detection:
   attributes:
     RequestUrl|contains:
-    - aasdkkkdsa3442.icu
-    - https://www.cybereason.com
     - joisf333.icu
     - zxskjkkjsk3232.pw
+    - https://www.cybereason.com
+    - aasdkkkdsa3442.icu
   condition: attributes

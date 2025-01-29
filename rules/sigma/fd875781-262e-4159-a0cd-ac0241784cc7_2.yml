@@ -1,9 +1,9 @@
 title: March 2021 Exchange Server Security Updates for older Cumulative Updates of
   Exchange Server - process_creation
-id: 8cee3808-3c65-40d3-abae-e8cbacc4f231
+id: a1b79ff2-4ed3-4a84-9194-b0504aad960e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/fd875781-262e-4159-a0cd-ac0241784cc7.json
 logsource:
@@ -26,9 +26,9 @@ detection:
     - 511df0e2df9bfa5521b588cc4bb5f8c5a321801b803394ebc493db1ef3c78fa1
   attributes:
     sha256:
+    - 511df0e2df9bfa5521b588cc4bb5f8c5a321801b803394ebc493db1ef3c78fa1
+    - 811157f9c7003ba8d17b45eb3cf09bef2cecd2701cedb675274949296a6a183d
+    - 4edc7770464a14f54d17f36dc9d0fe854f68b346b27b35a6f5839adf1f13f8ea
     - 65149e036fff06026d80ac9ad4d156332822dc93142cf1a122b1841ec8de34b5
     - b75f163ca9b9240bf4b37ad92bc7556b40a17e27c2b8ed5c8991385fe07d17d0
-    - 4edc7770464a14f54d17f36dc9d0fe854f68b346b27b35a6f5839adf1f13f8ea
-    - 811157f9c7003ba8d17b45eb3cf09bef2cecd2701cedb675274949296a6a183d
-    - 511df0e2df9bfa5521b588cc4bb5f8c5a321801b803394ebc493db1ef3c78fa1
   condition: 1 of object_* or attributes

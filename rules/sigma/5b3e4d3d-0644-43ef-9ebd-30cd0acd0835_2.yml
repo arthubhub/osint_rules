@@ -1,42 +1,42 @@
 title: Talos Blog - Smoking Guns - Smoke Loader learned new tricks - dns_query
-id: 640c8df8-2aed-498a-a731-75eba4355125
+id: 819a5ae9-ad46-48c1-885d-1b3a36d3ea3c
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b3e4d3d-0644-43ef-9ebd-30cd0acd0835.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.trick_bot
 - attack.software.smoke_loader
+- attack.software.trick_bot
 detection:
   attributes:
     QueryName|contains:
     - ukcompany.me
-    - ukcompany.top
     - ukcompany.pw
+    - ukcompany.top
     IpAddresses:
-    - 185.174.173.241
-    - 185.20.187.13
-    - 62.109.26.121
-    - 185.242.179.118
-    - 37.230.112.146
-    - 137.74.151.148
     - 195.123.216.115
-    - 62.109.24.176
-    - 213.183.51.54
-    - 185.174.174.156
-    - 62.109.26.208
-    - 94.103.82.216
     - 185.174.173.34
-    - 85.143.221.60
+    - 185.20.187.13
+    - 94.103.82.216
     - 162.247.155.114
-    - 185.174.174.72
-    - 185.68.93.27
-    - 185.223.95.66
-    - 185.174.173.116
+    - 62.109.26.208
     - 62.109.27.196
+    - 85.143.221.60
+    - 62.109.26.121
+    - 185.223.95.66
+    - 185.174.174.156
+    - 185.174.174.72
+    - 185.174.173.241
+    - 213.183.51.54
+    - 185.68.93.27
+    - 62.109.24.176
+    - 185.242.179.118
+    - 137.74.151.148
+    - 37.230.112.146
+    - 185.174.173.116
   condition: attributes

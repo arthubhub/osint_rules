@@ -1,23 +1,23 @@
 title: OSINT - ESET discovered an undocumented backdoor used by the infamous Stealth
   Falcon group - process_creation
-id: 4e9f3ea3-94b9-4d31-b6a4-573c535fa638
+id: 51343512-dc6b-4b86-8d34-780d4211669d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d78a50e-ba3c-40b3-a5c1-4fb1950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1197
 - attack.group.g0038
+- attack.t1197
 - attack.group.stealth_falcon
 detection:
   attributes:
     sha1:
-    - 5c8f83cc4ff57e7c67925df4d9daabe5d0cc07e2
-    - 244eb62b9ac30934098ca4204447440d6fc4e259
     - 31b54aebdaf5fbc73a66ac41ccb35943cc9b7f72
+    - 244eb62b9ac30934098ca4204447440d6fc4e259
+    - 5c8f83cc4ff57e7c67925df4d9daabe5d0cc07e2
     - 50973a3fc57d70c7911f7a952356188b9939e56b
   condition: attributes

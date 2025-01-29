@@ -1,8 +1,8 @@
 title: 'OSINT Android.Bankosy: All ears on voice call-based 2FA by Symantec - url_request'
-id: a218d31e-9b8e-4572-9a60-73d5a1aaa7b0
+id: 32b0644f-3a9e-4f5a-b708-4c099a42629d
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56af4bee-eeb4-4145-b10f-4c7e950d210f.json
 logsource:
@@ -12,10 +12,10 @@ detection:
   attributes:
     RequestUrl|contains:
     - https://otx.alienvault.com
-    - http://195.3.144.90
     - http://www.symantec.com
-    - http://89.144.14.29
+    - http://195.3.144.90
     - http://185.86.148.188
     - http://89.144.14.59
     - http://xxxmobiletubez.com
+    - http://89.144.14.29
   condition: attributes

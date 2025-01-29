@@ -1,8 +1,8 @@
 title: Script-maze historical malware seen - url_request
-id: 0a5c274a-311e-4975-8998-5e5d91a42201
+id: 771bc89d-2302-432b-998d-5228b7c0c6e3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cea4d65-d448-4e7c-af4a-4fe3950d210f.json
 logsource:
@@ -14,16 +14,16 @@ detection:
     - http://74.222.1.38
   attributes:
     RequestUrl|contains:
-    - http://45.58.135.106
+    - http://35.182.171.137
     - http://223.25.247.240
-    - http://2019.ip138.com
-    - http://185.112.156.92
-    - http://wmi.1217bye.host
-    - http://down.0814ok.info
-    - http://74.222.1.38
     - http://66.117.6.174
     - http://173.247.239.186
-    - http://198.148.90.34
-    - http://35.182.171.137
+    - http://2019.ip138.com
+    - http://wmi.1217bye.host
+    - http://185.112.156.92
+    - http://45.58.135.106
     - http://173.208.139.170
+    - http://74.222.1.38
+    - http://198.148.90.34
+    - http://down.0814ok.info
   condition: 1 of object_* or attributes

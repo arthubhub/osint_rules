@@ -1,17 +1,17 @@
 title: OSINT - New Gootkit Banking Trojan campaign against Italian Companies and Users.
   - url_request
-id: bddc6d20-c70b-4321-835d-bf8f18572fc0
+id: 310d9b37-153d-4b58-9ca3-ab0b5a02ff9d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d832991-f5e4-4623-945f-4bf6950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.gootkit
 - attack.software.gootkit
+- attack.group.gootkit
 detection:
   object_2618:
     RequestUrl|contains:

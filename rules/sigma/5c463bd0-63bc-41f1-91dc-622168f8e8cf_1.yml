@@ -1,28 +1,28 @@
 title: '2019-01-21: APT28 Autoit Zebrocy Progression - url_request'
-id: 80ab3baa-3f18-4ae0-a72b-e17aceeaaaae
+id: 74f57d69-bd18-4b3b-b3d8-e3b6b4072807
 description: edit this field when analysing or editing the rule - reported by "VK-Intel"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c463bd0-63bc-41f1-91dc-622168f8e8cf.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1082
-- attack.t1047
-- attack.t1071
-- attack.t1064
-- attack.t1060
-- attack.group.sofacy
 - attack.t1059
+- attack.t1047
+- attack.t1082
+- attack.t1071
+- attack.t1060
+- attack.t1064
 - attack.t1041
+- attack.group.sofacy
 detection:
   attributes:
     RequestUrl|contains:
-    - https://145.249.106.198
-    - http://194.187.249.126
-    - http://185.236.203.53
     - http://80.255.6.5
     - http://220.158.216.127
+    - http://194.187.249.126
+    - http://185.236.203.53
+    - https://145.249.106.198
   condition: attributes

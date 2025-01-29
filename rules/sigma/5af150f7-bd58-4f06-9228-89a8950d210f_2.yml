@@ -1,16 +1,16 @@
 title: OSINT - APT28 malicious NATO document - dns_query
-id: 110d6cdd-2ba0-493c-83c3-47395b92dc6e
+id: f85a5977-be37-4c24-86df-4958bf4fe5a0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/28
+date: 2025/01/29
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5af150f7-bd58-4f06-9228-89a8950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.strontium
 - attack.group.apt28
+- attack.group.strontium
 - attack.group.sofacy
 detection:
   object_17570:
@@ -32,6 +32,6 @@ detection:
     - 185.86.149.54
   attributes:
     QueryName|contains:
-    - lxwo.org
     - rolstug.com
+    - lxwo.org
   condition: 1 of object_* or attributes
