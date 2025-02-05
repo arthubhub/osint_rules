@@ -1,0 +1,16 @@
+title: 'OSINT RTF Exploit Installs Italian RAT: uWarrior by Palo Alto - url_request'
+id: 478d30a1-f9c6-4840-bc95-424271b6b7b9
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55dc2f59-7238-468a-8956-575e950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+    - https://otx.alienvault.com
+  condition: attributes

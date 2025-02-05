@@ -1,0 +1,16 @@
+title: "OSINT - Pok\xC3\xA9mon-themed Umbreon Linux Rootkit Hits x86, ARM Systems\
+  \ - url_request"
+id: 100ea3bf-9395-426d-9a33-b73f7cdbc1c3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ce65d3-6170-47b5-8f3f-47e0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.trendmicro.com
+  condition: attributes

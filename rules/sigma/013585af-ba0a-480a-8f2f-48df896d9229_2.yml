@@ -1,0 +1,36 @@
+title: 'OSINT - JSSLoader: the shellcode edition - process_creation'
+id: ab9b17d8-ce20-401a-a020-707963994e8f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/013585af-ba0a-480a-8f2f-48df896d9229.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.g0046
+- attack.group.fin7
+detection:
+  attributes:
+    md5:
+    - 2956c03bff952b22387eed8172a26ba5
+    - 4961aec62fac8beeafffa5bfc841fab8
+    - 1e12ac069c1898ffe271ebdfcbd689c1
+    - 4a1e60be00e59617d53122d70c64506c
+    - f1aff007c04c6fd3739dbeac537edaaa
+    sha1:
+    - d2742d7c4b7454745795c547594bb4f9dbddecfe
+    - 0eaf6289dd7ebe8ae0879a4a72d1518e1d4ffac9
+    - 9d0f6c8be3214eee1dda6ebb4bb41ef97cfe28b4
+    - 5c7b4da950b0f1845b38ef1aa11ca41b4731c766
+    - 529f476f952fd1526d2038cb0012e5bdd8a702f3
+    sha256:
+    - bf1371e2d79115fc7cfc89266cd7a59c02b04a74e1246435392eb5e20c661d8f
+    - 7a17ef218eebfdd4d3e70add616adcd5b78105becd6616c88b79b261d1a78fdf
+    - b08e713196b712c42da2df9da7836d270306065fbf6d4720f25d80e4104daf38
+    - 35f5c781d61d398ce47a8881228346a81afb4915bf083518bf2b4cc8d6a2685b
+    - 410cd107dfd37752936bd20d022ea614cd373aa9d37db255f65dc434e653236a
+    - 7a234d1a2415834290a3a9c7274aadb7253dcfe24edb10b22f1a4a33fd027a08
+    - cc2171d14d0d3c4d117155185f7c911f781aac15b57adef6c32eb0149d5da3ba
+  condition: attributes

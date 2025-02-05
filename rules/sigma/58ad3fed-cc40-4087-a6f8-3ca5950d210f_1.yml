@@ -1,0 +1,19 @@
+title: OSINT - Additional Insights on Shamoon2 - url_request
+id: 15f4ae53-783f-44d5-958f-0fe17da9e43b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58ad3fed-cc40-4087-a6f8-3ca5950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.shamoon
+detection:
+  attributes:
+    RequestUrl|contains:
+    - analytics-google.org
+    - go-microstf.com
+    - https://www.arbornetworks.com
+  condition: attributes

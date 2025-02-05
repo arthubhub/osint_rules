@@ -1,0 +1,19 @@
+title: OSINT Operation Double Tap from FireEye - dns_query
+id: 10e0c9b1-128d-450c-a0fb-7f98318a6c7d
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5474459d-1c60-456a-b057-4bdc950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 192.157.198.103
+    - 104.151.248.173
+    - 198.55.115.71
+    - 210.109.99.64
+    - 192.184.60.229
+  condition: attributes

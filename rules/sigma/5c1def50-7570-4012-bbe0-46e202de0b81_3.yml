@@ -1,0 +1,96 @@
+title: Malicious ELF binary (Mirai) - 2018-12-22 (collected on a router) - process_creation
+id: e80bc0f3-dc56-4cd3-9b78-f50c5d309893
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c1def50-7570-4012-bbe0-46e202de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.mirai
+- attack.group.mirai
+detection:
+  object_711:
+    md5:
+    - b20e3369d72ca79df0362398ae81d4c8
+    sha1:
+    - f6a079a809e65ca8007d7959f5eedacf852e7351
+    sha256:
+    - 1c484f5eab8549071f2c1643daf947d7fde459080a0b87337342a8e629c9a9d0
+  object_712:
+    md5:
+    - a6574b0af5a2d91c52d59b8e68e21387
+    sha1:
+    - b3f89c2cbf180251d3ce60cc275cfa37faceadf6
+    sha256:
+    - cd31099d2dd701e259ab0bf490467a5fcf6ecebeb387e7b6b295ad53e5f83687
+  object_714:
+    md5:
+    - 32a075fb231e42678581b83f0be2c001
+    sha1:
+    - 21fd9c9332ba3b9da8f169a5a9e926fd4f25b8e0
+    sha256:
+    - f57ad9b7c5ca6bf64b32860298a88e2912800ce564890e4f44da46490af205a4
+  object_716:
+    md5:
+    - e2ddf17217c528e08cf13b9cb55937f2
+    sha1:
+    - b236d8b3e4ceab7d2d6729a8a955aa36ee871ce6
+    sha256:
+    - dd56f13b244a2b8a33fe5a112156fd89c9157406198f053354e6471b75c24554
+  object_718:
+    md5:
+    - c09bc77edcb32573a10da99197c51162
+    sha1:
+    - 65f218fd4c85c565270ca1b2ba5271bf9792da62
+    sha256:
+    - 0a1c9cc1d2ff521996cf46fe40e0ba9dc010a9b67b45f56bc4824a8e6c505524
+  object_720:
+    md5:
+    - 5dfc1bc753a257824c8010ed4bdd4092
+    sha1:
+    - ff782a7c66eb769ab6542948da3f33a0f83bc497
+    sha256:
+    - 6f81576fe9e215ab361150385eb0542e3fe07507f8a96fd2642d70ac3568106a
+  object_723:
+    md5:
+    - d201a06381a07c96a0ca0527f8ec2912
+    sha1:
+    - dc52f94c6a0e44aae56b78109113c4b8e39ff4da
+    sha256:
+    - 21c8d8ca54284ca7aa92f5d1c2f8b931c13150cc8561f5bab4dc21cebba1fb27
+  object_725:
+    md5:
+    - 4ee9d50632e0c7c36899cecf1b8f2547
+    sha1:
+    - c200a35d1dbbfe9639fc942755701dee3f1c415e
+    sha256:
+    - e82a45de78fbf8b1b9577270924b100d1c094c6d1a84086a168543aed23c264b
+  object_727:
+    md5:
+    - 48db654726a8758af7f2b3b31d1476f2
+    sha1:
+    - 1229375497e371eb2ce3e8e670fb554804eea42d
+    sha256:
+    - 22c6b6bd77ee2fcd16dcbb3f2ae400eafd741a4fc92a5ee167445334145e4242
+  object_729:
+    md5:
+    - ad124ff5c8d0a2afab61bb8c29b8a8a8
+    sha1:
+    - ddf38f8cc07b05085ca6b9508975449c474a49d4
+    sha256:
+    - 5c03fa1d9b7d551f738fa8cf0937aff842b019789ffa15cb97823f921dcdedcb
+  attributes:
+    sha256:
+    - 5c03fa1d9b7d551f738fa8cf0937aff842b019789ffa15cb97823f921dcdedcb
+    - dd56f13b244a2b8a33fe5a112156fd89c9157406198f053354e6471b75c24554
+    - 6f81576fe9e215ab361150385eb0542e3fe07507f8a96fd2642d70ac3568106a
+    - f57ad9b7c5ca6bf64b32860298a88e2912800ce564890e4f44da46490af205a4
+    - 22c6b6bd77ee2fcd16dcbb3f2ae400eafd741a4fc92a5ee167445334145e4242
+    - cd31099d2dd701e259ab0bf490467a5fcf6ecebeb387e7b6b295ad53e5f83687
+    - e82a45de78fbf8b1b9577270924b100d1c094c6d1a84086a168543aed23c264b
+    - 0a1c9cc1d2ff521996cf46fe40e0ba9dc010a9b67b45f56bc4824a8e6c505524
+    - 21c8d8ca54284ca7aa92f5d1c2f8b931c13150cc8561f5bab4dc21cebba1fb27
+  condition: 1 of object_* or attributes

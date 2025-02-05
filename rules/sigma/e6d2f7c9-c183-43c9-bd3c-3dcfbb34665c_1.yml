@@ -1,0 +1,30 @@
+title: 'OSINT Threat Advisory: SolarWinds supply chain attack - url_request'
+id: 39356c50-907f-403c-ad65-93b8f8787a7f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/e6d2f7c9-c183-43c9-bd3c-3dcfbb34665c.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - panhardware.com
+    - thedoccloud.com
+    - avsvmcloud.com
+    - highdatabase.com
+    - zupertech.com
+    - freescanonline.com
+    - deftsecurity.com
+    - virtualdataserver.com
+    - seobundlekit.com
+    - digitalcollege.org
+    - https://blog.talosintelligence.com
+    - websitetheme.com
+    - databasegalore.com
+    - globalnetworkissues.com
+    - virtualwebdata.com
+    - incomeupdate.com
+  condition: attributes

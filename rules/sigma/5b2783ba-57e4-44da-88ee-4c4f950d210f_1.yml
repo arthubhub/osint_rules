@@ -1,0 +1,22 @@
+title: OSINT - New Donut Ransomware - url_request
+id: b8f84380-e903-43cd-972b-776db59e5f6e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b2783ba-57e4-44da-88ee-4c4f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.donut
+- attack.software.donut
+detection:
+  object_11315:
+    RequestUrl|contains:
+    - https://twitter.com
+  attributes:
+    RequestUrl|contains:
+    - https://twitter.com
+    - https://www.bleepingcomputer.com
+  condition: 1 of object_* or attributes

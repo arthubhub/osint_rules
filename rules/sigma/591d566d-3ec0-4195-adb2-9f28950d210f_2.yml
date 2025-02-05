@@ -1,0 +1,41 @@
+title: 'Invoice ###### 05/17/2017 from dontreply@random - dns_query'
+id: 8706313e-18b8-478d-a201-02b286edfeeb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/591d566d-3ec0-4195-adb2-9f28950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    IpAddresses:
+    - 211.149.239.112
+    - 47.91.107.213
+    - 199.166.6.15
+    - 213.246.39.74
+    - 51.254.159.78
+    - 37.230.111.113
+    - 103.224.248.183
+    - 192.162.100.191
+    - 93.185.104.24
+    - 65.19.169.34
+    - 185.87.184.212
+    - 34.209.214.237
+    - 212.18.226.16
+    - 81.169.145.95
+    - 46.30.213.164
+    - 107.154.161.187
+    - 81.88.57.68
+    - 129.121.5.206
+    - 5.61.25.106
+    - 103.247.9.134
+    - 107.154.168.187
+    - 143.95.74.249
+    - 211.115.89.71
+    - 92.43.113.68
+  condition: attributes

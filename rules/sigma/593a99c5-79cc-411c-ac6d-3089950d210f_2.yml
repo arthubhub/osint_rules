@@ -1,0 +1,32 @@
+title: "OSINT - FIREBALL \xE2\u20AC\u201C The Chinese Malware of 250 Million Computers\
+  \ Infected - dns_query"
+id: a8c1b92d-ff0e-467c-9340-d7717975e323
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/593a99c5-79cc-411c-ac6d-3089950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - giqepofa.com
+    - nicesearches.com
+    - hohosearch.com
+    - youndoo.com
+    - attirerpage.com
+    - search2000s.com
+    - mustang-browser.com
+    - startpageing123.com
+    - thewebanswers.com
+    - walasearch.com
+    - yessearches.com
+    - forestbrowser.com
+    - universalsearches.com
+    - ooxxsearch.com
+    - funcionapage.com
+    - trotux.com
+    - luckysearch123.com
+  condition: attributes

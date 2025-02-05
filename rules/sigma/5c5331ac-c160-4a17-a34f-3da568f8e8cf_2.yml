@@ -1,0 +1,20 @@
+title: '2019-01-31: ISFB v2 Installs Dridex "3101" - dns_query'
+id: 74437e2b-8d0f-450c-a60c-50b066ad3b05
+description: edit this field when analysing or editing the rule - reported by "VK-Intel"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c5331ac-c160-4a17-a34f-3da568f8e8cf.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.dridex
+- attack.software.dridex
+detection:
+  attributes:
+    QueryName|contains:
+    - h5441eqzey.fun
+    - taileenanahi.company
+    - f60vinnie75.city
+  condition: attributes

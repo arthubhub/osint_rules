@@ -1,0 +1,16 @@
+title: HermeticWiper - url_request
+id: ed8d1061-3fe7-4d95-bb85-acc09821aac8
+description: edit this field when analysing or editing the rule - reported by "SCTIF"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/a097dd7c-8e29-40eb-a70d-1fb0b5cca689.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://analyze.intezer.com
+    - https://twitter.com
+  condition: attributes

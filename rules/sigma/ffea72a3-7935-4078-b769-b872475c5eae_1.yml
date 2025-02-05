@@ -1,0 +1,18 @@
+title: 'OSINT - Game of Emperor: Unveiling Long Term Earth Estries Cyber Intrusions
+  - url_request'
+id: c9a918ff-34aa-48e7-8444-38d5a27f782a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/ffea72a3-7935-4078-b769-b872475c5eae.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.earth_estries
+detection:
+  object_7022:
+    RequestUrl|contains:
+    - https://www.trendmicro.com
+  condition: 1 of object_*

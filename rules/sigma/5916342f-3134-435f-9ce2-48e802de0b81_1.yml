@@ -1,0 +1,22 @@
+title: OSINT - Massive outbreak of ransomware variant infects large amounts of computers
+  around the world - url_request
+id: 7f42c293-1ed4-4d89-b393-7375373c8f51
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5916342f-3134-435f-9ce2-48e802de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.wannacry
+- attack.group.wannacry
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.rentasyventas.com
+    - https://blockchain.info
+    - http://graficagbin.com.br
+    - https://blog.fox-it.com
+  condition: attributes

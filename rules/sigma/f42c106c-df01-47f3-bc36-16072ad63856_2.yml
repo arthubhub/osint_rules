@@ -1,0 +1,21 @@
+title: OSINT - Egregor RaaS Continues the Chaos with Cobalt Strike and Rclone - dns_query
+id: 378d7675-873c-4927-9459-4546082576cc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f42c106c-df01-47f3-bc36-16072ad63856.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.egregor
+- attack.group.egregor
+detection:
+  attributes:
+    IpAddresses:
+    - 185.238.0.233
+    - 45.153.242.129
+    - 45.11.19.70
+    - 217.8.117.148
+  condition: attributes

@@ -1,0 +1,19 @@
+title: Ursnif, MALWAREMESSIAGH - dns_query
+id: 8c327d26-a8fa-4e87-8aee-db6ef0841be7
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b646415-7b48-40d5-86b4-c0070acd0835.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - diqjwhebseqhbasdh.com
+    - dquohwdihaewqdcas.com
+    - eqowiesajenqweasd.com
+    - ooiasjdnqjwbeasdasd.com
+  condition: attributes

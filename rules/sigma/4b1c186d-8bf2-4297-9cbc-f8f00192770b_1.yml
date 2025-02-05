@@ -1,0 +1,35 @@
+title: Prynt Stealer Spotted In the Wild - A New Info Stealer Performing Clipper And
+  Keylogger Activities - url_request
+id: b87f05a4-0961-40cb-bf16-3d6b47430361
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/4b1c186d-8bf2-4297-9cbc-f8f00192770b.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1007
+- attack.t1614
+- attack.t1087
+- attack.t1041
+- attack.t1552
+- attack.t1071
+- attack.t1555
+- attack.t1204
+- attack.t1528
+- attack.t1539
+- attack.t1567
+- attack.t1113
+- attack.group.prynt_stealer
+- attack.software.prynt_stealer
+- attack.t1057
+- attack.t1518
+- attack.t1497.001
+- attack.t1124
+detection:
+  object_11516:
+    RequestUrl|contains:
+    - https://blog.cyble.com
+  condition: 1 of object_*

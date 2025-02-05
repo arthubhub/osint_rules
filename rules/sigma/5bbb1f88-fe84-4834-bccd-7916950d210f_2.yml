@@ -1,0 +1,26 @@
+title: OSINT - New Fox Ransomware Matrix Variant Tries Its Best to Close All File
+  Handles - process_creation
+id: 1427f27e-693c-4404-ba6d-bff5392446f2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bbb1f88-fe84-4834-bccd-7916950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.matrix
+- attack.group.matrix
+detection:
+  object_10492:
+    sha256:
+    - 0b03bf1c7b596a862978999eebfa0703e6de48912c9a57e2fed3ae5cd747bea7
+  object_10493:
+    md5:
+    - 76b640aa00354e46b29ca7ac2adfd732
+    sha1:
+    - afebf9d72ba7186afefebf4deda87675621b0b8b
+    sha256:
+    - 0b03bf1c7b596a862978999eebfa0703e6de48912c9a57e2fed3ae5cd747bea7
+  condition: 1 of object_*

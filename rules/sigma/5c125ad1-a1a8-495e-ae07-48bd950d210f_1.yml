@@ -1,0 +1,32 @@
+title: "OSINT - \xE2\u20AC\u02DCOperation Sharpshooter\xE2\u20AC\u2122 Targets Global\
+  \ Defense, Critical Infrastructure - url_request"
+id: 3a6b5b99-6e35-4a9d-af96-b8665ab257d4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c125ad1-a1a8-495e-ae07-48bd950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1087
+- attack.t1041
+- attack.t1083
+- attack.t1082
+- attack.t1049
+- attack.t1043
+- attack.t1057
+- attack.t1020
+- attack.t1022
+- attack.t1124
+- attack.t1055
+- attack.group.operation_sharpshooter
+- attack.t1016
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.dropbox.com
+    - https://securingtomorrow.mcafee.com
+    - http://208.117.44.112
+  condition: attributes

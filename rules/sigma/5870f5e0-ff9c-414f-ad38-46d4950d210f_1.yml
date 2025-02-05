@@ -1,0 +1,16 @@
+title: OSINT - The curious case of a Sundown EK variant dropping a Cryptocurrency
+  Miner - url_request
+id: 3e5a3765-21f6-44a4-b6e2-90f3b5487f8e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5870f5e0-ff9c-414f-ad38-46d4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.malwarebytes.com
+  condition: attributes

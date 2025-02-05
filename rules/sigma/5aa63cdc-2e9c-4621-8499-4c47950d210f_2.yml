@@ -1,0 +1,17 @@
+title: OSINT - Turla Nautilus Implant - dns_query
+id: 0334f23f-d003-4eae-9d8c-da9e3eb351fb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aa63cdc-2e9c-4621-8499-4c47950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.wipbot
+detection:
+  attributes:
+    IpAddresses:
+    - 2.20.189.34
+  condition: attributes

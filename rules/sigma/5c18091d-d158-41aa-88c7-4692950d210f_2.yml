@@ -1,0 +1,77 @@
+title: OSINT - The Return of The Charming Kitten - dns_query
+id: 24796366-c5c3-483b-be28-7533b8f46883
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c18091d-d158-41aa-88c7-4692950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.charming_kitten
+detection:
+  attributes:
+    QueryName|contains:
+    - notificationapp.info
+    - documentsfilesharing.cloud
+    - com-identifier-servicelog.info
+    - continue-session-identifier.info
+    - confirm-session-identifier.info
+    - recoveryusercustomer.info
+    - customer-recovery.info
+    - document-share.info
+    - customize-identity.info
+    - com-messengersaccount.name
+    - identifier-sessions-mailactivityid.site
+    - email-delivery.info
+    - confirm-verification-process.systems
+    - com-messengercenters.name
+    - support-recoverycustomers.services
+    - invitation-to-messenger.space
+    - broadcastnews.pro
+    - account-profile-users.info
+    - podcastmedia.online
+    - users-account.site
+    - confirm-session-identification.info
+    - login-users-account.site
+    - com-identifier-userservicelog.com
+    - confirm-identification.name
+    - sessions-identifier-memberemailid.network
+    - confirm-identity.net
+    - accounts-support.services
+    - mobilecontinue.network
+    - com-identifier-servicelog.name
+    - session-management.info
+    - confirmation-service.info
+    - mobile-messengerplus.network
+    - my-scribdinc.online
+    - broadcast-news.info
+    - documentofficupdate.info
+    - us2-mail-login-profile.site
+    IpAddresses:
+    - 31.2.213.18
+    - 54.38.144.251
+    - 85.17.127.174
+    - 54.37.241.221
+    - 178.162.132.65
+    - 190.2.154.36
+    - 51.38.87.64
+    - 46.166.151.211
+    - 85.17.127.173
+    - 51.68.185.96
+    - 190.2.154.35
+    - 54.38.144.252
+    - 95.211.189.47
+    - 95.211.189.46
+    - 213.227.139.148
+    - 51.38.107.113
+    - 95.211.189.45
+    - 85.17.127.175
+    - 51.38.87.65
+    - 85.17.127.172
+    - 89.198.179.103
+    - 54.38.144.250
+    - 190.2.154.34
+    - 190.2.154.38
+  condition: attributes

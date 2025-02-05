@@ -1,0 +1,27 @@
+title: IRS Doc Malware - url_request
+id: d14e1a0c-6528-4c4a-bffb-4f91efc93cda
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e4886b7-3f14-4ab0-867f-4ea30a0a020f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1197
+- attack.t1060
+- attack.t1059
+- attack.t1064
+- attack.t1086
+- attack.t1043
+- attack.t1032
+- attack.t1193
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://siliconmadeinhk.com
+    - siliconmadeinhk.com
+    - binupload.com
+    - https://laskowski-tech.com
+  condition: attributes

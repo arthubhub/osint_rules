@@ -1,0 +1,30 @@
+title: 'M2M -  Locky 2017-09-26 : Affid=3, offline, ".ykcol":"INVOICE" - "A1234567890.7z"
+  - url_request'
+id: 0fa9738d-cbc4-4b13-8436-9ef231329a06
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ca3ba5-b2b0-4473-b296-ff74950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://brascopperchile.cl
+    - http://brendo.biz
+    - http://caldas-cca.com
+    - http://brand-online.eu
+    - http://cadsangiorgio.com
+    - http://broadcastaudiodevices.com
+    - http://playbrief.info
+    - http://bouwpartnerzaagenschaaf.nl
+    - http://bredabeckerle.com
+    - http://boetsebiltong.co.za
+    - http://bsfotodesign.com
+    - http://bodywork-sf.net
+  condition: attributes

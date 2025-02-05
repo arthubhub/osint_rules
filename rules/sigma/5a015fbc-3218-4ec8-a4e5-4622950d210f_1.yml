@@ -1,0 +1,171 @@
+title: 'OSINT - OceanLotus Blossoms: Mass Digital Surveillance and Attacks Targeting
+  ASEAN, Asian Nations, the Media, Human Rights Groups, and Civil Society - url_request'
+id: 1fb3dbf6-c81f-4598-bee7-7022027c8e24
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a015fbc-3218-4ec8-a4e5-4622950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.apt32
+detection:
+  object_380:
+    RequestUrl|contains:
+    - a.doulbeclick.org
+  object_381:
+    RequestUrl|contains:
+    - ad.adthis.org
+  object_382:
+    RequestUrl|contains:
+    - ad.jqueryclick.com
+  object_383:
+    RequestUrl|contains:
+    - api.querycore.com
+  object_384:
+    RequestUrl|contains:
+    - browser-extension.jdfkmiabjpfjacifcmihfdjhpnjpiick.com
+  object_385:
+    RequestUrl|contains:
+    - cdn-js.com
+  object_386:
+    RequestUrl|contains:
+    - cdn.adsfly.co
+  object_387:
+    RequestUrl|contains:
+    - cdn.disqusapi.com
+  object_388:
+    RequestUrl|contains:
+    - cloudflare-api.com
+  object_389:
+    RequestUrl|contains:
+    - cory.ns.webjzcnd.com
+  object_390:
+    RequestUrl|contains:
+    - googlescripts.com
+  object_391:
+    RequestUrl|contains:
+    - health-ray-id.com
+  object_392:
+    RequestUrl|contains:
+    - hit.asmung.net
+  object_393:
+    RequestUrl|contains:
+    - jquery.google-script.org
+  object_394:
+    RequestUrl|contains:
+    - js.ecommer.org
+  object_395:
+    RequestUrl|contains:
+    - s.jscore-group.com
+  object_396:
+    RequestUrl|contains:
+    - s1.gridsumcontent.com
+  object_397:
+    RequestUrl|contains:
+    - s1.jqueryclick.com
+  object_398:
+    RequestUrl|contains:
+    - ssl.security.akamaihd-d.com
+  object_399:
+    RequestUrl|contains:
+    - stat.cdnanalytic.com
+  object_400:
+    RequestUrl|contains:
+    - stats.widgetapi.com
+  object_401:
+    RequestUrl|contains:
+    - track-google.com
+  object_402:
+    RequestUrl|contains:
+    - update.security.akamaihd-d.com
+  object_403:
+    RequestUrl|contains:
+    - update.webfontupdate.com
+  object_404:
+    RequestUrl|contains:
+    - wiget.adsfly.co
+  object_405:
+    RequestUrl|contains:
+    - www.googleuserscontent.org
+  object_406:
+    RequestUrl|contains:
+    - ad.linksys-analytic.com
+  object_407:
+    RequestUrl|contains:
+    - ads.alternativeads.net
+  object_408:
+    RequestUrl|contains:
+    - api.2nd-weibo.com
+  object_409:
+    RequestUrl|contains:
+    - api.analyticsearch.org
+  object_410:
+    RequestUrl|contains:
+    - api.baiduusercontent.com
+  object_411:
+    RequestUrl|contains:
+    - api.disquscore.com
+  object_412:
+    RequestUrl|contains:
+    - cache.akamaihd-d.com
+  object_413:
+    RequestUrl|contains:
+    - cloud.corewidget.com
+  object_414:
+    RequestUrl|contains:
+    - core.alternativeads.net
+  object_415:
+    RequestUrl|contains:
+    - d3.advertisingbaidu.com
+  object_416:
+    RequestUrl|contains:
+    - eclick.analyticsearch.org
+  object_417:
+    RequestUrl|contains:
+    - google-js.net
+  object_418:
+    RequestUrl|contains:
+    - google-js.org
+  object_419:
+    RequestUrl|contains:
+    - google-script.net
+  object_420:
+    RequestUrl|contains:
+    - gs.baidustats.com
+  object_421:
+    RequestUrl|contains:
+    - linked.livestreamanalytic.com
+  object_422:
+    RequestUrl|contains:
+    - linksys-analytic.com
+  object_423:
+    RequestUrl|contains:
+    - live.webfontupdate.com
+  object_424:
+    RequestUrl|contains:
+    - static.livestreamanalytic.com
+  object_425:
+    RequestUrl|contains:
+    - stats.corewidget.com
+  object_426:
+    RequestUrl|contains:
+    - update.akamaihd-d.com
+  object_427:
+    RequestUrl|contains:
+    - update.webfontupdate.com
+  object_428:
+    RequestUrl|contains:
+    - upgrade.liveupdateplugins.com
+  object_429:
+    RequestUrl|contains:
+    - widget.jscore-group.com
+  attributes:
+    RequestUrl|contains:
+    - health-ray-id.com
+    - bdstarlbs.com
+    - http://ad.jqueryclick.com
+    - https://www.volexity.com
+  condition: 1 of object_* or attributes

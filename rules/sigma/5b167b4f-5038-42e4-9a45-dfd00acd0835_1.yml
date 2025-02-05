@@ -1,0 +1,19 @@
+title: '#TrickBot banker updates to group_tag ""tt0002" version "1000206" - url_request'
+id: 6ae6082f-1cb9-4bfc-8b14-5689f7ba9462
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b167b4f-5038-42e4-9a45-dfd00acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.trick_bot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://pastebin.com
+    - https://twitter.com
+  condition: attributes

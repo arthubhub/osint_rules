@@ -1,0 +1,87 @@
+title: 'OSINT Introducing HATs: Highly Annoying Threats by BlueCoat - dns_query'
+id: 005e2601-33c4-4094-b4b9-1c6f3558a698
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55473cb9-db8c-416e-8b3c-ce99950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - fogelicy.org
+    - pirrains.com
+    - muskiert.org
+    - symonash.org
+    - justfastmap.eu
+    - pioblern.com
+    - cleparcy.org
+    - kroentro.com
+    - afastmap.ws
+    - imetheonhe.com
+    - furarryl.org
+    - meseolist.eu
+    - naraiarm.org
+    - meditoll.com
+    - spoeract.com
+    - sherymex.org
+    - trobirks.org
+    - kroentro.org
+    - sidowery.org
+    - sulecass.com
+    - blouneth.com
+    - einseeld.com
+    - molporic.org
+    - octaneft.com
+    - pilshorm.com
+    - topseolist.eu
+    - jadilips.org
+    - zarbrend.org
+    - yellowfrance.info
+    - clolband.com
+    - cerinays.com
+    - rotonexy.org
+    - malerror.com
+    - potigole.com
+    - nealychy.org
+    - sixperth.com
+    - khundalt.org
+    - malerror.org
+    - slulints.org
+    - yellowfrance.com
+    - unitturt.org
+    - atinenom.org
+    - hrortict.com
+    - aflumery.com
+    - trobirks.com
+    - coseolist.eu
+    - thefastmap.ws
+    - metafastmap.eu
+    - nonypeck.com
+    - numerarm.org
+    - ctelailt.com
+    - indusish.org
+    - pioblern.org
+    - psehaism.org
+    - mooriarm.com
+    - gotedrap.com
+    - mackeilt.org
+    - xerhardy.com
+    - mooriarm.org
+    - risalerr.org
+    - holamecs.com
+    - getseolist.eu
+    - pokensea.com
+    - omaidett.com
+    - otinaryl.com
+    - nuseolist.eu
+    - givemeaudi.com
+    - bestseolist.eu
+    - burdiacs.com
+    - eseolist.eu
+    - uglanarc.com
+    - nealychy.com
+    - omaidett.org
+  condition: attributes

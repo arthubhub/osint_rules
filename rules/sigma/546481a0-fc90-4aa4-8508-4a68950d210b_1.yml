@@ -1,0 +1,17 @@
+title: OSINT Adobe Zero-day Used in LadyBoyle Attack blog post by Symantec - url_request
+id: bc4eda4b-1ace-4d69-b940-2546c51ba6f5
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/546481a0-fc90-4aa4-8508-4a68950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.fireeye.com
+    - http://blog.fireeye.com
+    - http://www.symantec.com
+  condition: attributes

@@ -1,0 +1,18 @@
+title: 'OSINT - ShadowPad :  popular server management software hit in supply chain
+  attack - dns_query'
+id: f9c436e8-9ee2-42d8-a9a7-d9426a6a6dea
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59aea569-4598-47c4-827d-4d35950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.shadowpad
+detection:
+  attributes:
+    QueryName|contains:
+    - nylalobghyhirgh.com
+  condition: attributes

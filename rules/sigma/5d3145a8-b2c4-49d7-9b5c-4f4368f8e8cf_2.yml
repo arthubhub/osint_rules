@@ -1,0 +1,23 @@
+title: '2019-07-18: Newer "PoSeidon" aka "FindPOS" aka "FindStr" 15.10 Point-of-Sale
+  Malware - process_creation'
+id: e81d7484-3f5d-4582-bd51-18fc873262fb
+description: edit this field when analysing or editing the rule - reported by "VK_INTEL_EVIL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d3145a8-b2c4-49d7-9b5c-4f4368f8e8cf.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.findpos
+- attack.software.findpos
+detection:
+  object_8910:
+    md5:
+    - a3ce2ec1e8b127df7f92be2a74459c8c
+    sha1:
+    - a1e1b5611d70fe4a6c224c60e15da9c3efe29a2d
+    sha256:
+    - ce718a6309e66c881e946b458a383fc10881b05c508742344c5a5e086f385c60
+  condition: 1 of object_*

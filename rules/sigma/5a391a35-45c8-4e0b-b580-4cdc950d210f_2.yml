@@ -1,0 +1,28 @@
+title: 'OSINT - The Emotet Banking Trojan: Analysis of Dropped Malware Morphing at
+  Scale - process_creation'
+id: 490b76aa-1a62-4644-9589-e69f95f9d0a4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a391a35-45c8-4e0b-b580-4cdc950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.emotet
+detection:
+  object_9464:
+    sha256:
+    - 906e9607b4ad68eb380a1bd55842b8a7c601a8108c16d1c3d3a1cf74eefeb180
+  object_9465:
+    sha256:
+    - bcc70a49fab005b4cdbe0cbd87863ec622c6b2c656987d201adbb0e05ec03e56
+  object_9466:
+    md5:
+    - 16b3f663d0f0371a4706642c6ac04e42
+    sha1:
+    - 3a1f908941311fc357051b5c35fd2a4e0c834e37
+    sha256:
+    - bcc70a49fab005b4cdbe0cbd87863ec622c6b2c656987d201adbb0e05ec03e56
+  condition: 1 of object_*

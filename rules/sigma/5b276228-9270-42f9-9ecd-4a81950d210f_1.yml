@@ -1,0 +1,19 @@
+title: Clipboard Hijacker Targeting Bitcoin & Ethereum Users Infects Over 300,0000
+  PCs - url_request
+id: 16356b15-0132-4d64-9496-07539ee61406
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b276228-9270-42f9-9ecd-4a81950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.clipboardwallethijacker
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.360totalsecurity.com
+    - https://www.bleepingcomputer.com
+  condition: attributes

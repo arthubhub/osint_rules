@@ -1,0 +1,27 @@
+title: OSINT Attacks on East Asia using Google Code for Command and Control by Palo
+  Alto Unit 42 - dns_query
+id: c3862678-3784-4107-8cb5-39c4a674f9e2
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/555dd7c9-2234-44d6-8604-a479950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - qq7712409.3322.org
+    - lthly.com
+    - java-se.com
+    IpAddresses:
+    - 210.253.101.105
+    - 223.29.248.9
+    - 202.181.133.237
+    - 61.78.34.179
+    - 113.10.149.142
+    - 58.64.139.39
+    - 203.135.134.243
+    - 211.233.89.182
+  condition: attributes

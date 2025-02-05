@@ -1,0 +1,20 @@
+title: M2M -  Malspam 2017-09-11 "Email Invoice Requested" - process_creation
+id: 1b2d0f47-16c1-4f0d-9e3a-5bc108acef3d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59b6a0c8-ed80-4d1a-8693-4551950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - fb349ce628eadfd3e56f0bc8f8db6947
+    - d4b05d9ecb82761df4b1e997c225c216
+    - 6a9181b6e3cb369bdca58c1b98353fa7
+  condition: attributes

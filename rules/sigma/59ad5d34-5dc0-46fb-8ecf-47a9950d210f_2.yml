@@ -1,0 +1,50 @@
+title: OSINT - Emotet Trojan Acts as Loader, Spreads Automatically - dns_query
+id: f5631e62-567e-4af9-8c84-d291a70ccf62
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ad5d34-5dc0-46fb-8ecf-47a9950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    IpAddresses:
+    - 173.230.145.224
+    - 188.166.175.18
+    - 5.196.73.150
+    - 95.110.224.51
+    - 50.21.183.63
+    - 62.210.206.25
+    - 192.81.212.79
+    - 23.218.156.113
+    - 195.191.233.221
+    - 217.160.15.198
+    - 203.150.19.63
+    - 141.138.200.249
+    - 37.187.103.156
+    - 131.188.40.189
+    - 207.210.245.164
+    - 173.243.126.142
+    - 178.254.40.5
+    - 178.79.132.214
+    - 217.160.178.17
+    - 216.81.62.54
+    - 80.86.91.232
+    - 128.31.0.39
+    - 208.83.223.34
+    - 91.134.140.21
+    - 91.121.121.72
+    - 50.3.75.246
+    - 193.23.244.244
+    - 8.253.164.249
+    - 69.43.168.206
+    - 87.106.1.205
+    - 192.241.222.53
+    - 192.81.128.131
+    - 162.243.159.58
+    - 199.21.113.151
+  condition: attributes

@@ -1,0 +1,18 @@
+title: OSINT - Sigrun Ransomware Author Decrypting Russian Victims for Free - url_request
+id: 2e338b31-6285-4cdb-9b2a-bdfe8ea81752
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b17eaaf-783c-4624-b5f4-42d5950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.sigrun_ransomware
+- attack.group.sigrun_ransomware
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

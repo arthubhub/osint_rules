@@ -1,0 +1,19 @@
+title: New ransomware - process_creation
+id: 6a80e5c0-d35d-4463-ab66-1a795b53d665
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57174526-23d8-4895-8c08-4ed1950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 116d442d8ec5c62f32c7ba507a5569be
+    sha1:
+    - fb93796afa470d87deb316823d3cd6e8d8b18596
+    sha256:
+    - ce98e9d9900609c45c948d34153c03b490bc2067e7a742048f60ed53fe95529d
+  condition: attributes

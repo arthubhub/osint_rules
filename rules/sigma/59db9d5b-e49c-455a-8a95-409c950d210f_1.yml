@@ -1,0 +1,39 @@
+title: 'M2M -  Locky 2017-10-09 : Affid=3, offline, ".ykcol" : "Invoice IP1234567"
+  - "Invoice-IP1234567.7z" - url_request'
+id: c20b154e-ef0f-4f24-8cf6-4a543dde48c9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59db9d5b-e49c-455a-8a95-409c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://hard-grooves.com
+    - http://prueba.depaterna.com
+    - http://anderlaw.com
+    - http://prova.eshopavant.it
+    - http://cagliaricity.it
+    - http://depomedikal.com
+    - http://intra.cfecgcaquitaine.com
+    - http://edeldestillerie-mair.at
+    - http://dewekker.nl
+    - http://miyatakewind.com
+    - http://asesoreszapico.com
+    - http://designordie.ca
+    - http://easyhousedev.gr
+    - http://amatuermatch.org
+    - http://domke-engineering.de
+    - http://ecotek.me
+    - http://drspay.com
+    - http://scottfranch.org
+    - http://121-psychic-reading.co.uk
+    - http://cfai66.fr
+    - http://hellonwheelsthemovie.com
+  condition: attributes

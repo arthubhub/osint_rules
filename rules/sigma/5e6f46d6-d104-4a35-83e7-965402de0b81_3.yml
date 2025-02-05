@@ -1,0 +1,26 @@
+title: OSINT - new sample of operation lagtime TA428 - process_creation
+id: 6967c6e7-5eaf-49f3-887e-ed929afcb6a3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e6f46d6-d104-4a35-83e7-965402de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1203
+- attack.group.ta428
+- attack.t1193
+detection:
+  object_9618:
+    md5:
+    - 08ebd6388b1194ca824199da49ff5769
+    sha1:
+    - 0d2fbb6ab0fb1d736a867e51bcd6aff1d7e7c890
+    sha256:
+    - b7bebe92a5802aa922e5719c948e35716f908e67701cfffaeebfcadc7a6e650a
+  attributes:
+    md5:
+    - 08ebd6388b1194ca824199da49ff5769
+  condition: 1 of object_* or attributes

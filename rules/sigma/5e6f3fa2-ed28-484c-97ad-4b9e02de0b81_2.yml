@@ -1,0 +1,24 @@
+title: OSINT - revengeRAT targeting France - dns_query
+id: 3394a2bb-5b34-4c7d-a691-8222126e94e6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e6f3fa2-ed28-484c-97ad-4b9e02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1192
+- attack.software.revenge_rat
+- attack.group.revenge_rat
+detection:
+  attributes:
+    QueryName|contains:
+    - chez-le-pepere.club
+    - chez-le-pepert.xyz
+    - chezlepepertrtr.xyz
+    - chezlepertrbhyyrevbtt.xyz
+    IpAddresses:
+    - 105.235.129.138
+  condition: attributes

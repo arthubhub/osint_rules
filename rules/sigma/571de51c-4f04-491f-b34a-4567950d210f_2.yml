@@ -1,0 +1,15 @@
+title: OSINT - TWO BYTES TO $951M (SWIFT payment system abuse) - dns_query
+id: 92037322-31d0-45cb-8b6f-8bbb68d49c4b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/571de51c-4f04-491f-b34a-4567950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 196.202.103.174
+  condition: attributes

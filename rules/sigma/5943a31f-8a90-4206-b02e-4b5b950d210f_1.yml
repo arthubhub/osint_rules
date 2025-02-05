@@ -1,0 +1,38 @@
+title: 'M2M -  #LokiBot goes  with SWIFT theme - url_request'
+id: dfbe6dfa-50dd-44f5-a818-ac01fe0ab73d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5943a31f-8a90-4206-b02e-4b5b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.flokibot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://generalpw.ru
+    - http://street-up.ru
+    - http://openttn.tk
+    - http://www.fyzeeconnect.ru
+    - http://myopps.ml
+    - http://acpaeqypt.com
+    - http://alimen.ru
+    - http://street-takeover.ru
+    - https://www.hybrid-analysis.com
+    - http://no1carpart.co.uk
+    - http://evrixbody.ru
+    - http://avsmanager.com
+    - http://tee-gr.com
+    - http://opixib.bid
+    - http://gamneit.com
+    - http://street-wise.ru
+    - http://lekkihunterz2.xyz
+    - http://gongotraa.com
+    - http://tokimecltd.ru
+    - http://farawayer.ru
+    - http://dragonballz.com.de
+    - http://ajahhunterz.xyz
+  condition: attributes

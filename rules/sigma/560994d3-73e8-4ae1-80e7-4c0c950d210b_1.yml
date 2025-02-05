@@ -1,0 +1,25 @@
+title: "OSINT Gaza cybergang, where\xE2\u20AC\u2122s your IR team? by Kaspersky -\
+  \ url_request"
+id: b1e4e716-1dca-4f93-af40-0a22015f6812
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/560994d3-73e8-4ae1-80e7-4c0c950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.fireeye.com
+    - https://github.com
+    - cbbnews.tk
+    - store-legal.biz
+    - http://pwc.blogs.com
+    - https://securelist.com
+    - chromeupdt.tk
+    - uae.kim
+    - http://cyber-peace.org
+    - downloadskype.cf
+  condition: attributes

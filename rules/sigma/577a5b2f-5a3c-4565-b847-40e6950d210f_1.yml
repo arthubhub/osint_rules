@@ -1,0 +1,16 @@
+title: Malspam 2016-07-04 (testrun, subject 'Scanned image'), .docm - url_request
+id: bddab3da-c143-4722-8977-39f4ef114a96
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/577a5b2f-5a3c-4565-b847-40e6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - greatlakessawingsolutions.com
+    - http://greatlakessawingsolutions.com
+  condition: attributes

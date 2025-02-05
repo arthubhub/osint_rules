@@ -1,0 +1,24 @@
+title: 'OSINT Expansion on APT-28 - Evolving Threats: dissection of a Cyber-Espionage
+  attack - url_request'
+id: 0fdc00df-6359-47a6-9b83-8e40ce67f500
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56580480-2738-4888-98be-b742950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - 1oo7.net
+    - microsofthelpcenter.info
+    - https://github.com
+    - eservicesystems.net
+    - windowsappstore.net
+    - microsoftdriver.com
+    - http://www.rsaconference.com
+    - irwing.org
+    - militaryexponews.com
+  condition: attributes

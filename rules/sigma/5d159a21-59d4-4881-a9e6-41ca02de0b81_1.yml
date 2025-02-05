@@ -1,0 +1,16 @@
+title: 'OSINT - OSX/Linker: New Mac malware attempts zero-day Gatekeeper bypass -
+  url_request'
+id: 329da607-03f9-4229-a88d-6b8b796c050f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d159a21-59d4-4881-a9e6-41ca02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.intego.com
+  condition: attributes

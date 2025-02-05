@@ -1,0 +1,39 @@
+title: OSINT - Tropic Trooper Targets Taiwanese Government and Fossil Fuel Provider
+  With Poison Ivy - url_request
+id: 7ee7aba6-e0bd-47cf-99bf-8531b39618d6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58355b51-ce70-4549-84cf-6ba7950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://bbs.zzbook.net
+    - http://bbs.zzbooks.net
+    - http://www.forensic611.3-a.net
+    - http://23.27.112.216
+    - http://223.27.35.244
+    - http://50.117.38.164
+    - http://www.myinfo.ocry.com
+    - http://www.dpponline.trickip.org
+    - http://www.forensic.zyns.com
+    - http://www.metacu.ygto.com
+    - http://49.254.211.75
+    - http://192.69.221.92
+    - http://researchcenter.paloaltonetworks.com
+    - http://flanando.fartit.com
+    - http://bbs.ccdog.net
+    - http://belindianlab.itemdb.com
+    - http://198.100.122.66
+    - http://www.amberisic611.4dq.com
+    - http://www.bannered.4dq.com
+    - http://www.cham.com.tw
+    - http://61.221.169.31
+    - http://202.153.193.73
+    - http://107.183.183.235
+    - http://113.10.221.89
+  condition: attributes

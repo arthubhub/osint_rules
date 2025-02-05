@@ -1,0 +1,49 @@
+title: 'OSINT - Packrat: Seven Years of a South American Threat Actor - dns_query'
+id: 2b1352ff-162b-46c7-8cf1-773a56986dc1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5667e3ea-cec4-4a67-b7c0-f7a9950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.packrat
+detection:
+  attributes:
+    QueryName|contains:
+    - soporte-gmail.com
+    - ecuadorenvivo.co
+    - android-flash.com
+    - confirmation-twitter.com
+    - lavozamericana.info
+    - movimientoanticorreista.com
+    - soporte-yahoo.com
+    - blackboxmusic.co
+    - login-office365.com
+    - logon-outlook.com
+    - soporte-login-account-gmail.tk
+    - justicia-desvinculados.com
+    - pancaliente.info
+    - mgoogle.us
+    - autorizacion-gmail.com
+    - support-gmail.com
+    - no-creo.info
+    - support-login-validate-outlook.tk
+    - support-whatsapp.com
+    - update-outlook.info
+    - confirmation-yahoo.com
+    - confirmation-icloud.com
+    - confirmation-facebook.com
+    - login-outlook.com
+    - deyrep.com
+    - support-java.com
+    - confirmation-blackberry.com
+    - focusecuador.tk
+    - confirmation-outlook.com
+    - soporte-login-account-yahoo.tk
+    IpAddresses:
+    - 198.12.150.249
+    - 193.105.134.27
+  condition: attributes

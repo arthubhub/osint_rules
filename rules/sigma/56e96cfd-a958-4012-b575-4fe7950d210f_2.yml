@@ -1,0 +1,23 @@
+title: OSINT - Malicious iBanking application with new uninstall countermeasures -
+  process_creation
+id: b8b5b700-38ae-45b8-a077-7d1b579cf438
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e96cfd-a958-4012-b575-4fe7950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 27a850af72e228eb2209879168b5f9d4
+    - 1a2ec7c92d07f437fe2abe6de0bcdd72
+    sha1:
+    - a1cf8299bfee707073510de81bbb6f92311ab176
+    - 193f632478571d0621fb11bcc82556b545ca1c00
+    sha256:
+    - aa6f87e50e9df2a88fc2146ba477abe8099459012ed1b9d4f6c03ec54ed2f754
+    - 30f75776b1ea0df28186e0e6a141c039e50089e80becb62918915643249fb726
+  condition: attributes

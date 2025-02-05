@@ -1,0 +1,18 @@
+title: 'OSINT - Nile Phish: Large-Scale Phishing Campaign Targeting Egyptian Civil
+  Society - dns_query'
+id: 1a90c29e-f525-4556-a9cd-7393cf2900b3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/589327e5-227c-4236-a9b8-fafc950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 104.238.191.204
+    - 108.61.176.96
+    - 176.123.26.42
+  condition: attributes

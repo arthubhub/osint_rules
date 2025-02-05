@@ -1,0 +1,65 @@
+title: 'OSINT - Threat Spotlight: Panda Banker Trojan Targets the US, Canada and Japan
+  - dns_query'
+id: 452ab968-4694-49b8-af2b-70e1261b8c29
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bbe09c9-9040-4415-bd25-45b7950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1185
+- attack.software.emotet
+detection:
+  attributes:
+    QueryName|contains:
+    - umirushieteg.website
+    - mykeeptake.xyz
+    - rxdirectories.top
+    - coloredcredit.pw
+    - smartnutriment.top
+    - lyletening.ru
+    - haketsitet.com
+    - rombutcading.ru
+    - nybaseballfans.website
+    - luxurygoosedown.top
+    - encitimefoan.ru
+    - majorhunt.top
+    - mihecksandca.ru
+    - nauseorofte.ru
+    - vethatnetont.com
+    - letretuthes.com
+    - theeunload.website
+    - watercraftuavs.top
+    - humoronoff.top
+    - canariasmotor.top
+    - jecrusandsi.com
+    - wegmanss.pw
+    - bloodskin.website
+    - speakeasyclan.top
+    - dintlasirob.com
+    - vudoshakar123123.website
+    - legaleeny.pw
+    - inghapwilhe.ru
+    - myaningmuchme.ru
+    - indolentgames.top
+    - antrefurniture.top
+    - adshiepkhach.top
+    - thevisitorsfilm.top
+    - tailbackuisback.xyz
+    - downloadmasala.website
+    - hogamotin.com
+    - joltter.top
+    - akihabrajdu.xyz
+    - rebretaci.com
+    - myhubcloud.website
+    - cebabsebi.com
+    - picosloop.top
+    - connectionjump.top
+    - zanhimnohedt.com
+    - mystratusstore.xyz
+    - gmokkasd.website
+    - fullspectrumavs.top
+  condition: attributes

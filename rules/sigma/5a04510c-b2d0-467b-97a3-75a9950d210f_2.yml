@@ -1,0 +1,32 @@
+title: 'M2M -  Locky 2017-11-06 : Affid=3, ".asasin" : "E3S1234567890123 Payment advice"
+  - "advice_123456_20171106.doc" - dns_query'
+id: ffb3f319-1cdb-42bb-aedf-24d4162eef73
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a04510c-b2d0-467b-97a3-75a9950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    IpAddresses:
+    - 95.110.189.247
+    - 90.156.144.159
+    - 82.98.87.48
+    - 209.54.51.32
+    - 212.67.205.60
+    - 74.200.89.171
+    - 27.254.148.14
+    - 173.212.228.135
+    - 194.208.76.18
+    - 89.104.72.196
+    - 217.182.199.8
+    - 37.247.120.83
+    - 72.249.127.194
+    - 212.220.124.233
+  condition: attributes

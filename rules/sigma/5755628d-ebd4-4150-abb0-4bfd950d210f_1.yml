@@ -1,0 +1,16 @@
+title: OSINT - CryptXXX Ransomware Learns the Samba, Other New Tricks With Version
+  3.100 - url_request
+id: e53a3d1a-a595-41c5-af87-8c36451729fb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5755628d-ebd4-4150-abb0-4bfd950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.proofpoint.com
+  condition: attributes

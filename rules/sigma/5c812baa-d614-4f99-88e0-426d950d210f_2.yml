@@ -1,0 +1,33 @@
+title: OSINT -  New SLUB Backdoor Uses GitHub, Communicates via Slack - process_creation
+id: ede700de-6f05-4081-8fa0-709bdab0d014
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c812baa-d614-4f99-88e0-426d950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1064
+- attack.t1048
+detection:
+  object_12107:
+    md5:
+    - 142ea550d65fbd90cc2a47aeaef0c210
+    sha1:
+    - e092e130a0627015331c3d3e0265befd65c167b4
+    sha256:
+    - 3ba00114d0ae766cf77edcdcc953ec6ee7527181968c02d4ffc36b9f89c4ebc7
+  object_12109:
+    md5:
+    - f3004ddaef5b8c18883e716dda966141
+    sha1:
+    - 786e366ab9edbbba315ee1cc0de12132b107ba9c
+    sha256:
+    - 43221eb160733ea694b4fdda70e7eab4a86d59c5f9749fd2f9b71783e5da6dd7
+  attributes:
+    sha256:
+    - 43221eb160733ea694b4fdda70e7eab4a86d59c5f9749fd2f9b71783e5da6dd7
+    - 3ba00114d0ae766cf77edcdcc953ec6ee7527181968c02d4ffc36b9f89c4ebc7
+  condition: 1 of object_* or attributes

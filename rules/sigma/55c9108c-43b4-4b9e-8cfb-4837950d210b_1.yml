@@ -1,0 +1,17 @@
+title: "OSINT Darkhotel\xE2\u20AC\u2122s attacks in 2015 by Kaspersky - url_request"
+id: 012284a8-bb8f-43f9-b231-7f1a1c815ee7
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55c9108c-43b4-4b9e-8cfb-4837950d210b.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.darkhotel
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

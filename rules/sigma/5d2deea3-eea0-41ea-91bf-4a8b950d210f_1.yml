@@ -1,0 +1,18 @@
+title: OSINT - Turla renews its arsenal with Topinambour - url_request
+id: eb466c84-4cbf-4d3d-b14f-42881cc22f66
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d2deea3-eea0-41ea-91bf-4a8b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.turla
+- attack.software.turla
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

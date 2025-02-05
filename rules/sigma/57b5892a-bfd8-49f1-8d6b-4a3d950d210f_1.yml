@@ -1,0 +1,15 @@
+title: OSINT Rex -Linux P2P Ransom botnet by This Is Security blog - url_request
+id: fe4d3ae7-4042-4530-a2a5-3edf87283667
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b5892a-bfd8-49f1-8d6b-4a3d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://thisissecurity.net
+  condition: attributes

@@ -1,0 +1,32 @@
+title: Locky of the day (20160328) -  affid=3 - dns_query
+id: 63c94ad5-fa61-4f2c-8285-c8e9814362d9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f93f55-e6d0-45c9-8109-74ad02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - distrazur.com
+    - orkneyhampers.co.uk
+    - comprecaldas.com
+    - pockettypewriter.co.uk
+    - sandbox.bottlestore.com
+    - wholesale.undercovermama.com
+    - dragonex.com
+    - homedesire.co.uk
+    - lascelta.com
+    - scorpena.com
+    - store.brugomug.co.uk
+    IpAddresses:
+    - 83.217.8.127
+    - 91.200.14.73
+    - 92.63.87.134
+    - 185.117.72.94
+    - 176.31.47.100
+    - 84.19.170.249
+  condition: attributes

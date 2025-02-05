@@ -1,0 +1,68 @@
+title: OSINT - Dangerous Invoices and Dangerous Infrastructure - process_creation
+id: f539a07d-bfab-4372-bc7b-5561b5c1f733
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b9f39b4-f618-494f-ad3e-030d950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_6674:
+    md5:
+    - 0fa8876252c632b64afad8fd7fa6344f
+    sha1:
+    - ab372d169743758bb81abaa4bc303d5303f6d913
+    sha256:
+    - aff30dd46fdbfa278e95e5958d1dd7ff0e525e5e4d3dc2b214a6ed267f27184f
+  object_6676:
+    md5:
+    - f321b38b171a3cbc1eff4a41ac5bbe47
+    sha1:
+    - da61f88e2e95a23e58d96cf845c523fd10023cb7
+    sha256:
+    - 107e57389903e3ea717845570a9e68174cfff86f70ebfa5f0023236eb1fb3d46
+  object_6678:
+    md5:
+    - 736de7cd6a9c76bd7df49e6b3df6000e
+    sha1:
+    - 1315994222d45410c8508cf614378e35c4f56c94
+    sha256:
+    - 4a274d49ff47697d3098cf73a05e3c7ccb323f2a57b5865fa2f924a22f13f9d0
+  object_6680:
+    md5:
+    - 57b430ea422d1f33fef19f02fb85c7f0
+    sha1:
+    - 60a64400207fd9835899189aa0c3cbca027fe8cf
+    sha256:
+    - 1c1e473d385b1c258f15d344ac5856fe88df88b1c477d9d8300e2981bb762525
+  object_6682:
+    md5:
+    - 02b6f049f4d8246ee982d8c34a160311
+    sha1:
+    - 088ed5abd0edda72a846ddcec24fceeafe394188
+    sha256:
+    - a7aae83573aa9a682ce9733468882e841564f41ec4aa004cb795b98fd4834d15
+  object_6684:
+    md5:
+    - 1261b8382cfa2b905f0f52a3aef49ce4
+    sha1:
+    - e80c07f700cf817a1eca1f8186f820492f8a2fbc
+    sha256:
+    - 7b75837021f0271da96082239bd1ab650a5391919da7decc93ca03a7ae51899d
+  attributes:
+    md5:
+    - 736de7cd6a9c76bd7df49e6b3df6000e
+    - 0fa8876252c632b64afad8fd7fa6344f
+    - 57b430ea422d1f33fef19f02fb85c7f0
+    - 1261b8382cfa2b905f0f52a3aef49ce4
+    - f321b38b171a3cbc1eff4a41ac5bbe47
+    - 02b6f049f4d8246ee982d8c34a160311
+    sha1:
+    - 1315994222d45410c8508cf614378e35c4f56c94
+    - da61f88e2e95a23e58d96cf845c523fd10023cb7
+    - ab372d169743758bb81abaa4bc303d5303f6d913
+    - e80c07f700cf817a1eca1f8186f820492f8a2fbc
+    - 60a64400207fd9835899189aa0c3cbca027fe8cf
+  condition: 1 of object_* or attributes

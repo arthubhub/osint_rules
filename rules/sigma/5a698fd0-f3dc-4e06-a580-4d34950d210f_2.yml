@@ -1,0 +1,42 @@
+title: Malicious Chrome browser extensions injecting code - dns_query
+id: 941dfe52-9b66-4298-a11d-9888e344ddd7
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a698fd0-f3dc-4e06-a580-4d34950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - change-request.info
+    - nyoogle.info
+    - stickies.pro
+    - lite-bookmarks.info
+    IpAddresses:
+    - 109.206.161.117
+    - 109.206.161.24
+    - 109.206.161.71
+    - 109.206.161.72
+    - 109.206.161.107
+    - 109.206.161.21
+    - 109.206.161.14
+    - 109.206.161.15
+    - 109.206.161.116
+    - 109.206.161.17
+    - 109.206.161.12
+    - 109.206.161.115
+    - 109.206.161.108
+    - 109.206.161.22
+    - 109.206.161.123
+    - 109.206.161.16
+    - 109.206.161.106
+    - 109.206.161.103
+    - 109.206.161.104
+    - 109.206.161.118
+    - 109.206.161.124
+    - 109.206.161.69
+    - 109.206.161.105
+  condition: attributes

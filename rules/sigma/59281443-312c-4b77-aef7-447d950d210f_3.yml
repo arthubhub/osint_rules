@@ -1,0 +1,25 @@
+title: 'Jaff 2017-05-25 : "Payment Receipt 1234" - "1234.pdf" - process_creation'
+id: 1918edb9-a6c6-440e-8662-c0580a7a3965
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59281443-312c-4b77-aef7-447d950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    md5:
+    - fc8c82354bbc40f2662d577863c6b20f
+    - 9585bc2d5d63b189bf8455d2e05cfb5e
+    sha1:
+    - 27f095ac614baa7db8bcd1f5737cdefd8b0bb1ad
+    - 09fcafdc65429b55087227f8942e787e10e1b73c
+    sha256:
+    - 2cc1d8edc318e0e09aad6afbc48999980f8e39e54734bca4c1a95c7b5db39569
+    - ba7952ae07b41d049ad82674aeffbd43a5079f1db10a941db6545490c6c386bd
+  condition: attributes

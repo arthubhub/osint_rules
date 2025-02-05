@@ -1,0 +1,58 @@
+title: OSINT - Targeted Attacks in the Middle East Using KASPERAGENT and MICROPSIA
+  - dns_query
+id: fc212ead-342b-431e-8678-89c37073d9e2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58e7464f-8a5c-44bf-b478-4448950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - appppure.net
+    - beauty-dance.net
+    - upload404.club
+    - arnani.info
+    - akashipro.com
+    - 9oo91e.co
+    - mydriveweb.com
+    - gooogel-drive.com
+    - mavis-dracula.com
+    - kalisi.org
+    - upload202.com
+    - cecilia-dobrev.com
+    - acount-manager.org
+    - acount-manager.info
+    - acount-manager.com
+    - cecilia-gilbert.com
+    - appppure.pro
+    - mediauploader.info
+    - upload999.net
+    - google-support-team.com
+    - go-mail-accounts.com
+    - upload999.org
+    - kalisi.xyz
+    - shildon-cooper.info
+    - feteh-asefa.com
+    - mediauploader.me
+    - al-amalhumandevelopment.com
+    - upload101.net
+    - mary-crawley.com
+    - apppure.info
+    - acount-manager.net
+    - useraccountvalidation.com
+    - gooogel.org
+    - appppure.info
+    - upload999.info
+    - mailsinfo.net
+    - stikerscloud.com
+    - margaery.co
+    - upload909.net
+    - kagami-adam.com
+    - upload999.com
+    - kalisi.info
+    - ran-togomory.com
+  condition: attributes

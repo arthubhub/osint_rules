@@ -1,0 +1,16 @@
+title: 'OSINT - Apocalypse: Ransomware which targets companies through insecure RDP
+  - url_request'
+id: e52dabf2-29bb-44cb-88bd-5613d473e947
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57750a68-58c8-4323-8c93-c828950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.emsisoft.com
+  condition: attributes

@@ -1,0 +1,51 @@
+title: 'Malspam 2016-09-20 (.hta in .zip) - campaign: "<no subject>" - dns_query'
+id: a15f6113-a7e9-4d84-a367-1b8912d681fc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57e0c08d-4330-42c0-9c8f-4c8d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - rancho.org
+    - dealza.com
+    - elsoccer.org
+    - thomasduncanwatt.com
+    - trenddatainc.com
+    - worldpennyjar.com
+    - sbbsinfotech.com
+    - gelecekdiyarbakirsigorta.com
+    - teknidataconsultores.com
+    - roberttrocina.com
+    - hunt-magazine.com
+    - isusip.com
+    - oilandgasukwireless.net
+    - schneebett.com
+    - binhminh-group.com
+    - stirlingblack.com
+    - yesman.me
+    IpAddresses:
+    - 185.119.173.182
+    - 198.46.82.242
+    - 148.251.99.148
+    - 143.95.246.211
+    - 103.254.148.134
+    - 94.136.40.103
+    - 173.236.105.50
+    - 70.39.235.94
+    - 69.89.31.79
+    - 45.55.141.237
+    - 207.204.33.199
+    - 64.119.182.93
+    - 94.73.150.110
+    - 207.179.106.94
+    - 119.59.103.81
+    - 80.179.92.187
+    - 185.96.93.154
+    - 173.254.28.14
+    - 123.30.210.74
+  condition: attributes

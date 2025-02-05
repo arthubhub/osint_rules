@@ -1,0 +1,42 @@
+title: OSINT - Backmydata Ransomware Indicators of Compromise (IOCs) - alerts - dnsc.ro
+  - process_creation
+id: 8c2358fc-b4a3-4ef8-ab3b-f36707218311
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f7d4de59-58ac-409e-a3cb-d50261b3f825.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1133
+- attack.group.phobos
+- attack.software.phobos
+- attack.t1190
+detection:
+  attributes:
+    sha256:
+    - b556d90b30f217d5ef20ebe3f15cce6382c4199e900b5ad2262a751909da1b34
+    - ae474417854ac1b6190e15cc514728433a26cc815fdc6d12150ef55e92d643ea
+    - 205818e10c13d2e51b4c0196ca30111276ca1107fc8e25a0992fe67879eab964
+    - 5e85446910e732111ca9ac90f9ed8b1dee13c3314d2c5117dcf672994ce73bd6
+    - b42725211240828ccc505d193d8ea5915e395c9f43e71496ff0ece4f72e3e4ab
+    - 12f13d129579c68ec3cc05bef69880b6a891296fa9fce69b979b1c04998f125c
+    - a6527183e3cbf81602de16f3448a8754f6cecd05dc3568fa2795de534b366da4
+    - c92580318be4effdb37aa67145748826f6a9e285bc2426410dc280e61e3c7620
+    - 59756c8f4c760f1b29311a5732cb3fdd41d4b5bc9c88cd77c560e27b6e59780c
+    - 816d7616238958dfe0bb811a063eb3102efd82eff14408f5cab4cb5258bfd019
+    - e01b0e7feadd08a7ea87c1cde44e7b97daf9632eaee8311ef6967f33258d03c1
+    - 31eb1de7e840a342fd468e558e5ab627bcb4c542a8fe01aec4d5ba01d539a0fc
+    - 7a313840d25adf94c7bf1d17393f5b991ba8baf50b8cacb7ce0420189c177e26
+    - 1e13fd79ad54fe98e08d9ffca2c287a470c50c2876608edce2fe38e07c245266
+    - 48b77c1efbc3197128391a35d0e1ed0b5cc3a05b96dd12c98ac73ffc6a886fc8
+    - 8e4b218bdbd8e098fff749fe5e5bbf00275d21f398b34216a573224e192094b8
+    - 6a87226ed5cca8e072507d6c24289c57757dd96177f329a00b00e40427a1d473
+    - 64788b6f74875aed53ca80669b06f407e132d7be49586925dbb3dcde56cbca9c
+    - de374c1b9a05c2203e66917202c42d11eac4368f635ccaaadf02346035e82562
+    - 7fee96ae0ed1972a80abbd4529dc81ec033083857455bbf3c803c4f47e1ac31c
+    - 04cc60eba7041e0cef2deb1bec9a087432344737dd2e5141c9cda981506ca1a5
+    - 91041b616969e1526ee6dce23f8d18afdd353786ac6afa0b6611903263ee6f63
+  condition: attributes

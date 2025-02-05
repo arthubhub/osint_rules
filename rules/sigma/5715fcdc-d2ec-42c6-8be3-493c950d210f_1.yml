@@ -1,0 +1,16 @@
+title: OSINT - Python-Based PWOBot Targets European Organizations - url_request
+id: faabac70-050a-4353-a9a2-124f823f2954
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5715fcdc-d2ec-42c6-8be3-493c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://108.61.167.105
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

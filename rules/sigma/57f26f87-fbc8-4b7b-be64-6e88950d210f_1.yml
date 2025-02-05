@@ -1,0 +1,29 @@
+title: 'Malspam 2016-10-03 (.xls) - campaign: "Invoice-" - url_request'
+id: ad3889c8-378d-4c18-aed4-25a1b3982d08
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57f26f87-fbc8-4b7b-be64-6e88950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - golfnauvoo.com
+    - craftsreviews.com
+    - crossroadspd.com
+    - http://maxleather.aaomg.com
+    - icdsarch.com
+    - http://icdsarch.com
+    - acaciainvest.ro
+    - ifsaiumumi.com
+    - http://craftsreviews.com
+    - http://crossroadspd.com
+    - http://ifsaiumumi.com
+    - alraysa.com
+    - http://golfnauvoo.com
+    - http://acaciainvest.ro
+    - http://alraysa.com
+  condition: attributes

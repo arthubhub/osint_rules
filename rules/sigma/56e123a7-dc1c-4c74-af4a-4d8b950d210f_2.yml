@@ -1,0 +1,23 @@
+title: OSINT - The Cerber Ransomware not only Encrypts Your Data But Also Speaks to
+  You - process_creation
+id: 1d72bb36-1506-4c54-884c-04920afc2084
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e123a7-dc1c-4c74-af4a-4d8b950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 2f7059d7b1dda3080e391d99788fff18
+    - f5146a3bbe6c71e5a0ef2f04f955b1a1
+    sha1:
+    - 0af6bde11eaa699604aa92cce9a6210dfce70f42
+    - 920ba9c21b519ad7dfb9075c3860d85061cede15
+    sha256:
+    - a5ff5f861bbb1ac7c6fd44f303f735fac01273ce2ae43a8acb683076192fcfcc
+    - 2d08ffeba708fb833404d2c320ea4f29365c791d504181e08e3e9b529f5cf096
+  condition: attributes

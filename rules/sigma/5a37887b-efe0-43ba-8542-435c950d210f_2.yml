@@ -1,0 +1,20 @@
+title: OSINT - Active ransomware attack uses impersonation and embedded advanced threats
+  - process_creation
+id: a0744405-40b7-463f-ad0d-b410ad76d792
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a37887b-efe0-43ba-8542-435c950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_7633:
+    md5:
+    - fa527ff057e1be5101da4481d38ba968
+    sha1:
+    - d5d67631683c9e3d5021334477746a1e64ea2dff
+    sha256:
+    - 87d0d011b8b456ce8fa15afea8df5e5fbf1bad5cb3305272016ca0db9c204d90
+  condition: 1 of object_*

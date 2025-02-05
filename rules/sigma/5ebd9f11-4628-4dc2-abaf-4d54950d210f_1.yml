@@ -1,0 +1,18 @@
+title: Linux/Mirai-Hilix (w/New TABLE encoder) aims Realtek & Huawei routers - dns_query
+id: 4df83e92-62a5-4b80-bfe3-3123943aebab
+description: edit this field when analysing or editing the rule - reported by "MalwareMustDie"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ebd9f11-4628-4dc2-abaf-4d54950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 194.180.224.124
+    - 159.203.44.33
+    - 142.93.217.221
+    - 194.180.224.150
+  condition: attributes

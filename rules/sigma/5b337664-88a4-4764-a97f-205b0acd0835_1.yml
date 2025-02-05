@@ -1,0 +1,55 @@
+title: 'Blog Post: EMOTET INFECTION WITH ICEDID - url_request'
+id: 2a60dac1-988c-4487-83c4-546741d5647b
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b337664-88a4-4764-a97f-205b0acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://cosmo-medica.pl
+    - sandearth.com
+    - http://turski.eu
+    - https://www.malware-traffic-analysis.net
+    - http://www.trinityempire.org
+    - http://carricusa.com
+    - http://www.chalet12.de
+    - http://www.orderauto.es
+    - http://www.ambassade-de-russie.fr
+    - http://tomsnyder.net
+    - http://www.database.z-flooring.com
+    - http://69.193.199.50
+    - http://alpinewebgroup.com
+    - percalabia.com
+    - http://www.afpols-seminaires.fr
+    - http://88.79.210.243
+    - http://ipsupportonline.com
+    - http://110.143.116.201
+    - http://r2consulting.net
+    - http://jitkla.com
+    - http://thectrl24.com
+    - http://gtechuae.com
+    - http://www.ar.mtcuae.com
+    - http://csszsz.hu
+    - http://www.dotlenieni.pl
+    - http://www.cosmo-medica.pl
+    - http://www.cycle-film.com
+    - http://hydrodom.org
+    - https://ift.tt
+    - http://www.chipsroofingloveland.com
+    - thectrl24.com
+    - http://melondisc.co.th
+    - http://tasomedia.com
+    - http://amplajf.com.br
+    - http://wolffy.net
+    - http://www.earthlinks.co.in
+    - http://iconholidays.com.bd
+    - urnachay.com
+  condition: attributes

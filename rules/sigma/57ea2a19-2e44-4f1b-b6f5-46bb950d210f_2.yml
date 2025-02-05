@@ -1,0 +1,20 @@
+title: "OSINT - Sofacy\xE2\u20AC\u2122s \xE2\u20AC\u02DCKomplex\xE2\u20AC\u2122 OS\
+  \ X Trojan by Palo Alto networks - dns_query"
+id: 3cbbb7ed-061c-46b7-b5e3-739c72fd23d2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ea2a19-2e44-4f1b-b6f5-46bb950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - itunes-helper.net
+    - appleupdate.org
+    - apple-iclouds.net
+    IpAddresses:
+    - 185.10.58.170
+  condition: attributes

@@ -1,0 +1,21 @@
+title: OSINT -  Analysis of an IRC based Botnet - dns_query
+id: d095d171-c924-450a-bd46-d2028ddeb6e2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cc410a0-be10-4990-acf6-44cc02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.tsunami
+- attack.software.tsunami
+detection:
+  object_12798:
+    IpAddresses:
+    - 185.244.25.235
+  object_12799:
+    IpAddresses:
+    - 185.244.25.235
+  condition: 1 of object_*

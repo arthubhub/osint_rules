@@ -1,0 +1,18 @@
+title: OSINT - Spam via mobile phone - url_request
+id: a7ff3ccb-316a-46e2-ba79-b3c8f26a3a97
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e149458-bdf4-4f6a-8e1c-8f1102de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_8892:
+    RequestUrl|contains:
+    - https://twitter.com
+  attributes:
+    RequestUrl|contains:
+    - https://who-calls.me.uk
+  condition: 1 of object_* or attributes

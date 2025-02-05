@@ -1,0 +1,26 @@
+title: 'M2M -  GlobeImposter "..doc" 2018-01-12 : "Unpaid invoice " - "1234567.7z"
+  - dns_query'
+id: d84839a5-24f3-4fb8-a4fd-f071ae93d8fb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a607314-de88-4309-ba06-c4a9950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+detection:
+  attributes:
+    IpAddresses:
+    - 199.188.200.146
+    - 199.188.200.144
+    - 198.54.114.136
+    - 74.220.219.67
+    - 199.188.200.96
+    - 198.54.116.65
+    - 199.188.200.149
+    - 103.198.0.2
+  condition: attributes

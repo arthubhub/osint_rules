@@ -1,0 +1,41 @@
+title: Malspam - 2016-05-27 - Locky - .docm - url_request
+id: b2fb2401-0c25-487d-8204-9c8be93a92b6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57482a58-58b0-42f8-bf2b-46b0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - egadget.ru
+    - ecpi.ro
+    - mtldesigns.ca
+    - http://projectodetalhe.pt
+    - http://wondervalley.in
+    - acnek.com
+    - wondervalley.in
+    - asysa.cl
+    - http://egadget.ru
+    - http://birlesimsucuklari.com
+    - projectodetalhe.pt
+    - http://cobrebactericida.org
+    - http://ecpi.ro
+    - noghrehpol.ir
+    - cobrebactericida.org
+    - iwebmediasavvy.com
+    - http://www.ding-a-ling-tel.com
+    - http://bridgeplacements.com
+    - http://mtldesigns.ca
+    - http://iwebmediasavvy.com
+    - http://www.asysa.cl
+    - bridgeplacements.com
+    - birlesimsucuklari.com
+    - http://www.samrhamburg.com
+    - http://acnek.com
+    - http://www.noghrehpol.ir
+    - http://www.geladas.com.br
+  condition: attributes

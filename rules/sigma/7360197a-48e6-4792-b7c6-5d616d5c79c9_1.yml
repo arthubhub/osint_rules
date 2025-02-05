@@ -1,0 +1,22 @@
+title: Hezb cryptomining malware - url_request
+id: 213d27ff-68a0-492d-9cbe-c6029ac04e96
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/7360197a-48e6-4792-b7c6-5d616d5c79c9.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.hezb
+- attack.t1496
+- attack.t1190
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://twitter.com
+    - https://www.lacework.com
+    - http://205.147.101.170
+    - https://www.pwndefend.com
+  condition: attributes

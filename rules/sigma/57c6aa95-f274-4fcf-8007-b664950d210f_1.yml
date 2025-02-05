@@ -1,0 +1,46 @@
+title: 'Malspam 2016-08-31 (.hta in .zip) - campaign: "FW: [Scan]" - url_request'
+id: 11628c4d-dcd7-49a6-a4f1-033d054b75a8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c6aa95-f274-4fcf-8007-b664950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.ionut.coman.home.ro
+    - dreamworksoffice.com
+    - http://www.download.extraslot.ru
+    - http://joeybecker.gmxhome.de
+    - powermax.ru
+    - http://simo62.web.fc2.com
+    - http://www.kukon.go.ro
+    - http://www.redanchemical.com
+    - http://dreamworksoffice.com
+    - http://jack0v0.web.fc2.com
+    - http://www.personalshoppingservice.it
+    - http://a-tconsulting.co.uk
+    - http://finishcar.de
+    - http://www.kreso.it
+    - http://www.helpinict.co.uk
+    - http://www.ieslamerced.es
+    - finishcar.de
+    - http://www.luigigiordano.org
+    - http://powermax.ru
+    - http://www.hager.50webs.org
+    - http://khaimekong.50webs.com
+    - http://sarushima.web.fc2.com
+    - http://user22393.vs.easily.co.uk
+    - http://pcps.web.fc2.com
+    - http://www.commentaborderunefille.fr
+    - http://twojamuza.y0.pl
+    - http://www.francescafraioli.it
+    - http://nkbzryw.republika.pl
+    - http://sonaeyou1.web.fc2.com
+    - http://www.francogatta.it
+    - http://w07q93g5g.homepage.t-online.de
+    - http://www.hotelancorariviera.com
+  condition: attributes

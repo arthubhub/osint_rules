@@ -1,0 +1,17 @@
+title: MAR-10478915-1.v1 Citrix Bleed - url_request
+id: 72f5f444-ba26-46fb-add0-d9720f3bf018
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/124008c0-e519-4f1d-b1fd-bd42bfae2198.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1190
+detection:
+  object_791:
+    RequestUrl|contains:
+    - https://www.cisa.gov
+  condition: 1 of object_*

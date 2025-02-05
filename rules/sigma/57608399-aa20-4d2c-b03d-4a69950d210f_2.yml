@@ -1,0 +1,17 @@
+title: 'OSINT - Mofang: A politically motivated information stealing adversary - dns_query'
+id: fe70f163-fcee-447d-bc54-73bd1049f080
+description: edit this field when analysing or editing the rule - reported by "FOXIT-CERT"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57608399-aa20-4d2c-b03d-4a69950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - citrixmeeting.com
+    IpAddresses:
+    - 46.101.2.135
+  condition: attributes

@@ -1,0 +1,42 @@
+title: 'Malspam 2016-09-30 (.wsf in .zip) - campaign: "Emailing" - url_request'
+id: 78b66a5e-5c0c-4d83-9f82-ef91d9fc87b9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ee144e-ad24-4175-ba0e-4943950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://autokover.ru
+    - b2c-batteries.com
+    - http://bjjmmt.com
+    - http://allinfo.xyz.com
+    - http://badimalik.com
+    - http://kashira.potolki.bz
+    - shuspong.com
+    - http://bobernichow.com
+    - bj-fzwb.com
+    - http://asknaija.com
+    - http://b2c-batteries.com
+    - banquetesycoctelesfsf.com
+    - badimalik.com
+    - bestsourcecode.com
+    - http://banquetesycoctelesfsf.com
+    - ayobuy.com
+    - bobernichow.com
+    - http://bj-fzwb.com
+    - http://ayobuy.com
+    - bladeandsoultr.com
+    - http://bestsourcecode.com
+    - bantayan.net
+    - autokover.ru
+    - asknaija.com
+    - http://bantayan.net
+    - http://bladeandsoultr.com
+    - bjjmmt.com
+    - http://shuspong.com
+  condition: attributes

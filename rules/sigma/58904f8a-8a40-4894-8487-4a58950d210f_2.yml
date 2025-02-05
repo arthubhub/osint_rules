@@ -1,0 +1,29 @@
+title: OSINT - Downeks and Quasar RAT Used in Recent Targeted Attacks Against Governments
+  - dns_query
+id: ad29cdcc-8d7a-40bf-84a1-c10dab2ee902
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58904f8a-8a40-4894-8487-4a58950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - topgamse.com
+    - datasamsung.com
+    - speedbind.com
+    - galaxysupdates.com
+    - newphoneapp.com
+    - bandtester.com
+    - gamestoplay.bid
+    - gameoolines.com
+    - ukgames.tech
+    - galaxy-s.com
+    - smartsftp.pw
+    - progsupdate.com
+    - downloadtesting.com
+    - onlinesoft.space
+  condition: attributes

@@ -1,0 +1,20 @@
+title: OSINT - PowerSniff Malware Used in Macro-based Attacks - dns_query
+id: be05f5cb-02d1-43d4-a42c-b0a340556d0b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e33b31-a500-454f-8256-435a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - letterinklandoix.net
+    - oklinjgreirestacks.biz
+    - brookmensoklinherz.org
+    - supratimewest.com
+    - supratimewest.biz
+    - starwoodhotels.pw
+  condition: attributes

@@ -1,0 +1,18 @@
+title: OSINT - Russia's APT28 uses fear of nuclear war to spread Follina docs in Ukraine
+  - dns_query
+id: 91ba14e3-2806-4a69-a726-56d47b56e89b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/3410ad13-ef34-48c9-bc6f-b1b111a30e06.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    IpAddresses:
+    - 144.208.77.68
+  condition: attributes

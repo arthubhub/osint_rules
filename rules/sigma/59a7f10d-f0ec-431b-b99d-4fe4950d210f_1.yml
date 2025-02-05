@@ -1,0 +1,15 @@
+title: OSINT - Gazing at Gazer - url_request
+id: 9e8a5bb9-6cfe-4482-b74f-9384cf3d9ea9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59a7f10d-f0ec-431b-b99d-4fe4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.welivesecurity.com
+  condition: attributes

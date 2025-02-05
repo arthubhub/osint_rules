@@ -1,0 +1,54 @@
+title: 'Kaspersky Lab: Spearphishing attack hits industrial companies - dns_query'
+id: 224fd590-fad9-42ed-b350-56086a1734d3
+description: edit this field when analysing or editing the rule - reported by "NCSC-NL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5857cf66-aa18-4681-bff7-08720a950b0c.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - ms45-hinet.net
+    - galaxystarshop.com
+    - xpweb.win
+    - poolkingsthailand.com
+    - watersysterns.com
+    - cs19335.tmweb.ru
+    - bothela-orsaro.com
+    - pguy.faith
+    - chunfenqlighting.com
+    - ivicker.usa.cc
+    - overseas-operation.com
+    - alreyadbplastics.com
+    - gettoworkzz.biz
+    - mirchifunz.in
+    - biblesoceities.org
+    - sympetax.com
+    - metaksen.com
+    - charlogistics.com
+    - limco.usa.cc
+    - hungasidy.biz
+    - hardworkzone.cf
+    - heinevy.com
+    - btinterment.com
+    - soaaxa.biz
+    - yasive.biz
+    - thai-nidhi.com
+    - hidroquil-ar.com
+    - fullone2u.com
+    - danqote.com
+    - asappyco.biz
+    - hunterkaysmoves.in
+    - lumibrigth.com
+    - alu-heat.biz
+    - restarz.biz
+    - sinctruk.com
+    - kinqnuts-raaphorst.com
+    IpAddresses:
+    - 66.23.226.40
+    - 186.202.127.132
+    - 178.175.138.196
+  condition: attributes

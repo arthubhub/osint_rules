@@ -1,0 +1,15 @@
+title: 'OSINT - Jimmy Nukebot: from Neutrino with love - url_request'
+id: 31d3f170-77e1-4c22-a62e-9455159e36cc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59aefa78-008c-4e61-a035-4bfb02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

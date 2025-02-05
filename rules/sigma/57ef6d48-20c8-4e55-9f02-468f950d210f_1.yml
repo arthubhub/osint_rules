@@ -1,0 +1,18 @@
+title: OSINT - Investigation of Linux.Mirai Trojan family - url_request
+id: 678016ec-7994-4fd8-88dc-69a0b017632b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ef6d48-20c8-4e55-9f02-468f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.mirai
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://5.206.225.122
+    - http://www.kernelmode.info
+  condition: attributes

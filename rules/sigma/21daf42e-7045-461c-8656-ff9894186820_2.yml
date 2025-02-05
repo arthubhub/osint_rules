@@ -1,0 +1,32 @@
+title: OSINT -  Protecting customers from a private-sector offensive actor using 0-day
+  exploits and DevilsTongue malware - dns_query
+id: 8097d122-6bca-4c82-b48d-27065917d7d7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/21daf42e-7045-461c-8656-ff9894186820.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - johnshopkin.net
+    - kenoratravels.com
+    - online-affiliate-mon.com
+    - codeingasmylife.com
+    - fbcdnads.live
+    - weathercheck.digital
+    - library-update.com
+    - eulenformacion.com
+    - backxercise.com
+    - online-source-validate.com
+    - grayhornet.com
+    - service-deamon.com
+    - pochtarossiy.info
+    - winmslaf.xyz
+    - colorpallatess.com
+    - noc-service-streamer.com
+    - hilocake.info
+  condition: attributes

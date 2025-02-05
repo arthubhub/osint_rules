@@ -1,0 +1,18 @@
+title: OSINT - A tale of two zero-days - process_creation
+id: 6616327f-4be0-405a-a3d3-0e9e0ed7714b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5afafce0-0598-4ca0-b52a-41f4950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1068
+detection:
+  attributes:
+    sha1:
+    - 0d3f335ccca4575593054446f5f219eba6cd93fe
+    - c82cfead292eeca601d3cf82c8c5340cb579d1c6
+  condition: attributes

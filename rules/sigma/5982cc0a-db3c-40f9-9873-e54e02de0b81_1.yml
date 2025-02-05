@@ -1,0 +1,15 @@
+title: OSINT - A Look at JS_POWMET, a Completely Fileless Malware - url_request
+id: cd6b4204-e66b-4b26-8faa-ab7f9d00afa1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5982cc0a-db3c-40f9-9873-e54e02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.trendmicro.com
+  condition: attributes

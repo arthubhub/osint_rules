@@ -1,0 +1,24 @@
+title: OSINT - Analyzing CrossRAT - process_creation
+id: c31c6387-f846-4b65-bc82-92667b61884b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a719a5d-ba14-4ec4-b4b8-4c94950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.crossrat
+detection:
+  object_4855:
+    sha256:
+    - 15af5bbf3c8d5e5db41fd7c3d722e8b247b40f2da747d5c334f7fd80b715a649
+  object_4856:
+    md5:
+    - 85b794e080d83a91e904b97769e1e770
+    sha1:
+    - b23e070dadc997759574d5ee92c7753b84968f50
+    sha256:
+    - 15af5bbf3c8d5e5db41fd7c3d722e8b247b40f2da747d5c334f7fd80b715a649
+  condition: 1 of object_*

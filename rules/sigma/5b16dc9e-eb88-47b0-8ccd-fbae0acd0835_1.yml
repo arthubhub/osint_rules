@@ -1,0 +1,44 @@
+title: Phishing Domains - url_request
+id: e95a8d7a-c989-4012-b96d-a6dd432f81a3
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b16dc9e-eb88-47b0-8ccd-fbae0acd0835.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - validatepaypalonline.com
+    - rentjobforyou.com
+    - clientwellsinspectcip.com
+    - com-securerefunds.com
+    - servicealertwellsconfirm.com
+    - checks-18939.com
+    - com-invoicerefunds.com
+    - confirmcipnotificationasap.com
+    - service-confirmed.info
+    - weiis-id6012.com
+    - confirmnewmsgcenter.com
+    - wffundsnoticealert.com
+    - wfecoderequiredwf.com
+    - custominspectnewcip.com
+    - webwfcoderegister.com
+    - wfnewcode.com
+    - wf-add0182.com
+    - assistance-paypalgroup.com
+    - rxsecuremyinvoice.com
+    - cust-point1288.com
+    - reviewnewmsgcenterwells.com
+    - inspectcipnoticeaccount.com
+    - asapcipconfirmalert.com
+    - theverifypaypal.com
+    - bancoestadoempresas.com
+    - referencecipserviceadmin.com
+    - wfwebcoderequired.com
+    - registercustomalertcip.com
+    - creditmutuel-immobilier.net
+  condition: attributes

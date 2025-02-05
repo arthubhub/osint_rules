@@ -1,0 +1,36 @@
+title: 'M2M -  Jaff 2017-06-02 : "Invoice INV-1234" - "Invoice INV-1234.pdf" - url_request'
+id: 03395ca9-62d7-42f5-9d86-0e99f511842d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59318aac-4e04-4616-9682-43ff950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://resevesssetornument.com
+    - http://meiyizixun.com
+    - http://shrideva.co.in
+    - http://newserniggrofg.net
+    - http://eselink.com.my
+    - http://yoyogi.com.au
+    - http://lanphuong.vn
+    - http://strassensammler.de
+    - http://zvezda-k.ru
+    - http://midiconcept.com
+    - http://lordheals.com
+    - http://doinlife.com
+    - http://mountmary.ca
+    - http://vibehouserecords.com
+    - http://dhaniearie.com
+    - http://suninsulation.com.au
+    - http://whoisfoxxrobiouy.net
+    - http://orhangazitur.com
+    - http://systemalu.com
+  condition: attributes

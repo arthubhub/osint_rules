@@ -1,0 +1,25 @@
+title: 'PWS: Win32/Kegotip.C - dns_query'
+id: d4e3b416-0990-4626-9da6-ea0a83debb0c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5706756e-958c-4c53-8f77-45f4950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - localeventit.pro
+    - gefuret.org
+    IpAddresses:
+    - 188.165.227.61
+    - 5.135.178.153
+    - 188.165.228.199
+    - 94.23.32.170
+    - 46.165.243.25
+    - 93.113.37.210
+    - 176.31.104.106
+    - 94.75.227.218
+  condition: attributes

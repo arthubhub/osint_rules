@@ -1,0 +1,26 @@
+title: 'M2M -  GlobeImposter "..doc" 2018-01-12 : "Unpaid invoice " - "1234567.7z"
+  - process_creation'
+id: dc1dc90d-7954-4dda-a8f3-32d4f46613c5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a607314-de88-4309-ba06-c4a9950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+detection:
+  object_12126:
+    md5:
+    - b0ee9dae7de7781ea809278c48c310a5
+    sha1:
+    - 28be65219441d78399027aa42c9cc7456ee67130
+    sha256:
+    - c45ef4a35047e14d8eaf54cab44a432be18e93915ac26a2f1294d260f220aea8
+  attributes:
+    md5:
+    - b0ee9dae7de7781ea809278c48c310a5
+  condition: 1 of object_* or attributes

@@ -1,0 +1,78 @@
+title: Lazarus infrastructure (pivot via Censys) - url_request
+id: 7473f2bf-c422-4250-839a-1f83e5a22a5e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/251a72a3-6229-4b4d-85a6-ba6d080dc1af.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.lazarus_group
+detection:
+  object_17922:
+    RequestUrl|contains:
+    - https://twitter.com
+  object_17925:
+    RequestUrl|contains:
+    - https://147.124.214.129
+  object_17927:
+    RequestUrl|contains:
+    - http://147.124.214.129
+  object_17929:
+    RequestUrl|contains:
+    - http://147.124.214.129
+  object_17932:
+    RequestUrl|contains:
+    - http://147.124.214.237
+  object_17934:
+    RequestUrl|contains:
+    - http://147.124.214.237
+  object_17936:
+    RequestUrl|contains:
+    - http://147.124.214.237
+  object_17938:
+    RequestUrl|contains:
+    - http://147.124.214.237
+  object_17940:
+    RequestUrl|contains:
+    - https://147.124.214.237
+  object_17943:
+    RequestUrl|contains:
+    - https://147.124.212.89
+  object_17945:
+    RequestUrl|contains:
+    - http://147.124.212.89
+  object_17947:
+    RequestUrl|contains:
+    - http://147.124.212.89
+  object_17949:
+    RequestUrl|contains:
+    - http://147.124.212.89
+  object_17951:
+    RequestUrl|contains:
+    - http://147.124.212.89
+  object_17952:
+    RequestUrl|contains:
+    - tracksmobiles.com
+    - www.tracksmobiles.com
+  object_17955:
+    RequestUrl|contains:
+    - https://67.203.7.171
+  object_17957:
+    RequestUrl|contains:
+    - http://67.203.7.171
+  object_17959:
+    RequestUrl|contains:
+    - http://67.203.7.171
+  object_17961:
+    RequestUrl|contains:
+    - http://67.203.7.171
+  object_17964:
+    RequestUrl|contains:
+    - https://67.203.7.245
+  object_17966:
+    RequestUrl|contains:
+    - http://67.203.7.245
+  condition: 1 of object_*

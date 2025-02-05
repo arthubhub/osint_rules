@@ -1,0 +1,45 @@
+title: 'OSINT - Bad Rabbit: Not-Petya is back with improved ransomware - url_request'
+id: aa3432cd-5079-4d66-960c-93851e91f35e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59f049c0-aae0-47d2-a888-4021950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.bad_rabbit
+- attack.software.bad_rabbit
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.imer.ro
+    - http://www.otbrana.com
+    - http://www.mediaport.ua
+    - http://bg.pensionhotel.com
+    - http://www.fontanka.ru
+    - http://1dnscontrol.com
+    - https://www.welivesecurity.com
+    - http://blog.fontanka.ru
+    - http://caforssztxqzf2nm.onion
+    - http://most-dnepr.info
+    - http://185.149.120.3
+    - http://an-crimea.ru
+    - http://www.grupovo.bg
+    - http://argumenti.ru
+    - http://ankerch-crimea.ru
+    - http://www.online812.ru
+    - http://www.pensionhotel.cz
+    - 1dnscontrol.com
+    - http://i24.com.ua
+    - http://calendar.fontanka.ru
+    - http://novayagazeta.spb.ru
+    - http://osvitaportal.com.ua
+    - http://www.sinematurk.com
+    - http://www.t.ks.ua
+    - http://grupovo.bg
+    - http://www.aica.co.jp
+    - http://argumentiru.com
+    - http://spbvoditel.ru
+  condition: attributes

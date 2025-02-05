@@ -1,0 +1,23 @@
+title: OSINT - Threat Actors Using Legitimate PayPal Accounts To Distribute Chthonic
+  Banking Trojan - url_request
+id: c8022357-493d-434b-bb73-49d21248342a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/586ccbb7-3b08-4fdb-a034-4a8b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.chthonic
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.viscot.com
+    - http://katyaflash.com
+    - http://wasingo.info
+    - http://goo.gl
+    - kingstonevikte.com
+    - https://www.proofpoint.com
+  condition: attributes

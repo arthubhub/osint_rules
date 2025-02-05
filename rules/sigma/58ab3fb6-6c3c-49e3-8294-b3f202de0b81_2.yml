@@ -1,0 +1,40 @@
+title: OSINT - The Rise of Dridex and the Role of ESPs - dns_query
+id: f5e6cd6e-5e7c-4596-ba5e-05f5179fb62d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58ab3fb6-6c3c-49e3-8294-b3f202de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.dridex
+- attack.group.anunak
+detection:
+  attributes:
+    IpAddresses:
+    - 159.226.92.9
+    - 198.167.136.139
+    - 46.17.3.237
+    - 173.196.157.250
+    - 37.139.21.245
+    - 195.22.127.26
+    - 154.0.171.105
+    - 178.195.0.12
+    - 81.155.55.211
+    - 82.99.60.26
+    - 86.130.54.90
+    - 89.35.178.115
+    - 37.0.26.34
+    - 216.51.232.176
+    - 209.20.67.87
+    - 136.243.209.34
+    - 194.150.118.25
+    - 109.235.76.95
+    - 179.177.114.30
+    - 95.208.65.134
+    - 81.130.131.55
+    - 77.236.97.60
+    - 213.222.56.155
+  condition: attributes

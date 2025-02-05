@@ -1,0 +1,22 @@
+title: New Phishing Attacks Abuse Excel Internet Query Files - process_creation
+id: 28360ec0-7df9-4894-9490-73904ff6c168
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b191ead-fac0-4f21-aaef-b9700acd0835.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.necurs
+detection:
+  attributes:
+    md5:
+    - 3a86ffce06d029730ad89cb233079d64
+    - 172bc98dbe0f6c4ac59857c071cd8673
+    - 08bb85f5bff52d2605ddd8a19a5465fd
+    - d2a63814440f8d054d78b03b48f7a3df
+    - 418aa2d43b1e4a841d4769463b12fa3b
+  condition: attributes

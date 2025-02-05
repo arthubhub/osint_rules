@@ -1,0 +1,32 @@
+title: OSINT - ThreatHunting/India/ - process_creation
+id: ba7fcc7f-b7a4-4466-895c-58dae437591e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d00a18b-fa28-4f72-bd72-4e6a950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_7110:
+    sha256:
+    - d9bcf4c4d0e546333c43d367ffa9e442008e4c25c02e1a649fe731e3f722c19c
+  object_7111:
+    sha256:
+    - d26333ce8c760e3122c1537ace5b4c9d28bfb71989601e5267a5a499356bbd53
+  object_7112:
+    md5:
+    - 3eb23bc84083e252549e47dbd65b1f8f
+    sha1:
+    - 8ffdd130ec61f31e04d29a87500f52e44236ee9c
+    sha256:
+    - d9bcf4c4d0e546333c43d367ffa9e442008e4c25c02e1a649fe731e3f722c19c
+  object_7114:
+    md5:
+    - d7b0eb2f80f415b3171651903ae74a03
+    sha1:
+    - bf4fa31705bc0c9bad70def01f8fd3075046ef79
+    sha256:
+    - d26333ce8c760e3122c1537ace5b4c9d28bfb71989601e5267a5a499356bbd53
+  condition: 1 of object_*

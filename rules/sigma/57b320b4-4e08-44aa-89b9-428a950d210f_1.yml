@@ -1,0 +1,24 @@
+title: 'Malspam 2016-08-16 (.wsf in .zip) - campaign: ''Blank 2'' - url_request'
+id: e311f478-b53e-4919-b758-de6523d57872
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b320b4-4e08-44aa-89b9-428a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://muznavolge.ru
+    - http://www.ferienhaus-mesa.at
+    - http://www.greatidea.de
+    - http://www.gcs-crostolo.it
+    - http://www.gianlucaboezio.it.
+    - muznavolge.ru
+    - http://sp2.cba.pl
+    - http://www.mediatoponline.it
+    - http://www.lefaos.50webs.com
+    - http://hoshiomi.yu-nagi.com
+  condition: attributes

@@ -1,0 +1,15 @@
+title: OSINT - Cardinal RAT Active for Over Two Years - url_request
+id: eb85feeb-3a94-41a6-a815-03192ec160b5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58fdc3f2-69b4-4aba-a5ec-4a2f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

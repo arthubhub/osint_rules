@@ -1,0 +1,22 @@
+title: 'BiBi-Linux: A New Wiper Dropped By Pro-Hamas Hacktivist Group - process_creation'
+id: 60c56d9e-5691-4d1e-abc9-0f6ebfe5d37d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/276f7055-c5e0-4b14-8645-c7028d0c74aa.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_12259:
+    md5:
+    - de9da4fcfb8320b9d34239effce1871a
+    sha1:
+    - 0dbabdc1ae8c3c8a48224ee3c3e8b6a17f41d6e7
+    sha256:
+    - 23bae09b5699c2d5c4cb1b8aa908a3af898b00f88f06e021edcb16d7d558efad
+  attributes:
+    sha256:
+    - 23bae09b5699c2d5c4cb1b8aa908a3af898b00f88f06e021edcb16d7d558efad
+  condition: 1 of object_* or attributes

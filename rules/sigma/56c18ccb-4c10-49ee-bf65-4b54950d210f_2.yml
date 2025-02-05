@@ -1,0 +1,52 @@
+title: Additional IPs for Turla/Uroburos from CIRCL Passive SSL - dns_query
+id: 2e0d0036-feed-48cc-801c-3ef7947d068c
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56c18ccb-4c10-49ee-bf65-4b54950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.turla_group
+detection:
+  attributes:
+    IpAddresses:
+    - 113.208.81.48
+    - 169.255.100.222
+    - 82.146.166.61
+    - 82.146.174.40
+    - 169.255.100.122
+    - 83.229.62.179
+    - 31.209.133.125
+    - 78.138.25.29
+    - 217.8.36.239
+    - 169.255.100.152
+    - 82.146.175.29
+    - 169.255.102.110
+    - 113.208.81.33
+    - 82.146.166.58
+    - 83.229.103.133
+    - 169.255.101.65
+    - 83.229.62.212
+    - 169.255.102.246
+    - 193.220.55.6
+    - 82.146.175.48
+    - 83.229.62.210
+    - 217.194.150.22
+    - 113.208.81.55
+    - 217.194.149.111
+    - 92.62.221.47
+    - 77.246.76.19
+    - 82.146.174.240
+    - 82.146.175.52
+    - 83.229.75.141
+    - 83.229.62.249
+    - 209.239.79.29
+    - 169.255.101.235
+    - 209.239.79.125
+    - 217.194.150.31
+    - 41.203.79.74
+    - 82.146.175.69
+  condition: attributes

@@ -1,0 +1,108 @@
+title: 'OSINT - DownAndExec: Banking malware utilizes CDNs in Brazil - process_creation'
+id: 416a1e58-536a-4f07-b127-07396cbc377b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a3bcbe0-3d70-427d-8744-4bdb950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_11406:
+    sha1:
+    - 37648e4b95636e3ee5a68e3fa8c0735125126c17
+  object_11407:
+    sha1:
+    - 38b7611bb20985512f86dc2c38247593e58a1df6
+  object_11408:
+    sha1:
+    - 67458b503047852dd603080946842472e575b856
+  object_11409:
+    sha1:
+    - 8ea2c548bcb974a380fece046a7e3f0218632ff2
+  object_11410:
+    sha1:
+    - bffaabcce3f4cced896f745a7ec4eba2070286b3
+  object_11411:
+    sha1:
+    - effb36259accdfff07c036c5a41b357692577265
+  object_11412:
+    md5:
+    - 51aed47cc54e9671f3ea71f8ee584952
+    sha1:
+    - 5c5d23fcb759d900c0158948695b43f63df4a99d
+    sha256:
+    - 08895e31448976adfbe419d1db92650bfb8b937f13597e6222fba965d3e999e0
+  object_11414:
+    md5:
+    - 2ad3b1669e8302035e24c838b3c08f2c
+    sha1:
+    - 21e6bfad68531acefa1a059015fb008742b5aeec
+    sha256:
+    - 15a739c1e02245e4f686ff46ca616ab73663fffac9c4de4290a1af4668405878
+  object_11416:
+    md5:
+    - c5d56198560f2e263c7ae1af6fccae6c
+    sha1:
+    - 37648e4b95636e3ee5a68e3fa8c0735125126c17
+    sha256:
+    - ce300e38c0adbba46b1d46066cc3be3e5ce990c6406cb3e1713936acd124d174
+  object_11418:
+    md5:
+    - 1a5748d445565bf35a3cb6e6b6959fe2
+    sha1:
+    - 67458b503047852dd603080946842472e575b856
+    sha256:
+    - d7b430e18426fad00576add9e88c6b0c78eb194376dfa416ab805f5757188990
+  object_11420:
+    md5:
+    - ab4832be975c95ce0348416741225143
+    sha1:
+    - 30fc877887d6845007503f3abd44ec261a0d40c7
+    sha256:
+    - 74c115091077182b4e9f1dc141fd2c91c50b0c61fd22117f71f880ebc4fe72bc
+  object_11422:
+    md5:
+    - 71b6a493388e7d0b40c83ce903bc6b04
+    sha1:
+    - 34f917aaba5684fbe56d3c57d48ef2a1aa7cf06d
+    sha256:
+    - 027cc450ef5f8c5f653329641ec1fed91f694e0d229928963b30f6b0d7d3a745
+  object_11424:
+    md5:
+    - 5ae9e0f3867ae8a317031fc9a5ed886e
+    sha1:
+    - bffaabcce3f4cced896f745a7ec4eba2070286b3
+    sha256:
+    - 45211c815cac28a399e3ad01d742b5811dae54d93918e969c685d4e8356d7c28
+  object_11426:
+    md5:
+    - e383d317b3c7bbd65a7c303746b7f12d
+    sha1:
+    - 38b7611bb20985512f86dc2c38247593e58a1df6
+    sha256:
+    - 6b08e5d92c7067eae8e222f2d13ba2a59fe36421eb2ece5054b5d97c593a38e2
+  object_11428:
+    md5:
+    - 782eace45e76c28862396a2b6d5b3f1c
+    sha1:
+    - 8ea2c548bcb974a380fece046a7e3f0218632ff2
+    sha256:
+    - 66d9360a2a41a119a9337539e110d79f6e74e405755029d9241bf9afc20beed6
+  object_11430:
+    md5:
+    - b917b09c778d7aa7e5a2d98a5fba5b1e
+    sha1:
+    - effb36259accdfff07c036c5a41b357692577265
+    sha256:
+    - 91301d3daab1a87dfc8b4e39f8a120ea5523e04ac86fee970cecc6760e05c8fe
+  attributes:
+    md5:
+    - 51aed47cc54e9671f3ea71f8ee584952
+    - 2ad3b1669e8302035e24c838b3c08f2c
+    sha1:
+    - 30fc877887d6845007503f3abd44ec261a0d40c7
+    - 34f917aaba5684fbe56d3c57d48ef2a1aa7cf06d
+    - bffaabcce3f4cced896f745a7ec4eba207028683
+  condition: 1 of object_* or attributes

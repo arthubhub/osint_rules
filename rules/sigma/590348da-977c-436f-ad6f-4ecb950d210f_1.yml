@@ -1,0 +1,15 @@
+title: OSINT - Use of DNS Tunneling for C&C Communications - url_request
+id: 6c22b5f7-f8d0-47b3-9947-f507305ff09f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/590348da-977c-436f-ad6f-4ecb950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

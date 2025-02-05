@@ -1,0 +1,36 @@
+title: Spam week 43 (mule acquisition) - probably related to Locky resources - dns_query
+id: ba1c6519-490f-4a92-b4fc-5675d37e23c9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58046227-00a0-47fb-a125-c025950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - bbwsa.com
+    - benavent.cat
+    - getdeone.com
+    - festiv-bras.com
+    - faithfulwebhosting.com
+    - belevtsev.net
+    - billfoundation.org
+    - bestedates.com
+    - feeltohealfitness.com
+    IpAddresses:
+    - 104.238.124.62
+    - 149.202.56.129
+    - 50.23.93.227
+    - 93.62.255.201
+    - 160.153.16.30
+    - 160.153.73.137
+    - 52.202.112.204
+    - 195.208.1.164
+    - 160.153.162.16
+    - 50.63.100.1
+    - 199.116.255.248
+    - 121.46.0.100
+  condition: attributes

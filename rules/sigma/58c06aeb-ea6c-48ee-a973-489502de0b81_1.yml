@@ -1,0 +1,49 @@
+title: 'OSINT - Crypt0l0cker (TorrentLocker): Old Dog, New Tricks - url_request'
+id: 1245948b-1ad2-4be1-af54-9d2c25f47e9e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58c06aeb-ea6c-48ee-a973-489502de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.torrentlocker
+- attack.software.torrentlocker
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://directory.submitlocally.com
+    - http://www.mmgmarketing.com
+    - http://drjacobberger.com
+    - http://fms-uchet.ru
+    - http://humannecessityfoundation.com
+    - http://arkatechknowledges.com
+    - http://activmedia.net
+    - http://biotechclinical.com
+    - http://ltmp.applepice.pl
+    - http://glutenfreeworks.com
+    - http://cyjt.com
+    - http://fanrp.com
+    - http://nji.fileserver4390.org
+    - http://ileriteknikservis.com
+    - http://ansagoldcoast.com
+    - http://ltmp.joymes.pl
+    - http://mayaastro.com
+    - http://blog.talosintelligence.com
+    - http://staracer.com.br
+    - http://saunabau.sk
+    - http://www.girokonto.club
+    - http://partylimobusnj.com
+    - http://prorubim.com
+    - http://saudail-alpin.no
+    - http://blisunn.com
+    - http://48f4339.js2-order.pl
+    - http://rubbishinteriors.com
+    - http://iuhd873.omniheart.pl
+    - http://4839.js2-order.pl
+    - http://flyanairliner.com
+    - http://gidrostroy-nn.ru
+    - http://quatang.thackhoi.com
+  condition: attributes

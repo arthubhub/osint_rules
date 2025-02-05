@@ -1,0 +1,33 @@
+title: XMRig and OPSEC Fail - process_creation
+id: 9e3c33b7-0654-4160-a66b-213fc3546d41
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e263cf3-b1f8-4393-ad21-42a3950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_18404:
+    md5:
+    - 8307778ea1683bbb00eecb6f761314e2
+    sha1:
+    - 108fca5ebe2d0d5adeba289ca83ded2d04b331de
+    sha256:
+    - 04fe59457894f9154e79eed78f3eefb076e6c6c06a21c25e831cd383b915d5e0
+  object_18405:
+    md5:
+    - 109a4ed5ee00374f64644344011b5157
+    sha1:
+    - 9998376fb8d72284fe7337ce31589fdc0cf6f38b
+    sha256:
+    - b4c7a760698a1f4abe9265caddc621feeb4515bbc9faa314ef2e5c0d1e1c504b
+  attributes:
+    md5:
+    - 53a0a94fcd38c422caf334b44638c03d
+    sha1:
+    - edfc0f18255a9a1974e9a720861d5e99d169bd9f
+    sha256:
+    - 4585b220fd13925aff301e9ac234ea6edbd25848d437d2a107bc0173e6f9a0b9
+  condition: 1 of object_* or attributes

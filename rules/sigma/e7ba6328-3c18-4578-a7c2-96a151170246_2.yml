@@ -1,0 +1,17 @@
+title: 'OSINT - Reservations Requested: TA558 Targets Hospitality and Travel - dns_query'
+id: bd8df884-4f4e-4321-a0f3-cc1570bd935c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/e7ba6328-3c18-4578-a7c2-96a151170246.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.ta558
+detection:
+  attributes:
+    IpAddresses:
+    - 38.132.101.45
+  condition: attributes

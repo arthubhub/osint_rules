@@ -1,0 +1,32 @@
+title: Dridex to Empire - dns_query
+id: 23915b54-602a-4cfa-8466-e1cd28611d3f
+description: edit this field when analysing or editing the rule - reported by "The
+  DFIR Report"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/946e7701-5bdd-4efe-ae94-a6626fc8092b.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.dridex
+detection:
+  attributes:
+    IpAddresses:
+    - 192.99.103.228
+    - 64.118.8.15
+    - 209.74.126.2
+    - 2.58.16.87
+    - 75.170.61.45
+    - 216.52.109.40
+    - 194.99.22.145
+    - 104.131.103.128
+    - 199.66.90.63
+    - 2.80.178.251
+    - 88.129.223.244
+    - 144.168.239.42
+    - 54.39.34.24
+    - 88.129.221.43
+    - 59.148.253.194
+  condition: attributes

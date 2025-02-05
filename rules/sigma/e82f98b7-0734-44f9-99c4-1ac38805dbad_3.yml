@@ -1,0 +1,57 @@
+title: OSINT - New campaign targeting security researchers - process_creation
+id: e761bb85-f76f-4018-acec-7b405b0cdd62
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/e82f98b7-0734-44f9-99c4-1ac38805dbad.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1249
+- attack.t1341
+detection:
+  object_11392:
+    md5:
+    - b52e05683b15c6ad56cebea4a5a54990
+    sha1:
+    - baf97d3b9095911fb7c9c8d7152fdc32ca7b33aa
+    sha256:
+    - 68e6b9d71c727545095ea6376940027b61734af5c710b2985a628131e47c6af7
+  object_11394:
+    md5:
+    - 56018500f73e3f6cf179d3b853c27912
+    sha1:
+    - a3060a3efb9ac3da444ef8abc99143293076fe32
+    sha256:
+    - 4c3499f3cc4a4fdc7e67417e055891c78540282dccc57e37a01167dfe351b244
+  object_11396:
+    md5:
+    - ae17ce1eb59dd82f38efb9666f279044
+    sha1:
+    - 3b3acb4a55ba8e2da36223ae59ed420f856b0aaf
+    sha256:
+    - a4fb20b15efd72f983f0fb3325c0352d8a266a69bb5f6ca2eba0556c3e00bd15
+  object_11398:
+    md5:
+    - 9e9f69ed56482fff18933c5ec8612063
+    sha1:
+    - 4ff6c02140ab1daf217b6e01ec042460389e2e92
+    sha256:
+    - 25d8ae4678c37251e7ffbaeddc252ae2530ef23f66e4c856d98ef60f399fa3dc
+  object_11400:
+    md5:
+    - f5475608c0126582081e29927424f338
+    sha1:
+    - 8e88fd82378794a17a4211fbf2ee2506b9636b02
+    sha256:
+    - a75886b016d84c3eaacaf01a3c61e04953a7a3adf38acf77a4a2e3a8f544f855
+  attributes:
+    sha256:
+    - 68e6b9d71c727545095ea6376940027b61734af5c710b2985a628131e47c6af7
+    - a4fb20b15efd72f983f0fb3325c0352d8a266a69bb5f6ca2eba0556c3e00bd15
+    - a75886b016d84c3eaacaf01a3c61e04953a7a3adf38acf77a4a2e3a8f544f855
+    - 4c3499f3cc4a4fdc7e67417e055891c78540282dccc57e37a01167dfe351b244
+    - 25d8ae4678c37251e7ffbaeddc252ae2530ef23f66e4c856d98ef60f399fa3dc
+  condition: 1 of object_* or attributes

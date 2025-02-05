@@ -1,0 +1,15 @@
+title: 'OSINT - Dvmap: the first Android malware with code injection - url_request'
+id: fcabd1a1-efc7-4f84-9fce-f4d1ac048966
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/593e542e-e080-464e-af5a-4c2a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

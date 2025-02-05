@@ -1,0 +1,17 @@
+title: OSINT - TA505 IoC - 2020-06-06 - dns_query
+id: bc9811a7-e6fa-4e54-9781-5d9fb7faac89
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5eddeee6-22ec-419b-8634-429602de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.ta505
+detection:
+  attributes:
+    IpAddresses:
+    - 92.38.163.14
+  condition: attributes

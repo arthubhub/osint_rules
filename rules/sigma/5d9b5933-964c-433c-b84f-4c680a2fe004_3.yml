@@ -1,0 +1,73 @@
+title: Emotet in Depth TTP 10-07-19 - process_creation
+id: d26bdddb-5251-443e-8a03-e22833c2ed79
+description: edit this field when analysing or editing the rule - reported by "MiSOC"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d9b5933-964c-433c-b84f-4c680a2fe004.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1087
+- attack.software.emotet
+- attack.t1060
+- attack.t1482
+- attack.software.s0363
+- attack.t1059
+- attack.t1064
+- attack.t1086
+- attack.software.s0154
+- attack.t1053
+- attack.t1050
+- attack.t1043
+- attack.t1055
+- attack.t1071
+- attack.t1032
+- attack.t1193
+- attack.t1033
+- attack.t1047
+detection:
+  object_11119:
+    md5:
+    - 9ce5126ffcbc936ad6c0155763898f19
+    sha1:
+    - 284534ae3c3ca467f098115d07cd7e14cbec9583
+    sha256:
+    - dd007df90f91857a9efe65008cf015f7955ff05a5b243017e4931087f5742355
+  object_11120:
+    md5:
+    - 26017e97acce09276f3b4c6800dec256
+    sha1:
+    - b49b6719495f8398f72e18c0e9450feacb0f9bd9
+    sha256:
+    - 3306d41a09840db2e94e7497c911e8d61d15776b44346f02bbb6a88f5bd51caa
+  object_11121:
+    md5:
+    - 9afcbf6f4f13a40791d368df767b4304
+    sha1:
+    - 019a178ee95b34980a2f07ee624528de5f4eae44
+    sha256:
+    - 16d007d650d117c68da005747378f16cebe820e75a2565be70602fad2cb6e1fe
+  object_11122:
+    md5:
+    - 9240845226d22642cbe5e0d39205d869
+    sha1:
+    - 10dae0bced984456d3d7a2b059cd71a4762f1c5b
+    sha256:
+    - 4cbe34dc9928a6b93786a69bea92b3df0e04fd67d116fc1746d817496314de9e
+  object_11123:
+    md5:
+    - 03dfc482ccecbbbc16c5c208ae55d49a
+    sha1:
+    - 46b1ad83e2bbf22b08462656e979bca53afff6ba
+    sha256:
+    - e23033b26e459f6987fb65b9dd8a975a14c2ea9d903a720d4a67a32d43bff293
+  object_11124:
+    md5:
+    - b65e8c666af6ff39c67552e0c98f55d5
+    sha1:
+    - 844ce6691b66a81237a592ec6bd2c59c8dbd52a0
+    sha256:
+    - 2826263cc5a3199167970f988c628c177ec45cee60618ae40e9fe84ec9167b73
+  condition: 1 of object_*

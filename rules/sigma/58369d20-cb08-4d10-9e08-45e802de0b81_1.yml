@@ -1,0 +1,18 @@
+title: 'OSINT -  Fareit Spam: Rocking Out to a New File Type - url_request'
+id: 9c0235de-745b-4579-b5ef-570b8ea3769a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58369d20-cb08-4d10-9e08-45e802de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.fareit
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.talosintel.com
+    - jerryotis.pw
+  condition: attributes

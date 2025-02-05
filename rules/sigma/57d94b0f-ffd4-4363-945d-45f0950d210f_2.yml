@@ -1,0 +1,27 @@
+title: 'Malspam 2016-09-14 (.js in .zip) - campaign: "Delivery Confirmation" - dns_query'
+id: 5161e614-de9e-4098-a595-c7dc093c84b2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d94b0f-ffd4-4363-945d-45f0950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - vinaxanh.com
+    - ygc1688.com
+    - dropsheep.com
+    - amaranthine-deerplacenta.com
+    - thcsgoxoai.com
+    - janie-royce.com
+    IpAddresses:
+    - 123.30.208.178
+    - 74.220.202.49
+    - 115.159.97.197
+    - 124.217.255.45
+    - 88.198.138.107
+    - 112.213.94.125
+  condition: attributes

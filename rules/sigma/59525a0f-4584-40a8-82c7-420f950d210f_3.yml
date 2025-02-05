@@ -1,0 +1,25 @@
+title: 'M2M -  Trickbot 2017-06-27 : mac1 : "facture 654321" - "abonneau_654321.docm"
+  - process_creation'
+id: f150eb5f-6f40-41dc-b2be-c2f55a7f32a9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59525a0f-4584-40a8-82c7-420f950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.trick_bot
+detection:
+  attributes:
+    md5:
+    - 745d9e02af75fcfba39dd20ed9f8d806
+    - 51c3a67bc5045ce6dde016cdffbfd158
+    sha1:
+    - 53322f619c4d9b71ee080fa2ae2dd8e86f7c817e
+    - 851736d63efff15ef670433de8340e35d2a64767
+    sha256:
+    - bff8f75d4984bfc5c3077e2321858a4ab9925b767ad4239af35e84072e37dc4a
+    - edf609ac4f18c0340570170fbc7a6d27505fdb79add69d5916038a36bfa4bbf4
+  condition: attributes

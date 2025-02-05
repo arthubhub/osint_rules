@@ -1,0 +1,42 @@
+title: QUARTERRIG - Malware Analysis Report - dns_query
+id: e080145d-0793-4fca-84f2-c8b924a0f2f5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/04e8bb1e-b445-40a6-a68a-1ce85e32d229.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1566
+- attack.t1140
+- attack.t1204.002
+- attack.t1547.001
+- attack.t1574.002
+- attack.t1574.001
+- attack.t1583.003
+- attack.t1204
+- attack.t1566.001
+- attack.t1566.002
+- attack.t1553.005
+- attack.software.quarterrig
+- attack.t1027.006
+- attack.t1584
+detection:
+  object_10021:
+    QueryName|contains:
+    - sharpledge.com
+    IpAddresses:
+    - 51.75.210.218
+  object_10022:
+    QueryName|contains:
+    - pateke.com
+    IpAddresses:
+    - 85.195.89.91
+  object_10023:
+    QueryName|contains:
+    - gatewan.com
+    IpAddresses:
+    - 91.218.183.90
+  condition: 1 of object_*

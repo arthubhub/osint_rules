@@ -1,0 +1,83 @@
+title: MAR-10164494.r1.v1 (SamSam ransomware) - process_creation
+id: a95b7750-6e0d-4276-a212-c0a0b3caae35
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c066053-0e94-46eb-9746-4b7d950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.samsam
+- attack.group.samas-samsam
+- attack.software.samas-samsam
+- attack.software.samsam
+detection:
+  object_7064:
+    md5:
+    - 76bd79f774ae892fd6a30b6463050a91
+    sha1:
+    - 4d7a60bd1fb3677a553f26d95430c107c8485129
+    sha256:
+    - 9b23bfc35b18ed80104c496b2aa722b3e56ff9ceb9dae60d1aff7230321c1d12
+  object_7065:
+    md5:
+    - b96620d8a08fa436ea22ef480dd883ce
+    sha1:
+    - a1ab74d2f06a542e77ea2c6d641aae4ed163a2da
+    sha256:
+    - 738c95f5bfe63a530b200a0d73f363d46c5671c1fcbb69c217e15a3516501a86
+  object_7066:
+    md5:
+    - 02c19bbf8e19bb69fc7870ec872d355e
+    sha1:
+    - cc76586ef94122329e825c78aad2ecb9ac064343
+    sha256:
+    - bbd4102fe25e73c0815d0c020d60d47dbbfbe79ef1e490e7b4f97640dd932b58
+  object_7067:
+    md5:
+    - 34943f18fd2a99cc3f5cabe43b4765f8
+  object_7068:
+    md5:
+    - 06219fe6e30e15dce12688ca2b434890
+  object_7069:
+    md5:
+    - 11b58fc9ac45168b871cc50399b7c86c
+  object_7070:
+    md5:
+    - ec45a535f38fb6dc4ac4ed7cbf63b754
+  object_7071:
+    md5:
+    - 76bd79f774ae892fd6a30b6463050a91
+    sha1:
+    - 4d7a60bd1fb3677a553f26d95430c107c8485129
+    sha256:
+    - 9b23bfc35b18ed80104c496b2aa722b3e56ff9ceb9dae60d1aff7230321c1d12
+  object_7072:
+    md5:
+    - 7f1dc4bd716bc037dea251c4dff12cdd
+  object_7073:
+    md5:
+    - c8076584486a2745281e4945da9b8b13
+  object_7074:
+    md5:
+    - 1efe88aa4756d059ec1d3b49e342de5d
+  object_7075:
+    md5:
+    - 7048daac38c935b38e086adcd8035d2a
+  object_7076:
+    md5:
+    - b96620d8a08fa436ea22ef480dd883ce
+    sha1:
+    - a1ab74d2f06a542e77ea2c6d641aae4ed163a2da
+    sha256:
+    - 738c95f5bfe63a530b200a0d73f363d46c5671c1fcbb69c217e15a3516501a86
+  object_7077:
+    md5:
+    - 02c19bbf8e19bb69fc7870ec872d355e
+    sha1:
+    - cc76586ef94122329e825c78aad2ecb9ac064343
+    sha256:
+    - bbd4102fe25e73c0815d0c020d60d47dbbfbe79ef1e490e7b4f97640dd932b58
+  condition: 1 of object_*

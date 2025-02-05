@@ -1,0 +1,19 @@
+title: OSINT - The WhiteRose Ransomware Is Decryptable & Tells A Strange Story - url_request
+id: 35c6d760-05d5-43bf-b0cd-9f2f50e616cd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ac7752d-a430-4606-8d2b-06b4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.whiterose
+- attack.software.whiterose
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+    - http://torbox3uiot6wchz.onion
+  condition: attributes

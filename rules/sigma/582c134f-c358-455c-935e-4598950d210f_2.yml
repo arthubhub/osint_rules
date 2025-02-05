@@ -1,0 +1,26 @@
+title: OSINT - New Carbanak / Anunak Attack Methodology - dns_query
+id: e6bcd680-6d1d-4ebd-b222-9b5db22f120b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582c134f-c358-455c-935e-4598950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.anunak
+detection:
+  attributes:
+    IpAddresses:
+    - 95.215.46.229
+    - 5.45.179.173
+    - 92.215.45.94
+    - 192.99.14.211
+    - 148.251.18.75
+    - 81.17.28.124
+    - 95.215.46.221
+    - 95.215.46.249
+    - 95.215.46.234
+    - 179.43.133.34
+  condition: attributes

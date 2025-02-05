@@ -1,0 +1,38 @@
+title: 'Malspam 2016-09-08 (.wsf in .zip) - campaign: "New voice mail message from"
+  - dns_query'
+id: eeba8257-c8b6-4696-a765-654fcee2bb7c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d15dca-ccd0-4e18-b2c5-e6b5950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - tst-technik.de
+    - gam-e20.it
+    IpAddresses:
+    - 62.250.4.180
+    - 185.107.213.133
+    - 85.18.11.68
+    - 213.186.33.19
+    - 195.238.0.64
+    - 94.126.40.48
+    - 212.159.9.91
+    - 80.150.6.138
+    - 211.134.181.38
+    - 62.24.202.31
+    - 202.224.59.191
+    - 211.78.38.199
+    - 81.24.34.9
+    - 37.152.88.16
+    - 86.65.123.70
+    - 212.159.8.151
+    - 208.71.106.37
+    - 208.71.106.45
+    - 213.185.87.30
+    - 213.205.40.169
+  condition: attributes

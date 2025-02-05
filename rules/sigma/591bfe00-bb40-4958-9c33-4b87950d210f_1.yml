@@ -1,0 +1,44 @@
+title: 2017-05-16 Malspam Emailing:#####.pdf.pdf - url_request
+id: 5bc83cf5-42a9-424d-adc9-40a2fcb4296b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/591bfe00-bb40-4958-9c33-4b87950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://malwr.com
+    - http://wizbam.com
+    - http://eesiiuroffde445.com
+    - http://daweizhi.com
+    - http://valpit.ru
+    - http://reefclub.ru
+    - https://www.hybrid-analysis.com
+    - http://tomcarservice.it
+    - http://biarritzru.com
+    - http://playmindltd.com
+    - http://vipan-photography.com
+    - http://titanmachinery.com.au
+    - http://joshcomeauxhair.com
+    - http://jomoba35.com
+    - http://dodawanie.com
+    - http://personalizar.net
+    - http://outdoor-sauerland.de
+    - http://tidytrend.com
+    - http://herrossoidffr6644qa.top
+    - http://sjffonrvcik45bd.info
+    - http://opearl.net
+    - http://bioferme.biz
+    - http://jsplast.ru
+    - http://ventrust.ro
+    - http://juvadent.de
+    - http://beautyandearth.com
+    - http://ripasso.nl
+  condition: attributes

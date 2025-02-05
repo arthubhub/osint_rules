@@ -1,0 +1,20 @@
+title: OSINT  - Fancy Bear Source Code - process_creation
+id: 9e47ac90-18bf-46a1-8f49-095151758297
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58724cbf-5508-4425-ab89-4f61950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.strontium
+- attack.group.sofacy
+detection:
+  attributes:
+    sha1:
+    - 4e63fc81bc611b5efcfd1091fc63ca6e3cc80842
+    sha256:
+    - 26bb761ced7b7b1b418f46d3908ac626985480795ce5e4b659c59eb5acd1fdab
+  condition: attributes

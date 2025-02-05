@@ -1,0 +1,48 @@
+title: A deeper look into ScanBox TLP:GREEN report from PWC UK - dns_query
+id: 20b55e66-18ba-4175-9d6d-d7e9c19af867
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54eecca6-27ac-4a73-b78e-4e4d950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - linde-boc.com
+    - infotechnew.com
+    - bisononthevinayerd.org
+    - packbot.org
+    - sharepoint-vaeit.com
+    - ssl-vaeit.com
+    - microscft.net
+    - realgamehouse.com
+    - whatwhowhat.com
+    - wiki-vaeit.com
+    - topsec2014.com
+    - oglobo-globo.com
+    - generalatomic.net
+    IpAddresses:
+    - 148.163.29.33
+    - 199.36.75.153
+    - 213.240.147.30
+    - 23.226.65.219
+    - 1.9.5.38
+    - 66.160.173.114
+    - 118.193.153.221
+    - 216.99.147.30
+    - 210.209.86.156
+    - 211.230.147.30
+    - 96.44.179.236
+    - 142.4.114.71
+    - 174.121.122.73
+    - 180.210.206.246
+    - 118.193.153.227
+    - 192.199.254.126
+    - 122.10.10.161
+    - 204.152.199.43
+    - 50.2.24.211
+    - 103.255.61.227
+  condition: attributes

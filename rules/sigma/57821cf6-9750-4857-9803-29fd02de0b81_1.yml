@@ -1,0 +1,30 @@
+title: "OSINT - The Dropping Elephant \xE2\u20AC\u201C aggressive cyber-espionage\
+  \ in the Asian region - url_request"
+id: 3159e367-cf88-4245-9a4c-3ac70c0aa56e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57821cf6-9750-4857-9803-29fd02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://hostmyrss.com
+    - http://163-cn.org
+    - http://feeds.rapidfeeds.com
+    - http://10.30.4.112
+    - http://microsofl.mooo.com
+    - http://43.249.37.173
+    - https://securelist.com
+    - http://5.254.98.68
+    - http://85.25.79.230
+    - http://cnmilit.com
+    - http://wgeastchina.steelhome.cn
+    - http://www.epg-cn.com
+    - http://chinastrat.com
+    - http://www.chinastrats.com
+    - http://www.newsnstat.com
+  condition: attributes

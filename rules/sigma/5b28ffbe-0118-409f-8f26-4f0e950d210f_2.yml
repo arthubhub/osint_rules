@@ -1,0 +1,17 @@
+title: OSINT - Malware That Hit Pyeongchang Olympics Deployed in New Attacks - process_creation
+id: 519de556-d5f0-4ed6-88dd-6b0dd4651ea0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b28ffbe-0118-409f-8f26-4f0e950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.olympic_destroyer
+detection:
+  object_4687:
+    md5:
+    - 0e7b32d23fbd6d62a593c234bafa2311
+  condition: 1 of object_*

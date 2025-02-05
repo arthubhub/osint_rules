@@ -1,0 +1,30 @@
+title: 'Malspam 2016-10-03 (.xls) - campaign: "Invoice-" - dns_query'
+id: acc5d7f8-a2cc-4f09-a144-1ea4e3e4af7e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57f26f87-fbc8-4b7b-be64-6e88950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - golfnauvoo.com
+    - craftsreviews.com
+    - crossroadspd.com
+    - icdsarch.com
+    - acaciainvest.ro
+    - ifsaiumumi.com
+    - alraysa.com
+    IpAddresses:
+    - 188.240.2.32
+    - 68.65.120.207
+    - 89.42.218.173
+    - 212.48.80.241
+    - 96.0.130.2
+    - 95.173.189.63
+    - 208.71.139.66
+    - 198.54.115.4
+  condition: attributes

@@ -1,0 +1,19 @@
+title: 'OSINT Android.Bankosy: All ears on voice call-based 2FA by Symantec - dns_query'
+id: d15ce7b7-b39d-44f3-80b4-e22f99388e68
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56af4bee-eeb4-4145-b10f-4c7e950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 185.86.148.188
+    - 195.3.144.90
+    - 89.144.14.29
+    - 89.144.14.59
+    - 5.39.222.162
+  condition: attributes

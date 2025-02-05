@@ -1,0 +1,15 @@
+title: OSINT - First C&C (IPv6) - Azorult - url_request
+id: 24a28a2a-748f-41d6-a8c4-b4730f5a484d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a67a79f-7884-46c7-ad56-49ba950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://2a01
+  condition: attributes

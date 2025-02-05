@@ -1,0 +1,16 @@
+title: 'OSINT - Cheating the cheater: How adversaries are using backdoored video game
+  cheat engines and modding tools - url_request'
+id: 40740690-bfee-4ac3-9dcc-8df7d71a24a8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/9362e0e3-62ff-475e-8d32-1ffbb5078e8d.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_95:
+    RequestUrl|contains:
+    - https://blog.talosintelligence.com
+  condition: 1 of object_*

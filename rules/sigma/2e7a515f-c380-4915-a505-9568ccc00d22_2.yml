@@ -1,0 +1,102 @@
+title: 'DeftTorero: tactics, techniques and procedures of intrusions revealed - process_creation'
+id: 61859137-fd2b-4cd3-8e85-a6f534f308c0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/2e7a515f-c380-4915-a505-9568ccc00d22.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.s0002
+- attack.group.g0123
+- attack.software.netcat
+- attack.group.volatile_cedar
+- attack.software.mimikatz
+- attack.group.mimikatz
+detection:
+  object_11722:
+    md5:
+    - 0a45de1cdf39e0ad67f5d88c730b433a
+  object_11723:
+    md5:
+    - 0d6bc7b184f9e1908d4d3fe0a7038a1e
+  object_11724:
+    md5:
+    - c87a206a9c9846a2d1c3537d459ec03a
+  object_11725:
+    md5:
+    - 02bcd71a4d7c3a366eff733f92702b81
+  object_11726:
+    md5:
+    - d6a82b866f7f9e1e01bf89c3da106d9d
+  object_11727:
+    md5:
+    - c59870690803d976014c7c8b58659ddf
+  object_11728:
+    md5:
+    - 1ed9169bed85efb1fd5f8d50333252d8
+  object_11729:
+    md5:
+    - 2d804386de4073bad642dfc816876d08
+  object_11730:
+    md5:
+    - 523aa999b9270b382968e5c24ab6f9eb
+  object_11731:
+    md5:
+    - 45d854e66631e5c1cda6dbf4fea074ce
+  object_11732:
+    md5:
+    - bb767354ee886f69b4ab4f9b4ac6b660
+  object_11733:
+    md5:
+    - 0152de452f92423829e041af2d783e3f
+  object_11734:
+    md5:
+    - 7981f1bf9b8e5f4691e4ac440f1ba251
+  object_11735:
+    md5:
+    - 4b646e7958e1bb00924b8e6598fe6670
+  object_11736:
+    md5:
+    - d608163a972f43cc9f53705ed6d31089
+  object_11737:
+    md5:
+    - 7567f938ee1074cd3932fdb01088ca35
+  object_11738:
+    md5:
+    - 566b4858b29cfa48cd5584bebfc7546b
+  object_11739:
+    md5:
+    - bd876b57f8be84ff5d95c899de34c0ee
+  object_11740:
+    md5:
+    - f575d4bb1f5ff6c54b2de99e9bc40c75
+  object_11741:
+    md5:
+    - 238a4efe51a9340511788d2752aca8d6
+  object_11742:
+    md5:
+    - 550bd7c330795a766c9dfb1586f3cc53
+  object_11743:
+    md5:
+    - 68d3bf2c363144ec6874ab360fdda00a
+  object_11744:
+    md5:
+    - 3437e3e59fda82cdb09eab711ba7389d
+  attributes:
+    md5:
+    - 53ee31c009e96d4b079ebe3267d0ae8e
+    - e952ec767d872ea08d8555cbc162f3dc
+    - 54ebc45137ba5b9f5ece35ca40267100
+    - ed50613683b5a4196e0d5fd2687c56da
+    - a955b45e14d082f71e01ebc52cf13db8
+    sha256:
+    - b42725211240828ccc505d193d8ea5915e395c9f43e71496ff0ece4f72e3e4ab
+    - 8737f06d7374ff54a9ad728f53c09f89070beca02a305f11fc1e26c8fb33f049
+    - c1f43b7cf46ba12cfc1357b17e4f5af408740af7ae70572c9cf988ac50260ce1
+    - f0e6510103deefce338777a81cbfb7529eefa69bafad0d6fd63b4944f916c076
+    - a16bdcfa4cc73f87f6eea9795acb75b6b40f80e0bba6394b39f37b7b1fd1f4ad
+    - ed2f501408a7a6e1a854c29c4b0bc5648a6aa8612432df829008931b3e34bf56
+  condition: 1 of object_* or attributes

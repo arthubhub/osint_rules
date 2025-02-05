@@ -1,0 +1,40 @@
+title: 'M2M -  Jaff 2017-06-09 : missing subject - "IMG_1234.ZIP" / "DOC_1234.docm"
+  - dns_query'
+id: c68a9ee5-bca2-4104-ba32-a02e07a530d8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/593a6d56-c9d4-44a5-af47-4b68950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    IpAddresses:
+    - 70.40.221.121
+    - 199.79.62.121
+    - 69.64.147.34
+    - 192.185.5.128
+    - 119.28.85.128
+    - 162.222.226.195
+    - 103.254.148.134
+    - 198.252.98.191
+    - 185.158.165.13
+    - 141.8.194.135
+    - 81.169.145.94
+    - 173.254.28.87
+    - 151.248.113.29
+    - 111.118.215.77
+    - 23.229.221.200
+    - 46.29.160.48
+    - 209.99.16.227
+    - 103.21.59.169
+    - 174.127.105.121
+    - 37.97.228.171
+    - 213.32.71.234
+    - 196.46.186.187
+  condition: attributes

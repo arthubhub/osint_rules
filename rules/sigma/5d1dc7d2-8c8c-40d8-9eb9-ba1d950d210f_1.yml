@@ -1,0 +1,19 @@
+title: 'OSINT - Threat Spotlight: Ratsnif - New Network Vermin from OceanLotus - url_request'
+id: 98271168-4ea7-43f0-9b54-c382ac53221e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d1dc7d2-8c8c-40d8-9eb9-ba1d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1094
+- attack.t1043
+- attack.group.apt32
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://threatvector.cylance.com
+  condition: attributes

@@ -1,0 +1,16 @@
+title: OSINT Defending the White Elephant by Arbor Networks - url_request
+id: ad65b6b8-3315-43e5-a8a3-a6958f2583a9
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55e55686-ec88-4cba-a1bb-4b06950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://asert.arbornetworks.com
+    - http://pages.arbornetworks.com
+  condition: attributes

@@ -1,0 +1,23 @@
+title: Malspam 2016-07-13 .wsf campaign - url_request
+id: b2365ef6-5fe9-4614-b1f8-c12d8238e55c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5786466b-896c-41f4-a39d-46d1950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://pernelkul.hu
+    - http://lifecare-hc.com
+    - lifecare-hc.com
+    - http://ampexholdings.com
+    - http://sollove.com.br
+    - williamsbreak.com
+    - ampexholdings.com
+    - pernelkul.hu
+    - http://williamsbreak.com
+  condition: attributes

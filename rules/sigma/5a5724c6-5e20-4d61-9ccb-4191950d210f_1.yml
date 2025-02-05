@@ -1,0 +1,63 @@
+title: OSINT - Mac Malware of 2017 - url_request
+id: 63a7ba23-a88e-472d-b4c9-6af705b41e4b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a5724c6-5e20-4d61-9ccb-4191950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.x-agent
+- attack.software.proton
+- attack.software.macspy
+- attack.group.macransom
+- attack.software.cpumeaner
+- attack.software.fruitfly
+- attack.group.filecoder
+- attack.software.empyre
+- attack.software.pwnet
+- attack.software.mughthesec
+- attack.software.filecoder
+- attack.software.xagentosx
+- attack.software.macransom
+- attack.software.macdownloader
+- attack.software.turla
+detection:
+  object_8571:
+    RequestUrl|contains:
+    - www.securitychecking.org
+  attributes:
+    RequestUrl|contains:
+    - https://iranthreats.github.io
+    - http://apple-checker.org
+    - https://www.securitychecking.org
+    - http://apple-uptoday.org
+    - apple-iclods.net
+    - https://www.virusbulletin.com
+    - apple-checker.org
+    - handbrakestore.com
+    - http://apple-search.info
+    - http://www.elmedia-video-player.com
+    - https://www.welivesecurity.com
+    - https://blog.fox-it.com
+    - http://46.17.97.37
+    - https://blog.checkpoint.com
+    - https://blog.malwarebytes.com
+    - http://192.168.3.217
+    - http://23.227.196.215
+    - https://mac.eltima.com
+    - https://objective-see.com
+    - handbrake.cc
+    - symantecblog.com
+    - apple-iclods.org
+    - https://www.cybersixgill.com
+    - https://researchcenter.paloaltonetworks.com
+    - apple-search.info
+    - officialswebsites.info
+    - apple-uptoday.org
+    - http://apple-iclods.org
+    - handbrake.biz
+    - eltima.in
+  condition: 1 of object_* or attributes

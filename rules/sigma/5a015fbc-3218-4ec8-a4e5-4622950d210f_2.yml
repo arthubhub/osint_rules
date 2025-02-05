@@ -1,0 +1,269 @@
+title: 'OSINT - OceanLotus Blossoms: Mass Digital Surveillance and Attacks Targeting
+  ASEAN, Asian Nations, the Media, Human Rights Groups, and Civil Society - dns_query'
+id: e6fd929b-4a37-48a4-ba78-91aac4956bd2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a015fbc-3218-4ec8-a4e5-4622950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.apt32
+detection:
+  object_380:
+    QueryName|contains:
+    - a.doulbeclick.org
+    IpAddresses:
+    - 45.76.147.201
+  object_381:
+    QueryName|contains:
+    - ad.adthis.org
+    IpAddresses:
+    - 45.77.39.101
+  object_382:
+    QueryName|contains:
+    - ad.jqueryclick.com
+    IpAddresses:
+    - 64.62.174.146
+  object_383:
+    QueryName|contains:
+    - api.querycore.com
+    IpAddresses:
+    - 64.62.174.41
+  object_384:
+    QueryName|contains:
+    - browser-extension.jdfkmiabjpfjacifcmihfdjhpnjpiick.com
+    IpAddresses:
+    - 79.143.87.174
+  object_385:
+    QueryName|contains:
+    - cdn-js.com
+    IpAddresses:
+    - 128.199.227.80
+  object_386:
+    QueryName|contains:
+    - cdn.adsfly.co
+    IpAddresses:
+    - 45.32.100.179
+  object_387:
+    QueryName|contains:
+    - cdn.disqusapi.com
+    IpAddresses:
+    - 45.76.179.28
+  object_388:
+    QueryName|contains:
+    - cloudflare-api.com
+    IpAddresses:
+    - 45.32.105.45
+  object_389:
+    QueryName|contains:
+    - cory.ns.webjzcnd.com
+    IpAddresses:
+    - 139.59.223.191
+  object_390:
+    QueryName|contains:
+    - googlescripts.com
+    IpAddresses:
+    - 45.114.117.164
+  object_391:
+    QueryName|contains:
+    - health-ray-id.com
+    IpAddresses:
+    - 138.197.236.215
+  object_392:
+    QueryName|contains:
+    - hit.asmung.net
+    IpAddresses:
+    - 45.32.114.49
+  object_393:
+    QueryName|contains:
+    - jquery.google-script.org
+    IpAddresses:
+    - 45.32.105.45
+  object_394:
+    QueryName|contains:
+    - js.ecommer.org
+    IpAddresses:
+    - 45.76.179.151
+  object_395:
+    QueryName|contains:
+    - s.jscore-group.com
+    IpAddresses:
+    - 64.62.174.17
+  object_396:
+    QueryName|contains:
+    - s1.gridsumcontent.com
+    IpAddresses:
+    - 103.28.44.112
+  object_397:
+    QueryName|contains:
+    - s1.jqueryclick.com
+    IpAddresses:
+    - 64.62.174.145
+  object_398:
+    QueryName|contains:
+    - ssl.security.akamaihd-d.com
+    IpAddresses:
+    - 37.59.198.131
+  object_399:
+    QueryName|contains:
+    - stat.cdnanalytic.com
+    IpAddresses:
+    - 203.114.75.22
+  object_400:
+    QueryName|contains:
+    - stats.widgetapi.com
+    IpAddresses:
+    - 64.62.174.99
+  object_401:
+    QueryName|contains:
+    - track-google.com
+    IpAddresses:
+    - 203.114.75.73
+  object_402:
+    QueryName|contains:
+    - update.security.akamaihd-d.com
+    IpAddresses:
+    - 89.33.64.207
+  object_403:
+    QueryName|contains:
+    - update.webfontupdate.com
+    IpAddresses:
+    - 188.166.219.18
+  object_404:
+    QueryName|contains:
+    - wiget.adsfly.co
+    IpAddresses:
+    - 45.32.100.179
+  object_405:
+    QueryName|contains:
+    - www.googleuserscontent.org
+    IpAddresses:
+    - 139.59.217.207
+  object_406:
+    QueryName|contains:
+    - ad.linksys-analytic.com
+    IpAddresses:
+    - 64.62.174.16
+  object_407:
+    QueryName|contains:
+    - ads.alternativeads.net
+    IpAddresses:
+    - 45.77.39.101
+  object_408:
+    QueryName|contains:
+    - api.2nd-weibo.com
+    IpAddresses:
+    - 64.62.174.146
+  object_409:
+    QueryName|contains:
+    - api.analyticsearch.org
+    IpAddresses:
+    - 64.62.174.41
+  object_410:
+    QueryName|contains:
+    - api.baiduusercontent.com
+    IpAddresses:
+    - 79.143.87.174
+  object_411:
+    QueryName|contains:
+    - api.disquscore.com
+    IpAddresses:
+    - 128.199.227.80
+  object_412:
+    QueryName|contains:
+    - cache.akamaihd-d.com
+    IpAddresses:
+    - 89.33.64.232
+  object_413:
+    QueryName|contains:
+    - cloud.corewidget.com
+    IpAddresses:
+    - 139.59.217.207
+  object_414:
+    QueryName|contains:
+    - core.alternativeads.net
+    IpAddresses:
+    - 139.59.220.12
+  object_415:
+    QueryName|contains:
+    - d3.advertisingbaidu.com
+    IpAddresses:
+    - 139.59.223.191
+  object_416:
+    QueryName|contains:
+    - eclick.analyticsearch.org
+    IpAddresses:
+    - 64.62.174.21
+  object_417:
+    QueryName|contains:
+    - google-js.net
+    IpAddresses:
+    - 45.32.105.45
+  object_418:
+    QueryName|contains:
+    - google-js.org
+    IpAddresses:
+    - 45.32.105.45
+  object_419:
+    QueryName|contains:
+    - google-script.net
+    IpAddresses:
+    - 45.32.105.45
+  object_420:
+    QueryName|contains:
+    - gs.baidustats.com
+    IpAddresses:
+    - 103.28.44.115
+  object_421:
+    QueryName|contains:
+    - linked.livestreamanalytic.com
+    IpAddresses:
+    - 139.59.220.10
+  object_422:
+    QueryName|contains:
+    - linksys-analytic.com
+    IpAddresses:
+    - 64.62.174.17
+  object_423:
+    QueryName|contains:
+    - live.webfontupdate.com
+    IpAddresses:
+    - 188.166.219.18
+  object_424:
+    QueryName|contains:
+    - static.livestreamanalytic.com
+    IpAddresses:
+    - 139.59.220.10
+  object_425:
+    QueryName|contains:
+    - stats.corewidget.com
+    IpAddresses:
+    - 139.59.217.207
+  object_426:
+    QueryName|contains:
+    - update.akamaihd-d.com
+    IpAddresses:
+    - 37.59.198.130
+  object_427:
+    QueryName|contains:
+    - update.webfontupdate.com
+    IpAddresses:
+    - 188.166.219.18
+  object_428:
+    QueryName|contains:
+    - upgrade.liveupdateplugins.com
+    IpAddresses:
+    - 128.199.90.216
+  object_429:
+    QueryName|contains:
+    - widget.jscore-group.com
+    IpAddresses:
+    - 64.62.174.9
+  attributes:
+    QueryName|contains:
+    - health-ray-id.com
+    - bdstarlbs.com
+  condition: 1 of object_* or attributes

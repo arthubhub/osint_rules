@@ -1,0 +1,16 @@
+title: Rule to detect KirBi ticket for Mimikatz by Benjamin Delpy with Contribution
+  of Didier Stevens - url_request
+id: 67f016dd-a255-489f-8d6b-9e45ebbd7d91
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b3273b-7588-4042-9276-4eb4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+  condition: attributes

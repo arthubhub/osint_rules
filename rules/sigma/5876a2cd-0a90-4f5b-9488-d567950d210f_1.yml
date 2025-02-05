@@ -1,0 +1,18 @@
+title: OSINT - Second Wave of Shamoon 2 Attacks Identified - url_request
+id: f56711d4-46dd-4fdc-8dd5-907add9071db
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5876a2cd-0a90-4f5b-9488-d567950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.wipbot
+- attack.software.shamoon
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

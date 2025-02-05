@@ -1,0 +1,19 @@
+title: OSINT Track to the future - How to use historical intelligence to get back
+  to the future and defend your organization (example using APT28) by ThreatConnect
+  - process_creation
+id: 86377f7b-079f-4ccd-b519-e8817262e695
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a5df567-ad8c-4649-ad06-480f950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    sha1:
+    - a1833c32d5f61d6ef9d1bb0133585112069d770e
+  condition: attributes

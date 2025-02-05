@@ -1,0 +1,21 @@
+title: OSINT - Ransoc Desktop Locking Ransomware Ransacks Local Files and Social Media
+  Profiles - url_request
+id: 2006e1c9-3a8d-4290-a23d-15f49da38088
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582ab037-052c-483d-803c-4174950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - cis-criminal-report.com
+    - italy-girls.mobi
+    - https://www.proofpoint.com
+    - criminal-report.in
+    - violation-report.in
+    - latexfetishsex.com
+  condition: attributes

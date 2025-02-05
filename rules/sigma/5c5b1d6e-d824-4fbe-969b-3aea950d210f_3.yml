@@ -1,0 +1,22 @@
+title: Malicious XLS claiming to be from Deloitte - process_creation
+id: 12a2eca7-571a-40bb-9e97-5c0b381e8ee7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c5b1d6e-d824-4fbe-969b-3aea950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1064
+- attack.t1193
+detection:
+  object_6739:
+    md5:
+    - bdc928e2064faf3950aef955c1c9fa8c
+    sha1:
+    - 9f9d41aabb5e58d765f5ff4d930e6dab5fa2a613
+    sha256:
+    - 2f00e0bb89d863ee7834ae9cb69d98f8e826e6d328fcdd833d91d62634f675ce
+  condition: 1 of object_*

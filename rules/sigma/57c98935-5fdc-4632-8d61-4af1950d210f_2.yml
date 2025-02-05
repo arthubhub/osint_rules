@@ -1,0 +1,34 @@
+title: 'Malspam 2016-09-02 (.wsf in .zip) - campaign: "icloud.com" - dns_query'
+id: 8710b1f1-2059-43e0-bc98-755ff1c65d79
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c98935-5fdc-4632-8d61-4af1950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - dcqoutlet.es
+    - maxshoppppsr.biz
+    - tpllaw.com
+    IpAddresses:
+    - 93.184.47.165
+    - 216.87.186.90
+    - 62.42.230.17
+    - 195.238.0.64
+    - 217.199.0.35
+    - 167.114.138.3
+    - 81.196.20.133
+    - 212.159.9.91
+    - 213.204.1.56
+    - 158.195.68.10
+    - 195.78.215.76
+    - 213.205.40.169
+    - 82.197.131.109
+    - 200.83.4.62
+    - 213.186.33.19
+    - 134.0.11.123
+  condition: attributes

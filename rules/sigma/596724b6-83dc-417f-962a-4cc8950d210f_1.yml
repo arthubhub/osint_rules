@@ -1,0 +1,15 @@
+title: OSINT - LockPoS Joins the Flock - url_request
+id: 747509b4-fed2-4354-b326-13569039e947
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/596724b6-83dc-417f-962a-4cc8950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.arbornetworks.com
+  condition: attributes

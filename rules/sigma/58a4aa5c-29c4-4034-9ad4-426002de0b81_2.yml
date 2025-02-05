@@ -1,0 +1,19 @@
+title: OSINT - Who Ran Leakedsource.com? - dns_query
+id: 055e8d47-b70e-4f49-b34f-36588d70f1c8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58a4aa5c-29c4-4034-9ad4-426002de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - abusewith.us
+    - cyberpay.info
+    - tiny-chats.com
+    - daily-streaming.com
+    - abusing.rs
+  condition: attributes

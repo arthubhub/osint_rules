@@ -1,0 +1,47 @@
+title: HIDDEN COBRA - North Korean Malicious Cyber Activity (MAR-10135536.r21.v2)
+  - process_creation
+id: 35e64b5b-fd1e-49d7-8353-30a6ecf0c926
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ce3fb8a-9504-42e8-b405-4a56950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.lazarus_group
+detection:
+  object_4717:
+    md5:
+    - 8d9123cd2648020292b5c35edc9ae22e
+    sha1:
+    - 0939363ff55d914e92635e5f693099fb28047602
+    sha256:
+    - a1260fd3e9221d1bc5b9ece6e7a5a98669c79e124453f2ac58625085759ed3bb
+  object_4718:
+    md5:
+    - 08bb17d8e839e7fc92426e813a696e73
+  object_4719:
+    md5:
+    - 6c3daca3c522ab98a8ac12a45087297c
+  object_4720:
+    md5:
+    - 3d3d7962d16652002018640a3fa27d44
+  object_4721:
+    md5:
+    - b7f382ea7e6c9c8e737cb92551341e64
+  object_4722:
+    md5:
+    - 871fb8486e5ea3307ff7b65ddf46518a
+  object_4723:
+    md5:
+    - 382715f8e776a544bf70f843a52e3ff2
+  object_4724:
+    md5:
+    - 8d9123cd2648020292b5c35edc9ae22e
+    sha1:
+    - 0939363ff55d914e92635e5f693099fb28047602
+    sha256:
+    - a1260fd3e9221d1bc5b9ece6e7a5a98669c79e124453f2ac58625085759ed3bb
+  condition: 1 of object_*

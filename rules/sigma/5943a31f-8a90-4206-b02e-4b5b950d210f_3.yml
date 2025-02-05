@@ -1,0 +1,21 @@
+title: 'M2M -  #LokiBot goes  with SWIFT theme - process_creation'
+id: 8b2d21e7-bee1-460f-9554-f26864753594
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5943a31f-8a90-4206-b02e-4b5b950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.flokibot
+detection:
+  attributes:
+    md5:
+    - 2c60a69b14f383043571e0bc41ecd88d
+    sha1:
+    - 6ce73f0f4b3af04fc83033abf8b0fbb299cd1c7d
+    sha256:
+    - 0871ecc08d27b5d1047c8162669db786a89e62ed12b6174f7a1ebe7716262f42
+  condition: attributes

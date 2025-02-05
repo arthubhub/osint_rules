@@ -1,0 +1,23 @@
+title: 'OSINT - RANCOR: Targeted Attacks in South East Asia Using PLAINTEE and DDKONG
+  Malware Families - url_request'
+id: 7c97108d-525e-4731-82ba-389e9422f993
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b325da8-0434-48ad-8b27-48de950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.khrat
+- attack.t1193
+- attack.group.rancor
+detection:
+  object_17822:
+    RequestUrl|contains:
+    - facebook-apps.com
+  attributes:
+    RequestUrl|contains:
+    - https://researchcenter.paloaltonetworks.com
+  condition: 1 of object_* or attributes

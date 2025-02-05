@@ -1,0 +1,30 @@
+title: 'M2M -  Locky 2017-11-03 : Affid=3, offline, ".asasin" : "12345678.doc" - dns_query'
+id: 0c918971-b020-46e3-91be-909613058be5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a0066bf-f9bc-478a-afee-4410950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    IpAddresses:
+    - 217.18.75.42
+    - 27.85.233.43
+    - 98.124.251.69
+    - 46.32.236.13
+    - 45.56.109.165
+    - 31.24.154.172
+    - 87.106.60.199
+    - 149.3.135.72
+    - 62.149.236.205
+    - 217.73.227.10
+    - 195.177.224.15
+    - 93.95.217.227
+    - 148.251.208.73
+  condition: attributes

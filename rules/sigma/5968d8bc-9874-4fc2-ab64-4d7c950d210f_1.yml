@@ -1,0 +1,18 @@
+title: M2M -  Encrypted Docx Campaign - url_request
+id: 90b3cbab-126f-4fee-8fa0-174980b16ccd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5968d8bc-9874-4fc2-ab64-4d7c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.php.net
+    - http://vreken.co.za
+    - http://46.17.40.142
+    - http://www.afripaper.co.za
+  condition: attributes

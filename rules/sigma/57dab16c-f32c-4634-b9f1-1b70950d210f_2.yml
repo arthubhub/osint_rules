@@ -1,0 +1,61 @@
+title: 'Malspam 2016-09-15 (.wsf in .zip) - campaign: "SCAN" - dns_query'
+id: 73fa7604-5dfb-4fd2-9d17-ae40c576c5d5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57dab16c-f32c-4634-b9f1-1b70950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - zharikoff.ru
+    - kf-design.com
+    - delicefilm.com
+    - allovercoupon.com
+    - lacumpa.biz
+    - bet4good.org
+    - keratin.sk
+    - dendang.net
+    - bigfishcasting.com
+    - tommylam.com
+    - charlcote1.net
+    - iandistudio.com
+    - jxbestextile.com
+    - lowcostveterinarios.com
+    - hawaiipoliticalinfo.org
+    - discoverstillwater.com
+    - techboss.net
+    - insieutoc.com
+    - electua.org
+    - pasbardejov.sk
+    - trudprom.ru
+    - rimpro.ru
+    IpAddresses:
+    - 185.12.92.184
+    - 80.93.62.246
+    - 108.175.157.20
+    - 193.110.162.146
+    - 97.74.144.193
+    - 81.218.219.200
+    - 69.49.96.12
+    - 81.162.94.254
+    - 209.59.151.220
+    - 91.185.209.164
+    - 216.177.136.165
+    - 67.222.14.205
+    - 148.251.40.218
+    - 194.102.215.57
+    - 210.5.47.92
+    - 108.179.200.210
+    - 85.248.29.36
+    - 74.208.110.201
+    - 94.73.150.60
+    - 198.46.81.187
+    - 77.245.149.11
+    - 125.212.219.132
+    - 192.186.215.98
+    - 192.81.129.230
+  condition: attributes

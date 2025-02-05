@@ -1,0 +1,18 @@
+title: OSINT - Dridex Returns To Action For Smaller, More Targeted Attacks - url_request
+id: f2223a05-e688-4ed9-85db-d7f5eb87447a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c405cd-ab54-47b8-9eff-7a52950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.dridex
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.proofpoint.com
+    - https://www.melani.admin.ch
+  condition: attributes

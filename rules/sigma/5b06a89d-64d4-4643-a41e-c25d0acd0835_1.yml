@@ -1,0 +1,40 @@
+title: Emotet - 5/17/2018 - url_request
+id: e7e63c2d-54ee-4531-a505-377e3d10f9c2
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b06a89d-64d4-4643-a41e-c25d0acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://fischereiverein-dotternhausen.de
+    - http://jsaphotoarts.com
+    - http://die-tauchbar.de
+    - http://prokeyboardist.com
+    - http://fam-koenig.de
+    - http://jackhonky.com
+    - http://jorgensenco.dk
+    - http://bernardesdias.com.br
+    - https://computerspendehamburg.de
+    - http://eliaswessel.com
+    - https://protonmail.com
+    - http://cedric-2000.de
+    - http://angelabphotography.com
+    - http://eiskugel.org
+    - http://davehale.co.uk
+    - http://amicidisantorfeto.com
+    - http://imagemarketingwest.com
+    - http://downinthecountry.com
+    - http://iceraven.com
+    - https://jaseminedenise.com
+    - http://leavemeinstitches.com
+    - http://brownaudio.com
+    - http://lewistonsports.com
+  condition: attributes

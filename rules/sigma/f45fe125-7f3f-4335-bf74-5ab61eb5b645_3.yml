@@ -1,0 +1,30 @@
+title: FormBook campaign - process_creation
+id: 010a24ce-50ad-4325-afe9-11018573f002
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f45fe125-7f3f-4335-bf74-5ab61eb5b645.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1566.001
+- attack.t1193
+- attack.software.formbook
+detection:
+  object_7661:
+    md5:
+    - f515d29ebd892a5f8b19e571a75a6d34
+    sha1:
+    - c514799ffdc38d48b7e90b8b6a324c354d1fd2a2
+    sha256:
+    - 5ba3876088c3578f7d369253d0c27454794282e420a106188fbee7e060a3cea1
+  object_7662:
+    md5:
+    - a9e30d6f94ac7d32de3e0d46bea63795
+    sha1:
+    - a90acad4b9cd1d762c758721b0913c3e130d0e3c
+    sha256:
+    - 84470338a1b460b107ab8b8642c04bf12fe930e224b79dcb0dad5ac713fc7b85
+  condition: 1 of object_*

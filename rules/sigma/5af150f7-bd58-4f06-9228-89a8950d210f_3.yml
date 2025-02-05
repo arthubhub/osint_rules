@@ -1,0 +1,29 @@
+title: OSINT - APT28 malicious NATO document - process_creation
+id: 2f0af99a-197b-4fff-a0c4-9b65056f13f3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5af150f7-bd58-4f06-9228-89a8950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.apt28
+- attack.group.strontium
+- attack.group.sofacy
+detection:
+  object_7558:
+    md5:
+    - 9fe3a0fb3304d749aeed2c3e2e5787eb
+  object_7560:
+    md5:
+    - 58d7585cc7decec9cf046aa0d8ffcc4d
+  object_7563:
+    md5:
+    - 9fe3a0fb3304d749aeed2c3e2e5787eb
+    sha1:
+    - 9001f4cfe62367a282efc08b072a13a5e2e403db
+    sha256:
+    - ffd5bd7548ab35c97841c31cf83ad2ea5ec02c741560317fc9602a49ce36a763
+  condition: 1 of object_*

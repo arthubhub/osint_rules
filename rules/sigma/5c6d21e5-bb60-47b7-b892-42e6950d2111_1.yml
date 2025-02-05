@@ -1,0 +1,19 @@
+title: IoT malware - Gafgyt.Gen28 (active) - 20190220 - 20190222 - url_request
+id: 1db95b8d-925b-4b36-ae33-76231ca07b11
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c6d21e5-bb60-47b7-b892-42e6950d2111.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.bashlite
+- attack.group.bashlite
+- attack.software.gafgyt
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://185.135.80.163
+  condition: attributes

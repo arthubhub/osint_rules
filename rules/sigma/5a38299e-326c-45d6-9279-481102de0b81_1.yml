@@ -1,0 +1,17 @@
+title: OSINT - Operation Dragonfly Analysis Suggests Links to Earlier Attacks - url_request
+id: bb9d6f8f-fdb7-4173-9a98-a5ed24cdf4e1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a38299e-326c-45d6-9279-481102de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.dragonfly
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securingtomorrow.mcafee.com
+  condition: attributes

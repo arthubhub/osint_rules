@@ -1,0 +1,15 @@
+title: OSINT - Malspam delivers NanoCore RAT - url_request
+id: c7185082-3acc-41f5-9bd3-9983cadc6ed0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5809fbe9-c034-41a2-999f-450a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.dshield.org
+  condition: attributes

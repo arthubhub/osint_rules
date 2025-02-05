@@ -1,0 +1,16 @@
+title: OSINT - powershell used for spreading trojan.laziok through google docs - url_request
+id: b22575d0-7435-4b1d-8eb0-c309a84c6dc6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/571a7cdc-c078-482d-98dc-4e42950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://193.189.117.36
+    - https://www.fireeye.com
+  condition: attributes

@@ -1,0 +1,86 @@
+title: ServHelper and FlawedGrace - New malware introduced by TA505 - process_creation
+id: ea8cdf12-1df7-4f27-8351-7c24ad75cf8a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c38eb9d-a470-4466-8aa5-461802de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_4837:
+    md5:
+    - 4b9054475ff9aa15be35b42264715354
+    sha1:
+    - a088dfaee1779878353a1dc347a91a892e5dfd74
+    sha256:
+    - efcee275d23b6e71589452b1cb3095ff92b10ab68cd07957b2ad6be587647b74
+  object_4839:
+    md5:
+    - daf7d35eeed3058c821bde464913f9ca
+    sha1:
+    - e2c8cb0d6a89b995a9ec77b2838863c08e33d6a5
+    sha256:
+    - 9fccd107bd0aee3a2f39ad76a49758309c95545d8154b808eec24d2b51dc4579
+  object_4841:
+    md5:
+    - 5cd4aecb962528166ad1a0b72f675c44
+    sha1:
+    - 1242dc4d1ece26ef15dc3bdb8ed13e8b04d6a178
+    sha256:
+    - 1b0859ddbdebcb9d2bb46de00d73aa21bc617614b8123054426556783b211bc8
+  object_4843:
+    md5:
+    - db0b9554ef0c4b3004c2cdb43a9fb020
+    sha1:
+    - 2f760f967f042827cda567fa07713371d746aa11
+    sha256:
+    - 52c72a9de2f6e892f07827add85ad913b0541cd5c8449aadc2722f8eb75e548c
+  object_4845:
+    md5:
+    - a6563a927d925b1231deaa090403bc9a
+    sha1:
+    - e501be071953aa308faad656cfa2d73a3902d8a4
+    sha256:
+    - a9492312f1258567c3633ed077990fe053776cd576aa60ac7589c6bd7829d549
+  object_4847:
+    md5:
+    - bf4ea62bb7117b1d5f31873c84a95f5a
+    sha1:
+    - 3fc7d7f1d47b2ac971d778f580cf64a112127aa9
+    sha256:
+    - f4b9219f329803dd45afd5646351de456e608dd946830c961ec66c6c25e52cac
+  object_4849:
+    md5:
+    - 0f459932b21d0c6dfcc199951058c0a5
+    sha1:
+    - 9ff00fe5f0921a6a591b7db3a1838834348e123d
+    sha256:
+    - 3cd7e0a8321259e8446b2a9da775aae674715c74ff4923cfc8ec5102f380d41a
+  object_4851:
+    md5:
+    - b811a63eaa3f6a76d4176a64655c086f
+    sha1:
+    - 45f3b9f49d4c680de6fdede99427289a11317aa0
+    sha256:
+    - eb66ebb95a3dcecae64c61f611a9332fbf460d1b8039d3ab7e4f220104a4bec4
+  object_4853:
+    md5:
+    - c4a201a6f5e07136923f824bda4cd54f
+    sha1:
+    - a0bcdb0ce8999bfb75723236e15e4f557a784743
+    sha256:
+    - d56429d6d0222022fe8f4cb35a28cd4fb83f87b666a186eb54d9785f01bb4b58
+  attributes:
+    sha256:
+    - 1b0859ddbdebcb9d2bb46de00d73aa21bc617614b8123054426556783b211bc8
+    - f4b9219f329803dd45afd5646351de456e608dd946830c961ec66c6c25e52cac
+    - 52c72a9de2f6e892f07827add85ad913b0541cd5c8449aadc2722f8eb75e548c
+    - efcee275d23b6e71589452b1cb3095ff92b10ab68cd07957b2ad6be587647b74
+    - eb66ebb95a3dcecae64c61f611a9332fbf460d1b8039d3ab7e4f220104a4bec4
+    - 9fccd107bd0aee3a2f39ad76a49758309c95545d8154b808eec24d2b51dc4579
+    - d56429d6d0222022fe8f4cb35a28cd4fb83f87b666a186eb54d9785f01bb4b58
+    - a9492312f1258567c3633ed077990fe053776cd576aa60ac7589c6bd7829d549
+    - 3cd7e0a8321259e8446b2a9da775aae674715c74ff4923cfc8ec5102f380d41a
+  condition: 1 of object_* or attributes

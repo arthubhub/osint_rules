@@ -1,0 +1,20 @@
+title: Malspam - Locky - 2016-05-26 (.docm) - dns_query
+id: 05a581d4-5a81-486e-9fc0-428876009aea
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5746bc01-151c-4f41-a957-4b5b950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 207.154.33.12
+    - 217.76.130.80
+    - 217.76.156.98
+    - 46.20.80.8
+    - 109.168.95.40
+    - 81.88.48.79
+  condition: attributes

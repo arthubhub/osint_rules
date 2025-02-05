@@ -1,0 +1,19 @@
+title: "OSINT Cmstar Downloader: Lurid and Enfal\xE2\u20AC\u2122s New Cousin by Palo\
+  \ Alto Unit 42 - url_request"
+id: b9d00da7-34f5-48db-8573-b99e98e135e5
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/555cacaa-4a44-43f0-909e-919a950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+    - http://happy.launchtrue.com
+    - https://www.bluecoat.com
+    - http://la.trendmicro.com
+  condition: attributes

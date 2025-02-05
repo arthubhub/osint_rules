@@ -1,0 +1,16 @@
+title: OSINT - Malicious Chrome Extensions Stealing Roblox In-Game Currency, Sending
+  Cookies via Discord - dns_query
+id: e0be988c-a8ba-4ad8-b772-cdadcacd597b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d4e235-c71c-4d0e-8ba3-920c950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - 3rmillion.net
+  condition: attributes

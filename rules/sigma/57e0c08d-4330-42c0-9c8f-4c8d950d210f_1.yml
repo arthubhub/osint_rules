@@ -1,0 +1,50 @@
+title: 'Malspam 2016-09-20 (.hta in .zip) - campaign: "<no subject>" - url_request'
+id: 5812e0d9-8c77-4d6f-b26d-0a090727dd72
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57e0c08d-4330-42c0-9c8f-4c8d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - rancho.org
+    - dealza.com
+    - thomasduncanwatt.com
+    - http://isusip.com
+    - http://schneebett.com
+    - worldpennyjar.com
+    - http://sbbsinfotech.com
+    - sbbsinfotech.com
+    - http://stirlingblack.com
+    - gelecekdiyarbakirsigorta.com
+    - http://xn--41a.xn----8sbivjiocsggj.xn--p1ai
+    - http://dealza.com
+    - http://trenddatainc.com
+    - http://oilandgasukwireless.net
+    - http://roberttrocina.com
+    - http://worldpennyjar.com
+    - http://binhminh-group.com
+    - yesman.me
+    - http://rennie-mackintosh-jewellery.co.uk
+    - trenddatainc.com
+    - elsoccer.org
+    - http://elsoccer.org
+    - http://thomasduncanwatt.com
+    - teknidataconsultores.com
+    - roberttrocina.com
+    - http://gelecekdiyarbakirsigorta.com
+    - hunt-magazine.com
+    - isusip.com
+    - oilandgasukwireless.net
+    - schneebett.com
+    - binhminh-group.com
+    - http://teknidataconsultores.com
+    - stirlingblack.com
+    - http://hunt-magazine.com
+    - http://rancho.org
+    - http://yesman.me
+  condition: attributes

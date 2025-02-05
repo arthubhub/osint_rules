@@ -1,0 +1,19 @@
+title: OSINT - Attackers target dozens of global banks with new malware - dns_query
+id: caba6ec5-b53a-4505-b707-afa35584574f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58a0ae18-4554-4af8-a66b-459802de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.lazarus_group
+detection:
+  attributes:
+    QueryName|contains:
+    - eye-watch.in
+    IpAddresses:
+    - 54.235.197.176
+  condition: attributes

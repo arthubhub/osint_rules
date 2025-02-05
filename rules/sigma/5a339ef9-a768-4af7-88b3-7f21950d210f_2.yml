@@ -1,0 +1,32 @@
+title: OSINT - File Spider Ransomware Targeting the Balkans With Malspam - process_creation
+id: d5114f8b-9b45-4fcc-a2b3-cda6e6344291
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a339ef9-a768-4af7-88b3-7f21950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_8990:
+    sha256:
+    - 74e5096f09a031800216640a8455bc487e9a32b2e56fbad9d083c3810ed5488e
+  object_8991:
+    sha256:
+    - 6500a1baa13e0698e3ed41b4465e5824e9a316b22209223754f0ab04a6e1b853
+  object_8992:
+    md5:
+    - 67d5abda3be629b820341d1baad668e3
+    sha1:
+    - 8457715659df74a647fb07fa4d5645f9bbd0da42
+    sha256:
+    - 6500a1baa13e0698e3ed41b4465e5824e9a316b22209223754f0ab04a6e1b853
+  object_8994:
+    md5:
+    - fdd465863a4c44aa678554332d20aee3
+    sha1:
+    - 13e2fffd77a1380247b5105880679460e8017baa
+    sha256:
+    - 74e5096f09a031800216640a8455bc487e9a32b2e56fbad9d083c3810ed5488e
+  condition: 1 of object_*

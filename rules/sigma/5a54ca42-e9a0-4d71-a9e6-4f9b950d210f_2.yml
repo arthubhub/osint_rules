@@ -1,0 +1,30 @@
+title: OSINT - Experts analyzed an Advanced "all in memory" CryptoWorm - process_creation
+id: 6144fe95-d42e-41fe-ba42-914e5b259817
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a54ca42-e9a0-4d71-a9e6-4f9b950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_769:
+    md5:
+    - 9ac3bdb9378cd1fafbb8e08def738481
+    sha1:
+    - 8da156580747bf9ef8fa4d1c42ee112ab743da69
+    sha256:
+    - 038d4ef30a0bfebe3bfd48a5b6fed1b47d1e9b2ed737e8ca0447d6b1848ce309
+  object_771:
+    md5:
+    - 8365158c74008879df00a9d49e61aaea
+    sha1:
+    - 686761aff5e4efedbc5b2931c0f214d8ba7b9463
+    sha256:
+    - 19e15a4288e109405f0181d921d3645e4622c87c4050004357355b7a9bf862cc
+  attributes:
+    sha256:
+    - 19e15a4288e109405f0181d921d3645e4622c87c4050004357355b7a9bf862cc
+    - 038d4ef30a0bfebe3bfd48a5b6fed1b47d1e9b2ed737e8ca0447d6b1848ce309
+  condition: 1 of object_* or attributes

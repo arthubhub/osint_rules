@@ -1,0 +1,21 @@
+title: OSINT Technical Analysis Tracks the Sakula Malware Family by SecureWorks -
+  url_request
+id: b4499f79-d24d-44fe-97bf-baa3fb08e986
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55c2797f-1cd0-4d5f-92b9-4f93950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://sharepoint-vaeit.com
+    - sharepoint-vaeit.com
+    - http://www.secureworks.com
+    - http://extcitrix.we11point.com
+    - sinmoung.com
+    - http://www.qzbwcq.com
+  condition: attributes

@@ -1,0 +1,19 @@
+title: Pandora analysis (NEW ORDER LIST GREEN VALLEY CORP.xlam) - process_creation
+id: 507a33a2-70dd-408d-864f-97beba0ff9aa
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/89495010-cd5a-4250-9e57-c346426ae62a.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_4812:
+    md5:
+    - 80e6097461cd82991b69946d8054f48d
+    sha1:
+    - fd97abbc16fc30c09d7ea6b66ec359b9d9017b19
+    sha256:
+    - 50659dd03345c5b16d6ea45170d63ca5a1846019634b06b4e37a3b97b65f1a36
+  condition: 1 of object_*

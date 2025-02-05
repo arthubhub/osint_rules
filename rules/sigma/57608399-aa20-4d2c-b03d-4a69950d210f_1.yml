@@ -1,0 +1,17 @@
+title: 'OSINT - Mofang: A politically motivated information stealing adversary - url_request'
+id: 0e73700d-5c09-48c7-b061-e5904fc4bb3a
+description: edit this field when analysing or editing the rule - reported by "FOXIT-CERT"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57608399-aa20-4d2c-b03d-4a69950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - citrixmeeting.com
+    - http://www.avgfree.us
+    - http://adventurelearning.me
+  condition: attributes

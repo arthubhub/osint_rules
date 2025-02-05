@@ -1,0 +1,64 @@
+title: 'Malspam 2016-06-28 (Locky campaign subject: ''report'') - dns_query'
+id: 0074cb30-928d-44ba-88e2-b6c3c6493026
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/577265af-55ac-4489-98e9-041d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - bbvogliadimare.it
+    - depaardestal.nl
+    - bordur32.ru
+    - edilperle.it
+    - jd-products.nl
+    - bisericaromaneasca.ro
+    - dugganinternational.ca
+    - 4k18.com
+    - centrosportivoiunco.it
+    - euro-support.be
+    - bobbysinghwpg.com
+    - focolareostuni.it
+    - hate-metal.com
+    - ingstroymash.ru
+    - hudebiah.net
+    - bbmarilu.it
+    - certifiedbanker.org
+    IpAddresses:
+    - 166.63.125.135
+    - 195.208.1.146
+    - 193.203.99.112
+    - 112.140.178.249
+    - 212.227.33.91
+    - 103.6.198.185
+    - 46.30.213.77
+    - 109.71.40.52
+    - 89.107.186.4
+    - 192.186.246.98
+    - 193.203.99.115
+    - 217.76.130.80
+    - 86.106.30.71
+    - 143.95.250.67
+    - 176.62.167.160
+    - 107.6.169.61
+    - 199.241.184.10
+    - 79.96.219.242
+    - 104.152.168.29
+    - 193.203.99.114
+    - 212.227.33.186
+    - 175.45.184.160
+    - 77.221.130.6
+    - 83.96.159.64
+    - 207.154.33.12
+    - 5.9.13.83
+    - 217.73.226.220
+    - 81.177.140.141
+    - 217.76.156.98
+    - 184.171.252.26
+    - 69.90.162.175
+    - 89.111.177.133
+  condition: attributes

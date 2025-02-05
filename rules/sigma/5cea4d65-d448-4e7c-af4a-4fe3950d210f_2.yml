@@ -1,0 +1,95 @@
+title: Script-maze historical malware seen - process_creation
+id: e04adede-e8ec-409d-8a0e-50eca095b5b2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cea4d65-d448-4e7c-af4a-4fe3950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_18319:
+    md5:
+    - b0b34b3a52b31e001b0582a70cad2aa2
+    sha1:
+    - de1318abdb0f202181c360d933ea543b2b8c85dd
+    sha256:
+    - ae09d6030fee8e68f120faedad9394ea2aa12c7546fd515144588ce40a423de9
+  object_18321:
+    md5:
+    - b340e1cdf15eb702ed14e05b42163910
+    sha1:
+    - 9aafb2147de42cea11d6e798721554ba456f34e8
+    sha256:
+    - fd8dbf9077160d59d23b70c7fbe6a19d18aeef86e62f180ad6bedde714d6b2f9
+  object_18323:
+    md5:
+    - 942a3b5532bd6e4bdfea13cf077dded5
+    sha1:
+    - 5eea109a6d3f5f521a82bdff2532dec5f376e071
+    sha256:
+    - 84957a0628a96a7e69ecfafe14f2cc475b6085f445ac69ac71d97bc877c36088
+  object_18325:
+    md5:
+    - f2e4361d57eef76cbc5727245fe402f8
+    sha1:
+    - c58b5aa5728e8bf381470ad89d234463cd992937
+    sha256:
+    - 2aa3afefa71270d54ae05aa46fa6441c346abb1a55bd204dc3ca4b5a3548c830
+  object_18327:
+    md5:
+    - 4be50da2219f8dc41f46e7844e265e87
+    sha1:
+    - c2ab04184e75649fdf85165fffd02f1f8c4c8bba
+    sha256:
+    - b56a4d9ae623b8eded2c341294363d2bea63c1b7067236c0b1a98292fd0f68a3
+  object_18329:
+    md5:
+    - e1fa5e03ddfe7c81f3f80d88a7162b5f
+    sha1:
+    - 72bb026e618e317eb231417b573a38d805c7bb00
+    sha256:
+    - 6d0790b702e1a7897c248f4fbc9a1818c80107fc658b500104eeb3a16c7beaae
+  object_18331:
+    md5:
+    - d515a6b5638ec213be9bd4fe507e0b6b
+    sha1:
+    - 014ebb8391edb3fda76789e957ba973b3d97859c
+    sha256:
+    - 65f2a0e53c83436ca5cf99b7d5a053ae563791a9f46dc6abd64b36eefbb6814c
+  object_18333:
+    md5:
+    - 6d8960cd6c9ba68a69af812fc1c4741b
+    sha1:
+    - b59ec01ab58a1fbf49846ad34d0b48445aad3506
+    sha256:
+    - 968d23d9120c90d7d28cc1b834029f1d5fd36d93bc1ffb9f260b895333c09f02
+  object_18335:
+    md5:
+    - 0383c324c0c99f930c65d4034c22766b
+    sha1:
+    - a36f5113c764f60d9f48e7f9f7b779007f34bbc0
+    sha256:
+    - 58f6572f375d449dcd8af1d131ff627a28583feae1861acadc9ea62669d577da
+  object_18338:
+    md5:
+    - 4d437b5614edcc7d1ee5e4bcf5785ef9
+    sha1:
+    - 995bc00abbcde848148c5695c10e38ae6b5a9401
+    sha256:
+    - 43b4e78dcc1874dc1422b4dc4d40a4841163891a69d59d7f5a0289616fc83bb5
+  attributes:
+    md5:
+    - 4d437b5614edcc7d1ee5e4bcf5785ef9
+    sha256:
+    - 2aa3afefa71270d54ae05aa46fa6441c346abb1a55bd204dc3ca4b5a3548c830
+    - 6d0790b702e1a7897c248f4fbc9a1818c80107fc658b500104eeb3a16c7beaae
+    - fd8dbf9077160d59d23b70c7fbe6a19d18aeef86e62f180ad6bedde714d6b2f9
+    - 58f6572f375d449dcd8af1d131ff627a28583feae1861acadc9ea62669d577da
+    - 65f2a0e53c83436ca5cf99b7d5a053ae563791a9f46dc6abd64b36eefbb6814c
+    - b56a4d9ae623b8eded2c341294363d2bea63c1b7067236c0b1a98292fd0f68a3
+    - ae09d6030fee8e68f120faedad9394ea2aa12c7546fd515144588ce40a423de9
+    - 84957a0628a96a7e69ecfafe14f2cc475b6085f445ac69ac71d97bc877c36088
+    - 968d23d9120c90d7d28cc1b834029f1d5fd36d93bc1ffb9f260b895333c09f02
+  condition: 1 of object_* or attributes

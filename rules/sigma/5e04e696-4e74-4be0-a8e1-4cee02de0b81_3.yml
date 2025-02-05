@@ -1,0 +1,90 @@
+title: "OSINT - Let\xE2\u20AC\u2122s play (again) with Predator the thief \xE2\u20AC\
+  \u201C Fumik0_'s box - process_creation"
+id: 992d8d0b-36e7-43f5-8522-80bca0849618
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e04e696-4e74-4be0-a8e1-4cee02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1503
+- attack.t1003
+- attack.t1081
+- attack.t1212
+- attack.t1214
+- attack.group.predator_the_thief
+- attack.software.predator_the_thief
+detection:
+  object_8002:
+    md5:
+    - 3861a092245655330f0f1ffec75aca67
+    sha1:
+    - ce44e7d00cf55e8bf13f5c52bfbdbe3d4603bfa1
+    sha256:
+    - 6b02aa8fc222f1f46ffcea8ac02474d8f0ef10f7d48986348da9e2ac8c519db9
+  object_8004:
+    md5:
+    - fe6125adb3cc69aa8c97ab31a0e7f5f8
+    sha1:
+    - 7cc5b92224347c6e3d695b7e67dc841210b9ad04
+    sha256:
+    - 9166ef682132814d0286ddecfefcc4222759cb9dcf62f7014c53b6367d3d28c3
+  object_8006:
+    md5:
+    - a86f18fa2d67415ac2d576e1cd5ccad8
+    sha1:
+    - 7dfe085e01e8285139d16455e810ae4792eb2c18
+    sha256:
+    - d24a2e930976774bc5f9d3246f94e1c93a707d33ed7e392cfe01bb3677cc1c22
+  object_8008:
+    md5:
+    - ed3893c96decc3aa798be93192413d28
+    sha1:
+    - 32037e67ab590dbe7015109aed258035dbb0808a
+    sha256:
+    - 8ec9b712fe5f0648f015b582abca33ebbdb49670c547fdb074051f6b03c6ffc9
+  object_8010:
+    md5:
+    - 9110e59b6c7ced21e194d37bb4fc14b2
+    sha1:
+    - 3359490391fb18bbe18ba12341b7476b79dac376
+    sha256:
+    - 7e666e1f9ed0cfc211096d54106d66ba47f0375e675814b44c24b34dad57f578
+  object_8012:
+    md5:
+    - 51e1924ac4c3f87553e9e9c712348ac8
+    sha1:
+    - 7f81cdffcab77a07b1e15298d5b7c6681c0e5c6c
+    sha256:
+    - 271d39c0daaf1efb3571fcb7cf2b271f882aebe070176d777e3dcbbbe1d80002
+  object_8014:
+    md5:
+    - 02484e00e248da80c897e2261e65d275
+    sha1:
+    - 8a1550d7d473c85cb8bdadce151eb66dce8bc7cc
+    sha256:
+    - 8f33307a23babe5b961fd72184274a34cad2218916ac343baa131290ff018e57
+  object_8016:
+    md5:
+    - 82ec8cb11e560681ffe5a2ee1397ba40
+    sha1:
+    - a3349ccc3ccc58424b6855dceaa740d9d144eedf
+    sha256:
+    - 21ebdc3a58f3d346247b2893d41c80126edabb060759af846273f9c9d0c92a9a
+  attributes:
+    md5:
+    - 51e1924ac4c3f87553e9e9c712348ac8
+    - a86f18fa2d67415ac2d576e1cd5ccad8
+    - fe6125adb3cc69aa8c97ab31a0e7f5f8
+    - ed3893c96decc3aa798be93192413d28
+    - 3861a092245655330f0f1ffec75aca67
+    - 02484e00e248da80c897e2261e65d275
+    - 9110e59b6c7ced21e194d37bb4fc14b2
+    sha256:
+    - 6e27a2b223ef076d952aaa7c69725c831997898bebcd2d99654f4a1aa3358619
+    - 21ebdc3a58f3d346247b2893d41c80126edabb060759af846273f9c9d0c92a9a
+    - 01ef26b464faf08081fceeeb2cdff7a66ffdbd31072fe47b4eb43c219da287e8
+  condition: 1 of object_* or attributes

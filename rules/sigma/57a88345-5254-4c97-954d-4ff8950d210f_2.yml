@@ -1,0 +1,15 @@
+title: 'OSINT - Strider: Cyberespionage group turns eye of Sauron on targets - dns_query'
+id: 11382c01-1de7-40b2-a1d6-bd80622802f4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57a88345-5254-4c97-954d-4ff8950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - myhomemusic.com
+  condition: attributes

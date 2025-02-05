@@ -1,0 +1,20 @@
+title: OSINT Hacking Team Reloaded? US-Based Ethiopian Journalists Again Targeted
+  with Spyware by Citizen Lab - dns_query
+id: 4fd6aaa0-bdb8-45f1-8e02-328bc6acf4ef
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55014970-d82c-4b60-ba8e-0958950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 176.74.178.202
+    - 197.156.68.130
+    - 216.118.233.250
+    - 46.4.69.25
+    - 176.74.178.203
+  condition: attributes

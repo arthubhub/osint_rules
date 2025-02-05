@@ -1,0 +1,26 @@
+title: OSINT - Black Ruby Ransomware Skips Victims in Iran and Adds a Miner for Good
+  Measure - process_creation
+id: 6640d66a-e057-4cd9-a2ca-ad9b4ee063d9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ac763c9-0ba0-413e-ae2a-4de3950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.black_ruby
+- attack.software.black_ruby
+detection:
+  object_9454:
+    md5:
+    - 81e9036aed5502446654c8e5a1770935
+    sha1:
+    - bc5b077127e064e7e6b715f2d37abb80c5bf98cc
+    sha256:
+    - daea4b5ea119786d996f33895996396892fa0bdbb8f9e9fcc184a89d0d0cb85e
+  attributes:
+    sha256:
+    - daea4b5ea119786d996f33895996396892fa0bdbb8f9e9fcc184a89d0d0cb85e
+  condition: 1 of object_* or attributes

@@ -1,0 +1,16 @@
+title: OSINT - Threat actor goes on a Chrome extension hijacking spree - dns_query
+id: 887a30e4-b90a-4198-aca9-7b3c36615a1e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59aeaab2-3ea4-4b1a-b521-460a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - 7ce508e6099e31f68c2fd50c362f087d.pro
+    - 92fffe0ba52da491a2b7576627f3693a.pro
+  condition: attributes

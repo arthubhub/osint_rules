@@ -1,0 +1,31 @@
+title: OSINT -  More than a Dozen Obfuscated APT33 Botnets Used for Extreme Narrow
+  Targeting - url_request
+id: a5c4213a-d457-43b1-8c3e-a458ec18db29
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5de6335d-e128-4bc0-87e2-4db4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.g0064
+- attack.group.magnallium
+- attack.group.apt33
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.trendmicro.com
+    - suncocity.com
+    - oorgans.com
+    - service-essential.com
+    - update-symantec.com
+    - service-eset.com
+    - qualitweb.com
+    - service-explorer.com
+    - zandelshop.com
+    - service-norton.com
+    - simsoshop.com
+    - zeverco.com
+  condition: attributes

@@ -1,0 +1,15 @@
+title: 'VMRay Analyzer Report for Sample #252574 (related amf-fr.org) - url_request'
+id: 206051a6-df2b-4185-889f-ed782c5692df
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c687e12-522c-41f4-a498-486d02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - amf-fr.org
+  condition: attributes

@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-09-25 : Affid=3, offline, ".ykcol" : "Message from 02087654321"
+  - "Voice Message.7z" - process_creation'
+id: 34199c84-d8ac-4ed1-8eac-ee62df1150af
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59c8f958-be58-46da-8a21-4c5f950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - 8dbdd9122dadc54f21747cc4f0ab267c
+    sha1:
+    - 7f07f3b5ba830d55822f75836f0bbbe0ef579256
+    sha256:
+    - b86a830769fcfd54201495353c5ab8931f7ca796ef54a2219a04b9e7cb7d2a7a
+  condition: attributes

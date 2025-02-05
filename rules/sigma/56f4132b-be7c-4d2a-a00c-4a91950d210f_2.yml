@@ -1,0 +1,20 @@
+title: OSINT - Petya Ransomware - process_creation
+id: 1a232c4a-95cb-4caa-9031-65238b47b6aa
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f4132b-be7c-4d2a-a00c-4a91950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - af2379cc4d607a45ac44d62135fb7015
+    sha1:
+    - 39b6d40906c7f7f080e6befa93324dddadcbd9fa
+    sha256:
+    - b041d9573ae083a02cf52fcd23648b32ad9a8811bd7ea12ca6af3d91ca14a07a
+    - 26b4699a7b9eeb16e76305d843d4ab05e94d43f3201436927e13b3ebafa90739
+  condition: attributes

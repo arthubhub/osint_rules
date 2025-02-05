@@ -1,0 +1,79 @@
+title: OSINT - DarkHydrus delivers new Trojan that can use Google Drive for C2 communications
+  - process_creation
+id: 54986ffd-2634-4c4d-a2d0-4125e2138bb7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c481c61-a718-4051-aacf-4f19950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.darkhydrus
+- attack.software.roguerobin
+- attack.software.s0270
+- attack.group.roguerobin
+- attack.group.g0079
+detection:
+  object_7978:
+    sha256:
+    - eb33a96726a34dd60b053d3d1048137dffb1bba68a1ad6f56d33f5d6efb12b97
+  object_7979:
+    sha256:
+    - f1b2bc0831445903c0d51b390b1987597009cc0fade009e07d792e8d455f6db0
+  object_7980:
+    sha256:
+    - 5cc62ad6baf572dbae925f701526310778f032bb4a54b205bada78b1eb8c479c
+  object_7981:
+    sha256:
+    - 513813af1590bc9edeb91845b454d42bbce6a5e2d43a9b0afa7692e4e500b4c8
+  object_7982:
+    sha256:
+    - e068c6536bf353abe249ad0464c58fb85d7de25223442dd220d64116dbf1e022
+  object_7983:
+    sha256:
+    - 4e40f80114e5bd44a762f6066a3e56ccdc0d01ab2a18397ea12e0bc5508215b8
+  object_7984:
+    md5:
+    - 8dc9f5450402ae799f5f8afd5c0a8352
+    sha1:
+    - 58ea259ea8231175140f03993d57b91b67465bf0
+    sha256:
+    - e068c6536bf353abe249ad0464c58fb85d7de25223442dd220d64116dbf1e022
+  object_7986:
+    md5:
+    - 5c3f96ade0ea67eef9d25161c64e6f3e
+    sha1:
+    - 524f2c9f62703027b1ebbf1fc16a4a7506d6ff20
+    sha256:
+    - 513813af1590bc9edeb91845b454d42bbce6a5e2d43a9b0afa7692e4e500b4c8
+  object_7988:
+    md5:
+    - 039bd47f0fdb6bb7d68a2428c71f317d
+    sha1:
+    - 1d73611c6d77a07de90199864c6341d58657db43
+    sha256:
+    - f1b2bc0831445903c0d51b390b1987597009cc0fade009e07d792e8d455f6db0
+  object_7990:
+    md5:
+    - c3b1bd4e3e159591d84e77452a09851d
+    sha1:
+    - 0fece8a649e88635c35222fbc8ce49d6ef2e77c1
+    sha256:
+    - 5cc62ad6baf572dbae925f701526310778f032bb4a54b205bada78b1eb8c479c
+  object_7992:
+    md5:
+    - 89e50d52e498c34f1e976cf9a1017a39
+    sha1:
+    - 1b8fe1d2194e685c0cce2f00c33e7f069f3a4d54
+    sha256:
+    - 4e40f80114e5bd44a762f6066a3e56ccdc0d01ab2a18397ea12e0bc5508215b8
+  object_7994:
+    md5:
+    - b108412f1cdc0602d82d3e6b318dc634
+    sha1:
+    - 0681f2abe5c6d7e80afe27b8aba08abac43c39d8
+    sha256:
+    - eb33a96726a34dd60b053d3d1048137dffb1bba68a1ad6f56d33f5d6efb12b97
+  condition: 1 of object_*

@@ -1,0 +1,28 @@
+title: 2017-05-15 Malspam  00_Invoice_###.PDF - process_creation
+id: c8d2199d-9061-4b74-a546-217673cca408
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/591bfbca-a168-4ca0-b1d8-4c14950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    md5:
+    - f5ebb00e1fb9bbcfe5ae742082e2002f
+    - eb680f46c268e6eac359b574538de569
+    - 133fe54c189f9fd793babf879179b068
+    sha1:
+    - 1a27d6090a49faffc06a5df91b5fe626ab9c3bfe
+    - 3f0854a535979bbf7f992850e3cc0d9e6f1401ca
+    - 83edee74728aa231cb77d62a442fa560c64ecdee
+    sha256:
+    - 5968b7a89e5d1db8447b5343f20362ab713551a94226fb905fff7a067c770c79
+    - 46ee7490b657edfbcbd6ebc2070548e2eb72bda3a054cf60fd7627345bd0575b
+    - 41bce3e382cee06aa65fbee15fd38f7187fb090d5da78d868f57c84197689287
+  condition: attributes

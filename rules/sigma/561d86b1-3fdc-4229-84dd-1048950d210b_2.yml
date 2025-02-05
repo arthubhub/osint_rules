@@ -1,0 +1,18 @@
+title: OSINT Dyre Malware Campaigners Innovate with Distribution Techniques by ProofPoint
+  - dns_query
+id: 84f7bf29-e706-4db8-82fc-3fe9008389e8
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/561d86b1-3fdc-4229-84dd-1048950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 62.210.182.246
+    - 178.162.193.207
+    - 197.149.90.166
+  condition: attributes

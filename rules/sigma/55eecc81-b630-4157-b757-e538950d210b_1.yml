@@ -1,0 +1,20 @@
+title: OSINT Carbanak gang is back and packing new guns by Eset - url_request
+id: a933dac9-6903-49fa-b7d5-b626b920a557
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55eecc81-b630-4157-b757-e538950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - seven-sky.org
+    - weekend-service.com
+    - comixed.org
+    - http://www.welivesecurity.com
+    - adobe-dns-3-adobe.com
+    - clients4-google.com
+  condition: attributes

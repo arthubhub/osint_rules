@@ -1,0 +1,105 @@
+title: OSINT -  Analysis of an IRC based Botnet - process_creation
+id: a855bf07-a7c5-48c1-88c0-4019c06022a0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cc410a0-be10-4990-acf6-44cc02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.tsunami
+- attack.software.tsunami
+detection:
+  object_12796:
+    md5:
+    - 82062b666f09fc5c0fe4f68d1ea90916
+    sha1:
+    - b35d4b7980d361874e84e76eddbaff83c2c5790f
+    sha256:
+    - 49fd1cb22e0325c1f9038160da534fc23672e5509e903a94ce5bcddc893eb2c0
+  object_12800:
+    md5:
+    - 1cc9232302cb7569dc6dcd76fe5d7c48
+    sha1:
+    - 3c24b5150afbcfc8b5b98740329e279c778acfec
+    sha256:
+    - 284bde3fc80d81eb2cf644770df64c59cc444f283bd4ab96f64431fef735879a
+  object_12802:
+    md5:
+    - e49d17afc76617a6b2a445ef21342454
+    sha1:
+    - 5d223085ca23494fd18622e6bc6d81b6f8eaa8a8
+    sha256:
+    - 3efdd1461af3cf4039bd7a3ababcf71c5df08a1c232a36287d9ae1f0bd7509cc
+  object_12804:
+    md5:
+    - 30097dc12f07b9d44fd4bb32ea30cd4e
+    sha1:
+    - 4f2350b20810ad45d40036c12d23239df1e3eaad
+    sha256:
+    - 32776a1a3eb8914855b57972c94750e0bb1dedd3ed161fdb53098cdfcee74ce3
+  object_12806:
+    md5:
+    - 5a56f0b53d7639c3775b41de95b4902e
+    sha1:
+    - 18f0a1a2f448d2a5824566a080b32f5d5f291075
+    sha256:
+    - 34fa4705a10ca0d940762f5f594bbf93fe79f1df2bf4a1fb69fe9b00ff79b2fe
+  object_12808:
+    md5:
+    - 3a3f7b2c2bea6a70ad62657b8613b1d1
+    sha1:
+    - ca94cde61c2b1640a420c61d2cb9c892b81a30d1
+    sha256:
+    - 976e948ccec98ffd36115d0240c2a438dccd4e15d220284e6356e3fcb0f2548c
+  object_12810:
+    md5:
+    - fad9b9a909688f800606c2148b4d0880
+    sha1:
+    - ee44b722df537d53a3e59db178e2be57d7f8e985
+    sha256:
+    - 62997b5ecc8bb785f16803cdd04d2b4209476e457d9a46cbb1f7fae0a6a8108d
+  object_12812:
+    md5:
+    - f0cccfa07427442b472a15232765a2eb
+    sha1:
+    - 6cb397aab13cdcbf0c77aea28431d81b036648ad
+    sha256:
+    - 31784de70d7b55b2ee48a9ae359f7c67c82fb9a814279e0944a9dee01ed3f756
+  object_12814:
+    md5:
+    - dccb186234326d4bff449d4416ff6ce4
+    sha1:
+    - a787e2e2f2bcfef92aa5032a67f3e6efcd706cb2
+    sha256:
+    - f031d926d80805795c20d1a7b280759d1393e736a85f7fd2e02d2088f2fb0221
+  object_12816:
+    md5:
+    - b94b6857ed382b66cdfbead83480ee15
+    sha1:
+    - b22e1b7bf6de3fb7572b26c10300309b04efb1b8
+    sha256:
+    - fd43c0abfaa6e6203e24bdb015613801f4a23894aba9586b0bdf1e70736883e5
+  object_12818:
+    md5:
+    - b83113015a0f817c4d68659d9a1e370a
+    sha1:
+    - ec9c669f2b8c13e94a7ba7c57ccf163c8b8cf060
+    sha256:
+    - 3549fca31abf602a78f645d3406ad075e02c7ea9a6aa9cec243ba6cb58b5e39f
+  attributes:
+    sha256:
+    - 284bde3fc80d81eb2cf644770df64c59cc444f283bd4ab96f64431fef735879a
+    - fd43c0abfaa6e6203e24bdb015613801f4a23894aba9586b0bdf1e70736883e5
+    - 32776a1a3eb8914855b57972c94750e0bb1dedd3ed161fdb53098cdfcee74ce3
+    - f031d926d80805795c20d1a7b280759d1393e736a85f7fd2e02d2088f2fb0221
+    - 34fa4705a10ca0d940762f5f594bbf93fe79f1df2bf4a1fb69fe9b00ff79b2fe
+    - 3549fca31abf602a78f645d3406ad075e02c7ea9a6aa9cec243ba6cb58b5e39f
+    - 976e948ccec98ffd36115d0240c2a438dccd4e15d220284e6356e3fcb0f2548c
+    - 49fd1cb22e0325c1f9038160da534fc23672e5509e903a94ce5bcddc893eb2c0
+    - 31784de70d7b55b2ee48a9ae359f7c67c82fb9a814279e0944a9dee01ed3f756
+    - 62997b5ecc8bb785f16803cdd04d2b4209476e457d9a46cbb1f7fae0a6a8108d
+    - 3efdd1461af3cf4039bd7a3ababcf71c5df08a1c232a36287d9ae1f0bd7509cc
+  condition: 1 of object_* or attributes

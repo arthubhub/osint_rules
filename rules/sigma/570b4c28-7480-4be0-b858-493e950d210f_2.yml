@@ -1,0 +1,30 @@
+title: "OSINT - Locky Ransomware Domains \xE2\u20AC\u201C Followup Analysis Uncovers\
+  \ 130 New Indicators - dns_query"
+id: 6a966cdd-f324-45db-9b0f-1c214c5fefc0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/570b4c28-7480-4be0-b858-493e950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - hellomydearqq.com
+    - blablaworldqq.com
+    - hellomisterbiznesqq.com
+    - greetingsjamajcaff.com
+    IpAddresses:
+    - 185.118.142.154
+    - 198.105.244.11
+    - 51.254.226.223
+    - 146.148.55.44
+    - 173.82.74.197
+    - 78.135.108.94
+    - 104.239.213.7
+    - 202.120.42.190
+    - 51.255.10.133
+    - 198.105.254.11
+  condition: attributes

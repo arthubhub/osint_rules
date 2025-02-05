@@ -1,0 +1,19 @@
+title: 'OSINT - Guaranteed Clicks: Mobile App Company Takes Control of Android Phones
+  - dns_query'
+id: d5941552-d202-4e5c-ae30-2178ca5d5a73
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5603c00a-e4d0-42e1-a0b7-85ab950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - wksnkys7.com
+    - hdyfhpoi.com
+    - syllyq1n.com
+    - aedxdrcb.com
+  condition: attributes

@@ -1,0 +1,15 @@
+title: 'VMRay Analyzer Report for Sample #252574 (related amf-fr.org) - dns_query'
+id: 1b8a5dbd-f9d7-4c1d-a4e0-d5607b82f41a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c687e12-522c-41f4-a498-486d02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - amf-fr.org
+  condition: attributes

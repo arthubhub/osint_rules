@@ -1,0 +1,19 @@
+title: OSINT - Malicious document targets Vietnamese officials - url_request
+id: 5d6b9439-ae35-4ec1-aab9-0f1fd71cbcb2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b60b046-c0c8-49ce-aa97-437a02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.hellsing
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://medium.com
+    - dulichculao.com
+    - toonganuh.com
+  condition: attributes

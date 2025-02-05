@@ -1,0 +1,17 @@
+title: OSINT CryptoWall v4 Emerges Days After Cyber Threat Alliance Report by Palo
+  Alto Networks Unit 42 - dns_query
+id: 2cd0a8d5-6958-4f47-a5da-2f80a357bb8a
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/564264fe-1794-4894-878f-68b5950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 46.30.45.110
+    - 46.30.43.183
+  condition: attributes

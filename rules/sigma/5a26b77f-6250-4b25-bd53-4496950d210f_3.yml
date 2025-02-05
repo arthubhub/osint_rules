@@ -1,0 +1,24 @@
+title: 'M2M - "..doc" 2017-12-01 : "12_Invoice_3456" - "I_4321.7z" - process_creation'
+id: 9b9ab720-c88e-452c-a244-6e8e31605fa3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a26b77f-6250-4b25-bd53-4496950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+detection:
+  attributes:
+    md5:
+    - b9f2699fc826f8109b12a17c1283ac3f
+    - 5c3d35bd9282f61e414319d9d98c80b5
+    - 06c82e99dc35ab88f2db7868d30012a8
+    sha1:
+    - 4bcba41741021833e193e721f4461645ab7fdb43
+    sha256:
+    - e2209f339b2e5afbb40d4f3dfddf4939ffdb9accbb5253121707a5b1cde15dd2
+  condition: attributes

@@ -1,0 +1,20 @@
+title: "OSINT - Locky Ransomware Domains \xE2\u20AC\u201C Followup Analysis Uncovers\
+  \ 130 New Indicators - url_request"
+id: e14c08fc-c05c-4331-a8ff-76cb3ea593a9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/570b4c28-7480-4be0-b858-493e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.threatstop.com
+    - blablaworldqq.com
+    - hellomisterbiznesqq.com
+    - hellomydearqq.com
+    - greetingsjamajcaff.com
+  condition: attributes

@@ -1,0 +1,15 @@
+title: OSINT When ELF.BillGates met Windows by Arkoon+Netasq - url_request
+id: 44273639-c6c2-4b8f-8ef1-3e44f19d8405
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/560c1c35-fd9c-4fb4-9a93-801b950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://thisissecurity.net
+  condition: attributes

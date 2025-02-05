@@ -1,0 +1,19 @@
+title: Revenge Ransomware, a CryptoMix Variant, Being Distributed by RIG Exploit Kit
+  - dns_query
+id: a37e61dc-4e92-4f1d-a4ad-2dacf81201d6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58ca5f56-3da4-4ed9-a13f-0804950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.cryptomix
+- attack.software.cryptomix
+detection:
+  attributes:
+    IpAddresses:
+    - 109.236.87.201
+  condition: attributes

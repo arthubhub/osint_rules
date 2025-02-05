@@ -1,0 +1,24 @@
+title: M2M -  phishing URLs - dns_query
+id: 7395204f-a1b5-422f-8f2e-906e7a0b406f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/594b8afd-daac-4cf6-8784-4a9b950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 195.20.50.201
+    - 195.20.51.31
+    - 89.189.197.24
+    - 103.224.212.186
+    - 89.189.197.55
+    - 103.224.212.193
+    - 45.33.9.234
+    - 89.189.197.18
+    - 103.224.212.185
+    - 103.224.212.192
+  condition: attributes

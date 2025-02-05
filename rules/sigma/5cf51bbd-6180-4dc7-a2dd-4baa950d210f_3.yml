@@ -1,0 +1,17 @@
+title: OSINT - FlawedAmmy RAT - process_creation
+id: e6319c82-311a-4a2b-beb9-297cd74d4a37
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cf51bbd-6180-4dc7-a2dd-4baa950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.flawedammy
+detection:
+  object_793:
+    md5:
+    - fe3e4635f555f86b64be6e8c9cfa6d6f
+  condition: 1 of object_*

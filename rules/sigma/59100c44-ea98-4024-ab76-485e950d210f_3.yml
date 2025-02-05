@@ -1,0 +1,20 @@
+title: OSINT - Windows Defender ATP thwarts Operation WilySupply software supply chain
+  cyberattack - process_creation
+id: 5a7a7ccf-077c-4069-8b41-c0ede3ca18eb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59100c44-ea98-4024-ab76-485e950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - a34c930506b64f98cdf3ec2a474f5b31
+    sha1:
+    - 75edd4ee11e7d3dabd191c316da637f939140e2f
+    sha256:
+    - 9a4346d7ac23d3fb06050e56ab7376fa56194c21617232574a5dbcb0a4e00a57
+  condition: attributes

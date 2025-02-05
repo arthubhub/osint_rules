@@ -1,0 +1,15 @@
+title: OSINT - Trojan downloader found on Google Play by @Maler360 - url_request
+id: ca9bbcf0-98d4-40ef-9e12-c3667d07cbca
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d01fda4-353c-4011-854f-459c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_10024:
+    RequestUrl|contains:
+    - https://mobile.twitter.com
+  condition: 1 of object_*

@@ -1,0 +1,15 @@
+title: OSINT - Fileless attacks against enterprise networks - url_request
+id: c0a85630-37a1-43af-a245-d04fd15eaf6c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58a1dcbc-4d5c-4267-995a-498b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

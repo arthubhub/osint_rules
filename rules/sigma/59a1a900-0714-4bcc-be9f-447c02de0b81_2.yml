@@ -1,0 +1,18 @@
+title: 'OSINT - Operation RAT Cook: Chinese APT actors use fake Game of Thrones leaks
+  as lures - dns_query'
+id: ff64e379-a57d-4692-9993-be5bc605b385
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59a1a900-0714-4bcc-be9f-447c02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - mn1.org
+    IpAddresses:
+    - 27.255.83.3
+  condition: attributes

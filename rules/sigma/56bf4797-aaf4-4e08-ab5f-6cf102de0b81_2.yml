@@ -1,0 +1,42 @@
+title: OSINT - Turla - Harnessing SSL Certificates Using Infrastructure Chaining -
+  dns_query
+id: e23d95e6-95c9-4f4a-b457-552e3dac2916
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56bf4797-aaf4-4e08-ab5f-6cf102de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 113.208.81.48
+    - 82.146.166.61
+    - 82.146.174.40
+    - 169.255.100.122
+    - 217.8.36.239
+    - 169.255.100.152
+    - 113.208.81.33
+    - 82.146.166.58
+    - 209.239.79.69
+    - 83.229.62.212
+    - 77.73.187.223
+    - 209.239.79.121
+    - 193.220.55.6
+    - 82.146.175.48
+    - 83.229.62.210
+    - 217.194.150.22
+    - 113.208.81.55
+    - 217.194.149.111
+    - 77.246.76.19
+    - 82.146.174.240
+    - 82.146.175.52
+    - 83.229.75.141
+    - 217.194.150.31
+    - 41.203.79.74
+    - 169.255.101.65
+    - 209.239.79.125
+    - 82.146.175.69
+  condition: attributes

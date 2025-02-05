@@ -1,0 +1,19 @@
+title: Finding Nemo(hosts) from Sofacy by ThreatConnect - process_creation
+id: a0ed8811-0f8f-4eb0-8e33-ccf34afb81cb
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a5de39e-cb60-4839-af53-c1be950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    sha1:
+    - a1833c32d5f61d6ef9d1bb0133585112069d770e
+    sha256:
+    - f27c4270b9b9291f465ba5962c36ce38f438377acff300b5c82b3b145f0c9e94
+  condition: attributes

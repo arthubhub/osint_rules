@@ -1,0 +1,21 @@
+title: OSINT - Iron Cybercrime Group Under The Scope - url_request
+id: cceb0b6d-d285-4a4c-9b4b-e03d8b2c5a7e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b141e8e-1d54-42df-ae6b-5c4802de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.iron_group
+- attack.software.iron_backdoor
+detection:
+  attributes:
+    RequestUrl|contains:
+    - swb.one
+    - bitcoinwallet8.com
+    - blockbitcoin.com
+    - blockchaln.info
+  condition: attributes

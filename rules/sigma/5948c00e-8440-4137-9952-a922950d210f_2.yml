@@ -1,0 +1,34 @@
+title: OSINT -  McAfee Discovers Pinkslipbot Exploiting Infected Machines as Control
+  Servers; Releases Free Tool to Detect, Disable Trojan - process_creation
+id: acf66e82-aa34-44ff-b0db-2dcc346ab9fa
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5948c00e-8440-4137-9952-a922950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.akbot
+detection:
+  attributes:
+    md5:
+    - e8e32892204adc612fdcfbc73abd60a0
+    - 80b6422d6edd2efb3bdc8751ae94efe9
+    - 91e7262e72ba0cb3e71e00f540ab9f73
+    - cebfd6d9b0290f933d95be059ea9342c
+    - 72e300fd8a27d1d8afc42dd4b47f7a42
+    sha1:
+    - 48e7f341d2a887fcbb2974c57f7269ec00c29c85
+    - 8fb933995998728aa86da88f7a3b9189412abcdf
+    - 56d9dfe06b3847d99c30ce0a8b527e2572eb8d06
+    - 61979d13bb058424ce585a867148a4cda91c0998
+    - c60a05988932f64e60e8482523043f9aded610c7
+    sha256:
+    - c23fe9f3a3035edb6fa306c7545cfd05bb310d85983dda5914cd9650c13b41d3
+    - 730e9864795ed8d6538064551ab95505dff3e92dd67888bee323cb341b2420c6
+    - 6d174dd4f29da814170e8f7c40ecd80794e1c27d8d94741a79bd1bd6eb75ea62
+    - 22cf76f92aad53db1304dec026b834ad77d2272c7f2eaaabf299e953b98d570e
+    - af25c5bed96e046ba1e25749ff51f0d8437a1ef66e469b4fd0348e372abc2f7f
+  condition: attributes

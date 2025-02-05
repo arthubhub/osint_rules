@@ -1,0 +1,25 @@
+title: OSINT - New Bip Dharma Ransomware Variant Released - process_creation
+id: 90ea74b5-66e3-4694-98c4-ccb3648fdaef
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b84012a-f9d4-4d92-abb3-344f950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.dharma_ransomware
+- attack.software.dharma_ransomware
+detection:
+  object_11137:
+    sha256:
+    - 208989df29236594c9d889d54b666041bc7df1d0b53cedd16e4f68636e036bb7
+  object_11138:
+    md5:
+    - b84e41893fa55503a84688b36556db05
+    sha1:
+    - 94f83bfb5451383b9c7b486d05f38e1856fe62a5
+    sha256:
+    - 208989df29236594c9d889d54b666041bc7df1d0b53cedd16e4f68636e036bb7
+  condition: 1 of object_*

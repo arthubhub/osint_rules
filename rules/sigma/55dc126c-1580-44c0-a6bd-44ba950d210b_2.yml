@@ -1,0 +1,20 @@
+title: OSINT Tinted CVE decoy spearphising attempt on Central Bank of Armenia employees
+  by BlueCoat - dns_query
+id: 15015d38-af3a-4007-b844-c940821b7692
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55dc126c-1580-44c0-a6bd-44ba950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - adobe-dns-3-adobe.com
+    IpAddresses:
+    - 192.52.166.66
+    - 78.128.92.112
+    - 84.200.4.226
+  condition: attributes

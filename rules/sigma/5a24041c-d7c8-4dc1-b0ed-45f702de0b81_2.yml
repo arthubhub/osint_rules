@@ -1,0 +1,30 @@
+title: OSINT - Android Malware Appears Linked to Lazarus Cybercrime Group - dns_query
+id: 647e901b-d5d1-49c2-b137-73a7f04eb30b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a24041c-d7c8-4dc1-b0ed-45f702de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.lazarus_group
+detection:
+  attributes:
+    QueryName|contains:
+    - wtps.org
+    IpAddresses:
+    - 175.100.189.174
+    - 61.106.2.96
+    - 181.119.19.100
+    - 114.215.130.173
+    - 119.29.11.203
+    - 110.45.145.103
+    - 124.248.228.30
+    - 199.180.148.134
+    - 217.117.4.110
+    - 197.211.212.31
+    - 14.139.200.107
+    - 139.196.55.146
+  condition: attributes

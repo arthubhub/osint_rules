@@ -1,0 +1,22 @@
+title: "OSINT - Kampania APT28 skierowana przeciwko polskim instytucjom rz\u0105dowym\
+  \ - url_request"
+id: a75a0506-3e9f-4f21-b130-f510778a7ddd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/482a37ad-cfaf-41cc-9bef-b3829dde3b3f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.apt28
+detection:
+  object_9083:
+    RequestUrl|contains:
+    - https://cert.pl
+  attributes:
+    RequestUrl|contains:
+    - https://webhook.site
+    - https://run.mocky.io
+  condition: 1 of object_* or attributes

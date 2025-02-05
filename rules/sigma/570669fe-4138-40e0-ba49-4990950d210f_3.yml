@@ -1,0 +1,22 @@
+title: Kegotip downloader - process_creation
+id: d6ef13b6-1160-4e95-b55a-4ceeb396041e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/570669fe-4138-40e0-ba49-4990950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - d22500f4cc2abf32642a0862fd1d135d
+    - f563f980e99a91fe011fe331bea190d6
+    sha1:
+    - d69e52c7949bed85fd37129809f50c8277352d47
+    - e26dc11326c8ec4a0399b149741f667e9219da87
+    sha256:
+    - 0ea08351e522eda5e3abb1b5b0cf921784b5bfd4eda31ad44ffa5d28ac76d3f7
+    - e9958ef800594203e541f25a70dddf2eda71ecce7bee33c9054a79776e6a0b5d
+  condition: attributes

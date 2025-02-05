@@ -1,0 +1,15 @@
+title: OSINT - A North Korean Monero Cryptocurrency Miner - url_request
+id: 3458cdab-842b-48e1-ab99-4f489551a5e9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a54778c-3dac-4d36-b7c3-4d6e02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.alienvault.com
+  condition: attributes

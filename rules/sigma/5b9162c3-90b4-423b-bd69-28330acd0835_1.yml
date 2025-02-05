@@ -1,0 +1,20 @@
+title: powerpool-malware-exploits-zero-day-vulnerability - url_request
+id: 7d4448f9-66b9-4550-9ec1-b238ed5f673a
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b9162c3-90b4-423b-bd69-28330acd0835.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - afishaonline.eu
+    - sports-collectors.com
+    - newsrental.net
+    - https://www.welivesecurity.com
+    - rosbusiness.eu
+  condition: attributes

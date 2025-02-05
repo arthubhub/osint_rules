@@ -1,0 +1,41 @@
+title: 'Malspam 2016-09-06 (.wsf in .zip) - campaign: ''Message from "CUKPR[x]"''
+  - dns_query'
+id: 9c58cd86-6c8a-4149-897e-91e5b4567658
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57cfbf0c-c790-4257-8b1e-06cc950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - tst-technik.de
+    - marcotormento.de
+    - sp-moto.ru
+    - bushman-rest.com
+    IpAddresses:
+    - 213.180.150.17
+    - 80.150.6.143
+    - 81.196.20.134
+    - 211.134.181.38
+    - 80.150.6.138
+    - 62.24.202.31
+    - 87.242.73.75
+    - 81.24.34.9
+    - 208.71.106.48
+    - 81.169.145.82
+    - 81.169.145.157
+    - 95.211.144.65
+    - 186.202.126.199
+    - 208.71.106.37
+    - 188.120.235.214
+    - 208.71.106.45
+    - 85.248.42.103
+    - 213.185.87.30
+    - 209.41.183.242
+    - 213.205.40.169
+    - 88.156.222.94
+  condition: attributes

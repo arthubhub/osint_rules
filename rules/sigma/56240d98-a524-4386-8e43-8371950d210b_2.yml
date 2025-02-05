@@ -1,0 +1,22 @@
+title: OSINT Targeted Malware Attacks against NGO Linked to Attacks on Burmese Government
+  Websites by Citizen Labs - dns_query
+id: f50cd2a9-9957-4c73-9a39-d4b5f663c9d1
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56240d98-a524-4386-8e43-8371950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - iyouthen.com
+    - mailsecurityservice.com
+    IpAddresses:
+    - 103.20.222.244
+    - 118.193.212.98
+    - 198.44.190.85
+    - 59.44.49.88
+  condition: attributes

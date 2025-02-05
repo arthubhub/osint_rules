@@ -1,0 +1,78 @@
+title: OSINT - Smominru Monero mining botnet making millions for operators - process_creation
+id: 43a2592e-2d9a-4512-8be7-7aeb57bab673
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a7238f2-7ea4-499a-89f6-450b02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_9857:
+    md5:
+    - 1487e2b148f7a4869c212f78cb28d682
+    sha1:
+    - a56c110dcf859d83aa1fa5ad455e94539dfa8d12
+    sha256:
+    - 8ceb370e5f32dd732809c827f8eda38cc9b746d40adea3dca33b8c27ee38eb6f
+  object_9859:
+    md5:
+    - ff604679b2e12040dea81f6ecffd5ea2
+    sha1:
+    - d789b6b33d739810cab2e3f5a55933dd16721823
+    sha256:
+    - b7f8b5cb8fc7bd5c14105fde118f5ac7a808e590e52f16c70128b4bd28aa4b5a
+  object_9861:
+    md5:
+    - 0224b573793d1780e3fec22739526c8f
+    sha1:
+    - 6ca9bc55382736c6fb173afb789318ee7067f206
+    sha256:
+    - 3b1824b41f3853376e21153d9125781dbb57b820d8a9a6cc037f82ea87f50973
+  object_9863:
+    md5:
+    - 6ca24e8ae6988ee1187be72c777e7397
+    sha1:
+    - 53accdd58a67fe7bc7fbcaefa1e2b65c13aba9ff
+    sha256:
+    - 2e3f534bd6b7d1cf18dc727820124faed92fb28f1d4626c9658587b9b3c09509
+  object_9865:
+    md5:
+    - ebdc2be63b2fcb8fe22845c75850c9e6
+    sha1:
+    - c788a27c9f18f1e732e34e60a73b83ccdcfd9a29
+    sha256:
+    - 32e0712ff24e5f9ab8ee682a53514c501486f0836ef24125503335d86bd10a4e
+  object_9867:
+    md5:
+    - f63e34b172bc6c88c002a2d25c738ea9
+    sha1:
+    - 368ef0af957492ad0b55ce1351da1b44f67dbcb8
+    sha256:
+    - 5e15c97546a19759a8397e51e98a2d8168e6e27aff4dc518220459ed3184e4e2
+  object_9869:
+    md5:
+    - 822b8150022ba179560ac42384ff997e
+    sha1:
+    - b8a53e651be77914428f6a3cefc797041ff3df51
+    sha256:
+    - f1c36aebdcd92a04fd689d31944e5388e7e9b9421063ec4c98804ac7a04e6b0d
+  object_9871:
+    md5:
+    - 6b13994f83dad0d45764911a88564a7b
+    sha1:
+    - 0b5616228f6556b320ac0d2f586504538abb638e
+    sha256:
+    - da3b2e4da23aae505bf991cb68833d01d0c5b75645d246dfa9b6e403be1798c8
+  attributes:
+    sha256:
+    - 8ceb370e5f32dd732809c827f8eda38cc9b746d40adea3dca33b8c27ee38eb6f
+    - da3b2e4da23aae505bf991cb68833d01d0c5b75645d246dfa9b6e403be1798c8
+    - 32e0712ff24e5f9ab8ee682a53514c501486f0836ef24125503335d86bd10a4e
+    - b7f8b5cb8fc7bd5c14105fde118f5ac7a808e590e52f16c70128b4bd28aa4b5a
+    - 5e15c97546a19759a8397e51e98a2d8168e6e27aff4dc518220459ed3184e4e2
+    - 2e3f534bd6b7d1cf18dc727820124faed92fb28f1d4626c9658587b9b3c09509
+    - 3b1824b41f3853376e21153d9125781dbb57b820d8a9a6cc037f82ea87f50973
+    - f1c36aebdcd92a04fd689d31944e5388e7e9b9421063ec4c98804ac7a04e6b0d
+  condition: 1 of object_* or attributes

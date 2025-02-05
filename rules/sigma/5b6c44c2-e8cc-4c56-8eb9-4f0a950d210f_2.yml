@@ -1,0 +1,58 @@
+title: OSINT -  Familiar Feeling A Malware Campaign Targeting the Tibetan Diaspora
+  Resurfaces - dns_query
+id: 320d0bcb-9df0-4644-91ec-cfb17d52b56a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b6c44c2-e8cc-4c56-8eb9-4f0a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1086
+- attack.t1193
+detection:
+  object_18130:
+    QueryName|contains:
+    - google.comemails.email
+    IpAddresses:
+    - 115.126.86.29
+  object_18131:
+    QueryName|contains:
+    - mail.google.commail.co
+    IpAddresses:
+    - 115.126.98.78
+  object_18132:
+    QueryName|contains:
+    - google.comemail.email
+    IpAddresses:
+    - 118.99.59.214
+  object_18137:
+    IpAddresses:
+    - 27.126.186.222
+  object_18138:
+    IpAddresses:
+    - 103.55.24.196
+  object_18139:
+    IpAddresses:
+    - 45.127.97.222
+  object_18140:
+    IpAddresses:
+    - 203.189.232.207
+  attributes:
+    QueryName|contains:
+    - tibetnews.info
+    - commail.co
+    - comemails.email
+    - daynews.today
+    - tibetnews.today
+    - daynew.today
+    - tibethouse.info
+    IpAddresses:
+    - 115.126.86.151
+    - 45.127.97.222
+    - 203.189.232.207
+    - 27.126.186.222
+    - 103.55.24.196
+  condition: 1 of object_* or attributes

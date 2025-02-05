@@ -1,0 +1,32 @@
+title: 'M2M -  Locky 2017-11-03 : Affid=3, offline, ".asasin" : "12345678.doc" - url_request'
+id: 03db89dd-a25f-4d18-bc42-bb8ed1e8900e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a0066bf-f9bc-478a-afee-4410950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://ebsitaly.it
+    - http://teesaddiction.com
+    - http://dangelofavata.com
+    - http://euroregistro.net
+    - http://www.test.doctorsordersltd.co.uk
+    - http://with-hair.co.jp
+    - http://ceocfonewsline.com
+    - http://futtermittel-schwaegerl.de
+    - http://generalcom.ro
+    - http://finanzen-netto.de
+    - http://washingtoncountyyellowpagesdirectory.com
+    - http://fsol.co.za
+    - http://evengrollighromsof.net
+    - http://ddcms.nl
+    - http://cibeservice.it
+  condition: attributes

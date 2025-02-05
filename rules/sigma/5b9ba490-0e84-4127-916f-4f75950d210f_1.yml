@@ -1,0 +1,17 @@
+title: OSINT - old njRAT activity - url_request
+id: f71c7549-6d46-4061-9cda-e87012ad1341
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b9ba490-0e84-4127-916f-4f75950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.njrat
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.symantec.com
+  condition: attributes

@@ -1,0 +1,17 @@
+title: Fake Job Application incl. Macro - dns_query
+id: 4477df93-e232-4b2d-b48e-3bdb1395e521
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a6869a1-1bbc-4a25-ad96-a8fd950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.smoke_loader
+detection:
+  attributes:
+    IpAddresses:
+    - 80.82.67.217
+  condition: attributes

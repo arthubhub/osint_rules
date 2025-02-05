@@ -1,0 +1,25 @@
+title: OSINT - GandCrab Version 3 Released With Autorun Feature and Desktop Background
+  - url_request
+id: fd5bfe5b-8e4a-4400-89fc-3f6bf3b03ae0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aeffb23-79e0-4d58-acf9-4b28950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.gandcrab
+- attack.software.gandcrab
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.sfu.ca
+    - https://www.bleepingcomputer.com
+    - https://psi-im.org
+    - carder.bit
+    - https://www.torproject.org
+    - http://gandcrab2pie73et.onion
+    - http://sj.ms
+  condition: attributes

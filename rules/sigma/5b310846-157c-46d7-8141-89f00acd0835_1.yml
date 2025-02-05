@@ -1,0 +1,22 @@
+title: Registrant Tracking for "earthalgerrity@armyspy.com" - url_request
+id: 14c4338f-812c-4a93-af60-2323ddea0ffc
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b310846-157c-46d7-8141-89f00acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - fuselect.com
+    - calorida.com
+    - stradical.com
+    - veryonid.com
+    - maneers.com
+  condition: attributes

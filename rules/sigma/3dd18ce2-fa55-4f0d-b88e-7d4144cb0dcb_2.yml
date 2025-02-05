@@ -1,0 +1,23 @@
+title: OSINT - AN ANALYSIS OF THE EGREGOR RANSOMWARE - dns_query
+id: b3031912-61cb-47de-a25b-95a1b075ece9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/3dd18ce2-fa55-4f0d-b88e-7d4144cb0dcb.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.egregor
+- attack.group.egregor
+- attack.group.gandcrab
+- attack.software.sodinokibi
+- attack.software.gandcrab
+- attack.group.sodinokibi
+- attack.software.s0496
+detection:
+  attributes:
+    IpAddresses:
+    - 162.247.74.74
+  condition: attributes

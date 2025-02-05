@@ -1,0 +1,15 @@
+title: OSINT - Mirai - Loligang bot - url_request
+id: a3919c7c-6c30-4799-ae30-a44f9d36d082
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d6532ef-05a0-4a1b-a2ee-4c86950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://otx.alienvault.com
+  condition: attributes

@@ -1,0 +1,18 @@
+title: OSINT - Android Malware Appears Linked to Lazarus Cybercrime Group - url_request
+id: ea5063d1-941a-42a0-9569-a162924519fc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a24041c-d7c8-4dc1-b0ed-45f702de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.lazarus_group
+detection:
+  attributes:
+    RequestUrl|contains:
+    - wtps.org
+    - https://securingtomorrow.mcafee.com
+  condition: attributes

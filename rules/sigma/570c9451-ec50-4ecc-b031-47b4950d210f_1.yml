@@ -1,0 +1,15 @@
+title: OSINT - New Locky Variant Implements Evasion Techniques - url_request
+id: 171df413-bd98-4526-b6c7-ead1bdc9ba27
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/570c9451-ec50-4ecc-b031-47b4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.checkpoint.com
+  condition: attributes

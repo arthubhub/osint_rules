@@ -1,0 +1,20 @@
+title: 'IECrypt sample analysed with VMRay Analyzer Report for Sample #245141 (IECrypt)
+  - process_creation'
+id: e226cbd2-1e33-4ccc-8f4c-b818e65af72d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5dc16ccc-c038-4b5b-91e6-4879950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_8893:
+    md5:
+    - ba167e9c0645c0304af9c779b1f4e322
+    sha1:
+    - a5242cf2d2a800334cc1fa8f8aa74f6f8251568c
+    sha256:
+    - f7197a1a5f779735dc5550e10d975024eafbf4aeaf2b6603e2943e0aa7c79ce5
+  condition: 1 of object_*

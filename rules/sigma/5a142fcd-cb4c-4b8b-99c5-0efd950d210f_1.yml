@@ -1,0 +1,18 @@
+title: OSINT - 0000 Cryptomix Ransomware Variant Released - url_request
+id: b2cfdd40-5348-4fa6-9dfa-34235dc34309
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a142fcd-cb4c-4b8b-99c5-0efd950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.cryptomix
+- attack.software.cryptomix
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

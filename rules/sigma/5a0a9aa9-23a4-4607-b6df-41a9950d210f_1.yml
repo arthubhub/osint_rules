@@ -1,0 +1,15 @@
+title: OSINT -  New Malware with Ties to SunOrcal Discovered - url_request
+id: 91c3b736-cb98-40f9-9af1-058a9dda4596
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a0a9aa9-23a4-4607-b6df-41a9950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://researchcenter.paloaltonetworks.com
+  condition: attributes

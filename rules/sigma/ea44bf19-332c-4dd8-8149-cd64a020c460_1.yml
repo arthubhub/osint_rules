@@ -1,0 +1,19 @@
+title: OSINT - Potential abuse by Lazarus group using LinkedIn to spread malware -
+  url_request
+id: 18d9ef84-5243-473b-b205-a8a478e745fe
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/ea44bf19-332c-4dd8-8149-cd64a020c460.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.lazarus_group
+- attack.software.nukesped
+detection:
+  object_8290:
+    RequestUrl|contains:
+    - https://twitter.com
+  condition: 1 of object_*

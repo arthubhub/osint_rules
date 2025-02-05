@@ -1,0 +1,15 @@
+title: OSINT - PlugX goes to the registry (and India) - dns_query
+id: a76a77b5-acb8-4276-93a0-222f5d7b89c7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/551427fe-47ac-4247-93f0-c906950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - unisers.com
+  condition: attributes

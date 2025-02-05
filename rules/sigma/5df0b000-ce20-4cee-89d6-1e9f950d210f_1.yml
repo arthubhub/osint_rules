@@ -1,0 +1,17 @@
+title: OSINT - trickbot cashcore hashes - url_request
+id: fef31121-54a7-4335-8374-f1100d6256c9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5df0b000-ce20-4cee-89d6-1e9f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.trick_bot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://raw.githubusercontent.com
+  condition: attributes

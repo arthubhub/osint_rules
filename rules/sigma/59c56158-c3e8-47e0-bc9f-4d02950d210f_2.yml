@@ -1,0 +1,34 @@
+title: 'M2M -  Locky 2017-09-18 : Affid=3, offline, ".ykcol" : "Message from KM_C224e"
+  - "20171809_12345678901.7z" - dns_query'
+id: 01398e6f-3b17-4de4-9370-552f23f9905e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59c56158-c3e8-47e0-bc9f-4d02950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    IpAddresses:
+    - 123.100.239.53
+    - 37.48.73.139
+    - 193.227.248.241
+    - 198.50.119.188
+    - 87.230.17.247
+    - 185.58.7.11
+    - 66.84.21.227
+    - 91.121.110.23
+    - 40.76.209.29
+    - 184.168.111.139
+    - 192.42.116.41
+    - 202.169.44.167
+    - 66.135.55.8
+    - 85.214.62.160
+    - 91.192.194.102
+    - 80.172.241.21
+  condition: attributes

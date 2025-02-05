@@ -1,0 +1,15 @@
+title: OSINT -  Over 100,000 South Korean Users Affected by BlackMoon Campaign - url_request
+id: a8866b5b-91cc-4b9a-a633-8d15ef5694f7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57232f8f-c210-454d-ad75-4d11950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.fortinet.com
+  condition: attributes

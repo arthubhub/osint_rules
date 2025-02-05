@@ -1,0 +1,28 @@
+title: OSINT - JadeRAT mobile surveillanceware spikes in espionage activity - dns_query
+id: 58f1c3cd-e068-4b42-be5e-2d9a545b15f0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59eb345d-34f0-4fc6-b785-2ace02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.jaderat
+detection:
+  attributes:
+    IpAddresses:
+    - 123.149.231.81
+    - 221.192.178.51
+    - 123.15.58.119
+    - 103.226.127.98
+    - 61.36.72.43
+    - 1.192.241.109
+    - 1.192.250.74
+    - 125.41.93.32
+    - 117.158.131.130
+    - 61.144.202.216
+    - 103.200.31.23
+    - 113.106.48.194
+  condition: attributes

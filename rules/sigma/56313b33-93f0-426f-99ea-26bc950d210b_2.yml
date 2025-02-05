@@ -1,0 +1,15 @@
+title: OSINT Trojan.Win32.Banker.NWT by AlienVault and Telus - dns_query
+id: a3a6aca1-0b93-41c6-b21d-b8cd2dd3f510
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56313b33-93f0-426f-99ea-26bc950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - marmitariakisabor.com
+  condition: attributes

@@ -1,0 +1,17 @@
+title: Information stealer malware via fake malicious document as "University of Luxembourg"
+  - dns_query
+id: 575eb060-a837-410d-972e-9cac18920569
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d108ff9-9c70-4fbe-932d-acd8950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 192.210.146.35
+    - 103.195.185.115
+  condition: attributes

@@ -1,0 +1,29 @@
+title: OSINT - Return of Not Petya as Bad Rabbit Diskcoder, yes those two are the
+  same! - dns_query
+id: 961780ea-cf35-4eef-973f-60e047ab881d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59f04995-3b8c-4cf0-b555-4b26950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.bad_rabbit
+- attack.software.bad_rabbit
+detection:
+  attributes:
+    QueryName|contains:
+    - argumentiru.com
+    - an-crimea.ru
+    - argumenti.ru
+    - caforssztxqzf2nm.onion
+    - 1dnscontrol.com
+    - ankerch-crimea.ru
+    - da.id
+    - most-dnepr.info
+    - spbvoditel.ru
+    IpAddresses:
+    - 185.149.120.3
+  condition: attributes

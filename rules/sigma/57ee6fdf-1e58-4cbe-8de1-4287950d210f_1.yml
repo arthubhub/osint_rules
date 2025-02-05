@@ -1,0 +1,36 @@
+title: 'Malspam 2016-09-30 (.doc) - campaign: "Receipt" - url_request'
+id: 680220e5-52a9-4c1a-9c5d-d561b716604b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ee6fdf-1e58-4cbe-8de1-4287950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://techsilicon.com
+    - b2c-batteries.com
+    - http://mepowell.com
+    - http://activexsearch.com
+    - http://amerikanservisi.com
+    - http://teothemes.com
+    - techsilicon.com
+    - http://asknaija.com
+    - http://lucianasaliani.com
+    - http://b2c-batteries.com
+    - bestsourcecode.com
+    - lucianasaliani.com
+    - http://gomelnaushnik.com
+    - teothemes.com
+    - http://bestsourcecode.com
+    - bantayan.net
+    - asknaija.com
+    - http://bantayan.net
+    - amerikanservisi.com
+    - gomelnaushnik.com
+    - mepowell.com
+    - activexsearch.com
+  condition: attributes

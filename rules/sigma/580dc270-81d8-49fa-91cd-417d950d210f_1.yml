@@ -1,0 +1,16 @@
+title: Malspam week 44 (2016-10-24) - Locky ('Sebek') - url_request
+id: ddc42589-a4f9-46f8-a124-801923797a17
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/580dc270-81d8-49fa-91cd-417d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.injusticeil.top
+    - http://www.surprisingdd.top
+  condition: attributes

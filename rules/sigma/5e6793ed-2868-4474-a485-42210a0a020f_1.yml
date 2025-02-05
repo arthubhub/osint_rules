@@ -1,0 +1,23 @@
+title: Trickbot Gtag QW1 - url_request
+id: 77aca4b5-ddac-4e00-bec4-29f1c3d411c3
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e6793ed-2868-4474-a485-42210a0a020f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.trickbot
+- attack.group.trickbot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - customscripts.us
+    - http://customscripts.us
+    - https://serviceuphelper.com
+    - https://laskowski-tech.com
+    - http://64.44.133.131
+    - serviceuphelper.com
+  condition: attributes

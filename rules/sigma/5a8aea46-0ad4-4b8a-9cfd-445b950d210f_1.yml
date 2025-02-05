@@ -1,0 +1,16 @@
+title: OSINT - GandCrab Ransomware Distributed by Exploit Kits, Appends GDCB Extension
+  - url_request
+id: b1c5dd56-692c-48b7-b805-7e7403981b77
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a8aea46-0ad4-4b8a-9cfd-445b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

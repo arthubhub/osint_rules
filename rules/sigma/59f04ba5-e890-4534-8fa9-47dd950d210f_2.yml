@@ -1,0 +1,41 @@
+title: OSINT - BadRabbit Ransomware Compiled by ThaiCERT, a member of the Electronic
+  Transactions Development Agency - process_creation
+id: f30b2234-9db9-4544-ae5a-4e9388a2d876
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59f04ba5-e890-4534-8fa9-47dd950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.bad_rabbit
+- attack.software.bad_rabbit
+detection:
+  attributes:
+    md5:
+    - 1d724f95c61f1055f0d02c2154bbccd3
+    - 347ac3b6b791054de3e5720a7144a977
+    - b14d8faf7f0cbcfad051cefe5f39645f
+    - fbbdc39af1139aebba4da004475e8839
+    - edb72f4a46c39452d1a5414f7d26454a
+    - b4e6d97dafd9224ed9a547d52c26ce02
+    - 37945c44a897aa42a66adcab68f560e0
+    sha1:
+    - 16605a4a29a101208457c47ebfde788487be788d
+    - de5c8d858e6e41da715dca1c019df0bfb92d32c0
+    - 413eba3973a15c1a6429d9f170f3e8287f98c21c
+    - 79116fe99f2b421c52ef64097f0f39b815b20907
+    - afeee8b4acff87bc469a6f0364a81ae5d60a2add
+    - 08f94684e83a27f2414f439975b7f8a6d61fc056
+    - 59cd4907a438b8300a467cee1c6fc31135757039
+    sha256:
+    - 682adcb55fe4649f7b22505a54a9dbc454b4090fc2bb84af7db5b0908f3b7806
+    - 0b2f863f4119dc88a22cc97c0a136c88a0127cb026751303b045f7322a8972f6
+    - 8ebc97e05c8e1073bda2efb6f4d00ad7e789260afa2c276f0c72740b838a0a93
+    - 630325cac09ac3fab908f903e3b00d0dadd5fdaa0875ed8496fcbb97a558d0da
+    - 2f8c54f9fa8e47596a3beff0031f85360e56840c77f71c6a573ace6f46412035
+    - 579fd8a0385482fb4c789561a30b09f25671e86422f40ef5cca2036b28f99648
+    - 301b905eb98d8d6bb559c04bbda26628a942b2c4107c07a02e8f753bdcfe347c
+  condition: attributes

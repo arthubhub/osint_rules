@@ -1,0 +1,16 @@
+title: OSINT - ThreatHunting/India/ - url_request
+id: 32f438fe-1516-4971-b008-0d41e8f15f33
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d00a18b-fa28-4f72-bd72-4e6a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://185.82.202.240
+    - https://github.com
+  condition: attributes

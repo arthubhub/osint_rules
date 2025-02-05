@@ -1,0 +1,188 @@
+title: 'OSINT - RedAlpha: New Campaigns Discovered Targeting the Tibetan Community
+  - url_request'
+id: bccb7bfa-46f7-4579-a3f1-80465ebd560a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b337e5f-4810-4cbe-bb0e-4b79950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.redalpha
+- attack.software.njrat
+detection:
+  object_10957:
+    RequestUrl|contains:
+    - https://t.co
+    - https://mobile.twitter.com
+  object_10964:
+    RequestUrl|contains:
+    - www.hktechy.com
+  object_10994:
+    RequestUrl|contains:
+    - doc.internetdocss.com
+  object_10995:
+    RequestUrl|contains:
+    - 220x218x70x160.ap220.ftth.ucom.ne.jp
+  object_10996:
+    RequestUrl|contains:
+    - u2xu2.com
+  object_10997:
+    RequestUrl|contains:
+    - hktechy.com
+  object_11001:
+    RequestUrl|contains:
+    - doc.internetdocss.com
+  object_11002:
+    RequestUrl|contains:
+    - doc.internetdocss.com
+  object_11003:
+    RequestUrl|contains:
+    - item.internetdocss.com
+  object_11004:
+    RequestUrl|contains:
+    - cfr.internetdocss.com
+  object_11005:
+    RequestUrl|contains:
+    - tootopia.internetdocss.com
+  object_11006:
+    RequestUrl|contains:
+    - oc.internetdocss.com
+  object_11007:
+    RequestUrl|contains:
+    - thewire.internetdocss.com
+  object_11008:
+    RequestUrl|contains:
+    - tibet.internetdocss.com
+  object_11009:
+    RequestUrl|contains:
+    - savetibet.internetdocss.com
+  object_11010:
+    RequestUrl|contains:
+    - blog.tibetcul.internetdocss.com
+  object_11011:
+    RequestUrl|contains:
+    - rediff.internetdocss.com
+  object_11012:
+    RequestUrl|contains:
+    - ndtv.internetdocss.com
+  object_11013:
+    RequestUrl|contains:
+    - business.internetdocss.com
+  object_11014:
+    RequestUrl|contains:
+    - apple.internetdocss.com
+  object_11015:
+    RequestUrl|contains:
+    - chinaaid.internetdocss.com
+  object_11016:
+    RequestUrl|contains:
+    - epochtimes.internetdocss.com
+  object_11017:
+    RequestUrl|contains:
+    - artvoice.internetdocss.com
+  object_11018:
+    RequestUrl|contains:
+    - docs.internetdocss.com
+  object_11019:
+    RequestUrl|contains:
+    - www.apple.internetdocss.com
+  object_11020:
+    RequestUrl|contains:
+    - www.doc.internetdocss.com
+  object_11021:
+    RequestUrl|contains:
+    - doc.internetdocss.com
+  object_11022:
+    RequestUrl|contains:
+    - vot.internetdocss.com
+  object_11023:
+    RequestUrl|contains:
+    - video.internetdocss.com
+  object_11024:
+    RequestUrl|contains:
+    - my.anti-spammail.services
+  object_11025:
+    RequestUrl|contains:
+    - u2xu2.com
+  object_11026:
+    RequestUrl|contains:
+    - u2xu2.com
+  object_11027:
+    RequestUrl|contains:
+    - u2xu2.com
+  object_11028:
+    RequestUrl|contains:
+    - u2xu2.com
+  object_11030:
+    RequestUrl|contains:
+    - striker.internetdocss.com
+  object_11033:
+    RequestUrl|contains:
+    - http.ackques.com
+  object_11034:
+    RequestUrl|contains:
+    - sp.u2xu2.com
+  object_11036:
+    RequestUrl|contains:
+    - ktechy.com
+  object_11037:
+    RequestUrl|contains:
+    - angtechy.com
+  object_11038:
+    RequestUrl|contains:
+    - cqledu.com
+  object_11039:
+    RequestUrl|contains:
+    - mail-aol.space
+  object_11040:
+    RequestUrl|contains:
+    - drlve-gooog1e.com
+  object_11041:
+    RequestUrl|contains:
+    - login-live.space
+  object_11042:
+    RequestUrl|contains:
+    - mail-dsi-go.space
+  object_11043:
+    RequestUrl|contains:
+    - mail-epochtimes.space
+  object_11044:
+    RequestUrl|contains:
+    - mail-defense.tk
+  object_11045:
+    RequestUrl|contains:
+    - webmail-dalailama.com
+  object_11046:
+    RequestUrl|contains:
+    - mail.youxinpai.com
+  object_11047:
+    RequestUrl|contains:
+    - plshl.com
+  object_11048:
+    RequestUrl|contains:
+    - webmail-mpt.space
+  object_11049:
+    RequestUrl|contains:
+    - wengiguowengui.space
+  object_11050:
+    RequestUrl|contains:
+    - tk.u2xu2.com
+  object_11053:
+    RequestUrl|contains:
+    - cqyrxy.com
+  object_11054:
+    RequestUrl|contains:
+    - drive-mail-google.com
+  object_11055:
+    RequestUrl|contains:
+    - drive-accounts-gooogle.com
+  attributes:
+    RequestUrl|contains:
+    - http://220.218.70.160
+    - http://doc.internetdocss.com
+    - https://www.recordedfuture.com
+    - https://go.recordedfuture.com
+  condition: 1 of object_* or attributes

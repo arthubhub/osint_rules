@@ -1,0 +1,20 @@
+title: 'OSINT - Apocalypse: Ransomware which targets companies through insecure RDP
+  - process_creation'
+id: 5a0b6459-c574-4214-b05b-5b44eff3a888
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57750a68-58c8-4323-8c93-c828950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - ac70f2517698ca81bf161645413f168c
+    sha1:
+    - 70a255c076bd108b0654ae58b6f805efd2ad9613
+    sha256:
+    - aab148f9445f8ea69a6992a245037919b96c7b6457d35732f4171e371359aee5
+  condition: attributes

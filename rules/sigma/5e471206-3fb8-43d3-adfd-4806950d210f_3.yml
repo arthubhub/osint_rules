@@ -1,0 +1,33 @@
+title: Dever Ransomware - process_creation
+id: 1da2c08c-6c42-4858-b92d-b9562ff77955
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e471206-3fb8-43d3-adfd-4806950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_17695:
+    md5:
+    - b365af317ae730a67c936f21432b9c71
+    sha1:
+    - a0bdfac3ce1880b32ff9b696458327ce352e3b1d
+    sha256:
+    - bd2c2cf0631d881ed382817afcce2b093f4e412ffb170a719e2762f250abfea4
+  object_17696:
+    md5:
+    - 1b5c3c458e31bede55145d0644e88d75
+    sha1:
+    - a21c84c6bf2e21d69fa06daaf19b4cc34b589347
+    sha256:
+    - 70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4
+  object_17697:
+    md5:
+    - 273045ac9e57532ba524a2ecedcbfad2
+    sha1:
+    - ec134601a565676b3f4fbcaf1783b0673176fc5b
+    sha256:
+    - 5597d2864836aad7d1c701805def0372c1e43d58372b1a4259e05152462e0755
+  condition: 1 of object_*

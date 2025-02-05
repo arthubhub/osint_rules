@@ -1,0 +1,15 @@
+title: OSINT - STOP SCANNING MY MACRO - url_request
+id: 129114d4-a264-4f7f-a2b0-56d0b978f4a2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f0302e-e494-494b-b012-42d7950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.fireeye.com
+  condition: attributes

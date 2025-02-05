@@ -1,0 +1,16 @@
+title: OSINT Who's Really Spreading through the Bright Star? by Securelist / Kaspersky
+  - url_request
+id: 9e9226c9-6345-4329-92d6-134087917034
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54f9a0ef-0ebc-414d-88ab-f094950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

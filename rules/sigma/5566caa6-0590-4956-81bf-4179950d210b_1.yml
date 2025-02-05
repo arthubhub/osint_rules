@@ -1,0 +1,16 @@
+title: OSINT Beware of what you download. Recent purported CEIEC document dump booby-trapped
+  by Shadow Server - url_request
+id: c19b3143-07c8-44cf-94e7-360c4ba0b2c4
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5566caa6-0590-4956-81bf-4179950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.shadowserver.org
+  condition: attributes

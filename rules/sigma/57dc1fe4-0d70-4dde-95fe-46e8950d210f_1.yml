@@ -1,0 +1,71 @@
+title: 'Malspam 2016-09-16 (.wsf in .zip) - campaign: "(SCAN|FAX|DOC|IMG)_{integer}"
+  - url_request'
+id: f7873ad2-2fa3-4c48-bfaa-10c9ac5eb2cf
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57dc1fe4-0d70-4dde-95fe-46e8950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://junhao8.com
+    - http://mfcomputer.net
+    - all4supply.com
+    - zesthouse.com
+    - http://mahovik-bg.com
+    - http://urachart.com
+    - http://inovsol.com
+    - 24hourprintshop.com
+    - http://chelsea-west.com
+    - junhao8.com
+    - inovsol.com
+    - http://mudelts.com
+    - http://samenart.com
+    - qarmoo.com
+    - http://islamiccollege.org
+    - http://earnbyemail.com
+    - sstaswim.com
+    - http://hollystamps.com
+    - http://sstaswim.com
+    - http://xsolution.sk
+    - http://lanehmontgomery.com
+    - http://mclodesigns.com
+    - honeydavis.us
+    - http://markanltd.com
+    - http://honeydavis.us
+    - thewebgroup.net
+    - urachart.com
+    - http://thewebgroup.net
+    - sanalnet.org
+    - islamiccollege.org
+    - hollystamps.com
+    - lv-nexis.com
+    - markanltd.com
+    - mudelts.com
+    - mfcomputer.net
+    - http://demo.website.pl
+    - apro88.com
+    - smt112.com
+    - http://all4supply.com
+    - akademistcicek.com
+    - http://sanalnet.org
+    - http://lv-nexis.com
+    - samenart.com
+    - xsolution.sk
+    - http://smt112.com
+    - http://helpmybathroom.com
+    - mclodesigns.com
+    - lanehmontgomery.com
+    - http://qarmoo.com
+    - helpmybathroom.com
+    - chelsea-west.com
+    - mahovik-bg.com
+    - http://zesthouse.com
+    - earnbyemail.com
+    - http://akademistcicek.com
+    - http://24hourprintshop.com
+  condition: attributes

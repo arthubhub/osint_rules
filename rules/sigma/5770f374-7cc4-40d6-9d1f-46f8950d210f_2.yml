@@ -1,0 +1,29 @@
+title: OSINT - Doh! New "Bart" Ransomware from Threat Actors Spreading Dridex and
+  Locky - process_creation
+id: b117f2a3-742b-412f-85ac-9ac3927caa48
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5770f374-7cc4-40d6-9d1f-46f8950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 846171e2629b712429a903811d19c12b
+    - c9c69655db4a45686f9dcef0108b49b5
+    - 65535f2b1ecee54718233e40e3f333b2
+    - 2808adab51f43b747ce61034a96ab9de
+    sha1:
+    - 929b26eb040c5976af32be4f19e059d016df2273
+    - 158137d4835f7596ad0ef2a191d0e0d8976f0089
+    - 387e6c2936af749d34690a8090127d75eb0970ea
+    - 960ec30ad5e94a35991a30b36411a4144b97b0d3
+    sha256:
+    - 5d3e7c31f786bbdc149df632253fd538fb21cfc0aa364d0f03a79671bbaec62d
+    - 7bb1e8e039d222a51a71599af75b56151a878cf8bbe1f9d3ad5be18200b2286b
+    - 51ff4a033018d9343049305061dcde77cb5f26f5ec48d1be42669f368b1f5705
+    - 247e2c07e57030607de901a461719ae2bb2ac27a90623ea5fd69f7f036c4ea0d
+  condition: attributes

@@ -1,0 +1,15 @@
+title: Dridex IoC's - url_request
+id: 2083bf9f-dc34-4cba-ba31-ac8d06e5adb8
+description: edit this field when analysing or editing the rule - reported by "NCSC-NL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57dfe878-f93c-4eaa-baa9-085f0a950b0c.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securityintelligence.com
+  condition: attributes

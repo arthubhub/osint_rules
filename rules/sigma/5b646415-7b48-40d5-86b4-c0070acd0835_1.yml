@@ -1,0 +1,20 @@
+title: Ursnif, MALWAREMESSIAGH - url_request
+id: 91aa30e7-4b6f-4cf6-84c9-496987226919
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b646415-7b48-40d5-86b4-c0070acd0835.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://sistemait.it
+    - ooiasjdnqjwbeasdasd.com
+    - eqowiesajenqweasd.com
+    - dquohwdihaewqdcas.com
+    - diqjwhebseqhbasdh.com
+  condition: attributes

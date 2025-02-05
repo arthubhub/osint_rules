@@ -1,0 +1,22 @@
+title: 'OSINT Morpho: Profiting from high-level corporate attacks by Symantec - url_request'
+id: ea46ac0e-5d99-4044-a5ea-0017ec2009d0
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/559d537c-f570-4e97-8154-98d9950d210b.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.wildneutron
+detection:
+  attributes:
+    RequestUrl|contains:
+    - jdk-update.com
+    - clust12-akmai.net
+    - http://www.symantec.com
+    - cloudprotect.eu
+    - corp-aapl.com
+    - digitalinsight-ltd.com
+  condition: attributes

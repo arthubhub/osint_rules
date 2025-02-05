@@ -1,0 +1,16 @@
+title: OSINT - Password Protected ZIP with Maldoc - url_request
+id: c9ae8716-8405-45c2-a2bb-abddde7d1df6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c1803a3-43cc-4be7-83bf-42f202de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://duenexacch.com
+    - duenexacch.com
+  condition: attributes

@@ -1,0 +1,26 @@
+title: 'OSINT Arid Viper: Gaza vs Israel Cyber Conflict by Trend Micro - url_request'
+id: 689da809-7fb2-4003-a9d2-0b34c49613f9
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54e1a7eb-4190-424f-bb4a-4d65950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - plmedgroup.com
+    - mediahitech.info
+    - flushupate.com
+    - http://blog.trendmicro.com
+    - ineltdriver.com
+    - http://www.trendmicro.com
+    - advtravel.info
+    - pstcmedia.com
+    - linksis.info
+    - mixedwork.com
+    - flushupdate.com
+    - ahmedfaiez.info
+  condition: attributes

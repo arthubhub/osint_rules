@@ -1,0 +1,16 @@
+title: "OSINT - Meet Remaiten \xE2\u20AC\u201C a Linux bot on steroids targeting routers\
+  \ and potentially other IoT devices - url_request"
+id: a3cd73f1-df79-4468-a380-a5072b0813af
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/570283b7-2800-483e-ba3e-1743950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.welivesecurity.com
+  condition: attributes

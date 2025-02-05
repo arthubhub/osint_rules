@@ -1,0 +1,16 @@
+title: 'OSINT - One, if by email, and two, if by EK: The Cerbers are coming! - url_request'
+id: c5982f54-747f-49e3-aa5b-cf6219789276
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58538c11-4694-47ba-a01c-4cfe02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.malware-traffic-analysis.net
+    - https://isc.sans.edu
+  condition: attributes

@@ -1,0 +1,15 @@
+title: OSINT - Retefe is back in town - url_request
+id: d41bd1b7-3b24-455c-8db7-da5ba5ce503b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5714a8d1-52a4-48fa-8696-4066950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://isc.sans.edu
+  condition: attributes

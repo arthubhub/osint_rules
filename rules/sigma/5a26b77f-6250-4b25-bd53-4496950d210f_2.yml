@@ -1,0 +1,30 @@
+title: 'M2M - "..doc" 2017-12-01 : "12_Invoice_3456" - "I_4321.7z" - dns_query'
+id: 5d346508-f5d0-4e3f-94e0-ef9f06965c05
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a26b77f-6250-4b25-bd53-4496950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+detection:
+  attributes:
+    IpAddresses:
+    - 62.212.154.98
+    - 68.171.62.42
+    - 188.166.203.69
+    - 98.124.252.145
+    - 185.176.221.146
+    - 202.169.44.166
+    - 178.77.75.77
+    - 198.23.241.227
+    - 98.124.252.66
+    - 98.124.251.167
+    - 188.132.180.113
+    - 194.116.187.130
+    - 212.224.65.254
+  condition: attributes

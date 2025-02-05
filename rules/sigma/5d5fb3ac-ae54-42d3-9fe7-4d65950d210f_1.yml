@@ -1,0 +1,16 @@
+title: OSINT - Emotet is back - url_request
+id: 0966fac5-59f2-4004-b2f4-516511d42493
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d5fb3ac-ae54-42d3-9fe7-4d65950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://pastebin.com
+    - https://github.com
+  condition: attributes

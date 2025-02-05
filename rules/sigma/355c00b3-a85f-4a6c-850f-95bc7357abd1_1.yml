@@ -1,0 +1,17 @@
+title: "Linux/CDRThief\u2009\u2014\u2009Indicators of Compromise - Who is calling?\
+  \ CDRThief targets Linux VoIP softswitches - url_request"
+id: 882d7e05-c061-4ecb-b38c-d7073ac4b814
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/355c00b3-a85f-4a6c-850f-95bc7357abd1.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+    - https://www.welivesecurity.com
+  condition: attributes

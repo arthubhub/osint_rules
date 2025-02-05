@@ -1,0 +1,62 @@
+title: 'Malspam 2016-06-28 (Locky campaign subject: ''Updated'') - dns_query'
+id: ef7ca71e-3b85-42e8-b0c9-a49f0cf2ee04
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57721299-5610-4220-97b0-4329950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - delicious-doughnuts.net
+    - jd-products.nl
+    - potolok-profit.ru
+    - bisericaromaneasca.ro
+    - climairuk.com
+    - 4k18.com
+    - cameramartusa.info
+    - euro-support.be
+    - bobbysinghwpg.com
+    - focolareostuni.it
+    - 3141592.ru
+    - asliaypak.com
+    - empiredeckandfence.com
+    - hudebiah.net
+    - addonworks.com
+    - certifiedbanker.org
+    IpAddresses:
+    - 166.63.125.135
+    - 195.208.1.146
+    - 69.195.124.97
+    - 107.180.24.238
+    - 112.140.178.249
+    - 210.171.0.30
+    - 92.53.126.193
+    - 85.118.237.109
+    - 192.186.246.98
+    - 207.210.108.162
+    - 86.106.30.71
+    - 216.218.93.172
+    - 80.244.134.169
+    - 198.54.115.218
+    - 176.62.167.160
+    - 107.6.169.61
+    - 199.241.184.10
+    - 192.186.246.134
+    - 104.152.168.29
+    - 175.45.184.160
+    - 83.96.159.64
+    - 23.229.131.128
+    - 89.42.39.67
+    - 217.73.226.220
+    - 81.177.140.141
+    - 217.76.156.98
+    - 213.160.76.117
+    - 82.140.32.172
+    - 217.172.226.2
+    - 184.171.252.26
+    - 192.185.225.43
+  condition: attributes

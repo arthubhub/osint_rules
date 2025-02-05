@@ -1,0 +1,19 @@
+title: Ransomware - Xorist - process_creation
+id: e253955c-4c5f-4328-b9aa-423d3761adf1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c4445b-c548-4654-af0b-4be3950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 0749bae92ca336a02c83d126e04ec628
+    sha1:
+    - 77b0c41b7d340b8a3d903f21347bbf06aa766b5b
+    sha256:
+    - b3c4ae251f8094fa15b510051835c657eaef2a6cea46075d3aec964b14a99f68
+  condition: attributes

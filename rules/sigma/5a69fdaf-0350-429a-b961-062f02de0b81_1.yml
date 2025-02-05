@@ -1,0 +1,20 @@
+title: OSINT - RTF files for Hancitor utilize exploit for CVE-2017-11882 - url_request
+id: 16ba3216-14c2-443f-9e2c-d5bc260ff609
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a69fdaf-0350-429a-b961-062f02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.hancitor
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://yoyostudy.com.au
+    - ofthi.com
+    - http://ofthi.com
+    - https://isc.sans.edu
+  condition: attributes

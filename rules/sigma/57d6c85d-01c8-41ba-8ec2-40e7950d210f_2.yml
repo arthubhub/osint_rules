@@ -1,0 +1,43 @@
+title: 'Malspam 2016-09-12 (.wsf in .zip) - campaign: "Photo|Image" - dns_query'
+id: 65f938d6-87bf-4f5b-8fc6-24e384c0c4ae
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d6c85d-01c8-41ba-8ec2-40e7950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - synergyconnect.in
+    - gunturnayeebrahminemployees.com
+    - clickhubli.com
+    - websamrat.in
+    - nysekolintsika.mg
+    - crazycreations.in
+    - herosoft.biz
+    - adss30.net
+    - technometics.com
+    - gift2belgaum.com
+    - clickroses.com
+    - mottofotograf.com
+    - samssara.com
+    IpAddresses:
+    - 131.153.37.2
+    - 144.76.110.39
+    - 50.87.153.14
+    - 198.23.59.178
+    - 131.153.37.4
+    - 43.225.54.151
+    - 115.124.123.25
+    - 50.97.161.228
+    - 62.149.144.61
+    - 186.202.153.83
+    - 5.9.28.140
+    - 208.113.154.124
+    - 185.82.221.81
+    - 142.4.34.194
+    - 50.87.153.144
+  condition: attributes

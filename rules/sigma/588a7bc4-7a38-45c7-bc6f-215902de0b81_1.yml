@@ -1,0 +1,18 @@
+title: OSINT - Dridex Banking Trojan Returns, Leverages New UAC Bypass Method - url_request
+id: f9cbe171-a172-49b8-a597-9503bfdc18fc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588a7bc4-7a38-45c7-bc6f-215902de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.dridex
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.flashpoint-intel.com
+    - http://1fevh.top
+  condition: attributes

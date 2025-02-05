@@ -1,0 +1,18 @@
+title: OSINT - The Supreme Backdoor Factory - dns_query
+id: de20c94c-5151-4152-9f94-b086ae21b42f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c7c0198-81b0-41d8-9839-4c4d02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1195
+detection:
+  attributes:
+    IpAddresses:
+    - 83.31.61.38
+    - 83.7.177.233
+  condition: attributes

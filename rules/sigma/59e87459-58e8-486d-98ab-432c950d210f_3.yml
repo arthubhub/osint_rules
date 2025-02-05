@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-10-18 : Affid=3, offline, ".asasin" : "Message from 02087654321"
+  - "Voice Message.7z" - process_creation'
+id: cf2d26cd-de6c-4239-bb9d-ef1fb405c80f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59e87459-58e8-486d-98ab-432c950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - c0a4db485d6759fdaab0175157909e23
+    sha1:
+    - 0aab2f5bcfe422efa93d0806ff5ee10ac6ee754b
+    sha256:
+    - 3fd66cbb34e75cf5a0cf2b12d34de68ff51794ae033208c42ac0eaa7f68cf6e3
+  condition: attributes

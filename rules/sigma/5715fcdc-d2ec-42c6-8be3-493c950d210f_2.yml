@@ -1,0 +1,15 @@
+title: OSINT - Python-Based PWOBot Targets European Organizations - dns_query
+id: c7e6f101-b055-4009-983c-64097d7a990e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5715fcdc-d2ec-42c6-8be3-493c950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 108.61.167.105
+  condition: attributes

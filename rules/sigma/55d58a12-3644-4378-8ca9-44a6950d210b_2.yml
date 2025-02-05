@@ -1,0 +1,54 @@
+title: OSINT  Cheshire Cat - dns_query
+id: 0774a779-5c22-475d-96fc-ddadbdac317c
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55d58a12-3644-4378-8ca9-44a6950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - divextreme-ar.com
+    - beautifuldaisies.com
+    - paris-holidayapartments.com
+    - skydivelessons.com
+    - clickflowers-hk.com
+    - holidayapartments4you.com
+    - au-skydivelessons.com
+    - magnificentcircles.com
+    - franceholidayapartments.com
+    - groupbungee-br.com
+    - eurorafting-tr.com
+    - china-flowershop.com
+    - holidayapartments-paris.com
+    - bungee4you-br.com
+    - brazil-crazybungee.com
+    - bungeejumping-br.com
+    - raftingtours-turkey.com
+    - circlesofourlives-ir.com
+    - euro-rafting.com
+    - hongkong-bouquets.com
+    - groupbungee-uy.com
+    - crazy-jump.com
+    - divextreme-au.com
+    - cropcirclestours.com
+    - apartmentsin-paris.com
+    - ir-cool.com
+    - rosesinchina.com
+    - stuntjumps.com
+    - tandemskydive-ar.com
+    - uruguay-crazybungee.com
+    - bungeejumping-uy.com
+    - raftingholiday.com
+    - crazyjump-uy.com
+    - turkeyextremerafting.com
+    - groupdive.com
+    - dive-extreme.com
+    - groupdive-au.com
+    - bungee4you-uy.com
+    - tandemskydive-au.com
+    - irelancropcircles.com
+  condition: attributes

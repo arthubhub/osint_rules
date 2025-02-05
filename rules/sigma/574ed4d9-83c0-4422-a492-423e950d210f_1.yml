@@ -1,0 +1,17 @@
+title: "OSINT - DRIDEX\xE2\u20AC\u2122s New Tricks Lead to Global Spam Outbreak -\
+  \ url_request"
+id: 3c235df5-e023-4192-9321-c2d0754f34e3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/574ed4d9-83c0-4422-a492-423e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.trendmicro.com
+    - http://documents.trendmicro.com
+  condition: attributes

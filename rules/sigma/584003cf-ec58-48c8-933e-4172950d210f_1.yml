@@ -1,0 +1,31 @@
+title: OSINT - New SmsSecurity Variant Roots Phones, Abuses Accessibility Features
+  and TeamViewer - url_request
+id: ec5e306c-532f-4cf5-a405-cd246c13d6a3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/584003cf-ec58-48c8-933e-4172950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://losbalonazos.com
+    - http://edda-mally.at
+    - http://izmirsatranckursu.net
+    - http://blog.trendmicro.com
+    - http://moseybook.com
+    - http://clubk-ginza.net
+    - http://gruposoluciomatica.com.br
+    - http://www.ircvenezia.it
+    - http://www.vanca.com
+    - http://szaivert-numis.at
+    - http://www.oguhtell.ch
+    - http://sedalbi.com
+    - http://pplweb.pplmotorhomes.com
+    - http://jbrianwashman.com
+    - http://naritamemorial.com
+    - http://www.santamariagorettimestre.it
+  condition: attributes

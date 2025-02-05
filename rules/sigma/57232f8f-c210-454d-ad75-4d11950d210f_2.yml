@@ -1,0 +1,22 @@
+title: OSINT -  Over 100,000 South Korean Users Affected by BlackMoon Campaign - dns_query
+id: 4f0af387-6991-4a0b-ae26-8e4b51e82e55
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57232f8f-c210-454d-ad75-4d11950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 107.151.158.196
+    - 174.139.0.211
+    - 205.209.141.84
+    - 207.226.136.14
+    - 174.139.194.82
+    - 100.43.185.42
+    - 100.43.185.34
+    - 206.161.216.35
+  condition: attributes

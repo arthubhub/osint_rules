@@ -1,0 +1,19 @@
+title: OSINT - Bad Rabbit ransomware - url_request
+id: 13911a25-469e-4ca4-8c08-0d079857f93f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59f0462f-41d4-47b4-9e1b-4a07950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.bad_rabbit
+- attack.software.bad_rabbit
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://1dnscontrol.com
+    - https://securelist.com
+  condition: attributes

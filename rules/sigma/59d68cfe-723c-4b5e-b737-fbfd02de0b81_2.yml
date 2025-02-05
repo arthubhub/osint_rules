@@ -1,0 +1,15 @@
+title: 'OSINT - FreeMilk: A Highly Targeted Spear Phishing Campaign - dns_query'
+id: f3462b8c-981b-4753-90ca-c3fe13ca3593
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d68cfe-723c-4b5e-b737-fbfd02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - discgolfglow.com
+  condition: attributes

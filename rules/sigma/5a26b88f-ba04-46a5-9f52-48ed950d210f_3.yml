@@ -1,0 +1,25 @@
+title: 'M2M - "..doc" 2017-12-04 : "Emailing: 1234567" - "1234567.7z" - process_creation'
+id: 29789f3f-26fd-4c50-84f7-f008a0afde7a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a26b88f-ba04-46a5-9f52-48ed950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+detection:
+  attributes:
+    md5:
+    - 2908715eec754aba1ad21414b23cafb6
+    - 5afa2724e48f51a1a1afa868670626d5
+    sha1:
+    - ef00cbc6001785b44f2919ac125fbbcdebd8f8c9
+    - 4af27f4b95f29f877d0abb1167e6b1148c1849bd
+    sha256:
+    - 2656da2883d210f9709a0cef925c60cbd00dc60175787063bb13a4cd8d2de9fc
+    - cbbdaa9c7fd2ce88519f37289ef2c7059d43b128d4843613d7744d44be225c6b
+  condition: attributes

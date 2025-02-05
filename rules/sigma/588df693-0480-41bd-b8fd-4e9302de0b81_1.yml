@@ -1,0 +1,28 @@
+title: "OSINT - #OCJP-133: Hancitor\xE3\u0192\u017E\xE3\u0192\xAB\xE3\u201A\xA6\xE3\
+  \u201A\xA7\xE3\u201A\xA2\xE6\u201E\u0178\xE6\u0178\u201C \xE3\x81\xA8 \xE3\u0192\
+  \x8F\xE3\u0192\u0192\xE3\u201A\xAD\xE3\u0192\xB3\xE3\u201A\xB0\xE3\x81\u2022\xE3\
+  \u201A\u0152\xE3\x81\u0178Wordpress - url_request"
+id: 53364f3b-a96c-4a05-8ad8-1adc5e7b4840
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588df693-0480-41bd-b8fd-4e9302de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.hancitor
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.0day.jp
+    - rowatterding.ru
+    - fortrittotfor.ru
+    - https://otx.alienvault.com
+    - http://howbetmarow.ru
+    - http://aningronbut.ru
+    - howbetmarow.ru
+    - fortmamuchco.ru
+    - aningronbut.ru
+  condition: attributes

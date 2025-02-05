@@ -1,0 +1,52 @@
+title: "OSINT APT28: A Window into Russia\xE2\u20AC\u2122s Cyber Espionage Operations?\
+  \ blog post by FireEye - process_creation"
+id: eda412d1-65a2-43d1-87d9-7fa44834f1cb
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/544fee45-f108-4fa6-ace9-3989950d210b.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    md5:
+    - 3b0ecd011500f61237c205834db0e13a
+    - 9eebfebe3987fec3c395594dc57a0c4c
+    - 272f0fde35dbdfccbca1e33373b3570d
+    - 1259c4fe5efd9bf07fc4c78466f2dd09
+    - 5882fda97fdf78b47081cc4105d44f7c
+    - ead4ec18ebce6890d20757bb9f5285b1
+    - da2a657dc69d7320f2ffc87013f257ad
+    - 8b92fe86c5b7a9e34f433a6fbac8bc3a
+    - 8c4fa713c5e2b009114adda758adc445
+    - 48656a93f9ba39410763a2196aabc67f
+    - 791428601ad12b9230b9ace4f2138713
+    sha1:
+    - cf3220c867b81949d1ce2b36446642de7894c6dc
+    - d87b310aa81ae6254fff27b7d57f76035f544073
+    - a8551397e1f1a2c0148e6eadcb56fa35ee6009ca
+    - 6316258ca5ba2d85134ad7427f24a8a51ce4815b
+    - e2450dffa675c61aa43077b25b12851a910eeeb6
+    - 85522190958c82589fa290c0835805f3d9a2f8d6
+    - 367d40465fd1633c435b966fa9b289188aa444bc
+    - d9c53adce8c35ec3b1e015ec8011078902e6800b
+    - 682e49efa6d2549147a21993d64291bfa40d815a
+    - f5b3e98c6b5d65807da66d50bd5730d35692174d
+    - ed48ef531d96e8c7360701da1c57e2ff13f12405
+    sha256:
+    - 29cc2e69f65b9ce5fe04eb9b65942b2dabf48e41770f0a49eb698271b99d2787
+    - d58f2a799552aff8358e9c63a4345ea971b27edd14b8eac825db30a8321d1a7a
+    - d54173be095b688016528f18dc97f2d583efcf5ce562ec766afc0b294eb51ac7
+    - 744f2a1e1a62dff2a8d5bd273304a4d21ee37a3c9b0bdcffeeca50374bd10a39
+    - 102b0158bcd5a8b64de44d9f765193dd80df1504e398ce52d37b7c8c33f2552a
+    - c8087186a215553d2f95c68c03398e17e67517553f6e9a8adc906faa51bce946
+    - 03ed773bde6c6a1ac3b24bde6003322df8d41d3d1c85109b8669c430b58d2f69
+    - 423a0799efe41b28a8b765fa505699183c8278d5a7bf07658b3bd507bfa5346f
+    - e6d09ce32cc62b6f17279204fac1771a6eb35077bb79471115e8dfed2c86cd75
+    - 7f6f9645499f5840b59fb59525343045abf91bc57183aae459dca98dc8216965
+    - 7695f20315f84bb1d940149b17dd58383210ea3498450b45fefa22a450e79683
+  condition: attributes

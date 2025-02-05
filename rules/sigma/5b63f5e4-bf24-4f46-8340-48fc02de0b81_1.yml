@@ -1,0 +1,22 @@
+title: OSINT - Attacks on industrial enterprises using RMS and TeamViewer - url_request
+id: df8e1f8e-ca7e-42b3-b802-7aa325bc37e3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b63f5e4-bf24-4f46-8340-48fc02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.babylon
+detection:
+  attributes:
+    RequestUrl|contains:
+    - rosatomgov.ru
+    - document-buh.com
+    - papaninili.temp.swtest.ru
+    - micorsoft.info
+    - buhuchetooo.ru
+    - https://securelist.com
+  condition: attributes

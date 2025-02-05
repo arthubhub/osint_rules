@@ -1,0 +1,21 @@
+title: spearphishing campaign targeted at least 20 Autonomous System (AS) owners -
+  dns_query
+id: 355f22bb-f182-4b15-a5ac-05729c336db6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/8506c95a-f2da-48c2-a1e0-339db58b1ba7.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1566.001
+detection:
+  attributes:
+    QueryName|contains:
+    - onnetmais.org
+    - swisscoms.com
+    IpAddresses:
+    - 47.251.162.130
+  condition: attributes

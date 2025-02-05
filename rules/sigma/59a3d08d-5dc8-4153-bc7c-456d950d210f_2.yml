@@ -1,0 +1,22 @@
+title: OSINT - New Arena Crysis Ransomware Variant Released - process_creation
+id: 92632e9b-2228-4c91-9e93-9370f3536eda
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59a3d08d-5dc8-4153-bc7c-456d950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.dharma_ransomware
+- attack.software.dharma_ransomware
+detection:
+  attributes:
+    md5:
+    - f2679bdabe46e10edc6352fff3c829bc
+    sha1:
+    - 60cbe0e3a70ef3d56810bd9178ce232529c09c5f
+    sha256:
+    - a683494fc0d017fd3b4638f8b84caaaac145cc28bc211bd7361723368b4bb21e
+  condition: attributes

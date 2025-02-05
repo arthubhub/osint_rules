@@ -1,0 +1,20 @@
+title: OSINT - EngineBox Malware Supports 10+ Brazilian Banks - url_request
+id: b0e36f7d-5308-435f-9ee8-a6f5132ef42e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5997e84c-58b8-4652-a5cc-7d9602de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.ilspy.net
+    - https://github.com
+    - http://170.254.236.10
+    - https://technet.microsoft.com
+    - https://isc.sans.edu
+    - http://vimfvl6s.bslah3d1ajofjeatqu1qlkiurm0iyzwd.xyz
+  condition: attributes

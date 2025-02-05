@@ -1,0 +1,22 @@
+title: "It\u2019s Parliamentary: KeyBoy and the targeting of the Tibetan Community\
+  \ - url_request"
+id: a03bb9d5-44b8-4239-8395-ae0f76b2e85d
+description: edit this field when analysing or editing the rule - reported by "CiviCERT"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582dd48e-66bc-40c1-ae49-6fe8d56c6cd2.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.keyboy
+detection:
+  attributes:
+    RequestUrl|contains:
+    - www.backus.myftp.name
+    - www.about.jkub.com
+    - www.eleven.mypop3.org
+    - tibetvoices.com
+    - https://citizenlab.org
+  condition: attributes

@@ -1,0 +1,46 @@
+title: 'Malspam 2016-09-09 (.wsf in .zip) - campaign: "Documents Requested" - url_request'
+id: 7b5a3908-72b5-4238-b1f7-b5e23f8c0e78
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d2cf18-fa64-4a18-978e-4b6e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://herosoft.biz
+    - http://tranzporthub.com
+    - scpolytechnic.com
+    - tranzporthub.com
+    - draarun.com
+    - http://scpolytechnic.com
+    - http://draarun.com
+    - http://syamasahithi.com
+    - http://abcdraw.biz
+    - http://www.draarun.com
+    - http://wamasoftware.com
+    - vajrammatrimony.com
+    - http://samssara.com
+    - herosoft.biz
+    - wamasoftware.com
+    - http://partyeazy.com
+    - mottofotograf.com
+    - ratecompares.com
+    - syamasahithi.com
+    - pmlojistik.com
+    - abcdraw.biz
+    - mysoregiftsflowers.com
+    - http://mottofotograf.com
+    - http://allcateringservices.in
+    - http://pmlojistik.com
+    - http://mysoregiftsflowers.com
+    - allcateringservices.in
+    - http://vajrammatrimony.com
+    - partyeazy.com
+    - http://ratecompares.com
+    - http://www.ausaf.pk
+    - samssara.com
+  condition: attributes

@@ -1,0 +1,15 @@
+title: Tech Support Scam Synchs Alerts with App Crashes in Windows Event Logs - url_request
+id: 75a3272d-961d-495b-b953-88645da6cbe8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58cbac05-b7d0-4f38-84fb-0928950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

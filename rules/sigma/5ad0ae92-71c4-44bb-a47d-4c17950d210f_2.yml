@@ -1,0 +1,25 @@
+title: Crypren Ransomware - process_creation
+id: f882983d-3165-48df-8374-8bac31657393
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ad0ae92-71c4-44bb-a47d-4c17950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.crypren
+- attack.software.crypren
+detection:
+  object_7117:
+    md5:
+    - 7e7ecaceec4e30e9e1aaec6ac31d6c5c
+    sha1:
+    - 6190247aefb85720372101c9d69c87ee7dee21a1
+    sha256:
+    - c290907b168b106296718bab628cbbe42281ab5f066de4653fb38ffc21989690
+  attributes:
+    sha256:
+    - c290907b168b106296718bab628cbbe42281ab5f066de4653fb38ffc21989690
+  condition: 1 of object_* or attributes

@@ -1,0 +1,17 @@
+title: Fake Job Application incl. Macro - url_request
+id: 801da37a-daa5-417f-b0c9-2ee0aade7aa9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a6869a1-1bbc-4a25-ad96-a8fd950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.smoke_loader
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://80.82.67.217
+  condition: attributes

@@ -1,0 +1,17 @@
+title: OSINT - Zeus Panda Banking Trojan Targets Online Holiday Shoppers - dns_query
+id: aae9a0a7-c500-4ba0-ac4c-fd98b5bae43d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a390de6-4a58-4a19-89fb-4620950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - gromnes.top
+    - kichamyn.top
+    - aklexim.top
+  condition: attributes

@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-09-18 : Affid=3, offline, ".ykcol" : "Message from KM_C224e"
+  - "20171809_12345678901.7z" - process_creation'
+id: 3f3e7110-01fb-4121-9db3-34cfa6399298
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59c56158-c3e8-47e0-bc9f-4d02950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - c6475a9b90dccea03d93dedf00eac5ee
+    sha1:
+    - b7afbe3c25fa4a147b32fa37b71c95ff089489e9
+    sha256:
+    - 8bf303dda84a1e0552f98370dd5dbfdf127d7ec9b5caab948874a897771ce142
+  condition: attributes

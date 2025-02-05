@@ -1,0 +1,20 @@
+title: 'OSINT - PetrWrap: the new Petya-based ransomware used in targeted attacks
+  - process_creation'
+id: 7fd0bdce-35ff-4ae5-ac07-91049611ec92
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58d013c1-6abc-472a-bbeb-41ba950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 17c25c8a7c141195ee887de905f33d7b
+    sha1:
+    - 7fa8079e8dca773574d01839efc623d3cd8e6a47
+    sha256:
+    - e079fa28ea51fa98644164caf585ae3231d25372fccca1245902fb57488d4660
+  condition: attributes

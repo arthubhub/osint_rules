@@ -1,0 +1,53 @@
+title: OSINT Exploring .XYZ (Another Shady TLD Report) by Blue Coat - dns_query
+id: f52b8eb1-a0aa-4536-ac7e-2af9974e7446
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55bb31a3-dcf4-4731-acdd-4851950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - useesp.xyz
+    - providerstore.xyz
+    - hypothesisbx.xyz
+    - scrami.xyz
+    - flowerbeder.xyz
+    - levelstate.xyz
+    - possessedaa.xyz
+    - mtmiss.xyz
+    - cultivatedci.xyz
+    - wildernessax.xyz
+    - retirementspacecraft.xyz
+    - throbbingiv.xyz
+    - overjoyedst.xyz
+    - proceedingsxu.xyz
+    - theyrefriends.xyz
+    - amazingdeals.xyz
+    - publishedux.xyz
+    - magazinesdj.xyz
+    - indianews.com-40rxk6itwdk71bdcb6xlq9cst3upsp.xyz
+    - intimidatens.xyz
+    - ownershipep.xyz
+    - unfortunatest.xyz
+    - likelihoodkp.xyz
+    - findville.xyz
+    - ineats.xyz
+    - shiftingsmokers.xyz
+    - rudead.xyz
+    - areaairports.xyz
+    - agreeablefw.xyz
+    - unanimouslyxy.xyz
+    - naturalistsky.xyz
+    - intellectualme.xyz
+    - fireworksht.xyz
+    - mineex.xyz
+    IpAddresses:
+    - 5.1.82.185
+    - 5.1.82.184
+    - 5.1.82.178
+    - 5.1.82.103
+  condition: attributes

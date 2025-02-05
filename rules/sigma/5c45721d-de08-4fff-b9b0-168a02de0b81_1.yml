@@ -1,0 +1,15 @@
+title: Incident - pear.php.net - compromised and delivering malicious package - url_request
+id: 4402b17f-9233-46bd-9516-0b2dec24aa5f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c45721d-de08-4fff-b9b0-168a02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_12887:
+    RequestUrl|contains:
+    - https://twitter.com
+  condition: 1 of object_*

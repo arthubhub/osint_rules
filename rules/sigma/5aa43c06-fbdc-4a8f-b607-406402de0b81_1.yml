@@ -1,0 +1,15 @@
+title: OSINT - New traces of Hacking Team in the wild - url_request
+id: ca3bf9e8-c48e-4322-ae92-2086923e6f76
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aa43c06-fbdc-4a8f-b607-406402de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.welivesecurity.com
+  condition: attributes

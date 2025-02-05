@@ -1,0 +1,20 @@
+title: '2019-01-31: ISFB v2 Installs Dridex "3101" - url_request'
+id: ba202da6-4cf6-488f-b211-ff6385f08d52
+description: edit this field when analysing or editing the rule - reported by "VK-Intel"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c5331ac-c160-4a17-a34f-3da568f8e8cf.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.dridex
+- attack.software.dridex
+detection:
+  attributes:
+    RequestUrl|contains:
+    - h5441eqzey.fun
+    - taileenanahi.company
+    - f60vinnie75.city
+  condition: attributes

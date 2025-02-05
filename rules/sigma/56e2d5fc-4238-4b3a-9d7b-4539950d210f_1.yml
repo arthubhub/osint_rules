@@ -1,0 +1,15 @@
+title: '''Surprise'' Ransomware (2016-03-11) - url_request'
+id: 25eb7f99-62b3-4ae6-a23a-4b6a1610143b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e2d5fc-4238-4b3a-9d7b-4539950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://pulseaudio.duckdns.org
+  condition: attributes

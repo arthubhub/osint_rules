@@ -1,0 +1,23 @@
+title: OSINT - HC7 GOTYA Ransomware Installed via Remote Desktop Services. Spread
+  with PsExec - process_creation
+id: c18cbe75-0536-4b1d-96e8-3c1d6e348412
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a290dd3-ac58-46b1-9334-fe72950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.hc7
+- attack.group.hc7
+detection:
+  attributes:
+    md5:
+    - d7a8a80c8c30378a5f460989e0f50dc3
+    sha1:
+    - ec2ddc2f992945715666d0d039baf07bca4c5753
+    sha256:
+    - 81a0ecf7ebec8f86d8042e3a3dbd756f6b8992c6cf3b4f94a9026d0192153b85
+  condition: attributes

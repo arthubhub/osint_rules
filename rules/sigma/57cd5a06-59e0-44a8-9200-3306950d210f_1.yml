@@ -1,0 +1,19 @@
+title: 'Malspam 2016-09-05 (.js in .zip) - campaign: "Credit card receipt" - url_request'
+id: 009e4358-83b6-4b27-bf61-7e315cee902c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57cd5a06-59e0-44a8-9200-3306950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - canonsupervideo4k.ws
+    - http://canonsupervideo4k.ws
+    - http://tradesmartcoin.xyz
+    - videoconvertermac.in
+    - http://darkestzone2.wang
+  condition: attributes

@@ -1,0 +1,37 @@
+title: 'M2M -  Locky 2017-10-04 : Affid=3, offline, ".ykcol" : "Message from 02087654321"
+  - "Voice Message.7z" - url_request'
+id: 91a130eb-3789-44fe-be0b-29d97c0e6cac
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d5e1fe-30f4-48ee-8b75-dabd950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.traders-forum.com
+    - http://baysanal.com
+    - http://www.rafaelgalindo.com
+    - http://photobookexpress.com
+    - http://www.pizzelli.eu
+    - http://lacadosmurcia.com
+    - http://foxcabinets.com
+    - http://mis4.zenfinancial.com
+    - http://ragazzemessenger.com
+    - http://artsidestudio.com
+    - http://timmah.users.whitehat.dk
+    - http://pspcny.com
+    - http://poslovnekomunikacije.si
+    - http://littleblessingscotons.com
+    - http://trapiantivarese.org
+    - http://computerserviceheerhugowaard.nl
+    - http://laveentrading.com
+    - http://mautau.it
+    - http://derainlay.info
+  condition: attributes

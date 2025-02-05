@@ -1,0 +1,28 @@
+title: 'Malspam 2016-06-29 (campaign subject: ''Financial report'') - url_request'
+id: 75cbd892-8a18-4a66-bb70-d258b19ef9bb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5773b18a-9710-4337-ae4c-4014950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://65.99.205.183
+    - http://arquipiedra.cl
+    - centralbs.com
+    - geiten.nl
+    - http://83.235.64.44
+    - http://210.196.205.19
+    - buron.dk
+    - greatlakessawingsolutions.com
+    - benelist.cz
+    - elipse.es
+    - http://115.146.42.43
+    - centro-odontoiatrico-neuromuscolare.it
+    - http://82.140.32.172
+    - arquipiedra.cl
+  condition: attributes

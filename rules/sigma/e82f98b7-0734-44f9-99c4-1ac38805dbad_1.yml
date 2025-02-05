@@ -1,0 +1,36 @@
+title: OSINT - New campaign targeting security researchers - url_request
+id: 86abc105-7208-4c1c-be4d-e80009abdb05
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/e82f98b7-0734-44f9-99c4-1ac38805dbad.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1249
+- attack.t1341
+detection:
+  attributes:
+    RequestUrl|contains:
+    - codevexillium.org
+    - https://www.dronerc.it
+    - https://angeldonationblog.com
+    - https://www.fabioluciani.com
+    - angeldonationblog.com
+    - krakenfolio.com
+    - transferwiser.io
+    - https://www.edujikim.com
+    - transplugin.io
+    - http://trophylab.com
+    - https://investbooking.de
+    - opsonew3org.sg
+    - http://www.colasprint.com
+    - https://www.linkedin.com
+    - https://codevexillium.org
+    - https://blog.google
+    - https://transplugin.io
+    - investbooking.de
+    - trophylab.com
+  condition: attributes

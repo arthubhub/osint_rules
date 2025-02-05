@@ -1,0 +1,17 @@
+title: OSINT -  IcedID Banking Trojan Teams up with Rovnix for Distribution - dns_query
+id: 1b7c5c49-fb8c-46bc-a38b-56be9873960a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ace0663-370c-40d0-b651-44f4950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - efoijowufjaowudawd.com
+    IpAddresses:
+    - 86.123.64.43
+  condition: attributes

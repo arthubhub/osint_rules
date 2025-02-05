@@ -1,0 +1,29 @@
+title: 'Malspam 2016-10-03 (.xls) - campaign: "[Scan]" - url_request'
+id: 13b13ace-188b-4876-bc4f-8ccf8ad787a7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57f239a3-9ac0-4261-8678-73f0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - golfnauvoo.com
+    - boservice.info
+    - http://foe-2.com
+    - cedrussauna.com
+    - http://inmopromo.com
+    - http://far-infraredsaunas.com
+    - http://bluewaterappco.com
+    - far-infraredsaunas.com
+    - http://boservice.info
+    - http://icdsarch.com
+    - bluewaterappco.com
+    - http://mmm2.aaomg.com
+    - http://denvertracy.com
+    - http://golfnauvoo.com
+    - http://cedrussauna.com
+  condition: attributes

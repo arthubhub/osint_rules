@@ -1,0 +1,33 @@
+title: 'OSINT - First Node.js-based Ransomware : Nodera - process_creation'
+id: 3b54e503-9824-4b03-b28c-479611601039
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e2a9dc9-adb4-49bc-9be1-4304950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.nodera_ransomware
+- attack.software.nodera_ransomware
+detection:
+  object_4596:
+    md5:
+    - 976b17845289d9f8a5ee1c8a9e9c4173
+    sha1:
+    - c458e4c32e3ebb1fca331ef235fe3f96e505e066
+    sha256:
+    - 53a95c9126be8262afb0821da4d7137e6c8a4d9b363f91298249ca134d394bf4
+  object_4598:
+    md5:
+    - e8cfee97467d4006257afdaabf945565
+    sha1:
+    - 7879bbaf9bd6de58a7b318d013cd479d4a24ffae
+    sha256:
+    - 7265c1fb74eb9ea3cd98358475620ce54b9033421ba042957135bdefd078b366
+  attributes:
+    sha256:
+    - 53a95c9126be8262afb0821da4d7137e6c8a4d9b363f91298249ca134d394bf4
+    - 7265c1fb74eb9ea3cd98358475620ce54b9033421ba042957135bdefd078b366
+  condition: 1 of object_* or attributes

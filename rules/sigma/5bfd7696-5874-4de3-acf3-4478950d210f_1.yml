@@ -1,0 +1,18 @@
+title: OSINT -  DNSpionage Campaign Targets Middle East - url_request
+id: 1f292854-28c0-478e-a5a6-bd34eb3930fb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bfd7696-5874-4de3-acf3-4478950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - hr-wipro.com
+    - https://blog.talosintelligence.com
+    - 0ffice36o.com
+    - hr-suncor.com
+  condition: attributes

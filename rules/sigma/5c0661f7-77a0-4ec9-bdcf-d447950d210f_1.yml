@@ -1,0 +1,69 @@
+title: MAR-10219351.r1.v2 (SamSam ransomware) - process_creation
+id: 2f236fba-8bbb-40e6-951b-30f41e86461a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c0661f7-77a0-4ec9-bdcf-d447950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.samsam
+- attack.group.samas-samsam
+- attack.software.samas-samsam
+- attack.software.samsam
+detection:
+  object_11107:
+    md5:
+    - 222d7fde37ae344824a97087d473cdcd
+    sha1:
+    - 90205a2761ed7ac3b188230786ec2bebd30effba
+    sha256:
+    - 5d65ebdde1aef8f23114f95454287e7410965288f144d880ece2a2b8c3128645
+  object_11108:
+    md5:
+    - fe3ae84a8defc809e734bbd0736f82de
+    sha1:
+    - 04a2ea4c78f78d628800c0a5cb9547a0c0b14378
+    sha256:
+    - d8d919d884b86e4d5977598bc9d637ed53e21d5964629d0427077e08ddbcba68
+  object_11109:
+    md5:
+    - 5e1317af9956be12deebdea49aae14f5
+  object_11110:
+    md5:
+    - 124120a6b861fdfff756e19a77a53e05
+  object_11111:
+    md5:
+    - 8a2d72fec9d2535440e0f83b59253f2b
+  object_11112:
+    md5:
+    - b227291feae10a83e762c2bc9d959a7f
+  object_11113:
+    md5:
+    - 222d7fde37ae344824a97087d473cdcd
+    sha1:
+    - 90205a2761ed7ac3b188230786ec2bebd30effba
+    sha256:
+    - 5d65ebdde1aef8f23114f95454287e7410965288f144d880ece2a2b8c3128645
+  object_11114:
+    md5:
+    - 397b763d106b2f347c5a563922273551
+  object_11115:
+    md5:
+    - ad25e96cae2016331129ec4643535822
+  object_11116:
+    md5:
+    - 01784b876d14b1384491318f8fce07d5
+  object_11117:
+    md5:
+    - 816849886aa28e56db0cd065fae38897
+  object_11118:
+    md5:
+    - fe3ae84a8defc809e734bbd0736f82de
+    sha1:
+    - 04a2ea4c78f78d628800c0a5cb9547a0c0b14378
+    sha256:
+    - d8d919d884b86e4d5977598bc9d637ed53e21d5964629d0427077e08ddbcba68
+  condition: 1 of object_*

@@ -1,0 +1,31 @@
+title: "[OSINT] No Honor Among Thieves - Prynt Stealer\u2019s Backdoor Exposed - dns_query"
+id: 62ba55b7-8159-4665-af59-861663aac0e8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/b7a486af-8b67-4f58-873b-0ae25fea43e9.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.darkeye
+- attack.group.darkeye
+- attack.group.prynt_stealer
+- attack.software.prynt_stealer
+- attack.software.worldwind
+- attack.group.worldwind
+detection:
+  object_18418:
+    QueryName|contains:
+    - bigdaddy-service.biz
+  object_18419:
+    QueryName|contains:
+    - bigdaddy-service.biz
+  object_18420:
+    QueryName|contains:
+    - bigdaddy-service.biz
+  object_18421:
+    QueryName|contains:
+    - daddy.linkpc.net
+  condition: 1 of object_*

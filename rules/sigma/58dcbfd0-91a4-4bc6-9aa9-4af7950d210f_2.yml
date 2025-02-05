@@ -1,0 +1,16 @@
+title: "OSINT - Websites compromised in \xE2\u20AC\u02DCDecimal IP\xE2\u20AC\u2122\
+  \ campaign - dns_query"
+id: c574bf89-c160-407f-a7b3-7dc7d442469f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58dcbfd0-91a4-4bc6-9aa9-4af7950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 104.238.158.235
+  condition: attributes

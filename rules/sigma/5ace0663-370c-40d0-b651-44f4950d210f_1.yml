@@ -1,0 +1,16 @@
+title: OSINT -  IcedID Banking Trojan Teams up with Rovnix for Distribution - url_request
+id: 941d19c7-640e-44ed-8f8a-c4d9b18a2f0f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ace0663-370c-40d0-b651-44f4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.talosintelligence.com
+    - efoijowufjaowudawd.com
+  condition: attributes

@@ -1,0 +1,19 @@
+title: OSINT - New Fox Ransomware Matrix Variant Tries Its Best to Close All File
+  Handles - url_request
+id: 0bf862a6-d099-4fef-af51-ae0f67a3dd4c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bbb1f88-fe84-4834-bccd-7916950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.matrix
+- attack.group.matrix
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

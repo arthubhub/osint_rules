@@ -1,0 +1,26 @@
+title: OSINT -  Operation ShadowHammer - process_creation
+id: 633e30d0-5b14-4824-9dee-34ce53cde7c8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c9a14a9-fdb0-4cc9-bd13-4cbf950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.operation_shadowhammer
+detection:
+  object_7869:
+    md5:
+    - aa15eb28292321b586c27d8401703494
+    sha256:
+    - bebb16193e4b80f4bc053e4fa818aa4e2832885392469cd5b8ace5cec7e4ca19
+  object_7870:
+    md5:
+    - aa15eb28292321b586c27d8401703494
+    sha1:
+    - 69c08086c164e58a6d0398b0ffdcb957930b4cf2
+    sha256:
+    - bebb16193e4b80f4bc053e4fa818aa4e2832885392469cd5b8ace5cec7e4ca19
+  condition: 1 of object_*

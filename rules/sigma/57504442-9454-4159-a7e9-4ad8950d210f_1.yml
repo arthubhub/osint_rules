@@ -1,0 +1,16 @@
+title: 'OSINT - IRONGATE ICS Malware: Nothing to See Here...Masking Malicious Activity
+  on SCADA Systems - url_request'
+id: 1a19b9af-3402-4fe6-b23f-4b91eb498c8e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57504442-9454-4159-a7e9-4ad8950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.fireeye.com
+  condition: attributes

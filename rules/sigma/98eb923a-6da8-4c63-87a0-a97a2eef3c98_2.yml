@@ -1,0 +1,115 @@
+title: 'CustomerLoader: a new malware distributing a wide variety of payloads - dns_query'
+id: f18abc02-9360-45e6-8de5-cebb77bf5b14
+description: edit this field when analysing or editing the rule - reported by "Centre
+  for Cyber security Belgium"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/98eb923a-6da8-4c63-87a0-a97a2eef3c98.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1140
+- attack.software.s0366
+- attack.t1566.001
+- attack.group.darkcloud_stealer
+- attack.t1132.001
+- attack.t1027
+- attack.group.ave_maria
+- attack.software.asyncrat
+- attack.software.lgoogloader
+- attack.software.xloader
+- attack.t1573.001
+- attack.software.darkcloud_stealer
+- attack.software.s0262
+- attack.t1001
+- attack.t1071.001
+- attack.t1620
+- attack.group.asyncrat
+- attack.software.formbook
+- attack.t1027.007
+- attack.t1562.001
+- attack.software.s0332
+- attack.t1562
+- attack.software.stealc
+- attack.t1129
+- attack.software.s0670
+- attack.group.redline_stealer
+- attack.group.xloader
+- attack.software.sectoprat
+- attack.group.lgoogloader
+- attack.group.sectoprat
+- attack.software.redline_stealer
+- attack.software.agent_tesla
+- attack.t1105
+- attack.software.ave_maria
+- attack.group.agent_tesla
+- attack.group.bitrat
+- attack.software.s0331
+- attack.group.vidar
+- attack.software.vidar
+- attack.software.bitrat
+- attack.group.stealc
+detection:
+  object_8694:
+    IpAddresses:
+    - 45.9.74.99
+  object_8695:
+    IpAddresses:
+    - 5.42.65.69
+  attributes:
+    QueryName|contains:
+    - get-a.pw
+    - bin-c.pw
+    - hardcoverradio.com
+    - bin-d.pw
+    - cmd22.pw
+    - hautegaleria.com
+    - macrospro.pw
+    - bin-a.pw
+    - vst-dw.com
+    - get-y.com
+    - get-i.pw
+    - soft-got.pw
+    - macros-pro.net
+    - soft-got.net
+    - cmd2.pw
+    - self-games.space
+    - seif-games.com
+    - bin-b.pw
+    - slackmessenger.pw
+    - cmd1.pw
+    - get-vbs.com
+    - soft-got.co
+    - self-games.com
+    - plugin4free.com
+    - vbs3.pw
+    - crypt1.pw
+    - plugin4free.net
+    - vbs22.pw
+    - soft-got.com
+    - vbs1.pw
+    - mymine.pw
+    - self-games.host
+    - kyliansuperm92139124.sbs
+    - self-games.site
+    - vstdw.com
+    - minemy.pw
+    - gethere.pw
+    - jacksmanual.com
+    - vpnsget.com
+    - vpnsget.pw
+    - get-d.pw
+    - get-b.pw
+    - adanagram.com
+    - slackmessenger.site
+    - self-games.pw
+    - get-c.pw
+    - vbs2.pw
+    - vstget.com
+    IpAddresses:
+    - 5.42.94.169
+    - 179.43.170.241
+    - 77.91.124.25
+  condition: 1 of object_* or attributes

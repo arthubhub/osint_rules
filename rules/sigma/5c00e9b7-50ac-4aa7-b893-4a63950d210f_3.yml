@@ -1,0 +1,25 @@
+title: OSINT - Hancitor active again yith new macro - IoCs - process_creation
+id: a272303a-43c8-4091-9a71-3f12c6ae960a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c00e9b7-50ac-4aa7-b893-4a63950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.hancitor
+- attack.group.hancitor
+detection:
+  object_11104:
+    sha256:
+    - a4276750a825c73f465bf67672b06f19613db82c047f9c0daa7c971c1d231fac
+  object_11105:
+    md5:
+    - 9aff54da8d88f6794ce900fd3bf2ad62
+    sha1:
+    - f403fa334c8804020b9a2f1620ca6a251c34827c
+    sha256:
+    - a4276750a825c73f465bf67672b06f19613db82c047f9c0daa7c971c1d231fac
+  condition: 1 of object_*

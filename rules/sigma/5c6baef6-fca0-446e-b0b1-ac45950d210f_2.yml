@@ -1,0 +1,25 @@
+title: Financial - socgen-compliance.com fake website delivering malicious documents
+  - dns_query
+id: 925628be-6a36-4cb4-8659-e32bba2cc594
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c6baef6-fca0-446e-b0b1-ac45950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1137
+- attack.t1179
+- attack.t1065
+- attack.t1112
+- attack.t1055
+detection:
+  attributes:
+    QueryName|contains:
+    - socgen-compliance.com
+    IpAddresses:
+    - 80.82.64.126
+    - 185.10.68.204
+  condition: attributes

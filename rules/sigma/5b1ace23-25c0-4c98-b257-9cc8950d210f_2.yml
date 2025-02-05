@@ -1,0 +1,26 @@
+title: 'OSINT - InvisiMole: surprisingly equipped spyware, undercover since 2013 -
+  dns_query'
+id: 2682ff20-4e8a-40d2-acfb-4639abd8834a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b1ace23-25c0-4c98-b257-9cc8950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 78.46.35.74
+    - 185.118.66.163
+    - 185.156.173.92
+    - 194.187.249.157
+    - 213.239.220.41
+    - 46.165.231.85
+    - 95.215.111.109
+    - 185.118.67.233
+    - 46.165.241.153
+    - 46.165.241.129
+    - 46.165.230.241
+  condition: attributes

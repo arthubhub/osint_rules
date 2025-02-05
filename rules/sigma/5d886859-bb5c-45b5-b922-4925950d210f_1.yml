@@ -1,0 +1,21 @@
+title: OSINT - Emotet Updated C2 Info 9/20 - url_request
+id: 7581de1e-e0ce-4d98-8153-73510226cefb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d886859-bb5c-45b5-b922-4925950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.emotet
+- attack.software.emotet
+- attack.software.s0367
+- attack.software.geodo
+- attack.group.geodo
+detection:
+  object_11857:
+    RequestUrl|contains:
+    - https://mobile.twitter.com
+  condition: 1 of object_*

@@ -1,0 +1,26 @@
+title: "OSINT - EITest Nabbing Chrome Users with a \xE2\u20AC\u0153Chrome Font\xE2\
+  \u20AC\x9D Social Engineering Scheme - url_request"
+id: 33fd2084-01be-4856-b20d-65916b40d91a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588a6de9-e2f4-4fbc-b09d-427f02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - 54dfa1cb.com
+    - starrer.com
+    - e5b57288.com
+    - vidvi.cf
+    - techgnews.com
+    - https://www.proofpoint.com
+    - 33db9538.com
+    - askcom.me
+    - 9507c4e8.com
+    - shareyourfashion.net
+    - twittertravels.com
+  condition: attributes

@@ -1,0 +1,18 @@
+title: Tracking Powershell Empire C2 via Urlscan - process_creation
+id: ea83132d-3c93-4cf4-817e-8bf1f8bad857
+description: edit this field when analysing or editing the rule - reported by "Hestat"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5deea6f2-568c-4fe3-a457-0d230a0a019b.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.s0363
+detection:
+  attributes:
+    sha256:
+    - a58fb107072d9523114a1b1f17fbf5e7a8b96da7783f24d84f83df34abc48576
+    - b8c892fbb49921529be6f6ce17685c31724f76959111b28f39e39dc299b8acaf
+  condition: attributes

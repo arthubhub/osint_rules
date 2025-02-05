@@ -1,0 +1,19 @@
+title: OSINT Shellshock exploitation from Red Sky Weekly blog post - process_creation
+id: 1a2adc00-d63c-45aa-82cd-407ffb5eab65
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/543cf0a2-e1d8-4c20-bb05-9177950d210b.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 7847e83ad52b8b32ae14522e1a960370
+    sha1:
+    - 24b24379c3a6e554d77428faa22b4176d78499b7
+    sha256:
+    - 052421011162421c7fbe1c9613e37b520a494034901dab1c6ee192466090421d
+  condition: attributes

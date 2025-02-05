@@ -1,0 +1,16 @@
+title: "Analysis of FG-IR-22-398 \u2013 FortiOS - heap-based buffer overflow in SSLVPNd\
+  \ - url_request"
+id: 8d5c4822-5ef2-4391-9d07-536b9f9e9b93
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/042a4478-fe19-4ed0-a309-b96da3542a95.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_10654:
+    RequestUrl|contains:
+    - https://www.fortinet.com
+  condition: 1 of object_*

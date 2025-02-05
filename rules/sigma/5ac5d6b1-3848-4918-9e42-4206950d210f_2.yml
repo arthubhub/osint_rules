@@ -1,0 +1,27 @@
+title: OSINT - Mole66 Cryptomix Ransomware Variant Released - process_creation
+id: 2a93cf67-b5a2-4d29-8012-344c94b7325f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ac5d6b1-3848-4918-9e42-4206950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.cryptomix
+- attack.software.cryptomix
+- attack.software.zeta
+- attack.group.zeta
+detection:
+  object_9009:
+    md5:
+    - c3294c90474063dfb0d28ef8a693a6cb
+    sha1:
+    - f339b703192a562dde82596319e8720c30aaa5ed
+    sha256:
+    - 15f5cb94b851289d0218f333e06372e43b2a55d241c530d4f61aad3b89f68b91
+  attributes:
+    sha256:
+    - 15f5cb94b851289d0218f333e06372e43b2a55d241c530d4f61aad3b89f68b91
+  condition: 1 of object_* or attributes

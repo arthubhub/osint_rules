@@ -1,0 +1,17 @@
+title: OSINT - OSINT Reporting Regarding DPRK and TA505 Overlap - dns_query
+id: 5ac28211-01da-4ece-a41f-4b9c765fab82
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5caefb63-cb90-4a86-abc2-4fcc950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.ta505
+detection:
+  attributes:
+    IpAddresses:
+    - 192.95.14.128
+  condition: attributes

@@ -1,0 +1,15 @@
+title: OSINT - A new era in mobile banking Trojans - url_request
+id: b3a97ac6-f090-4bd2-8df9-4c7503257c80
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5980127d-ada0-479d-b976-c51d02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

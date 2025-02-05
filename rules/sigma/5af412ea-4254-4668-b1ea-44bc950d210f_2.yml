@@ -1,0 +1,15 @@
+title: OSINT - Botnet exploiting GPON Vulnerability - dns_query
+id: 7c727b54-ed75-43ca-b4ad-f47ee0e0fe97
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5af412ea-4254-4668-b1ea-44bc950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 185.62.190.191
+  condition: attributes

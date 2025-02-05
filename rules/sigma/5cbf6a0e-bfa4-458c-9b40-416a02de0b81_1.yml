@@ -1,0 +1,19 @@
+title: 'OSINT - FINTEAM: Trojanized TeamViewer Against Government Targets - url_request'
+id: 3d70e846-78ee-40d4-92cb-45b2504ff26f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cbf6a0e-bfa4-458c-9b40-416a02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1041
+- attack.t1193
+- attack.t1113
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://research.checkpoint.com
+  condition: attributes

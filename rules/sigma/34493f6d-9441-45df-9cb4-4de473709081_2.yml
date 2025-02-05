@@ -1,0 +1,96 @@
+title: '#StopRansomware: MedusaLocker - dns_query'
+id: 5e75db3a-2a9c-4fc5-809b-6321d2b399f3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/34493f6d-9441-45df-9cb4-4de473709081.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1566
+- attack.software.medusalocker
+- attack.t1490
+- attack.t1059.001
+- attack.t1486
+- attack.t1562.009
+- attack.group.medusalocker
+- attack.t1133
+detection:
+  object_802:
+    IpAddresses:
+    - 195.123.246.138
+  object_803:
+    IpAddresses:
+    - 138.124.186.221
+  object_804:
+    IpAddresses:
+    - 159.223.0.9
+  object_805:
+    IpAddresses:
+    - 45.146.164.141
+  object_806:
+    IpAddresses:
+    - 185.220.101.35
+  object_807:
+    IpAddresses:
+    - 185.220.100.249
+  object_808:
+    IpAddresses:
+    - 50.80.219.149
+  object_809:
+    IpAddresses:
+    - 185.220.101.146
+  object_810:
+    IpAddresses:
+    - 185.220.101.252
+  object_811:
+    IpAddresses:
+    - 179.60.150.97
+  object_812:
+    IpAddresses:
+    - 84.38.189.52
+  object_813:
+    IpAddresses:
+    - 94.232.43.63
+  object_814:
+    IpAddresses:
+    - 108.11.30.103
+  object_815:
+    IpAddresses:
+    - 194.61.55.94
+  object_816:
+    IpAddresses:
+    - 198.50.233.202
+  object_817:
+    IpAddresses:
+    - 40.92.90.105
+  object_818:
+    IpAddresses:
+    - 188.68.216.23
+  object_819:
+    IpAddresses:
+    - 87.251.75.71
+  object_820:
+    IpAddresses:
+    - 196.240.57.20
+  object_821:
+    IpAddresses:
+    - 198.0.198.5
+  object_822:
+    IpAddresses:
+    - 194.5.220.122
+  object_823:
+    IpAddresses:
+    - 194.5.250.124
+  object_824:
+    IpAddresses:
+    - 194.5.220.124
+  object_825:
+    IpAddresses:
+    - 104.210.72.161
+  attributes:
+    QueryName|contains:
+    - qd7pcafncosqfqu3ha6fcx4h6sr7tzwagzpcdcnytiw3b6varaeqv5yd.onion
+  condition: 1 of object_* or attributes

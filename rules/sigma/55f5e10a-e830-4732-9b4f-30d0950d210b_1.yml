@@ -1,0 +1,28 @@
+title: "OSINT A Peek Inside an Affiliate\xE2\u20AC\u2122s Malspam Operation: Kovter\
+  \ and Miuref/Boaxxe Infections by PhishMe - url_request"
+id: 944877d9-d315-4327-9007-c81cb36ed605
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55f5e10a-e830-4732-9b4f-30d0950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - idsecurednow.com
+    - etqy.com
+    - ayuso-arch.com
+    - les-eglantiers.fr
+    - harmacrebar.com
+    - ckindustry.com
+    - abama.org
+    - ihaveavoice2.com
+    - readysetgomatthew.com
+    - avolonage.com
+    - laterrazzafiorita.it
+    - selmaryachtmarket.com
+    - http://phishme.com
+  condition: attributes

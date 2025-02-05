@@ -1,0 +1,90 @@
+title: 'OSINT - Lifting the lid on Sednit: A closer look at the software it uses -
+  dns_query'
+id: 6417e745-37f9-4791-b2f9-3f97793e96d9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/580f62f3-271c-4ba1-8b07-4c0d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - diplomatnews.org
+    - politicsinform.com
+    - military-info.eu
+    - ciscohelpcenter.com
+    - updatesystems.net
+    - virusdefender.org
+    - ausameetings.com
+    - thediplomat-press.com
+    - microsoftsupp.com
+    - natopress.com
+    - 1oo7.net
+    - worldpoliticsnews.org
+    - unitednationsnews.eu
+    - politicalreview.eu
+    - softwaresupportsv.com
+    - shurl.biz
+    - euronews24.info
+    - kg-news.org
+    - osce-press.org
+    - updatecenter.name
+    - worldpostjournal.com
+    - advpdxapi.com
+    - updmanager.com
+    - osce-info.com
+    - cloudflarecdn.com
+    - stratforglobal.net
+    - reuters-press.com
+    - driversupdate.info
+    - trend-news.org
+    - microsofthelpcenter.info
+    - pakistan-mofa.net
+    - worldmilitarynews.org
+    - bbc-press.org
+    - nortonupdate.org
+    - timezoneutc.com
+    - nato-news.com
+    - nato-hq.com
+    - inteldrv64.com
+    - theguardiannews.org
+    - dailyforeignnews.com
+    - symantecsupport.org
+    - defencereview.eu
+    - worldpoliticsreviews.com
+    - cnnpolitics.eu
+    - natoint.com
+    - unian-news.info
+    - aljazeera-news.com
+    - dailypoliticsnews.com
+    - windowsappstore.net
+    - euroreport24.com
+    - microsoftdriver.com
+    - akamaisoft.com
+    - militaryobserver.net
+    - kenlynton.com
+    - militaryadviser.org
+    - defenceiq.us
+    IpAddresses:
+    - 131.72.136.165
+    - 176.31.96.178
+    - 185.86.149.223
+    - 81.17.30.29
+    - 46.183.216.209
+    - 167.114.214.63
+    - 31.220.43.99
+    - 92.114.92.125
+    - 89.32.40.4
+    - 93.115.38.125
+    - 95.215.46.27
+    - 80.255.3.93
+    - 69.12.73.174
+    - 185.106.120.101
+    - 5.135.183.154
+    - 192.95.12.5
+    - 176.31.112.10
+    - 80.255.10.236
+  condition: attributes

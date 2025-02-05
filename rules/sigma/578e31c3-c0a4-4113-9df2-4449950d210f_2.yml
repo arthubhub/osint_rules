@@ -1,0 +1,17 @@
+title: 'Malspam 2016-07-19 .docm (campaign: "Documents from work") - dns_query'
+id: 027029ff-3ea7-4c8d-b746-66395c8876c3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/578e31c3-c0a4-4113-9df2-4449950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - kveldeil.no
+    IpAddresses:
+    - 85.252.49.19
+  condition: attributes

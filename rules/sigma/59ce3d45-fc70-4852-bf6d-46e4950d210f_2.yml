@@ -1,0 +1,52 @@
+title: 'M2M -  Locky Affid=3/Trickbot "mac1" 2017-09-29 : "Voice Message from ..."
+  - "/voicemsg.html" links - dns_query'
+id: c1b06685-8879-4678-bb88-ec25fa3fdabc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ce3d45-fc70-4852-bf6d-46e4950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.locky
+- attack.software.trick_bot
+- attack.group.locky
+detection:
+  attributes:
+    IpAddresses:
+    - 193.227.248.241
+    - 89.253.236.149
+    - 107.152.98.20
+    - 68.171.62.61
+    - 109.71.42.24
+    - 86.109.170.66
+    - 217.172.186.114
+    - 185.85.205.9
+    - 66.36.173.181
+    - 81.169.241.228
+    - 212.224.65.254
+    - 85.31.196.7
+    - 95.110.231.145
+    - 46.235.44.91
+    - 123.242.230.63
+    - 95.173.189.226
+    - 49.51.133.167
+    - 80.76.217.149
+    - 85.235.130.50
+    - 65.44.220.64
+    - 85.214.205.231
+    - 94.127.190.141
+    - 80.93.208.248
+    - 176.56.62.143
+    - 98.124.251.176
+    - 213.185.88.60
+    - 37.187.158.199
+    - 103.236.163.40
+    - 66.36.163.197
+    - 5.2.27.27
+    - 180.222.185.74
+    - 74.208.43.105
+    - 66.36.163.144
+  condition: attributes

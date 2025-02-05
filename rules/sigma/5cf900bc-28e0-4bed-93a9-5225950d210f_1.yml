@@ -1,0 +1,18 @@
+title: OSINT - Gaining New Visibility into Financial Threats - url_request
+id: fea934b8-2926-4411-9fe6-31e986414058
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cf900bc-28e0-4bed-93a9-5225950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.anunak
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://pastebin.com
+    - https://www.bitdefender.com
+  condition: attributes

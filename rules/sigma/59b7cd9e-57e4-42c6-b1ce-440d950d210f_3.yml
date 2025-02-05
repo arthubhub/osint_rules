@@ -1,0 +1,24 @@
+title: 'M2M -  Locky 2017-09-11/11 : Affid=3, ".lukitus" : "Bankwest - You have a
+  new eStatement" - /statement.html links - process_creation'
+id: 594e67a3-3cac-4271-a2c5-0797c356a4f5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59b7cd9e-57e4-42c6-b1ce-440d950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - 230606dd8b0d62e2a8a04ef61b2d8707
+    - 2518037ef7d7524a631c4bf9086428f8
+    sha1:
+    - 5c50cdad090de913d0c87edeb392c8df1af9f5c3
+    sha256:
+    - 5bf84469051c85bd684e03eb46f774cb1e913884c95acf7b210a8a4469da8d9f
+  condition: attributes

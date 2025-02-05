@@ -1,0 +1,16 @@
+title: OSINT - Will Astrum Fill the Vacuum in the Exploit Kit Landscape? - url_request
+id: f9efe73e-f877-434f-b7c8-6d47e9101aa9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/591df523-1b50-4547-ae34-4dca02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://define.predatorhuntingusa.com
+    - http://blog.trendmicro.com
+  condition: attributes

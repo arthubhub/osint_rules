@@ -1,0 +1,18 @@
+title: '2019-01-22: Emotet->TrickBot - url_request'
+id: 06a4731a-5908-484a-a9ff-973a197fbc47
+description: edit this field when analysing or editing the rule - reported by "VK-Intel"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c47f54e-1cf4-48d1-b188-245768f8e8cf.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.emotet
+- attack.software.trick_bot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+  condition: attributes

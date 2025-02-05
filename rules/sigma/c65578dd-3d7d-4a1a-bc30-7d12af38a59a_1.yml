@@ -1,0 +1,73 @@
+title: 'TraderTraitor: North Korean State-Sponsored APT Targets Blockchain Companies
+  - url_request'
+id: fafb2a3b-f95c-459e-ae3b-b236cfb1e7d4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/c65578dd-3d7d-4a1a-bc30-7d12af38a59a.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.lazarus_group
+- attack.group.g0032
+detection:
+  object_10031:
+    RequestUrl|contains:
+    - https://www.cisa.gov
+  object_10032:
+    RequestUrl|contains:
+    - https://www.cisa.gov
+  object_10033:
+    RequestUrl|contains:
+    - dafom.dev
+  object_10035:
+    RequestUrl|contains:
+    - tokenais.com
+  object_10037:
+    RequestUrl|contains:
+    - cryptais.com
+  object_10038:
+    RequestUrl|contains:
+    - alticgo.com
+  object_10039:
+    RequestUrl|contains:
+    - esilet.com
+  object_10040:
+    RequestUrl|contains:
+    - greenvideo.nl
+  object_10041:
+    RequestUrl|contains:
+    - dafnefonseca.com
+  object_10042:
+    RequestUrl|contains:
+    - haciendadeclarevot.com
+  object_10043:
+    RequestUrl|contains:
+    - sche-eg.org
+  object_10044:
+    RequestUrl|contains:
+    - www.vinoymas.ch
+  object_10045:
+    RequestUrl|contains:
+    - infodigitalnew.com
+  object_10046:
+    RequestUrl|contains:
+    - creaideck.com
+  object_10047:
+    RequestUrl|contains:
+    - aideck.net
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+    - https://greenvideo.nl
+    - https://haciendadeclarevot.com
+    - https://www.esilet.com
+    - https://www.alticgo.com
+    - https://sche
+    - https://dafnefonseca.com
+    - https://aideck.net
+    - https://infodigitalnew.com
+    - https://www.vinoymas.ch
+  condition: 1 of object_* or attributes

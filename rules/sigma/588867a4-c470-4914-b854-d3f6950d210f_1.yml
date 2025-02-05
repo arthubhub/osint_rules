@@ -1,0 +1,18 @@
+title: OSINT - Malicious SVG Files in the Wild - url_request
+id: 06a666f2-6657-4fb0-9442-408cd33c2d37
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588867a4-c470-4914-b854-d3f6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.snifula
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://juanpedroperez.com
+    - https://isc.sans.edu
+  condition: attributes

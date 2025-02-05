@@ -1,0 +1,30 @@
+title: Malspam (2016-04-05) - TeslaCrypt - url_request
+id: 11def4b1-b284-40c1-8fe3-a2556e987b56
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5703b3c1-e6a4-421a-a394-440f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - thejonesact.com
+    - closerdaybyday.info
+    - studiosundaytv.com
+    - http://helpdesk.keldon.info
+    - coldheartedny.com
+    - http://marvellrulesqq.com
+    - http://coldheartedny.com
+    - http://marvellrulescc.asia
+    - http://thejonesact.com
+    - addagapublicschool.com
+    - http://addagapublicschool.com
+    - marvellrulesqq.com
+    - keldon.info
+    - marvellrulescc.asia
+    - http://closerdaybyday.info
+    - http://studiosundaytv.com
+  condition: attributes

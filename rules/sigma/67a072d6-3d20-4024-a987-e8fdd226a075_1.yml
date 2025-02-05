@@ -1,0 +1,18 @@
+title: OINT - Hunting the LockBit Gang's Exfiltration Infrastructures - url_request
+id: 4d25a0a3-56f2-4f1c-97ba-0d6a12dffd0d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/67a072d6-3d20-4024-a987-e8fdd226a075.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.lockbit
+- attack.group.lockbit
+detection:
+  object_295:
+    RequestUrl|contains:
+    - https://otx.alienvault.com
+  condition: 1 of object_*

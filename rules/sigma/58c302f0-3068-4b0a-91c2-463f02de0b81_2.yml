@@ -1,0 +1,18 @@
+title: OSINT - Pulling Back the Curtains on EncodedCommand PowerShell Attacks - dns_query
+id: 4f723402-9421-4ad8-a740-ac76d12b1798
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58c302f0-3068-4b0a-91c2-463f02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 198.56.248.117
+    - 65.112.221.34
+    - 88.160.254.183
+    - 62.109.8.21
+  condition: attributes

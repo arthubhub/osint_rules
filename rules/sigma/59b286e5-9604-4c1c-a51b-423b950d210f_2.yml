@@ -1,0 +1,42 @@
+title: 'OSINT -  Booters with Chinese Characteristics: The Rise of Chinese Online
+  DDoS Platforms - dns_query'
+id: abd5145f-0987-48f1-bdd9-3064dd114a0f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59b286e5-9604-4c1c-a51b-423b950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - shashenddos.club
+    - 87ddos.cc
+    IpAddresses:
+    - 104.18.40.150
+    - 104.18.33.110
+    - 23.230.235.62
+    - 104.18.42.18
+    - 104.27.174.49
+    - 104.18.62.202
+    - 162.251.93.27
+    - 142.4.210.15
+    - 115.159.30.202
+    - 104.27.128.111
+    - 104.27.154.16
+    - 104.27.137.58
+    - 104.27.161.160
+    - 103.255.237.138
+    - 104.31.86.177
+    - 144.217.162.94
+    - 104.28.4.180
+    - 45.76.202.77
+    - 104.27.130.205
+    - 103.42.212.68
+    - 104.18.54.93
+    - 104.27.177.67
+    - 104.24.117.44
+    - 104.31.76.30
+  condition: attributes

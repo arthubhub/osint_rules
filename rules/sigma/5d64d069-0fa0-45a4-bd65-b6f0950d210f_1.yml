@@ -1,0 +1,37 @@
+title: OSINT - Gamaredon group - url_request
+id: cb6e2bc7-e65d-4bc0-9bef-ca87fba2ebe0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d64d069-0fa0-45a4-bd65-b6f0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1012
+- attack.t1106
+- attack.group.gamaredon_group
+- attack.t1059
+- attack.t1064
+- attack.t1112
+- attack.t1053
+- attack.group.g0047
+detection:
+  object_18039:
+    RequestUrl|contains:
+    - https://github.com
+    - https://t.co
+  object_18044:
+    RequestUrl|contains:
+    - http://document-listing.ddns.net
+  object_18045:
+    RequestUrl|contains:
+    - document-listing.ddns.net
+  object_18049:
+    RequestUrl|contains:
+    - shell-create.ddns.net
+  object_18050:
+    RequestUrl|contains:
+    - http://shell-create.ddns.net
+  condition: 1 of object_*

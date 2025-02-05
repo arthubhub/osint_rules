@@ -1,0 +1,18 @@
+title: 'OSINT DTL-12012015-01: Hong Kong SWC attack from Dragon Threat Labs - dns_query'
+id: 99be63b3-7a22-4ae1-9a7a-941d7b22d484
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54b4edfc-7f48-4b02-b488-4f83950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - aoemvp.com
+    IpAddresses:
+    - 45.64.74.101
+    - 103.229.127.104
+  condition: attributes

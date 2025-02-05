@@ -1,0 +1,42 @@
+title: IRS Doc Malware - process_creation
+id: 2d5bb5fb-9a7b-4130-a5f7-ace6e15ec9d3
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e4886b7-3f14-4ab0-867f-4ea30a0a020f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1197
+- attack.t1060
+- attack.t1059
+- attack.t1064
+- attack.t1086
+- attack.t1043
+- attack.t1032
+- attack.t1193
+detection:
+  object_9625:
+    md5:
+    - 9dec963dd964716405adbe9ef9006de7
+    sha1:
+    - 452d05a5ad2fdd2b8f45b878b2078900b9f072b2
+    sha256:
+    - 585f829c600736a9613d0870c6460068d9461a7be35c07149fe58143b2f24b6f
+  object_9626:
+    md5:
+    - 701a346228708332063529695210309a
+    sha1:
+    - 651daa1d0e25c515d8ec9e40627efa0e572de9b7
+    sha256:
+    - ea755fc9ed86a2a8fd8712e76e1a8ebc2d871ec143b53f4abd3ef4d9150263fa
+  object_9627:
+    md5:
+    - b102452e6d92a217995f4ca5523d0b85
+    sha1:
+    - ce297b51992a43698b61467beb7b1bae55605037
+    sha256:
+    - 5be14f4258ed8d96da626dff4c8980f121208c45595639ba1fbeb9f895debaa4
+  condition: 1 of object_*

@@ -1,0 +1,19 @@
+title: OSINT - TelegramRAT evades traditional defenses via the cloud - url_request
+id: c2665ac7-6583-4329-9099-6d58fac63c01
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a708104-c8b0-4e69-8ac8-4db3950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.ratattack
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.netskope.com
+    - http://bit.ly
+    - https://www.dropbox.com
+  condition: attributes

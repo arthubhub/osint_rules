@@ -1,0 +1,30 @@
+title: OSINT - Attacks on industrial enterprises using RMS and TeamViewer - dns_query
+id: 56199cbf-d8d4-4668-986f-a1fedaca5a38
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b63f5e4-bf24-4f46-8340-48fc02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.babylon
+detection:
+  attributes:
+    QueryName|contains:
+    - buhuchetooo.ru
+    - rosatomgov.ru
+    - document-buh.com
+    - micorsoft.info
+    - papaninili.temp.swtest.ru
+    IpAddresses:
+    - 208.91.198.93
+    - 191.101.245.101
+    - 87.236.19.244
+    - 81.177.141.15
+    - 81.177.135.151
+    - 185.51.247.125
+    - 185.51.247.169
+    - 77.222.57.247
+  condition: attributes

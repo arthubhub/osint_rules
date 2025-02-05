@@ -1,0 +1,16 @@
+title: OSINT - New Variant of Ploutus ATM Malware Observed in the Wild in Latin America
+  - url_request
+id: 54e4a560-1aec-4f23-94bd-c563049bb548
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58773a18-6384-4c59-8264-4400950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.fireeye.com
+  condition: attributes

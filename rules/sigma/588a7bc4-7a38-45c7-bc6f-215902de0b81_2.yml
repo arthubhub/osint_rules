@@ -1,0 +1,19 @@
+title: OSINT - Dridex Banking Trojan Returns, Leverages New UAC Bypass Method - dns_query
+id: e4f2ce05-43fc-4758-a398-68a99618fca2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588a7bc4-7a38-45c7-bc6f-215902de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.dridex
+detection:
+  attributes:
+    IpAddresses:
+    - 84.234.75.108
+    - 179.177.114.30
+    - 81.130.131.55
+  condition: attributes

@@ -1,0 +1,19 @@
+title: OSINT - BlackOasis APT and new targeted attacks leveraging zero-day exploit
+  - url_request
+id: 71066b24-4ddb-4b89-a062-a02009262b0d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59e4c923-a6e0-4894-a6a8-994d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.finspy
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://89.45.67.107
+    - https://securelist.com
+  condition: attributes

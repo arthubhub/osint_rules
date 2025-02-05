@@ -1,0 +1,19 @@
+title: 'Malspam 2016-07-22 .js in .zip with embedded Locky (campaign: "Financial statement")
+  - dns_query'
+id: ace5b19a-b0f6-45c2-a2f7-a00d0bda24c7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5791cf23-9e10-4537-9f59-4c55950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 176.111.63.51
+    - 194.1.236.126
+    - 185.117.153.176
+    - 77.222.54.202
+  condition: attributes

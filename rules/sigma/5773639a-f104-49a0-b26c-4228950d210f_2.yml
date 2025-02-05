@@ -1,0 +1,65 @@
+title: 'Malspam 2016-06-29 (campaign subject: ''new invoice'') - dns_query'
+id: d654216e-1b32-48d1-9994-8ded2316b018
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5773639a-f104-49a0-b26c-4228950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - century21keim.com
+    - grantica.ru
+    - bolloevcenter.ru
+    - verifythevote.com
+    - empiredeckandfence.com
+    - abligl.com
+    - btc4kids.ru
+    - restteamusa.com
+    - certifiedbanker.org
+    IpAddresses:
+    - 195.3.96.72
+    - 166.63.125.135
+    - 81.24.1.16
+    - 91.223.216.66
+    - 79.174.64.211
+    - 85.193.69.29
+    - 208.71.106.49
+    - 81.169.145.153
+    - 80.150.6.143
+    - 89.42.39.160
+    - 188.40.77.144
+    - 192.186.251.225
+    - 208.71.106.219
+    - 223.130.27.201
+    - 64.50.161.218
+    - 62.14.3.195
+    - 69.27.174.10
+    - 62.37.237.59
+    - 83.235.64.44
+    - 193.203.99.113
+    - 112.140.42.29
+    - 199.204.248.105
+    - 192.185.36.128
+    - 78.24.186.235
+    - 80.74.144.35
+    - 107.180.25.1
+    - 81.196.20.133
+    - 97.79.237.82
+    - 85.17.4.180
+    - 188.165.49.173
+    - 79.174.64.15
+    - 178.254.62.52
+    - 198.1.71.135
+    - 23.229.131.128
+    - 81.169.145.77
+    - 160.153.73.196
+    - 217.76.156.98
+    - 66.147.244.210
+    - 213.205.40.169
+    - 109.234.160.30
+    - 192.185.225.43
+  condition: attributes

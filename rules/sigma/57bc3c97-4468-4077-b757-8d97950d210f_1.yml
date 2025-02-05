@@ -1,0 +1,37 @@
+title: 'Malspam 2016-08-23 (.wsf in .zip) - campaign: "New voice mail message from
+  [RANDOM]" - url_request'
+id: e444e3b4-f599-4c4a-96c4-18432fed8c92
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57bc3c97-4468-4077-b757-8d97950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.bavaria-wein.de
+    - http://www.automac.it
+    - http://hokama.web.fc2.com
+    - http://wannmore.web.fc2.com
+    - http://xa6480.xa6.serverdomain.org
+    - http://koutokukan.web.fc2.com
+    - http://backyard004.web.fc2.com
+    - http://hojkov.unas.cz
+    - http://www.impresadeambrosis.it
+    - http://maj.claas.fr
+    - http://mgotto.homepage.t-online.de
+    - http://www.informaonline.org
+    - http://www.fcgdansk36.republika.pl
+    - http://danzig.vtrbandaancha.net
+    - http://vimp.hi2.ro
+    - http://www.alessandrocangiano.com
+    - http://www.scio-wellness.com
+    - http://www.meallservice.it
+    - http://zikunoana.houkou-onchi.com
+    - http://www.ladymusic.it
+    - http://www.cortesidesign.com
+    - http://swapairplaneplans.50webs.com
+  condition: attributes

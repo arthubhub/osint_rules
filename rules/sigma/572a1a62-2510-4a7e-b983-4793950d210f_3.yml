@@ -1,0 +1,25 @@
+title: 'OSINT - Turbo Twist: Two 64-bit Derusbi Strains Converge - process_creation'
+id: 3b891c54-3f88-401c-bb4d-fc81b344841f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/572a1a62-2510-4a7e-b983-4793950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 791295ef196cf8c20913b3cce76af29a
+    - b93197e2aa147fe6b70695ae7bb298b0
+    - 3e4fbb9190227848af32dacb17e9fd17
+    sha1:
+    - 71c2407eaa08c7093316b62bc1f8eecaa089f775
+    - 4a152785c8b092166cfb164688fc767c22dd3932
+    - 761cd81c46034c3d186f626d17487b804b24e4a1
+    sha256:
+    - ecac0b7abed0c5ca580064839813176a68f75d18176234fc15b2aefd277237aa
+    - c6f1a8f9ea60286b24db87d6022991a4342bea473a520569b996a5883332788c
+    - 9c4053485b37ebc972c95abd98ea4ee386feb745cc012b9e57dc689469ea064f
+  condition: attributes

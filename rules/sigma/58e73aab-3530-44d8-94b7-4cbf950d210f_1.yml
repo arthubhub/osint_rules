@@ -1,0 +1,34 @@
+title: OSINT - High-Volume Dridex Campaigns Return, First to Hit Millions Since June
+  2016 - url_request
+id: a7a79fbe-0bf3-47f9-af1c-5b0d0b0801d6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58e73aab-3530-44d8-94b7-4cbf950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.dridex
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://technologyservice.eu
+    - http://signwaves.net
+    - http://thaipowertools.com
+    - http://nzhat.net
+    - http://sinmanarattot.ws
+    - http://roylgrafix.com
+    - http://lhgarden.org
+    - http://omurongen.com
+    - http://www.soulcube.com
+    - http://meyermuehltal.de
+    - http://justjohnwilhertthet.ws
+    - http://jusevengwassresbet.ws
+    - https://www.proofpoint.com
+    - http://testsite.prosun.com
+    - http://tspars.com
+    - http://pastasmolinero.es
+    - http://www.movimentodiesel.gr
+  condition: attributes

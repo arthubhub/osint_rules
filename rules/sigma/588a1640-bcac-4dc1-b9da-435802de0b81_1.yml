@@ -1,0 +1,16 @@
+title: Malware 2017-01-26 (.js in .zip) - Cerber - url_request
+id: aa9dff49-9905-4b01-b4c2-8c6e2fc1f48a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588a1640-bcac-4dc1-b9da-435802de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - sonnystafgy.top
+    - http://sonnystafgy.top
+  condition: attributes

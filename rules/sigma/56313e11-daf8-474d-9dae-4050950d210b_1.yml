@@ -1,0 +1,17 @@
+title: 'OSINT Digging for Groundhogs: Holes in Your Linux Server by Checkpoint - url_request'
+id: 6e0fab0a-f859-45d4-baad-af4002e4519f
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56313e11-daf8-474d-9dae-4050950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - wangzongfacai.com
+    - http://blog.checkpoint.com
+    - navert0p.com
+  condition: attributes

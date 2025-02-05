@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-09-19 : Affid=3, offline, ".ykcol" : "HERBALIFE Order Number:
+  6N01001234" - "6N01001234_1.7z" - process_creation'
+id: a4c50c48-510c-4c90-9ce6-6ad911fbbdc4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59c28fd3-6c10-44dd-b40d-46f5950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - bab4aa0cb4904865dc247c8e78fd0eca
+    sha1:
+    - 3a2cc64eb0060a0ba7251b723b33441431705d2d
+    sha256:
+    - 43d61bee5ee1ca77d2339d00b69b3675425714598e2b1c81f5351fb1166ab8ca
+  condition: attributes

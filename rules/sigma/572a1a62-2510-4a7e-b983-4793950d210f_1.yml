@@ -1,0 +1,40 @@
+title: 'OSINT - Turbo Twist: Two 64-bit Derusbi Strains Converge - url_request'
+id: 7b70a4de-1a6a-42c1-b97a-68380723068c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/572a1a62-2510-4a7e-b983-4793950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - asixgroupincmeer.biz
+    - monsterlegendsvn.biz
+    - http://www.threatgeek.com
+    - steletracker.com
+    - google-dash.com
+    - vmtools.net
+    - seratjati.com
+    - eimqqakugeccgwak.org
+    - dijlacultus.com
+    - uogwoigiuweyccsw.org
+    - nickytoh.net
+    - virtualboxs.com
+    - attrcorp.com
+    - usapappers.com
+    - petersenstore.org
+    - nickytoh.com
+    - tasty-and-healthy.com
+    - strightspunddeals.net
+    - hawkthorn.net
+    - tianzhen.co
+    - office365e.com
+    - soyy.info
+    - cegauoqsykgqecqc.org
+    - northropgruman.org
+    - animationmyth.net
+    - aiselamodefactory.com
+  condition: attributes

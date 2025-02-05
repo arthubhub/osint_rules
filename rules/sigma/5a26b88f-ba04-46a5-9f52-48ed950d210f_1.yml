@@ -1,0 +1,27 @@
+title: 'M2M - "..doc" 2017-12-04 : "Emailing: 1234567" - "1234567.7z" - url_request'
+id: 66f12939-6ad0-4466-ac9c-3214f579ddd6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a26b88f-ba04-46a5-9f52-48ed950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://n224ezvhg4sgyamb.onion.link
+    - http://boaze.de
+    - http://basarteks.com
+    - http://coloradofootinstitute.com
+    - http://altarek.com
+    - http://c3pconsulting.com
+    - http://arcusautomatika.ba
+    - http://gulercin.com
+    - http://summi.space
+    - http://amcscomputer.com
+  condition: attributes

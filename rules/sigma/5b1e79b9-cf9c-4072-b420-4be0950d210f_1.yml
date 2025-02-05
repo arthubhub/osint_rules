@@ -1,0 +1,18 @@
+title: OSINT -  Roaming Mantis uses DNS hijacking to infect Android smartphones -
+  url_request
+id: 3002eb65-78e3-4bc9-ab1c-72a5603c69b2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b1e79b9-cf9c-4072-b420-4be0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.roaming_mantis
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://securelist.com
+  condition: attributes

@@ -1,0 +1,28 @@
+title: OSINT - The Supreme Backdoor Factory - url_request
+id: 42bae025-b29a-47aa-a3e5-bb7356effb6d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c7c0198-81b0-41d8-9839-4c4d02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1195
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://dfir.it
+    - https://github.com
+    - http://ecc.freeddns.org
+    - http://allesare.sourceforge.net
+    - http://utelemetrics.atwebpages.com
+    - http://coppingfun.ml
+    - http://svf.duckdns.org
+    - http://san.strangled.net
+    - http://enl.duckdns.org
+    - http://yzyaio.onlinewebshop.net
+    - http://eln.duckdns.org
+    - http://jessicacheshire.users.sourceforge.net
+  condition: attributes

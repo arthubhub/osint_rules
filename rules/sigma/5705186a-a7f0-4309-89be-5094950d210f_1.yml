@@ -1,0 +1,15 @@
+title: Dridex (2016-04-06) - botnet 122 - url_request
+id: 0b9d48bf-e885-482d-ba10-07225dd63fbc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5705186a-a7f0-4309-89be-5094950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://shop.bleutree.biz
+  condition: attributes

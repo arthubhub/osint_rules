@@ -1,0 +1,20 @@
+title: 'OSINT - Practice Makes Perfect: Nemucod Evolves Delivery and Obfuscation Techniques
+  to Harvest Credentials - dns_query'
+id: 5b7dc696-05a0-4f7e-b05b-5749c3f79b43
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5914d3ff-4afc-46e0-88cf-bd5202de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.nemucod
+- attack.group.nemucod
+detection:
+  attributes:
+    IpAddresses:
+    - 185.130.104.178
+    - 185.130.104.156
+  condition: attributes

@@ -1,0 +1,19 @@
+title: 'OSINT Snakes in the Satellites: On-going Turla Infrastructure by PassiveTotal
+  - url_request'
+id: 7e3d4fbf-4d9c-4384-8b0f-c400d04e990e
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b58ade-2da0-4f50-98b3-4846950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.turla_group
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.passivetotal.org
+    - https://www.passivetotal.org
+  condition: attributes

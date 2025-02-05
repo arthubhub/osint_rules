@@ -1,0 +1,22 @@
+title: Malspam 2017-08-25 'New voice message' - url_request
+id: ca09005b-7a75-4d3a-a6e3-c402f03c38f3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59a01f7a-9914-4a66-99b9-db8f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - hausverwaltungfrankfurt.de
+    - http://hausverwaltungfrankfurt.de
+    - http://hbwconsultants.nl
+    - bromesterionod.net
+    - http://bromesterionod.net
+    - hbwconsultants.nl
+    - http://heimatverein-menne.de
+    - heimatverein-menne.de
+  condition: attributes

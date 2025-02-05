@@ -1,0 +1,25 @@
+title: OSINT Democracy in Hong Kong Under Attack blog post from Volexity (Steven Adair)
+  - url_request
+id: 492ae563-aca2-4641-b619-94bfbfed1441
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/543b7c14-ec70-446e-b2f7-4620950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - arbvisa.com
+    - http://www.volexity.com
+    - https://gist.github.com
+    - quonlu.com
+    - http://java-se.com
+    - java-se.com
+    - elsa-jp.jp
+    - http://985.so
+    - https://gist.githubusercontent.com
+    - micewe.com
+  condition: attributes

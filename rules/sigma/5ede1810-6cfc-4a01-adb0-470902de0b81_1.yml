@@ -1,0 +1,19 @@
+title: 'OSINT - New Cyber Operation Targets Italy: Digging Into the Netwire Attack
+  Chai - url_request'
+id: c83cce27-88b9-4d6e-9a2b-fdaf9db2e9d3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ede1810-6cfc-4a01-adb0-470902de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.netwire
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://yoroi.company
+    - cloudservices-archive.best
+  condition: attributes

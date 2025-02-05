@@ -1,0 +1,16 @@
+title: 'OSINT - Linux.Bew: un backdoor para el minado de Bitcoin - dns_query'
+id: ac46a7a5-13a7-473a-a61d-a11865badb07
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59722019-3260-4062-bec5-4eea950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 45.58.49.98
+    - 192.211.49.214
+  condition: attributes

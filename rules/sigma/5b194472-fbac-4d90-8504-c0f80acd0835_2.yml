@@ -1,0 +1,24 @@
+title: "Sofacy Group\u2019s Parallel Attacks - dns_query"
+id: b54e40bf-d448-4fc4-bec9-3d13fc5b2f0e
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b194472-fbac-4d90-8504-c0f80acd0835.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    QueryName|contains:
+    - supservermgr.com
+    IpAddresses:
+    - 185.25.50.93
+    - 92.114.92.102
+    - 185.25.51.198
+    - 86.106.131.177
+    - 220.158.216.127
+  condition: attributes

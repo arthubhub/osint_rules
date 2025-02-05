@@ -1,0 +1,23 @@
+title: OSINT - Dogspectus Ransomware Analysis - url_request
+id: 1403c23b-e960-43e8-b7fc-de4df9ad4eda
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/574549b7-23c0-4bf3-9183-466b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bluecoat.com
+    - http://daflourstmichurins.com
+    - http://belkafruitcymus.com
+    - http://workoutplaceface.com
+    - https://www.mysonicwall.com
+    - http://wirtualcleens.com
+    - http://mentosjolly.com
+    - http://orlandroot.com
+    - http://blog.fortinet.com
+  condition: attributes

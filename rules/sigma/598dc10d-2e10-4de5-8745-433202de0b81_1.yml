@@ -1,0 +1,15 @@
+title: OSINT - Fake Snapchat in Google Play Store - url_request
+id: ccbf59e9-702e-4b4a-8de2-d54a05a9552a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/598dc10d-2e10-4de5-8745-433202de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.zimperium.com
+  condition: attributes

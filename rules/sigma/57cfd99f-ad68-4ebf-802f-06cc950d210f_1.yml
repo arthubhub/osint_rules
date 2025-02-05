@@ -1,0 +1,26 @@
+title: 'Malspam 2016-09-07 (.js in .zip) - campaign: "Agreement form" - url_request'
+id: f4153d89-a75b-401e-9021-acb2903ae5ed
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57cfd99f-ad68-4ebf-802f-06cc950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - canonsupervideo4k.ws
+    - http://canonsupervideo4k.ws
+    - http://tradesmartcoin.xyz
+    - http://donttouchmybaseline.ws
+    - http://clubofmalw.ws
+    - http://malwinstall.wang
+    - bookinghotworld.ws
+    - http://bookinghotworld.ws
+    - virmalw.name
+    - clubofmalw.ws
+    - donttouchmybaseline.ws
+    - http://virmalw.name
+  condition: attributes

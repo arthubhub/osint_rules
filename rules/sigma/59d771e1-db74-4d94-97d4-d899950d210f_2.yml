@@ -1,0 +1,32 @@
+title: 'M2M -  Locky 2017-10-06 : Affid=3, offline, ".ykcol" : "Your Remittance Advice"
+  - "12345 Remittance.7z" - dns_query'
+id: fb7d1499-5a5c-4066-8b66-c9ba7ad07422
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d771e1-db74-4d94-97d4-d899950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    IpAddresses:
+    - 173.203.199.105
+    - 83.175.70.7
+    - 195.60.215.74
+    - 85.235.131.27
+    - 213.165.85.53
+    - 199.30.241.139
+    - 23.229.153.66
+    - 80.88.87.95
+    - 174.141.224.179
+    - 5.2.27.27
+    - 209.54.62.81
+    - 195.154.231.6
+    - 195.225.168.230
+    - 98.124.251.65
+  condition: attributes

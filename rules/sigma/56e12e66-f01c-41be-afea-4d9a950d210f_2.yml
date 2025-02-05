@@ -1,0 +1,15 @@
+title: Cerber Ransomware - dns_query
+id: fec68832-3a80-48b0-a1c5-640e73884d65
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e12e66-f01c-41be-afea-4d9a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - decrypttozxybarc.onion
+  condition: attributes

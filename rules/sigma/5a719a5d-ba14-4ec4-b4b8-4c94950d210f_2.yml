@@ -1,0 +1,20 @@
+title: OSINT - Analyzing CrossRAT - dns_query
+id: d6888c5e-33a1-4110-9de8-6605a1c0ab45
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a719a5d-ba14-4ec4-b4b8-4c94950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.crossrat
+detection:
+  object_4858:
+    QueryName|contains:
+    - flexberry.com
+  attributes:
+    QueryName|contains:
+    - flexberry.com
+  condition: 1 of object_* or attributes

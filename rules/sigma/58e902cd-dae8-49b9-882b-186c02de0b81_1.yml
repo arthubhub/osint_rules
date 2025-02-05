@@ -1,0 +1,16 @@
+title: OSINT - Analysis of Malware in Brazilian Bank Attack Reveals Prolonged Campaign
+  - url_request
+id: d16a7148-0b4f-49ee-99af-3e73525cb605
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58e902cd-dae8-49b9-882b-186c02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.cyber4sight.com
+  condition: attributes

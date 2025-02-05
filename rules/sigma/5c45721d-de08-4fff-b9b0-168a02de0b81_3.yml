@@ -1,0 +1,22 @@
+title: Incident - pear.php.net - compromised and delivering malicious package - process_creation
+id: 0c4dc74d-7837-43d4-823c-06800cd59720
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c45721d-de08-4fff-b9b0-168a02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_12888:
+    md5:
+    - 1e26d9dd3110af79a9595f1a77a82de7
+    sha1:
+    - 5b913edb2917d6b85d929659ff833e401a5cc503
+    sha256:
+    - f74c4406c53e5b0187b8b1cfeb5b74f88ac9294acca29bdba8bd11371b2245e8
+  attributes:
+    md5:
+    - 1e26d9dd3110af79a9595f1a77a82de7
+  condition: 1 of object_* or attributes

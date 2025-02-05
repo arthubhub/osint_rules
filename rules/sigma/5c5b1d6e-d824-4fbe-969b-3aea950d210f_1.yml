@@ -1,0 +1,18 @@
+title: Malicious XLS claiming to be from Deloitte - url_request
+id: 2c1e37b4-e291-44df-820e-747cb0bffe28
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c5b1d6e-d824-4fbe-969b-3aea950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1064
+- attack.t1193
+detection:
+  attributes:
+    RequestUrl|contains:
+    - deloitte-canada.com
+  condition: attributes

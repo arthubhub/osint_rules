@@ -1,0 +1,76 @@
+title: 'OSINT -  SWEED: Exposing years of Agent Tesla campaigns - dns_query'
+id: 5c3945ff-41a9-4812-a671-6acef18c8781
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d2cae34-7564-4049-b9c4-4ae902de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.agent_tesla
+- attack.group.agent_tesla
+- attack.software.s0331
+detection:
+  attributes:
+    QueryName|contains:
+    - crosspoiimeri.com
+    - samhwansleel.com
+    - aiaininsurance.com
+    - zarpac.us
+    - mglt-mea.com
+    - evegreen-shipping.com
+    - repotc.com
+    - sweed-viki.ru
+    - spedaqinterfreight.com
+    - virdtech.com
+    - serec.us
+    - profbuiiders.com
+    - regionaitradeinspections.com
+    - wlttraco.com
+    - quycarp.com
+    - jltqroup.com
+    - cawus-coskunsu.com
+    - blssleel.com
+    - aelna.com
+    - snapqata.com
+    - candqre.com
+    - gufageneys.com
+    - zurieh.com
+    - mti-transt.com
+    - lnnovalues.com
+    - erieil.com
+    - worldjaquar.com
+    - sweeddehacklord.us
+    - usarmy-mill.com
+    - sukrltiv.com
+    - kayneslnterconnection.com
+    - aidanube.com
+    - intermodaishipping.net
+    - cablsol.com
+    - xlnya-cn.com
+    - willistoweswatson.com
+    - anernostat.com
+    - etqworld.com
+    - leocouriercompany.com
+    - catalanoshpping.com
+    - jyexports.com
+    - kn-habour.com
+    - rsaqencies.com
+    - oralbdentaltreatment.tk
+    - supe-lab.com
+    - bwayachtng.com
+    - dougiasbarwick.com
+    - hybru.com
+    IpAddresses:
+    - 154.80.172.212
+    - 84.38.134.121
+    - 151.80.88.242
+    - 208.91.197.91
+    - 209.99.40.222
+    - 209.99.40.223
+    - 198.54.125.61
+    - 46.21.144.100
+    - 185.26.122.68
+  condition: attributes

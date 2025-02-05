@@ -1,0 +1,17 @@
+title: OSINT Banking Trojan DRIDEX Uses Macros for Infection blog post from Trend
+  Micro - dns_query
+id: 5c6b5ae8-d6f4-4a38-b845-a55218944c64
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/545b456e-b8a4-45e0-a895-41c7950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 62.75.184.70
+    - 116.48.157.176
+  condition: attributes

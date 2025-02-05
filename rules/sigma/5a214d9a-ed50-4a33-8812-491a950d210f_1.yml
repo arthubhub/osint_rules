@@ -1,0 +1,18 @@
+title: OSINT - Fake Windows Troubleshooting Support Scam Uploads Screenshots & Uses
+  Paypal - url_request
+id: 5cca7f36-24b4-485f-96ea-f11157636fd7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a214d9a-ed50-4a33-8812-491a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://freegeoip.net
+    - https://www.bleepingcomputer.com
+    - http://hitechnovation.com
+  condition: attributes

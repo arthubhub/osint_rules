@@ -1,0 +1,15 @@
+title: OSINT SSH bruteforce logs from burberry user on AlienVault OTX - url_request
+id: b8666e40-04ce-426f-b993-1c0a635b6504
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b586d3-6c68-4343-9d27-46f3950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://otx.alienvault.com
+  condition: attributes

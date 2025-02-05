@@ -1,0 +1,15 @@
+title: On-memory post exploit payloads from encoded binary - dns_query
+id: 0b1f1011-4710-4865-97f1-815791a2654b
+description: edit this field when analysing or editing the rule - reported by "MalwareMustDie"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d7dba44-67d4-4fad-b919-4c2d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 154.121.50.129
+  condition: attributes

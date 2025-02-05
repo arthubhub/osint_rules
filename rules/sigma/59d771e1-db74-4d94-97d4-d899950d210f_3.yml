@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-10-06 : Affid=3, offline, ".ykcol" : "Your Remittance Advice"
+  - "12345 Remittance.7z" - process_creation'
+id: 25fcd832-ae08-4649-b791-1fd9e7ee876d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59d771e1-db74-4d94-97d4-d899950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - 9979bd6521e1fbd4dcd2ff58da4c84ba
+    sha1:
+    - dfd1633be76a92e1d8b3e43e91d8c1a959d2c8d5
+    sha256:
+    - 716f616221f5e45a9e45edb013ab59fdf27c000e0e6dcb77267c37f09ad75589
+  condition: attributes

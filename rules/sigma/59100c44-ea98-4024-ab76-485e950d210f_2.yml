@@ -1,0 +1,17 @@
+title: OSINT - Windows Defender ATP thwarts Operation WilySupply software supply chain
+  cyberattack - dns_query
+id: 76c032ef-25ec-42f0-be2d-bb0dd7226ff2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59100c44-ea98-4024-ab76-485e950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 5.39.218.205
+    - 176.53.118.131
+  condition: attributes

@@ -1,0 +1,15 @@
+title: 'OSINT - Hildegard: New TeamTNT Malware Targeting Kubernetes - url_request'
+id: bb5abc8a-15ce-4f85-96e5-3a1c352b5949
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/2e29b34e-9558-46ba-96b2-211295ece344.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_4680:
+    RequestUrl|contains:
+    - https://unit42.paloaltonetworks.com
+  condition: 1 of object_*

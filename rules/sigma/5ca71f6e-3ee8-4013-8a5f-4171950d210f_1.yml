@@ -1,0 +1,41 @@
+title: OSINT - Hancitor domains - url_request
+id: 6a447c70-ac5e-4244-8147-e477ea26aced
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ca71f6e-3ee8-4013-8a5f-4171950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.hancitor
+- attack.group.hancitor
+detection:
+  object_9243:
+    RequestUrl|contains:
+    - https://twitter.com
+  attributes:
+    RequestUrl|contains:
+    - alldogspoop.org
+    - alldogspoop.net
+    - alldogspoop.co
+    - http://nal.com.ua
+    - pooperscooperfranchise.com
+    - https://ghostbin.com
+    - http://ecsn.biz
+    - http://inazel.es
+    - shopalldogspoop.com
+    - http://gogotwitof.ru
+    - https://pastebin.com
+    - alldogspoop.mobi
+    - alldogspoop.info
+    - http://automotivedreamteam.com
+    - http://duloperes.com
+    - http://syrtaki-santorini.gr
+    - http://scanelectric.ro
+    - alldogspoop.biz
+    - cherryhillpooperscoopers.com
+    - http://reflyhepone.ru
+    - http://orik.hu
+  condition: 1 of object_* or attributes

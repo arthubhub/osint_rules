@@ -1,0 +1,44 @@
+title: 'Malspam 2016-07-19 .wsf (campaign: "new invoice") - dns_query'
+id: 1e831677-968f-4017-a92e-3144510220f3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/578e2285-12cc-4a15-b078-4b74950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - vilalusa.com
+    - hiramteran.com
+    - delaemvkusnoe.ru
+    - technobuz.com
+    - choogo.net
+    - versus.uz
+    - alinmaagroup.com
+    - aerosfera.ru
+    - westcoastswingitaly.it
+    - moroem.com
+    - pasadenaoffice.com
+    - jem-111.com
+    - altadevelopers.com
+    IpAddresses:
+    - 112.171.173.157
+    - 153.122.18.175
+    - 192.186.248.38
+    - 69.67.54.86
+    - 69.90.66.130
+    - 64.56.177.76
+    - 195.208.1.129
+    - 191.240.255.40
+    - 23.229.142.4
+    - 62.209.128.113
+    - 195.208.1.141
+    - 192.186.220.1
+    - 74.63.197.146
+    - 27.123.31.81
+    - 107.180.26.137
+    - 213.186.33.5
+  condition: attributes

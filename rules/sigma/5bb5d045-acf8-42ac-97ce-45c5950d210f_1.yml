@@ -1,0 +1,47 @@
+title: OSINT - Indicators of Compromise for Malware used by APT28 - url_request
+id: 6b8beeb0-8127-4a47-9031-3f0b9c63aaa8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bb5d045-acf8-42ac-97ce-45c5950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.x-agent
+- attack.group.strontium
+- attack.group.sofacy
+- attack.software.x-tunnel
+detection:
+  attributes:
+    RequestUrl|contains:
+    - narrowpass.net
+    - iboxmit.com
+    - topcinemaclub.com
+    - pointtk.com
+    - moderntips.org
+    - genericnetworkaddress.com
+    - loungecinemaclub.com
+    - globaltechengineers.org
+    - escochart.com
+    - creekcounty.net
+    - brownvelocity.org
+    - virtsvc.com
+    - coindmarket.com
+    - beststreammusic.com
+    - protonhardstorage.com
+    - bbcweather.org
+    - politicweekend.com
+    - thepiratecinemaclub.org
+    - worldimagebucket.com
+    - bulgariatripholidays.com
+    - powernoderesources.com
+    - truefashionnews.com
+    - daysheduler.org
+    - moldtravelgroup.com
+    - https://www.ncsc.gov.uk
+    - malaytravelgroup.com
+    - georgia-travel.org
+    - fundseats.com
+  condition: attributes

@@ -1,0 +1,39 @@
+title: 'OSINT - Turbo Twist: Two 64-bit Derusbi Strains Converge - dns_query'
+id: bf585ac6-f114-46df-a6a9-d14f566c360f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/572a1a62-2510-4a7e-b983-4793950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - monsterlegendsvn.biz
+    - vmtools.net
+    - eimqqakugeccgwak.org
+    - uogwoigiuweyccsw.org
+    - nickytoh.net
+    - virtualboxs.com
+    - nickytoh.com
+    - hawkthorn.net
+    - tianzhen.co
+    - office365e.com
+    - soyy.info
+    - northropgruman.org
+    - animationmyth.net
+    - asixgroupincmeer.biz
+    - steletracker.com
+    - google-dash.com
+    - seratjati.com
+    - dijlacultus.com
+    - attrcorp.com
+    - usapappers.com
+    - petersenstore.org
+    - tasty-and-healthy.com
+    - strightspunddeals.net
+    - cegauoqsykgqecqc.org
+    - aiselamodefactory.com
+  condition: attributes

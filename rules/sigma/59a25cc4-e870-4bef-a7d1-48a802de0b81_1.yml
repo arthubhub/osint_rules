@@ -1,0 +1,16 @@
+title: OSINT - Ukrainian Financial Institutions Targeted by Wave of Malicious EPS
+  File Attacks - url_request
+id: 6a2b4473-0a35-4577-a925-8a8d486f3cf2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59a25cc4-e870-4bef-a7d1-48a802de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://137.74.224.142
+  condition: attributes

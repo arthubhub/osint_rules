@@ -1,0 +1,24 @@
+title: OSINT - DarkHydrus is launching attacks to targets in Middle East - process_creation
+id: 27a6b332-7a9b-44e3-9435-671272e0cf32
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c3862bd-cbb4-4373-854a-4507950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.darkhydrus
+detection:
+  object_11308:
+    md5:
+    - 5c3f96ade0ea67eef9d25161c64e6f3e
+    sha1:
+    - 524f2c9f62703027b1ebbf1fc16a4a7506d6ff20
+    sha256:
+    - 513813af1590bc9edeb91845b454d42bbce6a5e2d43a9b0afa7692e4e500b4c8
+  attributes:
+    sha256:
+    - 513813af1590bc9edeb91845b454d42bbce6a5e2d43a9b0afa7692e4e500b4c8
+  condition: 1 of object_* or attributes

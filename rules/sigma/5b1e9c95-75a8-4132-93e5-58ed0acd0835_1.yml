@@ -1,0 +1,20 @@
+title: 'Trend Micro Blog: New KillDisk Variant Hits Latin American Financial Organizations
+  Again - url_request'
+id: f5be63ca-6105-4cc4-9b5f-ab5d4832faea
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b1e9c95-75a8-4132-93e5-58ed0acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.killdisk_wiper
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blog.trendmicro.com
+    - https://www.flashpoint-intel.com
+  condition: attributes

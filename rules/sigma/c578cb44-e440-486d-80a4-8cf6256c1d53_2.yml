@@ -1,0 +1,17 @@
+title: 'AA23-335A: IRGC-Affiliated Cyber Actors Exploit PLCs in Multiple Sectors,
+  Including U.S. Water and Wastewater Systems Facilities - dns_query'
+id: 278219c6-1157-4be0-a3b9-831448b4ec46
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/c578cb44-e440-486d-80a4-8cf6256c1d53.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 185.162.235.206
+    - 178.162.227.180
+  condition: attributes

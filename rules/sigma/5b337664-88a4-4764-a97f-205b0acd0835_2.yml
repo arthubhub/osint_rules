@@ -1,0 +1,23 @@
+title: 'Blog Post: EMOTET INFECTION WITH ICEDID - dns_query'
+id: a07daeda-8617-47cf-9642-4af81cc62f31
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b337664-88a4-4764-a97f-205b0acd0835.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    QueryName|contains:
+    - percalabia.com
+    - sandearth.com
+    - urnachay.com
+    - thectrl24.com
+    IpAddresses:
+    - 111.118.185.16
+  condition: attributes

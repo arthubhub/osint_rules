@@ -1,0 +1,19 @@
+title: OSINT - Turla PNG Dropper is back - url_request
+id: a8a35e0a-a2d1-457f-ad5b-8e0da1f2dd65
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bf7ba12-bec4-4d01-8330-4373950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.turla_group
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://github.com
+    - https://www.carbonblack.com
+    - https://www.nccgroup.trust
+  condition: attributes

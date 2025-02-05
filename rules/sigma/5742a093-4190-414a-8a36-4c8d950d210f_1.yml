@@ -1,0 +1,15 @@
+title: Locky of the day (20160520) - dns_query
+id: 0db0df32-26a3-4521-8070-eb0dcb88123c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5742a093-4190-414a-8a36-4c8d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 195.208.1.146
+  condition: attributes

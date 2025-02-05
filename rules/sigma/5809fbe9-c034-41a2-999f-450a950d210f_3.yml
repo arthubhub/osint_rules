@@ -1,0 +1,19 @@
+title: OSINT - Malspam delivers NanoCore RAT - process_creation
+id: 1cad76c2-4506-4c17-a141-f29f55e5f1ec
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5809fbe9-c034-41a2-999f-450a950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 568177c47e85e9343870f7c1625c8cf4
+    sha1:
+    - 7ee0f986fce3e685fafd89619fe548f139749b21
+    sha256:
+    - 69c32f18a33f922e253d39025e773211223c9af832314103410ca9eccf1a90f2
+  condition: attributes

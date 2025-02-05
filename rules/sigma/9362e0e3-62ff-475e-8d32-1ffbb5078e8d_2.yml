@@ -1,0 +1,22 @@
+title: 'OSINT - Cheating the cheater: How adversaries are using backdoored video game
+  cheat engines and modding tools - dns_query'
+id: 51879af2-2810-45e7-b96f-dd855197f70b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/9362e0e3-62ff-475e-8d32-1ffbb5078e8d.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 177.18.137.16
+    - 141.255.147.114
+    - 179.253.227.97
+    - 185.185.197.247
+    - 45.163.152.127
+    - 51.161.76.196
+    - 51.79.47.48
+  condition: attributes

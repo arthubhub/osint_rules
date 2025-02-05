@@ -1,0 +1,16 @@
+title: OSINT - THE DUKES 7 years of Russian cyberespionage - url_request
+id: 1ffdd400-75d7-4e0d-a360-83cc9a4049f8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55fa6843-4594-454d-bc79-4b0c950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://labsblog.f-secure.com
+    - https://www.f-secure.com
+  condition: attributes

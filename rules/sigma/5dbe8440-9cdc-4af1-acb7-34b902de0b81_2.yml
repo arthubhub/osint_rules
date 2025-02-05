@@ -1,0 +1,21 @@
+title: OSINT - Chrome 0-day exploit CVE-2019-13720 used in Operation WizardOpium -
+  dns_query
+id: 72dae939-38a2-4b9b-b922-d92140aa54ac
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5dbe8440-9cdc-4af1-acb7-34b902de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1203
+- attack.group.operation_wizardopium
+detection:
+  attributes:
+    QueryName|contains:
+    - behindcorona.com
+    IpAddresses:
+    - 193.29.59.52
+  condition: attributes

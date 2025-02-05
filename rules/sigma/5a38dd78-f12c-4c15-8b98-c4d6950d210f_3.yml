@@ -1,0 +1,23 @@
+title: OSINT - GratefulPOS credit card stealing malware - just in time for the shopping
+  season - process_creation
+id: 6fdf35ef-1d97-452b-9eb0-124787209384
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a38dd78-f12c-4c15-8b98-c4d6950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_11653:
+    md5:
+    - 9a58657669bb3075c1103e73a8948a56
+  object_11654:
+    md5:
+    - 9a58657669bb3075c1103e73a8948a56
+    sha1:
+    - 17b657174313e3e7ce84c030991a271b66eb0840
+    sha256:
+    - 5540b8d51f2190c45aaa5212c866c402f834d5988752537c388dcfecdf89f4e4
+  condition: 1 of object_*

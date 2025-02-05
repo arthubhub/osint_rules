@@ -1,0 +1,38 @@
+title: 'M2M -  Jaff 2017-06-13 : "Invoice PIS1234567.zip" - url_request'
+id: 7536d095-8e0f-4234-833b-f932b7f870ef
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/593fe37d-e2e4-49e7-9f18-5726950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://78tguyc876wwirglmltm.net
+    - http://makkahhaj.com
+    - http://oscarbenson.com
+    - http://e67tfgc4uybfbnfmd.org
+    - http://zebtex.com
+    - http://aarontax.com
+    - http://qiyuner.com
+    - http://yes2malaysia.com
+    - http://toronadrouuyrt5wwf.com
+    - http://mokinukai.lt
+    - http://speedgrow.com
+    - http://16892.net
+    - http://scjjh.cn
+    - http://abyzon.com
+    - http://ciiltire.com
+    - http://zabandan.com
+    - http://mseconsultant.com
+    - http://aristei.com.ar
+    - http://careermag.in
+    - http://sock.lt
+    - http://cinema-strasbourg.com
+  condition: attributes

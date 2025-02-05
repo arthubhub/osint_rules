@@ -1,0 +1,22 @@
+title: OSINT - The Qualcomm DSP Driver - How Serbian authorities have deployed surveillance
+  technology and digital repression tactics - dns_query
+id: ed8b455c-c196-4e86-bdb8-6254e1aceb6e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/87c159e3-5105-491e-87ba-94a7f0a52e09.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  object_7078:
+    IpAddresses:
+    - 178.220.122.57
+    - 79.101.110.108
+    - 94.140.125.174
+    - 176.223.111.131
+    - 188.93.127.34
+    - 185.86.148.174
+    - 195.178.51.251
+  condition: 1 of object_*

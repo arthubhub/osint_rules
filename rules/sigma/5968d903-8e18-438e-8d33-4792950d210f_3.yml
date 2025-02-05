@@ -1,0 +1,21 @@
+title: 'M2M -  #trickbot Lloyds Bank - process_creation'
+id: ecd0aa56-4511-4d9a-9c27-0b25b20ffb40
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5968d903-8e18-438e-8d33-4792950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.trick_bot
+detection:
+  attributes:
+    md5:
+    - a6aea28a2b0b1da833699a09787d4a15
+    sha1:
+    - 47d6aadfe0808f0bbcc52c06388dde6967d73182
+    sha256:
+    - 3c72d0913352a946707fb18c96195ea96b3e0d6992bf3087f6152c45d7da9a70
+  condition: attributes

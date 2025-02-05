@@ -1,0 +1,27 @@
+title: CSSF - Warnings - url_request
+id: d198f705-912f-4cd2-aa0d-410fddabc97f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f1bb8c57-f133-449e-974d-4fb0156050e1.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_11520:
+    RequestUrl|contains:
+    - https://www.cssf.lu
+  object_11521:
+    RequestUrl|contains:
+    - cssf.services
+  object_11522:
+    RequestUrl|contains:
+    - https://www.cssf.lu
+  object_11523:
+    RequestUrl|contains:
+    - acces-andreascapital.com
+  object_11524:
+    RequestUrl|contains:
+    - andreasfx.com
+  condition: 1 of object_*

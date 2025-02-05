@@ -1,0 +1,16 @@
+title: OSINT The Rotten Tomato Campaign - url_request
+id: e5612c4b-c307-4d6b-8fd6-33677c162d1c
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5462a024-eed8-4057-9a85-3030950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.sophos.com
+    - http://blogs.sophos.com
+  condition: attributes

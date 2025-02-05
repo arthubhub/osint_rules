@@ -1,0 +1,25 @@
+title: OSINT - Microsoft Disrupts APT28 Hacking Campaign Aimed at US Midterm Elections
+  - dns_query
+id: 5dbc5785-e775-4c75-a5f4-22ad5cba57e1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b7d1f89-9148-4961-b56f-9168950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.apt28
+- attack.group.strontium
+- attack.group.sofacy
+detection:
+  attributes:
+    QueryName|contains:
+    - office365-onedrive.com
+    - senate.group
+    - adfs-senate.services
+    - adfs-senate.email
+    - hudsonorg-my-sharepoint.com
+    - my-iri.org
+  condition: attributes

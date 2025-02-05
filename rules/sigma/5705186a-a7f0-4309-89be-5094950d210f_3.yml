@@ -1,0 +1,19 @@
+title: Dridex (2016-04-06) - botnet 122 - process_creation
+id: a3e045d5-69bc-4ba3-b98b-36d921539bd8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5705186a-a7f0-4309-89be-5094950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    sha1:
+    - ab8bd52bbc1dfe3099df73fafc8504f4fa5e1430
+    - db6ed6117a984eef40e726675d5d05243e91a119
+    sha256:
+    - f2c14a8e8e80f37dca28e86d6796f16b37091b90a4a9dd6f471dd3dd276db232
+    - 276de439d900d6fc8a589bad01bf71e4379c3ce0228d57ec0620542b51d2e76d
+  condition: attributes

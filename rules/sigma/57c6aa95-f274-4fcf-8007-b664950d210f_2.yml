@@ -1,0 +1,41 @@
+title: 'Malspam 2016-08-31 (.hta in .zip) - campaign: "FW: [Scan]" - dns_query'
+id: 1c5a912c-76f8-4be7-9ad9-e61350be7174
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c6aa95-f274-4fcf-8007-b664950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - powermax.ru
+    - dreamworksoffice.com
+    - finishcar.de
+    IpAddresses:
+    - 213.158.72.90
+    - 213.186.33.4
+    - 213.180.150.17
+    - 62.42.230.17
+    - 81.196.20.134
+    - 62.173.139.197
+    - 95.211.96.160
+    - 80.150.6.138
+    - 213.189.197.56
+    - 208.71.106.61
+    - 81.196.20.133
+    - 195.78.215.76
+    - 89.31.143.112
+    - 123.242.226.64
+    - 212.159.8.91
+    - 212.159.9.151
+    - 208.71.106.38
+    - 162.210.101.98
+    - 192.151.153.26
+    - 213.205.40.169
+    - 82.165.58.83
+    - 208.71.106.48
+    - 91.194.151.38
+  condition: attributes

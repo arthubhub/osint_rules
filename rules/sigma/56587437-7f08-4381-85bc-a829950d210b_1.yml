@@ -1,0 +1,15 @@
+title: OSINT - Botnet bruteforcing Point Of Sale terminals via Remote Desktop - url_request
+id: b779b412-3bf9-4d76-a6e0-3e7708ef77ef
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56587437-7f08-4381-85bc-a829950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.alienvault.com
+  condition: attributes

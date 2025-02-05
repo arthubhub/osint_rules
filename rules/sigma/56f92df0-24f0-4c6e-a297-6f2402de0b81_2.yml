@@ -1,0 +1,22 @@
+title: 'OSINT - TREASUREHUNT: A CUSTOM POS MALWARE TOOL - dns_query'
+id: fcd6a4a0-f346-47eb-b29d-c13df0cf01cc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f92df0-24f0-4c6e-a297-6f2402de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - cortykopl.com
+    - seatrip888.eu
+    - friltopyes.com
+    - 3sipiojt.com
+    - millionjam.eu
+    IpAddresses:
+    - 91.232.29.83
+    - 179.43.160.34
+  condition: attributes

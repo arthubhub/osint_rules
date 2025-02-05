@@ -1,0 +1,22 @@
+title: 'OSINT New Discovery: Ties Between Corebot and Darknet Crypt Service by Damballa
+  - url_request'
+id: 9332191e-5167-4d93-8b87-b46b28977dbc
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/561d8626-9214-404c-bc01-4b56950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - vincenzo-bardelli.com
+    - 0xdead.com
+    - biwvi4oeyo4fflzr.onion
+    - btcshop.cc
+    - https://www.damballa.com
+    - apyicrypt.com
+    - cfud.biz
+  condition: attributes

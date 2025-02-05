@@ -1,0 +1,19 @@
+title: OSINT - keepass(dot)com spreading malware acting as the official site for KeePass
+  password manager. Download for .dmg and .exe files are available on the site. -
+  dns_query
+id: 139a967d-9dd3-4073-97d8-ad4e820fe2e6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cd4446a-b318-40d6-8120-473a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1372
+detection:
+  attributes:
+    QueryName|contains:
+    - lifopp-sacoho.com
+  condition: attributes

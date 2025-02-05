@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-11-07 : Affid=3, offline, ".asasin" : "Emailing: AZ123 -
+  07.11.2017" - "AZ123 - 07.11.2017.doc" - process_creation'
+id: d2fd7e41-b8d9-4f75-9064-55ca8d9268ec
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a0451b3-211c-45f2-ac24-403d950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - a4872e4fe84e5adcc49ba4c641547821
+    sha1:
+    - 38fbc212ba2fde3dc0d9f3e9fa27df1411604398
+    sha256:
+    - 423dc1aaaed311349f9932a643a032d18f0589b97275b501a7a7f6955f5aac46
+  condition: attributes

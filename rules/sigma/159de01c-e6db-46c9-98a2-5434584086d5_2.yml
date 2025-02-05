@@ -1,0 +1,51 @@
+title: "OSINT - M\u0113ris botnet - dns_query"
+id: 898625b2-715e-4e3d-af9f-648a689bbff2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/159de01c-e6db-46c9-98a2-5434584086d5.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - picsgifs.xyz
+    - fanmusic.xyz
+    - phonemus.net
+    - gamedate.xyz
+    - takebad1.com
+    - motinkon.com
+    - weirdgames.info
+    - onlinegt.xyz
+    - spacewb.tech
+    - wchampmuse.pw
+    - 1awesome.net
+    - dartspeak.xyz
+    - mobstore.xyz
+    - my1story.xyz
+    - mobigifs.xyz
+    - zancetom.com
+    - myfrance.xyz
+    - strtbiz.site
+    - widechanges.best
+    - bestmade.xyz
+    - bestony.club
+    - myphotos.xyz
+    - tryphptoday.com
+    - 7standby.com
+    - globalmoby.xyz
+    - cloudsond.me
+    - 1abcnews.xyz
+    - spgames.site
+    - ciskotik.com
+    - senourth.com
+    - specialword.xyz
+    - sitestory.xyz
+    - audiomain.website
+    - portgame.website
+    - gamesone.xyz
+    - massgames.space
+    - hitsmoby.com
+  condition: attributes

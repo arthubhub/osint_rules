@@ -1,0 +1,17 @@
+title: 'Information stealer: Fareit - url_request'
+id: e378f7f1-c4db-4865-9188-f9c8f665990a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57062927-2a54-4d6a-89c4-37ea950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://fifterax.com
+    - https://www.microsoft.com
+    - fifterax.com
+  condition: attributes

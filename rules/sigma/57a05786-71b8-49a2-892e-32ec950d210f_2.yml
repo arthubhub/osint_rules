@@ -1,0 +1,17 @@
+title: OSINT - LuminosityLink RAT - dns_query
+id: 4b407f49-8b7b-4d38-80f6-62754ba7846c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57a05786-71b8-49a2-892e-32ec950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - zippa.biz
+    IpAddresses:
+    - 190.123.44.134
+  condition: attributes

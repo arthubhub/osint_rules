@@ -1,0 +1,26 @@
+title: Diving Deep into UNC4841 Operations Following Barracuda ESG Zero-Day Remediation
+  (CVE-2023-2868) - url_request
+id: 9cb6ced1-242e-43a8-af02-0698a40b8226
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/fb6f4727-4993-4cc0-a177-56e37a0eddde.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  object_9706:
+    RequestUrl|contains:
+    - https://www.mandiant.com
+  attributes:
+    RequestUrl|contains:
+    - singnode.com
+    - bestfindthetruth.com
+    - troublendsef.com
+    - fessionalwork.com
+    - gesturefavour.com
+    - singamofing.com
+    - togetheroffway.com
+    - goldenunder.com
+  condition: 1 of object_* or attributes

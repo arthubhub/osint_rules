@@ -1,0 +1,35 @@
+title: Malspam (2016-04-28) - Locky - url_request
+id: b75c149d-e8ba-4bb3-8a0a-e6082f3b3236
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5721bfc3-7090-4109-b492-453b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://lifeiscalling-sports.com
+    - mebdco.com
+    - http://teyseerlab.com
+    - mc2academy.com
+    - http://www.adgroup.ae
+    - gedvendo.com
+    - codeaweb.net
+    - http://caegpa.com
+    - teyseerlab.com
+    - http://gedvendo.com.pe
+    - amwal.qa
+    - rumbafalcon.com
+    - http://codeaweb.net
+    - http://mc2academy.com
+    - http://www.rumbafalcon.com
+    - http://mebdco.com
+    - http://amwal.qa
+    - lifeiscalling-sports.com
+    - http://amismaglaj.com.ba
+    - http://gedvendo.com
+    - caegpa.com
+  condition: attributes

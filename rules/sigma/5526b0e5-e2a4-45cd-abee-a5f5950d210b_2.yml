@@ -1,0 +1,21 @@
+title: 'OSINT Analysis of KRIPTOVOR: Infostealer+Ransomware by FireEye - dns_query'
+id: aaf8442e-ea0c-4bd2-b658-ab1fed61de6c
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5526b0e5-e2a4-45cd-abee-a5f5950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - ripola.net
+    - jackropely.org
+    - valanoice.org
+    - adorephoto.org
+    - plantsroyal.org
+    IpAddresses:
+    - 66.96.147.86
+  condition: attributes

@@ -1,0 +1,25 @@
+title: Vurten Ransomware - process_creation
+id: f428968c-f788-41b8-8fa5-ccd977792eef
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ad09f32-ce58-47f3-b137-4411950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.vurten
+- attack.group.vurten
+detection:
+  object_10554:
+    md5:
+    - f2be597fc76acc3390ff4cf944008ba5
+    sha1:
+    - e920827ddf406928b94c7ff30b9785c585ad9be0
+    sha256:
+    - 583aabffbdb69f611557f8289059792e4ff0aeb7ce6d7dc812dbd3b93079b1c9
+  attributes:
+    md5:
+    - f2be597fc76acc3390ff4cf944008ba5
+  condition: 1 of object_* or attributes

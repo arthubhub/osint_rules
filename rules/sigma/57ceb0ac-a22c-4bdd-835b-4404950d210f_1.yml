@@ -1,0 +1,22 @@
+title: 'Malspam 2016-09-06 (.js in .zip) - campaign: "August invoice" - url_request'
+id: a02a436b-3ff3-4089-b728-ba0172e0b341
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ceb0ac-a22c-4bdd-835b-4404950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - canonsupervideo4k.ws
+    - http://canonsupervideo4k.ws
+    - http://tradesmartcoin.xyz
+    - http://donttouchmybaseline.ws
+    - http://darkestzone2.wang
+    - bookinghotworld.ws
+    - http://bookinghotworld.ws
+    - donttouchmybaseline.ws
+  condition: attributes

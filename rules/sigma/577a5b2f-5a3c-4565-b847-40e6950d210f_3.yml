@@ -1,0 +1,19 @@
+title: Malspam 2016-07-04 (testrun, subject 'Scanned image'), .docm - process_creation
+id: 548de4b3-0e5e-4f4b-9223-28988183e216
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/577a5b2f-5a3c-4565-b847-40e6950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    sha1:
+    - 0250db9c1bb29902f1b56a67381d36caa21b50b3
+    - 741fd7484a47a5b6dbd56cb0900b1fd64f539175
+    sha256:
+    - 5b353b4cd8c2be450542ced95419cda4c51ad5d2c008d011a6444d37fa8d952b
+    - 0f3f32f5e9ef01c95c1e7c459fb1ddbaec9fe64382bab16893196e156ea8afad
+  condition: attributes

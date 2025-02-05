@@ -1,0 +1,22 @@
+title: Registrant Tracking for "earthalgerrity@armyspy.com" - dns_query
+id: 10725d75-4fd8-4329-921b-a0def9eeb9e4
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b310846-157c-46d7-8141-89f00acd0835.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.emotet
+detection:
+  attributes:
+    QueryName|contains:
+    - fuselect.com
+    - stradical.com
+    - veryonid.com
+    - calorida.com
+    - maneers.com
+  condition: attributes

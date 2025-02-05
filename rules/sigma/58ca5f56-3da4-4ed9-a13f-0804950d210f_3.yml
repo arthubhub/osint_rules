@@ -1,0 +1,23 @@
+title: Revenge Ransomware, a CryptoMix Variant, Being Distributed by RIG Exploit Kit
+  - process_creation
+id: 475321cc-6444-4413-a1a1-a564b31ba300
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58ca5f56-3da4-4ed9-a13f-0804950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.cryptomix
+- attack.software.cryptomix
+detection:
+  attributes:
+    md5:
+    - e0d52cc8793592184a854fde5afaf152
+    sha1:
+    - 579a7cde9174b5f375fff832eb0ee41a6afc4b65
+    sha256:
+    - f5bceebaecb329380385509d263f55e3d7bddde02377636a0e15f8bfd77a84a6
+  condition: attributes

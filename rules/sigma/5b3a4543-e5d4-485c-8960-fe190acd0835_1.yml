@@ -1,0 +1,21 @@
+title: Malware with legit company names in metadata - url_request
+id: eaa8d2e5-3667-49e3-80d5-190d23cbfb67
+description: edit this field when analysing or editing the rule - reported by "Synovus
+  Financial"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b3a4543-e5d4-485c-8960-fe190acd0835.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.nanocore
+- attack.group.razy
+- attack.software.razy
+- attack.software.njrat
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://bongdacongdong.vn
+  condition: attributes

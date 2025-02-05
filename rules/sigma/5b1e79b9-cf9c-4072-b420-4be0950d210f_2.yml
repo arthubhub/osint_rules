@@ -1,0 +1,26 @@
+title: OSINT -  Roaming Mantis uses DNS hijacking to infect Android smartphones -
+  dns_query
+id: 82f19dc5-2924-4d47-9ac7-62146aaab8f9
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b1e79b9-cf9c-4072-b420-4be0950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.roaming_mantis
+detection:
+  attributes:
+    IpAddresses:
+    - 220.136.179.5
+    - 43.240.14.44
+    - 220.136.111.66
+    - 220.136.76.200
+    - 128.14.50.147
+    - 118.168.193.123
+    - 114.44.37.112
+    - 118.166.1.124
+    - 128.14.50.146
+  condition: attributes

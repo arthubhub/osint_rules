@@ -1,0 +1,45 @@
+title: OSINT - The Curious Case of an Unknown Trojan Targeting German-Speaking Users
+  - dns_query
+id: fc278619-20bc-4826-be0d-11928a693118
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/576afc2a-6fd8-4b0d-949b-347902de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - lalalababla.asia
+    - ukcompanymarketing.asia
+    - resdomactivationa.asia
+    - jajajakala8212.asia
+    - 10cyberprojects2016.asia
+    - auspostresponse22.asia
+    - mastehost12312.asia
+    - jxsraxhlccokkrob.com
+    - yberprojects22017.info
+    - nov15mailmarketing.in
+    - masterj.in
+    - goodvin77787.in
+    - responder201922.asia
+    - startupproject33676.asia
+    - marketingking878.asia
+    - masterlin888.pw
+    - goodwinn8.asia
+    - remembermetoday4.asia
+    - marketing5050.asia
+    - mamba777.in
+    - masterhost122133.asia
+    - masterhost1333.asia
+    - bestbrowser-2015.biz
+    - startupproject336.asia
+    - super-sexy-girl2015.net
+    - yidckntbrmhuuhmq.com
+    - mastehost88832.asia
+    - masterhost8981.asia
+    - copolsox.us
+    - cyberprojects2727.info
+  condition: attributes

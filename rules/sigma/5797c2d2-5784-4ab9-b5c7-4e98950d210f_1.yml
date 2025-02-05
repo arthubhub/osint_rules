@@ -1,0 +1,16 @@
+title: 'Guccifer 2.0: All Roads Lead to Russia - Threatconnect report - url_request'
+id: df8c4d4f-7e5d-4476-b623-9393273fdb73
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5797c2d2-5784-4ab9-b5c7-4e98950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.threatconnect.com
+    - xocma.net
+  condition: attributes

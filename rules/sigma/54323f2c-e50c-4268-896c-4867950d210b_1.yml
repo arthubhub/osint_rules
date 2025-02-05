@@ -1,0 +1,16 @@
+title: OSINT New Indicators of Compromise for APT Group Nitro Uncovered blog post
+  by Palo Alto Networks - url_request
+id: b91af392-bc04-4621-90cf-43a9efc9de62
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54323f2c-e50c-4268-896c-4867950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+  condition: attributes

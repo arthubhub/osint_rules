@@ -1,0 +1,20 @@
+title: OSINT - Malware is being signed with multiple digital certificates to evade
+  detection - process_creation
+id: d1c63293-1cd6-46fb-806d-be7b31848266
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56f419c3-e67c-45fc-b3a6-40d5950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - a06bf47c5147ad1b336633112a4a42a8
+    sha1:
+    - 9155973df9080ce996ae372e20d56795b58e2eeb
+    sha256:
+    - 9758aa737004fc3fc6bc7d535e604324b6e42c7c19459f575083a411a4774b18
+  condition: attributes

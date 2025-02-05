@@ -1,0 +1,15 @@
+title: OSINT - Google Discovers New Tizi Android Spyware - url_request
+id: 2d926e83-1768-4fbe-9f91-31fcead6411c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a216518-dd10-4191-9ac8-4919950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.bleepingcomputer.com
+  condition: attributes

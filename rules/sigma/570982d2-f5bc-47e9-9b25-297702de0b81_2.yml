@@ -1,0 +1,16 @@
+title: 'OSINT - ModPOS: A Framework Lurking in Point-of-Sale System Kernels - dns_query'
+id: 3f639245-5f2a-466c-b395-c1366ed90766
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/570982d2-f5bc-47e9-9b25-297702de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 109.72.149.42
+    - 130.0.237.22
+  condition: attributes

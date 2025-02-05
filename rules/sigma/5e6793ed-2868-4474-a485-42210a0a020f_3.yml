@@ -1,0 +1,36 @@
+title: Trickbot Gtag QW1 - process_creation
+id: ce8d73aa-3631-4278-a59e-8ff5ee9e43e3
+description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e6793ed-2868-4474-a485-42210a0a020f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.trickbot
+- attack.group.trickbot
+detection:
+  object_8559:
+    md5:
+    - b17e4833c580bbd343a1834be0e2a65f
+    sha1:
+    - 7ad2d4c4fe0efd021992391fcdb7e630a19f23f6
+    sha256:
+    - 5770d351522695562143fbf5d6381cb7c13151e3d3e1cdc923759bc60e025bbe
+  object_8560:
+    md5:
+    - 4368db27ef2f07171c2c13d2e537d459
+    sha1:
+    - 7993ebdea9421a85b431077b2d89ee3344180759
+    sha256:
+    - 17b8571df60a9953f7e50edcd623eca414ce9bae64362ba3ab0069778cf40a1a
+  object_8561:
+    md5:
+    - d627615f955dd5342ef6b4c6938ad98c
+    sha1:
+    - 645467b3207a50c43be075a0b81308a5f6935c59
+    sha256:
+    - 1a508909a8ef020ab5285ce47106beac317c2ae0d2971eff9a4f95a5079eee7f
+  condition: 1 of object_*

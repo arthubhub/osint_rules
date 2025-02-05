@@ -1,0 +1,21 @@
+title: 'OSINT - CoalaBot: http Ddos Bot - process_creation'
+id: ce9502aa-3920-4c66-83cc-e6f92c8a60bb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bb71d5e-8784-489b-b33f-46e7950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.coalabot
+detection:
+  object_18245:
+    md5:
+    - f3862c311c67cb027a06d4272b680a3b
+    sha1:
+    - 0ff1584eec4fc5c72439d94e8cee922703c44049
+    sha256:
+    - fd07ad13dbf9da3f7841bc0dbfd303dc18153ad36259d9c6db127b49fa01d08f
+  condition: 1 of object_*

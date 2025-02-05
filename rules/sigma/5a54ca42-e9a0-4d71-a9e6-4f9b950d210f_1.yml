@@ -1,0 +1,16 @@
+title: OSINT - Experts analyzed an Advanced "all in memory" CryptoWorm - url_request
+id: 3ecfe28c-9464-4b3e-997e-a5fb7c293565
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a54ca42-e9a0-4d71-a9e6-4f9b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://securityaffairs.co
+    - http://118.184.48.95
+  condition: attributes

@@ -1,0 +1,62 @@
+title: OSINT - Callisto Group - dns_query
+id: fd133642-bbc7-4236-b39d-21b14449c1d3
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58f0bb56-ce80-4f18-88b6-4577950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - authentification-request.top
+    - login-access.top
+    - accounts-google.eu
+    - accounts-mail.asia
+    - updatemail.in
+    - prevention-aol.link
+    - secure-lcloud.accountant
+    - support-mail.top
+    - support-mail.pw
+    - login-live-com.pw
+    - live-com.pw
+    - yahoomailfree.pw
+    - node03-prevention-icloud.link
+    - google-service.eu
+    - fco-gov.pw
+    - icloud-service.pw
+    - login-livecom.in
+    - auth-login.top
+    - platforma.link
+    - qooqle-support-mail.pw
+    - screenname-aol.pw
+    - fco-net.pw
+    - prevention-icloud.link
+    - store-icloud.link
+    - yahoocentermail.info
+    - login-livecom.info
+    - prevention-aol.top
+    - google-accounts.eu
+    - drive-meet-goodle.ru
+    - emailapp.pw
+    - serv-login-com.pw
+    - shared-docs.pw
+    - yahoocentermail.pw
+    - drive-login.com
+    - node005-prevention-aol.link
+    - misrcosofts.com
+    - login-live.review
+    - screenname.click
+    - service-mail.in
+    - hotmail-online.eu
+    - support-gmail.pw
+    - go-veryfication.link
+    - live-login.info
+    - service-mail.asia
+    - secure-store-lcloud.top
+    - google-plus.top
+    IpAddresses:
+    - 89.46.102.43
+  condition: attributes

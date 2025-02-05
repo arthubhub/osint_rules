@@ -1,0 +1,62 @@
+title: Kaseya ransomware attack - indicators and information publicly available -
+  dns_query
+id: 3cd6b8ec-7200-42ec-bb63-0bfc2aa306ff
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/e0eaf6f2-a12c-4b31-9d19-f77faf1ea4c9.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1486
+- attack.software.sodinokibi
+- attack.group.sodinokibi
+detection:
+  object_9020:
+    IpAddresses:
+    - 161.35.239.148
+  attributes:
+    QueryName|contains:
+    - iqbalscientific.com
+    - bxdf.info
+    - sw1m.ru
+    - 4youbeautysalon.com
+    - southeasternacademyofprosthodontics.org
+    - milestoneshows.com
+    - cerebralforce.net
+    - tanzschule-kieber.de
+    - tonelektro.nl
+    - gmto.fr
+    - smartypractice.com
+    - 365questions.org
+    - thomasvicino.com
+    - fannmedias.com
+    - 1team.es
+    - 123vrachi.ru
+    - c2e-poitiers.com
+    - mindpackstudios.com
+    - faroairporttransfers.net
+    - 101gowrie.com
+    - ncuccr.org
+    - myhostcloud.com
+    - kaotikkustomz.com
+    - facettenreich27.de
+    - 4net.guru
+    - 8449nohate.org
+    - daklesa.de
+    - bierensgebakkramen.nl
+    - simoneblum.de
+    - fotoscondron.com
+    - 12starhd.online
+    - candyhouseusa.com
+    - cursosgratuitosnainternet.com
+    - 35-40konkatsu.net
+    - gonzalezfornes.es
+    - filmstreamingvfcomplet.be
+    - homng.net
+    - blgr.be
+    - pasvenska.se
+    - blossombeyond50.com
+  condition: 1 of object_* or attributes

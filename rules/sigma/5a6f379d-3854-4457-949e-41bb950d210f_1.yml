@@ -1,0 +1,26 @@
+title: 'OSINT - VERMIN: Quasar RAT and Custom Malware Used In Ukraine - url_request'
+id: 6a82f4fa-6240-46e2-89d9-a005991c3d10
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a6f379d-3854-4457-949e-41bb950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.quasar_rat
+detection:
+  attributes:
+    RequestUrl|contains:
+    - notifymail.ru
+    - mailukr.net
+    - https://twitter.com
+    - akamainet021.info
+    - akamaicdn.ru
+    - akamainet022.info
+    - akamainet024.info
+    - cdnakamai.ru
+    - akamainet023.info
+    - akamainet066.info
+  condition: attributes

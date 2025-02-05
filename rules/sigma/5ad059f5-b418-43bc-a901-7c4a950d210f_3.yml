@@ -1,0 +1,25 @@
+title: OSINT - Goodbye Cerber? Hello Magniber Ransomware! - process_creation
+id: 3500b1ce-0b32-486d-a437-0377b98d2362
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ad059f5-b418-43bc-a901-7c4a950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.magniber_ransomware
+- attack.group.magniber_ransomware
+detection:
+  object_4729:
+    md5:
+    - 59ef984c16a5c1723d9958fbeb1b7450
+    sha1:
+    - a7bcd0188e3fd0f16226ab44477a04662a5c5450
+    sha256:
+    - 2e6f9a48d854add9f895a3737fa5fcc9d38d082466765e550cca2dc47a10618e
+  attributes:
+    sha256:
+    - 2e6f9a48d854add9f895a3737fa5fcc9d38d082466765e550cca2dc47a10618e
+  condition: 1 of object_* or attributes

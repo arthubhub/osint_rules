@@ -1,0 +1,72 @@
+title: 'OSINT - Lifting the lid on Sednit: A closer look at the software it uses -
+  url_request'
+id: 7d7b7f01-5fac-4820-a645-d8a35d1d43ec
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/580f62f3-271c-4ba1-8b07-4c0d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - diplomatnews.org
+    - politicsinform.com
+    - military-info.eu
+    - ciscohelpcenter.com
+    - updatesystems.net
+    - virusdefender.org
+    - ausameetings.com
+    - thediplomat-press.com
+    - microsoftsupp.com
+    - natopress.com
+    - 1oo7.net
+    - worldpoliticsnews.org
+    - unitednationsnews.eu
+    - politicalreview.eu
+    - softwaresupportsv.com
+    - shurl.biz
+    - euronews24.info
+    - kg-news.org
+    - osce-press.org
+    - updatecenter.name
+    - worldpostjournal.com
+    - advpdxapi.com
+    - updmanager.com
+    - osce-info.com
+    - cloudflarecdn.com
+    - stratforglobal.net
+    - reuters-press.com
+    - driversupdate.info
+    - trend-news.org
+    - microsofthelpcenter.info
+    - pakistan-mofa.net
+    - worldmilitarynews.org
+    - bbc-press.org
+    - nortonupdate.org
+    - timezoneutc.com
+    - nato-news.com
+    - nato-hq.com
+    - inteldrv64.com
+    - theguardiannews.org
+    - dailyforeignnews.com
+    - symantecsupport.org
+    - defencereview.eu
+    - worldpoliticsreviews.com
+    - cnnpolitics.eu
+    - natoint.com
+    - unian-news.info
+    - http://www.welivesecurity.com
+    - aljazeera-news.com
+    - dailypoliticsnews.com
+    - windowsappstore.net
+    - euroreport24.com
+    - microsoftdriver.com
+    - akamaisoft.com
+    - militaryobserver.net
+    - kenlynton.com
+    - militaryadviser.org
+    - defenceiq.us
+  condition: attributes

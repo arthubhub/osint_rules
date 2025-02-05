@@ -1,0 +1,17 @@
+title: OSINT - CircleCI incident report for January 4, 2023 security incident - process_creation
+id: 93011826-bd1b-4d06-984d-19f44304ab79
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f2049d65-5315-4c37-9bbb-900c9b851204.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1021.004
+detection:
+  attributes:
+    sha256:
+    - 8913e38592228adc067d82f66c150d87004ec946e579d4a00c53b61444ff35bf
+  condition: attributes

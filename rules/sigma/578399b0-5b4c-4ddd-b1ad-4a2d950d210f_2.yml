@@ -1,0 +1,78 @@
+title: What's in a server name (on APT28/Sofacy) by ThreatConnect - dns_query
+id: e95e3e96-e83a-412f-8fd6-f9318c1277c8
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/578399b0-5b4c-4ddd-b1ad-4a2d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    QueryName|contains:
+    - services-gov.co.uk
+    - adobeflashplayer.me
+    - natoexhibitionff14.com
+    - wsjworld.com
+    - helper-akamai.com
+    - pdf-online-viewer.com
+    - webmail-saic.com
+    - access-google.com
+    - adobeupdatetechnology.com
+    - adobeflashdownload.de
+    - egypressoffice.com
+    - micoft.com
+    - honeyvvell.co
+    - log-in-osce.org
+    - nato-org.com
+    - win-wnigarden.com
+    - microsoft-updates.me
+    - thehufflngtonpost.com
+    - sysprofsvc.com
+    - akamaitechnologysupport.com
+    - govsh.net
+    - euronews24.info
+    - sec-verified.com
+    - xtraorbit.com
+    - wincodec.com
+    - akamaitechupdate.com
+    - winsyscheck.com
+    - adobeupdater.org
+    - intelsupportcenter.com
+    - ms-drivadptrwin.com
+    - natoadviser.com
+    - wm-z.biz
+    - vice-news.com
+    - theguardiannews.org
+    - carbon2u.com
+    - naoasch.com
+    - ms-sus6.com
+    - windowsnewupdated.com
+    - academl.com
+    - winninggroup-sg.com
+    - intelsupportcenter.net
+    - misdepatrment.com
+    - eurosatory2014.com
+    - terms-google.com
+    - ms-updates.com
+    - cdn-google.com
+    - theguardianpress.com
+    - securesystemwin.com
+    - intelintelligence.org
+    - militaryobserver.net
+    - cdncloudflare.com
+    - cloudfiare.com
+    - goaarmy.org
+    - adoble.net
+    - wmepadtech.com
+    - marshmallow-google.com
+    - trademarkarea.com
+    - tolonevvs.com
+    IpAddresses:
+    - 45.32.129.185
+    - 5.135.183.154
+    - 69.90.132.194
+  condition: attributes

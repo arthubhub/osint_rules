@@ -1,0 +1,40 @@
+title: "OSINT - \xD0\u2018\xD0\xB0\xD0\xBD\xD0\xBA\xD0\xBE\xD0\xB2\xD1\x81\xD0\xBA\
+  \xD0\xB8\xD0\xB9 \xD1\u201A\xD1\u20AC\xD0\xBE\xD1\x8F\xD0\xBD\xD0\xB5\xD1\u2020\
+  \ Lurk: \xD1\x81\xD0\xBF\xD0\xB5\xD1\u2020\xD0\xB8\xD0\xB0\xD0\xBB\xD1\u0152\xD0\
+  \xBD\xD0\xBE \xD0\xB4\xD0\xBB\xD1\x8F \xD0\_\xD0\xBE\xD1\x81\xD1\x81\xD0\xB8\xD0\
+  \xB8 (Banking Trojan Lurk: specially for Russia) - dns_query"
+id: 141381f7-575a-4bf6-8b6c-618d0c70d976
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/574efbb3-e924-4d54-a701-43a1950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - hackle14strand.com
+    - hotbed89internal.com
+    - groom58queasy.com
+    - mechanic17a.com
+    - scale57banana.com
+    - ri493hfkzrb.com
+    - evince76lambert.com
+    - plaguey42u.com
+    - wing97pyroxene.com
+    - globe79stanhope.com
+    - carlton69f.com
+    - diameter40i.com
+    - yf3zf90kz.com
+    - 43xkchcoljx.com
+    - rhythmic81o.com
+    - s8f40ocjv.com
+    - elijah69valery.com
+    - paper17cried.com
+    - embassy96k.com
+    - 3d4vzfh68.com
+    - possum89hilarity.com
+    - roomful44e.com
+  condition: attributes

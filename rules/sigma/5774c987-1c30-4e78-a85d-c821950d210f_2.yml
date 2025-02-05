@@ -1,0 +1,55 @@
+title: 'Malspam 2016-06-30 (campaign subject: ''Documents copies'') - dns_query'
+id: b5703c5b-78fb-4ff4-b526-dc2398c8befa
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5774c987-1c30-4e78-a85d-c821950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - bdkj-alzey.de
+    - vipoil.es
+    - mm.pl
+    - iranecs.ir
+    - karlsmart.com
+    - vrkoc.eu
+    - bite-sportivi.it
+    - pcadesigneng.com
+    - topoeval.ro
+    - code-ltd.com
+    - daveshearth.com
+    - humphrey.nl
+    IpAddresses:
+    - 212.23.8.80
+    - 213.158.72.90
+    - 213.228.128.12
+    - 217.119.54.167
+    - 211.134.183.70
+    - 87.106.143.248
+    - 213.180.150.17
+    - 84.94.229.189
+    - 72.10.54.44
+    - 64.56.177.76
+    - 80.150.6.138
+    - 64.56.177.79
+    - 85.9.56.196
+    - 208.71.106.55
+    - 66.109.30.133
+    - 211.133.144.17
+    - 80.109.240.71
+    - 81.196.20.133
+    - 31.193.152.57
+    - 208.71.106.42
+    - 217.11.249.141
+    - 31.31.77.164
+    - 208.71.106.45
+    - 89.42.39.67
+    - 89.30.176.44
+    - 217.172.226.2
+    - 213.191.128.17
+    - 94.231.109.17
+  condition: attributes

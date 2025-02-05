@@ -1,0 +1,43 @@
+title: OSINT - Operation Transparent Tribe - url_request
+id: e05e4102-6e03-47d3-ab2e-2a03c02b603b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e95df6-ed08-469a-9a5d-4fc6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - wisheshub.com
+    - dvdonlinestore.net
+    - mustache-styles.com
+    - bbmdroid.com
+    - http://sahirlodhi.com
+    - pradahandbagsshoes.com
+    - eastmedia2112.com
+    - avssync3357.com
+    - eastmedia3347.com
+    - kssync3347.com
+    - mvssync8767.com
+    - http://intribune.blogspot.com
+    - http://comdtoscc.attachment.biz
+    - http://fileshare.attachment.biz
+    - http://bbmsync2727.com
+    - facemedia.co.cc
+    - 99mesotheliomalawyers.com
+    - vhideip.com
+    - bluesync2121.com
+    - bbmsync2727.com
+    - mahee.kssync3343.co.cc
+    - https://www.proofpoint.com
+    - eastmedia3347.co.cc
+    - http://ceengrmes.attachment.biz
+    - kssync3347.co.cc
+    - eastmedia1221.com
+    - applemedia1218.com
+    - kssync3343.com
+    - onlinestoreonsale.com
+  condition: attributes

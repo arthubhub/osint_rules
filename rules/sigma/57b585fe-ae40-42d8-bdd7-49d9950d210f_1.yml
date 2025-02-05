@@ -1,0 +1,36 @@
+title: "OSINT Vawtrak C2 \xE2\u20AC\u201C Pin it by Threat Geek - url_request"
+id: f29234cf-5aa8-443c-b64f-5c75b91b2810
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b585fe-ae40-42d8-bdd7-49d9950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.vawtrak
+detection:
+  attributes:
+    RequestUrl|contains:
+    - rsojnear.ru
+    - ybqojmpa.ru
+    - hzvmnpug.ru
+    - kmosszts.ru
+    - http://www.threatgeek.com
+    - dmugmwbu.ru
+    - enhicefv.ru
+    - xdpnchon.ru
+    - qrqlyhfc.ru
+    - hstqothv.ru
+    - hvnmwvdt.ru
+    - https://github.com
+    - xyigqlfc.ru
+    - ttliiubl.ru
+    - nevlomzj.ru
+    - gdxwlrat.ru
+    - sgtxgkbi.ru
+    - jhxrkeuh.ru
+    - qkgpedwe.ru
+    - xafmolog.ru
+  condition: attributes

@@ -1,0 +1,15 @@
+title: "OSINT - LAZARUS\xE2\u20AC\u2122 FALSE FLAG MALWARE - url_request"
+id: 63d43e69-7050-4a82-9f15-3482e34fc5c2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58aafac5-c984-43f3-a1b9-493e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://baesystemsai.blogspot.com
+  condition: attributes

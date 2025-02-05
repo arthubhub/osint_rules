@@ -1,0 +1,67 @@
+title: 'CustomerLoader: a new malware distributing a wide variety of payloads - process_creation'
+id: fcb6ab15-d3e7-4ea8-b17e-2be0dab02a52
+description: edit this field when analysing or editing the rule - reported by "Centre
+  for Cyber security Belgium"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/98eb923a-6da8-4c63-87a0-a97a2eef3c98.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.t1140
+- attack.software.s0366
+- attack.t1566.001
+- attack.group.darkcloud_stealer
+- attack.t1132.001
+- attack.t1027
+- attack.group.ave_maria
+- attack.software.asyncrat
+- attack.software.lgoogloader
+- attack.software.xloader
+- attack.t1573.001
+- attack.software.darkcloud_stealer
+- attack.software.s0262
+- attack.t1001
+- attack.t1071.001
+- attack.t1620
+- attack.group.asyncrat
+- attack.software.formbook
+- attack.t1027.007
+- attack.t1562.001
+- attack.software.s0332
+- attack.t1562
+- attack.software.stealc
+- attack.t1129
+- attack.software.s0670
+- attack.group.redline_stealer
+- attack.group.xloader
+- attack.software.sectoprat
+- attack.group.lgoogloader
+- attack.group.sectoprat
+- attack.software.redline_stealer
+- attack.software.agent_tesla
+- attack.t1105
+- attack.software.ave_maria
+- attack.group.agent_tesla
+- attack.group.bitrat
+- attack.software.s0331
+- attack.group.vidar
+- attack.software.vidar
+- attack.software.bitrat
+- attack.group.stealc
+detection:
+  object_8687:
+    sha256:
+    - d40af29bbc4ff1ea1827871711e5bfa3470d59723dd8ea29d2b19f5239e509e9
+  object_8688:
+    sha256:
+    - 3fb66e93d12abd992e94244ac7464474d0ff9156811a76a29a76dec0aa910f82
+  object_8692:
+    sha256:
+    - c05c7ec4570bfc44e87f6e6efc83643b47a378bb088c53da4c5ecf7b93194dc6
+  object_8697:
+    sha256:
+    - b8f5519f7d66e7940e92f49c9f5f0cac0ae12cc9c9072c5308475bd5d093cdca
+  condition: 1 of object_*

@@ -1,0 +1,21 @@
+title: OSINT -  Updated Sundown Exploit Kit Uses Steganography - process_creation
+id: eda3aa96-372d-47db-aeba-bdf9a8e4f3f8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/586cb1ff-6bcc-4029-88b0-4fa9950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.chthonic
+detection:
+  attributes:
+    md5:
+    - 9ebaf6efce9f198fa01f04e8535952ce
+    sha1:
+    - c2cd9ea5ad1061fc33adf9df68eeed6a1883c5f9
+    sha256:
+    - 9581b02cbe553b7ca436b138d9df012d9712e81b554dbe620f1bf1bffdc09219
+  condition: attributes

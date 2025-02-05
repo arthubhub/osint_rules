@@ -1,0 +1,15 @@
+title: OVH Phishing - dns_query
+id: 6324d787-bcc8-405c-b2a7-b2174029004a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b4f5308-42c0-434a-a8c5-48ae950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  object_6965:
+    IpAddresses:
+    - 195.144.11.40
+  condition: 1 of object_*

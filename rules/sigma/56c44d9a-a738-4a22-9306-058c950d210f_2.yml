@@ -1,0 +1,18 @@
+title: OSINT - Dridex Actors Get In the Ransomware Game With "Locky" - dns_query
+id: 652a909e-9ccf-42a2-8b2f-f3302806c7f7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56c44d9a-a738-4a22-9306-058c950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - vkrdbsrqpi.de
+    - jaomjlyvwxgdt.fr
+    - ofhhoowfmnuihyd.ru
+    - wpogw.it
+  condition: attributes

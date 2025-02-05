@@ -1,0 +1,23 @@
+title: 'Malspam 2016-09-01 (.wsf in .zip) - campaign: "Please find attached invoice
+  no:" - url_request'
+id: e674e158-8cb8-43bb-96da-730532be4c9a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c821ca-f2ac-43e7-a2e4-4470950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - rhanwid.com
+    - http://postaldigitalrs.com.br
+    - http://www.valerypro.com
+    - http://www.agridiving.net
+    - http://pp4_09_10_2s.republika.pl
+    - rodewelshcobs.com
+    - dcqoutlet.es
+    - hotcarshhhs6632.com
+  condition: attributes

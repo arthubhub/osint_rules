@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-09-20 : Affid=3, offline, ".ykcol" : "New voice message..."
+  - "msg0321.7z" - process_creation'
+id: 212106bf-2acd-457c-9790-2e9bc6528d47
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59c56149-8ec4-4490-996e-df79950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - 5dd7d5899168ac90325b350293c49ee2
+    sha1:
+    - 6ea25cddbe0957d20d7ddea9efe84d2ba13a84e0
+    sha256:
+    - 302aabfec6b1696e3019699d6367e4ac9e57037aec6237d9b263ba9a8fbe3418
+  condition: attributes

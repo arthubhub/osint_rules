@@ -1,0 +1,18 @@
+title: OSINT MSRT February update from Microsoft - dns_query
+id: 555fba19-200d-4f2a-af15-9d3d6ba551c8
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54e1a3f3-be8c-4840-88ce-f2d9950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - sopvps.hk
+    - priv8darkshop.com
+    - dailygiftclub.info
+    - dailygiftclub1.info
+  condition: attributes

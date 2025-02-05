@@ -1,0 +1,17 @@
+title: 'M2M -  #LokiBot goes  with SWIFT theme - dns_query'
+id: 8b601441-b0d0-4d23-a574-20720fd4ecd5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5943a31f-8a90-4206-b02e-4b5b950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.flokibot
+detection:
+  attributes:
+    IpAddresses:
+    - 89.223.28.124
+  condition: attributes

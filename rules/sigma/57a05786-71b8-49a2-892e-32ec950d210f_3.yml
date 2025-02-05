@@ -1,0 +1,20 @@
+title: OSINT - LuminosityLink RAT - process_creation
+id: b9d157e0-0ca3-4ee4-b87c-3ab05062eb63
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57a05786-71b8-49a2-892e-32ec950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - 63116861ea68c75441b6915bbeab0919
+    sha1:
+    - c1e2727e8fb206f126c10c3ba9a5474874b6bb55
+    - 76ca6782aa5e63d61144225d1b9c282af8fe2259
+    sha256:
+    - e633fb678d91e5fe2a1468d13de42c4871be884885c23efe7456924ad7db5a85
+  condition: attributes

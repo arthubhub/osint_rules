@@ -1,0 +1,28 @@
+title: Phishing La Banque Postale - Lookyloo Capture (http://one.doesntexist.com/p/b2ba4)
+  - dns_query
+id: 3d3342d9-6d65-496c-851f-490291d138db
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/ff6b1c02-8c44-4646-9d3f-9a831b5ba006.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  object_794:
+    QueryName|contains:
+    - one.doesntexist.com
+    IpAddresses:
+    - 23.94.183.62
+  object_795:
+    QueryName|contains:
+    - one.doesntexist.com
+    IpAddresses:
+    - 23.94.183.62
+  object_796:
+    QueryName|contains:
+    - one.doesntexist.com
+    IpAddresses:
+    - 23.94.183.62
+  condition: 1 of object_*

@@ -1,0 +1,56 @@
+title: 'M2M -  Locky Affid=3, ".asasin"/Trickbot "mac1" 2017-10-31 : "Invoice INV0000123"
+  - "INV0000123.doc" - dns_query'
+id: 8f08634c-9be1-4045-8d9e-336c741f22dc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59f87123-2624-486b-92c9-4f14950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.locky
+- attack.software.trick_bot
+- attack.group.locky
+detection:
+  attributes:
+    IpAddresses:
+    - 202.129.207.71
+    - 185.25.20.13
+    - 209.239.114.217
+    - 62.109.1.68
+    - 194.87.110.113
+    - 194.87.98.249
+    - 181.211.34.154
+    - 195.133.146.122
+    - 185.34.52.236
+    - 202.160.120.194
+    - 185.143.173.244
+    - 195.133.146.117
+    - 95.213.251.95
+    - 95.213.252.23
+    - 179.43.147.241
+    - 188.120.246.189
+    - 78.24.8.144
+    - 62.50.188.17
+    - 78.24.222.226
+    - 95.213.195.174
+    - 82.146.43.178
+    - 185.158.114.114
+    - 195.133.147.74
+    - 78.24.217.88
+    - 88.198.9.176
+    - 200.117.251.52
+    - 62.109.10.93
+    - 156.17.92.161
+    - 5.196.81.12
+    - 62.109.8.186
+    - 213.202.100.90
+    - 185.138.24.185
+    - 176.120.126.21
+    - 187.191.0.42
+    - 91.121.34.121
+    - 194.87.93.55
+    - 83.220.128.111
+  condition: attributes

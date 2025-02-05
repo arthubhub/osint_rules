@@ -1,0 +1,18 @@
+title: OSINT - GratefulPOS credit card stealing malware - just in time for the shopping
+  season - dns_query
+id: 75d348a0-6e05-454a-8ae7-2c7c09b2f7a8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a38dd78-f12c-4c15-8b98-c4d6950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - a193-108-94-56-deploy-akamaitechnologies.com
+    IpAddresses:
+    - 96.44.135.70
+  condition: attributes

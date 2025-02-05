@@ -1,0 +1,62 @@
+title: OSINT - BadRabbit Ransomware Compiled by ThaiCERT, a member of the Electronic
+  Transactions Development Agency - url_request
+id: e978c6f3-c633-4555-bf46-71dc289883f6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59f04ba5-e890-4534-8fa9-47dd950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.bad_rabbit
+- attack.software.bad_rabbit
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.reuters.com
+    - https://www.group-ib.com
+    - https://www.bloomberg.com
+    - https://www.itnews.com.au
+    - https://www.scmagazine.com
+    - https://www.washingtontimes.com
+    - https://arstechnica.com
+    - https://www.technologyreview.com
+    - https://securelist.com
+    - https://www.welivesecurity.com
+    - https://blog.malwarebytes.com
+    - https://motherboard.vice.com
+    - https://www.wired.com
+    - http://www.zdnet.com
+    - https://securingtomorrow.mcafee.com
+    - https://www.pcmag.com
+    - https://isc.sans.edu
+    - http://securityaffairs.co
+    - https://www.darkreading.com
+    - https://www.microsoft.com
+    - https://nakedsecurity.sophos.com
+    - http://blog.talosintelligence.com
+    - https://www.infosecurity-magazine.com
+    - http://money.cnn.com
+    - https://www.bangkokpost.com
+    - https://threatpost.com
+    - https://labs.bitdefender.com
+    - http://1dnscontrol.com
+    - https://www.bleepingcomputer.com
+    - https://thehackernews.com
+    - https://www.cyberscoop.com
+    - http://caforssztxqzf2nm.onion
+    - https://www.theregister.co.uk
+    - http://185.149.120.3
+    - https://www.us-cert.gov
+    - https://researchcenter.paloaltonetworks.com
+    - https://www.csoonline.com
+    - https://otx.alienvault.com
+    - https://gizmodo.com
+    - http://www.bbc.co.uk
+    - https://www.cybereason.com
+    - https://www.windowscentral.com
+    - https://www.kaspersky.com
+    - https://techcrunch.com
+  condition: attributes

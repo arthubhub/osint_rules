@@ -1,0 +1,27 @@
+title: OSINT - CircleCI incident report for January 4, 2023 security incident - dns_query
+id: c7fccb8f-33fb-49f2-925d-ed92e48394d5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f2049d65-5315-4c37-9bbb-900c9b851204.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1021.004
+detection:
+  attributes:
+    QueryName|contains:
+    - potrax.com
+    - ptx.app
+    IpAddresses:
+    - 178.249.214.25
+    - 89.36.78.75
+    - 188.68.229.52
+    - 72.18.132.58
+    - 178.249.214.10
+    - 89.36.78.109
+    - 89.36.78.135
+    - 111.90.149.55
+  condition: attributes

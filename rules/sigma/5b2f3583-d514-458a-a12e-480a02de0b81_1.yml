@@ -1,0 +1,20 @@
+title: OSINT - Tick Group Weaponized Secure USB Drives to Target Air-Gapped Critical
+  Systems - url_request
+id: d2e2ff17-791c-46dc-b8aa-b2092a452996
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b2f3583-d514-458a-a12e-480a02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.tick
+- attack.t1104
+- attack.t1091
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://researchcenter.paloaltonetworks.com
+  condition: attributes

@@ -1,0 +1,23 @@
+title: '2019-07-18: Newer "PoSeidon" aka "FindPOS" aka "FindStr" 15.10 Point-of-Sale
+  Malware - url_request'
+id: c42cbc94-4dc4-4c67-b206-5eec5d4209b3
+description: edit this field when analysing or editing the rule - reported by "VK_INTEL_EVIL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d3145a8-b2c4-49d7-9b5c-4f4368f8e8cf.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.findpos
+- attack.software.findpos
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://kethetrecsin.com
+    - http://ughrenhertwi.ru
+    - http://haponebitold.com
+    - http://enrewhetons.ru
+    - http://rygotunren.ru
+  condition: attributes

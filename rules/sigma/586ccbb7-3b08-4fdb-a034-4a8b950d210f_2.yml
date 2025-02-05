@@ -1,0 +1,18 @@
+title: OSINT - Threat Actors Using Legitimate PayPal Accounts To Distribute Chthonic
+  Banking Trojan - dns_query
+id: e6a3b3bc-8268-415c-a7a9-288065296ac6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/586ccbb7-3b08-4fdb-a034-4a8b950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.chthonic
+detection:
+  attributes:
+    QueryName|contains:
+    - kingstonevikte.com
+  condition: attributes

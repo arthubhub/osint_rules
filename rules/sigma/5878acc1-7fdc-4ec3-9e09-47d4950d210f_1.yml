@@ -1,0 +1,16 @@
+title: OSINT - Targeted Threat Leads to Keylogger via Fake Silverlight Update - url_request
+id: e8d4a04e-530b-4761-adf1-42ae61acd220
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5878acc1-7fdc-4ec3-9e09-47d4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.proofpoint.com
+    - https://a.pomf.cat
+  condition: attributes

@@ -1,0 +1,46 @@
+title: Malspam 2016-06-24 (Locky) - url_request
+id: feef62e4-7823-4888-b903-9f17b64558b5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/576d3a39-fe90-4921-85cc-4e3c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://emisije.sezamprodukcija.com
+    - http://www.cbactive.com
+    - http://formateam-finance.com
+    - http://80.109.240.71
+    - http://queza.com
+    - pinakfoods.com
+    - http://ws.osenilo.com
+    - http://kksokol.euweb.cz
+    - formateam-finance.com
+    - http://210.116.102.7
+    - http://sherlock.uvishere.com
+    - http://www.members.aon.at
+    - layaligroup.com
+    - salisburyjc.com
+    - http://www.hotelmoonnightnikola.free.bg
+    - http://pinakfoods.com
+    - http://67.199.50.113
+    - http://neoventtechnologies.com
+    - http://camera-test.hi2.ro
+    - http://noriegachiropracticclinics.com
+    - http://205.167.142.107
+    - http://www.beautycollegeofamca.com
+    - http://212.40.5.95
+    - http://217.26.70.100
+    - queza.com
+    - http://salisburyjc.com
+    - http://23.229.137.8
+    - http://217.26.70.230
+    - noriegachiropracticclinics.com
+    - http://layaligroup.com
+    - http://www.fancyupage.com
+    - neoventtechnologies.com
+  condition: attributes

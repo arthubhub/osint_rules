@@ -1,0 +1,19 @@
+title: OSINT - Sofacy Uses DealersChoice to Target European Government Agency - url_request
+id: 6a8d2957-4b20-4fe8-b185-257e01878912
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aac24b9-0404-4877-8b3f-425e02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.strontium
+- attack.group.sofacy
+detection:
+  attributes:
+    RequestUrl|contains:
+    - ndpmedia24.com
+    - https://researchcenter.paloaltonetworks.com
+  condition: attributes

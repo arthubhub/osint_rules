@@ -1,0 +1,51 @@
+title: 'Kaspersky Lab: Spearphishing attack hits industrial companies - url_request'
+id: 4d95ff1c-3e97-419d-b001-b3d2fb84b351
+description: edit this field when analysing or editing the rule - reported by "NCSC-NL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5857cf66-aa18-4681-bff7-08720a950b0c.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - ms45-hinet.net
+    - galaxystarshop.com
+    - xpweb.win
+    - poolkingsthailand.com
+    - watersysterns.com
+    - cs19335.tmweb.ru
+    - bothela-orsaro.com
+    - pguy.faith
+    - chunfenqlighting.com
+    - ivicker.usa.cc
+    - overseas-operation.com
+    - alreyadbplastics.com
+    - gettoworkzz.biz
+    - mirchifunz.in
+    - biblesoceities.org
+    - sympetax.com
+    - metaksen.com
+    - charlogistics.com
+    - limco.usa.cc
+    - hungasidy.biz
+    - hardworkzone.cf
+    - heinevy.com
+    - btinterment.com
+    - soaaxa.biz
+    - https://ics-cert.kaspersky.com
+    - yasive.biz
+    - thai-nidhi.com
+    - hidroquil-ar.com
+    - fullone2u.com
+    - danqote.com
+    - asappyco.biz
+    - hunterkaysmoves.in
+    - lumibrigth.com
+    - alu-heat.biz
+    - restarz.biz
+    - sinctruk.com
+    - kinqnuts-raaphorst.com
+  condition: attributes

@@ -1,0 +1,23 @@
+title: 'OSINT - APT15 is alive and strong: An analysis of RoyalCli and RoyalDNS -
+  url_request'
+id: 567a0e96-5698-4690-b3c2-0e87e9ce490f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5aa670db-6ef0-4d81-8e90-9476950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.mirage
+detection:
+  attributes:
+    RequestUrl|contains:
+    - ridingduck.com
+    - https://github.com
+    - andspurs.com
+    - cavanic9.net
+    - dnsapp.info
+    - zipcodeterm.com
+  condition: attributes

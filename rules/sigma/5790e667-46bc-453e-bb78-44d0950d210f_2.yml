@@ -1,0 +1,42 @@
+title: 'Malspam 2016-07-21 .wsf (campaign: "fixed invoice") - dns_query'
+id: 4172780b-72a7-4214-a60b-e4542755e3b8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5790e667-46bc-453e-bb78-44d0950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - voisin-sa.com
+    - strojdom33.ru
+    - kveldeil.no
+    - choogo.net
+    - vkt-rus.com
+    - mebel-bogatyr.ru
+    - premiuminformation.org
+    - bizforward.ru
+    - klausschuster.at
+    IpAddresses:
+    - 112.171.173.157
+    - 31.220.16.180
+    - 141.8.194.9
+    - 91.201.210.24
+    - 193.232.240.10
+    - 162.210.101.97
+    - 83.125.22.208
+    - 84.246.225.155
+    - 81.196.20.133
+    - 85.252.49.19
+    - 86.59.107.231
+    - 141.8.192.63
+    - 192.254.188.66
+    - 195.208.0.15
+    - 91.194.41.32
+    - 213.205.40.169
+    - 208.71.106.49
+    - 213.180.150.17
+  condition: attributes

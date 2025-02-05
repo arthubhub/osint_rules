@@ -1,0 +1,15 @@
+title: OSINT - powershell used for spreading trojan.laziok through google docs - dns_query
+id: a58aa49b-faea-424d-af97-28e98524a332
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/571a7cdc-c078-482d-98dc-4e42950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 193.189.117.36
+  condition: attributes

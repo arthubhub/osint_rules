@@ -1,0 +1,22 @@
+title: OSINT - The Blockbuster Sequel - url_request
+id: 394c7d9a-9e95-415e-9115-805492b8f27d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58e8a3b2-b0fc-41a9-b89a-4a8b02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.lazarus_group
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://researchcenter.paloaltonetworks.com
+    - xkclub.hk
+    - kcnp.or.kr
+    - wstore.lt
+    - kosic.or.kr
+    - daedong.or.kr
+  condition: attributes

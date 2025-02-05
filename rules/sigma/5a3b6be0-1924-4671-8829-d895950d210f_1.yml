@@ -1,0 +1,54 @@
+title: 'OSINT - North Korea Bitten by Bitcoin Bug: Financially motivated campaigns
+  reveal new dimension of the Lazarus Group - url_request'
+id: 8eef6c64-5af5-4a1c-b9f4-757ae64583b6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a3b6be0-1924-4671-8829-d895950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.powerratankba
+- attack.software.powerspritz
+- attack.software.gh0st
+- attack.group.lazarus_group
+- attack.software.gh0st_rat
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://doc-00-64-docs.googleusercontent.com
+    - xn--bitcin-zxa.org
+    - xn--bitcingold-jbb.com
+    - xn--bitcoingld-lcb.org
+    - http://skypeupdate.2.vu
+    - xn--bitcoingldwallet-twb.org
+    - xn--bitcoigold-o1b.com
+    - xn--btcongold-54ad.com
+    - xn--bitcoingod-8yb.com
+    - http://92.222.106.229
+    - http://122.248.34.23
+    - xn--bitoingold-1ib.com
+    - http://201.211.183.215
+    - http://trade.publicvm.com
+    - http://dogecoin.deaftone.com
+    - http://www.btc-gold.us
+    - xn--btcongold-g5ad.com
+    - http://skype.2.vu
+    - xn--btcoingold-v8a.com
+    - xn--bitcoingld-lcb.com
+    - xn--bitcingold-hcb.org
+    - https://www.proofpoint.com
+    - http://apps.got-game.org
+    - xn--electrm-s2a.org
+    - http://www.energydonate.com
+    - http://tinyurl.com
+    - http://www.businesshop.net
+    - xn--6fgp.com
+    - xn--bitcoingol-4kb.com
+    - xn--bitcingold-t3b.com
+    - http://macintosh.linkpc.net
+    - http://51.255.219.82
+    - http://telegramupdate.2.vu
+  condition: attributes

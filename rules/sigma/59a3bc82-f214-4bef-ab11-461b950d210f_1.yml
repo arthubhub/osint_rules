@@ -1,0 +1,22 @@
+title: OSINT - Ursnif variant found using mouse movement for decryption and evasion
+  - url_request
+id: bfaf8925-d64f-48ff-aad7-6085ef170984
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59a3bc82-f214-4bef-ab11-461b950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.snifula
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blogs.forcepoint.com
+    - http://46.17.40.22
+    - http://inshaengineeringindustries.com
+    - 0x7293c971.ru
+    - http://ardshinbank.at
+  condition: attributes

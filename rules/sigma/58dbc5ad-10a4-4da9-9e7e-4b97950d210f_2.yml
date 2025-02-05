@@ -1,0 +1,46 @@
+title: "OSINT - Trojanized Adobe Installer used to Install DragonOK\xE2\u20AC\u2122\
+  s New Custom Backdoor - process_creation"
+id: dd0ddead-31c6-4455-8e30-720606df5667
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58dbc5ad-10a4-4da9-9e7e-4b97950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.khrat
+detection:
+  attributes:
+    md5:
+    - bb70e1711b7474944b8487b5849dc8de
+    - e9e5af639641b50d5d1747d43a5fd648
+    - cd6f95f767b26b1fcac8ad33d25131c7
+    - 156da506f2a89c6cc2c418ffcbbc7ae7
+    - dabbdb8ca7bc3454bc0c682e18569062
+    - 4772aaf68a7a408fa2a344fdef1bd167
+    - 18fc1ed27e04309fe7f62e4221c5a459
+    - e8a702d15148d8dbe9b0d87c71b6c93e
+    - aea2d5b5e72c0432904039316efa1bd2
+    sha1:
+    - 7b2faee6e1c2b9d81775aab0d41c89e8ff36d5cf
+    - bf0522bd5ff0b4583bb23c6c5f88a7c69196b025
+    - ba4f2368178b6a12b05c6373fbbe8506e4cfe935
+    - bffefb8f7d0ec8048e5180e5fb68b327c44dfd25
+    - e73047c30c30152b0b52bc82a0f109154c9d444a
+    - 02c7e31f90ec4bb77dc68c32e626f7ed9a22c1e9
+    - 760c1e68f7fdc633bdd0cf4a14f0f8f2a1048fa7
+    - c1e2032469155b2299782fb94004379718c2fd8e
+    - 8a3a1f879dc0d6ad274223d0cecc471164f67dfe
+    sha256:
+    - 17a07b1f5e573899c846edba801f1606ce8f77c2f52e3298d2d2b066730b0bf0
+    - 540d6dd720514cf01a02b516a85d8f761d77fa90f0d05f06bfb90ed66beb235b
+    - a5a9598e1d33331f5aeabb277122549d4a7cf1ddbfa00d50e272b57934a6696f
+    - bba604effa42399ed6e91c271b78b442d01d36d1570a9574acacfc870e09dce2
+    - a6e22dfe21993678c6f1b0892c2db085bb8c4342bdf78628456f562d5db1181b
+    - 9cdebd98b7889d9a57e5b7ea584d7e03d8ba67c02519b587373204cae0603df0
+    - 77354141d22998d7166fd80a12d9b913199137b4725495bd9168beb5365f69e7
+    - ffc0ebad7c1888cc4a3f5cd86a5942014b9e15a833e575614cd01a0bb6f5de2e
+    - d9ce24d627edb170145fb78e6acb5ea3cb44a87cd06c05842d78f4fc9b732ec5
+  condition: attributes

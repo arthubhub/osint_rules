@@ -1,0 +1,16 @@
+title: OSINT -  The new .LNK between spam and Locky infection - dns_query
+id: ef39de93-faa5-4c2c-b518-c4289261207c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/580b201b-3e30-4bb1-ac2e-427202de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 185.46.11.73
+    - 93.170.104.126
+  condition: attributes

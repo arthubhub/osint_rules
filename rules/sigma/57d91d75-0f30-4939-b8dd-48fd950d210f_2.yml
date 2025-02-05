@@ -1,0 +1,77 @@
+title: 'Malspam 2016-09-14 (.wsf in .zip) - campaign: "payment copy" - dns_query'
+id: 70779a3f-3290-4415-8659-611d2de11b71
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d91d75-0f30-4939-b8dd-48fd950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - directdesignsny.com
+    - ygc1688.com
+    - narutoshippuuden.org
+    - amaranthine-deerplacenta.com
+    - xn--odka862xw00d.com
+    - asunaz.com
+    - loansbypeople.com
+    - amicentng.com
+    - thcsgoxoai.com
+    - kafemar.com
+    - wholestay.com
+    - webberm.com
+    - zipcommander.com
+    - feechka.ru
+    - allchannel.net
+    - sexturbo.ru
+    - radyohaberleri.com
+    - inventtheworld.com
+    - kinabalustudios.com
+    - yourmdb.com
+    - zagros-group.net
+    - old-sinks.com
+    - jaysilverdp.com
+    - msayin.com
+    - adventurevista.com
+    - sspvl.com
+    - jonathankimsey.com
+    - kristinchurch.ca
+    - janie-royce.com
+    - thehostingonline.com
+    - dusklounge.com
+    IpAddresses:
+    - 94.73.146.80
+    - 204.93.193.125
+    - 69.4.86.172
+    - 143.95.41.185
+    - 70.33.241.150
+    - 174.127.105.95
+    - 107.180.51.159
+    - 41.193.54.15
+    - 107.180.51.27
+    - 91.219.194.36
+    - 104.37.35.84
+    - 204.93.163.87
+    - 173.254.14.209
+    - 185.26.144.135
+    - 115.159.97.197
+    - 124.217.255.45
+    - 5.61.32.143
+    - 74.220.202.49
+    - 50.31.162.92
+    - 136.243.70.231
+    - 54.65.230.41
+    - 192.145.239.20
+    - 107.161.191.26
+    - 31.210.74.154
+    - 107.180.50.238
+    - 91.239.206.118
+    - 119.81.24.187
+    - 123.30.208.178
+    - 188.124.5.33
+    - 210.1.61.133
+    - 173.255.131.205
+  condition: attributes

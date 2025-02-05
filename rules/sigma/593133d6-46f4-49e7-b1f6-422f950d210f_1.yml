@@ -1,0 +1,31 @@
+title: M2M -  Malspam --> 62909008.pdf - url_request
+id: d703fddf-f411-4df8-a0fc-4110b7025a51
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/593133d6-46f4-49e7-b1f6-422f950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://fabriquekorea.com
+    - http://dsopro.com
+    - http://e-snhv.com
+    - http://resevesssetornument.com
+    - http://benefeet.org
+    - http://paradigmenergycorp.com
+    - http://poltec.com.au
+    - http://eselink.com.my
+    - http://newserniggrofg.net
+    - http://pw-shop.com
+    - http://praktikum-marketing.de
+    - http://tasfirin-ustasi.net
+    - http://theexcelconsultant.com
+    - http://katoconsulting.ro
+    - http://whoisfoxxrobiouy.net
+    - http://orhangazitur.com
+    - http://vigs.mx
+  condition: attributes

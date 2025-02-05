@@ -1,0 +1,26 @@
+title: 'Malspam 2016-09-14 (.js in .zip) - campaign: "Delivery Confirmation" - url_request'
+id: 9157f6d5-e167-4b47-882c-d130ea66e71d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57d94b0f-ffd4-4363-945d-45f0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://thcsgoxoai.com
+    - vinaxanh.com
+    - http://vinaxanh.com
+    - ygc1688.com
+    - dropsheep.com
+    - http://dropsheep.com
+    - janie-royce.com
+    - amaranthine-deerplacenta.com
+    - http://ygc1688.com
+    - http://amaranthine-deerplacenta.com
+    - thcsgoxoai.com
+    - http://janie-royce.com
+  condition: attributes

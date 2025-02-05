@@ -1,0 +1,23 @@
+title: 'Malspam 2016-09-06 (.js in .zip) - campaign: "Suspected Purchases" - url_request'
+id: 0bf9ed46-1a3b-4ee7-a374-69babea8eb45
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57cfb3b1-dc58-4960-8b55-42fc950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - canonsupervideo4k.ws
+    - http://onlybest76.xyz
+    - http://canonsupervideo4k.ws
+    - http://tradesmartcoin.xyz
+    - http://donttouchmybaseline.ws
+    - http://darkestzone2.wang
+    - virmalw.name
+    - donttouchmybaseline.ws
+    - http://virmalw.name
+  condition: attributes

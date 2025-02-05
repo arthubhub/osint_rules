@@ -1,0 +1,21 @@
+title: OSINT - EPS Processing Zero-Days Exploited by Multiple Threat Actors - dns_query
+id: b5f3c392-5111-497f-b2eb-bdc8ee58c8c6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59120865-27e0-4e6d-9b74-4a9f950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.gamefish
+detection:
+  attributes:
+    QueryName|contains:
+    - wmdmediacodecs.com
+    IpAddresses:
+    - 84.200.2.12
+    - 185.106.122.113
+    - 138.201.44.30
+  condition: attributes

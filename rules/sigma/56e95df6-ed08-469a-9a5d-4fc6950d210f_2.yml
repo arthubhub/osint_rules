@@ -1,0 +1,67 @@
+title: OSINT - Operation Transparent Tribe - dns_query
+id: a482f1fe-8a5e-4d95-a171-950b2e7fdf7a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e95df6-ed08-469a-9a5d-4fc6950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - wisheshub.com
+    - dvdonlinestore.net
+    - mustache-styles.com
+    - pradahandbagsshoes.com
+    - eastmedia3347.com
+    - kssync3347.com
+    - 99mesotheliomalawyers.com
+    - vhideip.com
+    - bluesync2121.com
+    - eastmedia3347.co.cc
+    - kssync3347.co.cc
+    - eastmedia1221.com
+    - applemedia1218.com
+    - bbmdroid.com
+    - eastmedia2112.com
+    - avssync3357.com
+    - mvssync8767.com
+    - facemedia.co.cc
+    - bbmsync2727.com
+    - mahee.kssync3343.co.cc
+    - onlinestoreonsale.com
+    - kssync3343.com
+    IpAddresses:
+    - 62.4.23.46
+    - 5.189.137.8
+    - 193.164.131.58
+    - 79.143.188.166
+    - 5.189.167.220
+    - 213.136.69.224
+    - 5.189.143.225
+    - 5.189.145.248
+    - 178.238.235.143
+    - 5.189.131.67
+    - 5.199.170.149
+    - 80.241.221.109
+    - 178.238.228.113
+    - 213.136.84.43
+    - 182.181.239.4
+    - 119.154.134.211
+    - 5.189.167.65
+    - 119.157.229.245
+    - 119.154.209.175
+    - 213.136.73.122
+    - 213.136.87.122
+    - 79.143.181.21
+    - 119.157.163.145
+    - 88.150.227.71
+    - 5.189.152.147
+    - 93.104.213.217
+    - 193.37.152.28
+    - 5.189.167.23
+    - 119.154.220.96
+    - 107.167.93.197
+  condition: attributes

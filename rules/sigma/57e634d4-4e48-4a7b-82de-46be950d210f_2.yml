@@ -1,0 +1,15 @@
+title: OSINT - Hunting Libyan Scorpions - dns_query
+id: 0074c553-5ecc-4924-9f43-2c05604a4796
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57e634d4-4e48-4a7b-82de-46be950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 41.208.110.46
+  condition: attributes

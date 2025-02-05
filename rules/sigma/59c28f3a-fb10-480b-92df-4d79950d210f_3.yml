@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-09-20 : Affid=3, offline, ".ykcol" : "Status of invoice
+  A2171234-56" - "A2171234-56.rar" - process_creation'
+id: 3c513a4c-6ef9-43b6-8ad8-f6475dd00c84
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59c28f3a-fb10-480b-92df-4d79950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - fd365e280b5d5125d7045fd10f877e58
+    sha1:
+    - e2d2acc931c4999b29e30d4fd227207627fd53ef
+    sha256:
+    - da386efced7535a1262ae9ede6988e27bdc6fca3411da14e6db02158aa37a5c9
+  condition: attributes

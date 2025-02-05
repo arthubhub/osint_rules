@@ -1,0 +1,20 @@
+title: 'Malspam 2016-09-06 (.js in .zip) - campaign: "copies" - url_request'
+id: 357096af-abea-4779-a03f-6fd5ac532959
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ceb43f-b180-449b-a0d6-4afe950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - bookinghotworld.ws
+    - canonsupervideo4k.ws
+    - http://bookinghotworld.ws
+    - http://canonsupervideo4k.ws
+    - http://tradesmartcoin.xyz
+    - http://darkestzone2.wang
+  condition: attributes

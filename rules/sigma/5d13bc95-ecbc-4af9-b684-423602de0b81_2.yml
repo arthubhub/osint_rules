@@ -1,0 +1,17 @@
+title: Soft Cell case - guessed indicators (via Twitter discussion) - dns_query
+id: c3f91f5e-d549-4d90-a4f9-bd9204bca5c4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d13bc95-ecbc-4af9-b684-423602de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 45.77.226.209
+    - 210.56.60.240
+    - 45.121.48.106
+  condition: attributes

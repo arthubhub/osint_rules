@@ -1,0 +1,16 @@
+title: OSINT Milano Hacking Team malware detection tool & IOCs by Rook Security -
+  url_request
+id: 690dd950-d92f-4b0d-88ea-a3ca4d7fcc88
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55bb38dc-bda8-4839-8b37-4fe1950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.rooksecurity.com
+  condition: attributes

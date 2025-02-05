@@ -1,0 +1,20 @@
+title: OSINT - El Machete's Malware Attacks Cut Through LATAM - dns_query
+id: acddc0e8-6f17-4ac2-b974-ae85c4b00a54
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/594e5f0a-da78-4d3c-b9d4-4f8502de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.el_machete
+detection:
+  attributes:
+    IpAddresses:
+    - 176.9.3.184
+    - 181.50.98.50
+    - 213.239.232.149
+    - 69.64.43.33
+  condition: attributes

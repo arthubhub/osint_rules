@@ -1,0 +1,20 @@
+title: Dridex botnet 222 (20160315) - dns_query
+id: 78657cab-664e-4833-bbc3-78771e5373b6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e87ebe-7b6c-4008-bcfd-42a302de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 41.79.173.47
+    - 87.117.242.31
+    - 154.66.148.52
+    - 212.183.20.78
+    - 210.209.89.107
+    - 213.192.1.178
+  condition: attributes

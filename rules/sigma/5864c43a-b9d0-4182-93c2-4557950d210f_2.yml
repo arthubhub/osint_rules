@@ -1,0 +1,15 @@
+title: Android spyware - dns_query
+id: 3101b737-ac6c-4566-8af2-d02d4f321806
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5864c43a-b9d0-4182-93c2-4557950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 185.38.248.94
+  condition: attributes

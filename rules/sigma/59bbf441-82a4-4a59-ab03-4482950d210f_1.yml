@@ -1,0 +1,16 @@
+title: OSINT - Hangul Word Processor and PostScript Abused Via Malicious Attachments
+  - url_request
+id: 83670702-8b8a-4c07-9b63-f17d28576c16
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59bbf441-82a4-4a59-ab03-4482950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.trendmicro.com
+  condition: attributes

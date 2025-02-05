@@ -1,0 +1,15 @@
+title: OSINT - Saga 2.0 (Sage 2.0) comes with IP Generation Algorithm (IPGA) - url_request
+id: f0236a9d-2cf5-4580-acfb-468b05061e02
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/588f9099-bcc8-4730-b744-4eed02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.govcert.admin.ch
+  condition: attributes

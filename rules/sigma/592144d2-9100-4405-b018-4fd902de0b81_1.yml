@@ -1,0 +1,19 @@
+title: OSINT - New SMB Worm Uses Seven NSA Hacking Tools. WannaCry Used Just Two -
+  url_request
+id: c1df31a9-6fbf-408b-9276-a4acaa8797d1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/592144d2-9100-4405-b018-4fd902de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - ubgdgno5eswkhmpy.onion
+    - https://github.com
+    - https://www.bleepingcomputer.com
+    - https://raw.githubusercontent.com
+  condition: attributes

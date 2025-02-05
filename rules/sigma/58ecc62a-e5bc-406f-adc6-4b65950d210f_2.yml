@@ -1,0 +1,17 @@
+title: "OSINT - Ewind \xE2\u20AC\u201C Adware in Applications\xE2\u20AC\u2122 Clothing\
+  \ - dns_query"
+id: 44f48cf7-0d9c-40b9-ad9c-481dde62d590
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58ecc62a-e5bc-406f-adc6-4b65950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - mobincome.org
+    - androwr.ru
+  condition: attributes

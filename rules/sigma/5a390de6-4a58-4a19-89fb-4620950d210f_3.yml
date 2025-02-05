@@ -1,0 +1,50 @@
+title: OSINT - Zeus Panda Banking Trojan Targets Online Holiday Shoppers - process_creation
+id: 60d5feee-032d-4f5f-a77b-337b18f388c6
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a390de6-4a58-4a19-89fb-4620950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_4762:
+    sha256:
+    - 2514dbf1549b517692e415af85baa6e5eca926cdedb526d2e255b5943501d98b
+  object_4763:
+    sha256:
+    - ae92a4a5bc64db6af23219d7fa2d8bce98a5d7eb2eff7193e4f49698e3e5650d
+  object_4764:
+    md5:
+    - a02d6ca05cbc89a317d82945bcb6b15b
+    sha1:
+    - 2cacb877c487b6dae47fb16fdd1dc7b05595125b
+    sha256:
+    - ae92a4a5bc64db6af23219d7fa2d8bce98a5d7eb2eff7193e4f49698e3e5650d
+  object_4766:
+    md5:
+    - 52b053886cc0ca44df86cba91de968fa
+    sha1:
+    - ef22bcec61cb2aea85cd93cede6af5f4b27e011b
+    sha256:
+    - 5f7a1b02d5b2904554e65bd01a12f1fa5ff2121eef53f3942c4e9e29c46bdce3
+  object_4768:
+    md5:
+    - b2a6ec17f49740ddc699640fb19f951d
+    sha1:
+    - 00d8ef79f6fe532815c0325fb6d7165cdae98548
+    sha256:
+    - e13594d83f2a573627e742baf33298b9eeec1ebb8c7955304b8c35559e5f23dc
+  object_4770:
+    md5:
+    - bcac60105cb24fdbcc03c1d52d09bfd1
+    sha1:
+    - 8eab9d3dfe6ac35a3624e916bb3cdc6d390a83d2
+    sha256:
+    - 2514dbf1549b517692e415af85baa6e5eca926cdedb526d2e255b5943501d98b
+  attributes:
+    sha256:
+    - 5f7a1b02d5b2904554e65bd01a12f1fa5ff2121eef53f3942c4e9e29c46bdce3
+    - e13594d83f2a573627e742baf33298b9eeec1ebb8c7955304b8c35559e5f23dc
+  condition: 1 of object_* or attributes

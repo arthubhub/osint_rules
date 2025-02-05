@@ -1,0 +1,17 @@
+title: What's in a server name (on APT28/Sofacy) by ThreatConnect - process_creation
+id: 58cf2e6a-3f4a-47fd-ac4f-f977856a26eb
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/578399b0-5b4c-4ddd-b1ad-4a2d950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    md5:
+    - 2045efb4da99b3af154814888be43390
+  condition: attributes

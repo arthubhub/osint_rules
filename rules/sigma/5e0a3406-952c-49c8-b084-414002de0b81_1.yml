@@ -1,0 +1,51 @@
+title: "OSINT - Introducing BIOLOAD: FIN7 BOOSTWRITE\xE2\u20AC\u2122s Lost Twin -\
+  \ process_creation"
+id: b5599564-f6e2-4bcb-9e01-f588eca76b84
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e0a3406-952c-49c8-b084-414002de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.fin7
+- attack.dll_search_order_hijacking
+- attack.group.anunak
+detection:
+  object_4991:
+    md5:
+    - a8ba59eebd4858b8b448f13a436edf60
+    sha1:
+    - 02216bbd2633b23be575230bb1d0fe176ea88b4f
+    sha256:
+    - 7bdae0dfc37cb5561a89a0b337b180ac6a139250bd5247292f470830bd96dda7
+  object_4993:
+    md5:
+    - 4b32521cc8a8c050fbc55b3f9d05c84d
+    sha1:
+    - ff62e30eb38116b3273543f9ace038c4d0003f9c
+    sha256:
+    - 77a6fbd4799a8468004f49f5929352336f131ad83c92484b052a2eb120ebaf9a
+  object_4995:
+    md5:
+    - 27370ffd32942337596785ec737a4e46
+    sha1:
+    - a69d0ffed73198235c73f412a81dd2f4d12aa152
+    sha256:
+    - c1c68454e82d79e75fefad33e5acbb496bbc3f5056dfa26aaf1f142cee1af372
+  object_4997:
+    md5:
+    - 21e79ae1d7a5f020c171f412cbb92253
+    sha1:
+    - ccd96a0b38d2edd14e290c597a7371e412429515
+    sha256:
+    - 42d3cf75497a724e9a9323855e0051971816915fc7eb9f0426b5a23115a3bdcb
+  attributes:
+    sha256:
+    - 77a6fbd4799a8468004f49f5929352336f131ad83c92484b052a2eb120ebaf9a
+    - 42d3cf75497a724e9a9323855e0051971816915fc7eb9f0426b5a23115a3bdcb
+    - 7bdae0dfc37cb5561a89a0b337b180ac6a139250bd5247292f470830bd96dda7
+    - c1c68454e82d79e75fefad33e5acbb496bbc3f5056dfa26aaf1f142cee1af372
+  condition: 1 of object_* or attributes

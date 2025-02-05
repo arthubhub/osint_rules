@@ -1,0 +1,19 @@
+title: '''Surprise'' Ransomware (2016-03-11) - process_creation'
+id: aaa02a59-c510-4e0e-8a9c-331d3cb7ea75
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e2d5fc-4238-4b3a-9d7b-4539950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - c34fb15c5f93c2bd1b8a1ba29566837f
+    sha1:
+    - bee22913ad9d6c9a37152aa65daa6bd9beca00eb
+    sha256:
+    - ddb0c54759fada5cff7bb60237ace601fcbd526208627fdee170d9ed41e91c7a
+  condition: attributes

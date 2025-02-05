@@ -1,0 +1,21 @@
+title: "OSINT Following the Trail of BlackTech\xE2\u20AC\u2122s Cyber Espionage Campaigns\
+  \ by TrendMicro - dns_query"
+id: 217b3f6d-f8c9-4a8f-9fca-c3f866f4ab64
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/594d1a36-8ca8-451c-83a6-6266950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - microsoftmse.com
+    - blogtw.tk
+    - httpstw.tk
+    - itaiwans.com
+    IpAddresses:
+    - 211.72.242.120
+  condition: attributes

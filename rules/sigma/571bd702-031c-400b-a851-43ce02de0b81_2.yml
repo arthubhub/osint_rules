@@ -1,0 +1,48 @@
+title: OSINT The Ghost Dragon by Cylance - dns_query
+id: 0e0fa3d5-c0d9-4572-bd7b-f4594a4a78a5
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/571bd702-031c-400b-a851-43ce02de0b81.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - winupdate.net
+    - swgabeg.com
+    - searchhappynews.com
+    - fhtd.info
+    IpAddresses:
+    - 175.45.192.234
+    - 202.174.130.116
+    - 113.10.148.161
+    - 202.172.32.172
+    - 174.128.255.228
+    - 111.68.8.130
+    - 122.9.247.134
+    - 112.125.17.103
+    - 122.10.83.75
+    - 122.10.41.85
+    - 101.55.33.39
+    - 203.232.28.10
+    - 209.85.84.165
+    - 122.10.18.166
+    - 122.9.247.56
+    - 103.246.245.147
+    - 122.10.36.94
+    - 60.215.128.246
+    - 64.111.220.218
+    - 122.9.247.216
+    - 103.232.215.144
+    - 142.4.103.90
+    - 31.170.179.179
+    - 113.10.148.205
+    - 209.85.84.167
+    - 58.64.187.22
+    - 122.9.247.128
+    - 123.254.111.87
+    - 122.10.85.35
+  condition: attributes

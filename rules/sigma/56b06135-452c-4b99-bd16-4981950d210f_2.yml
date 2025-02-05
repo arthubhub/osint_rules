@@ -1,0 +1,17 @@
+title: OSINT Puttering into the Future...by Cylance - dns_query
+id: 0e78485f-c5cd-4d0b-ba02-ef5328d0e083
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56b06135-452c-4b99-bd16-4981950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 87.117.229.26
+    - 78.129.252.159
+    - 109.169.86.25
+  condition: attributes

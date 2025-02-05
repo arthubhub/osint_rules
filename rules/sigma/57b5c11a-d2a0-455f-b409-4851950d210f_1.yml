@@ -1,0 +1,20 @@
+title: OSINT Domains and IPs involved in JS ransomware delivered through email by
+  burberry on AlienVault OTX - url_request
+id: 214e0006-8dd4-46a6-a8d5-65a0223068fa
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b5c11a-d2a0-455f-b409-4851950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - oneviewcontrols.com
+    - kianebime.com
+    - nedvigymost.com
+    - coonectio.com
+    - https://otx.alienvault.com
+  condition: attributes

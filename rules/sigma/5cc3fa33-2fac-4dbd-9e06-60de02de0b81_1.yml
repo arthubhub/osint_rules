@@ -1,0 +1,53 @@
+title: "OSINT - BabyShark Malware Part Two \xE2\u20AC\u201C Attacks Continue Using\
+  \ KimJongRAT and PCRat - process_creation"
+id: d277e4d4-b143-46c4-b4b2-615fca30a5a2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5cc3fa33-2fac-4dbd-9e06-60de02de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.babyshark
+- attack.software.ghost_rat
+- attack.group.ghost_rat
+detection:
+  object_6957:
+    md5:
+    - 03dbc1b3d79a4ff70f06fd6e67e00985
+    sha1:
+    - dbfdf474c76428f02fc4fbe408a8fe81a9402421
+    sha256:
+    - 75917cc1bd9ecd7ef57b7ef428107778b19f46e8c38c00f1c70efc118cb8aab5
+  object_6959:
+    md5:
+    - 57ef27823865c8f7784b0d37fd2c4aa8
+    sha1:
+    - d953005a70bf9d6282a9792c2598218657f31e25
+    sha256:
+    - bd6efb16527b025a5fd256bb357a91b4ff92aff599105252e50b87f1335db9e1
+  object_6961:
+    md5:
+    - 6590830061f85c0acc5259013555d079
+    sha1:
+    - b014e1b20499fcbab4c8e7af351ce08ac7f7832e
+    sha256:
+    - 4b3416fb6d1ed1f762772b4dd4f4f652e63ba41f7809b25c5fa0ee9010f7dae7
+  object_6963:
+    md5:
+    - 61f42c2dc1da18b046c6b274abe6f4ca
+    sha1:
+    - da188539e0dddae87245bcbc6e30eeb8ea607657
+    sha256:
+    - d50a0980da6297b8e4cec5db0a8773635cee74ac6f5c1ff18197dfba549f6712
+  attributes:
+    sha256:
+    - d50a0980da6297b8e4cec5db0a8773635cee74ac6f5c1ff18197dfba549f6712
+    - bd6efb16527b025a5fd256bb357a91b4ff92aff599105252e50b87f1335db9e1
+    - 4b3416fb6d1ed1f762772b4dd4f4f652e63ba41f7809b25c5fa0ee9010f7dae7
+    - f86d05c1d7853c06fc5561f8df19b53506b724a83bb29c69b39f004a0f7f82d8
+    - 75917cc1bd9ecd7ef57b7ef428107778b19f46e8c38c00f1c70efc118cb8aab5
+    - 33ce9bcaeb0733a77ff0d85263ce03502ac20873bf58a118d1810861caced254
+  condition: 1 of object_* or attributes

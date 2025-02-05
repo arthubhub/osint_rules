@@ -1,0 +1,15 @@
+title: OSINT - Teaching an old RAT new tricks - url_request
+id: 7ed6ba85-f1a0-4a9e-b959-4a621a31dcb8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/571a302c-e5c4-4014-8131-4e9c950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://www.sentinelone.com
+  condition: attributes

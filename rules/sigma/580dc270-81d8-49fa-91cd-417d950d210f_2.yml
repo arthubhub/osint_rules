@@ -1,0 +1,15 @@
+title: Malspam week 44 (2016-10-24) - Locky ('Sebek') - dns_query
+id: 660a9d04-5cfe-4f37-b056-59bfc928c9c5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/580dc270-81d8-49fa-91cd-417d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 172.245.9.41
+  condition: attributes

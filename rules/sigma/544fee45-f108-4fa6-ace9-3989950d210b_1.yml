@@ -1,0 +1,39 @@
+title: "OSINT APT28: A Window into Russia\xE2\u20AC\u2122s Cyber Espionage Operations?\
+  \ blog post by FireEye - url_request"
+id: 3628da66-ff91-40ac-a9d5-7a3a81e76a10
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/544fee45-f108-4fa6-ace9-3989950d210b.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.sofacy
+detection:
+  attributes:
+    RequestUrl|contains:
+    - nato.nshq.in
+    - windous.kz
+    - natoexhibitionff14.com
+    - baltichost.org
+    - novinitie.com
+    - standartnevvs.com
+    - http://www.fireeye.com
+    - login-osce.org
+    - adobeincorp.com
+    - https://github.com
+    - q0v.pl
+    - g0v.pl
+    - https://raw.githubusercontent.com
+    - rnil.am
+    - smigroup-online.co.uk
+    - kavkazcentr.info
+    - n0vinite.com
+    - nshq.in
+    - wind0ws.kz
+    - adawareblock.com
+    - qov.hu.com
+    - windows-updater.com
+  condition: attributes

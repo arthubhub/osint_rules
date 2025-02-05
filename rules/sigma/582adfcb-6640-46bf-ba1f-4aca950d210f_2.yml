@@ -1,0 +1,16 @@
+title: OSINT -  HackingTeam back for your Androids, now extra insecure! - dns_query
+id: f72dd40e-a0b0-4369-8ebd-ba27063e73c0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582adfcb-6640-46bf-ba1f-4aca950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 66.232.100.221
+    - 68.233.237.11
+  condition: attributes

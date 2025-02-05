@@ -1,0 +1,21 @@
+title: "OSINT - Tale of the Two Payloads \xE2\u20AC\u201C TrickBot and Nitol - process_creation"
+id: 952a0ded-f5e2-4f6f-96fd-1c4e9d68c842
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/598626ea-83e0-4b11-a9a5-485b950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.trick_bot
+detection:
+  attributes:
+    md5:
+    - 2c5639ddaa3ed639e17a0fa669e35da1
+    sha1:
+    - d127c60b32fb4a83f711a4a38e9053f347ed90ec
+    sha256:
+    - b50904ae9527ed6ea09576db81bca8dc46a1921ae4e90f7c388e17ee034123b2
+  condition: attributes

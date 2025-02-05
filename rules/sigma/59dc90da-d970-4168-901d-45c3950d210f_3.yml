@@ -1,0 +1,23 @@
+title: 'M2M -  Locky 2017-10-10 : Affid=3, offline, ".asasin" : "Document ... is complete"
+  - "invoice_1234_sign_and_return.7z" - process_creation'
+id: 95a3f2b3-9fc2-44ee-b29c-cf5a6bcd7d6b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59dc90da-d970-4168-901d-45c3950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.software.locky
+- attack.group.locky
+detection:
+  attributes:
+    md5:
+    - 11166f884550390d27c26a893506657a
+    sha1:
+    - cf0c629de9a31e27b672e8898139123aed3bda0d
+    sha256:
+    - 3037b1b587eac2080d8c95d05cc5545f43128b2a69a08aa27e6058f7306b3c9b
+  condition: attributes

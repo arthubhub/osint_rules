@@ -1,0 +1,76 @@
+title: 'OSINT - Threat Spotlight: Panda Banker Trojan Targets the US, Canada and Japan
+  - url_request'
+id: 839ac38d-3466-49de-8cff-3392acdcd7c2
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bbe09c9-9040-4415-bd25-45b7950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.t1185
+- attack.software.emotet
+detection:
+  attributes:
+    RequestUrl|contains:
+    - umirushieteg.website
+    - mykeeptake.xyz
+    - https://threatvector.cylance.com
+    - rxdirectories.top
+    - coloredcredit.pw
+    - smartnutriment.top
+    - https://uiaoduiiej.chimkent.su
+    - https://humoronoff.top
+    - https://adshiepkhach.top
+    - lyletening.ru
+    - haketsitet.com
+    - rombutcading.ru
+    - nybaseballfans.website
+    - luxurygoosedown.top
+    - https://betrephengu.ru
+    - encitimefoan.ru
+    - majorhunt.top
+    - mihecksandca.ru
+    - nauseorofte.ru
+    - vethatnetont.com
+    - letretuthes.com
+    - theeunload.website
+    - watercraftuavs.top
+    - https://mihecksandca.ru
+    - humoronoff.top
+    - canariasmotor.top
+    - jecrusandsi.com
+    - wegmanss.pw
+    - bloodskin.website
+    - speakeasyclan.top
+    - dintlasirob.com
+    - vudoshakar123123.website
+    - https://rombutcading.ru
+    - legaleeny.pw
+    - inghapwilhe.ru
+    - myaningmuchme.ru
+    - indolentgames.top
+    - antrefurniture.top
+    - adshiepkhach.top
+    - thevisitorsfilm.top
+    - tailbackuisback.xyz
+    - downloadmasala.website
+    - https://mystratusstore.xyz
+    - hogamotin.com
+    - joltter.top
+    - akihabrajdu.xyz
+    - rebretaci.com
+    - myhubcloud.website
+    - https://vudoshakar123123.website
+    - https://myaningmuchme.ru
+    - cebabsebi.com
+    - picosloop.top
+    - connectionjump.top
+    - zanhimnohedt.com
+    - https://nauseorofte.ru
+    - mystratusstore.xyz
+    - gmokkasd.website
+    - fullspectrumavs.top
+  condition: attributes

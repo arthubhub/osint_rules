@@ -1,0 +1,15 @@
+title: 'OSINT -  Death Comes Calling: Thanatos/Alphabot Trojan Hits the Market - dns_query'
+id: 07ad7bed-2414-46ff-9676-93d0dc663fe0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e2c37c-b6d8-459d-b70b-428a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 85.93.5.121
+  condition: attributes

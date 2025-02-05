@@ -1,0 +1,17 @@
+title: OSINT When ELF.BillGates met Windows by Arkoon+Netasq - dns_query
+id: 1eea4783-2596-4974-b7c0-bfa5ef7e63cd
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/560c1c35-fd9c-4fb4-9a93-801b950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 129.231.45.171
+    - 1.82.184.200
+    - 39.109.0.113
+  condition: attributes

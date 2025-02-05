@@ -1,0 +1,22 @@
+title: OSINT - Hades Locker Ransomware Mimics Locky - url_request
+id: 58596353-15ff-4a1a-8160-d16c2262a8dd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/582aae88-202c-45ef-b8e9-4e61950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://leursmatransport.nl
+    - http://jdybchotfn.ru
+    - http://transportbedrijfbrenninkmeijer.nl
+    - https://www.proofpoint.com
+    - http://185.45.193.169
+    - http://breesmanstransport.nl
+    - http://transportbedrijfvanetten.nl
+    - http://pfmydcsjib.ru
+  condition: attributes

@@ -1,0 +1,40 @@
+title: 'OSINT - Dragonfly: Western energy sector targeted by sophisticated attack
+  group - process_creation'
+id: cdedae22-156f-4697-9c75-063ce91279a8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59afedbe-12f4-4585-9048-4b8b950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.energetic_bear
+- attack.group.dragonfly
+detection:
+  attributes:
+    md5:
+    - 1560f68403c5a41e96b28d3f882de7f1
+    - db07e1740152e09610ea826655d27e8d
+    - b3b5d67f5bbf5a043f5bf5d079dbcb56
+    - da9d8c78efe0c6c8be70e6b857400fb1
+    - e02603178c8c47d198f7d34bcf2d68b8
+    - 765fcd7588b1d94008975c4627c8feb6
+    - a4cf567f27f3b2f8b73ae15e2e487f00
+    - 141e78d16456a072c9697454fc6d5f58
+    sha1:
+    - 4f2faef3d65099c19d617df73af5119dd719240c
+    - eff5e2a3ac471a1b5ecdf51a72e003a82c350506
+    - c7eae6cd08d0601223b641745f078dffce285066
+    - cd9519127efcc9a65068befe17ae038c94085358
+    - d6ef3e457819425bf9524e8a7070f3fcf21c3ad5
+    - 95db15c67b48945237af7de61f3dbab92c99edd1
+    sha256:
+    - cee4211af96df184236e816ab0b11d95d1075148299a29719fcd9675b2714426
+    - b051a5997267a5d7fa8316005124f3506574807ab2b25b037086e2e971564291
+    - 178348c14324bc0a3e57559a01a6ae6aa0cb4013aabbe324b51f906dcf5d537e
+    - fc54d8afd2ce5cb6cc53c46783bf91d0dd19de604308d536827320826bc36ed9
+    - 28143c7638f22342bff8edcd0bedd708e265948a5fcca750c302e2dca95ed9f0
+    - c272a2d96aefdef746f983e7f8720792e8a6dee97a766a651dc55f70f605b23d
+  condition: attributes

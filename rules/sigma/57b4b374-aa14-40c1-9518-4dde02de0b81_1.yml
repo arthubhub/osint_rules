@@ -1,0 +1,46 @@
+title: 'OSINT - Operation Ghoul: targeted attacks on industrial and engineering organizations
+  - url_request'
+id: 3e09741d-0bb4-4b25-9cc5-842915883516
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57b4b374-aa14-40c1-9518-4dde02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://papercuts.info
+    - studiousb.com
+    - 357912468.com
+    - aboranian.com
+    - http://192.169.82.86
+    - http://www.deluxepharmacy.net
+    - http://glazeautocaree.com
+    - https://securelist.com
+    - com-wn.in
+    - brokelimiteds.in
+    - http://free.meedlifespeed.com
+    - deluxepharmacy.net
+    - katynew.pw
+    - indyproject.org
+    - 468213579.com
+    - apple-recovery.us
+    - http://copylines.biz
+    - copylines.biz
+    - http://468213579.com
+    - http://brokelimiteds.in
+    - http://emailreferentie.appleid.apple.nl.468213579.com
+    - http://apple-recovery.us
+    - http://customer.comcast.com.aboranian.com
+    - meedlifespeed.com
+    - http://apple.security-block.com
+    - http://2b68.f444c4f547116bfd052461b0b3ab1bc2b445a.comb3af1139274f266b2hxxp
+    - glazeautocaree.com
+    - http://studiousb.com
+    - f444c4f547116bfd052461b0b3ab1bc2b445a.com
+    - security-block.com
+    - mercadojs.com
+  condition: attributes

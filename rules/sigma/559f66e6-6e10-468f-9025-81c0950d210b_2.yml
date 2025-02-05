@@ -1,0 +1,20 @@
+title: OSINT OSX/Pintsized Backdoor Additional Details by Zataz / Eric Romang - dns_query
+id: b9e9ceef-5057-4a40-9a3c-9f0ba15cf358
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/559f66e6-6e10-468f-9025-81c0950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - corp-appl.com
+    - digitalinsight-ltd.com
+    - jdk-update.com
+    - cloudbox-storage.com
+    - clust12-akmai.net
+    - fbcbn.net
+  condition: attributes

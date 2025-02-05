@@ -1,0 +1,46 @@
+title: 'M2M -  Locky Affid=3, ".asasin"/Trickbot "mac1" 2017-10-11 : "Emailing: 12345678"
+  - "12345678.7z" - url_request'
+id: df63858a-cbc2-4c9e-9fe9-0b4dffda7abb
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59df77e7-2420-4c6c-bc2c-44ce950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.locky
+- attack.software.trick_bot
+- attack.group.locky
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://lacosturera.es
+    - http://alexandradickman.com
+    - http://fetchstats.net
+    - http://enixgaming.de
+    - http://stemcellenhancementresearch.com
+    - http://sgtenterprises.com
+    - http://missiegeslaagd.nl
+    - http://centralbaptistchurchnj.org
+    - http://jeangurunlian.com
+    - http://agriturismoviridarium.it
+    - http://pacalik.net
+    - http://fls-portal.co.uk
+    - http://petrochemus.com
+    - http://signlight.com.au
+    - http://sci-eye.com
+    - http://download.justowin.it
+    - http://shamanic-extracts.biz
+    - http://enmee.net
+    - http://motifahsap.com
+    - http://secundaria50.edu.mx
+    - http://ryanbaptistchurch.com
+    - http://basedow-bilder.de
+    - http://sambad.com.np
+    - http://arkberg-design.fi
+    - http://hair-select.jp
+    - http://peopleiknow.org
+    - http://itsmaterial.us
+  condition: attributes

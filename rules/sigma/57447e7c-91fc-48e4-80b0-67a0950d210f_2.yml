@@ -1,0 +1,67 @@
+title: OSINT - Looking Into a Cyber-Attack Facilitator in the Netherlands by Trend
+  Micro - dns_query
+id: 91ce1d93-5d78-473e-94e6-c904f7a419fa
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57447e7c-91fc-48e4-80b0-67a0950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - military-info.eu
+    - edit-mail-yahoo.com
+    - osce-press.com
+    - posta-hurriyet.com
+    - wsjworld.com
+    - int-live.com
+    - account-web.de
+    - mail-navy.ro
+    - bit2ly.com
+    - bestapplestore.com
+    - eservicesystems.net
+    - service-yahoo.com
+    - iraqinews.info
+    - inside-apple-localisation.com
+    - securityicloudservice.com
+    - catholicsinaliance.org
+    - aijazeera.org
+    - itunes-helper.net
+    - osce-info.com
+    - mobile-sanoma.net
+    - redirect2app.cf
+    - defensenews.org
+    - reuters-press.com
+    - pasport-yandex.ru
+    - electronicfrontierfoundation.org
+    - marktingvb.ml
+    - inside-localisation-apple.com
+    - mycloud-mail.ru
+    - localiser-icloud.com
+    - service-ukr.net
+    - nato-news.com
+    - mail-hurriyet.com
+    - mailhost-ut.ee
+    - live-settings.com
+    - options-mail.ru
+    - accounts-updated-confirmation.com
+    - unbulletin.com
+    - cc-yahoo-inc.org
+    - worldpoliticsreviews.com
+    - webmail-mil.gr
+    - help-yahoo-service.com
+    - blu172maillive.com
+    - loqin-yandex.ru
+    - mailmil.ae
+    - mfagreece.com
+    - webmail-gov.me
+    - privacy-facebook.me
+    - setting-mail.ru
+    - rn-mail.ru
+    - grab2d.com
+    - privacy-yahooservice.com
+    - euroreport24.com
+  condition: attributes

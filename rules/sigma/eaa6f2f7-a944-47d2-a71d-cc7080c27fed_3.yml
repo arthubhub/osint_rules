@@ -1,0 +1,47 @@
+title: Lumma Stealer Malware (delivered via GitHub Spam) - Pandora analysis (l6E.exe)
+  - process_creation
+id: a689c25b-09ab-479b-af16-c3350d891b67
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/eaa6f2f7-a944-47d2-a71d-cc7080c27fed.json
+logsource:
+  product: windows
+  category: process_creation
+tags:
+- attack.group.lumma_stealer
+- attack.software.lumma_stealer
+detection:
+  object_10167:
+    md5:
+    - 14ca9e349f994e878e57686119f004d4
+    sha1:
+    - 9fca5f5394c9dfe0c1e13f05b4ef26c02d4f7862
+    sha256:
+    - ff87b44ae63fc48174dd73a0efb161df297861d1e4b9c66eb1869eb0b355d7db
+  object_10168:
+    md5:
+    - c38218fae44dcc2ce3d1629fec6039ed
+    sha1:
+    - 59ce2a22d5441931757c56512e053728c1113694
+    sha256:
+    - 30333eda5ecb5656ee2cbd56528cf9f16c55befa0e4a0d3d08d15b69a3097b97
+  object_10169:
+    md5:
+    - b1c19dc88419b41741030f2fceb517c1
+    sha1:
+    - ce204d1894753f6a806fda9121c0e3ea83c23dd5
+    sha256:
+    - 9a6833fd3cc183b906caf84dad1e9ce58b805f604b34fa49c73395c2a27c2a2a
+  object_10170:
+    sha256:
+    - 07b89ccdef9eb2727f8eae56769c60b0a84b8de906ea9ac71cdc53f7fc9608fd
+  object_10171:
+    md5:
+    - fac2188e4a28a0cf32bf4417d797b0f8
+    sha1:
+    - 1970de8788c07b548bf04d0062a1d4008196a709
+    sha256:
+    - d737637ee5f121d11a6f3295bf0d51b06218812b5ec04fe9ea484921e905a207
+  condition: 1 of object_*

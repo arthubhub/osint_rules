@@ -1,0 +1,40 @@
+title: 'Jaff 2017-05-25 : "Payment Receipt 1234" - "1234.pdf" - dns_query'
+id: cb8d2971-68d5-4e51-aee0-ef525d7b4877
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59281443-312c-4b77-aef7-447d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    IpAddresses:
+    - 176.223.209.7
+    - 192.124.249.2
+    - 83.167.255.182
+    - 192.124.249.6
+    - 81.31.42.12
+    - 81.169.145.162
+    - 46.30.213.61
+    - 88.198.4.251
+    - 95.173.189.215
+    - 91.82.226.140
+    - 81.169.145.160
+    - 104.156.51.239
+    - 46.173.218.111
+    - 80.86.198.13
+    - 81.169.145.66
+    - 166.62.29.125
+    - 81.218.71.217
+    - 195.130.247.50
+    - 81.177.135.191
+    - 70.35.121.121
+    - 34.225.214.20
+    - 160.153.129.221
+    - 162.144.143.109
+  condition: attributes

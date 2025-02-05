@@ -1,0 +1,38 @@
+title: 'Jaff 2017-05-26 : "Scanned Image from a Xerox WorkCentre" - "Scan_0012_123456789.zip"
+  - url_request'
+id: 0857f28a-f95e-4721-bda7-0fd70a86819c
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59282a08-aec8-49e7-932a-45d3950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.jaff
+- attack.group.jaff
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://fabriquekorea.com
+    - http://dsopro.com
+    - http://better57toiuydof.net
+    - http://e-snhv.com
+    - http://paradigmenergycorp.com
+    - http://www.buchenried.de
+    - http://trade-unite.ru
+    - http://poltec.com.au
+    - http://eselink.com.my
+    - http://thanprints.com
+    - http://pw-shop.com
+    - http://praktikum-marketing.de
+    - http://eisenerzgrube.de
+    - http://youtoolgrabeertorse.org
+    - http://jinqiaonkyy.com
+    - http://tasfirin-ustasi.net
+    - http://easy2.cn
+    - http://comboratiogferrdto.com
+    - http://orhangazitur.com
+    - http://vigs.mx
+  condition: attributes

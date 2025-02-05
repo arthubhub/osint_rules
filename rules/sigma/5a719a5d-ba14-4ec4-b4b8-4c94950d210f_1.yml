@@ -1,0 +1,21 @@
+title: OSINT - Analyzing CrossRAT - url_request
+id: a80172a3-7a86-4635-9978-3409058addfd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a719a5d-ba14-4ec4-b4b8-4c94950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.crossrat
+detection:
+  object_4858:
+    RequestUrl|contains:
+    - flexberry.com
+  attributes:
+    RequestUrl|contains:
+    - flexberry.com
+    - https://digitasecurity.com
+  condition: 1 of object_* or attributes

@@ -1,0 +1,20 @@
+title: 'Malspam 2016-09-19 (.js in .zip) - campaign: "Express Parcel service" - dns_query'
+id: 6a884424-9330-442e-a96e-231e21e29cce
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57dfad33-41c0-4000-8d94-4149950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - roxieimshi.com
+    - merofid.com
+    - foveawaac.net
+    IpAddresses:
+    - 91.194.250.131
+    - 178.212.131.10
+  condition: attributes

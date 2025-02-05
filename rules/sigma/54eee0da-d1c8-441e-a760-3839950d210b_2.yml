@@ -1,0 +1,89 @@
+title: Fessleak before It Was Cool by OpenDNS - dns_query
+id: 9fd90b12-9bfb-443d-bf33-0810c21aafa3
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/54eee0da-d1c8-441e-a760-3839950d210b.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - beatrinko.org
+    - labutinra.org
+    - fenoli.net
+    - retilio.com
+    - pinkavuz.org
+    - penneza.com
+    - azurf.org
+    - pequrio.org
+    - wonkobu.org
+    - vectallies.org
+    - tunim.net
+    - bracino.org
+    - elimi.net
+    - tesuin.org
+    - ontiq.com
+    - flaris.net
+    - estuty.com
+    - shivue.org
+    - eltisc.net
+    - landors.org
+    - uvreno.com
+    - dovimos.org
+    - zhonte.org
+    - vemisaio.org
+    - orsai.net
+    - hevpazana.org
+    - kenthopm.org
+    - deinq.com
+    - ankapootle.org
+    - ramonza.org
+    - ferom.org
+    - timarols.org
+    - rampoyak.org
+    - rliner.org
+    - viceon.net
+    - podin.net
+    - namille.org
+    - gladolimo.com
+    - bizono.org
+    - ferko.org
+    - prosoknf.com
+    - marzie.org
+    - ermuz.com
+    - penazhef.org
+    - litpou.org
+    - lemdingo.com
+    - grandemab.org
+    - pazumala.org
+    - binachio.org
+    - pizzanetp.com
+    - venitial.org
+    - webpertzo.org
+    - inpoucher.com
+    - zelti.net
+    - pondoq.org
+    - binjer.org
+    - montiza.net
+    - ztopp.org
+    - fermentzone.com
+    - romaldi.com
+    - zibond.com
+    - relom.org
+    - anster.net
+    - lemptyzp.org
+    - ingoarten.org
+    - fersob.org
+    - chebroom.com
+    - kabur.org
+    - zarafint.org
+    IpAddresses:
+    - 64.34.127.134
+    - 216.157.99.23
+    - 216.157.99.25
+    - 64.34.127.86
+    - 216.151.221.212
+  condition: attributes

@@ -1,0 +1,18 @@
+title: 'OSINT - Meet Ovidiy Stealer: Bringing credential theft to the masses - dns_query'
+id: de03e344-8f30-42bd-acff-72521948dd2b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/599e9eb0-ddc0-4349-ad1c-4f26950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - hideminer.zip
+    - vkhacktool.zip
+    - ovidiystealer.ru
+    - vk.com
+  condition: attributes

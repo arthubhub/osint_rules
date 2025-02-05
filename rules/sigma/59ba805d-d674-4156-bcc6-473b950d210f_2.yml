@@ -1,0 +1,24 @@
+title: 'OSINT New Variants of Agent.BTZ/ComRAT Found: The Threat That Hit The Pentagon
+  In 2008 Still Evolving by Intezer - dns_query'
+id: f9dff6b4-2833-4595-9c38-a0e9f73189a8
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/59ba805d-d674-4156-bcc6-473b950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 78.138.25.29
+    - 81.199.160.11
+    - 169.255.102.240
+    - 178.219.68.242
+    - 41.223.91.217
+    - 196.43.240.177
+    - 81.199.34.150
+    - 88.83.25.122
+    - 82.146.175.69
+  condition: attributes

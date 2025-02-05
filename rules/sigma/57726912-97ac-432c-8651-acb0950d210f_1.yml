@@ -1,0 +1,103 @@
+title: Pivot on other email addresses found by using the same physical address as
+  support-apple-id.com - potential sofacy - url_request
+id: f6cce1be-6583-43cf-81fb-fd3226fec5dc
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57726912-97ac-432c-8651-acb0950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - icloud-noreplay.com
+    - id-security-icloud.com
+    - localisation-service-id.com
+    - support-service-apple.com
+    - apple-idsecurity.com
+    - localisation-icloud-server.com
+    - apple-icloudidentification.com
+    - apple-iphone-security.com
+    - apple-support-team.com
+    - apple-security-localisation.com
+    - service-localisation.com
+    - support-security-apple.com
+    - support-localisation-service.com
+    - icloud-service-id.com
+    - support-icloud-service.com
+    - inside-apple-localisation.com
+    - icloud-notification.com
+    - service-support-location.com
+    - apple-icloud-identification.com
+    - apple-service-id.com
+    - server-apple.com
+    - id-apple-service.com
+    - inside-localisation-icloud.com
+    - localisation-support-services.com
+    - icloud-appleid-support.com
+    - localisation-apple-team.com
+    - localiser-icloud.com
+    - localisation-server-icloud.com
+    - security-support-icloud.com
+    - support-apple-service.com
+    - localisation-inside.com
+    - icloud-security-service.com
+    - icloud-appleid-security.com
+    - security-apple-localisation.com
+    - localisationicloud.com
+    - localisationid-icloud.com
+    - insidecloud-support.com
+    - localisation-icloud-service.com
+    - icloudapple-security.com
+    - localisation-security-service.com
+    - icloud-localisation-team.com
+    - icloud-id-support.com
+    - icloud-id-server.com
+    - support-localisation-security.com
+    - id-security-apple.com
+    - id-icloudapple.com
+    - apple-localisation-team.com
+    - cloudaccount-id.com
+    - security-icloud-support.com
+    - support-service-localisation.com
+    - apple-icloudsecurity.com
+    - security-localisation.com
+    - inside-icloud-localisation.com
+    - localisation-icloud-support.com
+    - service-id-icloud.com
+    - inside-icloud-id.com
+    - icloudsecurity-apple.com
+    - server-apple-localisation.com
+    - service-location-support.com
+    - icloud-support-service.com
+    - localisation-apple-server.com
+    - support-location-service.com
+    - appleicloud-security.com
+    - noreplay-apple.com
+    - noreplay-icloud.com
+    - security-apple-support.com
+    - inside-localisation-apple.com
+    - localisation-support.com
+    - support-apple-id.com
+    - location-service-support.com
+    - apple-supportsecurity.com
+    - appleidinside.com
+    - noreplay-icloud-security.com
+    - cloudaccount-support.com
+    - found-devices.com
+    - service-icloud-localisation.com
+    - apple-support-icloud-id.com
+    - localisation-services-support.com
+    - server-connexion.com
+    - icloud-id-support-apple.com
+    - service-localisation-icloud.com
+    - icloud-apple-security.com
+    - support-apple-id-service.com
+    - insideicloud-support.com
+    - id-icloud-security.com
+    - id-icloud-service.com
+    - icloudsecurityservice.com
+    - localisation-id-service.com
+  condition: attributes

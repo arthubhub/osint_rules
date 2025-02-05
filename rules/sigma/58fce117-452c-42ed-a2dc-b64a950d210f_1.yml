@@ -1,0 +1,18 @@
+title: OSINT - FlexSpy Application Analysis - url_request
+id: 0ad3dc79-01ff-49b0-b620-27e8276bc1dd
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58fce117-452c-42ed-a2dc-b64a950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://www.cybermerchantsofdeath.com
+    - http://58.137.119.229
+    - http://trkps.com
+    - http://202.176.88.55
+  condition: attributes

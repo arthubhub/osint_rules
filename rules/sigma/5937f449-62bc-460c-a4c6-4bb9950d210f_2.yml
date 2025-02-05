@@ -1,0 +1,15 @@
+title: OSINT - Shadowfall - dns_query
+id: cefbb77b-b18c-4ea3-9709-155329d048b4
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5937f449-62bc-460c-a4c6-4bb9950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - hurtmehard.net
+  condition: attributes

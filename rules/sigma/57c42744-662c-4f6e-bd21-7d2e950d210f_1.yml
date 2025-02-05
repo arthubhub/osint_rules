@@ -1,0 +1,46 @@
+title: 'Malspam 2016-08-29 (.wsf in .zip) - campaign: "Please find attached invoice
+  no" - url_request'
+id: 86ac394e-8aa4-4ca6-994c-26c16a72524d
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57c42744-662c-4f6e-bd21-7d2e950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://lokum1985.republika.pl
+    - http://www.jan-wallner.de
+    - bypetra.de
+    - http://job.atspace.org
+    - http://spaceinn.co.jp
+    - http://jamesm.co.uk
+    - http://www.dialektika.extra.hu
+    - http://www.webcam-bild.de
+    - http://immobilien1000.de
+    - immobilien1000.de
+    - http://www.fenit.net
+    - http://www.dondana.com
+    - http://www.epikal.go.ro
+    - http://www.kurtoskalacs.go.ro
+    - http://www.bluedizioni.com
+    - http://www.agenziadini.it
+    - http://iesjaumei.edu.gva.es
+    - http://www.saumi.jazztel.es
+    - http://www.culturalheritagemanagement.org
+    - http://vicariassicurazioni.it
+    - http://www.planet-intv.com
+    - http://conserpa.vtrbandaancha.net
+    - vicariassicurazioni.it
+    - http://club.konjiki.jp
+    - http://www.lagottoromagnolo.be
+    - http://xelagon.50webs.org
+    - http://www.agriturismoigirasoli.it
+    - http://bypetra.de
+    - http://ach-dziennik.cba.pl
+    - http://www.qualityacoustic.comcastbiz.net
+    - http://sektori.pp.fi
+  condition: attributes

@@ -1,0 +1,37 @@
+title: FluBot - Distribution vectors & Threat network infrastructure - dns_query
+id: f4f01441-2813-4610-bcb8-102fb2d53043
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/7315018a-36ea-47b4-b3e6-3c68b58788bf.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.flubot
+- attack.software.flubot
+detection:
+  object_18213:
+    QueryName|contains:
+    - vipmein.com
+  object_18216:
+    QueryName|contains:
+    - myworldnetwork.org
+  object_18217:
+    QueryName|contains:
+    - progralmedical.com.co
+  object_18220:
+    QueryName|contains:
+    - flavarich.com
+  object_18222:
+    QueryName|contains:
+    - cuicsi.com
+  attributes:
+    QueryName|contains:
+    - flavarich.com
+    - myworldnetwork.org
+    - progralmedical.com.co
+    - cuicsi.com
+    - vipmein.com
+  condition: 1 of object_* or attributes

@@ -1,0 +1,17 @@
+title: OSINT - Dangerous Invoices and Dangerous Infrastructure - dns_query
+id: ce1a611e-fde7-42c7-894e-653bea12c65f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5b9f39b4-f618-494f-ad3e-030d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - rollboat.tk
+    IpAddresses:
+    - 89.40.14.229
+  condition: attributes

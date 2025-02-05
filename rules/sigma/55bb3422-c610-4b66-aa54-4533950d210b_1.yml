@@ -1,0 +1,15 @@
+title: OSINT Angler's best friends by SANS ISC Diary - url_request
+id: a5093ffc-2ab1-427a-88c0-c39d876beb51
+description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/55bb3422-c610-4b66-aa54-4533950d210b.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://isc.sans.edu
+  condition: attributes

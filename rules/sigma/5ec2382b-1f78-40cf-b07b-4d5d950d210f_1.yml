@@ -1,0 +1,17 @@
+title: KuGou trojan backdoor campaign aim RDP on HFS panels - dns_query
+id: d8da5015-49fb-464d-a356-486fc4a52473
+description: edit this field when analysing or editing the rule - reported by "MalwareMustDie"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5ec2382b-1f78-40cf-b07b-4d5d950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 162.209.193.211
+    - 111.229.231.218
+    - 192.161.86.218
+  condition: attributes

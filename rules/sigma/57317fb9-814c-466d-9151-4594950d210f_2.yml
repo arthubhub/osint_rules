@@ -1,0 +1,16 @@
+title: A Detailed Examination of the Siesta Campaign - dns_query
+id: 6b985305-9458-4018-8215-f25cfe02c158
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57317fb9-814c-466d-9151-4594950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 69.90.65.240
+    - 184.82.164.104
+  condition: attributes

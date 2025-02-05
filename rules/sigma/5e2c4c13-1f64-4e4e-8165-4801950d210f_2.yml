@@ -1,0 +1,23 @@
+title: Emotet/Trickbot - dns_query
+id: 16b91b75-c876-4e5e-87eb-f85afd987194
+description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5e2c4c13-1f64-4e4e-8165-4801950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - chekfast.zennolab.com
+    - updatewinlsass.com
+    - api.ipify.org
+    - 149.28.106.230.vultr.com
+    - 2cdajlnnwxfylth4.onion
+    - myexternalip.com
+    IpAddresses:
+    - 68.183.170.114
+    - 155.138.142.157
+  condition: attributes

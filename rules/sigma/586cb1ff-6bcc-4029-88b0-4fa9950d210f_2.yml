@@ -1,0 +1,18 @@
+title: OSINT -  Updated Sundown Exploit Kit Uses Steganography - dns_query
+id: e13cba7e-58eb-48da-a8a7-e5b83e101c8b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/586cb1ff-6bcc-4029-88b0-4fa9950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.software.chthonic
+detection:
+  attributes:
+    IpAddresses:
+    - 93.190.143.211
+    - 188.165.163.228
+  condition: attributes

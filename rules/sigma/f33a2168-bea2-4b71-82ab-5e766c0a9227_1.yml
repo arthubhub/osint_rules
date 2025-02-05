@@ -1,0 +1,18 @@
+title: Pandora analysis (INV0027378237.7z) - Malicious attachment - dns_query
+id: 08263b5d-e389-497e-a983-67f32c5958d7
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/f33a2168-bea2-4b71-82ab-5e766c0a9227.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.t1566.001
+- attack.t1043
+detection:
+  object_18166:
+    IpAddresses:
+    - 89.117.55.98
+  condition: 1 of object_*

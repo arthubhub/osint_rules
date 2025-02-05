@@ -1,0 +1,38 @@
+title: Malspam (2016-03-09) - Locky, TeslaCrypt - url_request
+id: 4780dde8-d2f5-4c1c-a5d3-528e78f47b3f
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/56e050e6-ac24-43d3-9c24-4f71950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - ari-ev.com
+    - http://ari-ev.com
+    - http://edge-institut.org
+    - http://www.ekowen.sk
+    - witchbehereqq.com
+    - http://torgtehnik.ru
+    - http://witchbehereqq.com
+    - mommycantakeff.com
+    - http://ahlanmedicalcentre.com
+    - ahlanmedicalcentre.com
+    - torgtehnik.ru
+    - edge-institut.org
+    - cam-itour.info
+    - http://specializedaccess.co.uk
+    - http://37.235.53.18
+    - http://mommycantakeff.com
+    - http://www.informaticauno.net
+    - informaticauno.net
+    - http://78.40.108.39
+    - http://kaleofis.com
+    - http://151.236.14.51
+    - http://cam-itour.info
+    - kaleofis.com
+    - http://91.195.12.131
+  condition: attributes

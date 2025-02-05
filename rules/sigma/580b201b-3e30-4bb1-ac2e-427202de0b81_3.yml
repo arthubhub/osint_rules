@@ -1,0 +1,22 @@
+title: OSINT -  The new .LNK between spam and Locky infection - process_creation
+id: 6a50b72b-9eba-4117-8d1c-fe5b68acc149
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/580b201b-3e30-4bb1-ac2e-427202de0b81.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  attributes:
+    md5:
+    - ee0f3310fecae257f1902beabe8b90fd
+    - 6f582adb2226db03b8ce9822a0d1b1e8
+    sha1:
+    - c1ee00884c0f872767992d5348e4de576935d8da
+    - 3dcf2f116af0a548e88022baa1f41f61f362ae39
+    sha256:
+    - 7953b0dbd410a2e216b45671be48a48f472e74fb1a8049afdacaade02e63709b
+    - a393cf8d2ec5811d976cff0972069d73a98d33f6d3004b8f11beaf21086ac848
+  condition: attributes

@@ -1,0 +1,35 @@
+title: OSINT - ASERT Threat Intelligence Report 2016-03 The Four-Element Sword Engagement
+  - dns_query
+id: f4ffbc3d-a6d9-4134-80af-8978bbfe742a
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57153590-f73c-49fa-be4b-4737950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - www.hotansft.top
+    - turkiyeuyghur.com
+    - igfxtray.exe
+    - www.japanuyghur.top
+    - softinc.pw
+    - www.turkistanuyghur.top
+    - www.whitewall.top
+    - gugehotel.cn
+    - www.yawropauyghur.top
+    - www.amerikauyghur.top
+    IpAddresses:
+    - 203.160.247.21
+    - 198.55.120.143
+    - 103.240.203.232
+    - 180.169.28.58
+    - 114.60.106.156
+    - 122.10.9.121
+    - 118.193.240.195
+    - 59.188.12.123
+    - 122.10.112.126
+  condition: attributes

@@ -1,0 +1,17 @@
+title: 'OSINT - CoalaBot: http Ddos Bot - url_request'
+id: 7f2e50f6-59a6-4bdb-b1e8-a0076e9d3bf8
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bb71d5e-8784-489b-b33f-46e7950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.coalabot
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://malware.dontneedcoffee.com
+  condition: attributes

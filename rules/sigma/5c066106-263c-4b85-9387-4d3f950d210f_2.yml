@@ -1,0 +1,20 @@
+title: MAR-10166283.r1.v1 (SamSam ransomware) - dns_query
+id: 01956427-1260-4934-bcfe-f05c53b8aaf5
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5c066106-263c-4b85-9387-4d3f950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.samsam
+- attack.group.samas-samsam
+- attack.software.samas-samsam
+- attack.software.samsam
+detection:
+  attributes:
+    QueryName|contains:
+    - jcmi5n4c3mvgtyt5.onion
+  condition: attributes

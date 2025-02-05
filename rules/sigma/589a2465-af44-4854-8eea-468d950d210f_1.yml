@@ -1,0 +1,22 @@
+title: OSINT - The Curious Case of a Reconnaissance Campaign Targeting Ministry and
+  Embassy Sites - url_request
+id: 95c47b05-b427-47d2-9836-20ab9f8f7541
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/589a2465-af44-4854-8eea-468d950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.turla
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://blogs.forcepoint.com
+    - http://drivers.epsoncorp.com
+    - http://rss.nbcpost.com
+    - http://static.travelclothes.org
+    - http://www.mentalhealthcheck.net
+  condition: attributes

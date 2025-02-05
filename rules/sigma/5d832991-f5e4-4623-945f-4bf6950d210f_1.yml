@@ -1,0 +1,23 @@
+title: OSINT - New Gootkit Banking Trojan campaign against Italian Companies and Users.
+  - url_request
+id: 53f789db-0466-46a2-b0e1-2f9c2a6981d1
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5d832991-f5e4-4623-945f-4bf6950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.group.gootkit
+- attack.software.gootkit
+detection:
+  object_754:
+    RequestUrl|contains:
+    - https://mobile.twitter.com
+  attributes:
+    RequestUrl|contains:
+    - https://itp.surfpapara.com
+    - https://web.mavensd.org
+  condition: 1 of object_* or attributes

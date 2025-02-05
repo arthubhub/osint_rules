@@ -1,0 +1,29 @@
+title: CISA.gov - AA21-062A Mitigate Microsoft Exchange Server Vulnerabilities - dns_query
+id: 484f0d77-4a37-40d1-b066-0aaeecf4d5e0
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/eb8ec4e4-ea78-4cf5-80bc-974e765f08df.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    IpAddresses:
+    - 192.81.208.169
+    - 80.92.205.81
+    - 149.28.14.163
+    - 203.160.69.66
+    - 108.61.246.56
+    - 5.254.43.18
+    - 104.250.191.110
+    - 5.2.69.14
+    - 103.77.192.219
+    - 91.192.103.43
+    - 167.99.168.251
+    - 104.140.114.110
+    - 185.250.151.72
+    - 211.56.98.146
+    - 157.230.221.198
+  condition: attributes

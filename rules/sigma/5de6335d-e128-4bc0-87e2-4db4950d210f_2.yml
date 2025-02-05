@@ -1,0 +1,93 @@
+title: OSINT -  More than a Dozen Obfuscated APT33 Botnets Used for Extreme Narrow
+  Targeting - dns_query
+id: ee216c08-3c6a-4945-ac64-709f528eba03
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5de6335d-e128-4bc0-87e2-4db4950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+tags:
+- attack.group.g0064
+- attack.group.magnallium
+- attack.group.apt33
+detection:
+  object_7889:
+    IpAddresses:
+    - 5.135.120.57
+  object_7890:
+    IpAddresses:
+    - 5.135.199.25
+  object_7891:
+    IpAddresses:
+    - 31.7.62.48
+  object_7892:
+    IpAddresses:
+    - 51.77.11.46
+  object_7893:
+    IpAddresses:
+    - 54.36.73.108
+  object_7894:
+    IpAddresses:
+    - 54.37.48.172
+  object_7895:
+    IpAddresses:
+    - 54.38.124.150
+  object_7896:
+    IpAddresses:
+    - 88.150.221.107
+  object_7897:
+    IpAddresses:
+    - 91.134.203.59
+  object_7898:
+    IpAddresses:
+    - 109.169.89.103
+  object_7899:
+    IpAddresses:
+    - 109.200.24.114
+  object_7900:
+    IpAddresses:
+    - 137.74.80.220
+  object_7901:
+    IpAddresses:
+    - 137.74.157.84
+  object_7902:
+    IpAddresses:
+    - 185.122.56.232
+  object_7903:
+    IpAddresses:
+    - 185.125.204.57
+  object_7904:
+    IpAddresses:
+    - 185.175.138.173
+  object_7905:
+    IpAddresses:
+    - 188.165.119.138
+  object_7906:
+    IpAddresses:
+    - 193.70.71.112
+  object_7907:
+    IpAddresses:
+    - 195.154.41.72
+  object_7908:
+    IpAddresses:
+    - 213.32.113.159
+  object_7909:
+    IpAddresses:
+    - 216.244.93.137
+  attributes:
+    QueryName|contains:
+    - suncocity.com
+    - oorgans.com
+    - service-essential.com
+    - update-symantec.com
+    - service-eset.com
+    - qualitweb.com
+    - service-explorer.com
+    - zandelshop.com
+    - service-norton.com
+    - simsoshop.com
+    - zeverco.com
+  condition: 1 of object_* or attributes

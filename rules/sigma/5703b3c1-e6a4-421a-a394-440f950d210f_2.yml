@@ -1,0 +1,41 @@
+title: Malspam (2016-04-05) - TeslaCrypt - dns_query
+id: 2c02db7b-2a4a-4381-b27d-4ce438ff2849
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5703b3c1-e6a4-421a-a394-440f950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - thejonesact.com
+    - closerdaybyday.info
+    - studiosundaytv.com
+    - coldheartedny.com
+    - addagapublicschool.com
+    - marvellrulesqq.com
+    - keldon.info
+    - marvellrulescc.asia
+    IpAddresses:
+    - 185.118.142.154
+    - 176.36.174.59
+    - 88.135.116.226
+    - 54.212.162.6
+    - 76.162.168.113
+    - 185.14.19.104
+    - 194.58.191.55
+    - 192.186.220.8
+    - 193.107.174.29
+    - 91.197.19.167
+    - 195.66.218.139
+    - 91.241.249.226
+    - 23.229.239.227
+    - 107.180.26.75
+    - 192.185.151.39
+    - 109.254.59.207
+    - 194.228.3.204
+    - 37.25.109.92
+  condition: attributes

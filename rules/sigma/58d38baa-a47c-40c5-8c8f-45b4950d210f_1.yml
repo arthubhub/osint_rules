@@ -1,0 +1,17 @@
+title: OSINT -  Winnti Abuses GitHub for C&C Communications - url_request
+id: 900e2b24-9d68-465d-b341-fe34e11a1747
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/58d38baa-a47c-40c5-8c8f-45b4950d210f.json
+logsource:
+  product: windows
+  category: url_request
+tags:
+- attack.software.winnti
+detection:
+  attributes:
+    RequestUrl|contains:
+    - http://blog.trendmicro.com
+  condition: attributes

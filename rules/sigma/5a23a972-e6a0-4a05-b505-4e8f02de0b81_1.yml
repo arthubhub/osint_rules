@@ -1,0 +1,16 @@
+title: 'OSINT - Tizi: Detecting and blocking socially engineered spyware on Android
+  - url_request'
+id: cb84aa34-d051-4b8f-8e68-5d5a16a05fde
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5a23a972-e6a0-4a05-b505-4e8f02de0b81.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - https://security.googleblog.com
+  condition: attributes

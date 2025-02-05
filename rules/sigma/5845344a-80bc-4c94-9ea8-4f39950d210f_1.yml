@@ -1,0 +1,17 @@
+title: 'OSINT - MMD-0033-2015 - Linux/XorDDoS infection incident report (CNC: HOSTASA.ORG)
+  - url_request'
+id: af0be91a-9ec6-4466-ab75-2223a55b444e
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5845344a-80bc-4c94-9ea8-4f39950d210f.json
+logsource:
+  product: windows
+  category: url_request
+detection:
+  attributes:
+    RequestUrl|contains:
+    - 44ro4.cn
+    - http://blog.malwaremustdie.org
+  condition: attributes

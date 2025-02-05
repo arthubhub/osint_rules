@@ -1,0 +1,100 @@
+title: 'OSINT - Persirai: New Internet of Things (IoT) Botnet Targets IP Cameras -
+  process_creation'
+id: 44fa8ca7-7286-468b-9b87-7bf9496f7cfc
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/5bb61071-d0ac-4b8a-8bba-4dc8950d210f.json
+logsource:
+  product: windows
+  category: process_creation
+detection:
+  object_856:
+    md5:
+    - 2f6e964b3f63b13831314c28185bb51a
+    sha1:
+    - a63417b889491466c912dfbb6d2a34ad27f2bcfe
+    sha256:
+    - 7d7aaa8c9a36324a2c5e9b0a3440344502f28b90776baa6b8dac7ac88a83aef0
+  object_858:
+    md5:
+    - 428111c22627e1d4ee87705251704422
+    sha1:
+    - ccc90bd76af9d4b538aa88715027dd062f7c946d
+    sha256:
+    - 264e5a7ce9ca7ce7a495ccb02e8f268290fcb1b3e1b05f87d3214b26b0ea9adc
+  object_860:
+    md5:
+    - 9584b6aec418a2af4efac24867a8c7ec
+    sha1:
+    - 22a8faf351768596500dbe6e27c05ad55744da1d
+    sha256:
+    - af4aa29d6e3fce9206b0d21b09b7bc40c3a2128bc5eb02ff239ed2f3549532bb
+  object_862:
+    md5:
+    - 5ebeff1f005804bb8afef91095aac1d9
+    sha1:
+    - c92e07faaad26b4ac98f9cc0c5a24e60dcb25b8a
+    sha256:
+    - 4a5d00f91a5bb2b6b89ccdabc6c13eab97ede5848275513ded7dfd5803b1074b
+  object_864:
+    md5:
+    - f620fb57352e6f393477a65101a4612e
+    sha1:
+    - 93515d7442d0240272b8d813b300219c53e88dfd
+    sha256:
+    - a58769740a750a8b265df65a5b143a06972af2e7d82c5040d908e71474cbaf92
+  object_866:
+    md5:
+    - 912681f6be51afa8c5ab36e691b88e74
+    sha1:
+    - 227d1aa69da8250ddbf8898863799e59bdfeb516
+    sha256:
+    - f974695ae560c6f035e089271ee33a84bebeb940be510ab5066ee958932e310a
+  object_868:
+    md5:
+    - 7e1c3834c38984c34b6fd4c741ae3a21
+    sha1:
+    - 02b850450fcbcdd6b13f03b2121f124543480d62
+    sha256:
+    - d00b79a0b47ae38b2d6fbbf994a2075bc70dc88142536f283e8447ed03917e45
+  object_870:
+    md5:
+    - b2b129d84723d0ba2f803a546c8b19ae
+    sha1:
+    - 7a0485e52aa09f63d41e471fd736584c06c3dab6
+    sha256:
+    - 44620a09441305f592fb65d606958611f90e85b62b7ef7149e613d794df3a778
+  object_872:
+    md5:
+    - cfb80e0b1e3927ebc1069b8fdc468072
+    sha1:
+    - 64bd5ba88d7e7104dc1a5586171e83825815362d
+    sha256:
+    - 4a5ff1def77deb11ddecd10f96e4a1de69291f2f879cd83186c6b3fc20bb009a
+  object_874:
+    md5:
+    - 10d899e46e0df86ba6e6a4754de331d9
+    sha1:
+    - 29aabf21557507699503251e8e19ff77ee61f1bc
+    sha256:
+    - aa443f81cbba72e1692246b5647a9278040400a86afc8e171f54577dc9324f61
+  attributes:
+    sha256:
+    - e0b5c9f874f260c840766eb23c1f69828545d7820f959c8601c41c024044f02c
+    - 44620a09441305f592fb65d606958611f90e85b62b7ef7149e613d794df3a778
+    - aa443f81cbba72e1692246b5647a9278040400a86afc8e171f54577dc9324f61
+    - a58769740a750a8b265df65a5b143a06972af2e7d82c5040d908e71474cbaf92
+    - d00b79a0b47ae38b2d6fbbf994a2075bc70dc88142536f283e8447ed03917e45
+    - ff5db7bdb4de17a77bd4a552f50f0e5488281cedc934fc3707833f90484ef66c
+    - f974695ae560c6f035e089271ee33a84bebeb940be510ab5066ee958932e310a
+    - ec2c39f1dfb75e7b33daceaeda4dbadb8efd9015a9b7e41d595bb28d2cd0180f
+    - 264e5a7ce9ca7ce7a495ccb02e8f268290fcb1b3e1b05f87d3214b26b0ea9adc
+    - 7d7aaa8c9a36324a2c5e9b0a3440344502f28b90776baa6b8dac7ac88a83aef0
+    - 4a5d00f91a5bb2b6b89ccdabc6c13eab97ede5848275513ded7dfd5803b1074b
+    - 4a5ff1def77deb11ddecd10f96e4a1de69291f2f879cd83186c6b3fc20bb009a
+    - f736948bb4575c10a3175f0078a2b5d36cce1aa4cd635307d03c826e305a7489
+    - af4aa29d6e3fce9206b0d21b09b7bc40c3a2128bc5eb02ff239ed2f3549532bb
+    - 35317971e346e5b2a8401b2e66b9e62e371ce9532f816cb313216c3647973c32
+  condition: 1 of object_* or attributes

@@ -1,0 +1,69 @@
+title: 'Malspam 2016-09-27 (.wsf in .zip) - campaign: "{integer}.zip" - dns_query'
+id: 54be0a93-2c25-43b7-8c59-5aa58b37c15b
+description: edit this field when analysing or editing the rule - reported by "CIRCL"
+author: IOCparser_bot
+date: 2025/02/05
+status: experimental
+reference: https://www.circl.lu/doc/misp/feed-osint/57ea66db-7dd0-4c43-823f-4d2a950d210f.json
+logsource:
+  product: windows
+  category: dns_query
+detection:
+  attributes:
+    QueryName|contains:
+    - ccaglobal.org
+    - johnlesterart.com
+    - cimetieremontroyal.com
+    - maxtherm.net
+    - usedtextilemachinerylive.com
+    - peryskop.biz
+    - intardesign.com
+    - karacanalbum.com
+    - amsterdamrent.com
+    - wssunhui.com
+    - speaklifegreetings.com
+    - nerosk.ru
+    - dashandling.com
+    - homemadebakeryindonesia.com
+    - dealerjoin.com
+    - bezdeals.com
+    - cg3dstudio.com
+    - idealuze.com
+    - grijspaardt.nl
+    - upav.org
+    - fixturesexpress.com
+    - profsonstage.com
+    - brambory.net
+    - gouri-gouri.com
+    - minoritycounselor.com
+    - mediaalias.com
+    - deadly-city.com
+    IpAddresses:
+    - 216.144.240.190
+    - 122.114.108.176
+    - 64.15.152.254
+    - 160.153.32.93
+    - 143.95.33.61
+    - 173.255.131.109
+    - 46.19.218.68
+    - 75.102.25.148
+    - 77.245.155.239
+    - 202.150.213.222
+    - 41.220.216.254
+    - 96.30.36.212
+    - 185.119.173.48
+    - 46.183.167.29
+    - 103.6.196.13
+    - 69.90.163.117
+    - 81.0.217.3
+    - 174.127.105.121
+    - 216.239.140.24
+    - 23.227.132.71
+    - 45.32.233.222
+    - 207.32.188.45
+    - 151.80.185.209
+    - 109.203.104.133
+    - 200.122.128.189
+    - 217.195.193.38
+    - 92.43.113.68
+  condition: attributes
