@@ -1,8 +1,8 @@
 title: OSINT - SteamStealer IPs - url_request
-id: 1707b127-b7f5-455b-8a59-31295ac00f33
+id: dbf23a56-9d52-47ee-9f27-8302baedc482
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56e6910e-9cdc-4c9a-8ece-4531950d210f.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://otx.alienvault.com
     - https://kasperskycontenthub.com
     - http://bartblaze.blogspot.com
+    - https://otx.alienvault.com
   condition: attributes

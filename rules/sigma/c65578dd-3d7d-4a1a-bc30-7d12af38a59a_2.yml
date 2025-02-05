@@ -1,79 +1,79 @@
 title: 'TraderTraitor: North Korean State-Sponsored APT Targets Blockchain Companies
   - dns_query'
-id: d02f276f-07eb-4457-8fef-f6bf32db7012
+id: fe7d1a0f-ad20-45a5-adbf-53887d989215
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/c65578dd-3d7d-4a1a-bc30-7d12af38a59a.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.g0032
 - attack.group.lazarus_group
+- attack.group.g0032
 detection:
-  object_2632:
+  object_10033:
     QueryName|contains:
     - dafom.dev
     IpAddresses:
     - 45.14.227.58
-  object_2634:
+  object_10035:
     QueryName|contains:
     - tokenais.com
     IpAddresses:
     - 199.188.103.115
-  object_2636:
+  object_10037:
     QueryName|contains:
     - cryptais.com
     IpAddresses:
     - 82.102.31.14
-  object_2637:
+  object_10038:
     QueryName|contains:
     - alticgo.com
     IpAddresses:
     - 108.170.55.202
-  object_2638:
+  object_10039:
     QueryName|contains:
     - esilet.com
     IpAddresses:
     - 104.168.98.156
-  object_2639:
+  object_10040:
     QueryName|contains:
     - greenvideo.nl
     IpAddresses:
     - 62.84.240.140
-  object_2640:
+  object_10041:
     QueryName|contains:
     - dafnefonseca.com
     IpAddresses:
     - 151.101.64.119
-  object_2641:
+  object_10042:
     QueryName|contains:
     - haciendadeclarevot.com
     IpAddresses:
     - 185.66.41.17
-  object_2642:
+  object_10043:
     QueryName|contains:
     - sche-eg.org
     IpAddresses:
     - 160.153.235.20
-  object_2643:
+  object_10044:
     QueryName|contains:
     - www.vinoymas.ch
     IpAddresses:
     - 46.16.62.238
-  object_2644:
+  object_10045:
     QueryName|contains:
     - infodigitalnew.com
     IpAddresses:
     - 107.154.160.132
-  object_2645:
+  object_10046:
     QueryName|contains:
     - creaideck.com
     IpAddresses:
     - 38.132.124.161
-  object_2646:
+  object_10047:
     QueryName|contains:
     - aideck.net
     IpAddresses:

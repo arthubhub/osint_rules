@@ -1,8 +1,8 @@
 title: OSINT - ConnectWise ScreenConnect attacks deliver malware - url_request
-id: 7b3f7783-4619-49e1-ba46-d8720cde9255
+id: 934549ac-4ae3-45d3-a0ad-8c9704082b41
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/f8912a82-2870-4de2-9663-5fdbee0ed401.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 tags:
 - attack.t1190
 detection:
-  object_10809:
+  object_329:
     RequestUrl|contains:
     - https://news.sophos.com
   condition: 1 of object_*

@@ -1,40 +1,40 @@
 title: 'OSINT - Inside the Dragon: DragonForce Ransomware Group - dns_query'
-id: b02ca508-4d3b-4aa1-af40-2491f6fab2aa
+id: 71b02993-acda-4dfe-ad3c-5b0156011022
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/b0454a71-cd8b-440b-bf27-1a52800b2579.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1070.001
-- attack.t1082
-- attack.t1016
-- attack.t1486
 - attack.t1071.001
-- attack.t1003.001
-- attack.group.dragonforce
-- attack.t1078.002
-- attack.t1021.001
-- attack.t1078
-- attack.t1543.003
-- attack.t1059.001
-- attack.t1482
-- attack.t1547.001
-- attack.software.dragonforce
-- attack.t1018
 - attack.t1083
+- attack.t1082
+- attack.t1059.001
+- attack.t1547.001
+- attack.t1482
+- attack.t1486
+- attack.t1078
+- attack.t1018
+- attack.t1021.001
+- attack.group.dragonforce
+- attack.t1070.001
+- attack.t1003.001
+- attack.t1543.003
+- attack.t1078.002
+- attack.software.dragonforce
+- attack.t1016
 detection:
-  object_11400:
+  object_9039:
     IpAddresses:
     - 185.73.125.8
   attributes:
     IpAddresses:
-    - 2.147.68.96
-    - 69.4.234.20
-    - 185.59.221.75
-    - 185.73.125.8
     - 94.232.46.202
+    - 69.4.234.20
+    - 185.73.125.8
+    - 185.59.221.75
+    - 2.147.68.96
   condition: 1 of object_* or attributes

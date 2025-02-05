@@ -1,57 +1,57 @@
 title: A Slice of 2017 Sofacy Activity by Kaspersky - url_request
-id: eee74ecb-5c67-47c0-9df9-b525366b5480
+id: b5e71099-ca90-4123-95ae-af92bbce86b5
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a8d2377-208c-4330-908f-4818950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.sofacy
 - attack.group.strontium
+- attack.group.sofacy
 detection:
   attributes:
     RequestUrl|contains:
-    - securityprotectingcorp.com
-    - uniquecorpind.com
-    - encoder-info.tk
-    - sendmevideo.org
-    - lvueton.com
-    - satellitedeluxpanorama.com
-    - versiontask.com
-    - mvband.net
-    - adobeupgradeflash.com
-    - viters.org
-    - hostsvcnet.com
-    - mvtband.net
-    - webcdelivery.com
-    - analyticstest.net
-    - globalresearching.org
-    - shcserv.com
-    - online-reggi.com
-    - analyticsbar.org
-    - fsportal.net
-    - nethostnet.com
-    - treepastwillingmoment.com
-    - postlkwarn.com
-    - ppcodecs.com
     - adobe-flash-updates.org
-    - liveweatherview.com
-    - miropc.org
+    - adobeupgradeflash.com
+    - mvtband.net
+    - nethostnet.com
     - https://securelist.com
-    - righttopregnantpower.com
-    - netcorpscanprotect.com
-    - audiwheel.com
-    - generalsecurityscan.com
-    - meteost.com
-    - wmdmediacodecs.com
     - newfilmts.com
-    - fastdataexchange.org
-    - lifeofmentalservice.com
-    - movieultimate.com
-    - appexsrv.net
+    - globalresearching.org
+    - versiontask.com
+    - audiwheel.com
+    - righttopregnantpower.com
     - kiteim.org
+    - analyticstest.net
+    - lifeofmentalservice.com
+    - netcorpscanprotect.com
+    - analyticsbar.org
+    - online-reggi.com
+    - viters.org
+    - encoder-info.tk
+    - mvband.net
+    - ppcodecs.com
+    - hostsvcnet.com
+    - uniquecorpind.com
+    - appexsrv.net
+    - shcserv.com
+    - meteost.com
+    - satellitedeluxpanorama.com
+    - wmdmediacodecs.com
+    - postlkwarn.com
+    - lvueton.com
+    - sendmevideo.org
+    - treepastwillingmoment.com
+    - securityprotectingcorp.com
+    - miropc.org
     - etcrem.net
+    - liveweatherview.com
+    - generalsecurityscan.com
+    - webcdelivery.com
+    - fsportal.net
+    - fastdataexchange.org
+    - movieultimate.com
   condition: attributes

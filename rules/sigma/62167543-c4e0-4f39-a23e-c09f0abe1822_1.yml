@@ -1,44 +1,44 @@
 title: '[NCSC-UK] Cyclops blink - dns_query'
-id: 45e1a73a-fe54-4181-b039-0394f72f479e
+id: 90fcc355-960d-4f79-a5e7-a4c531d73e55
 description: edit this field when analysing or editing the rule - reported by "CERT-FR_1510"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/62167543-c4e0-4f39-a23e-c09f0abe1822.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.electrum
 - attack.group.iridium
-- attack.group.sandworm
 - attack.group.telebots
+- attack.group.sandworm
+- attack.group.electrum
 detection:
   attributes:
     IpAddresses:
+    - 78.134.89.167
+    - 93.51.177.66
+    - 188.152.254.170
+    - 212.202.147.10
+    - 208.81.37.50
+    - 217.57.80.18
+    - 24.199.247.222
+    - 151.0.169.250
+    - 212.103.208.182
+    - 105.159.248.137
+    - 80.153.75.103
+    - 37.99.163.162
+    - 109.192.30.125
+    - 80.155.38.210
     - 90.63.245.175
     - 212.234.179.113
-    - 37.99.163.162
-    - 37.71.147.186
-    - 212.202.147.10
-    - 109.192.30.125
-    - 208.81.37.50
-    - 80.155.38.210
-    - 105.159.248.137
-    - 24.199.247.222
-    - 188.152.254.170
-    - 80.153.75.103
-    - 93.51.177.66
     - 96.80.68.193
+    - 37.71.147.186
     - 80.15.113.188
-    - 212.103.208.182
-    - 2.230.110.137
     - 70.62.153.174
-    - 151.0.169.250
+    - 2.230.110.137
+    - 50.255.126.65
     - 81.4.177.118
     - 185.82.169.99
-    - 78.134.89.167
-    - 50.255.126.65
-    - 217.57.80.18
     - 100.43.220.234
   condition: attributes

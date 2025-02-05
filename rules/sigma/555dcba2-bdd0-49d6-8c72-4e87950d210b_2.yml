@@ -1,8 +1,8 @@
 title: OSINT Trend Micro Exposes LURID APT - dns_query
-id: 702347d8-4886-46b0-b063-12c612374e07
+id: b28aa876-95b5-4b44-99dc-a0b62769e5cd
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/555dcba2-bdd0-49d6-8c72-4e87950d210b.json
 logsource:
@@ -11,30 +11,30 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - ymail-pro.com
-    - foxit-pro.com
     - hotoicq.com
-    - lasmail.com
-    - mailru-vip.com
     - hoticq.com
-    - zadhc.com
-    - yandex-vip.com
+    - lasmail.com
+    - foxit-pro.com
+    - ymail-vip.com
     - mailru-pro.com
     - redhag.com
-    - ymail-vip.com
+    - ymail-pro.com
+    - yandex-vip.com
+    - zadhc.com
     - yandex-pro.com
+    - mailru-vip.com
     IpAddresses:
-    - 109.123.126.151
-    - 184.95.36.75
+    - 184.22.251.12
     - 204.12.197.70
+    - 184.22.240.174
+    - 58.64.149.29
+    - 174.139.13.122
     - 173.212.195.216
+    - 46.23.67.226
+    - 109.123.126.151
     - 109.123.126.143
     - 109.123.126.156
-    - 58.64.149.29
-    - 184.22.240.174
     - 109.123.126.157
-    - 46.23.67.226
+    - 184.95.36.75
     - 106.123.126.151
-    - 174.139.13.122
-    - 184.22.251.12
   condition: attributes

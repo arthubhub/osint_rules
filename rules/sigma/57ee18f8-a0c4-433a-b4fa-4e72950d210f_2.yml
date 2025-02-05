@@ -1,8 +1,8 @@
 title: 'Malspam 2016-09-29 (.xls) - campaign: "Receipt" - dns_query'
-id: 6f540013-e11a-4e0a-99d5-8965f8c589f9
+id: 05611e91-1239-4ef8-adac-b1a29109ced5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57ee18f8-a0c4-433a-b4fa-4e72950d210f.json
 logsource:
@@ -11,21 +11,21 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - hollywoodjesus.com
     - globalremoteservices.com
-    - 81millstreet.nl
+    - bandbcreuse.com
+    - sonajp.com
     - anhsaodem.info
     - techsilicon.com
     - unionathletica.com
-    - bandbcreuse.com
-    - sonajp.com
-    - hollywoodjesus.com
+    - 81millstreet.nl
     IpAddresses:
-    - 107.180.29.172
-    - 94.76.210.52
-    - 107.180.51.252
-    - 89.37.120.230
     - 141.138.204.64
-    - 103.47.193.75
+    - 94.76.210.52
     - 107.180.0.85
+    - 107.180.51.252
+    - 107.180.29.172
     - 108.179.200.174
+    - 103.47.193.75
+    - 89.37.120.230
   condition: attributes

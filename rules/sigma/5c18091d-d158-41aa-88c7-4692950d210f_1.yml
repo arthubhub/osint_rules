@@ -1,8 +1,8 @@
 title: OSINT - The Return of The Charming Kitten - url_request
-id: 0ac34ca7-30ea-4bc4-81f6-1551718b6331
+id: cb07986a-25aa-493a-86ca-8a320e6e7069
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c18091d-d158-41aa-88c7-4692950d210f.json
 logsource:
@@ -13,41 +13,41 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
+    - notificationapp.info
     - documentsfilesharing.cloud
-    - confirm-verification-process.systems
-    - confirm-identification.name
-    - my-scribdinc.online
-    - invitation-to-messenger.space
     - com-identifier-servicelog.info
-    - customer-recovery.info
-    - broadcast-news.info
-    - confirm-session-identification.info
-    - com-messengercenters.name
-    - us2-mail-login-profile.site
-    - users-account.site
-    - com-identifier-servicelog.name
-    - accounts-support.services
-    - customize-identity.info
-    - documentofficupdate.info
-    - mobile-messengerplus.network
-    - confirm-identity.net
-    - mobilecontinue.network
-    - email-delivery.info
-    - recoveryusercustomer.info
-    - document-share.info
-    - support-recoverycustomers.services
-    - https://blog.certfa.com
+    - continue-session-identifier.info
     - confirm-session-identifier.info
-    - account-profile-users.info
-    - com-identifier-userservicelog.com
+    - recoveryusercustomer.info
+    - customer-recovery.info
+    - document-share.info
+    - customize-identity.info
     - com-messengersaccount.name
     - identifier-sessions-mailactivityid.site
+    - email-delivery.info
+    - confirm-verification-process.systems
+    - com-messengercenters.name
+    - support-recoverycustomers.services
+    - invitation-to-messenger.space
     - broadcastnews.pro
-    - login-users-account.site
-    - confirmation-service.info
-    - session-management.info
-    - notificationapp.info
+    - account-profile-users.info
     - podcastmedia.online
+    - users-account.site
+    - confirm-session-identification.info
+    - login-users-account.site
+    - com-identifier-userservicelog.com
+    - confirm-identification.name
     - sessions-identifier-memberemailid.network
-    - continue-session-identifier.info
+    - https://blog.certfa.com
+    - confirm-identity.net
+    - accounts-support.services
+    - mobilecontinue.network
+    - com-identifier-servicelog.name
+    - session-management.info
+    - confirmation-service.info
+    - mobile-messengerplus.network
+    - my-scribdinc.online
+    - broadcast-news.info
+    - documentofficupdate.info
+    - us2-mail-login-profile.site
   condition: attributes

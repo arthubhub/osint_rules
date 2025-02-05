@@ -1,9 +1,9 @@
 title: 'OSINT - Bolek: Leaked Carberp KBot Source Code Complicit in New Phishing Campaigns
   - dns_query'
-id: 750e7032-93e0-48ba-857e-f4147bac50ab
+id: e5b5c0f5-54d6-471d-bf9b-99c75d625b53
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/573efd23-b3a4-4374-9f11-3514950d210f.json
 logsource:
@@ -12,30 +12,30 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - android-securityupdate.com
-    - signin-tangerine.com
     - cibc-security.com
-    - cibc-clients.com
-    - rogers-ca.com
-    - rogers-clients.com
-    - ogrthuvfewfdcfri5euwg.com
+    - tangerine-security.com
+    - knutesecos.com
+    - ogrthuvwfdcfri5euwg.com
+    - tangerine-zone.com
     - signin-rogers.com
     - tangerine-ca.com
-    - ogrthuvwfdcfri5euwg.com
+    - rogers-ca.com
+    - ogrthuvfewfdcfri5euwg.com
     - tangerine-can.com
-    - tangerine-zone.com
-    - knutesecos.com
-    - tangerine-security.com
+    - cibc-clients.com
+    - rogers-clients.com
     - mensabuxus.net
+    - signin-tangerine.com
+    - android-securityupdate.com
     IpAddresses:
-    - 191.101.239.161
-    - 93.111.155.134
     - 45.30.53.96
-    - 52.74.127.205
     - 160.202.168.105
     - 217.28.218.217
-    - 46.32.254.136
     - 50.125.238.102
-    - 141.105.69.251
     - 64.235.33.221
+    - 93.111.155.134
+    - 52.74.127.205
+    - 191.101.239.161
+    - 141.105.69.251
+    - 46.32.254.136
   condition: attributes

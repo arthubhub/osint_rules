@@ -1,9 +1,9 @@
 title: OSINT New Sofacy Attacks Against US Government Agency by Palo Alto Unit 42
   - dns_query
-id: 330e21fb-8cca-4820-852c-ecad772c8651
+id: c549b2a1-e6d4-4bf1-b9e9-dd1b0418a050
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57613790-f6b4-4895-943f-4467950d210f.json
 logsource:
@@ -12,11 +12,11 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - servicecdp.com
-    - wscapi.com
-    - tabsync.net
     - munimonoce.com
+    - servicecdp.com
+    - tabsync.net
     - storsvc.org
+    - wscapi.com
     IpAddresses:
     - 191.101.31.6
   condition: attributes

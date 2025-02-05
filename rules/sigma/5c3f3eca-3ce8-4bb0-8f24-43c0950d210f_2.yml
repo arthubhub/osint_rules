@@ -1,9 +1,9 @@
 title: "OSINT -  Threat Actor \xE2\u20AC\u0153Cold River\xE2\u20AC\x9D: Network Traffic\
   \ Analysis and a Deep Dive on Agent Drable - dns_query"
-id: 3352e1e3-594b-4f80-8159-6ad615ffcd09
+id: 0964abca-c02a-42a6-9408-a9c1c5572396
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c3f3eca-3ce8-4bb0-8f24-43c0950d210f.json
 logsource:
@@ -14,18 +14,18 @@ tags:
 detection:
   attributes:
     QueryName|contains:
-    - 0ffice36o.com
-    - hr-suncor.com
-    - hr-wipro.com
-    - microsoftonedrive.org
     - files-sender.com
+    - microsoftonedrive.org
+    - 0ffice36o.com
+    - hr-wipro.com
+    - hr-suncor.com
     IpAddresses:
-    - 185.161.211.79
-    - 185.20.184.157
-    - 185.20.184.15
-    - 185.20.187.8
-    - 194.9.177.22
     - 185.161.211.72
-    - 104.148.109.193
+    - 185.20.184.157
+    - 185.161.211.79
+    - 185.20.184.15
     - 185.20.184.138
+    - 194.9.177.22
+    - 104.148.109.193
+    - 185.20.187.8
   condition: attributes

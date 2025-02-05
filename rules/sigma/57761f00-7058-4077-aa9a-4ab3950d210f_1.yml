@@ -1,8 +1,8 @@
 title: OSINT - Pacifier APT - url_request
-id: f087eccf-6391-469e-947e-013acad6b400
+id: 9704618c-451f-42f0-99e6-637db5522b4c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57761f00-7058-4077-aa9a-4ab3950d210f.json
 logsource:
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://scientific.otzo.com
-    - http://download.bitdefender.com
     - http://fishstalk.esy.es
-    - http://reckless.dk
+    - http://download.bitdefender.com
     - http://77-ufo.com
+    - http://scientific.otzo.com
+    - http://reckless.dk
   condition: attributes

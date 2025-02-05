@@ -1,38 +1,38 @@
 title: OSINT - Return of Not Petya as Bad Rabbit Diskcoder, yes those two are the
   same! - process_creation
-id: 61ed644e-9d2a-4d7f-acf7-f6dc9a93e483
+id: c1b86f27-6db1-4a9c-8ba5-922e523c33aa
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59f04995-3b8c-4cf0-b555-4b26950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.bad_rabbit
 - attack.group.bad_rabbit
+- attack.software.bad_rabbit
 detection:
-  object_2417:
+  object_8837:
     sha256:
     - 8ebc97e05c8e1073bda2efb6f4d00ad7e789260afa2c276f0c72740b838a0a93
   attributes:
     md5:
     - 1d724f95c61f1055f0d02c2154bbccd3
-    - 37945c44a897aa42a66adcab68f560e0
-    - fbbdc39af1139aebba4da004475e8839
     - 347ac3b6b791054de3e5720a7144a977
     - b14d8faf7f0cbcfad051cefe5f39645f
+    - fbbdc39af1139aebba4da004475e8839
+    - 37945c44a897aa42a66adcab68f560e0
     sha1:
     - 16605a4a29a101208457c47ebfde788487be788d
-    - 4f61e154230a64902ae035434690bf2b96b4e018
-    - afeee8b4acff87bc469a6f0364a81ae5d60a2add
-    - 79116fe99f2b421c52ef64097f0f39b815b20907
     - de5c8d858e6e41da715dca1c019df0bfb92d32c0
     - 413eba3973a15c1a6429d9f170f3e8287f98c21c
+    - 79116fe99f2b421c52ef64097f0f39b815b20907
+    - afeee8b4acff87bc469a6f0364a81ae5d60a2add
+    - 4f61e154230a64902ae035434690bf2b96b4e018
     sha256:
     - 579fd8a0385482fb4c789561a30b09f25671e86422f40ef5cca2036b28f99648
     - 2f8c54f9fa8e47596a3beff0031f85360e56840c77f71c6a573ace6f46412035
-    - 301b905eb98d8d6bb559c04bbda26628a942b2c4107c07a02e8f753bdcfe347c
     - 630325cac09ac3fab908f903e3b00d0dadd5fdaa0875ed8496fcbb97a558d0da
+    - 301b905eb98d8d6bb559c04bbda26628a942b2c4107c07a02e8f753bdcfe347c
   condition: 1 of object_* or attributes

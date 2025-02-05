@@ -1,9 +1,9 @@
 title: Nvidia leak - abused certificate for signing malicious code and tools such
   as mimikatz - url_request
-id: 073bb544-dfde-40e8-98c8-2642db921639
+id: d2bacb01-9535-4e96-9e56-8fe0495d98ca
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/de6bc50b-dfc7-4938-a0f0-2305f9e4d2b8.json
 logsource:
@@ -12,7 +12,7 @@ logsource:
 tags:
 - attack.t1553.002
 detection:
-  object_11177:
+  object_7102:
     RequestUrl|contains:
     - https://twitter.com
   condition: 1 of object_*

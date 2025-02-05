@@ -1,8 +1,8 @@
 title: Lazarus infrastructure (pivot via Censys) - dns_query
-id: e7857b66-9223-455b-a5b3-caf2ccc88653
+id: ffe5ea43-e996-4c9e-9408-058d7338f08d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/251a72a3-6229-4b4d-85a6-ba6d080dc1af.json
 logsource:
@@ -11,18 +11,18 @@ logsource:
 tags:
 - attack.group.lazarus_group
 detection:
-  object_6644:
+  object_17921:
     IpAddresses:
     - 147.124.212.89
+    - 147.124.214.129
     - 67.203.7.171
     - 147.124.214.131
-    - 67.203.7.245
     - 147.124.214.237
-    - 147.124.214.129
-  object_6675:
+    - 67.203.7.245
+  object_17952:
     QueryName|contains:
-    - www.tracksmobiles.com
     - tracksmobiles.com
+    - www.tracksmobiles.com
     IpAddresses:
     - 147.124.212.89
   condition: 1 of object_*

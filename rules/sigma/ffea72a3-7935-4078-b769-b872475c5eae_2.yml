@@ -1,9 +1,9 @@
 title: 'OSINT - Game of Emperor: Unveiling Long Term Earth Estries Cyber Intrusions
   - dns_query'
-id: ddf2b351-d488-4dd7-b22b-96a4a061b871
+id: 6568bd1c-7f5d-4a2e-8c42-829d05e7a87a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/ffea72a3-7935-4078-b769-b872475c5eae.json
 logsource:
@@ -12,31 +12,31 @@ logsource:
 tags:
 - attack.group.earth_estries
 detection:
-  object_10997:
+  object_7033:
     IpAddresses:
     - 165.154.227.192
   attributes:
     IpAddresses:
-    - 158.247.222.165
-    - 172.93.165.10
-    - 139.59.236.31
-    - 96.9.211.27
-    - 45.125.67.144
-    - 104.194.153.65
-    - 185.105.1.243
-    - 193.239.86.168
-    - 139.59.108.43
-    - 91.245.253.27
-    - 205.189.160.3
-    - 143.198.92.175
-    - 103.91.64.214
     - 43.226.126.164
-    - 103.75.190.73
     - 139.99.114.108
     - 146.70.79.105
-    - 165.154.227.192
-    - 146.70.79.18
-    - 23.81.41.166
-    - 43.226.126.165
+    - 139.59.236.31
+    - 103.75.190.73
     - 172.93.165.14
+    - 185.105.1.243
+    - 146.70.79.18
+    - 172.93.165.10
+    - 205.189.160.3
+    - 103.91.64.214
+    - 139.59.108.43
+    - 96.9.211.27
+    - 43.226.126.165
+    - 45.125.67.144
+    - 143.198.92.175
+    - 23.81.41.166
+    - 104.194.153.65
+    - 165.154.227.192
+    - 91.245.253.27
+    - 158.247.222.165
+    - 193.239.86.168
   condition: 1 of object_* or attributes

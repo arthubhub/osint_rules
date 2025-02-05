@@ -1,9 +1,9 @@
 title: Ursnif Campaign f1.pipen.at - dns_query
-id: 44aac560-cf2d-4d3b-add3-cb9f60468e1c
+id: cd2e8b1b-99bd-430f-9ac8-e748c6fa08e8
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ea0b0dc-45d0-4d5e-bed5-4271950d210f.json
 logsource:
@@ -11,40 +11,40 @@ logsource:
   category: dns_query
 tags:
 - attack.t1192
-- attack.group.gozi
-- attack.t1043
-- attack.t1500
-- attack.t1071
-- attack.t1170
-- attack.t1112
-- attack.t1117
-- attack.software.gozi
 - attack.t1204
+- attack.group.gozi
+- attack.t1170
+- attack.t1117
+- attack.t1043
+- attack.t1112
+- attack.software.gozi
+- attack.t1071
+- attack.t1500
 detection:
   attributes:
     QueryName|contains:
-    - vv.malorun.at
-    - kamalak.at
+    - deem.dianer.at
+    - www.kamalak.at
+    - f1.pipen.at
+    - api10.dianer.at
+    - mobify.at
+    - been.dianer.at
+    - targoo.at
     - dxdeedle.host
     - free.up100n.at
-    - www.kamalak.at
-    - targoo.at
-    - two.ahah100.at
-    - f1.pipen.at
-    - dianer.at
-    - mobify.at
-    - ahah100.at
-    - api5.malorun.at
     - ahonpot.at
+    - kamalak.at
+    - api5.malorun.at
+    - dianer.at
+    - vv.malorun.at
     - pipen.at
-    - api10.dianer.at
-    - deem.dianer.at
-    - been.dianer.at
+    - two.ahah100.at
+    - ahah100.at
     IpAddresses:
+    - 8.208.90.28
     - 162.244.35.233
     - 47.241.106.208
-    - 8.208.90.28
-    - 89.39.107.106
     - 93.190.138.35
     - 23.81.246.22
+    - 89.39.107.106
   condition: attributes

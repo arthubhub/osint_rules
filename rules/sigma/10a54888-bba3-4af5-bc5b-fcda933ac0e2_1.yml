@@ -1,16 +1,16 @@
 title: TR-87 - CrowdStrike Agent causing BSOD loop on Windows - Faulty Update on Falcon
   Sensor - url_request
-id: 5d7846ea-72be-4426-9f61-4f9d8362f0a4
+id: 76232be8-392f-49c8-a9eb-22ba232c457f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/10a54888-bba3-4af5-bc5b-fcda933ac0e2.json
 logsource:
   product: windows
   category: url_request
 detection:
-  object_17174:
+  object_7080:
     RequestUrl|contains:
     - https://www.circl.lu
   condition: 1 of object_*

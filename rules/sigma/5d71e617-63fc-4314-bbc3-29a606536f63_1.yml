@@ -1,8 +1,8 @@
 title: Malicious comment on GitHub pointing to malware - url_request
-id: 2ca40d94-4358-4f6b-9f46-9d0644b91866
+id: 33f2a20a-5f88-4f38-a6ce-8f72dab9109c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d71e617-63fc-4314-bbc3-29a606536f63.json
 logsource:
@@ -11,12 +11,12 @@ logsource:
 tags:
 - attack.t1367
 detection:
-  object_8475:
+  object_9630:
     RequestUrl|contains:
     - mediafire.com
     - https://app.mediafire.com
-  object_8484:
+  object_9639:
     RequestUrl|contains:
-    - mediafire.com
     - https://www.mediafire.com
+    - mediafire.com
   condition: 1 of object_*

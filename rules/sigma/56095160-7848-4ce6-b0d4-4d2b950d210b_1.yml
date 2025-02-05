@@ -1,9 +1,9 @@
 title: 'OSINT Microsoft Word Intruder gets down to business: Operation Pony Express
   by Sophos - url_request'
-id: c0f57218-9b68-44db-b995-71acef80dae6
+id: e6044ec1-acc3-42de-ba41-fb684cf467c3
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56095160-7848-4ce6-b0d4-4d2b950d210b.json
 logsource:
@@ -12,6 +12,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://nakedsecurity.sophos.com
     - https://www.sophos.com
+    - https://nakedsecurity.sophos.com
   condition: attributes

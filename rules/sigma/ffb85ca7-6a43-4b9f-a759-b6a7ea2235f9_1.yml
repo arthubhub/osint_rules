@@ -1,8 +1,8 @@
 title: RegretLocker - compiled information, activity and samples - url_request
-id: 71d6557a-49a4-4b2a-9a04-7f159ba84d9e
+id: 7c5bf1dc-c594-4586-ac3d-f9c3ef296415
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/ffb85ca7-6a43-4b9f-a759-b6a7ea2235f9.json
 logsource:
@@ -12,15 +12,15 @@ tags:
 - attack.software.regretlocker
 - attack.group.regretlocker
 detection:
-  object_16217:
+  object_7644:
     RequestUrl|contains:
-    - regretzjibibtcgb.onion
     - http://regretzjibibtcgb.onion
+    - regretzjibibtcgb.onion
   attributes:
     RequestUrl|contains:
-    - http://chuongdong.com
+    - https://twitter.com
     - https://github.com
     - http://344744.cloud4box.ru
+    - http://chuongdong.com
     - https://app.any.run
-    - https://twitter.com
   condition: 1 of object_* or attributes

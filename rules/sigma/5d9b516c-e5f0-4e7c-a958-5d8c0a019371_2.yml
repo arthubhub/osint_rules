@@ -1,66 +1,66 @@
 title: Operation Ghost - White Paper - dns_query
-id: 4f88dc8b-7781-42be-bb6d-53e3e5b5f213
+id: 6977a98e-01e2-4c91-884b-70eb21569329
 description: edit this field when analysing or editing the rule - reported by "ESET"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d9b516c-e5f0-4e7c-a958-5d8c0a019371.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1064
-- attack.t1005
-- attack.t1039
-- attack.t1008
-- attack.t1086
-- attack.t1045
-- attack.t1078
-- attack.t1193
-- attack.t1140
-- attack.t1077
-- attack.t1049
-- attack.t1090
-- attack.t1041
-- attack.t1027
-- attack.t1112
-- attack.t1135
-- attack.group.apt_29
-- attack.t1084
-- attack.t1106
-- attack.t1060
-- attack.t1053
 - attack.t1025
-- attack.t1085
+- attack.t1106
+- attack.t1005
+- attack.t1041
+- attack.t1140
+- attack.t1008
+- attack.t1060
+- attack.t1049
+- attack.t1064
+- attack.t1027
+- attack.t1039
 - attack.t1001
-- attack.t1083
-- attack.t1071
+- attack.t1084
+- attack.group.apt_29
 - attack.t1107
-- attack.t1102
-- attack.t1057
+- attack.t1112
 - attack.t1129
+- attack.t1090
+- attack.t1135
+- attack.t1083
+- attack.t1045
+- attack.t1086
+- attack.t1053
+- attack.t1071
+- attack.t1078
+- attack.t1085
+- attack.t1077
+- attack.t1057
+- attack.t1102
+- attack.t1193
 - attack.t1035
 detection:
   attributes:
     QueryName|contains:
-    - busseylawoffice.com
     - ecolesndmessines.org
-    - lorriratzlaff.com
-    - westmedicalgroup.net
-    - fairfieldsch.org
-    - fisioterapiabb.it
-    - motherlodebulldogclub.com
-    - salesappliances.com
-    - rulourialuminiu.co.uk
-    - skagenyoga.com
-    - ceycarb.com
+    - coachandcook.at
     - acciaio.com.br
+    - varuhusmc.org
+    - rulourialuminiu.co.uk
+    - salesappliances.com
     - powerpolymerindustry.com
     - ministernetwork.org
-    - varuhusmc.org
-    - coachandcook.at
-    - publiccouncil.org
-    - mavin21c.dothome.co.kr
+    - ceycarb.com
+    - westmedicalgroup.net
     - bandabonga.fr
+    - fisioterapiabb.it
+    - mavin21c.dothome.co.kr
+    - fairfieldsch.org
+    - publiccouncil.org
+    - motherlodebulldogclub.com
+    - busseylawoffice.com
+    - skagenyoga.com
+    - lorriratzlaff.com
     - sistemikan.com
   condition: attributes

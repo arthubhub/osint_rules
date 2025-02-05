@@ -1,19 +1,19 @@
 title: Sample Linux miner - XMring - dns_query
-id: 75ea3b2b-8439-4b24-b789-0e174600e1e9
+id: 12539b15-9a4c-4ded-a5d9-fa57708b863b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e67e70a-9666-4c32-b3ec-4b51d43a8e4b.json
 logsource:
   product: windows
   category: dns_query
 tags:
+- attack.t1496
 - attack.t1499.004
 - attack.t1375
-- attack.t1496
 detection:
-  object_17294:
+  object_4592:
     IpAddresses:
     - 136.243.90.99
   condition: 1 of object_*

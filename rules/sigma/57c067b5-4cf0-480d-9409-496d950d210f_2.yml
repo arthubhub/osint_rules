@@ -1,9 +1,9 @@
 title: 'Malspam 2016-08-26 (.wsf in .zip) - campaign: "Voice Message from Outside
   Caller" - dns_query'
-id: 85cfba0f-8bc3-43d7-8b2e-8f66068297fe
+id: 2d98f62f-3c14-43d1-b549-ee127b796602
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57c067b5-4cf0-480d-9409-496d950d210f.json
 logsource:
@@ -12,32 +12,32 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - mueller-holz-bau.com
-    - verloskundigedenbosch.nl
-    - calvaryresort.com
     - atsmedical.net
-    - ecolgp.ru
+    - verloskundigedenbosch.nl
     - seishinkaikenpo.com
+    - ecolgp.ru
+    - calvaryresort.com
+    - mueller-holz-bau.com
     IpAddresses:
-    - 208.71.106.48
-    - 213.205.40.169
-    - 210.160.220.210
-    - 210.157.30.70
-    - 208.71.106.46
-    - 89.42.39.75
-    - 64.151.202.242
-    - 81.169.145.105
-    - 81.196.20.133
-    - 208.71.106.61
-    - 43.241.56.11
     - 213.186.33.24
+    - 89.42.39.75
+    - 210.15.254.232
+    - 208.71.106.49
+    - 64.151.202.242
+    - 43.241.56.11
+    - 213.180.150.17
+    - 208.71.106.46
+    - 217.175.160.17
+    - 81.169.145.105
+    - 87.236.100.64
+    - 80.150.6.138
+    - 210.157.30.70
+    - 208.71.106.61
+    - 210.160.220.210
+    - 81.196.20.133
+    - 212.46.196.134
     - 217.113.112.43
     - 80.86.184.154
-    - 213.180.150.17
-    - 87.236.100.64
-    - 210.15.254.232
-    - 212.46.196.134
-    - 217.175.160.17
-    - 208.71.106.49
-    - 80.150.6.138
+    - 213.205.40.169
+    - 208.71.106.48
   condition: attributes

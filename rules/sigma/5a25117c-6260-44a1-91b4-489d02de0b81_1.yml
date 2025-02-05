@@ -1,9 +1,9 @@
 title: OSINT - Gaffe Reveals Full List of Targets in Spear Phishing Attack Using Cobalt
   Strike Against Financial Institutions - url_request
-id: a0175198-eb2f-4fae-be20-5cc6fc6cede5
+id: b609a1d8-3e1e-4a83-85ec-1b35efcf4eb1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a25117c-6260-44a1-91b4-489d02de0b81.json
 logsource:
@@ -14,6 +14,6 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.riskiq.com
     - https://community.riskiq.com
+    - https://www.riskiq.com
   condition: attributes

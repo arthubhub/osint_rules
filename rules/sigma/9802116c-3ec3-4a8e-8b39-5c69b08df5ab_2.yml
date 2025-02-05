@@ -1,26 +1,26 @@
 title: OSINT - Zero-Day Exploitation of Unauthenticated Remote Code Execution Vulnerability
   in GlobalProtect (CVE-2024-3400) - dns_query
-id: 8a45c170-b202-4371-a105-c7e3ddce8b83
+id: 31c92018-c06c-425b-826f-7dae4fc8d0a8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/9802116c-3ec3-4a8e-8b39-5c69b08df5ab.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1190
 - attack.t1133
+- attack.t1190
 detection:
   attributes:
     IpAddresses:
+    - 198.58.109.149
+    - 89.187.187.69
+    - 137.118.185.101
+    - 144.172.79.92
+    - 66.235.168.222
+    - 23.242.208.175
     - 172.233.228.93
     - 71.9.135.100
-    - 66.235.168.222
-    - 89.187.187.69
-    - 23.242.208.175
-    - 144.172.79.92
-    - 137.118.185.101
-    - 198.58.109.149
   condition: attributes

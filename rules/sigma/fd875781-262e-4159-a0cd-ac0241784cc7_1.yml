@@ -1,16 +1,16 @@
 title: March 2021 Exchange Server Security Updates for older Cumulative Updates of
   Exchange Server - url_request
-id: 50c25a9b-c210-40fb-8d83-b6fad05fd4ea
+id: 2a316777-493c-4d1c-9f0b-764c47a8b668
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/fd875781-262e-4159-a0cd-ac0241784cc7.json
 logsource:
   product: windows
   category: url_request
 detection:
-  object_6466:
+  object_9347:
     RequestUrl|contains:
     - https://techcommunity.microsoft.com
   condition: 1 of object_*

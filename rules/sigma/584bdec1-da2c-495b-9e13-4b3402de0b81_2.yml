@@ -1,8 +1,8 @@
 title: OSINT - Now Mirai Has DGA Feature Built in - dns_query
-id: 419423ac-3fd0-4885-af7c-4d18059c6301
+id: 3412e85c-63bf-4c3d-8909-f7892c362cca
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/584bdec1-da2c-495b-9e13-4b3402de0b81.json
 logsource:
@@ -13,10 +13,10 @@ tags:
 detection:
   attributes:
     QueryName|contains:
-    - zugzwang.me
-    - tr069.online
     - tr069.support
     - tr069.tech
+    - tr069.online
+    - zugzwang.me
     IpAddresses:
     - 93.190.142.201
   condition: attributes

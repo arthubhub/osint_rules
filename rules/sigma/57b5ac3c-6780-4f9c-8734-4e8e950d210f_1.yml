@@ -1,8 +1,8 @@
 title: Pivot on Shakti domains via PassiveTotal - url_request
-id: 496884cd-8d13-440a-9654-f166d5280ada
+id: b7fdcd00-41ab-40bb-b36a-ee9d97c44699
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57b5ac3c-6780-4f9c-8734-4e8e950d210f.json
 logsource:
@@ -11,8 +11,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.passivetotal.org
-    - web4solution.net
-    - securedesignus.com
     - securedesignuk.com
+    - web4solution.net
+    - https://www.passivetotal.org
+    - securedesignus.com
   condition: attributes

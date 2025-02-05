@@ -1,8 +1,8 @@
 title: OSINT Carbanak gang is back and packing new guns by Eset - dns_query
-id: c14f4662-70f4-43ab-8860-0ac7af7abab0
+id: ab34443c-6f00-4fe6-83ca-bc35ec9f1671
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/55eecc81-b630-4157-b757-e538950d210b.json
 logsource:
@@ -11,30 +11,30 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - comixed.org
-    - clients4-google.com
-    - adobe-dns-3-adobe.com
-    - weekend-service.com
     - seven-sky.org
+    - weekend-service.com
+    - comixed.org
+    - adobe-dns-3-adobe.com
+    - clients4-google.com
     IpAddresses:
-    - 141.255.167.28
-    - 89.144.14.65
-    - 192.52.166.66
     - 185.29.9.28
-    - 84.200.4.226
-    - 178.209.50.245
-    - 104.232.32.62
-    - 91.207.60.68
     - 162.221.183.11
+    - 82.163.78.188
+    - 104.232.32.61
+    - 192.52.166.66
+    - 141.255.167.28
     - 50.62.171.62
-    - 194.146.180.58
     - 216.170.116.120
     - 78.128.92.117
-    - 104.232.32.61
-    - 193.203.48.41
-    - 162.221.183.109
-    - 82.163.78.188
-    - 176.31.157.62
-    - 87.98.217.9
     - 31.3.155.123
+    - 87.98.217.9
+    - 162.221.183.109
+    - 176.31.157.62
+    - 91.207.60.68
+    - 193.203.48.41
+    - 84.200.4.226
+    - 89.144.14.65
+    - 178.209.50.245
+    - 194.146.180.58
+    - 104.232.32.62
   condition: attributes

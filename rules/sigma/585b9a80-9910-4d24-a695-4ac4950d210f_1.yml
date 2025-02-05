@@ -1,9 +1,9 @@
 title: 'OSINT - New Linux/Rakos threat: devices and servers under SSH scan (again)
   - url_request'
-id: 3c5c6629-a192-47cf-a43f-2a96349afc63
+id: 39315639-51a3-4dce-9821-ccd69412a457
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/585b9a80-9910-4d24-a695-4ac4950d210f.json
 logsource:
@@ -12,6 +12,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://www.welivesecurity.com
     - https://github.com
+    - http://www.welivesecurity.com
   condition: attributes

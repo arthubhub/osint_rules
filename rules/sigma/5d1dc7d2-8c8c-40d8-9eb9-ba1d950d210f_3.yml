@@ -1,55 +1,55 @@
 title: 'OSINT - Threat Spotlight: Ratsnif - New Network Vermin from OceanLotus - process_creation'
-id: 45f8782f-4514-45af-a0bc-11ff754de821
+id: 6e1e1343-8132-4516-b0a2-eae8f38b467f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d1dc7d2-8c8c-40d8-9eb9-ba1d950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1043
 - attack.t1094
+- attack.t1043
 - attack.group.apt32
 detection:
-  object_6979:
+  object_8864:
     md5:
     - 516ad28f8fa161f086be7ca122351edf
     sha1:
     - 98389cccd15253a56827411b4d7b313b8ab481d6
     sha256:
     - b4e3b2a1f1e343d14af8d812d4a29440940b99aaf145b5699dfe277b5bfb8405
-  object_6981:
+  object_8866:
     md5:
     - 516ad28f8fa161f086be7ca122351edf
     sha256:
     - b4e3b2a1f1e343d14af8d812d4a29440940b99aaf145b5699dfe277b5bfb8405
-  object_6982:
+  object_8867:
     md5:
     - b2f8c9ce955d4155d466fbbb7836e08b
     sha1:
     - f31bc350cf533e166aed46ee69b4a6d16523b88a
     sha256:
     - b214c7a127cb669a523791806353da5c5c04832f123a0a6df118642eee1632a3
-  object_6983:
+  object_8868:
     md5:
     - b2f8c9ce955d4155d466fbbb7836e08b
-  object_6984:
+  object_8869:
     md5:
     - b2f8c9ce955d4155d466fbbb7836e08b
     sha1:
     - f31bc350cf533e166aed46ee69b4a6d16523b88a
     sha256:
     - b214c7a127cb669a523791806353da5c5c04832f123a0a6df118642eee1632a3
-  object_6985:
+  object_8870:
     md5:
     - 7f0ac1b4e169edc62856731953dad126
     sha1:
     - 1687f9a94aab13b18a105d62745300d8b49b037b
     sha256:
     - b20327c03703ebad191c0ba025a3f26494ff12c5908749e33e71589ae1e1f6b3
-  object_6988:
+  object_8873:
     md5:
     - 88eae0d31a6c38cfb615dd75918b47b1
     sha1:
@@ -60,6 +60,6 @@ detection:
     md5:
     - 516ad28f8fa161f086be7ca122351edf
     sha256:
-    - 7fd526e1a190c10c060bac21de17d2c90eb2985633c9ab74020a2b78acd8a4c8
     - b20327c03703ebad191c0ba025a3f26494ff12c5908749e33e71589ae1e1f6b3
+    - 7fd526e1a190c10c060bac21de17d2c90eb2985633c9ab74020a2b78acd8a4c8
   condition: 1 of object_* or attributes

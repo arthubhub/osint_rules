@@ -1,369 +1,369 @@
 title: OSINT - Mac Malware of 2017 - process_creation
-id: fc479f11-729d-415b-bc67-ff6648db35b1
+id: 52523af6-94ff-4f57-99cc-1e1c2746be6b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a5724c6-5e20-4d61-9ccb-4191950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.filecoder
-- attack.software.mughthesec
-- attack.software.xagentosx
-- attack.software.turla
-- attack.software.fruitfly
-- attack.software.cpumeaner
-- attack.software.pwnet
+- attack.software.x-agent
 - attack.software.proton
 - attack.software.macspy
-- attack.software.macransom
-- attack.software.empyre
-- attack.software.macdownloader
-- attack.group.filecoder
 - attack.group.macransom
-- attack.software.x-agent
+- attack.software.cpumeaner
+- attack.software.fruitfly
+- attack.group.filecoder
+- attack.software.empyre
+- attack.software.pwnet
+- attack.software.mughthesec
+- attack.software.filecoder
+- attack.software.xagentosx
+- attack.software.macransom
+- attack.software.macdownloader
+- attack.software.turla
 detection:
-  object_6323:
+  object_8566:
     sha256:
     - b556c04c768d57af104716386fe4f23b01aa9d707cbc60385895e2b4fc08c9b0
-  object_6324:
+  object_8567:
     sha256:
     - bbbf73741078d1e74ab7281189b13f13b50308cf03d3df34bc9f6a90065a4a55
-  object_6325:
+  object_8568:
     sha256:
     - 52efcfe30f96a85c9c068880c20663db64f0e08346e0f3b59c2e5bbcb41ba73c
-  object_6326:
+  object_8569:
     sha256:
     - 7a9cdb9d608b88bd7afce001cb285c2bb2ae76f5027977e8635aa04bd064ffb7
-  object_6327:
+  object_8570:
     sha256:
     - 07adb8253ccc6fee20940de04c1bf4a54a4455525b2ac33f9c95713a8a102f3d
-  object_6329:
+  object_8572:
     sha1:
     - 0603353852e174fc0337642e3957c7423f182a8c
-  object_6330:
+  object_8573:
     sha1:
     - e9dcdae1406ab1132dc9d507fd63503e5c4d41d9
-  object_6331:
+  object_8574:
     sha1:
     - 8cfa551d15320f0157ece3bdf30b1c62765a93a5
-  object_6332:
+  object_8575:
     sha1:
     - 0400b35d703d872adc64aa7ef914a260903998ca
-  object_6333:
+  object_8576:
     sha1:
     - 9e5378165bb20e9a7f74a7fcc73b528f7b231a75
-  object_6334:
+  object_8577:
     sha1:
     - c9472d791c076a10dce5ff0d3ab6e7706524b741
-  object_6335:
+  object_8578:
     sha1:
     - 3ef34e2581937babd2b7ce63ab1d92cd9440181a
-  object_6336:
+  object_8579:
     sha1:
     - 1b7380d283ceebcabb683464ba0bb6dd73d6e886
-  object_6337:
+  object_8580:
     sha1:
     - a91a529f89b1ab8792c345f823e101b55d656a08
-  object_6338:
+  object_8581:
     sha1:
     - e55fe159e6e3a8459e9363401fcc864335fee321
-  object_6339:
+  object_8582:
     sha1:
     - 3820b23c1057f8c3522c47737f25183a3c15e4db
-  object_6340:
+  object_8583:
     sha256:
     - b8ee4556dc09b28826359b98343a4e00680971a6f8c6602747bd5d723d26eaea
-  object_6341:
+  object_8584:
     sha256:
     - 5b7792a16c6b7978fca389882c6aeeb2c792352076bf6a064e7b8b90eace8060
-  object_6342:
+  object_8585:
     sha256:
     - 0a77f1b59c829a83d91a12c871fbd30c5c9d04b455f497e0c231cd21104bfea9
-  object_6343:
+  object_8586:
     sha256:
     - 7848f7808af02ba0466f3a0687cf949c4d29a2d94b035481a3299ec519aaaa30
-  object_6344:
+  object_8587:
     sha256:
     - d5ea79632a1a67abbf9fb1c2813b899c90a5fb9442966ed4f530e92715087ee2
-  object_6345:
+  object_8588:
     sha256:
     - b6df610aa5c1254c3af5b2ff806562c4937704e4ac248577cdcd3e7e7b3578a0
-  object_6346:
+  object_8589:
     sha256:
     - 6e207a375782e3c9d86a3e426cfa38eddcf4898b3556abc75889f7e01cc49506
-  object_6347:
+  object_8590:
     sha256:
     - 92721d719b8085748fb66366d202457f6d38bfa108a2ecda71eee7e68f43a387
-  object_6348:
+  object_8591:
     md5:
     - 766f058837b08f890bb97198c21b6cc1
     sha1:
     - a91a529f89b1ab8792c345f823e101b55d656a08
     sha256:
     - c68814901d0af5de410c152e62a06a51c16ec7fe118f1e5251bbcdbb27364709
-  object_6350:
+  object_8593:
     md5:
     - 29fb77664fc4f13ea5f65cfe01b292af
     sha1:
     - 8cfa551d15320f0157ece3bdf30b1c62765a93a5
     sha256:
     - c9140c869123e0c7a4d064a9e82bb1549c3e382cdcf2c119bcbe78911915208b
-  object_6352:
+  object_8595:
     md5:
     - ff44372fce42ffe13222e7237d4cdef1
     sha1:
     - ef5a11a1bb5b2423554309688aa7947f4afa5388
     sha256:
     - 061f056338e00d38cdfb6b1f40d8e4f8d3f1d7214f6d9a48d0d91d766b7574b7
-  object_6354:
+  object_8597:
     md5:
     - c7a2a5c0fbe4df3afd9dbedecf8321da
     sha1:
     - e9dcdae1406ab1132dc9d507fd63503e5c4d41d9
     sha256:
     - b9432b91a112ed2bfcbf0530a04406390c854a7c9f8afea17e9e94fe43242ce1
-  object_6356:
+  object_8599:
     md5:
     - 0ca749b61c7e76e6ec07c33aab01aab3
     sha1:
     - 9e5378165bb20e9a7f74a7fcc73b528f7b231a75
     sha256:
     - 553496aa878821295de7acdd20d6377d39e304651bdd1281c7a7ff15b8f43cad
-  object_6358:
+  object_8601:
     md5:
     - 9f5013e080d628a35ba190621e0998c2
     sha1:
     - 3ef34e2581937babd2b7ce63ab1d92cd9440181a
     sha256:
     - cb3be20d5de9ae45ec959bc9afa93018ec5f4dd80368a707bc654fab87378452
-  object_6360:
+  object_8603:
     md5:
     - 5f145ed27ec88add379676729cbad15f
     sha1:
     - 10a09c09fd5dd76202e308718a357abc7de291b5
     sha256:
     - 2ec4b1705b690ab8c558e3e8ead8bbd34b1fb1b260a27f40b34718be3b71a3a7
-  object_6362:
+  object_8605:
     md5:
     - 20f20918149fa3a972a87b3364248772
     sha1:
     - 3820b23c1057f8c3522c47737f25183a3c15e4db
     sha256:
     - c9e1fe6a32356a823f3dc36851bc8dfd5c601481c109229bd21883bffee10f5e
-  object_6364:
+  object_8607:
     md5:
     - 1b8be665af7729618d70bad773aac423
     sha1:
     - 1b7380d283ceebcabb683464ba0bb6dd73d6e886
     sha256:
     - d19b903adbd0f8c119d0d8f25b194bdd24b737357a517f23ca5cdc6c75b35038
-  object_6366:
+  object_8609:
     md5:
     - cc3297083ad89cabfd58d251cbbe3ca9
     sha1:
     - c9472d791c076a10dce5ff0d3ab6e7706524b741
     sha256:
     - 2e6bb8fd7f983dd06fa0c5314a7b105354888f63c60a3205ade6d467cc620dc5
-  object_6368:
+  object_8611:
     md5:
     - 1a6f74f29c985259fe1f6c4821c51373
     sha1:
     - 0400b35d703d872adc64aa7ef914a260903998ca
     sha256:
     - 247eb9cfc0f9ea2c0ba1824381380e3354ee1fb2f0521f8a6fff2baeacc541ff
-  object_6370:
+  object_8613:
     md5:
     - ff80d97674e148687affd6a4e3ccf00a
     sha1:
     - 30d77908ac9d37c4c14d32ea3e0b8df4c7e75464
     sha256:
     - 4d33f4a3c1cbf9cded6a3a096025d0b44905e0308bd3662a496a0701f2ec942d
-  object_6372:
+  object_8615:
     md5:
     - fc22fbe8dda4258a9f0ceb7e15a04fc2
     sha1:
     - e55fe159e6e3a8459e9363401fcc864335fee321
     sha256:
     - 91af9a4c0091f8e97641660c66d414fa13ee69473f5692d2aecb1d1101ed34b8
-  object_6374:
+  object_8617:
     md5:
     - c411c46b480e84aae81abbe47c628dae
     sha1:
     - 0603353852e174fc0337642e3957c7423f182a8c
     sha256:
     - c30a11eda8745543b8513f62deee872869f5ab9ca20804052d5b64150219ec88
-  object_6376:
+  object_8619:
     md5:
     - 2ee232b1a56f21bdd0b46ba0acd12a22
     sha1:
     - db3f0426f6e434555e6b6bb4053e508f74580387
     sha256:
     - cd93142f1e0bac1d73235515bc127f5f9634eafde0bea2d6c294bf3549d612b7
-  object_6378:
+  object_8621:
     md5:
     - e8bdde90574d5bf285d9abb0c8a113a8
     sha1:
     - f5d3425482dc4f4f738277ff3ba315b496894899
     sha256:
     - 7819ae7d72fa045baa77e9c8e063a69df439146b27f9c3bb10aef52dcc77c145
-  object_6380:
+  object_8623:
     md5:
     - 7bb4f5d962a5b3bb18db9ce08c0b6cbf
     sha1:
     - 66e520e18accd92abb4722a6cd6a285981ac5bd1
     sha256:
     - bbbf73741078d1e74ab7281189b13f13b50308cf03d3df34bc9f6a90065a4a55
-  object_6382:
+  object_8625:
     md5:
     - 473c6a0b2af67c241a29d87e7fd33634
     sha1:
     - fb4a50ae8a4a5e76a3f88935e4374d4287a53b7d
     sha256:
     - 4252e482c9801463e6f684c71f70cb64a17ae74957ed8986f2401c653acae1d7
-  object_6384:
+  object_8627:
     md5:
     - 1de4838f13c49d9f959d04b363326ac1
     sha1:
     - 598ebb19bf9fbc17c0bf85ce4ece91fa061f74a6
     sha256:
     - 07adb8253ccc6fee20940de04c1bf4a54a4455525b2ac33f9c95713a8a102f3d
-  object_6386:
+  object_8629:
     md5:
     - 787d664e842961f2a335139407f91a70
     sha1:
     - a323168f95d1a1c65186888c6dd16cd2f9f8539a
     sha256:
     - 52efcfe30f96a85c9c068880c20663db64f0e08346e0f3b59c2e5bbcb41ba73c
-  object_6388:
+  object_8631:
     md5:
     - 9d9cca200dd0e5f9d59225131d5269b0
     sha1:
     - cd42b88569faa946a4b9d6f7408b958dcbcf7554
     sha256:
     - 83b712ec6b0b2d093d75c4553c66b95a3d1a1ca43e01c5e47aae49effce31ee3
-  object_6390:
+  object_8633:
     md5:
     - e4744b9f927dc8048a19dca15590660c
     sha1:
     - 18957d7549b4e296fcaeb122ff241d9799804fa3
     sha256:
     - ce07d208a2d89b4e0134f5282d9df580960d5c81412965a6d1a0786b27e7f044
-  object_6392:
+  object_8635:
     md5:
     - f8e3c8e43593ecbd9b62f6e18c8d6474
     sha1:
     - 3c4904832392e70e415b0520d45ff7a1c93c2c4e
     sha256:
     - b556c04c768d57af104716386fe4f23b01aa9d707cbc60385895e2b4fc08c9b0
-  object_6394:
+  object_8637:
     md5:
     - 87a4bff26626ccf022bda7373241275c
     sha1:
     - 7cf55e0de9f191dc16a10de1e47fb25aa0a79856
     sha256:
     - 3f0130cfd7bf61b8e8226dd4775319c7376a08ec019f9df12875e9ea55992e94
-  object_6396:
+  object_8639:
     md5:
     - 72d4d364ed91dd9418d144a2db837a6d
     sha1:
     - 794bcba867307bdbd5f947f6c939eb4df1d2c9b8
     sha256:
     - befa9bfe488244c64db096522b4fad73fc01ea8c4cd0323f1cbdee81ba008271
-  object_6398:
+  object_8641:
     md5:
     - f8e4cab429263406fbf11b41fd539839
     sha1:
     - 5b5a34dfc102f0c18b0b0e83c6fda431969e7957
     sha256:
     - 7a9cdb9d608b88bd7afce001cb285c2bb2ae76f5027977e8635aa04bd064ffb7
-  object_6400:
+  object_8643:
     md5:
     - 14c1cd9c5f263d5ba988838e0c3e3cf6
     sha1:
     - d9685bea995e57ae89d10122cb76022554179ff7
     sha256:
     - 4131d4737fe8dfe66d407bfd0a0df18a4a77b89347471cc012da8efc93c661a5
-  object_6402:
+  object_8645:
     md5:
     - 3adf6025eb710f2bf1918ee2f116153d
     sha1:
     - 03ab5fdb40db260dbc35aadba202e920e57eb348
     sha256:
     - 94cc470c0fdd60570e58682aa7619d665eb710e3407d1f9685b7b00bf26f9647
-  object_6404:
+  object_8647:
     md5:
     - 4fe4b9560e99e33dabca553e2eeee510
     sha1:
     - 70a1c4ed3a09a44a41d54c4fd4b409a5fc3159f6
     sha256:
     - 2a854997a44f4ba7e307d408ea2d9c1d84dde035c5dab830689aa45c5b5746ea
-  object_6406:
+  object_8649:
     md5:
     - d4a14a1516d5ec9452a29de24ba85d0e
     sha1:
     - 1e493ebde7fa77d5ae503aa7758fac87d11da116
     sha256:
     - 694b15d69264062e82d43e8ddb4a5efe4435574f8d91e29523c4298894b70c26
-  object_6422:
+  object_8665:
     md5:
     - 77b4ffe73491d534946d010bfca138f7
     sha1:
     - d20482372f9e63a54854d639cc79d0b65bc8382b
     sha256:
     - b8ee4556dc09b28826359b98343a4e00680971a6f8c6602747bd5d723d26eaea
-  object_6426:
+  object_8669:
     md5:
     - f48ee47a79d5da606e9eff0401971075
     sha1:
     - 087aa8d2fcfffa85707214928d9f4ca16e8af5ac
     sha256:
     - 6e207a375782e3c9d86a3e426cfa38eddcf4898b3556abc75889f7e01cc49506
-  object_6428:
+  object_8671:
     md5:
     - 5e996bcbb6f15d345a4a59758dc4d75f
     sha1:
     - 73994f62dfac62e32968abeb5206043464eb4792
     sha256:
     - 92721d719b8085748fb66366d202457f6d38bfa108a2ecda71eee7e68f43a387
-  object_6430:
+  object_8673:
     md5:
     - 3a5fc199189cf39ec58ec6fb2c3c7d93
     sha1:
     - d972e12685591b71432faaf70c71ced4b6e522a0
     sha256:
     - 7848f7808af02ba0466f3a0687cf949c4d29a2d94b035481a3299ec519aaaa30
-  object_6432:
+  object_8675:
     md5:
     - 6c74ff2cc39b5362ee5dec576ece211b
     sha1:
     - a201f1760ca4f99dff682a4e5c656f149f5d8e7c
     sha256:
     - 5b7792a16c6b7978fca389882c6aeeb2c792352076bf6a064e7b8b90eace8060
-  object_6434:
+  object_8677:
     md5:
     - a90379e02cf9b66c3863131730a4b099
     sha1:
     - 26f1dc4618b87b52ff1c5e27a5ba260d5f034a0f
     sha256:
     - 0a77f1b59c829a83d91a12c871fbd30c5c9d04b455f497e0c231cd21104bfea9
-  object_6436:
+  object_8679:
     md5:
     - 000e4225f382f9eee675dcaf3cbf9c7e
     sha1:
     - 0a0ae94f92a50937d920bf02dd26b477c840a915
     sha256:
     - d5ea79632a1a67abbf9fb1c2813b899c90a5fb9442966ed4f530e92715087ee2
-  object_6439:
+  object_8682:
     md5:
     - a79ac543b0836b53a3623e0b4cb6a6f7
     sha1:
     - d6a09a1c2964b228143092e200d17531a8aefc9d
     sha256:
     - b6df610aa5c1254c3af5b2ff806562c4937704e4ac248577cdcd3e7e7b3578a0
-  object_6441:
+  object_8684:
     md5:
     - 5b3e0b74cdb0622074fd997af51161dd
     sha1:
@@ -372,18 +372,18 @@ detection:
     - 128814f2b057aef1dd3e00f3749aed2a81e5ed03737311f2b1faab4ab2e6e2fe
   attributes:
     sha1:
-    - ef5a11a1bb5b2423554309688aa7947f4afa5388
     - 10a09c09fd5dd76202e308718a357abc7de291b5
+    - ef5a11a1bb5b2423554309688aa7947f4afa5388
     - 30d77908ac9d37c4c14d32ea3e0b8df4c7e75464
     sha256:
-    - 94cc470c0fdd60570e58682aa7619d665eb710e3407d1f9685b7b00bf26f9647
-    - 128814f2b057aef1dd3e00f3749aed2a81e5ed03737311f2b1faab4ab2e6e2fe
     - befa9bfe488244c64db096522b4fad73fc01ea8c4cd0323f1cbdee81ba008271
-    - 694b15d69264062e82d43e8ddb4a5efe4435574f8d91e29523c4298894b70c26
     - 4252e482c9801463e6f684c71f70cb64a17ae74957ed8986f2401c653acae1d7
     - 7819ae7d72fa045baa77e9c8e063a69df439146b27f9c3bb10aef52dcc77c145
+    - 94cc470c0fdd60570e58682aa7619d665eb710e3407d1f9685b7b00bf26f9647
+    - 3f0130cfd7bf61b8e8226dd4775319c7376a08ec019f9df12875e9ea55992e94
     - cd93142f1e0bac1d73235515bc127f5f9634eafde0bea2d6c294bf3549d612b7
     - 4131d4737fe8dfe66d407bfd0a0df18a4a77b89347471cc012da8efc93c661a5
-    - 3f0130cfd7bf61b8e8226dd4775319c7376a08ec019f9df12875e9ea55992e94
+    - 128814f2b057aef1dd3e00f3749aed2a81e5ed03737311f2b1faab4ab2e6e2fe
+    - 694b15d69264062e82d43e8ddb4a5efe4435574f8d91e29523c4298894b70c26
     - 2a854997a44f4ba7e307d408ea2d9c1d84dde035c5dab830689aa45c5b5746ea
   condition: 1 of object_* or attributes

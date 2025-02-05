@@ -1,9 +1,9 @@
 title: "OSINT Following the Trail of BlackTech\xE2\u20AC\u2122s Cyber Espionage Campaigns\
   \ by TrendMicro - url_request"
-id: 1e142412-76ee-481e-ae4d-76ce4df191fc
+id: b7095cd7-89b9-47dd-a726-1120862361db
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/594d1a36-8ca8-451c-83a6-6266950d210f.json
 logsource:
@@ -12,10 +12,10 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://blog.trendmicro.com
-    - blogtw.tk
-    - https://documents.trendmicro.com
     - microsoftmse.com
-    - httpstw.tk
+    - blogtw.tk
     - itaiwans.com
+    - https://documents.trendmicro.com
+    - httpstw.tk
+    - http://blog.trendmicro.com
   condition: attributes

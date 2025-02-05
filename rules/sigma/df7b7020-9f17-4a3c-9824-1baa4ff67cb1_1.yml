@@ -1,74 +1,74 @@
 title: CVE-2023-46604 (Apache ActiveMQ) Vulnerability Exploited to Infect Systems
   With Cryptominers and Rootkits - url_request
-id: c93139cf-4217-4496-845c-8719dd9bc5d0
+id: 0a9ca04b-28e5-482f-bd08-a0f13022880c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/df7b7020-9f17-4a3c-9824-1baa4ff67cb1.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.kinsing
 - attack.t1496
+- attack.group.kinsing
 detection:
-  object_16326:
+  object_451:
     RequestUrl|contains:
     - https://www.trendmicro.com
-  object_16327:
+  object_452:
     RequestUrl|contains:
     - http://185.122.204.197
-  object_16328:
+  object_453:
     RequestUrl|contains:
     - http://194.38.22.53
-  object_16329:
+  object_454:
     RequestUrl|contains:
     - http://194.38.22.53
-  object_16330:
+  object_455:
     RequestUrl|contains:
     - http://194.38.22.53
-  object_16331:
+  object_456:
     RequestUrl|contains:
     - http://194.38.22.53
-  object_16332:
+  object_457:
     RequestUrl|contains:
     - http://194.38.22.53
-  object_16336:
+  object_461:
     RequestUrl|contains:
     - http://194.38.21.25
-  object_16338:
+  object_463:
     RequestUrl|contains:
     - http://45.15.158.124
-  object_16340:
+  object_465:
     RequestUrl|contains:
     - http://194.87.252.159
-  object_16342:
+  object_467:
     RequestUrl|contains:
     - http://194.38.20.196
-  object_16347:
+  object_472:
     RequestUrl|contains:
     - http://194.38.21.25
-  object_16349:
+  object_474:
     RequestUrl|contains:
     - http://45.15.158.124
-  object_16351:
+  object_476:
     RequestUrl|contains:
     - http://194.87.252.159
-  object_16355:
+  object_480:
     RequestUrl|contains:
     - http://194.38.22.53
-  object_16357:
+  object_482:
     RequestUrl|contains:
     - gateway.fe.apple-dns.net
-  object_16359:
+  object_484:
     RequestUrl|contains:
     - mask-api.fe.apple-dns.net
-  object_16372:
+  object_497:
     RequestUrl|contains:
     - http://194.38.22.53
   attributes:
     RequestUrl|contains:
-    - http://194.38.22.53
     - http://185.122.204.197
+    - http://194.38.22.53
   condition: 1 of object_* or attributes

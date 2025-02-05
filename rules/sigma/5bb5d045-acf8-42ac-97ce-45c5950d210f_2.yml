@@ -1,108 +1,108 @@
 title: OSINT - Indicators of Compromise for Malware used by APT28 - dns_query
-id: 6fef5efc-84e5-4cfd-a194-934e3a2c3306
+id: e1db3fce-e574-4428-8f31-406d52b6d0bf
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bb5d045-acf8-42ac-97ce-45c5950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.sofacy
-- attack.group.strontium
 - attack.software.x-agent
+- attack.group.strontium
+- attack.group.sofacy
 - attack.software.x-tunnel
 detection:
   attributes:
     QueryName|contains:
-    - thepiratecinemaclub.org
-    - georgia-travel.org
-    - moldtravelgroup.com
-    - worldimagebucket.com
-    - bbcweather.org
-    - fundseats.com
-    - coindmarket.com
-    - politicweekend.com
-    - bulgariatripholidays.com
-    - brownvelocity.org
-    - virtsvc.com
-    - loungecinemaclub.com
-    - truefashionnews.com
-    - protonhardstorage.com
-    - moderntips.org
-    - narrowpass.net
-    - pointtk.com
-    - creekcounty.net
-    - daysheduler.org
-    - genericnetworkaddress.com
-    - powernoderesources.com
-    - globaltechengineers.org
-    - beststreammusic.com
     - iboxmit.com
-    - malaytravelgroup.com
+    - pointtk.com
+    - genericnetworkaddress.com
+    - loungecinemaclub.com
+    - globaltechengineers.org
     - escochart.com
+    - creekcounty.net
+    - brownvelocity.org
+    - politicweekend.com
+    - worldimagebucket.com
+    - narrowpass.net
     - topcinemaclub.com
+    - moderntips.org
+    - virtsvc.com
+    - coindmarket.com
+    - beststreammusic.com
+    - protonhardstorage.com
+    - bbcweather.org
+    - thepiratecinemaclub.org
+    - bulgariatripholidays.com
+    - powernoderesources.com
+    - truefashionnews.com
+    - daysheduler.org
+    - moldtravelgroup.com
+    - malaytravelgroup.com
+    - georgia-travel.org
+    - fundseats.com
     IpAddresses:
-    - 185.144.83.124
-    - 185.216.35.7
-    - 169.239.129.121
-    - 185.86.151.2
-    - 185.189.112.195
-    - 185.86.151.104
-    - 85.204.124.77
-    - 46.21.147.55
-    - 89.34.111.107
-    - 86.106.131.229
-    - 185.86.149.218
-    - 94.177.12.238
-    - 172.104.21.26
-    - 86.106.131.54
-    - 185.86.150.205
-    - 213.252.247.112
-    - 185.94.191.65
-    - 185.86.149.116
-    - 89.37.226.106
-    - 185.86.148.15
-    - 185.210.219.250
-    - 188.241.68.118
-    - 103.253.41.124
-    - 89.45.67.110
-    - 87.120.254.106
-    - 139.5.177.206
-    - 77.81.98.122
-    - 54.37.104.106
-    - 93.113.131.103
-    - 185.230.124.246
-    - 185.181.102.203
-    - 185.216.35.10
-    - 145.239.67.8
-    - 185.145.128.80
-    - 139.5.177.205
-    - 45.124.132.127
-    - 89.34.111.132
-    - 86.105.1.123
-    - 176.223.111.243
-    - 185.183.107.40
-    - 51.38.128.110
-    - 162.208.10.66
-    - 185.94.192.122
-    - 46.21.147.71
-    - 169.239.129.31
-    - 23.163.0.59
-    - 195.12.50.171
-    - 103.208.86.57
-    - 193.37.255.10
-    - 86.105.9.174
-    - 185.181.102.201
-    - 89.45.67.153
-    - 169.239.128.133
-    - 46.21.147.76
-    - 185.181.102.204
-    - 185.128.24.104
-    - 185.86.148.184
-    - 94.177.12.150
-    - 179.43.158.20
     - 185.25.50.93
+    - 54.37.104.106
+    - 94.177.12.238
+    - 45.124.132.127
+    - 89.34.111.107
+    - 94.177.12.150
+    - 185.86.151.104
+    - 185.144.83.124
+    - 185.216.35.10
+    - 185.94.191.65
+    - 185.230.124.246
+    - 185.216.35.7
     - 80.255.6.15
+    - 145.239.67.8
+    - 87.120.254.106
+    - 86.106.131.229
+    - 93.113.131.103
+    - 185.183.107.40
+    - 185.86.148.15
+    - 86.105.9.174
+    - 162.208.10.66
+    - 46.21.147.71
+    - 213.252.247.112
+    - 169.239.129.31
+    - 169.239.129.121
+    - 86.106.131.54
+    - 185.145.128.80
+    - 46.21.147.76
+    - 179.43.158.20
+    - 89.34.111.132
+    - 185.128.24.104
+    - 51.38.128.110
+    - 176.223.111.243
+    - 103.208.86.57
+    - 89.37.226.106
+    - 172.104.21.26
+    - 193.37.255.10
+    - 185.189.112.195
+    - 23.163.0.59
+    - 185.86.150.205
+    - 195.12.50.171
+    - 89.45.67.153
+    - 185.210.219.250
+    - 185.86.148.184
+    - 185.181.102.201
+    - 85.204.124.77
+    - 169.239.128.133
+    - 77.81.98.122
+    - 185.86.149.116
+    - 139.5.177.206
+    - 185.181.102.203
+    - 89.45.67.110
+    - 185.94.192.122
+    - 103.253.41.124
+    - 139.5.177.205
+    - 46.21.147.55
+    - 86.105.1.123
+    - 185.86.149.218
+    - 185.86.151.2
+    - 185.181.102.204
+    - 188.241.68.118
   condition: attributes

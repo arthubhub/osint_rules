@@ -1,9 +1,9 @@
 title: '[TLP:WHITE] Joint CSA: North Korean State-Sponsored Cyber Actors Use Maui
   Ransomware to Target the Healthcare and Public Health Sector - url_request'
-id: cc346beb-1968-47db-a637-c85a1dc9e07d
+id: ff3638e4-95e9-42d5-b7e0-c78c4b115d63
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/704d14e0-3a68-46a2-9b20-88a781463250.json
 logsource:
@@ -13,7 +13,7 @@ tags:
 - attack.group.maui_ransomware
 - attack.software.maui_ransomware
 detection:
-  object_8322:
+  object_9112:
     RequestUrl|contains:
     - https://www.cisa.gov
   condition: 1 of object_*

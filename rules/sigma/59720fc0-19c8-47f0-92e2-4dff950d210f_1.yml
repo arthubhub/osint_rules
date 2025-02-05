@@ -1,8 +1,8 @@
 title: OSINT - Rurktar - Spyware under Construction - url_request
-id: 525b89e8-b62d-49c1-84e3-c81c7806f4b0
+id: d31e349c-1e97-49ce-bad1-2b8d1bc94b39
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59720fc0-19c8-47f0-92e2-4dff950d210f.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://file.gdatasoftware.com
     - https://www.gdatasoftware.com
+    - https://file.gdatasoftware.com
   condition: attributes

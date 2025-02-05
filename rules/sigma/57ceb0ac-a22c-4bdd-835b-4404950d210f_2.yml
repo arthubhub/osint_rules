@@ -1,8 +1,8 @@
 title: 'Malspam 2016-09-06 (.js in .zip) - campaign: "August invoice" - dns_query'
-id: 78af1565-9d74-4e27-9088-722d2111089e
+id: bc9a4dd9-0d2c-4e25-9a61-cfcf248cfb9b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57ceb0ac-a22c-4bdd-835b-4404950d210f.json
 logsource:
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - donttouchmybaseline.ws
     - bookinghotworld.ws
     - canonsupervideo4k.ws
-    - donttouchmybaseline.ws
     IpAddresses:
     - 216.244.68.195
   condition: attributes

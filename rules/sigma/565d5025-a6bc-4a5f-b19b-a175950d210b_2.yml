@@ -2,10 +2,10 @@ title: "OSINT - PlugX-\xD1\u201A \xD3\xA9\xD1\u20AC\xD1\u201A\xD1\x81\xD3\xA9\xD
   \ \xD1\x81\xD0\xB8\xD1\x81\xD1\u201A\xD0\xB5\xD0\xBC\xD0\xB8\xD0\xB9\xD0\xB3 \xD1\
   \u2020\xD1\x8D\xD0\xB2\xD1\x8D\xD1\u20AC\xD0\xBB\xD1\x8D\xD1\u2026 \xD0\xBD\xD1\u0152\
   \ - dns_query"
-id: d7588d5e-3273-47f0-9257-6bafb573fead
+id: 48b3106f-137f-45c9-b24e-a5eec7363a23
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/565d5025-a6bc-4a5f-b19b-a175950d210b.json
 logsource:
@@ -14,17 +14,17 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - teever.mn
-    - molnews.net
-    - mol-government.com
-    - firefox-sync.com
-    - mongolbaatar.net
-    - goodmongol.com
-    - heritageblog.org
     - baatarhuu.com
+    - mol-government.com
+    - mongolbaatar.net
+    - molnews.net
+    - goodmongol.com
+    - firefox-sync.com
+    - heritageblog.org
+    - teever.mn
     IpAddresses:
     - 173.208.206.172
-    - 45.32.64.183
-    - 98.126.24.12
     - 104.207.152.11
+    - 98.126.24.12
+    - 45.32.64.183
   condition: attributes

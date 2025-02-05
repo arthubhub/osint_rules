@@ -1,37 +1,37 @@
 title: 'M2M -  Jaff 2017-06-13 : "Invoice PIS1234567.zip" - dns_query'
-id: 4ea5e100-4977-4f2c-a8b9-7f6c127c1676
+id: 63053055-ebe2-4dab-b2bf-1f6aaf90f456
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/593fe37d-e2e4-49e7-9f18-5726950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.jaff
 - attack.software.jaff
+- attack.group.jaff
 detection:
   attributes:
     IpAddresses:
+    - 217.17.85.67
     - 208.91.198.105
     - 199.79.63.167
     - 162.215.252.26
-    - 217.17.85.67
+    - 119.28.85.128
+    - 130.185.72.116
+    - 199.79.63.100
+    - 79.98.24.194
+    - 116.12.48.139
     - 103.21.59.165
-    - 119.28.98.205
     - 211.149.226.210
+    - 119.28.98.205
+    - 198.23.48.27
     - 107.180.2.55
     - 190.105.227.224
-    - 202.181.132.161
-    - 119.28.85.128
-    - 79.98.24.194
     - 115.28.21.247
-    - 5.196.28.243
-    - 198.23.48.27
-    - 199.79.63.100
-    - 130.185.72.116
     - 110.4.45.97
-    - 116.12.48.139
+    - 202.181.132.161
     - 192.185.129.5
+    - 5.196.28.243
   condition: attributes

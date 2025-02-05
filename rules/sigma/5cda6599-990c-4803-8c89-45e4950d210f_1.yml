@@ -1,8 +1,8 @@
 title: OSINT - [Emering] FIN7 JScript Loader Malware - url_request
-id: b3f90b3a-b36a-4cef-ad74-6a3df6a542da
+id: 33ec52af-84b3-4b4d-807a-3a2356fd6d51
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cda6599-990c-4803-8c89-45e4950d210f.json
 logsource:
@@ -10,17 +10,17 @@ logsource:
   category: url_request
 tags:
 - attack.group.fin7
-- attack.group.anunak
 - attack.group.g0046
+- attack.group.anunak
 detection:
-  object_9828:
+  object_23:
     RequestUrl|contains:
     - https://twitter.com
-  object_9832:
+  object_27:
     RequestUrl|contains:
     - https://twitter.com
   attributes:
     RequestUrl|contains:
-    - msdn-update.com
     - https://msdn-update.com
+    - msdn-update.com
   condition: 1 of object_* or attributes

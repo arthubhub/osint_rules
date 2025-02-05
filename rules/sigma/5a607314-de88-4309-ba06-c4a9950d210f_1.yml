@@ -1,26 +1,26 @@
 title: 'M2M -  GlobeImposter "..doc" 2018-01-12 : "Unpaid invoice " - "1234567.7z"
   - url_request'
-id: 7e7a95cc-2c97-423c-bb4a-e1d63512e7a3
+id: 453fc60e-8532-4d8e-b98a-4367bb69a20d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a607314-de88-4309-ba06-c4a9950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.fake_globe_ransomware
 - attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
 detection:
   attributes:
     RequestUrl|contains:
-    - http://psoeiras.net
-    - http://jcvitalis.com
     - http://lasercutlawncare.com
-    - http://nwfpakistan.com
-    - http://mikeylinehan.com
     - http://icilarache.com
-    - https://topyzscsu5poprxy.onion.link
     - http://loquiereslotienesya.com
+    - http://mikeylinehan.com
+    - https://topyzscsu5poprxy.onion.link
+    - http://jcvitalis.com
+    - http://nwfpakistan.com
+    - http://psoeiras.net
   condition: attributes

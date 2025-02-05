@@ -1,23 +1,23 @@
 title: OSINT - Off-the-shelf RATs Targeting Pakistan - url_request
-id: 9293d3a0-0cb2-4adb-a55a-1c889ded61cb
+id: 7867a8ac-5cb0-4848-bcb3-01d0e994449c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b671098-3024-42db-b972-42ae02de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.s0198
 - attack.software.netwire
+- attack.software.s0198
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.serrurier-secours.be
-    - http://sandipuniversity.edu.in
-    - http://careers.fwo.com.pk
-    - http://www.serrurier-secours.be
     - https://www.alienvault.com
     - https://twitter.com
+    - http://www.serrurier-secours.be
+    - http://sandipuniversity.edu.in
+    - http://careers.fwo.com.pk
+    - https://www.serrurier-secours.be
   condition: attributes

@@ -1,16 +1,16 @@
 title: OSINT - New KeyPass Ransomware Campaign Underway - url_request
-id: 6256c461-23bb-4b5e-959f-cce58eef7cfc
+id: a741abb0-5e1e-40a7-9c3c-ba7bc280f2ac
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b718bda-8d9c-477f-bcd5-4634950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.keypass
 - attack.group.keypass
+- attack.software.keypass
 detection:
   attributes:
     RequestUrl|contains:

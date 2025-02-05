@@ -1,8 +1,8 @@
 title: OINT - Hunting the LockBit Gang's Exfiltration Infrastructures - process_creation
-id: 31a46064-075c-42f9-8964-d0426dd612fe
+id: 42211f3c-3085-4362-945b-5040883c6200
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/67a072d6-3d20-4024-a987-e8fdd226a075.json
 logsource:
@@ -12,49 +12,49 @@ tags:
 - attack.software.lockbit
 - attack.group.lockbit
 detection:
-  object_8620:
+  object_281:
     md5:
     - 15a6d62854e3e7221589b9b6e8e395af
     sha1:
     - 635e321bcab27f22e0303da26198ac90381608a4
     sha256:
     - bd14872dd9fdead89fc074fdc5832caea4ceac02983ec41f814278130b3f943e
-  object_8622:
+  object_283:
     md5:
     - 9b905a490a98cd8edf2e4b09ac8676ab
     sha1:
     - 63632224f977aaaa1c7d88be65cf16878b4bef56
     sha256:
     - 3407f26b3d69f1dfce76782fee1256274cf92f744c65aa1ff2d3eaaaf61b0b1d
-  object_8624:
+  object_285:
     md5:
     - 96076497841f73da57d4d69dd9cc2f8a
     sha1:
     - 87a14a0464e55581748d3396881aa36a57383132
     sha256:
     - 2f18e61e3d9189f6ff5cc95252396bebaefe0d76596cc51cf0ade6a5156c6f66
-  object_8626:
+  object_287:
     md5:
     - b776a331c15131ff66ae7df73968e023
     sha1:
     - 419a7631f06ed78a711f18323f5dee882daaa409
     sha256:
     - 07a3dcb8d9b062fb480692fa33d12da05c21f544492cbaf9207956ac647ba9ae
-  object_8628:
+  object_289:
     md5:
     - 4d7bc02fe04b87e4369f97b3918fff9b
     sha1:
     - dfc86741de088efc27b954f62db8a7e53842d179
     sha256:
     - ced3de74196b2fac18e010d2e575335e2af320110d3fdaff09a33165edb43ca2
-  object_8630:
+  object_291:
     md5:
     - 1e2e2f39ab6988a9f3852f1ec02ab05a
     sha1:
     - ed61f731ae7f3d238a28e90ff0b4c7d52cea508e
     sha256:
     - 107d9fce05ff8296d0417a5a830d180cd46aa120ced8360df3ebfd15cb550636
-  object_8632:
+  object_293:
     md5:
     - f05af511670dba679d845e3d477e789d
     sha1:
@@ -63,11 +63,11 @@ detection:
     - 4db7eeed852946803c16373a085c1bb5f79b60d2122d6fc9a2703714cdd9dac0
   attributes:
     sha256:
-    - 3407f26b3d69f1dfce76782fee1256274cf92f744c65aa1ff2d3eaaaf61b0b1d
-    - ced3de74196b2fac18e010d2e575335e2af320110d3fdaff09a33165edb43ca2
     - bd14872dd9fdead89fc074fdc5832caea4ceac02983ec41f814278130b3f943e
+    - 3407f26b3d69f1dfce76782fee1256274cf92f744c65aa1ff2d3eaaaf61b0b1d
     - 107d9fce05ff8296d0417a5a830d180cd46aa120ced8360df3ebfd15cb550636
+    - ced3de74196b2fac18e010d2e575335e2af320110d3fdaff09a33165edb43ca2
     - 07a3dcb8d9b062fb480692fa33d12da05c21f544492cbaf9207956ac647ba9ae
-    - 2f18e61e3d9189f6ff5cc95252396bebaefe0d76596cc51cf0ade6a5156c6f66
     - 4db7eeed852946803c16373a085c1bb5f79b60d2122d6fc9a2703714cdd9dac0
+    - 2f18e61e3d9189f6ff5cc95252396bebaefe0d76596cc51cf0ade6a5156c6f66
   condition: 1 of object_* or attributes

@@ -1,8 +1,8 @@
 title: 'M2M -  Locky / Trickbot: "Emailing: Scan0xxx" from "Sales" - process_creation'
-id: 521adcae-2ac1-4dad-9bfa-f3a8bf44ca79
+id: ccee8547-c591-4754-bb53-48eb094af142
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59cd3b91-95a4-4efd-9334-4c5b950d210f.json
 logsource:
@@ -10,8 +10,8 @@ logsource:
   category: process_creation
 tags:
 - attack.software.locky
-- attack.group.locky
 - attack.software.trick_bot
+- attack.group.locky
 detection:
   attributes:
     md5:
@@ -21,6 +21,6 @@ detection:
     - 3db124b9ed6064be9389f089b3168747311419a3
     - c5270e39548d9259b421ad5e94f3e8ebdd2f1cf5
     sha256:
-    - 01e771dc6cf9572eac3d87120d7a7d1ff95fdc1499b668c7fde2919e0f685256
     - 4a4491a5daa0b8c0d4e694601cbb860e0e069356b83e2f6ea215be758f533f1e
+    - 01e771dc6cf9572eac3d87120d7a7d1ff95fdc1499b668c7fde2919e0f685256
   condition: attributes

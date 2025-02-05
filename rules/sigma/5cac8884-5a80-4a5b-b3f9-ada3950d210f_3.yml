@@ -1,88 +1,88 @@
 title: OSINT - STUXSHOP The Oldest Stuxnet Component Dials Up - process_creation
-id: 0b89e657-43a1-44e4-9bda-412fdf5f1804
+id: 0c364e3d-7b2a-4708-9ddc-645a7a14cf7d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cac8884-5a80-4a5b-b3f9-ada3950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.stuxnet
 - attack.group.stuxnet
+- attack.software.stuxnet
 detection:
-  object_16374:
+  object_11432:
     md5:
     - 455abb43295b9a69e355e4e43457bf30
     sha1:
     - 1e0fe0400e04440942a4a1a5bcd3bcd3150a2eea
     sha256:
     - c1961e54d60e34bbec397c9120564e8d08f2f243ae349d2fb20f736510716579
-  object_16376:
+  object_11434:
     md5:
     - 455abb43295b9a69e355e4e43457bf30
     sha1:
     - 1e0fe0400e04440942a4a1a5bcd3bcd3150a2eea
     sha256:
     - c1961e54d60e34bbec397c9120564e8d08f2f243ae349d2fb20f736510716579
-  object_16379:
+  object_11437:
     md5:
     - 360752e2f6938ae91ac8fb212c62c0c4
     sha1:
     - 346de24b4081b0dbccd0f3458734b08258eed8a7
     sha256:
     - f34c85bb4fcd87225468d0e8ee4441ebc92f42b3f69500d85e28be3c553ce433
-  object_16380:
+  object_11438:
     md5:
     - fa1e5eec39910a34ede1c4351ccecec8
     sha1:
     - ca3c5872080ec86a041b2b887caec9f28ba7b884
     sha256:
     - c074aeef97ce81e8c68b7376b124546cabf40e2cd3aff1719d9daa6c3f780532
-  object_16382:
+  object_11440:
     md5:
     - 984c7734a61f5b0c22291a4e26b224be
     sha1:
     - 2a1cc9c615cc2a798cf491a81e52ca050d4e828b
     sha256:
     - 683ce2c7c80b180768fe4d2a39030dc7c4f67db79d1953ee4803522131f533a3
-  object_16384:
+  object_11442:
     md5:
     - 4e0a3498438adda8c50c3e101cfa86c5
     sha1:
     - 0655670f1cb40e84ba12adb9711f001269712054
     sha256:
     - ec41b029c3ff4147b6a5252cb8b659f851f4538d4af0a574f7e16bc1cd14a300
-  object_16386:
+  object_11444:
     md5:
     - 3ba57784d7fd4302fe74beb648b28dc1
     sha1:
     - 648a62d74ab1076e66a7a70f0899b8093eca2b01
     sha256:
     - 32159d2a16397823bc882ddd3cd77ecdbabe0fde934e62f297b8ff4d7b89832a
-  object_16388:
+  object_11446:
     md5:
     - 300d2a3f47803c2814a45382d84d3446
     sha1:
     - ec5dd52971f550a77c3544819c56674378976509
     sha256:
     - 1daa2b15b70e486927c8fc06eed434080ab408a1b320be9fefe193c20d1d9a7f
-  object_16390:
+  object_11448:
     md5:
     - 7b0e7297d5157586f4075098be9efc8c
     sha1:
     - 421156c4858878ef8beeadf54c4549095445b682
     sha256:
     - 63735d555f219765d486b3d253e39bd316bbcb1c0ec595ea45ddf6e419bef3cb
-  object_16392:
+  object_11450:
     md5:
     - 79c02836b6b6939ecea43691278424e8
     sha1:
     - 62e021e7ce7e6c382820b5a083221732ef5649b9
     sha256:
     - a01845255bdc61b610cac269a5562ad09415aaf2a1490d53d55c4c3597670803
-  object_16394:
+  object_11452:
     md5:
     - 6df1c77d4aabc3e3d91fcfdba8e7986d
     sha1:
@@ -92,14 +92,14 @@ detection:
   attributes:
     sha256:
     - f34c85bb4fcd87225468d0e8ee4441ebc92f42b3f69500d85e28be3c553ce433
-    - c074aeef97ce81e8c68b7376b124546cabf40e2cd3aff1719d9daa6c3f780532
-    - c1961e54d60e34bbec397c9120564e8d08f2f243ae349d2fb20f736510716579
-    - a01845255bdc61b610cac269a5562ad09415aaf2a1490d53d55c4c3597670803
     - 63735d555f219765d486b3d253e39bd316bbcb1c0ec595ea45ddf6e419bef3cb
+    - c1961e54d60e34bbec397c9120564e8d08f2f243ae349d2fb20f736510716579
     - 77211838bb6783121fe1aeff182c8cc1cba9c9f0c1e5a0027e0c0b9dfa18e2ac
+    - a01845255bdc61b610cac269a5562ad09415aaf2a1490d53d55c4c3597670803
+    - a248c9eeb8e53bbebce42f55e2bfa71bfc70ffcd9dff3271bfd338e1578f37a1
+    - c074aeef97ce81e8c68b7376b124546cabf40e2cd3aff1719d9daa6c3f780532
     - 1daa2b15b70e486927c8fc06eed434080ab408a1b320be9fefe193c20d1d9a7f
-    - 32159d2a16397823bc882ddd3cd77ecdbabe0fde934e62f297b8ff4d7b89832a
     - 683ce2c7c80b180768fe4d2a39030dc7c4f67db79d1953ee4803522131f533a3
     - ec41b029c3ff4147b6a5252cb8b659f851f4538d4af0a574f7e16bc1cd14a300
-    - a248c9eeb8e53bbebce42f55e2bfa71bfc70ffcd9dff3271bfd338e1578f37a1
+    - 32159d2a16397823bc882ddd3cd77ecdbabe0fde934e62f297b8ff4d7b89832a
   condition: 1 of object_* or attributes

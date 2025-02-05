@@ -1,9 +1,9 @@
 title: OSINT - KrustyLoader - Rust malware linked to Ivanti ConnectSecure compromises
   - url_request
-id: 589f25fe-0c38-4400-9d84-66be32e82738
+id: b23fe918-f63b-4c55-ba7f-ffb2396ca084
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/81866b54-7f4b-42f0-bcc1-84b7d8578e74.json
 logsource:
@@ -12,16 +12,16 @@ logsource:
 tags:
 - attack.t1190
 detection:
-  object_9856:
+  object_18143:
     RequestUrl|contains:
     - https://www.synacktiv.com
-  object_9863:
+  object_18150:
     RequestUrl|contains:
     - http://blaze-uk.s3.amazonaws.com
-  object_9866:
+  object_18153:
     RequestUrl|contains:
     - http://book4timepublic.s3.amazonaws.com
-  object_9867:
+  object_18154:
     RequestUrl|contains:
     - http://blooming.s3.amazonaws.com
   condition: 1 of object_*

@@ -1,9 +1,9 @@
 title: 'TALOS Blog: Picking Apart Remcos Botnet-In-A-Box - dns_query'
-id: 7d990824-1801-4997-bb65-6d89a3eb70e0
+id: ab7812fc-7e95-4bd5-a4da-64e46e146c50
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b7e9b01-107c-416d-a38d-18ee0acd0835.json
 logsource:
@@ -12,28 +12,28 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - streetz.club
     - timmason2.com
     - unifscon.com
-    - streetz.club
     - uploadtops.is
     IpAddresses:
-    - 86.127.159.17
-    - 185.209.20.221
-    - 181.52.113.172
-    - 109.232.227.138
-    - 185.209.85.185
     - 92.38.86.175
-    - 195.154.242.51
+    - 192.185.119.103
+    - 77.48.28.223
+    - 54.36.251.117
+    - 185.209.85.185
     - 192.0.2.2
+    - 185.125.205.74
+    - 79.172.242.28
+    - 195.154.242.51
+    - 185.209.20.221
+    - 139.60.162.153
     - 82.221.105.125
     - 213.152.161.165
     - 191.101.22.136
-    - 77.48.28.223
-    - 79.172.242.28
     - 212.47.250.222
-    - 192.185.119.103
-    - 185.125.205.74
+    - 181.52.113.172
     - 51.15.229.127
-    - 54.36.251.117
-    - 139.60.162.153
+    - 109.232.227.138
+    - 86.127.159.17
   condition: attributes

@@ -1,8 +1,8 @@
 title: OSINT Trojan.Win32.Banker.NWT by AlienVault and Telus - url_request
-id: 17965525-746d-4bbb-8a05-d25c143e6039
+id: 37f5d5f4-4055-4e07-89f0-3bd20b857b37
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56313b33-93f0-426f-99ea-26bc950d210b.json
 logsource:
@@ -11,12 +11,12 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - http://smartcell.webcindario.com
+    - http://marmitariakisabor.com
     - http://telussecuritylabs.com
     - marmitariakisabor.com
-    - http://marmitariakisabor.com
     - http://gfxcorp.engenharia.ws
-    - http://corpsone.agropecuaria.ws
     - https://otx.alienvault.com
     - http://mttconstrutora.engenharia.ws
-    - http://smartcell.webcindario.com
+    - http://corpsone.agropecuaria.ws
   condition: attributes

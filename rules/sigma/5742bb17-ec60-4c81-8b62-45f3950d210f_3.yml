@@ -1,30 +1,30 @@
 title: OSINT - APT Case RUAG Technical Report - process_creation
-id: 98ff86fb-6577-4c2c-9b73-45b24a3b608a
+id: 8077a92d-fa88-49d3-9356-7f9e6fd508af
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5742bb17-ec60-4c81-8b62-45f3950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
+- attack.software.wipbot
 - attack.group.turla_group
 - attack.software.turla
-- attack.software.wipbot
 detection:
   attributes:
     md5:
-    - 68b2695f59d5fb3a94120e996b8fafea
-    - 3881a38adb90821366e3d6480e6bc496
-    - 2cfcacd99ab2edcfaf8853a11f5e79d5
-    - 1a73e08be91bf6bb0edd43008f8338f3
-    - ba860e20c766400eb4fab7f16b6099f6
-    - b849c860dff468cc52ed045aea429afb
-    - 2372e90fc7b4d1ab57c40a2eed9dd050
-    - 9f040c8a4db21bfa329b91ec2c5ff299
-    - 22481e4055d438176e47f1b1164a6bad
-    - 6b34bf9100c1264faeeb4cb686f7dd41
     - a50d8b078869522f68968b61eeb4e61d
+    - 2cfcacd99ab2edcfaf8853a11f5e79d5
+    - 3881a38adb90821366e3d6480e6bc496
+    - ba860e20c766400eb4fab7f16b6099f6
+    - 2372e90fc7b4d1ab57c40a2eed9dd050
+    - 6b34bf9100c1264faeeb4cb686f7dd41
+    - 68b2695f59d5fb3a94120e996b8fafea
+    - b849c860dff468cc52ed045aea429afb
+    - 1a73e08be91bf6bb0edd43008f8338f3
     - 1d82c90bcb9863949897e3235b20fb8a
+    - 22481e4055d438176e47f1b1164a6bad
+    - 9f040c8a4db21bfa329b91ec2c5ff299
   condition: attributes

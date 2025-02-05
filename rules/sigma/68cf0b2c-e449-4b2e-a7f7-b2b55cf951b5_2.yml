@@ -1,33 +1,33 @@
 title: SNOWYAMBER - Malware Analysis Report - dns_query
-id: 72168c2e-7fae-4016-948c-a433b2a0991e
+id: da1ffada-20ca-4f9b-a9c5-aae50c99b24b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/68cf0b2c-e449-4b2e-a7f7-b2b55cf951b5.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1036.002
-- attack.t1140
-- attack.t1553.005
-- attack.t1566
 - attack.software.snowyamber
+- attack.t1140
+- attack.t1566.001
+- attack.t1204.001
+- attack.t1204.002
+- attack.t1574.002
+- attack.t1574.001
+- attack.t1583.003
+- attack.t1204
 - attack.t1027.006
 - attack.t1584
-- attack.t1566.002
-- attack.t1204.001
-- attack.t1204
-- attack.t1583.003
-- attack.t1566.001
-- attack.t1574.001
-- attack.t1574.002
-- attack.t1204.002
-- attack.t1547.001
-- attack.t1102
 - attack.t1102.003
+- attack.t1566
+- attack.t1547.001
 - attack.t1583.006
+- attack.t1036.002
+- attack.t1566.002
+- attack.t1553.005
+- attack.t1102
 detection:
   attributes:
     QueryName|contains:

@@ -1,8 +1,8 @@
 title: 'OSINT - Apache SOLR: the new target for cryptominers - url_request'
-id: 053adf53-9b35-46f5-b949-6d36fb317821
+id: 899a9ec2-a7de-4138-a413-a6e08a14f840
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5aa23875-d0dc-49d6-82a6-d309950d210f.json
 logsource:
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - pool-proxy.com
-    - https://isc.sans.edu
-    - http://mms.kenguru.ru
-    - https://www.securityfocus.com
     - https://cve.mitre.org
+    - pool-proxy.com
+    - https://www.securityfocus.com
+    - http://mms.kenguru.ru
+    - https://isc.sans.edu
   condition: attributes

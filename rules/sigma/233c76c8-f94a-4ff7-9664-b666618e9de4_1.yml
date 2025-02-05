@@ -1,9 +1,9 @@
 title: 'OSINT - Ivanti Connect Secure: Journey to the core of the DSLog backdoor -
   url_request'
-id: 0b658376-b47b-42de-b3a8-4f0f85209e72
+id: 9081995d-c93c-4b81-bb9d-b182ba814754
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/233c76c8-f94a-4ff7-9664-b666618e9de4.json
 logsource:
@@ -12,10 +12,10 @@ logsource:
 tags:
 - attack.t1190
 detection:
-  object_9547:
+  object_7918:
     RequestUrl|contains:
     - https://www.orangecyberdefense.com
-  object_9548:
+  object_7919:
     RequestUrl|contains:
     - https://www.orangecyberdefense.com
   condition: 1 of object_*

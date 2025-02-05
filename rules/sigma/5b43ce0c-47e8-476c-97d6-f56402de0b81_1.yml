@@ -1,29 +1,29 @@
 title: 'OSINT - APT Attack In the Middle East: The Big Bang - url_request'
-id: 2bb5f12d-f2e5-4640-9885-a23c78441683
+id: 48798180-f8e6-41ba-9d95-94087acd49c8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b43ce0c-47e8-476c-97d6-f56402de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1043
-- attack.t1113
-- attack.group.the_big_bang
 - attack.t1193
+- attack.t1113
+- attack.t1043
+- attack.group.the_big_bang
 - attack.t1213
 detection:
   attributes:
     RequestUrl|contains:
-    - sanjynono.website
-    - lindamullins.info
+    - spgbotup.club
     - ezofiezo.website
+    - sanjynono.website
+    - namyyeatop.club
+    - exvsnomy.club
+    - lindamullins.info
+    - hitmesanjjoy.pro
     - https://research.checkpoint.com
     - namybotter.info
-    - spgbotup.club
-    - namyyeatop.club
-    - hitmesanjjoy.pro
-    - exvsnomy.club
   condition: attributes

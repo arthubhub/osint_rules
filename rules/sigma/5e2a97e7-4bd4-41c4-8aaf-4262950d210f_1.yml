@@ -1,43 +1,43 @@
 title: OSINT - Iranian PupyRAT Bites Middle Eastern Organizations - url_request
-id: d8cedb78-7a79-4e51-ba0a-c0f2c3adb344
+id: 121928b6-fc7c-44fe-b9d9-196ac8b1ca32
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e2a97e7-4bd4-41c4-8aaf-4262950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.s0192
-- attack.group.cleaver
 - attack.group.g0059
-- attack.group.apt35
 - attack.group.oilrig
-- attack.software.pupyrat
 - attack.group.magic_hound
+- attack.group.cleaver
+- attack.group.apt35
+- attack.software.pupyrat
+- attack.software.s0192
 detection:
-  object_7416:
+  object_11707:
     RequestUrl|contains:
     - https://mobile.twitter.com
-  object_7417:
+  object_11708:
     RequestUrl|contains:
     - ntg.com.sa
     - ntg-sa.com
-  object_7418:
+  object_11709:
     RequestUrl|contains:
-    - itworx.com
     - itworx.com-ho.me
-  object_7419:
+    - itworx.com
+  object_11710:
     RequestUrl|contains:
-    - mci.com-ho.me
     - mci.gov.sa
-  object_7420:
+    - mci.com-ho.me
+  object_11711:
     RequestUrl|contains:
-    - moh.com-ho.me
     - moh.gov.sa
-  object_7421:
+    - moh.com-ho.me
+  object_11712:
     RequestUrl|contains:
-    - mol.com-ho.me
     - mol.gov.sa
+    - mol.com-ho.me
   condition: 1 of object_*

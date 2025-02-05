@@ -1,8 +1,8 @@
 title: OSINT A deeper look into ScanBox TLP:WHITE report from PWC UK - dns_query
-id: 698dc635-eb4d-4079-baa1-1515fe397c88
+id: 822905d0-7fe5-4b27-bb34-9cbb75bf65ad
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/54ec3439-7154-48e4-ae1e-4c1c950d210b.json
 logsource:
@@ -11,20 +11,20 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - qoog1e.com
+    - gokbayrak.com
     - macanna.com.tw
     - googlecaches.com
     - webmailgoogle.com
-    - gokbayrak.com
-    - qoog1e.com
     IpAddresses:
     - 118.193.153.221
-    - 103.255.61.227
+    - 115.23.172.151
+    - 174.121.122.73
     - 118.193.153.227
-    - 88.80.190.133
-    - 50.2.24.211
     - 122.10.10.161
     - 204.152.199.43
-    - 174.121.122.73
+    - 88.80.190.133
+    - 50.2.24.211
     - 1.9.5.38
-    - 115.23.172.151
+    - 103.255.61.227
   condition: attributes

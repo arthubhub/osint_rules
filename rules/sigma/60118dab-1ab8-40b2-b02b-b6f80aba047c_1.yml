@@ -1,29 +1,29 @@
 title: '[CERT-FR] Sandworm intrusion set campaign targeting Centreon systems - url_request'
-id: ccf4364e-d22a-4895-b6b6-c07946815e74
+id: 4817df39-9830-4688-8bc8-544b8a95ee46
 description: edit this field when analysing or editing the rule - reported by "CERT-FR_1510"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/60118dab-1ab8-40b2-b02b-b6f80aba047c.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.electrum
-- attack.group.sandworm
-- attack.t1041
-- attack.t1543
-- attack.group.iridium
 - attack.t1071.001
-- attack.t1505.003
-- attack.t1573
-- attack.t1190
-- attack.t1543.003
-- attack.t1573.002
+- attack.t1041
 - attack.t1140
-- attack.t1573.001
 - attack.t1083
+- attack.t1543.003
+- attack.t1505.003
+- attack.t1573.002
+- attack.group.electrum
+- attack.group.iridium
+- attack.t1573
+- attack.group.sandworm
+- attack.t1543
+- attack.t1573.001
 - attack.group.telebots
+- attack.t1190
 detection:
   attributes:
     RequestUrl|contains:

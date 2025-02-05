@@ -1,9 +1,9 @@
 title: Spam 2016-10-14 (mule acquisition) - probably related to Locky resources -
   dns_query
-id: c9957de0-679e-4754-9c52-3e505471e686
+id: 837be5b7-050a-48b6-85af-e902c1c39e55
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58007f1d-7a4c-4887-ba33-c28b950d210f.json
 logsource:
@@ -12,11 +12,11 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - benavent.cat
-    - belevtsev.net
     - bevoguenow.com
+    - belevtsev.net
+    - benavent.cat
     IpAddresses:
     - 195.208.1.164
-    - 98.129.229.148
     - 160.153.73.137
+    - 98.129.229.148
   condition: attributes

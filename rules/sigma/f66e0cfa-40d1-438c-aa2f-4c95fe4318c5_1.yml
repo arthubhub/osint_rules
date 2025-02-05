@@ -1,29 +1,29 @@
 title: AA21-110A Exploitation of Pulse Connect Secure Vulnerabilities - process_creation
-id: 93d4ed1b-12f8-409b-a57d-9d0283f785d2
+id: 980c46ca-6083-4fb2-a4cd-d1ddbc339603
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/f66e0cfa-40d1-438c-aa2f-4c95fe4318c5.json
 logsource:
   product: windows
   category: process_creation
 detection:
-  object_8456:
+  object_35:
     md5:
     - 8c291ad2d50f3845788bc11b2f603b4a
     sha1:
     - 12f6cce33a618b32f4d5a74a93b54176d436ded9
     sha256:
     - c445cab266549820d54168cb8e5078811d574682edce7edb973b3d833128f4e3
-  object_8457:
+  object_36:
     md5:
     - ca0175d86049fa7c796ea06b413857a3
     sha1:
     - 9c4c9d951aa235ed640ce711fbf1810eeb160191
     sha256:
     - f2b1bd703c3eb05541ff84ec375573cbdc70309ccb82aac04b72db205d718e90
-  object_8458:
+  object_37:
     md5:
     - 56e2a1566c7989612320f4ef1669e7d5
     sha1:
@@ -32,19 +32,19 @@ detection:
     - e9df4e13131c95c75ca41a95e08599b3d480e5e7a7922ff0a3fa00bef3bd6561
   attributes:
     md5:
-    - 8f6747b71d1003df1b7e3e8232b1a7e3
-    - c12f54a3f91dc7bafd92cb59fe009a35
-    - af26ba5e85475b634275141e6ed3dc54
     - 714cdf6e462870e2b85d251a3b22064b
-    - f2beca612db26d771fe6ed7a87f48a5a
-    - 4d5b410e1756072a701dfd3722951907
-    - a29d0d294a6236b5bf0ec2573dd4f02f
-    - 916e458922ae9a1bab6b1154689c7de7
-    - 53829d58e2631a372bb4de1be2cbecca
-    - 227ab2ae6ed6abcc249e8a873a033144
     - 30017f6f809155387cbcf95be6e7225d
-    - 9b526db005ee8075912ca6572d69a5d6
-    - b592adaa596bb72a5c1ccdbecae52e3f
-    - 3cbc88eabdac9af71445f9040a6cf46c
+    - 227ab2ae6ed6abcc249e8a873a033144
+    - af26ba5e85475b634275141e6ed3dc54
+    - a29d0d294a6236b5bf0ec2573dd4f02f
+    - 8f6747b71d1003df1b7e3e8232b1a7e3
     - 86cb13d6bbb3ac96b78b408bcfc18794
+    - 53829d58e2631a372bb4de1be2cbecca
+    - 4d5b410e1756072a701dfd3722951907
+    - c12f54a3f91dc7bafd92cb59fe009a35
+    - 3cbc88eabdac9af71445f9040a6cf46c
+    - 916e458922ae9a1bab6b1154689c7de7
+    - b592adaa596bb72a5c1ccdbecae52e3f
+    - f2beca612db26d771fe6ed7a87f48a5a
+    - 9b526db005ee8075912ca6572d69a5d6
   condition: 1 of object_* or attributes

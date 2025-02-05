@@ -1,247 +1,247 @@
 title: OSINT- WinRAR Zero-day (CVE-2018-20250) Abused in Multiple Campaigns - process_creation
-id: f39bbc71-482f-4065-8fd9-e3b2bab0c560
+id: b8045746-d8a1-4521-9deb-7c2284499e3a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c9b46dc-f354-4e45-b44a-4966950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.razy
 - attack.software.azorult
-- attack.software.quasar_rat
 - attack.group.azorult
 - attack.software.netwire
-- attack.group.quasar_rat
-- attack.software.s0262
 - attack.software.razy
+- attack.group.razy
+- attack.software.s0262
 - attack.software.s0198
+- attack.software.quasar_rat
+- attack.group.quasar_rat
 detection:
-  object_7339:
+  object_9874:
     md5:
     - 8e067e4cda99299b0bf2481cc1fd8e12
-  object_7340:
+  object_9875:
     md5:
     - 3aabc9767d02c75ef44df6305bc6a41f
-  object_7341:
+  object_9876:
     md5:
     - dc63d5affde0db95128dac52f9d19578
-  object_7342:
+  object_9877:
     md5:
     - 12def981952667740eb06ee91168e643
-  object_7343:
+  object_9878:
     md5:
     - 062801f6fdbda4dd67b77834c62e82a4
-  object_7344:
+  object_9879:
     md5:
     - 49419d84076b13e96540fdd911f1c2f0
-  object_7345:
+  object_9880:
     md5:
     - 96986b18a8470f4020ea78df0b3db7d4
-  object_7346:
+  object_9881:
     md5:
     - 31718d7b9b3261688688bdc4e026db99
-  object_7347:
+  object_9882:
     md5:
     - 8c93e024fc194f520e4e72e761c0942d
-  object_7348:
+  object_9883:
     md5:
     - 9b19753369b6ed1187159b95fc8a81cd
-  object_7349:
+  object_9884:
     md5:
     - 79b53b4555c1fb39ba3c7b8ce9a4287e
-  object_7350:
+  object_9885:
     md5:
     - e9815dfb90776ab449539a2be7c16de5
-  object_7351:
+  object_9886:
     md5:
     - 9b81b3174c9b699f594d725cf89ffaa4
-  object_7352:
+  object_9887:
     md5:
     - 914ac7ecf2557d5836f26a151c1b9b62
-  object_7353:
+  object_9888:
     md5:
     - eca09fe8dcbc9d1c097277f2b3ef1081
-  object_7354:
+  object_9889:
     md5:
     - 1f5fa51ac9517d70f136e187d45f69de
-  object_7355:
+  object_9890:
     md5:
     - f36404fb24a640b40e2d43c72c18e66b
-  object_7356:
+  object_9891:
     md5:
     - 0f56b04a4e9a0df94c7f89c1bccf830c
-  object_7357:
+  object_9892:
     md5:
     - 1ba398b0a14328b9604eeb5ebf139b40
-  object_7358:
+  object_9893:
     md5:
     - aac00312a961e81c4af4664c49b4a2b2
-  object_7359:
+  object_9894:
     md5:
     - 2961c52f04b7fdf7ccf6c01ac259d767
-  object_7360:
+  object_9895:
     md5:
     - 97d74671d0489071baa21f38f456eb74
-  object_7361:
+  object_9896:
     md5:
     - bcc49643833a4d8545ed4145fb6fdfd2
-  object_7362:
+  object_9897:
     md5:
     - 119a0fd733bc1a013b0d4399112b8626
-  object_7363:
+  object_9898:
     md5:
     - 7dae2d144dae4447a152bef586520ef8
-  object_7364:
+  object_9899:
     md5:
     - 119a0fd733bc1a013b0d4399112b8626
     sha1:
     - 092e7d2aa0c518a499e8cc5aaf3e827ad3b66512
     sha256:
     - 87ee131d51929d19afba3bb8d2b2019a7be8782b1db0728f648902e8c8e6b2d0
-  object_7366:
+  object_9901:
     md5:
     - 1f5fa51ac9517d70f136e187d45f69de
     sha1:
     - fddc26459a6c6055a320f282a5ac51d1b74f2fd3
     sha256:
     - 6f81d88ea10e423034e2c25001640e7b54dc3984c1a8aef1b60c721f331d805f
-  object_7368:
+  object_9903:
     md5:
     - 12def981952667740eb06ee91168e643
     sha1:
     - 1df08806e39ed6f9f3a5cb228f3be744936e201e
     sha256:
     - c7c3d70337336fc183135038ce5d0a4bb83ab6d9f4cc1ad5cf600295e6a41e1b
-  object_7370:
+  object_9905:
     md5:
     - eca09fe8dcbc9d1c097277f2b3ef1081
     sha1:
     - a4185a50ccac29056e2e56ad85b8d74adc8ec7ac
     sha256:
     - 83ca0fc98f247b674e7fd535a8483538ed73710d5ce24f5bf1ee483610e418ce
-  object_7372:
+  object_9907:
     md5:
     - 97d74671d0489071baa21f38f456eb74
     sha1:
     - 3bb63aa0b92cc1bde8d027112e5b037cc65ca9cb
     sha256:
     - 73b43e4aa99f795c29285cab5f7e2e54ce64c22e57b1301cea0125b7797e96c9
-  object_7374:
+  object_9909:
     md5:
     - 8e067e4cda99299b0bf2481cc1fd8e12
     sha1:
     - 3a92a121201c209d3e091b795274c22a4ea71963
     sha256:
     - e1fe401b73fc449470290c34a26cbd6e6190fd7879fd414bea460fedd2168649
-  object_7376:
+  object_9911:
     md5:
     - e9815dfb90776ab449539a2be7c16de5
     sha1:
     - 178b02f21efd10a7c98f654fc68c88468738042e
     sha256:
     - c53bfd9dd25919643baccfcfe1e5f9101830e25b378eeb91f0f3f3573d013a6c
-  object_7378:
+  object_9913:
     md5:
     - dc63d5affde0db95128dac52f9d19578
     sha1:
     - 539efdad458cf6563d1735632df1fb2c39acfedd
     sha256:
     - 17b872ba9b1a438e2acf8bdfad21e9c18febcdbd0e14c05bc7482277c98866c6
-  object_7380:
+  object_9915:
     md5:
     - 8c93e024fc194f520e4e72e761c0942d
     sha1:
     - b7dd83d96a480e2f8c653f5339764dd3fe38ce81
     sha256:
     - 5b5d7d74db59c520b72be1e328563a1ee864e8931a0ae7487d753ee3e166de1c
-  object_7382:
+  object_9917:
     md5:
     - 3aabc9767d02c75ef44df6305bc6a41f
     sha1:
     - 1210766d7137be26f84d1882357559841b698cef
     sha256:
     - e0f49bf08b44fb77bc4d305abb698ce8767904a7da7fabb8e3d127eca270b967
-  object_7384:
+  object_9919:
     md5:
     - 79b53b4555c1fb39ba3c7b8ce9a4287e
     sha1:
     - 90764c28ce62b6ea005dd7e616f7ada4fcd170ad
     sha256:
     - 08df98a999d6f03b46ffe9e030e1cd57469230647222451e438d5918fcda3ddf
-  object_7386:
+  object_9921:
     md5:
     - f36404fb24a640b40e2d43c72c18e66b
     sha1:
     - ed6b9c876a8a4fe01623972e8733ec2a90177ad1
     sha256:
     - 6b8e114a7636d87b3de01c4303dfccd54a65f32bae7c964ba496257ec468cfc2
-  object_7388:
+  object_9923:
     md5:
     - 96986b18a8470f4020ea78df0b3db7d4
     sha1:
     - 431c792fcc8ba9b58f0ffde5c8fe6fd93066ec45
     sha256:
     - 2eb447785e5b35c42d842706d593a907d0bdbc50ad9d0327c3591ac4ef17ce6e
-  object_7390:
+  object_9925:
     md5:
     - 2961c52f04b7fdf7ccf6c01ac259d767
     sha1:
     - 2c1ff2f2d463fd66bb630e02a4596e42f73f3ea9
     sha256:
     - bd89c287b180e04d315b19dc56509e06aca44a7f234c308510376a39f45fb283
-  object_7392:
+  object_9927:
     md5:
     - 0f56b04a4e9a0df94c7f89c1bccf830c
     sha1:
     - 73895da7b3f1780eeca9750172e1a9545fa63782
     sha256:
     - d5d2dfda3e61f26a5c6f173245131dd7c44515ea56a74fc075f614f62593586c
-  object_7394:
+  object_9929:
     md5:
     - 914ac7ecf2557d5836f26a151c1b9b62
     sha1:
     - 49b7c035cead28573b793b3947621a330b216b2b
     sha256:
     - 245d0d8b02875720d39c24fe0278fc24bb87ffd97a7c62a1d1723dbfe5b72cdc
-  object_7396:
+  object_9931:
     md5:
     - aac00312a961e81c4af4664c49b4a2b2
     sha1:
     - ab4fb9d8f917d2c45f3792c05c29799bf27cdd9f
     sha256:
     - a205c5cdc00e83ddb12470793b3eb2310425a06072d67f6f9617650fb55d6b14
-  object_7398:
+  object_9933:
     md5:
     - bcc49643833a4d8545ed4145fb6fdfd2
     sha1:
     - a88113c715c8ee254057bc7926d3535ab841e122
     sha256:
     - 98db913f5793f8c2df6bff01dc9fe7d37279116093e17c2d669ad359466766ad
-  object_7400:
+  object_9935:
     md5:
     - 9b19753369b6ed1187159b95fc8a81cd
     sha1:
     - cafb67eeb2de076e7e6b0143dac87bb11f7134ac
     sha256:
     - 6f91222109c8556876612c82bfcb50d8a4ee66501e63dc392343e021dd7e563c
-  object_7402:
+  object_9937:
     md5:
     - 062801f6fdbda4dd67b77834c62e82a4
     sha1:
     - c02e298f63acb20246683c302f0a71bfd7081f88
     sha256:
     - eacc0ee88a0b0db7d89fdf5b76406fe1c4ea409f23a95e7230789b475cf4b0f0
-  object_7404:
+  object_9939:
     md5:
     - 9b81b3174c9b699f594d725cf89ffaa4
     sha1:
     - c9967af445a3416d0ff3701555e83529ff482ff9
     sha256:
     - 4d524c271ae0e40e7526ecda9a28bc99e83f5b26d98737f0f8f6b585f05b6d22
-  object_7406:
+  object_9941:
     md5:
     - 49419d84076b13e96540fdd911f1c2f0
     sha1:

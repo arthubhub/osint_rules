@@ -1,17 +1,17 @@
 title: OSINT - APT28 Targets Hospitality Sector, Presents Threat to Travelers - process_creation
-id: 3037316f-89f6-4629-9605-42eb37de478c
+id: c2e17d31-d808-4299-9c40-b2c231963087
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/598db7fd-47a8-45f8-9414-408b02de0b81.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.sofacy
-- attack.group.strontium
 - attack.software.eternalblue
+- attack.group.strontium
+- attack.group.sofacy
 detection:
   attributes:
     md5:
@@ -21,6 +21,6 @@ detection:
     - f9fd3f1d8da4ffd6a494228b934549d09e3c59d1
     - f293a2bfb728060c54efeeb03c5323893b5c80df
     sha256:
-    - 8c47961181d9929333628af20bdd750021e925f40065374e6b876e3b8afbba57
     - a4a455db9f297e2b9fe99d63c9d31e827efb2cda65be445625fa64f4fce7f797
+    - 8c47961181d9929333628af20bdd750021e925f40065374e6b876e3b8afbba57
   condition: attributes

@@ -1,22 +1,22 @@
 title: 'OSINT - BitPaymer Source Code Fork: Meet DoppelPaymer Ransomware and Dridex
   2.0 - url_request'
-id: d09a0965-832f-4fe7-8c07-0ea6ff582214
+id: 46c46b97-4535-4c46-91eb-0a9fb756e6fc
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5dc3249f-6ebc-44fd-b78d-448d02de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.bitpaymer
-- attack.group.friedex
 - attack.software.bitpaymer
 - attack.software.friedex
-- attack.group.indrik_spider
+- attack.group.friedex
 - attack.group.dridex
 - attack.software.dridex
+- attack.group.indrik_spider
+- attack.group.bitpaymer
 detection:
   attributes:
     RequestUrl|contains:

@@ -1,31 +1,31 @@
 title: Malicious PyPI packages - url_request
-id: 9a1db49c-6b16-4ce7-8d02-8a9aa72c5ba6
+id: a444ea63-7710-43c2-aa23-dd1cac86e370
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5de7883b-22bc-4264-995c-4d1f950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1011
 - attack.t1195
 - attack.t1005
+- attack.t1011
 detection:
-  object_9936:
+  object_12136:
     RequestUrl|contains:
     - https://gitlab.com
-  object_9937:
+  object_12137:
     RequestUrl|contains:
     - http://bitly.com
-  object_9938:
+  object_12138:
     RequestUrl|contains:
     - https://pypi.org
-  object_9939:
+  object_12139:
     RequestUrl|contains:
     - https://pypi.org
-  object_9942:
+  object_12142:
     RequestUrl|contains:
     - http://68.183.212.246
   condition: 1 of object_*

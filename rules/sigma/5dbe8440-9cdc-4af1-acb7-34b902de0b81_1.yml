@@ -1,21 +1,21 @@
 title: OSINT - Chrome 0-day exploit CVE-2019-13720 used in Operation WizardOpium -
   url_request
-id: 77cf5c51-96d9-4f06-bdd7-e54e7ff1e4f2
+id: 10e3df9a-dd1f-489b-b489-7379bd49a452
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5dbe8440-9cdc-4af1-acb7-34b902de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.operation_wizardopium
 - attack.t1203
+- attack.group.operation_wizardopium
 detection:
   attributes:
     RequestUrl|contains:
-    - https://securelist.com
-    - behindcorona.com
     - https://chromereleases.googleblog.com
+    - behindcorona.com
+    - https://securelist.com
   condition: attributes

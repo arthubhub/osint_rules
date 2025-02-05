@@ -1,9 +1,9 @@
 title: 'AA23-250A: Multiple Nation-State Threat Actors Exploit CVE-2022-47966 and
   CVE-2022-42475 - dns_query'
-id: f480ed38-dd15-440f-9b69-b7b0b9b9f8e3
+id: 06acb68e-3ced-48fa-b8df-4fd24721f567
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/08af4546-b6e5-4cdc-ab0f-d5290dec8307.json
 logsource:
@@ -12,31 +12,31 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - main.cloudfronts.net
-    - cloudfronts.net
     - xpack.disqus.com
+    - cloudfronts.net
+    - main.cloudfronts.net
     IpAddresses:
+    - 154.6.91.26
+    - 154.6.93.24
+    - 184.170.241.27
+    - 193.142.146.226
+    - 92.118.39.82
+    - 108.62.118.160
+    - 154.6.93.12
+    - 45.90.123.194
+    - 144.202.2.71
+    - 104.238.234.145
+    - 191.96.106.40
+    - 154.6.93.32
+    - 68.177.56.38
+    - 179.60.147.4
+    - 154.6.93.5
     - 47.90.240.218
     - 45.77.121.232
-    - 92.118.39.82
-    - 154.6.93.12
-    - 108.62.118.160
-    - 179.60.147.4
-    - 192.142.226.153
-    - 102.129.145.232
-    - 68.177.56.38
-    - 184.170.241.27
-    - 154.6.93.32
-    - 191.96.106.40
-    - 154.6.91.26
-    - 154.6.93.5
-    - 144.202.2.71
-    - 80.85.241.15
-    - 45.90.123.194
-    - 104.238.234.145
-    - 154.6.93.22
-    - 193.142.146.226
-    - 103.105.49.108
-    - 154.6.93.24
     - 207.246.105.240
+    - 154.6.93.22
+    - 102.129.145.232
+    - 192.142.226.153
+    - 103.105.49.108
+    - 80.85.241.15
   condition: attributes

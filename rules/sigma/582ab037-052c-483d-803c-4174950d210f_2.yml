@@ -1,9 +1,9 @@
 title: OSINT - Ransoc Desktop Locking Ransomware Ransacks Local Files and Social Media
   Profiles - dns_query
-id: 80c88d38-696c-4152-b642-783d0176aeb6
+id: 4c25717d-7729-4072-90ee-945288dcff05
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/582ab037-052c-483d-803c-4174950d210f.json
 logsource:
@@ -12,14 +12,14 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - italy-girls.mobi
-    - cis-criminal-report.com
-    - latexfetishsex.com
-    - criminal-report.in
     - violation-report.in
+    - cis-criminal-report.com
+    - italy-girls.mobi
+    - criminal-report.in
+    - latexfetishsex.com
     IpAddresses:
+    - 5.45.86.148
+    - 5.45.86.171
     - 78.47.134.204
     - 5.9.86.131
-    - 5.45.86.171
-    - 5.45.86.148
   condition: attributes

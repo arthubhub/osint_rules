@@ -1,22 +1,22 @@
 title: Bad Rabbit (via Pastebin) - dns_query
-id: c0880d36-0e20-43b3-b560-9114fb112ba6
+id: 3c354296-7c68-4a3b-a768-ec0856e94b66
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59f02f94-544c-4db8-b156-46ce950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.bad_rabbit
 - attack.group.bad_rabbit
+- attack.software.bad_rabbit
 detection:
   attributes:
     QueryName|contains:
+    - caforssztxqzf2nm.onion
     - fastmonitor1.net
     - 1dnscontrol.com
-    - caforssztxqzf2nm.onion
     IpAddresses:
     - 5.61.37.209
   condition: attributes

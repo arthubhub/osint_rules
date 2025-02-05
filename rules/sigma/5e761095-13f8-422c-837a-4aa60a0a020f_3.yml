@@ -1,27 +1,27 @@
 title: Lokibot Equation Editor Sample - process_creation
-id: 3f469098-2877-4ddd-9d88-95d30a3d2f8e
+id: 73ccf27b-3b0b-4986-82cf-d66f0deeed2a
 description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e761095-13f8-422c-837a-4aa60a0a020f.json
 logsource:
   product: windows
   category: process_creation
 tags:
+- attack.group.loki_password_stealer_pws
 - attack.software.loki_password_stealer_pws
 - attack.software.lokibot
-- attack.group.loki_password_stealer_pws
 - attack.group.lokibot
 detection:
-  object_6948:
+  object_7240:
     md5:
     - 71f2c5eb6d2e98447d1716cacba2b561
     sha1:
     - 87fa9e824272c8ef8c465b589362b8a13941f403
     sha256:
     - 207e6fe2a7fae906d9cb12d5c1ce67b4c9f9a6c5e8787fb7dda9496834122b18
-  object_6949:
+  object_7241:
     md5:
     - 588f7435c0f60c626ef1aa6686d498c3
     sha1:

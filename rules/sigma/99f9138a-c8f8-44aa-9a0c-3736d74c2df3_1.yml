@@ -1,9 +1,9 @@
 title: Volt Typhoon targets US critical infrastructure with living-off-the-land techniques
   - url_request
-id: 89ce6cdd-cdf7-4bf5-8b6b-c55422a6b4aa
+id: 1eb19386-2585-4794-9d26-66278336029d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/99f9138a-c8f8-44aa-9a0c-3736d74c2df3.json
 logsource:
@@ -12,7 +12,7 @@ logsource:
 tags:
 - attack.group.volt_typhoon
 detection:
-  object_9612:
+  object_108:
     RequestUrl|contains:
     - https://www.microsoft.com
   condition: 1 of object_*

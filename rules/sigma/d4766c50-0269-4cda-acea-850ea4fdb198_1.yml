@@ -1,34 +1,34 @@
 title: Kinsing & Dark.IoT botnet among threats targeting CVE-2022-26134 - url_request
-id: a7927be2-eafc-45cc-8af8-db24ff743207
+id: 92e5abef-4a04-40d6-9d52-a54feb67d7c0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/d4766c50-0269-4cda-acea-850ea4fdb198.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.dark
-- attack.software.s0599
-- attack.software.kinsing
 - attack.group.kinsing
-- attack.group.hezb
+- attack.software.s0599
 - attack.group.dark
+- attack.group.hezb
+- attack.software.kinsing
+- attack.software.dark
 detection:
-  object_16532:
+  object_7580:
     RequestUrl|contains:
     - https://www.lacework.com
-  object_16533:
+  object_7581:
     RequestUrl|contains:
     - tempest.lib
-  object_16534:
+  object_7582:
     RequestUrl|contains:
     - dragon.lib
-  object_16535:
+  object_7583:
     RequestUrl|contains:
     - blacknurse.lib
-  object_16536:
+  object_7584:
     RequestUrl|contains:
     - babaroga.lib
   condition: 1 of object_*

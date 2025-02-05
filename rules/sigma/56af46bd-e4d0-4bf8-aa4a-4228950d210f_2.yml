@@ -1,9 +1,9 @@
 title: OSINT Threat Actors Use Sketchy Dating Website to Launch New Home Router Attacks
   by Damballa - dns_query
-id: ca2adeda-616d-4d15-a38a-2a074ca4cc65
+id: 7e1cded4-5fba-4ecf-ad0e-93b27cce1206
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56af46bd-e4d0-4bf8-aa4a-4228950d210f.json
 logsource:
@@ -13,11 +13,11 @@ detection:
   attributes:
     QueryName|contains:
     - superadultnat.com
-    - allinceofsexuality.com
     - violationcyberatack.com
     - sexyworldtouralliance.com
     - anniversaryaliancesex.com
+    - allinceofsexuality.com
     IpAddresses:
-    - 176.103.48.34
     - 176.103.49.34
+    - 176.103.48.34
   condition: attributes

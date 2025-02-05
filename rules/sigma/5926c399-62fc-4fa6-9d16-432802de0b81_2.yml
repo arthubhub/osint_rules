@@ -1,9 +1,9 @@
 title: 'OSINT - Tainted Leaks: Disinformation and Phishing With a Russian Nexus -
   dns_query'
-id: 1d4bc0a7-7157-4ad1-88ef-37b8d5a2f520
+id: d387cc53-bc8c-42e6-80b6-57cb47ad8554
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5926c399-62fc-4fa6-9d16-432802de0b81.json
 logsource:
@@ -12,13 +12,13 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - id9954.gq
-    - id4242.ga
-    - id833.ga
     - com-securitysettingpage.tk
+    - id4242.ga
     - id834.ga
+    - id833.ga
+    - id9954.gq
     IpAddresses:
-    - 80.255.12.237
     - 89.32.40.238
+    - 80.255.12.237
     - 89.40.181.119
   condition: attributes

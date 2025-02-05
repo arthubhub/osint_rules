@@ -1,29 +1,29 @@
 title: "OSINT - Shell Crew Variants Continue to Fly Under Big AV\xE2\u20AC\u2122s\
   \ Radar - url_request"
-id: 802f7182-476c-418e-a393-8fbbe18433c3
+id: c0a88299-7082-4870-b7a8-a5337d6c7b3d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/589d81ee-0348-49fe-9b88-4c48950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.shell_crew
 - attack.software.streamex
+- attack.group.shell_crew
 detection:
   attributes:
     RequestUrl|contains:
-    - mail-issue.top
-    - microsoftupdating.org
     - mail-help.com
-    - microsoftwww.com
-    - allmnz.com
     - wwgooglewww.com
+    - microsoftwww.com
+    - time-service.org
     - wwwgooglewww.com
     - google-helps.com
-    - incsteelkor.com
-    - time-service.org
+    - microsoftupdating.org
+    - allmnz.com
     - https://blog.cylance.com
+    - mail-issue.top
+    - incsteelkor.com
   condition: attributes

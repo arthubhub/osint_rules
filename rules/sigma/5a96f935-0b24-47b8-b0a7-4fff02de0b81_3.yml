@@ -1,39 +1,39 @@
 title: OSINT - Sofacy Attacks Multiple Government Entities - process_creation
-id: 3db735ae-6f55-4608-a260-a96379e7ae46
+id: 417bf300-b098-4102-9592-e258f2ef7abb
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a96f935-0b24-47b8-b0a7-4fff02de0b81.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.sofacy
 - attack.group.apt28
+- attack.group.sofacy
 detection:
-  object_8819:
+  object_17913:
     md5:
     - aa2cd9d9fc5d196caa6f8fd5979e3f14
     sha1:
     - 5bb9f53636efafdd30023d44be1be55bf7c7b7d5
     sha256:
     - 12e6642cf6413bdf5388bee663080fa299591b2ba023d069286f3be9647547c8
-  object_8821:
+  object_17915:
     md5:
     - 56f98e3ed00e48ff9cb89dea5f6e11c1
     sha1:
     - b06930c9809ab5e4cb6659089ac6fcec470c9c16
     sha256:
     - cb85072e6ca66a29cb0b73659a0fe5ba2456d9ba0b52e3a4c89e86549bc6e2c7
-  object_8823:
+  object_17917:
     md5:
     - 7c43b406119ade8f1f2a2a5a93c94248
     sha1:
     - d7ddb9a511a50edd6b1093a9477a6c7830fc84c3
     sha256:
     - 23411bb30042c9357ac4928dc6fca6955390361e660fec7ac238bbdcc8b83701
-  object_8825:
+  object_17919:
     md5:
     - 36524c90ca1fac2102e7653dfadb31b2
     sha1:
@@ -42,8 +42,8 @@ detection:
     - ff808d0a12676bfac88fd26f955154f8884f2bb7c534b9936510fd6296c543e8
   attributes:
     sha256:
-    - cb85072e6ca66a29cb0b73659a0fe5ba2456d9ba0b52e3a4c89e86549bc6e2c7
-    - 23411bb30042c9357ac4928dc6fca6955390361e660fec7ac238bbdcc8b83701
     - ff808d0a12676bfac88fd26f955154f8884f2bb7c534b9936510fd6296c543e8
+    - 23411bb30042c9357ac4928dc6fca6955390361e660fec7ac238bbdcc8b83701
     - 12e6642cf6413bdf5388bee663080fa299591b2ba023d069286f3be9647547c8
+    - cb85072e6ca66a29cb0b73659a0fe5ba2456d9ba0b52e3a4c89e86549bc6e2c7
   condition: 1 of object_* or attributes

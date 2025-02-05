@@ -1,37 +1,37 @@
 title: Emotet in Depth TTP 10-07-19 - dns_query
-id: 7031fc80-1300-4483-9104-87bb3d7ec612
+id: d1331bec-3c93-4e67-971d-4f871de4ec94
 description: edit this field when analysing or editing the rule - reported by "MiSOC"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d9b5933-964c-433c-b84f-4c680a2fe004.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1055
-- attack.t1064
-- attack.t1043
-- attack.t1033
-- attack.t1047
-- attack.t1032
-- attack.software.s0363
-- attack.t1071
+- attack.t1087
+- attack.software.emotet
 - attack.t1060
+- attack.t1482
+- attack.software.s0363
+- attack.t1059
+- attack.t1064
+- attack.t1086
 - attack.software.s0154
 - attack.t1053
 - attack.t1050
-- attack.t1086
-- attack.software.emotet
+- attack.t1043
+- attack.t1055
+- attack.t1071
+- attack.t1032
 - attack.t1193
-- attack.t1087
-- attack.t1482
-- attack.t1059
+- attack.t1033
+- attack.t1047
 detection:
-  object_16181:
+  object_11125:
     IpAddresses:
     - 144.202.75.93
-  object_16182:
+  object_11126:
     IpAddresses:
     - 91.200.102.245
   condition: 1 of object_*

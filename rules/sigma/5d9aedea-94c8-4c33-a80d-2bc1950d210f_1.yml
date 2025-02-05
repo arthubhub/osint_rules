@@ -1,8 +1,8 @@
 title: 'OSINT - #EmissaryPanda #APT older sample (2018) - url_request'
-id: e5495c67-df51-439d-af1e-298b67674d76
+id: d018cf35-6071-45c9-bd1d-18e39266d796
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d9aedea-94c8-4c33-a80d-2bc1950d210f.json
 logsource:
@@ -10,11 +10,11 @@ logsource:
   category: url_request
 tags:
 - attack.group.emissary_panda
-- attack.group.threat_group-3390
-- attack.group.luckymouse
 - attack.group.g0027
+- attack.group.luckymouse
+- attack.group.threat_group-3390
 detection:
-  object_9141:
+  object_296:
     RequestUrl|contains:
     - https://mobile.twitter.com
   condition: 1 of object_*

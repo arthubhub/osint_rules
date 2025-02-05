@@ -1,9 +1,9 @@
 title: Spam 2016-10-16 (mule acquisition) - probably related to Locky resources -
   dns_query
-id: 6b669547-2fa9-4edc-935c-767620533d32
+id: de476672-d52d-4fc8-bf5e-789630a41bb2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58030b52-b52c-41e7-93f6-43ae950d210f.json
 logsource:
@@ -13,12 +13,12 @@ detection:
   attributes:
     QueryName|contains:
     - billfoundation.org
+    - bidprogroup.com
     - bikebreeze.com
     - bigway.com
-    - bidprogroup.com
     IpAddresses:
-    - 50.62.172.113
-    - 166.62.10.183
     - 69.168.8.211
+    - 166.62.10.183
     - 52.202.112.204
+    - 50.62.172.113
   condition: attributes

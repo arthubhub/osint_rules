@@ -1,48 +1,48 @@
 title: OSINT -  BattleRoyal, DarkGate Cluster Spreads via Email and Fake Browser Updates
   - url_request
-id: 69cd1cb8-20e4-491f-84ea-ef7894eb8377
+id: fda61b7b-0151-489d-b2f5-57b9d19c6791
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/f0ef984c-2467-40aa-83c6-7c671a6379cb.json
 logsource:
   product: windows
   category: url_request
 detection:
-  object_7077:
+  object_4823:
     RequestUrl|contains:
     - https://www.proofpoint.com
-  object_7084:
+  object_4830:
     RequestUrl|contains:
     - http://5.181.159.29
-  object_7085:
+  object_4831:
     RequestUrl|contains:
     - http://5.181.159.29
-  object_7086:
+  object_4832:
     RequestUrl|contains:
     - http://79.110.62.96
-  object_7087:
+  object_4833:
     RequestUrl|contains:
-    - searcherbigdealk.com
     - http://searcherbigdealk.com
-  object_7088:
+    - searcherbigdealk.com
+  object_4834:
     RequestUrl|contains:
-    - searcherbigdealk.com
     - http://searcherbigdealk.com
-  object_7089:
+    - searcherbigdealk.com
+  object_4835:
     RequestUrl|contains:
     - heilee.com
     - https://heilee.com
-  object_7090:
+  object_4836:
     RequestUrl|contains:
     - https://kairoscounselingmi.com
     - kairoscounselingmi.com
   attributes:
     RequestUrl|contains:
-    - searcherbigdealk.com
     - heilee.com
     - zxcdota2huysasi.com
-    - kairoscounselingmi.com
     - nathumvida.org
+    - searcherbigdealk.com
+    - kairoscounselingmi.com
   condition: 1 of object_* or attributes

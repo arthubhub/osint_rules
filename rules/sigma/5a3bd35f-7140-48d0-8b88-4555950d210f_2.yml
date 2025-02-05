@@ -1,51 +1,51 @@
 title: OSINT - Locky Ransomware Pushed Alongside FakeGlobe in Upgraded Spam Campaigns
   - process_creation
-id: 557e34be-7f84-4407-8427-53dff3467eac
+id: acb41fbb-f2d2-4a3c-8a23-c9dee3f9d5c9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a3bd35f-7140-48d0-8b88-4555950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.locky
-- attack.software.fake_globe_ransomware
-- attack.group.locky
 - attack.group.fake_globe_ransomware
+- attack.software.locky
+- attack.group.locky
+- attack.software.fake_globe_ransomware
 detection:
-  object_9813:
+  object_9695:
     sha256:
     - 39256f126bba17770310c2115586b9f22b858cf15c43ab36bd7cfb18ad63a0c2
-  object_9814:
+  object_9696:
     sha256:
     - a299f3de0c9277c0ce7dd3f7dc9aee57a7abe78b155919b1ecced1896c69653b
-  object_9815:
+  object_9697:
     sha256:
     - 4d4a0e1d7218180452e22e6b52a7f9a0db1e0c0aa51a48f9a79c600b51030050
-  object_9816:
+  object_9698:
     sha256:
     - 0f6ae637a9d15503a0af42be649388f01f8637ca16b15526e318a94b7f34bf6e
-  object_9817:
+  object_9699:
     sha256:
     - bb1df4a93fc27c54c78f84323e0ea7bb2b54469893150e3ea991826c81b56f47
-  object_9818:
+  object_9700:
     sha256:
     - e75e5d374f20c386b1114252647cca7bd407190cafb26c6cfbd42c5f9223fe6c
-  object_9819:
+  object_9701:
     sha256:
     - 12e75bdbc3f0b489a89104c646aee10a71277c22b6abbc6e346d1ba6f17edf6d
-  object_9820:
+  object_9702:
     sha256:
     - 067eb2754a823953a6efa1dfe9353eeabf699f171d21ffbff8e2303f7f678139
-  object_9821:
+  object_9703:
     sha256:
     - 6bdf46209fda582d7af5b74770b0eccf6abd3dbeabce3bdfb88db2f252ee778a
-  object_9822:
+  object_9704:
     sha256:
     - efb154bccff1e9a0f090a6afd7a08bf2c1fffea745b575a0bf31f22998688973
-  object_9823:
+  object_9705:
     sha256:
     - 3cb4484976676ac043fae870addaa57e858c1286cdb17d01ef8c973c5ec5b015
   condition: 1 of object_*

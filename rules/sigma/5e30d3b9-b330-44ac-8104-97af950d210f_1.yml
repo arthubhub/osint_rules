@@ -1,25 +1,25 @@
 title: Emotet - Trickbot - CobaltStrike - gtag mor85 - url_request
-id: 845acd18-f6e3-44d3-aa02-48da4f5de31d
+id: 72bbab5a-e64b-4a50-9787-3890912dc612
 description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e30d3b9-b330-44ac-8104-97af950d210f.json
 logsource:
   product: windows
   category: url_request
 detection:
-  object_6925:
+  object_11462:
     RequestUrl|contains:
     - https://sophosdefence.com
     - sophosdefence.com
-  object_6926:
+  object_11463:
     RequestUrl|contains:
     - qwe4dse4.com
     - https://qwe4dse4.com
   attributes:
     RequestUrl|contains:
-    - http://107.175.116.133
     - http://1.magnoec.com
     - https://laskowski-tech.com
+    - http://107.175.116.133
   condition: 1 of object_* or attributes

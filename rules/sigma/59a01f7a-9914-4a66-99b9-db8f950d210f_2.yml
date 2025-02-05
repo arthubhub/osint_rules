@@ -1,8 +1,8 @@
 title: Malspam 2017-08-25 'New voice message' - dns_query
-id: 907b93a5-5ad2-4b05-91f0-fda105f231ae
+id: c6b3567f-d9ca-4dee-a19d-c306953f647a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59a01f7a-9914-4a66-99b9-db8f950d210f.json
 logsource:
@@ -11,13 +11,13 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - bromesterionod.net
-    - hbwconsultants.nl
     - hausverwaltungfrankfurt.de
     - heimatverein-menne.de
+    - hbwconsultants.nl
+    - bromesterionod.net
     IpAddresses:
-    - 47.89.246.2
-    - 109.237.218.40
     - 83.169.35.187
+    - 109.237.218.40
     - 62.75.191.150
+    - 47.89.246.2
   condition: attributes

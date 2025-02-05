@@ -1,17 +1,17 @@
 title: OSINT - Alert (TA17-132A) Indicators Associated With WannaCry Ransomware -
   url_request
-id: e33a006b-34f7-4ac4-876d-1740541959ae
+id: 4a8d51b2-8bd9-4da0-97b7-babdd44e2116
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59186a46-6d0c-4359-a644-c061950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.wannacry
 - attack.software.wannacry
+- attack.group.wannacry
 detection:
   attributes:
     RequestUrl|contains:

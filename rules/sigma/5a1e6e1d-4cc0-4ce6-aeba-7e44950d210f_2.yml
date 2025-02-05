@@ -1,33 +1,33 @@
 title: OSINT - UBoatRAT Navigates East Asia - dns_query
-id: 430ce222-4577-42b7-b23e-0a29fd9036e0
+id: 98c83797-a298-4a83-ad5b-65b20ae7aae5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a1e6e1d-4cc0-4ce6-aeba-7e44950d210f.json
 logsource:
   product: windows
   category: dns_query
 detection:
-  object_8812:
+  object_373:
     IpAddresses:
     - 115.68.49.179
-  object_8813:
+  object_374:
     IpAddresses:
     - 115.68.49.179
-  object_8814:
+  object_375:
     IpAddresses:
     - 60.248.190.36
-  object_8815:
+  object_376:
     IpAddresses:
     - 115.68.52.66
-  object_8816:
+  object_377:
     IpAddresses:
     - 115.68.49.180
-  object_8817:
+  object_378:
     IpAddresses:
     - 122.147.187.173
-  object_8818:
+  object_379:
     IpAddresses:
     - 124.150.140.131
   condition: 1 of object_*

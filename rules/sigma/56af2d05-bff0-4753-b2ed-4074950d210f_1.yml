@@ -1,8 +1,8 @@
 title: OSINT Introducing Hi-Zor RAT by Fidelis - url_request
-id: 2067fc4a-543e-4030-9aad-535a8f36ffa9
+id: fc343e62-d890-4dbd-b4bf-cea179d2a695
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56af2d05-bff0-4753-b2ed-4074950d210f.json
 logsource:
@@ -11,8 +11,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - inocnation.com
-    - http://www.threatgeek.com
-    - https://www.fidelissecurity.com
     - https://github.com
+    - https://www.fidelissecurity.com
+    - http://www.threatgeek.com
+    - inocnation.com
   condition: attributes

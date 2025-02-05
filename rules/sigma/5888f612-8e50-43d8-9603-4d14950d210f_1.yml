@@ -1,18 +1,18 @@
 title: OSINT - Detecting threat actors in recent German industrial attacks with Windows
   Defender ATP - url_request
-id: 1616bee8-8bde-4afa-890d-8f94bb88e538
+id: e4f11144-a6d9-4564-a87d-f43b4f26f793
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5888f612-8e50-43d8-9603-4d14950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.barium
-- attack.software.winnti
 - attack.group.lead
+- attack.software.winnti
+- attack.group.barium
 detection:
   attributes:
     RequestUrl|contains:

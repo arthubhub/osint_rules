@@ -1,9 +1,9 @@
 title: 'OSINT - Bolek: Leaked Carberp KBot Source Code Complicit in New Phishing Campaigns
   - url_request'
-id: fda9ebda-bc0a-46de-b0f4-9daabec364c0
+id: ff6823df-9b01-4c1d-bf08-76efcff7e93d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/573efd23-b3a4-4374-9f11-3514950d210f.json
 logsource:
@@ -12,21 +12,21 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - android-securityupdate.com
-    - signin-tangerine.com
     - cibc-security.com
-    - cibc-clients.com
-    - rogers-ca.com
-    - http://www.cert.pl
-    - rogers-clients.com
-    - ogrthuvfewfdcfri5euwg.com
+    - tangerine-security.com
+    - knutesecos.com
+    - ogrthuvwfdcfri5euwg.com
+    - tangerine-zone.com
     - signin-rogers.com
     - tangerine-ca.com
-    - ogrthuvwfdcfri5euwg.com
+    - rogers-ca.com
+    - ogrthuvfewfdcfri5euwg.com
     - tangerine-can.com
-    - tangerine-zone.com
+    - cibc-clients.com
+    - rogers-clients.com
     - http://phishme.com
-    - knutesecos.com
-    - tangerine-security.com
+    - http://www.cert.pl
     - mensabuxus.net
+    - signin-tangerine.com
+    - android-securityupdate.com
   condition: attributes

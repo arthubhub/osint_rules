@@ -1,9 +1,9 @@
 title: OSINT - Reyptson Ransomware Spams Your Friends by Stealing Thunderbird Contacts
   - url_request
-id: d832a082-3882-4412-8995-0e35a3fa9204
+id: 598c2103-b1b4-4fbe-8cf4-ef4ce4ee9dee
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59a3c405-c348-4f7f-be23-4689950d210f.json
 logsource:
@@ -12,8 +12,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.bleepingcomputer.com
     - http://37z2akkbd3vqphw5.onion.link
     - http://37z2akkbd3vqphw5.onion
+    - https://www.bleepingcomputer.com
     - http://www.melvinmusicals.com
   condition: attributes

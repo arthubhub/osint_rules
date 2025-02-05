@@ -1,41 +1,41 @@
 title: Mitigating Brute Force Attacks on NetScaler Devices - dns_query
-id: 0ac44e38-184b-4a81-94d3-2002c611bcd1
+id: 4d6fdc46-8eb8-47e2-8752-1dfde7a93192
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/946c05c1-d7b6-4420-b88a-aa2b24addd81.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1190
 - attack.t1254
+- attack.t1190
 detection:
   attributes:
     IpAddresses:
-    - 95.182.96.42
     - 185.92.182.129
-    - 212.87.223.140
-    - 194.113.37.214
-    - 194.113.37.180
-    - 212.87.223.170
-    - 194.113.37.193
-    - 185.92.180.185
-    - 194.113.37.91
-    - 185.92.182.174
-    - 185.92.180.100
-    - 46.8.227.71
-    - 46.8.227.171
-    - 208.115.218.90
     - 212.87.223.78
-    - 212.87.223.3
-    - 212.87.223.207
-    - 185.92.182.172
-    - 194.113.37.116
-    - 193.242.145.120
+    - 194.113.37.180
     - 185.92.182.86
-    - 45.8.227.246
-    - 46.8.227.238
     - 188.130.207.178
+    - 46.8.227.71
+    - 194.113.37.116
+    - 212.87.223.140
+    - 194.113.37.91
+    - 185.92.180.185
+    - 95.182.96.42
+    - 46.8.227.238
+    - 212.87.223.207
+    - 185.92.182.174
+    - 212.87.223.170
+    - 185.92.180.100
+    - 194.113.37.214
+    - 208.115.218.90
+    - 194.113.37.193
+    - 212.87.223.3
+    - 46.8.227.171
+    - 45.8.227.246
+    - 193.242.145.120
+    - 185.92.182.172
   condition: attributes

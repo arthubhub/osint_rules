@@ -1,8 +1,8 @@
 title: 'Guccifer 2.0: All Roads Lead to Russia - Threatconnect report - dns_query'
-id: e6010d22-d4f7-48ec-a8f0-764ece753641
+id: 8ec733eb-96bd-49b8-91f0-5bfe44281198
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5797c2d2-5784-4ab9-b5c7-4e98950d210f.json
 logsource:
@@ -13,11 +13,11 @@ detection:
     QueryName|contains:
     - xocma.net
     IpAddresses:
-    - 95.130.15.41
     - 95.130.15.38
-    - 95.130.15.36
     - 95.130.15.40
     - 95.130.9.198
     - 95.130.15.34
+    - 95.130.15.36
+    - 95.130.15.41
     - 95.130.15.37
   condition: attributes

@@ -1,8 +1,8 @@
 title: OSINT - Crypter-as-a-Service Helps jRAT Fly Under The Radar - process_creation
-id: 0ff4b431-d16c-4a26-aa7d-5faa42109fe2
+id: 7bf9410c-4a14-4ca1-b86e-c9acb92b38ce
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5abf6421-c1b8-477b-a9d2-9c0902de0b81.json
 logsource:
@@ -13,56 +13,56 @@ tags:
 - attack.software.qrat
 - attack.software.jrat
 detection:
-  object_519:
+  object_17841:
     md5:
     - 2f021a10804ac5db5ceb43b42f785a23
     sha1:
     - edcbc508c19118f11daac029020f2a55f5cdc115
     sha256:
     - a42909490789d8ceb0c62f3a8cfd8d9d6e94d4e4199c4d31dffb6a2b36a67771
-  object_521:
+  object_17843:
     md5:
     - ae77ffba57049418e5a720bf77d178a5
     sha1:
     - ff179cd437f2e4b93758adbe77e19e34610074ec
     sha256:
     - eb42177017e06ac8afc21f8d3b713417bf25da0f3de678a52625cf9f6bf5a050
-  object_523:
+  object_17845:
     md5:
     - 6392741705126cb97a837cbb046cfe73
     sha1:
     - 54b13ce9069beee3cd0a2ffe3bb404d5d92144ed
     sha256:
     - aefe7a967c92cb76af1defac59d88a2d57d0c6526c94f782ac0e19935be1e30c
-  object_525:
+  object_17847:
     md5:
     - 64d72c5c86d3638034cd83178abcb82f
     sha1:
     - cf1f9dba740778df3bea9a7903b030aa9b916d90
     sha256:
     - 7aff36d38eaad0bd01d04c71dbafa4e637008be17e06397c9191826671be4964
-  object_527:
+  object_17849:
     md5:
     - 1eb3f344a0274bfa38c67f6b10650dcf
     sha1:
     - a495a93bec5e5cd234dc13c680e15a5e331d19b1
     sha256:
     - 8e4e858584704d7df6b0c3221a2b1d169f072e40aec0cc74340dbe4b6b15e60f
-  object_529:
+  object_17851:
     md5:
     - c52247ecffb2f7a42ef6fa0336671545
     sha1:
     - 82822da7d5cf63fd472895c389d0a7e8a9e698c7
     sha256:
     - 8ab8abba46e9b64ce27b03a25dabd69706bf90e2ebede22b211a2da37676ce55
-  object_531:
+  object_17853:
     md5:
     - daa0833d16cd9b6937803d1637284ad1
     sha1:
     - ae7a6b6235a4d827cef54152bca237a30cff9f1e
     sha256:
     - 445a73d4dc4c76b73d35233b2bfba3ee178eb2605def1542c2267375db1ee24c
-  object_533:
+  object_17855:
     md5:
     - 8ae2c573bc0e0492efeabe78495c591e
     sha1:
@@ -71,12 +71,12 @@ detection:
     - a0c261c86f3e46f1b6ccd5bc8f706ffe77ff70528ca7961fd8fbd6529a1be993
   attributes:
     md5:
-    - 6392741705126cb97a837cbb046cfe73
-    - 1eb3f344a0274bfa38c67f6b10650dcf
-    - ae77ffba57049418e5a720bf77d178a5
     - 8ae2c573bc0e0492efeabe78495c591e
-    - daa0833d16cd9b6937803d1637284ad1
-    - 64d72c5c86d3638034cd83178abcb82f
     - 2f021a10804ac5db5ceb43b42f785a23
+    - ae77ffba57049418e5a720bf77d178a5
+    - 64d72c5c86d3638034cd83178abcb82f
     - c52247ecffb2f7a42ef6fa0336671545
+    - 1eb3f344a0274bfa38c67f6b10650dcf
+    - 6392741705126cb97a837cbb046cfe73
+    - daa0833d16cd9b6937803d1637284ad1
   condition: 1 of object_* or attributes

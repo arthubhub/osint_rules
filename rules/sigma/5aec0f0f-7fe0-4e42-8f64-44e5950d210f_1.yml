@@ -1,9 +1,9 @@
 title: OSINT - Who's who in the zoo. Cyberespionage operation targets android users
   in the Middle East. - url_request
-id: 7e326c40-a189-4a93-9bb8-6946c8acccf0
+id: 2449e4da-8134-42bc-94c0-9c02045e2d7e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5aec0f0f-7fe0-4e42-8f64-44e5950d210f.json
 logsource:
@@ -12,28 +12,28 @@ logsource:
 tags:
 - attack.group.zoopark
 detection:
-  object_9913:
+  object_10523:
     RequestUrl|contains:
     - androidupdaters.com
-  object_9914:
+  object_10524:
     RequestUrl|contains:
     - dlgmail.com
-  object_9915:
+  object_10525:
     RequestUrl|contains:
     - rhubarb2.com
-  object_9916:
+  object_10526:
     RequestUrl|contains:
     - rhubarb3.com
   attributes:
     RequestUrl|contains:
-    - https://media.kasperskycontenthub.com
-    - androidupdaters.com
-    - http://www.rhubarb3.com
-    - http://www.rhubarb2.com
-    - http://showroommontorgueil.com
     - http://www.alnaharegypt.com
-    - http://www.alhayatnews.com
     - dlgmail.com
     - rhubarb3.com
+    - http://showroommontorgueil.com
+    - http://www.alhayatnews.com
+    - androidupdaters.com
     - rhubarb2.com
+    - http://www.rhubarb2.com
+    - http://www.rhubarb3.com
+    - https://media.kasperskycontenthub.com
   condition: 1 of object_* or attributes

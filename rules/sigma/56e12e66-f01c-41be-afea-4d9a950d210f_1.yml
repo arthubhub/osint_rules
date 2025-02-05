@@ -1,8 +1,8 @@
 title: Cerber Ransomware - url_request
-id: 89422b9a-0a27-41dc-9291-41124a800a7f
+id: 99bd9d0e-cac9-4d65-b4bb-62c7e2d286ba
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56e12e66-f01c-41be-afea-4d9a950d210f.json
 logsource:
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - decrypttozxybarc.onion
-    - http://maxcdn.bootstrapcdn.com
     - http://ipinfo.io
     - http://freegeoip.net
+    - decrypttozxybarc.onion
     - http://ip-api.com
+    - http://maxcdn.bootstrapcdn.com
   condition: attributes

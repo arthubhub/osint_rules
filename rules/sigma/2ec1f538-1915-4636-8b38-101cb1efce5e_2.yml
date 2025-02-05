@@ -1,48 +1,48 @@
 title: A22-108A TraderTraitor North Korean State-Sponsored APT Targets Blockchain
   Companies - dns_query
-id: 2cc342d9-e482-4154-b066-5f0938c20e92
+id: c3773998-a335-46ab-ac5a-fd779ce6b669
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/2ec1f538-1915-4636-8b38-101cb1efce5e.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1566.001
-- attack.group.lazarus_group
+- attack.t1071.001
 - attack.t1552.004
 - attack.group.g0032
-- attack.t1071.001
+- attack.t1566.001
+- attack.group.lazarus_group
 detection:
   attributes:
     QueryName|contains:
-    - cryptais.com
-    - haciendadeclarevot.com
-    - dafom.dev
-    - sche-eg.org
-    - infodigitalnew.com
-    - vinoymas.ch
-    - alticgo.com
-    - creaideck.com
     - dafnefonseca.com
-    - tokenais.com
-    - aideck.net
+    - creaideck.com
+    - infodigitalnew.com
     - esilet.com
     - greenvideo.nl
+    - dafom.dev
+    - alticgo.com
+    - tokenais.com
+    - aideck.net
+    - cryptais.com
+    - sche-eg.org
+    - vinoymas.ch
+    - haciendadeclarevot.com
     IpAddresses:
-    - 62.84.240.140
-    - 199.188.103.115
-    - 160.153.235.20
-    - 38.132.124.161
-    - 82.102.31.14
-    - 104.168.98.156
-    - 185.66.41.17
-    - 108.170.55.202
     - 46.16.62.238
-    - 107.154.160.132
-    - 89.45.4.151
-    - 151.101.64.119
+    - 82.102.31.14
     - 45.14.227.58
+    - 199.188.103.115
+    - 151.101.64.119
+    - 160.153.235.20
+    - 185.66.41.17
+    - 107.154.160.132
+    - 38.132.124.161
+    - 89.45.4.151
+    - 62.84.240.140
+    - 104.168.98.156
+    - 108.170.55.202
   condition: attributes

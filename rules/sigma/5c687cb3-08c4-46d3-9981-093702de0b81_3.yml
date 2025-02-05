@@ -1,8 +1,8 @@
 title: Fake amf-fr.org website delivering malicious Word document and binaries - process_creation
-id: 05fe2811-7bc9-465e-88e1-c6f804569ed1
+id: b789988d-00a7-4046-8898-8055d677925f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c687cb3-08c4-46d3-9981-093702de0b81.json
 logsource:
@@ -12,28 +12,28 @@ tags:
 - attack.t1179
 - attack.t1035
 detection:
-  object_11443:
+  object_10942:
     md5:
     - efbcffc10763a287bdedfb6e892ae20c
     sha1:
     - 0dfe75a01e525bc599dff0c17204129b7ac3a437
     sha256:
     - 728bbbea8797c5e00a8737ebf6bebfffb3d84f9c86f144963a2940025329c28b
-  object_11445:
+  object_10944:
     md5:
     - 28202ac7689aaef894840c773b7e1e56
     sha1:
     - b0f4377953f59ba0d5b295861e2ab7fc5c6d03de
     sha256:
     - 49103f5c7a5b78c32e56dea67259724c643611a05b49b02ff2653a7c77855eb0
-  object_11447:
+  object_10946:
     md5:
     - 11df89bd965bbd85bed31b90f1481312
     sha1:
     - 79ee5019cebead10c6527e2531e7b0ee69322405
     sha256:
     - 1d8a807e9a64243de7f9f5171371b06abc5f056554c5fbfef7052bdbcd0f844a
-  object_11449:
+  object_10948:
     md5:
     - 8ec83dba30c4f4d014899fbcc9a78171
     sha1:
@@ -47,7 +47,7 @@ detection:
     - 0dfe75a01e525bc599dff0c17204129b7ac3a437
     sha256:
     - 728bbbea8797c5e00a8737ebf6bebfffb3d84f9c86f144963a2940025329c28b
-    - 49103f5c7a5b78c32e56dea67259724c643611a05b49b02ff2653a7c77855eb0
     - d57f128afb4843b6f0072fadda8dd14046b31703098e365bc5a226e117090d44
     - 1d8a807e9a64243de7f9f5171371b06abc5f056554c5fbfef7052bdbcd0f844a
+    - 49103f5c7a5b78c32e56dea67259724c643611a05b49b02ff2653a7c77855eb0
   condition: 1 of object_* or attributes

@@ -1,43 +1,43 @@
 title: Soft Cell case - guessed indicators (via Twitter discussion) - process_creation
-id: 35da3540-2ff9-4c02-a8c0-f6e45b72bb81
+id: ee5f3732-7238-4a6e-8247-54925bf7df59
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d13bc95-ecbc-4af9-b684-423602de0b81.json
 logsource:
   product: windows
   category: process_creation
 detection:
-  object_16672:
+  object_9227:
     md5:
     - e435b961048c2fecc2e8e697dc9bd666
     sha1:
     - 5d17fd6904db389040767f8474ca88be4b43de07
     sha256:
     - fa599fddd6b6df4b654e022fe7a91c82152f983e1ce0b97406eb27bb2fb4c3ab
-  object_16674:
+  object_9229:
     md5:
     - 185ad2bfaa924571c492ee1d3f281bac
     sha1:
     - 722dc399e6048127e52843075fd652006b8c85a4
     sha256:
     - 95817d8c742dd667225273847ea15f46445ab1439e634c05785084af7cb39a58
-  object_16676:
+  object_9231:
     md5:
     - fb8c172c964e6740963eb223407a917c
     sha1:
     - 4448a3cd278d6c7b85987f0c9ba5dfeef7be8dad
     sha256:
     - 12979d85d37a7e246757d5ebf238c6ac91e6641950cf45d95b104eb7dbb7db71
-  object_16678:
+  object_9233:
     md5:
     - 89d0cdd3617c118c6ba1a720e9f9bd62
     sha1:
     - b69594d1fc9d44bb89fa09cacfbf61723b7fe1bd
     sha256:
     - c81dd8dd3623181cbc117ca7255e6ea530f770c05624c6896362f03fbfc06280
-  object_16680:
+  object_9235:
     md5:
     - 9a97ddbb141d01ce0b1b994399cfb7dc
     sha1:
@@ -46,9 +46,9 @@ detection:
     - 5bf80b871278a29f356bd42af1e35428aead20cd90b0c7642247afcaaa95b022
   attributes:
     sha256:
-    - 95817d8c742dd667225273847ea15f46445ab1439e634c05785084af7cb39a58
     - c81dd8dd3623181cbc117ca7255e6ea530f770c05624c6896362f03fbfc06280
-    - 5bf80b871278a29f356bd42af1e35428aead20cd90b0c7642247afcaaa95b022
-    - fa599fddd6b6df4b654e022fe7a91c82152f983e1ce0b97406eb27bb2fb4c3ab
+    - 95817d8c742dd667225273847ea15f46445ab1439e634c05785084af7cb39a58
     - 12979d85d37a7e246757d5ebf238c6ac91e6641950cf45d95b104eb7dbb7db71
+    - fa599fddd6b6df4b654e022fe7a91c82152f983e1ce0b97406eb27bb2fb4c3ab
+    - 5bf80b871278a29f356bd42af1e35428aead20cd90b0c7642247afcaaa95b022
   condition: 1 of object_* or attributes

@@ -1,8 +1,8 @@
 title: Malspam 2017-09-01 - 'New voice message' - dns_query
-id: 51ac6ae8-e7dc-4a95-83da-66e28bc405b0
+id: f065c7e3-1c8d-4dfe-b034-17bf096b1695
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59a97b21-a924-4836-a5d8-4a86950d210f.json
 logsource:
@@ -12,15 +12,15 @@ detection:
   attributes:
     QueryName|contains:
     - terae-lumiere.com
-    - sindeval.es
     - rs-consultores.pt
-    - tractament-imatges.com
     - vinneydropmodorfosius.net
+    - tractament-imatges.com
+    - sindeval.es
     IpAddresses:
-    - 62.113.249.12
-    - 62.233.106.100
     - 80.172.241.42
+    - 146.255.103.168
+    - 62.233.106.100
     - 211.125.122.53
     - 47.89.249.74
-    - 146.255.103.168
+    - 62.113.249.12
   condition: attributes

@@ -1,8 +1,8 @@
 title: OSINT - Petya Ransomware - url_request
-id: c9447a4c-3c23-4b2f-979b-5f77bf3d78de
+id: 5cdaa68f-5108-404c-b860-34aca03a8260
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56f4132b-be7c-4d2a-a00c-4a91950d210f.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://www.heise.de
     - https://www.gdata.fr
+    - http://www.heise.de
   condition: attributes

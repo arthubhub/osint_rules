@@ -1,54 +1,54 @@
 title: OSINT - Return of Not Petya as Bad Rabbit Diskcoder, yes those two are the
   same! - url_request
-id: a2fcd9f2-a37e-4785-9425-d5ad80ec67ab
+id: efa8868a-8e7d-4de7-9b47-0ad5ca08a6f1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59f04995-3b8c-4cf0-b555-4b26950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.bad_rabbit
 - attack.group.bad_rabbit
+- attack.software.bad_rabbit
 detection:
   attributes:
     RequestUrl|contains:
-    - http://www.otbrana.com
-    - http://spbvoditel.ru
     - http://www.imer.ro
-    - ankerch-crimea.ru
     - argumentiru.com
     - argumenti.ru
-    - 1dnscontrol.com
-    - http://www.online812.ru
+    - http://www.fontanka.ru
     - http://blog.fontanka.ru
-    - https://mjolnirsecurity.com
-    - http://www.pensionhotel.cz
-    - http://www.grupovo.bg
-    - http://i24.com.ua
-    - da.id
-    - http://www.mediaport.ua
-    - http://caforssztxqzf2nm.onion
-    - caforssztxqzf2nm.onion
-    - http://bg.pensionhotel.com
-    - an-crimea.ru
-    - http://calendar.fontanka.ru
     - most-dnepr.info
+    - https://mjolnirsecurity.com
+    - http://an-crimea.ru
+    - http://www.grupovo.bg
     - http://argumenti.ru
+    - caforssztxqzf2nm.onion
+    - http://i24.com.ua
+    - http://calendar.fontanka.ru
+    - da.id
+    - http://www.aica.co.jp
+    - http://www.otbrana.com
+    - http://www.mediaport.ua
+    - ankerch-crimea.ru
+    - http://bg.pensionhotel.com
+    - http://1dnscontrol.com
+    - http://caforssztxqzf2nm.onion
+    - http://most-dnepr.info
     - spbvoditel.ru
     - http://185.149.120.3
-    - http://argumentiru.com
-    - http://novayagazeta.spb.ru
+    - an-crimea.ru
     - http://ankerch-crimea.ru
-    - http://www.aica.co.jp
-    - http://an-crimea.ru
-    - http://www.sinematurk.com
+    - http://www.online812.ru
+    - http://www.pensionhotel.cz
+    - 1dnscontrol.com
+    - http://novayagazeta.spb.ru
     - http://osvitaportal.com.ua
-    - http://most-dnepr.info
-    - http://www.fontanka.ru
+    - http://www.sinematurk.com
     - http://www.t.ks.ua
     - http://grupovo.bg
-    - http://1dnscontrol.com
+    - http://argumentiru.com
+    - http://spbvoditel.ru
   condition: attributes

@@ -1,25 +1,25 @@
 title: Dharma Ransomware Event - dns_query
-id: 49a14561-bf4b-4bbf-8221-e6a5ceeb73d5
+id: 9b0675c9-2bed-4fdc-b1e0-fd793d3e9e4c
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ee3822c-6828-418c-b619-62de950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1064
-- attack.group.dharma
-- attack.t1133
-- attack.t1486
-- attack.software.dharma
-- attack.t1078
-- attack.t1135
-- attack.software.dharma_ransomware
 - attack.t1083
+- attack.software.dharma_ransomware
+- attack.software.dharma
+- attack.t1486
+- attack.group.dharma
+- attack.t1064
 - attack.group.dharma_ransomware
+- attack.t1133
+- attack.t1135
+- attack.t1078
 detection:
   attributes:
     IpAddresses:

@@ -1,29 +1,29 @@
 title: OSINT - A North Korean Monero Cryptocurrency Miner - process_creation
-id: d3a49be1-dd9e-448d-9d14-70e0525169d8
+id: 2ed501db-3aa0-4783-9581-b0e4790e309c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a54778c-3dac-4d36-b7c3-4d6e02de0b81.json
 logsource:
   product: windows
   category: process_creation
 detection:
-  object_9309:
+  object_6951:
     md5:
     - 762c3249904a8bf76802effb54426655
     sha1:
     - 0def199dbdb8dccf380511f67138088148ea83a3
     sha256:
     - 42300b6a09f183ae167d7a11d9c6df21d022a5f02df346350d3d875d557d3b76
-  object_9311:
+  object_6953:
     md5:
     - 6a261443299788af1467142d5f538b2c
     sha1:
     - 8965381377a884aa68eeb451b3e62175968b0b04
     sha256:
     - c599f3ca3417169e4a620b8231f8a97ccc63e291b9e09c888e6807dd90f1f17c
-  object_9313:
+  object_6955:
     md5:
     - 42344bb45f351757e8638656e12a0135
     sha1:
@@ -32,7 +32,7 @@ detection:
     - 0024e32c0199ded445c0b968601f21cc92fc0c534d2642f2dd64c1c978ff01f3
   attributes:
     md5:
-    - 762c3249904a8bf76802effb54426655
     - 6a261443299788af1467142d5f538b2c
+    - 762c3249904a8bf76802effb54426655
     - 42344bb45f351757e8638656e12a0135
   condition: 1 of object_* or attributes

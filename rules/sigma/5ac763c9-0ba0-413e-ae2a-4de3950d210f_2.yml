@@ -1,19 +1,19 @@
 title: OSINT - Black Ruby Ransomware Skips Victims in Iran and Adds a Miner for Good
   Measure - dns_query
-id: fce8443e-ffc6-4535-8369-04befb223c97
+id: 1bcbdd5f-aacd-48d3-8032-5ccf41512f28
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ac763c9-0ba0-413e-ae2a-4de3950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.black_ruby
 - attack.group.black_ruby
+- attack.software.black_ruby
 detection:
-  object_18443:
+  object_9452:
     QueryName|contains:
     - de01.supportxmr.com
   condition: 1 of object_*

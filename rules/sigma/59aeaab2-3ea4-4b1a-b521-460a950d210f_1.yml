@@ -1,8 +1,8 @@
 title: OSINT - Threat actor goes on a Chrome extension hijacking spree - url_request
-id: 8e9fc06f-70cf-4ac3-8c4b-57887ee8bd13
+id: 32394837-b766-47a6-bebc-e3302eceb87c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59aeaab2-3ea4-4b1a-b521-460a950d210f.json
 logsource:
@@ -11,16 +11,16 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://wlp.cleanmypc.online
     - http://searchtab.win
-    - https://www.proofpoint.com
-    - https://y.partnerwork.men
-    - http://partner-net.men
     - 92fffe0ba52da491a2b7576627f3693a.pro
+    - https://y.partnerwork.men
+    - http://wlp.cleanmypc.online
     - http://redirect2.top
-    - https://f.partnerwork.men
-    - 7ce508e6099e31f68c2fd50c362f087d.pro
-    - https://wd8a2b7d68f1c7c7f34381dc1a198465b4.win
+    - https://www.proofpoint.com
     - http://land.pckeeper.software
+    - https://wd8a2b7d68f1c7c7f34381dc1a198465b4.win
+    - 7ce508e6099e31f68c2fd50c362f087d.pro
+    - https://f.partnerwork.men
     - https://wd7bdb20e4d622f6569f3e8503138c859d.win
+    - http://partner-net.men
   condition: attributes

@@ -1,8 +1,8 @@
 title: OSINT - Hancitor active again yith new macro - IoCs - url_request
-id: 28561b1e-9e34-44d0-886c-5d2349f427d1
+id: 2db50464-645c-49bd-bee1-0a88191b6d76
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c00e9b7-50ac-4aa7-b893-4a63950d210f.json
 logsource:
@@ -12,36 +12,36 @@ tags:
 - attack.software.hancitor
 - attack.group.hancitor
 detection:
-  object_8324:
+  object_11103:
     RequestUrl|contains:
     - https://mobile.twitter.com
   attributes:
     RequestUrl|contains:
-    - http://fidosofwass.ru
-    - http://geeventsehin.com
-    - http://arsmarri.ru
-    - joincrytofundraisernow.org
-    - satsumassales.com
-    - joincryptofundraiser.com
-    - g-cals.com
     - honeyhillfarmspop.com
+    - http://arsmarri.ru
+    - g-cals.com
     - http://bdhsxj.com
-    - http://oriton.ru
-    - localloopwi.org
-    - mybabyguam.com
-    - localloop-wi.org
+    - http://geeventsehin.com
+    - https://ghostbin.com
     - satsumasgeorgia.com
-    - appersonpropertiesinc.com
-    - http://bigheartstorage.com
-    - mogamecalls.com
+    - joincryptofundraiser.com
     - satsumasschoolfundraiser.com
-    - http://tonshekinar.ru
+    - satsumassales.com
     - joincrytofundraisernow.net
     - localloop-wi.com
-    - http://letortedierica.it
-    - https://ghostbin.com
-    - joincrytofundraisernow.us
+    - http://bigheartstorage.com
+    - localloopwi.org
     - minaskaowners.com
-    - kenapperson.net
+    - http://fidosofwass.ru
     - wilocalloop.com
+    - appersonpropertiesinc.com
+    - joincrytofundraisernow.org
+    - localloop-wi.org
+    - http://tonshekinar.ru
+    - http://oriton.ru
+    - http://letortedierica.it
+    - mybabyguam.com
+    - joincrytofundraisernow.us
+    - kenapperson.net
+    - mogamecalls.com
   condition: 1 of object_* or attributes

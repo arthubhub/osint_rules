@@ -1,17 +1,17 @@
 title: C2-JARM - A list of JARM hashes for different ssl implementations used by some
   C2 tools. - url_request
-id: 0d26d77f-84fe-4c0e-9708-1226ace8e2aa
+id: 8104a665-d312-41ff-8afe-ccbebd3960c1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/4ce77fdd-19a8-4037-ac75-4ece0c05d63f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.cobalt_strike
 - attack.software.metasploit
+- attack.software.cobalt_strike
 detection:
   attributes:
     RequestUrl|contains:

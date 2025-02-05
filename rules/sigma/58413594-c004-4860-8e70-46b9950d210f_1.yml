@@ -1,9 +1,9 @@
 title: OSINT - A PBot (PHP + Perl Backdoor IRC Bot + Network Attack Tool) Infection
   on hegeman.com - url_request
-id: d32e151b-aa3f-4d39-8532-458a0e5a711a
+id: 5a4dd8fc-8236-44b8-a3ee-bbf9f54c3166
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58413594-c004-4860-8e70-46b9950d210f.json
 logsource:
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://www.hegeman.com
-    - http://hegeman.com
     - http://blog.malwaremustdie.org
+    - http://hegeman.com
+    - http://www.hegeman.com
   condition: attributes

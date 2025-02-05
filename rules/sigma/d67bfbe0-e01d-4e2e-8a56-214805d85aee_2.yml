@@ -1,9 +1,9 @@
 title: 'AA24-249A: Russian Military Cyber Actors Target U.S. and Global Critical Infrastructure
   - dns_query'
-id: ff41fe4c-7be6-4d3d-8f01-a5591b681acf
+id: d2fcee58-8435-41e3-ad11-ed4ced69182d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/d67bfbe0-e01d-4e2e-8a56-214805d85aee.json
 logsource:
@@ -12,36 +12,36 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - 3proxy.ru
     - dns.test658324901domain.me
-    - interlinks.top
-    - smm2021.net
-    - 3237.site
     - nssm.cc
+    - 3237.site
+    - smm2021.net
+    - 3proxy.ru
+    - interlinks.top
     IpAddresses:
-    - 179.43.189.218
-    - 154.21.20.82
-    - 45.141.87.11
-    - 179.43.176.60
-    - 194.26.29.251
-    - 179.43.133.202
-    - 5.226.139.66
-    - 111.111.111.111
-    - 62.173.140.223
-    - 112.132.218.45
-    - 179.43.187.47
-    - 79.124.8.66
-    - 185.245.85.251
-    - 185.245.84.227
-    - 179.43.162.55
-    - 90.131.156.107
-    - 46.101.242.222
     - 194.26.29.84
-    - 179.43.175.38
-    - 112.51.253.153
+    - 45.141.87.11
+    - 154.21.20.82
+    - 179.43.162.55
     - 194.26.29.95
+    - 112.132.218.45
+    - 185.245.85.251
+    - 179.43.133.202
+    - 90.131.156.107
+    - 194.26.29.251
+    - 46.101.242.222
+    - 79.124.8.66
+    - 179.43.189.218
+    - 179.43.176.60
+    - 179.43.175.108
+    - 62.173.140.223
+    - 5.226.139.66
+    - 179.43.175.38
+    - 185.245.84.227
     - 81.17.24.130
+    - 179.43.187.47
+    - 111.111.111.111
+    - 112.51.253.153
     - 179.43.142.42
     - 194.26.29.98
-    - 179.43.175.108
   condition: attributes

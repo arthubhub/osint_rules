@@ -1,8 +1,8 @@
 title: "OSINT - Unraveling SloppyLemming\u2019s Operations Across South Asia - url_request"
-id: f678a5ae-9fae-4df8-a456-20e410a93013
+id: adef8943-b39e-4124-bf8a-e1de316227d7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/1cccd5d8-5d52-4610-b8b7-7bbebd0d6d7b.json
 logsource:
@@ -11,52 +11,52 @@ logsource:
 tags:
 - attack.group.sloppylemming
 detection:
-  object_11062:
+  object_10057:
     RequestUrl|contains:
     - https://blog.cloudflare.com
-  object_11071:
+  object_10066:
     RequestUrl|contains:
     - crec-bd.site
-  object_11072:
+  object_10067:
     RequestUrl|contains:
     - jammycanonicalupdates.cloud
-  object_11074:
+  object_10069:
     RequestUrl|contains:
     - maldevfudding.com
-  object_11077:
+  object_10072:
     RequestUrl|contains:
     - adobefileshare.com
-  object_11078:
+  object_10073:
     RequestUrl|contains:
     - quran-books.store
-  object_11079:
+  object_10074:
     RequestUrl|contains:
     - aljazeerak.online
-  object_11083:
+  object_10078:
     RequestUrl|contains:
     - helpdesk-lab.site
-  object_11087:
+  object_10082:
     RequestUrl|contains:
     - hit-pk.org
-  object_11090:
+  object_10085:
     RequestUrl|contains:
     - paknavy-pk.org
-  object_11093:
+  object_10088:
     RequestUrl|contains:
     - 168-gov.info
-  object_11108:
+  object_10103:
     RequestUrl|contains:
     - opensecurity-legacy.com
-  object_11112:
+  object_10107:
     RequestUrl|contains:
     - itsupport-gov.com
-  object_11113:
+  object_10108:
     RequestUrl|contains:
     - updpcn.online
-  object_11120:
+  object_10115:
     RequestUrl|contains:
     - cflayerprotection.com
-  object_11122:
+  object_10117:
     RequestUrl|contains:
     - cloudlflares.com
   condition: 1 of object_*

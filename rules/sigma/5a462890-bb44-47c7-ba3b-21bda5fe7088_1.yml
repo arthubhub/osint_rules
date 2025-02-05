@@ -1,9 +1,9 @@
 title: 'Threat Analysis: Malicious Microsoft Word Documents Being Used in Targeted
   Attack Campaigns - url_request'
-id: e8becb9f-7532-4787-adfd-72af920bff14
+id: c4471427-4b74-4a5e-9ba6-f6d5166950f1
 description: edit this field when analysing or editing the rule - reported by "Crimeware"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a462890-bb44-47c7-ba3b-21bda5fe7088.json
 logsource:
@@ -12,11 +12,11 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.cobaltstrike.com
-    - carbon-copy-marketing.com
-    - stationmovil.com
     - www.themediaeducation.com
     - https://www.carbonblack.com
-    - free-clipart-archive.com
     - www.bankingandfinanceexpert.com
+    - free-clipart-archive.com
+    - stationmovil.com
+    - carbon-copy-marketing.com
+    - https://www.cobaltstrike.com
   condition: attributes

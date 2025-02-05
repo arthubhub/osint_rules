@@ -1,8 +1,8 @@
 title: OSINT - Cisco IOS CVE-2018-0171 attack - url_request
-id: d49f3d9e-47c3-46c4-ad57-0a8adade1d2b
+id: e1b7f26e-d772-4008-82eb-c992216d35f0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ac8cee2-2a78-4237-88a0-d0b802de0b81.json
 logsource:
@@ -13,7 +13,7 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
+    - https://tools.cisco.com
     - https://www.bleepingcomputer.com
     - https://otx.alienvault.com
-    - https://tools.cisco.com
   condition: attributes

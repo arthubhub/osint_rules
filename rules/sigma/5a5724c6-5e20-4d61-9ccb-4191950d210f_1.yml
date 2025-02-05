@@ -1,63 +1,63 @@
 title: OSINT - Mac Malware of 2017 - url_request
-id: 8c4c6332-3a1c-4801-8612-e955844ccd20
+id: 63a7ba23-a88e-472d-b4c9-6af705b41e4b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a5724c6-5e20-4d61-9ccb-4191950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.filecoder
-- attack.software.mughthesec
-- attack.software.xagentosx
-- attack.software.turla
-- attack.software.fruitfly
-- attack.software.cpumeaner
-- attack.software.pwnet
+- attack.software.x-agent
 - attack.software.proton
 - attack.software.macspy
-- attack.software.macransom
-- attack.software.empyre
-- attack.software.macdownloader
-- attack.group.filecoder
 - attack.group.macransom
-- attack.software.x-agent
+- attack.software.cpumeaner
+- attack.software.fruitfly
+- attack.group.filecoder
+- attack.software.empyre
+- attack.software.pwnet
+- attack.software.mughthesec
+- attack.software.filecoder
+- attack.software.xagentosx
+- attack.software.macransom
+- attack.software.macdownloader
+- attack.software.turla
 detection:
-  object_6328:
+  object_8571:
     RequestUrl|contains:
     - www.securitychecking.org
   attributes:
     RequestUrl|contains:
-    - http://192.168.3.217
-    - https://researchcenter.paloaltonetworks.com
-    - symantecblog.com
-    - apple-iclods.net
-    - https://mac.eltima.com
-    - https://blog.checkpoint.com
-    - https://blog.fox-it.com
-    - https://www.virusbulletin.com
-    - apple-search.info
-    - handbrake.biz
-    - officialswebsites.info
-    - https://www.cybersixgill.com
     - https://iranthreats.github.io
-    - handbrakestore.com
-    - https://www.welivesecurity.com
-    - https://objective-see.com
-    - http://apple-search.info
-    - http://23.227.196.215
     - http://apple-checker.org
-    - eltima.in
-    - http://www.elmedia-video-player.com
-    - apple-uptoday.org
-    - http://apple-iclods.org
-    - apple-checker.org
     - https://www.securitychecking.org
     - http://apple-uptoday.org
+    - apple-iclods.net
+    - https://www.virusbulletin.com
+    - apple-checker.org
+    - handbrakestore.com
+    - http://apple-search.info
+    - http://www.elmedia-video-player.com
+    - https://www.welivesecurity.com
+    - https://blog.fox-it.com
     - http://46.17.97.37
-    - handbrake.cc
-    - apple-iclods.org
+    - https://blog.checkpoint.com
     - https://blog.malwarebytes.com
+    - http://192.168.3.217
+    - http://23.227.196.215
+    - https://mac.eltima.com
+    - https://objective-see.com
+    - handbrake.cc
+    - symantecblog.com
+    - apple-iclods.org
+    - https://www.cybersixgill.com
+    - https://researchcenter.paloaltonetworks.com
+    - apple-search.info
+    - officialswebsites.info
+    - apple-uptoday.org
+    - http://apple-iclods.org
+    - handbrake.biz
+    - eltima.in
   condition: 1 of object_* or attributes

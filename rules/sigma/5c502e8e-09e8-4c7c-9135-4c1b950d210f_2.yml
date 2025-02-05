@@ -1,28 +1,28 @@
 title: '2019-01-28: Turla Kazuar RAT - process_creation'
-id: e29a9a2b-32e6-497c-ae85-a87ec38c54bc
+id: 7855bff0-dd81-47ca-91a3-340ffca9e9a7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c502e8e-09e8-4c7c-9135-4c1b950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.kazuar
-- attack.group.turla
-- attack.software.turla
-- attack.software.s0265
 - attack.group.turla_rat
-- attack.group.turla_group
-- attack.group.g0010
-- attack.software.kazuar
+- attack.software.s0265
 - attack.software.turla_rat
+- attack.group.turla_group
+- attack.group.turla
+- attack.software.kazuar
+- attack.group.kazuar
+- attack.group.g0010
+- attack.software.turla
 detection:
-  object_9393:
+  object_10160:
     md5:
     - 988df2967a7239a4b916cc9fcedaff68
-  object_9394:
+  object_10161:
     md5:
     - 988df2967a7239a4b916cc9fcedaff68
     sha1:

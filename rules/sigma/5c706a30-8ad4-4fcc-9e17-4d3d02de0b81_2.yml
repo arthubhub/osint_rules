@@ -1,83 +1,83 @@
 title: OSINT - New BabyShark Malware Targets U.S. National Security Think Tanks -
   process_creation
-id: ff8eb8ef-58d4-41e7-8f06-385eb2acef60
+id: 53629382-febf-4aa4-ac60-009d9664f583
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c706a30-8ad4-4fcc-9e17-4d3d02de0b81.json
 logsource:
   product: windows
   category: process_creation
 tags:
+- attack.t1441
 - attack.software.babyshark
 - attack.group.stolen_pencil
-- attack.t1441
 detection:
-  object_8952:
+  object_11687:
     md5:
     - 404ab5a93767a986b47c9fec33eb8be9
     sha1:
     - 0a631b0072cee1e20854b187276a0ba560d6d4f8
     sha256:
     - 94a09aff59c0c27d1049509032d5ba05e9285fd522eb20b033b8188e0fee4ff0
-  object_8954:
+  object_11689:
     md5:
     - d40c20a77371309045f5123af76637b2
     sha1:
     - d1207b7b846b80418b459e9d03e1b5afbd3e97a7
     sha256:
     - 66439f0e377bbe8cda3e516e801a86c64688e7c3dde0287b1bfb298a5bdbc2a2
-  object_8956:
+  object_11691:
     md5:
     - 093ecb712d438ab01b3f07718428dcc7
     sha1:
     - 89b9b7f2c3eb275eabe78c04a30dc09281a201e6
     sha256:
     - 7b77112ac7cbb7193bcd891ce48ab2acff35e4f8d523980dff834cb42eaffafa
-  object_8958:
+  object_11693:
     md5:
     - 711eb1d89764d45f4ff2622143f744c2
     sha1:
     - 548b64c0f904733dd5433f6f3878487eeda54fa1
     sha256:
     - 1334c087390fb946c894c1863dfc9f0a659f594a3d6307fb48f24c30a23e0fc0
-  object_8960:
+  object_11695:
     md5:
     - 6b116d471a787eb520869ed5c6965fa8
     sha1:
     - ec4bd72fcb440f47912d06c75a9d56ad86953f70
     sha256:
     - dc425e93e83fe02da9c76b56f6fd286eace282eaad6d8d497e17b3ec4059020a
-  object_8962:
+  object_11697:
     md5:
     - 1f1f44a01d5784028302d6ad5e7133aa
     sha1:
     - cb1125d5a57a529bf88bf590c0cb675f37261839
     sha256:
     - 2b6dc1a826a4d5d5de5a30b458e6ed995a4cfb9cad8114d1197541a86905d60e
-  object_8964:
+  object_11699:
     md5:
     - 76e71cf45e99d03a92c8271998a1caee
     sha1:
     - 818bfc1fdb8126b58835e77f13afa9435e883919
     sha256:
     - 331d17dbe4ee61d8f2c91d7e4af17fb38102003663872223efaa4a15099554d7
-  object_8966:
+  object_11701:
     md5:
     - 1a6f9190e7c53cd4e9ca4532547131af
     sha1:
     - 88708e9562a8c4ee4601b3990a664bc63b378753
     sha256:
     - 9d842c9c269345cd3b2a9ce7d338a03ffbf3765661f1ee6d5e178f40d409c3f8
-  object_8968:
+  object_11703:
     md5:
     - 056b178bbeea109d705439aa4e203d09
     sha1:
     - 5ae5ca0daccfa21706e157a19bdb67e48cbfe137
     sha256:
     - 8ef4bc09a9534910617834457114b9217cac9cb33ae22b37889040cde4cabea6
-  object_8970:
+  object_11705:
     md5:
     - 9f76d2f73020064374efe67dc28fa006
     sha1:
@@ -86,14 +86,14 @@ detection:
     - 6f76a8e16908ba2d576cf0e8cdb70114dcb70e0f7223be10aab3a728dc65c41c
   attributes:
     sha256:
-    - 9d842c9c269345cd3b2a9ce7d338a03ffbf3765661f1ee6d5e178f40d409c3f8
-    - 2b6dc1a826a4d5d5de5a30b458e6ed995a4cfb9cad8114d1197541a86905d60e
-    - 66439f0e377bbe8cda3e516e801a86c64688e7c3dde0287b1bfb298a5bdbc2a2
-    - 1334c087390fb946c894c1863dfc9f0a659f594a3d6307fb48f24c30a23e0fc0
-    - dc425e93e83fe02da9c76b56f6fd286eace282eaad6d8d497e17b3ec4059020a
-    - 7b77112ac7cbb7193bcd891ce48ab2acff35e4f8d523980dff834cb42eaffafa
-    - 331d17dbe4ee61d8f2c91d7e4af17fb38102003663872223efaa4a15099554d7
     - 8ef4bc09a9534910617834457114b9217cac9cb33ae22b37889040cde4cabea6
+    - 2b6dc1a826a4d5d5de5a30b458e6ed995a4cfb9cad8114d1197541a86905d60e
     - 6f76a8e16908ba2d576cf0e8cdb70114dcb70e0f7223be10aab3a728dc65c41c
+    - 66439f0e377bbe8cda3e516e801a86c64688e7c3dde0287b1bfb298a5bdbc2a2
+    - 7b77112ac7cbb7193bcd891ce48ab2acff35e4f8d523980dff834cb42eaffafa
     - 94a09aff59c0c27d1049509032d5ba05e9285fd522eb20b033b8188e0fee4ff0
+    - 331d17dbe4ee61d8f2c91d7e4af17fb38102003663872223efaa4a15099554d7
+    - dc425e93e83fe02da9c76b56f6fd286eace282eaad6d8d497e17b3ec4059020a
+    - 1334c087390fb946c894c1863dfc9f0a659f594a3d6307fb48f24c30a23e0fc0
+    - 9d842c9c269345cd3b2a9ce7d338a03ffbf3765661f1ee6d5e178f40d409c3f8
   condition: 1 of object_* or attributes

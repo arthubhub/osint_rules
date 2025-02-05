@@ -1,42 +1,42 @@
 title: 'OSINT - #StopRansomware: Akira Ransomware - url_request'
-id: 9b617d57-f61f-4a32-9512-c2dd2dad32d4
+id: ef02e9b8-e507-4eda-9859-97bf9a2ac041
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/11879a3f-0ca4-491b-8774-d30496e66b34.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.akira
-- attack.t1082
-- attack.t1486
-- attack.t1003.008
-- attack.t1078
-- attack.t1560.001
-- attack.t1490
-- attack.software.akira
-- attack.t1136.002
-- attack.t1090
-- attack.t1133
-- attack.t1003.001
-- attack.t1566.002
-- attack.t1219
-- attack.t1069.001
 - attack.t1567.002
 - attack.t1566.001
-- attack.t1016
-- attack.t1069.002
-- attack.t1190
-- attack.t1562.001
-- attack.t1537
-- attack.t1048
-- attack.t1057
-- attack.t1482
 - attack.t1018
+- attack.t1537
+- attack.t1133
+- attack.t1003.008
+- attack.t1136.002
+- attack.t1048
+- attack.t1562.001
+- attack.software.akira
+- attack.t1090
+- attack.group.akira
+- attack.t1219
+- attack.t1082
+- attack.t1490
+- attack.t1560.001
+- attack.t1486
+- attack.t1069.002
+- attack.t1078
+- attack.t1482
+- attack.t1566.002
+- attack.t1069.001
+- attack.t1057
+- attack.t1003.001
+- attack.t1190
+- attack.t1016
 detection:
-  object_7443:
+  object_8958:
     RequestUrl|contains:
     - https://www.cisa.gov
   condition: 1 of object_*

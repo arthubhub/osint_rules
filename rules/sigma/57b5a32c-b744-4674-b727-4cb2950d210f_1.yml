@@ -1,9 +1,9 @@
 title: OSINT  Aveo Malware Family Targets Japanese Speaking Users by Palo Alto networks
   Unit 42 - url_request
-id: c64dcfef-07fc-4f6a-b8a5-2075bc3028b5
+id: 641e640c-5a30-4385-b94d-b53bf5958c39
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57b5a32c-b744-4674-b727-4cb2950d210f.json
 logsource:
@@ -12,11 +12,11 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - bluepaint.info
-    - snoozetime.info
-    - europcubit.com
-    - coinpack.info
-    - 7b7p.info
-    - http://researchcenter.paloaltonetworks.com
     - donkeyhaws.info
+    - europcubit.com
+    - 7b7p.info
+    - snoozetime.info
+    - http://researchcenter.paloaltonetworks.com
+    - bluepaint.info
+    - coinpack.info
   condition: attributes

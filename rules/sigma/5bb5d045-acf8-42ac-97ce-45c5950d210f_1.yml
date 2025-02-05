@@ -1,47 +1,47 @@
 title: OSINT - Indicators of Compromise for Malware used by APT28 - url_request
-id: 65c4612b-f616-4544-9522-652daa940ed6
+id: 6b8beeb0-8127-4a47-9031-3f0b9c63aaa8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bb5d045-acf8-42ac-97ce-45c5950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.sofacy
-- attack.group.strontium
 - attack.software.x-agent
+- attack.group.strontium
+- attack.group.sofacy
 - attack.software.x-tunnel
 detection:
   attributes:
     RequestUrl|contains:
-    - thepiratecinemaclub.org
-    - georgia-travel.org
-    - moldtravelgroup.com
-    - worldimagebucket.com
-    - bbcweather.org
     - narrowpass.net
-    - fundseats.com
-    - coindmarket.com
-    - pointtk.com
-    - https://www.ncsc.gov.uk
-    - politicweekend.com
-    - creekcounty.net
-    - bulgariatripholidays.com
-    - daysheduler.org
-    - genericnetworkaddress.com
-    - powernoderesources.com
-    - brownvelocity.org
-    - globaltechengineers.org
-    - virtsvc.com
-    - loungecinemaclub.com
-    - beststreammusic.com
     - iboxmit.com
-    - truefashionnews.com
-    - protonhardstorage.com
-    - malaytravelgroup.com
-    - escochart.com
-    - moderntips.org
     - topcinemaclub.com
+    - pointtk.com
+    - moderntips.org
+    - genericnetworkaddress.com
+    - loungecinemaclub.com
+    - globaltechengineers.org
+    - escochart.com
+    - creekcounty.net
+    - brownvelocity.org
+    - virtsvc.com
+    - coindmarket.com
+    - beststreammusic.com
+    - protonhardstorage.com
+    - bbcweather.org
+    - politicweekend.com
+    - thepiratecinemaclub.org
+    - worldimagebucket.com
+    - bulgariatripholidays.com
+    - powernoderesources.com
+    - truefashionnews.com
+    - daysheduler.org
+    - moldtravelgroup.com
+    - https://www.ncsc.gov.uk
+    - malaytravelgroup.com
+    - georgia-travel.org
+    - fundseats.com
   condition: attributes

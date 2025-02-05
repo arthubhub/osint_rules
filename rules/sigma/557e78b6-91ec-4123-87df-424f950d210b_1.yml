@@ -1,9 +1,9 @@
 title: "OSINT  Evilgrab Delivered by Watering Hole Attack on President of Myanmar\xE2\
   \u20AC\u2122s Website by Palo Alto Unit 42 - url_request"
-id: a758454d-c4bc-493e-ada3-70fd0628f3a7
+id: 200ea779-b8b1-4baf-94fa-bf8cf33b6037
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/557e78b6-91ec-4123-87df-424f950d210b.json
 logsource:
@@ -12,10 +12,10 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://blog.trendmicro.com
-    - http://pwc.blogs.com
-    - http://contagiodump.blogspot.com
-    - websecexp.com
     - http://researchcenter.paloaltonetworks.com
     - http://www.president-office.gov.mm
+    - http://pwc.blogs.com
+    - websecexp.com
+    - http://blog.trendmicro.com
+    - http://contagiodump.blogspot.com
   condition: attributes

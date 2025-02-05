@@ -1,8 +1,8 @@
 title: OSINT - 2018-10-09 - HANCITOR INFECTION WITH ZEUS PANDA BANKER - dns_query
-id: 3384a45a-960a-49ca-9668-1b032a0f7b38
+id: 4f06540d-aeaa-46a4-b27b-1c7d753b75c2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bc60f40-929c-4fed-b93d-44e9950d210f.json
 logsource:
@@ -10,33 +10,33 @@ logsource:
   category: dns_query
 tags:
 - attack.t1056
-- attack.t1022
 - attack.t1041
 - attack.t1193
+- attack.t1022
 detection:
-  object_6482:
+  object_11361:
     IpAddresses:
     - 46.36.220.116
   attributes:
     QueryName|contains:
-    - selltooxmoor.com
-    - genesiseastlouisville.com
-    - nobotanri.ru
-    - genesisofindiana.com
-    - carvanadenver.com
-    - sincirewdo.ru
-    - hehenforfi.ru
+    - genesisofeaslouisville.com
     - carvanamemphis.com
+    - 275aacaa1610.net
+    - sincirewdo.ru
+    - genesiseastlouisville.com
+    - genesisatoxmoor.com
+    - veintitna.ru
+    - genesisofindiana.com
+    - nobotanri.ru
+    - genesisofwestlouisville.com
+    - hehenforfi.ru
+    - lachistontfi.ru
+    - fornetodu.com
+    - selltooxmoor.com
+    - oxmoorusedcars.com
+    - carvanadenver.com
+    - carvananashville.com
+    - sellittooxmoor.com
     - 275aacaa1698.net
     - hersjustretleft.ru
-    - oxmoorusedcars.com
-    - sellittooxmoor.com
-    - carvananashville.com
-    - veintitna.ru
-    - fornetodu.com
-    - genesisofeaslouisville.com
-    - lachistontfi.ru
-    - genesisatoxmoor.com
-    - 275aacaa1610.net
-    - genesisofwestlouisville.com
   condition: 1 of object_* or attributes

@@ -1,8 +1,8 @@
 title: OSINT - Who Ran Leakedsource.com? - url_request
-id: 35a98ee4-a3d9-460d-ab5c-7e9bf51ca36d
+id: b53c8494-1557-48ec-a06f-f17ef75afbbf
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58a4aa5c-29c4-4034-9ad4-426002de0b81.json
 logsource:
@@ -11,10 +11,10 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://krebsonsecurity.com
     - daily-streaming.com
     - abusewith.us
-    - tiny-chats.com
     - abusing.rs
+    - https://krebsonsecurity.com
     - cyberpay.info
+    - tiny-chats.com
   condition: attributes

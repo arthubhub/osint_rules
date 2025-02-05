@@ -1,8 +1,8 @@
 title: "OSINT - FINDING THE RAT\xE2\u20AC\u2122S NEST - url_request"
-id: 85c075b8-2c94-4768-966c-463b993e85f9
+id: a93e9c61-4221-4d19-a0ad-ec6f2bfd501b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5880bb50-2330-42a3-a253-4c08950d210f.json
 logsource:
@@ -13,15 +13,15 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - myvm2.biz
-    - vm2online.biz
-    - marciaguthke.com
-    - hackcom.org
-    - https://blog.opendns.com
-    - http://onsitepowersystems.com
-    - thevm2.biz
     - onsitepowersystems.com
     - irus-os-77h7ft.pw
+    - thevm2.biz
+    - myvm2.biz
+    - hackcom.org
+    - vm2online.biz
+    - http://onsitepowersystems.com
+    - https://blog.opendns.com
     - emailhostings.in
     - email-hosting.us
+    - marciaguthke.com
   condition: attributes

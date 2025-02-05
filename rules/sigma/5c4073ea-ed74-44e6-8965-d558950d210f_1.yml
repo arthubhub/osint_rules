@@ -1,8 +1,8 @@
 title: OSINT - LoJax Command and Control Domains Still Active - url_request
-id: f8343569-8c4d-413d-8d8d-14792b39c69e
+id: c410e1ff-4dbb-410a-bf02-ab58ecb1c202
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c4073ea-ed74-44e6-8965-d558950d210f.json
 logsource:
@@ -11,74 +11,74 @@ logsource:
 tags:
 - attack.software.lojax
 detection:
-  object_10507:
+  object_4521:
     RequestUrl|contains:
     - moldstream.md
-  object_10508:
+  object_4522:
     RequestUrl|contains:
     - webstp.com
-  object_10509:
+  object_4523:
     RequestUrl|contains:
     - oiagives.com
-  object_10510:
+  object_4524:
     RequestUrl|contains:
     - elaxo.org
-  object_10511:
+  object_4525:
     RequestUrl|contains:
     - peacefund.eu
-  object_10512:
+  object_4526:
     RequestUrl|contains:
     - jflynci.com
-  object_10513:
+  object_4527:
     RequestUrl|contains:
     - hp-apps.com
-  object_10514:
+  object_4528:
     RequestUrl|contains:
     - vsnet.co
-  object_10515:
+  object_4529:
     RequestUrl|contains:
     - remotepx.net
-  object_10516:
+  object_4530:
     RequestUrl|contains:
     - sysanalyticweb.com
-  object_10517:
+  object_4531:
     RequestUrl|contains:
     - unigymboom.com
-  object_10518:
+  object_4532:
     RequestUrl|contains:
     - treckanalytics.com
-  object_10519:
+  object_4533:
     RequestUrl|contains:
     - msfontserver.com
-  object_10520:
+  object_4534:
     RequestUrl|contains:
     - oiatribe.com
-  object_10521:
+  object_4535:
     RequestUrl|contains:
     - ntpstatistics.com
-  object_10522:
+  object_4536:
     RequestUrl|contains:
     - regvirt.com
-  object_10523:
+  object_4537:
     RequestUrl|contains:
     - visualrates.com
-  object_10524:
+  object_4538:
     RequestUrl|contains:
     - unigymboom.com
-  object_10525:
+  object_4539:
     RequestUrl|contains:
     - ntpstatistics.com
-  object_10526:
+  object_4540:
     RequestUrl|contains:
     - moldstream.md
-  object_10527:
+  object_4541:
     RequestUrl|contains:
     - vsnet.co
-  object_10528:
+  object_4542:
     RequestUrl|contains:
     - visualrates.com
   attributes:
     RequestUrl|contains:
-    - https://www.bleepingcomputer.com
     - https://asert.arbornetworks.com
+    - https://www.bleepingcomputer.com
   condition: 1 of object_* or attributes

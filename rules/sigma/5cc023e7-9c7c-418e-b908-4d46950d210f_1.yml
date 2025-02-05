@@ -1,8 +1,8 @@
 title: OSINT -  DNSpionage brings out the Karkoff - url_request
-id: cebbf2d7-7c51-4b91-a49f-136a62f563e2
+id: d1e1896b-3244-4b87-aaea-adf5c16848d3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cc023e7-9c7c-418e-b908-4d46950d210f.json
 logsource:
@@ -10,13 +10,13 @@ logsource:
   category: url_request
 tags:
 - attack.software.karkoff
-- attack.software.dnspionage
 - attack.group.dnspionage
+- attack.software.dnspionage
 detection:
   attributes:
     RequestUrl|contains:
-    - coldfart.com
-    - kuternull.com
-    - rimrun.com
     - https://blog.talosintelligence.com
+    - rimrun.com
+    - kuternull.com
+    - coldfart.com
   condition: attributes

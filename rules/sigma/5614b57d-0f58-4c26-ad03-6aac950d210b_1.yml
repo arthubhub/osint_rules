@@ -1,9 +1,9 @@
 title: OSINT Cisco Talos Thwarts Access to Massive International Exploit Kit Generating
   $60M Annually From Ransomware Alone by Cisco Talos - url_request
-id: 81ac875a-322b-41e6-9580-bb054a5e497e
+id: 9bbbe9fa-1c55-4f5d-ae1c-9fd231a10440
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5614b57d-0f58-4c26-ad03-6aac950d210b.json
 logsource:
@@ -12,6 +12,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://talosintel.com
     - http://blogs.cisco.com
+    - http://talosintel.com
   condition: attributes

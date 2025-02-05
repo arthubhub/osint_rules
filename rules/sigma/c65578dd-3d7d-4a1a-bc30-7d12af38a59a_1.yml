@@ -1,73 +1,73 @@
 title: 'TraderTraitor: North Korean State-Sponsored APT Targets Blockchain Companies
   - url_request'
-id: 82085910-a861-42ac-8821-8f639d1625a9
+id: fafb2a3b-f95c-459e-ae3b-b236cfb1e7d4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/c65578dd-3d7d-4a1a-bc30-7d12af38a59a.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.g0032
 - attack.group.lazarus_group
+- attack.group.g0032
 detection:
-  object_2630:
+  object_10031:
     RequestUrl|contains:
     - https://www.cisa.gov
-  object_2631:
+  object_10032:
     RequestUrl|contains:
     - https://www.cisa.gov
-  object_2632:
+  object_10033:
     RequestUrl|contains:
     - dafom.dev
-  object_2634:
+  object_10035:
     RequestUrl|contains:
     - tokenais.com
-  object_2636:
+  object_10037:
     RequestUrl|contains:
     - cryptais.com
-  object_2637:
+  object_10038:
     RequestUrl|contains:
     - alticgo.com
-  object_2638:
+  object_10039:
     RequestUrl|contains:
     - esilet.com
-  object_2639:
+  object_10040:
     RequestUrl|contains:
     - greenvideo.nl
-  object_2640:
+  object_10041:
     RequestUrl|contains:
     - dafnefonseca.com
-  object_2641:
+  object_10042:
     RequestUrl|contains:
     - haciendadeclarevot.com
-  object_2642:
+  object_10043:
     RequestUrl|contains:
     - sche-eg.org
-  object_2643:
+  object_10044:
     RequestUrl|contains:
     - www.vinoymas.ch
-  object_2644:
+  object_10045:
     RequestUrl|contains:
     - infodigitalnew.com
-  object_2645:
+  object_10046:
     RequestUrl|contains:
     - creaideck.com
-  object_2646:
+  object_10047:
     RequestUrl|contains:
     - aideck.net
   attributes:
     RequestUrl|contains:
-    - https://infodigitalnew.com
-    - https://aideck.net
-    - https://www.vinoymas.ch
-    - https://sche
-    - https://www.esilet.com
     - https://github.com
-    - https://dafnefonseca.com
-    - https://haciendadeclarevot.com
-    - https://www.alticgo.com
     - https://greenvideo.nl
+    - https://haciendadeclarevot.com
+    - https://www.esilet.com
+    - https://www.alticgo.com
+    - https://sche
+    - https://dafnefonseca.com
+    - https://aideck.net
+    - https://infodigitalnew.com
+    - https://www.vinoymas.ch
   condition: 1 of object_* or attributes

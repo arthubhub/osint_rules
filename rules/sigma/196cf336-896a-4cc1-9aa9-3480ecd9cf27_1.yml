@@ -1,54 +1,54 @@
 title: BatLoader Continues to Abuse Google Search Ads to Deliver Vidar Stealer and
   Ursnif - url_request
-id: 1f63359e-58a2-4ff0-b164-648bb3375805
+id: 396c5927-da6d-4953-a75a-11824ad1b836
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/196cf336-896a-4cc1-9aa9-3480ecd9cf27.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1064
-- attack.group.vidar
-- attack.software.s0386
-- attack.t1410
-- attack.software.vidar
 - attack.t1059.001
 - attack.t1059.006
 - attack.t1059
+- attack.t1064
+- attack.software.s0386
+- attack.group.vidar
+- attack.software.vidar
+- attack.t1410
 detection:
   attributes:
     RequestUrl|contains:
-    - java-r.com
-    - reggy914.ru
-    - java-a.com
-    - adobe-a.com
-    - quickbooks-q.com
-    - bitwarden-t.com
-    - anydesk-r.com
     - gameindikdowd.ru
-    - microso-t.com
-    - tableau-r.com
-    - visualstudio-t.com
-    - freecad-l.com
-    - zoomvideor.com
     - isoridkf.ru
-    - chatgpt-t.com
-    - openoffice-a.com
-    - uelcoskdi.ru
+    - anydesk-r.com
     - gimp-t.com
     - java-s.com
-    - spotify-uss.com
-    - adobe-l.com
-    - iujdhsndjfks.ru
-    - jhgfdlkjhaoiu.su
-    - anydesk-o.com
-    - shvarcnegerhistory.com
+    - microso-t.com
     - basecamp-a.com
     - pixelarmada.su
+    - freecad-l.com
+    - adobe-a.com
+    - iujdhsndjfks.ru
+    - anydesk-o.com
+    - adobe-l.com
+    - tableau-r.com
     - adobe-e.com
+    - quickbooks-q.com
+    - uelcoskdi.ru
+    - visualstudio-t.com
+    - jhgfdlkjhaoiu.su
     - reggy506.ru
+    - openoffice-a.com
+    - bitwarden-t.com
+    - reggy914.ru
+    - java-r.com
+    - zoomvideor.com
+    - chatgpt-t.com
+    - java-a.com
+    - spotify-uss.com
+    - shvarcnegerhistory.com
   condition: attributes

@@ -1,35 +1,35 @@
 title: OSINT -  BattleRoyal, DarkGate Cluster Spreads via Email and Fake Browser Updates
   - dns_query
-id: 87d1c636-a4fd-4d06-8e89-b17fbb97a38a
+id: 39f8ad1a-d282-4940-bcd0-314c03bd8c16
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/f0ef984c-2467-40aa-83c6-7c671a6379cb.json
 logsource:
   product: windows
   category: dns_query
 detection:
-  object_7087:
+  object_4833:
     QueryName|contains:
     - searcherbigdealk.com
-  object_7088:
+  object_4834:
     QueryName|contains:
     - searcherbigdealk.com
-  object_7089:
+  object_4835:
     QueryName|contains:
     - heilee.com
-  object_7090:
+  object_4836:
     QueryName|contains:
     - kairoscounselingmi.com
   attributes:
     QueryName|contains:
-    - searcherbigdealk.com
-    - nathumvida.org
-    - heilee.com
     - zxcdota2huysasi.com
+    - searcherbigdealk.com
     - kairoscounselingmi.com
+    - heilee.com
+    - nathumvida.org
     IpAddresses:
-    - 5.181.159.29
     - 79.110.62.96
+    - 5.181.159.29
   condition: 1 of object_* or attributes

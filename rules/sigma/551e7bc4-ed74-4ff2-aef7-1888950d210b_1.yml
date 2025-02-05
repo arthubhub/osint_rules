@@ -1,8 +1,8 @@
 title: OSINT Additional yara rules for Equation Drug by Florian Roth - url_request
-id: 750cd608-5d17-4234-958e-0c91603bd1e3
+id: fa646391-a9f1-4e7c-9e99-b7e3641e5cc7
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/551e7bc4-ed74-4ff2-aef7-1888950d210b.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://github.com
     - http://securelist.com
+    - https://github.com
   condition: attributes

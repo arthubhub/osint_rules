@@ -1,38 +1,38 @@
 title: OSINT- WinRAR Zero-day (CVE-2018-20250) Abused in Multiple Campaigns - url_request
-id: 29d26435-0d87-4c5c-995a-a33eee689ec4
+id: 7ac498fa-928b-448b-817d-9bd5839f6166
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c9b46dc-f354-4e45-b44a-4966950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.razy
 - attack.software.azorult
-- attack.software.quasar_rat
 - attack.group.azorult
 - attack.software.netwire
-- attack.group.quasar_rat
-- attack.software.s0262
 - attack.software.razy
+- attack.group.razy
+- attack.software.s0262
 - attack.software.s0198
+- attack.software.quasar_rat
+- attack.group.quasar_rat
 detection:
-  object_7338:
+  object_9873:
     RequestUrl|contains:
     - https://mobile.twitter.com
-    - https://research.checkpoint.com
-    - https://otx.alienvault.com
-    - https://www.fireeye.com
     - https://t.co
+    - https://research.checkpoint.com
+    - https://www.fireeye.com
+    - https://otx.alienvault.com
   attributes:
     RequestUrl|contains:
-    - http://185.162.131.92
-    - http://www.khuyay.org
+    - http://185.49.71.101
+    - http://103.225.168.159
     - http://47.91.56.21
     - http://tiny-share.com
+    - http://www.khuyay.org
+    - http://185.162.131.92
     - http://www.alahbabgroup.com
-    - http://103.225.168.159
-    - http://185.49.71.101
   condition: 1 of object_* or attributes

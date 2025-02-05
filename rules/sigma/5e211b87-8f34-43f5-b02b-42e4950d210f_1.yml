@@ -1,8 +1,8 @@
 title: Ako Ransomware - url_request
-id: 206dbffe-6afc-4934-9c12-8c5c89e13240
+id: 3992b5ba-ef76-4a6a-b420-a4400329b65f
 description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e211b87-8f34-43f5-b02b-42e4950d210f.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://wilbursecurity.com
     - https://app.any.run
+    - https://wilbursecurity.com
   condition: attributes

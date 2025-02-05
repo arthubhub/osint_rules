@@ -1,18 +1,18 @@
 title: OSINT - First Exploitation of Follina Seen in the Wild - dns_query
-id: 6796e09c-d876-4ee3-8063-cd228fd252ef
+id: b77ed3be-d5e4-447f-bcbc-3eca45988598
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/63a9a6fa-f518-4591-9dbe-d0bb0f0ea588.json
 logsource:
   product: windows
   category: dns_query
 detection:
-  object_6860:
+  object_8847:
     IpAddresses:
     - 20.62.24.77
-  object_6861:
+  object_8848:
     QueryName|contains:
     - coolrat.xyz
   condition: 1 of object_*

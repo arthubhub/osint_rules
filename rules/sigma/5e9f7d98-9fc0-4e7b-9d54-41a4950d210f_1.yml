@@ -1,9 +1,9 @@
 title: Trickbot to Pyxie - url_request
-id: b6cf4f6c-6dd0-44fc-9c97-dc42eb1f63c2
+id: 07420c46-bedc-4ed4-9730-23dbbc64823e
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e9f7d98-9fc0-4e7b-9d54-41a4950d210f.json
 logsource:
@@ -12,8 +12,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - benreat.com
-    - teamchuan.com
     - https://thedfirreport.com
+    - teamchuan.com
+    - benreat.com
     - tedxns.com
   condition: attributes

@@ -1,9 +1,9 @@
 title: Kaseya ransomware attack - indicators and information publicly available -
   url_request
-id: 7973aa2c-500a-4ff0-ad1e-7ea053bae17f
+id: 997cf8c9-c341-422d-86b9-0b96b254553b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e0eaf6f2-a12c-4b31-9d19-f77faf1ea4c9.json
 logsource:
@@ -11,56 +11,56 @@ logsource:
   category: url_request
 tags:
 - attack.t1486
-- attack.group.sodinokibi
 - attack.software.sodinokibi
+- attack.group.sodinokibi
 detection:
-  object_10859:
+  object_9027:
     RequestUrl|contains:
     - https://us-cert.cisa.gov
   attributes:
     RequestUrl|contains:
-    - bxdf.info
-    - cursosgratuitosnainternet.com
-    - blgr.be
-    - thomasvicino.com
-    - pasvenska.se
-    - fotoscondron.com
-    - c2e-poitiers.com
-    - milestoneshows.com
-    - gmto.fr
-    - 8449nohate.org
-    - https://helpdesk.kaseya.com
-    - 4youbeautysalon.com
-    - 123vrachi.ru
     - iqbalscientific.com
-    - kaotikkustomz.com
-    - 1team.es
-    - cerebralforce.net
-    - 101gowrie.com
-    - 365questions.org
-    - mindpackstudios.com
-    - filmstreamingvfcomplet.be
-    - fannmedias.com
-    - facettenreich27.de
-    - smartypractice.com
-    - homng.net
-    - simoneblum.de
-    - myhostcloud.com
-    - southeasternacademyofprosthodontics.org
-    - candyhouseusa.com
-    - daklesa.de
-    - https://community.sophos.com
-    - 4net.guru
-    - https://github.com
-    - tonelektro.nl
-    - ncuccr.org
-    - 12starhd.online
-    - faroairporttransfers.net
-    - tanzschule-kieber.de
-    - 35-40konkatsu.net
+    - bxdf.info
     - sw1m.ru
-    - gonzalezfornes.es
-    - blossombeyond50.com
-    - https://twitter.com
+    - 4youbeautysalon.com
+    - southeasternacademyofprosthodontics.org
+    - milestoneshows.com
+    - cerebralforce.net
+    - tanzschule-kieber.de
+    - tonelektro.nl
+    - https://community.sophos.com
+    - gmto.fr
+    - smartypractice.com
+    - 365questions.org
+    - thomasvicino.com
+    - fannmedias.com
+    - 1team.es
+    - 123vrachi.ru
+    - c2e-poitiers.com
+    - mindpackstudios.com
+    - faroairporttransfers.net
+    - 101gowrie.com
+    - ncuccr.org
+    - myhostcloud.com
+    - https://helpdesk.kaseya.com
+    - kaotikkustomz.com
+    - facettenreich27.de
+    - 4net.guru
+    - 8449nohate.org
+    - daklesa.de
     - bierensgebakkramen.nl
+    - simoneblum.de
+    - fotoscondron.com
+    - 12starhd.online
+    - candyhouseusa.com
+    - cursosgratuitosnainternet.com
+    - https://twitter.com
+    - https://github.com
+    - 35-40konkatsu.net
+    - gonzalezfornes.es
+    - filmstreamingvfcomplet.be
+    - homng.net
+    - blgr.be
+    - pasvenska.se
+    - blossombeyond50.com
   condition: 1 of object_* or attributes

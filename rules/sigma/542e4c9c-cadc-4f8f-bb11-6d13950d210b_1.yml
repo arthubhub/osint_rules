@@ -1,8 +1,8 @@
 title: OSINT ShellShock scanning IPs from OpenDNS - url_request
-id: d0274882-2da6-4de2-98a0-ec8c05a44340
+id: b47c1cfb-21f2-4009-b45f-533d460f24ac
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/542e4c9c-cadc-4f8f-bb11-6d13950d210b.json
 logsource:
@@ -11,8 +11,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://gist.github.com
     - http://labs.opendns.com
     - stablehost.us
     - https://gist.githubusercontent.com
+    - https://gist.github.com
   condition: attributes

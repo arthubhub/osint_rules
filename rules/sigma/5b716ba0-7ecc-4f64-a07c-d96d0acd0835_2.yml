@@ -1,9 +1,9 @@
 title: 'Talos: Threat Roundup for August 3-10 - dns_query'
-id: c061523a-8f7a-469e-8ef0-36ee6ee0c8a6
+id: 475aa32b-0ae4-43e9-8ecc-aada4e4a1be3
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b716ba0-7ecc-4f64-a07c-d96d0acd0835.json
 logsource:
@@ -12,9 +12,9 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - ionesystemcare.info
     - ip-api.com
+    - ionesystemcare.info
     IpAddresses:
-    - 187.192.180.144
     - 67.68.235.25
+    - 187.192.180.144
   condition: attributes

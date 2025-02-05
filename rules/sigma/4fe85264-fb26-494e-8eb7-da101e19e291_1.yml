@@ -1,8 +1,8 @@
 title: Investigating FortiManager Zero-Day Exploitation (CVE-2024-47575) - url_request
-id: b4aa6b3f-f7e8-4cdc-bf4f-8bbbb75e5124
+id: 66f4a248-f365-4c16-8d1a-2efd17aae271
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/4fe85264-fb26-494e-8eb7-da101e19e291.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 tags:
 - attack.t1190
 detection:
-  object_16959:
+  object_12111:
     RequestUrl|contains:
     - https://cloud.google.com
   condition: 1 of object_*

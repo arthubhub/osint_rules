@@ -1,8 +1,8 @@
 title: Hezb cryptomining malware - dns_query
-id: fce9c8d9-e938-4579-84cf-006f3fa856c9
+id: d0f8e861-b563-4c33-8359-c0d289def062
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/7360197a-48e6-4792-b7c6-5d616d5c79c9.json
 logsource:
@@ -10,13 +10,13 @@ logsource:
   category: dns_query
 tags:
 - attack.group.hezb
-- attack.t1190
 - attack.t1496
+- attack.t1190
 detection:
-  object_9254:
+  object_557:
     IpAddresses:
     - 106.251.252.226
-  object_9255:
+  object_558:
     IpAddresses:
     - 205.147.101.170
   attributes:

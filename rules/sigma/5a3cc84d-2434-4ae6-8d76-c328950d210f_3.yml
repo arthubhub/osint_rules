@@ -1,22 +1,22 @@
 title: OSINT - Sednit espionage group now using custom exploit kit - process_creation
-id: 7a2b85ef-1563-467e-8d71-b21ca108421f
+id: 5158fe02-1fdd-406f-9580-a69752368c5c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a3cc84d-2434-4ae6-8d76-c328950d210f.json
 logsource:
   product: windows
   category: process_creation
 detection:
-  object_6486:
+  object_12488:
     md5:
     - df895e6479abf85c4c65d7d3a2451ddb
     sha1:
     - d61ee0b0d4ed95f3300735c81740a21b8beef337
     sha256:
     - 6ffaa374cfa9504b061b52a353913c6c120bd4fe43e1a79f69fba7f964e30a4e
-  object_6488:
+  object_12490:
     md5:
     - ee64d3273f9b4d80020c24edcbbf961e
     sha1:
@@ -25,8 +25,8 @@ detection:
     - e031299fa1381b40c660b8cd831bb861654f900a1e2952b1a76bedf140972a81
   attributes:
     sha1:
-    - 12223f098ba3088379ec1dc59440c662752ddabd
-    - d0db619a7a160949528d46d20fc0151bf9775c32
     - 86092636e7ffa22481ca89ac1b023c32c56b24cf
     - d61ee0b0d4ed95f3300735c81740a21b8beef337
+    - d0db619a7a160949528d46d20fc0151bf9775c32
+    - 12223f098ba3088379ec1dc59440c662752ddabd
   condition: 1 of object_* or attributes

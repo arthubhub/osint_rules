@@ -1,21 +1,21 @@
 title: OSINT - Fortinet says SSL-VPN pre-auth RCE bug is exploited in attacks - url_request
-id: f11560de-016e-411a-a0f3-ba7ba44c381b
+id: 586556ff-761c-4a60-8442-698339d79558
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e132e5f2-1a09-43e4-b2d6-8046c730616f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1190
 - attack.t1133
+- attack.t1190
 detection:
-  object_17576:
+  object_12128:
     RequestUrl|contains:
     - https://www.bleepingcomputer.com
-  object_17581:
+  object_12133:
     RequestUrl|contains:
     - https://www.fortiguard.com
   condition: 1 of object_*

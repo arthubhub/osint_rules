@@ -1,8 +1,8 @@
 title: OSINT - Botnet exploiting GPON Vulnerability - url_request
-id: f8e0c5c3-2167-430b-8559-5bb3e0046b8c
+id: 65e3f324-3b39-4ab6-8580-85b5bed8d430
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5af412ea-4254-4668-b1ea-44bc950d210f.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://otx.alienvault.com
     - http://185.62.190.191
+    - https://otx.alienvault.com
   condition: attributes

@@ -1,9 +1,9 @@
 title: OSINT - Alert (TA18-074A) Russian Government Cyber Activity Targeting Energy
   and Other Critical Infrastructure Sectors - dns_query
-id: ae932e25-8549-4c75-bf68-37cb81f78187
+id: 334817b2-8feb-45a8-ba28-974d0df8ce05
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5aaa8a97-0cac-48bd-877a-41b5950d210f.json
 logsource:
@@ -12,30 +12,30 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - bit.ly
     - imageliners.com
     - tinyurl.com
-    - bit.ly
     IpAddresses:
-    - 176.53.11.130
     - 151.80.163.14
-    - 193.213.49.115
-    - 130.25.10.158
-    - 62.8.193.206
     - 195.87.199.197
-    - 67.199.248.10
-    - 192.81.76.117
     - 187.130.251.249
+    - 192.81.76.117
+    - 176.53.11.130
+    - 167.114.44.147
     - 41.205.61.221
+    - 5.153.58.45
+    - 130.25.10.158
     - 82.222.188.18
     - 91.183.104.150
-    - 167.114.44.147
-    - 96.126.116.217
-    - 149.210.156.198
-    - 5.150.143.107
     - 184.154.150.66
-    - 2.229.10.193
-    - 203.113.4.230
+    - 67.199.248.10
+    - 96.126.116.217
     - 41.78.157.34
-    - 5.153.58.45
     - 104.20.219.42
+    - 203.113.4.230
+    - 62.8.193.206
+    - 193.213.49.115
+    - 5.150.143.107
+    - 149.210.156.198
+    - 2.229.10.193
   condition: attributes

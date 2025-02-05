@@ -1,8 +1,8 @@
 title: Phishing targeting Luxembourg services (hosted and served on/from AWS) - url_request
-id: 8f63e6b9-7c52-490b-a852-7f117a5f203c
+id: 8c781281-fa95-494f-899d-f3dbcc4a8668
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/f3290493-8f74-4220-aa04-b83408e37a0c.json
 logsource:
@@ -11,94 +11,94 @@ logsource:
 tags:
 - attack.t1566
 detection:
-  object_16450:
+  object_11656:
     RequestUrl|contains:
     - cfl-lu.com
     - ccss.support
-  object_16451:
+  object_11657:
     RequestUrl|contains:
     - https://sante-lu.com
-  object_16452:
+  object_11658:
     RequestUrl|contains:
     - luxtrust-help.com
-  object_16453:
+  object_11659:
     RequestUrl|contains:
-    - public-ccss.com
     - https://public-ccss.com
-  object_16454:
+    - public-ccss.com
+  object_11660:
     RequestUrl|contains:
     - https://help-luxtrust.lu
     - help-luxtrust.lu
-  object_16455:
+  object_11661:
     RequestUrl|contains:
     - https://carte-sante-lu.com
-  object_16456:
+  object_11662:
     RequestUrl|contains:
-    - infoluxtrust.com
     - https://infoluxtrust.com
-  object_16457:
+    - infoluxtrust.com
+  object_11663:
     RequestUrl|contains:
-    - luxtrust.help
     - https://luxtrust.help
-  object_16458:
+    - luxtrust.help
+  object_11664:
     RequestUrl|contains:
     - https://ccss.digital
-  object_16459:
+  object_11665:
     RequestUrl|contains:
     - https://public-order.lu
-  object_16460:
+  object_11666:
     RequestUrl|contains:
     - order-public.com
     - https://order-public.com
-  object_16461:
+  object_11667:
     RequestUrl|contains:
-    - https://support-luxtrust.com
     - support-luxtrust.com
-  object_16462:
+    - https://support-luxtrust.com
+  object_11668:
     RequestUrl|contains:
-    - guichet.me
     - https://guichet.me
-  object_16463:
+    - guichet.me
+  object_11669:
     RequestUrl|contains:
     - cfl-lu.com
-  object_16464:
+  object_11670:
     RequestUrl|contains:
     - card-order.lu
-  object_16465:
+  object_11671:
     RequestUrl|contains:
     - payconiq.direct
     - payconiq.tel
-  object_16466:
+  object_11672:
     RequestUrl|contains:
     - https://support-luxtrust.lu
-  object_16467:
+  object_11673:
     RequestUrl|contains:
     - payconiq.support
-  object_16468:
+  object_11674:
     RequestUrl|contains:
     - https://app-luxtrust.com
-  object_16469:
+  object_11675:
     RequestUrl|contains:
     - http://payconiq-blocage.com
-  object_16470:
+  object_11676:
     RequestUrl|contains:
     - http://update-lu.com
-  object_16471:
+  object_11677:
     RequestUrl|contains:
     - https://luxtrust-support.com
-  object_16472:
+  object_11678:
     RequestUrl|contains:
     - https://luxtrust-support.com
   attributes:
     RequestUrl|contains:
     - luxtrust-unlock.com
+    - www-cns.com
+    - ccss-public.com
+    - luxtrust-cancel.com
     - luxtrust.help
     - luxtrust.support
-    - www-cns.com
-    - cns-lu.com
     - ccss-sante-lu.com
-    - https://public-ccss.com
-    - ccss-public.com
     - www-cns-lu.com
-    - luxtrust-cancel.com
+    - cns-lu.com
+    - https://public-ccss.com
   condition: 1 of object_* or attributes

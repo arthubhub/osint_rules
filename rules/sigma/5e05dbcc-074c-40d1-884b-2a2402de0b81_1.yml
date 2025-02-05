@@ -1,8 +1,8 @@
 title: 'OSINT - The #BronzeUnion/#LuckyMouse/#APT27 infection checker - url_request'
-id: 25ab5983-2021-40ca-b56a-02b83df876b3
+id: ccf37687-4ddc-4e4e-9d76-f865e6cba10d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e05dbcc-074c-40d1-884b-2a2402de0b81.json
 logsource:
@@ -10,10 +10,10 @@ logsource:
   category: url_request
 tags:
 - attack.group.emissary_panda
-- attack.group.threat_group-3390
 - attack.group.g0027
+- attack.group.threat_group-3390
 detection:
-  object_6818:
+  object_4593:
     RequestUrl|contains:
     - https://twitter.com
   condition: 1 of object_*

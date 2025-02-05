@@ -1,92 +1,92 @@
 title: 'OSINT - FINTEAM: Trojanized TeamViewer Against Government Targets - process_creation'
-id: 4206bc6a-77d2-4f79-8155-c95b368b63a7
+id: 1752e0ec-7497-41eb-8148-a4cfe4e2b2b5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cbf6a0e-bfa4-458c-9b40-416a02de0b81.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1113
 - attack.t1041
 - attack.t1193
+- attack.t1113
 detection:
-  object_10782:
+  object_7925:
     sha256:
     - efe51c2453821310c7a34dca3054021d0f6d453b7133c381d75e3140901efd12
-  object_10783:
+  object_7926:
     md5:
     - 1e741ebc08af09edc69f017e170b9852
     sha1:
     - 6f7dfdcfd999c965f5f55fa96a62760f2e1821a7
     sha256:
     - 68f543331aee74b8da5cb4351ef46d8102e912e44f9bd602a1d6a945e65492a8
-  object_10785:
+  object_7928:
     md5:
     - 4dbe9dbfb53438d9ce410535355cd973
     sha1:
     - 816b013c8be6e5708690645964b5d442c085041e
     sha256:
     - efe51c2453821310c7a34dca3054021d0f6d453b7133c381d75e3140901efd12
-  object_10787:
+  object_7930:
     md5:
     - 799ab035023b655506c0d565996579b5
     sha1:
     - 43cd68e741a2207579c0f5ab4d34acd9cd9f703c
     sha256:
     - 41f749bdca8c2abed3e1c8c520b6734b819e241af370eb5921fbecaa514171fe
-  object_10789:
+  object_7932:
     md5:
     - 72de32fa52cc2fab2b0584c26657820f
     sha1:
     - cf7909caccc91004cbbb0289835c0bb0fb4b58d2
     sha256:
     - 3fd738d510d3f503a871d30c05a4ecda11fb7d1c63a628cdbfcc4164a8d867f4
-  object_10791:
+  object_7934:
     md5:
     - 1675cdec4c0ff49993a1fcbdfad85e56
     sha1:
     - 376f8936258a0c6a2f29bbf9b2a55d9d7282d348
     sha256:
     - a3d0d9b1b830fcb48f312634b2ec045e2859f051a9c415a37cd5ba30b70c1224
-  object_10793:
+  object_7936:
     md5:
     - 013e87b874477fcad54ada4fa0a274a2
     sha1:
     - 32a175ba416fec7f85c405abd58384a7f40225da
     sha256:
     - b4b5f7d0778c7954461536bca8943d3f87a7808bc33632ca899660b0f62f43aa
-  object_10795:
+  object_7938:
     md5:
     - e1167cb7f3735d4edec5f7219cea64ef
     sha1:
     - 9b32cbdba2f3f40f2072dbeb61b345c910e45b39
     sha256:
     - b2ab87d5408a19b0d65d49b74c0f3d879ac55c3e57117e4117ff500394e2ad17
-  object_10797:
+  object_7940:
     md5:
     - c6ae889f3bee42cc19a728ba66fa3d99
     sha1:
     - 18cb6155efbfa3311b919ae8e10fbf35680466a8
     sha256:
     - 8fbeaabbe09e9e2c97c49e5d9352001df044e7ce277f35d4a617add07216da07
-  object_10799:
+  object_7942:
     md5:
     - aad0d93a570e6230f843dcdf20041e1e
     sha1:
     - 57fe83b6465e52198bd76b8b987601f716009033
     sha256:
     - 4e676f83ebb765ee3d2215b9e957b966947049fcffc251c2b2f97121a19ef4fc
-  object_10801:
+  object_7944:
     md5:
     - 44038b936667f6ce2333af80086f877f
     sha1:
     - 60dfcc9c2c6ec97538981dd38196607382256693
     sha256:
     - 9f262e3f57d8dbb1778b8eff2e82165719dd2cf85ce2f292c87d7080d085d0fa
-  object_10803:
+  object_7946:
     md5:
     - 6cc0218d2b93a243721b088f177d8e8f
     sha1:
@@ -95,16 +95,16 @@ detection:
     - fa7aab5d6e62cd1d9d5c92d793cbd3f570d9d4c3c6b1744a25382e93c679f570
   attributes:
     md5:
-    - 4acf624ad87609d476180ecc4c96c355
-    - 1e741ebc08af09edc69f017e170b9852
-    - c6ae889f3bee42cc19a728ba66fa3d99
-    - 1675cdec4c0ff49993a1fcbdfad85e56
     - 4dbe9dbfb53438d9ce410535355cd973
-    - 013e87b874477fcad54ada4fa0a274a2
     - aad0d93a570e6230f843dcdf20041e1e
-    - 72de32fa52cc2fab2b0584c26657820f
     - e1167cb7f3735d4edec5f7219cea64ef
+    - 013e87b874477fcad54ada4fa0a274a2
+    - 4acf624ad87609d476180ecc4c96c355
+    - 1675cdec4c0ff49993a1fcbdfad85e56
     - 44038b936667f6ce2333af80086f877f
-    - 6cc0218d2b93a243721b088f177d8e8f
     - 799ab035023b655506c0d565996579b5
+    - c6ae889f3bee42cc19a728ba66fa3d99
+    - 6cc0218d2b93a243721b088f177d8e8f
+    - 1e741ebc08af09edc69f017e170b9852
+    - 72de32fa52cc2fab2b0584c26657820f
   condition: 1 of object_* or attributes

@@ -1,8 +1,8 @@
 title: OSINT -  DNSpionage Campaign Targets Middle East - dns_query
-id: d2fc7b82-0184-43eb-a5fc-85c55188970d
+id: 7164d6c6-fbf2-4f61-a2af-f695b45e386e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bfd7696-5874-4de3-acf3-4478950d210f.json
 logsource:
@@ -11,15 +11,15 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - hr-suncor.com
-    - 0ffice36o.com
     - hr-wipro.com
+    - 0ffice36o.com
+    - hr-suncor.com
     IpAddresses:
-    - 185.161.211.79
-    - 40.101.8.168
-    - 91.199.39.133
-    - 185.20.187.8
     - 185.161.211.72
     - 104.16.1.7
+    - 185.161.211.79
     - 185.20.184.138
+    - 185.20.187.8
+    - 91.199.39.133
+    - 40.101.8.168
   condition: attributes

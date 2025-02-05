@@ -1,19 +1,19 @@
 title: 'zloader: VBA, R1C1 References, and Other Tomfoolery - dns_query'
-id: 6a92780f-9884-4666-a3af-181324fe02f2
+id: 18bbe687-ae2c-41e1-9f2a-1b9a0cd48884
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/0733f160-8e52-4548-a4c8-19a1cfb41d0d.json
 logsource:
   product: windows
   category: dns_query
 detection:
-  object_10818:
+  object_8318:
     QueryName|contains:
-    - wireborg.com
     - datalibacbi.ml
     - procacardenla.ga
     - zmedia.shwetech.com
+    - wireborg.com
   condition: 1 of object_*

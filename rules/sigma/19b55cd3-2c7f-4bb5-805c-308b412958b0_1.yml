@@ -1,31 +1,31 @@
 title: Brazil malspam pushes Astaroth (Guildma) malware - url_request
-id: 00e41ccb-86da-4c5f-a8fb-a2563529848e
+id: efff5bbe-0457-48a0-9fc0-769645189b39
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/19b55cd3-2c7f-4bb5-805c-308b412958b0.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.astaroth
 - attack.software.astaroth
-- attack.software.s0373
+- attack.group.astaroth
 - attack.software.guildma
+- attack.software.s0373
 detection:
-  object_9058:
+  object_731:
     RequestUrl|contains:
     - https://isc.sans.edu
-  object_9059:
+  object_732:
     RequestUrl|contains:
     - https://otx.alienvault.com
-  object_9060:
+  object_733:
     RequestUrl|contains:
     - w7oaer.infocloudgruposolucaoecia.link
   attributes:
     RequestUrl|contains:
-    - http://w7oaer.infocloudgruposolucaoecia.link
     - http://www.intangiblesearch.it
     - https://ajax.googleapis.com
+    - http://w7oaer.infocloudgruposolucaoecia.link
   condition: 1 of object_* or attributes

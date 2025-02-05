@@ -1,38 +1,38 @@
 title: OSINT - Alert (TA17-117A) Intrusions Affecting Multiple Victims Across Multiple
   Sectors - url_request
-id: 3ebf689f-4f9f-463c-9875-770c7536d7d4
+id: ea2c9f3b-0ed4-43fd-a706-56eb7a3fff75
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/01/29
+date: 2025/02/05
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5902e33b-5f04-44d9-8260-427e950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.redleaves
 - attack.software.plugx
+- attack.software.redleaves
 detection:
   attributes:
     RequestUrl|contains:
-    - unhamj.com
-    - mofa-go-jp.com
-    - vmmini.com
-    - cloud-maste.com
-    - salvaiona.com
-    - catholicmmb.com
-    - wchildress.com
-    - meiji-ac-jp.com
-    - incloud-go.com
-    - https://www.us-cert.gov
     - jica-go-jp.bike
-    - ccfchrist.com
-    - jica-go-jp.biz
-    - incloud-obert.com
+    - catholicmmb.com
+    - meiji-ac-jp.com
     - microsoft.got
+    - unhamj.com
+    - vmmini.com
+    - jica-go-jp.biz
+    - ccfchrist.com
     - bdoncloud.com
-    - cloud-kingl.com
     - jimin-jp.biz
+    - incloud-obert.com
     - cwiinatonal.com
+    - mofa-go-jp.com
     - sindeali.com
+    - https://www.us-cert.gov
+    - cloud-kingl.com
+    - cloud-maste.com
+    - wchildress.com
+    - incloud-go.com
+    - salvaiona.com
   condition: attributes
