@@ -1,6 +1,6 @@
 title: 'Threat Analysis: Malicious Microsoft Word Documents Being Used in Targeted
   Attack Campaigns - dns_query'
-id: 20755bce-9ea4-4a8f-87ae-0b296e44c235
+id: e1685607-b4d6-437d-8743-d05261b4b02f
 description: edit this field when analysing or editing the rule - reported by "Crimeware"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,11 +12,11 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - www.themediaeducation.com
-    - www.bankingandfinanceexpert.com
-    - carbon-copy-marketing.com
-    - free-clipart-archive.com
     - stationmovil.com
+    - www.bankingandfinanceexpert.com
+    - free-clipart-archive.com
+    - carbon-copy-marketing.com
+    - www.themediaeducation.com
     IpAddresses:
     - 212.83.58.231
   condition: attributes

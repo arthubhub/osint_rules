@@ -1,6 +1,6 @@
 title: 'OSINT - BitPaymer Source Code Fork: Meet DoppelPaymer Ransomware and Dridex
   2.0 - process_creation'
-id: 8ab7bffb-1bd6-4220-ad2d-7dc426fd7d6a
+id: cdbc32eb-1ab9-4543-b0ac-7721d37f3fdf
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,13 +10,13 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.dridex
-- attack.group.indrik_spider
-- attack.group.bitpaymer
-- attack.software.bitpaymer
-- attack.software.dridex
 - attack.group.friedex
+- attack.software.dridex
+- attack.software.bitpaymer
+- attack.group.bitpaymer
+- attack.group.dridex
 - attack.software.friedex
+- attack.group.indrik_spider
 detection:
   object_5259:
     md5:
@@ -62,12 +62,12 @@ detection:
     - bd2c2cf0631d881ed382817afcce2b093f4e412ffb170a719e2762f250abfea4
   attributes:
     sha256:
-    - 51d8618ec86159327e883615ad8989c7638172cf801f65ab0367e5b2e6af596a
-    - 70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4
-    - 813d8020f32fefe01b66bea0ce63834adef2e725801b4b761f5ea90ac4facd3a
-    - 801b04a1504f167c25f568f8d7cbac13bdde6440a609d0dcd64ebe225c197f9b
-    - bfb7e62ba4ad5975e68a1beefb045cb72e056911fd7a8b070a15029dfcbbefe1
     - 0f97f6d53fff47914174bc3a05fb016e2c02ed0b43c827e5e5aadba2d244aecc
-    - d4a0fe56316a2c45b9ba9ac1005363309a3edc7acf9e4df64d326a0ff273e80f
+    - 801b04a1504f167c25f568f8d7cbac13bdde6440a609d0dcd64ebe225c197f9b
     - bd2c2cf0631d881ed382817afcce2b093f4e412ffb170a719e2762f250abfea4
+    - bfb7e62ba4ad5975e68a1beefb045cb72e056911fd7a8b070a15029dfcbbefe1
+    - 813d8020f32fefe01b66bea0ce63834adef2e725801b4b761f5ea90ac4facd3a
+    - 51d8618ec86159327e883615ad8989c7638172cf801f65ab0367e5b2e6af596a
+    - d4a0fe56316a2c45b9ba9ac1005363309a3edc7acf9e4df64d326a0ff273e80f
+    - 70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4
   condition: 1 of object_* or attributes

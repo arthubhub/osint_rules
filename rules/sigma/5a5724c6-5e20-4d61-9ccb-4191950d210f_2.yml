@@ -1,5 +1,5 @@
 title: OSINT - Mac Malware of 2017 - dns_query
-id: abb0b0cf-22e3-4076-bd61-136bec6fb231
+id: b37ee7b6-95e5-4d09-824c-2628fef9a111
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,21 +9,21 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.filecoder
-- attack.software.fruitfly
-- attack.software.pwnet
-- attack.software.cpumeaner
-- attack.software.macransom
-- attack.group.filecoder
-- attack.software.macspy
-- attack.software.proton
-- attack.software.turla
-- attack.software.x-agent
-- attack.software.mughthesec
-- attack.software.xagentosx
-- attack.group.macransom
-- attack.software.empyre
 - attack.software.macdownloader
+- attack.software.turla
+- attack.software.macransom
+- attack.software.proton
+- attack.software.fruitfly
+- attack.software.filecoder
+- attack.software.x-agent
+- attack.group.filecoder
+- attack.software.empyre
+- attack.software.cpumeaner
+- attack.group.macransom
+- attack.software.xagentosx
+- attack.software.macspy
+- attack.software.pwnet
+- attack.software.mughthesec
 detection:
   object_17864:
     QueryName|contains:
@@ -32,22 +32,22 @@ detection:
     - 185.22.174.37
   attributes:
     QueryName|contains:
-    - officialswebsites.info
-    - apple-search.info
-    - handbrakestore.com
-    - handbrake.cc
-    - eltima.in
-    - apple-iclods.net
-    - symantecblog.com
-    - apple-uptoday.org
-    - apple-iclods.org
     - apple-checker.org
+    - handbrake.cc
+    - officialswebsites.info
+    - apple-uptoday.org
+    - handbrakestore.com
+    - eltima.in
+    - symantecblog.com
+    - apple-search.info
+    - apple-iclods.net
+    - apple-iclods.org
     - handbrake.biz
     IpAddresses:
-    - 46.17.97.37
-    - 83.229.87.11
-    - 67.188.230.50
     - 23.227.196.215
-    - 99.153.29.240
+    - 83.229.87.11
     - 23.227.196.217
+    - 99.153.29.240
+    - 46.17.97.37
+    - 67.188.230.50
   condition: 1 of object_* or attributes

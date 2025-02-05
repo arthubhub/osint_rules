@@ -1,6 +1,6 @@
 title: "OSINT - BabyShark Malware Part Two \xE2\u20AC\u201C Attacks Continue Using\
   \ KimJongRAT and PCRat - process_creation"
-id: 853f4dc5-6953-48ae-b1df-254fa5aea049
+id: 44a427b9-7bff-4824-a1ce-6ea9176138c1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,8 +10,8 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.ghost_rat
 - attack.software.babyshark
+- attack.software.ghost_rat
 - attack.group.ghost_rat
 detection:
   object_3998:
@@ -44,10 +44,10 @@ detection:
     - d50a0980da6297b8e4cec5db0a8773635cee74ac6f5c1ff18197dfba549f6712
   attributes:
     sha256:
-    - 33ce9bcaeb0733a77ff0d85263ce03502ac20873bf58a118d1810861caced254
     - 75917cc1bd9ecd7ef57b7ef428107778b19f46e8c38c00f1c70efc118cb8aab5
-    - 4b3416fb6d1ed1f762772b4dd4f4f652e63ba41f7809b25c5fa0ee9010f7dae7
-    - f86d05c1d7853c06fc5561f8df19b53506b724a83bb29c69b39f004a0f7f82d8
+    - 33ce9bcaeb0733a77ff0d85263ce03502ac20873bf58a118d1810861caced254
     - bd6efb16527b025a5fd256bb357a91b4ff92aff599105252e50b87f1335db9e1
+    - 4b3416fb6d1ed1f762772b4dd4f4f652e63ba41f7809b25c5fa0ee9010f7dae7
     - d50a0980da6297b8e4cec5db0a8773635cee74ac6f5c1ff18197dfba549f6712
+    - f86d05c1d7853c06fc5561f8df19b53506b724a83bb29c69b39f004a0f7f82d8
   condition: 1 of object_* or attributes

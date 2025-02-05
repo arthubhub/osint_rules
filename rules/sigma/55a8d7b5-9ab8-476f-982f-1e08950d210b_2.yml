@@ -1,6 +1,6 @@
 title: "OSINT Tracking MiniDionis: CozyCar\xE2\u20AC\u2122s New Ride Is Related to\
   \ Seaduke by Unit 42 Palo Alto Networks - dns_query"
-id: 46f694a9-5d9d-4892-933e-ef9732693360
+id: 2acbbb89-156c-4ee5-8ba4-a66b81cff00d
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,17 +10,17 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.trojan.seaduke
 - attack.group.apt_29
+- attack.software.trojan.seaduke
 detection:
   attributes:
     QueryName|contains:
+    - illuminatistudios.net
     - visionresearch.com
     - kane-consulting.net
     - connectads.com
-    - illuminatistudios.net
     IpAddresses:
-    - 103.254.16.168
     - 103.226.132.7
     - 122.228.193.115
+    - 103.254.16.168
   condition: attributes

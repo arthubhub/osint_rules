@@ -1,5 +1,5 @@
 title: HALFRIG - Malware Analysis Report - dns_query
-id: 5b962d3a-99fd-4c22-8445-895ea0aac0a0
+id: 79dd814f-47d1-47d0-89c1-f25b88647088
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,23 +9,23 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1204.002
-- attack.t1566
-- attack.t1547.001
-- attack.t1553.005
-- attack.t1566.001
-- attack.software.halfrig
 - attack.t1027.006
-- attack.t1583.003
-- attack.t1584
-- attack.t1204
 - attack.t1574.001
-- attack.t1140
+- attack.t1566
+- attack.software.halfrig
+- attack.t1204
+- attack.t1584
 - attack.t1574.002
+- attack.t1204.002
+- attack.t1553.005
+- attack.t1583.003
+- attack.t1566.001
+- attack.t1547.001
+- attack.t1140
 detection:
   attributes:
     QueryName|contains:
-    - sanjosemotosport.com
     - sawabfoundation.net
+    - sanjosemotosport.com
     - communitypowersports.com
   condition: attributes

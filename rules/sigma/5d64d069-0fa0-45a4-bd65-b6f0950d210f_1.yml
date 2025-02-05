@@ -1,5 +1,5 @@
 title: OSINT - Gamaredon group - url_request
-id: e3d6abb0-aad8-458d-947f-4532837116cd
+id: e0da4eea-919b-48be-9349-c36b1cd5d8f5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,18 +10,18 @@ logsource:
   category: url_request
 tags:
 - attack.t1064
-- attack.t1012
-- attack.t1112
+- attack.t1106
+- attack.t1059
 - attack.group.g0047
 - attack.group.gamaredon_group
-- attack.t1059
 - attack.t1053
-- attack.t1106
+- attack.t1012
+- attack.t1112
 detection:
   object_18134:
     RequestUrl|contains:
-    - https://github.com
     - https://t.co
+    - https://github.com
   object_18139:
     RequestUrl|contains:
     - http://document-listing.ddns.net

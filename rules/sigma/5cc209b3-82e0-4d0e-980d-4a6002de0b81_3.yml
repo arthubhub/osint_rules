@@ -1,6 +1,6 @@
 title: OSINT - Threat Actor TA505 Targets Financial Enterprises Using LOLBins and
   a New Backdoor Malware - process_creation
-id: ed0a3c16-1fc9-4505-94d9-a3bbee824afb
+id: 48cdd53b-6201-4e14-8fca-8f05bbbb485b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,9 +10,9 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.ta505
 - attack.t1193
 - attack.t1041
+- attack.group.ta505
 detection:
   object_13181:
     md5:
@@ -45,7 +45,7 @@ detection:
   attributes:
     sha1:
     - 63aeb16b5d001cbd94b636e9f557fe97b8467c8d
-    - ad35fa0b3799562931b4bfa3abd057214b8721ff
     - 06f232210e507f09f01155e7d0cb5389b8a31042
     - 880b383532534e32f3fa49692d676d9488aabac1
+    - ad35fa0b3799562931b4bfa3abd057214b8721ff
   condition: 1 of object_* or attributes

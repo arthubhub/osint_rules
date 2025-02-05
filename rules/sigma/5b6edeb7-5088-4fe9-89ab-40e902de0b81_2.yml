@@ -1,6 +1,6 @@
 title: "OSINT - Malware Analysis Report (AR18-221A) MAR-10135536-17 \xE2\u20AC\u201C\
   \ North Korean Trojan: KEYMARBLE- MAR-10135536.r17.v1 - dns_query"
-id: 2539123e-c49b-4053-9f07-dd840c627e2c
+id: 6b968602-8442-4073-90d9-3525be2a32ce
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,12 +10,12 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.keymarble
 - attack.group.lazarus_group
+- attack.software.keymarble
 detection:
   attributes:
     IpAddresses:
     - 104.194.160.59
-    - 100.43.153.60
     - 212.143.21.43
+    - 100.43.153.60
   condition: attributes

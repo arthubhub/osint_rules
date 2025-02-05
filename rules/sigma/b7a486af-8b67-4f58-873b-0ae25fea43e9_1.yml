@@ -1,5 +1,5 @@
 title: "[OSINT] No Honor Among Thieves - Prynt Stealer\u2019s Backdoor Exposed - url_request"
-id: 903319c0-71d2-414d-8044-db457d18b01f
+id: 4b607d13-4e9a-439b-b238-b260c5f251a7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.prynt_stealer
 - attack.software.prynt_stealer
-- attack.group.worldwind
-- attack.software.darkeye
-- attack.software.worldwind
 - attack.group.darkeye
+- attack.software.darkeye
+- attack.group.prynt_stealer
+- attack.software.worldwind
+- attack.group.worldwind
 detection:
   object_17614:
     RequestUrl|contains:
@@ -33,8 +33,8 @@ detection:
     - daddy.linkpc.net
   attributes:
     RequestUrl|contains:
-    - http://venoxxxx.xxx
+    - https://cdn.discordapp.com
     - http://market.prynt.market
     - http://shop.prynt.market
-    - https://cdn.discordapp.com
+    - http://venoxxxx.xxx
   condition: 1 of object_* or attributes

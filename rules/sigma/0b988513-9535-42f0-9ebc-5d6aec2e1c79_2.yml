@@ -1,5 +1,5 @@
 title: 'OSINT - Egregor: The New Ransomware Variant To Watch - dns_query'
-id: fdb3e793-35c1-48e5-8b03-669d0e381779
+id: 9db7050f-d28c-4913-9c96-1771b766e246
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,11 +9,11 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.egregor
 - attack.software.egregor
+- attack.group.egregor
 detection:
   attributes:
     IpAddresses:
-    - 91.199.212.52
     - 49.12.104.241
+    - 91.199.212.52
   condition: attributes

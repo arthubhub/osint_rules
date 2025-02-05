@@ -1,6 +1,6 @@
 title: "OSINT An In-Depth Look at How Pawn Storm\xE2\u20AC\u2122s Java Zero-Day Was\
   \ Used by Trend Micro - url_request"
-id: 4142c127-f467-4cb2-ad32-f9c49e4fc734
+id: 0613db37-02d6-4e39-a547-7f8cabc9e1df
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,17 +12,17 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - converter.class
-    - cormac.mcr
-    - arrayreplace.class
-    - none2.class
-    - vhgg5hkvn25.exe
     - http://blog.trendmicro.com
-    - acledit.com
-    - mybytearrayinputstream.class
+    - vhgg5hkvn25.exe
+    - arrayreplace.class
     - none.class
-    - http://ausameetings.com
-    - biocpl.org
+    - mybytearrayinputstream.class
+    - cormac.mcr
     - api-ms-win-downlevel-profile-l1-1-0.dll
     - ausameetings.com
+    - acledit.com
+    - http://ausameetings.com
+    - none2.class
+    - biocpl.org
+    - converter.class
   condition: attributes

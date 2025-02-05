@@ -1,6 +1,6 @@
 title: OSINT - New Wekby Attacks Use DNS Requests As Command and Control Mechanism
   - url_request
-id: d52731ef-5299-4da5-b8aa-15c1291b962e
+id: e0548a27-4c37-4807-a52f-be56ddea6e36
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,12 +12,12 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://researchcenter.paloaltonetworks.com
     - https://www.zscaler.com
-    - http://www.volexity.com
-    - intranetwabcam.com
-    - https://blog.anomali.com
-    - https://www.secureworks.com
-    - globalprint-us.com
     - https://www.fireeye.com
+    - globalprint-us.com
+    - http://www.volexity.com
+    - https://blog.anomali.com
+    - http://researchcenter.paloaltonetworks.com
+    - https://www.secureworks.com
+    - intranetwabcam.com
   condition: attributes

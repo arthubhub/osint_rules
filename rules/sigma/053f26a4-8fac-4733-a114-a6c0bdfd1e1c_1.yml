@@ -1,6 +1,6 @@
 title: 'OSINT -  Space Pirates: analyzing the tools and connections of a new hacker
   group - url_request'
-id: aa5a536d-763b-45fa-b06e-3c04eacf7ec6
+id: 8f1f9e06-7e6b-4126-9cf6-dd072d9afc1a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,13 +11,13 @@ logsource:
   category: url_request
 tags:
 - attack.software.poison_ivy
-- attack.group.shadowpad
 - attack.group.plugx
-- attack.software.plugx
-- attack.software.shadowpad
-- attack.group.poison_ivy
 - attack.software.s0013
 - attack.software.s0596
+- attack.group.poison_ivy
+- attack.software.shadowpad
+- attack.group.shadowpad
+- attack.software.plugx
 detection:
   object_5498:
     RequestUrl|contains:

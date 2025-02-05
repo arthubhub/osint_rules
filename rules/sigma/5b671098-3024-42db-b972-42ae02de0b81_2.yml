@@ -1,5 +1,5 @@
 title: OSINT - Off-the-shelf RATs Targeting Pakistan - process_creation
-id: 53ec1f15-cfcf-4a39-b40d-1a3616dbb92f
+id: 48f025e4-d906-4651-883c-aba73df66d3f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,8 +9,8 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.netwire
 - attack.software.s0198
+- attack.software.netwire
 detection:
   object_12193:
     md5:
@@ -91,18 +91,18 @@ detection:
     - 096012a5a9cf483fe0bdcd5a1030cc4d85b8e5296609fdc3632f2337a897a394
   attributes:
     sha256:
-    - 2be03e829856ad2ff772ba1f5074d4eafbf3ecab8d97794d1cc6589e043e3a28
-    - 027e4c6c51e315f0e49f3644af08479303a747ed55ecba5aa0ae75c27cd6efeb
-    - 096012a5a9cf483fe0bdcd5a1030cc4d85b8e5296609fdc3632f2337a897a394
-    - a8fa4c806d97e59db0c42b574558a68942eadfe56286a66d90a8f6248a34cf43
-    - 81e518e094d597965f578f6f42c22c363450e8fb8d33c0a9568254ca048c15e6
-    - 4ba13add1aa8ae3fffcb83f9b0990a6cd8b8912fc0e26811d0211f72aaaa7c79
-    - 291ca9e4aa9db88635a89cb58f8dbf49e60abddbbcec1c4a611ef4192bfc6d24
     - 40e9287ff8828fb0e6baedcff873e8e35520c6227200f1c84b63446f07a59289
-    - 82ce7dffef284571ca21eb240869148b7f3583d9cb95ebdc42c77536dccc9060
+    - 81e518e094d597965f578f6f42c22c363450e8fb8d33c0a9568254ca048c15e6
+    - 2e219fc95d7b44d8b0e748628e559a9ec79a068b90fe162b192daa8cf8d6f3ee
+    - 48463e268acb50ffbcb27eaff46f757486a985ffc2d10f35ae1b9422660a20d2
+    - 291ca9e4aa9db88635a89cb58f8dbf49e60abddbbcec1c4a611ef4192bfc6d24
     - 855ad4dcb9c5502d6ef73528704046cacf006770fd4af23259cb33e7577cd205
     - a70cacc8bfffc4a67171122fc424ed95fc3f89bc592d7489aacc666e5834f571
-    - 48463e268acb50ffbcb27eaff46f757486a985ffc2d10f35ae1b9422660a20d2
-    - 2e219fc95d7b44d8b0e748628e559a9ec79a068b90fe162b192daa8cf8d6f3ee
+    - 027e4c6c51e315f0e49f3644af08479303a747ed55ecba5aa0ae75c27cd6efeb
+    - 4ba13add1aa8ae3fffcb83f9b0990a6cd8b8912fc0e26811d0211f72aaaa7c79
     - f110283c4e459cc20e908267d88edba26e2135bcb7d7335cabbed1a128edeb86
+    - 096012a5a9cf483fe0bdcd5a1030cc4d85b8e5296609fdc3632f2337a897a394
+    - 82ce7dffef284571ca21eb240869148b7f3583d9cb95ebdc42c77536dccc9060
+    - 2be03e829856ad2ff772ba1f5074d4eafbf3ecab8d97794d1cc6589e043e3a28
+    - a8fa4c806d97e59db0c42b574558a68942eadfe56286a66d90a8f6248a34cf43
   condition: 1 of object_* or attributes

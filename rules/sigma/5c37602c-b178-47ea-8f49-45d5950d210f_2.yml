@@ -1,5 +1,5 @@
 title: OSINT - TA505 Group Adopts New ServHelper Backdoor and FlawedGrace RAT - dns_query
-id: e50245db-6c2f-44a0-b433-8f81800250d9
+id: 76453dff-3727-4db9-a22f-06be55edb051
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,11 +9,11 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.ta505
 - attack.software.flawedgrace
+- attack.group.ta505
 detection:
   attributes:
     QueryName|contains:
-    - dedsolutions.bit
     - arepos.bit
+    - dedsolutions.bit
   condition: attributes

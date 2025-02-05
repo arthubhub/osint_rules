@@ -1,6 +1,6 @@
 title: 'OSINT - A Mole exposing itself to sunlight Snake: Coming soon in Mac OS X
   flavour - process_creation'
-id: 8c32df2d-e9a0-4d06-be71-dec30c902baf
+id: 816c1f29-b212-4811-9782-c97d76be25f4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,28 +10,28 @@ logsource:
   product: windows
   category: process_creation
 tags:
+- attack.group.apt_29
 - attack.software.turla
 - attack.group.sofacy
-- attack.group.apt_29
 detection:
   attributes:
     md5:
-    - 6c74ff2cc39b5362ee5dec576ece211b
     - 77b4ffe73491d534946d010bfca138f7
-    - 3a5fc199189cf39ec58ec6fb2c3c7d93
     - 000e4225f382f9eee675dcaf3cbf9c7e
+    - 6c74ff2cc39b5362ee5dec576ece211b
+    - 3a5fc199189cf39ec58ec6fb2c3c7d93
     sha1:
-    - d972e12685591b71432faaf70c71ced4b6e522a0
-    - a201f1760ca4f99dff682a4e5c656f149f5d8e7c
     - d20482372f9e63a54854d639cc79d0b65bc8382b
+    - a201f1760ca4f99dff682a4e5c656f149f5d8e7c
+    - d972e12685591b71432faaf70c71ced4b6e522a0
     - 0a0ae94f92a50937d920bf02dd26b477c840a915
     sha256:
-    - b8ee4556dc09b28826359b98343a4e00680971a6f8c6602747bd5d723d26eaea
-    - 5b7792a16c6b7978fca389882c6aeeb2c792352076bf6a064e7b8b90eace8060
     - 0a77f1b59c829a83d91a12c871fbd30c5c9d04b455f497e0c231cd21104bfea9
     - d5ea79632a1a67abbf9fb1c2813b899c90a5fb9442966ed4f530e92715087ee2
-    - b6df610aa5c1254c3af5b2ff806562c4937704e4ac248577cdcd3e7e7b3578a0
-    - 92721d719b8085748fb66366d202457f6d38bfa108a2ecda71eee7e68f43a387
+    - b8ee4556dc09b28826359b98343a4e00680971a6f8c6602747bd5d723d26eaea
     - 6e207a375782e3c9d86a3e426cfa38eddcf4898b3556abc75889f7e01cc49506
+    - 92721d719b8085748fb66366d202457f6d38bfa108a2ecda71eee7e68f43a387
+    - 5b7792a16c6b7978fca389882c6aeeb2c792352076bf6a064e7b8b90eace8060
     - 7848f7808af02ba0466f3a0687cf949c4d29a2d94b035481a3299ec519aaaa30
+    - b6df610aa5c1254c3af5b2ff806562c4937704e4ac248577cdcd3e7e7b3578a0
   condition: attributes

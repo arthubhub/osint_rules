@@ -1,5 +1,5 @@
 title: Harma and Odveta Ransomware - dns_query
-id: e8f173d6-39b9-414d-ac4f-e159cfeef574
+id: 5549c649-bea2-4d12-ae8e-9eb806f4828d
 description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,16 +9,16 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1060
 - attack.t1043
+- attack.t1486
+- attack.t1060
 - attack.t1059
 - attack.t1133
-- attack.t1486
 detection:
   attributes:
     IpAddresses:
-    - 80.82.69.52
-    - 148.251.247.174
     - 64.44.81.20
     - 5.123.105.24
+    - 148.251.247.174
+    - 80.82.69.52
   condition: attributes

@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-11-07 : Affid=3, offline, ".asasin" : "Invoice #123456789,"
   - "987654321_11_07_2017_12_34_56.doc" - url_request'
-id: 9171d001-d5e5-49b3-9490-c50ce3e17914
+id: 5174801a-781f-42ce-8989-3102d38a9115
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,21 +10,21 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://florastor.net
-    - http://336.linux1.testsider.dk
-    - http://www.test.doctorsordersltd.co.uk
-    - http://galeona.com
     - http://with-hair.co.jp
-    - http://teesaddiction.com
-    - http://giancarlovaccari.com
-    - http://muchinfaket.net
-    - http://heinzig.info
-    - http://christaminiatures.nl
+    - http://www.test.doctorsordersltd.co.uk
     - http://financeforautos.com
+    - http://giancarlovaccari.com
     - http://gotcaughtdui.com
+    - http://galeona.com
+    - http://muchinfaket.net
+    - http://336.linux1.testsider.dk
+    - http://teesaddiction.com
+    - http://heinzig.info
+    - http://florastor.net
+    - http://christaminiatures.nl
   condition: attributes

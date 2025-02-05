@@ -1,6 +1,6 @@
 title: OSINT - DBGer Ransomware Uses EternalBlue and Mimikatz to Spread Across Networks
   - url_request
-id: c847d9b0-0ad5-41d2-a235-e5e417784ad0
+id: 192d0570-a55c-4fef-93d7-42181e5dc992
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,11 +10,11 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.s0002
-- attack.software.mimikatz
-- attack.group.dbger_ransomware
 - attack.software.eternalblue
+- attack.software.mimikatz
 - attack.software.dbger_ransomware
+- attack.group.dbger_ransomware
+- attack.software.s0002
 detection:
   attributes:
     RequestUrl|contains:

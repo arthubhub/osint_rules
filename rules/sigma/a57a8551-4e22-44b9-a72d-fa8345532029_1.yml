@@ -1,5 +1,5 @@
 title: HALFRIG - Malware Analysis Report - url_request
-id: e7ab83b7-e204-49a1-b865-d354c34d5683
+id: 6bfc1cda-ffc7-4ea3-981a-aa064e228dcc
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,26 +9,26 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1204.002
-- attack.t1566
-- attack.t1547.001
-- attack.t1553.005
-- attack.t1566.001
-- attack.software.halfrig
 - attack.t1027.006
-- attack.t1583.003
-- attack.t1584
-- attack.t1204
 - attack.t1574.001
-- attack.t1140
+- attack.t1566
+- attack.software.halfrig
+- attack.t1204
+- attack.t1584
 - attack.t1574.002
+- attack.t1204.002
+- attack.t1553.005
+- attack.t1583.003
+- attack.t1566.001
+- attack.t1547.001
+- attack.t1140
 detection:
   object_1142:
     RequestUrl|contains:
     - https://www.gov.pl
   attributes:
     RequestUrl|contains:
-    - sanjosemotosport.com
     - sawabfoundation.net
+    - sanjosemotosport.com
     - communitypowersports.com
   condition: 1 of object_* or attributes

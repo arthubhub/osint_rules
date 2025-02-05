@@ -1,6 +1,6 @@
 title: BatLoader Continues to Abuse Google Search Ads to Deliver Vidar Stealer and
   Ursnif - dns_query
-id: 4aa193b9-0b59-4c15-a1df-565231405d26
+id: 7888f24a-966c-4af2-8660-6388a68354d1
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -11,44 +11,44 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.vidar
 - attack.t1064
-- attack.t1410
-- attack.software.s0386
-- attack.t1059
 - attack.t1059.001
-- attack.t1059.006
+- attack.software.s0386
+- attack.t1410
 - attack.group.vidar
+- attack.t1059
+- attack.t1059.006
+- attack.software.vidar
 detection:
   attributes:
     QueryName|contains:
-    - chatgpt-t.com
-    - reggy914.ru
-    - adobe-e.com
     - adobe-a.com
-    - microso-t.com
-    - quickbooks-q.com
-    - anydesk-o.com
-    - spotify-uss.com
-    - java-a.com
-    - bitwarden-t.com
-    - tableau-r.com
-    - adobe-l.com
-    - basecamp-a.com
-    - reggy506.ru
     - isoridkf.ru
-    - anydesk-r.com
-    - java-s.com
+    - reggy914.ru
+    - java-a.com
+    - adobe-e.com
     - iujdhsndjfks.ru
-    - gimp-t.com
-    - freecad-l.com
-    - gameindikdowd.ru
+    - java-s.com
     - uelcoskdi.ru
+    - gameindikdowd.ru
     - pixelarmada.su
+    - freecad-l.com
+    - anydesk-r.com
     - zoomvideor.com
-    - shvarcnegerhistory.com
+    - microso-t.com
+    - gimp-t.com
+    - anydesk-o.com
     - java-r.com
-    - jhgfdlkjhaoiu.su
+    - spotify-uss.com
+    - tableau-r.com
+    - quickbooks-q.com
+    - chatgpt-t.com
+    - basecamp-a.com
     - visualstudio-t.com
+    - adobe-l.com
+    - reggy506.ru
+    - shvarcnegerhistory.com
     - openoffice-a.com
+    - jhgfdlkjhaoiu.su
+    - bitwarden-t.com
   condition: attributes

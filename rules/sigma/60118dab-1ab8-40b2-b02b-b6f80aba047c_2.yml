@@ -1,5 +1,5 @@
 title: '[CERT-FR] Sandworm intrusion set campaign targeting Centreon systems - process_creation'
-id: 719885ec-efcf-480e-9540-6fde1ce394c0
+id: 01d2fa4b-21e8-4fea-80fc-24361094a837
 description: edit this field when analysing or editing the rule - reported by "CERT-FR_1510"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,21 +9,21 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1505.003
-- attack.t1573
-- attack.t1543
-- attack.t1041
-- attack.t1071.001
-- attack.t1543.003
-- attack.t1573.002
 - attack.t1083
-- attack.t1190
+- attack.t1071.001
+- attack.t1505.003
 - attack.t1573.001
-- attack.group.sandworm
-- attack.t1140
-- attack.group.electrum
+- attack.t1573.002
+- attack.t1573
 - attack.group.telebots
+- attack.group.sandworm
+- attack.group.electrum
+- attack.t1543
 - attack.group.iridium
+- attack.t1543.003
+- attack.t1190
+- attack.t1041
+- attack.t1140
 detection:
   object_5464:
     md5:

@@ -1,5 +1,5 @@
 title: OSINT - APT28 Targets Hospitality Sector, Presents Threat to Travelers - dns_query
-id: b7aeba54-7490-456a-93ce-939c333077e4
+id: f7254b7a-9cd3-408a-8a66-6fbd225a7dbd
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: dns_query
 tags:
+- attack.software.eternalblue
 - attack.group.sofacy
 - attack.group.strontium
-- attack.software.eternalblue
 detection:
   attributes:
     QueryName|contains:
-    - mvtband.net
     - mvband.net
+    - mvtband.net
   condition: attributes

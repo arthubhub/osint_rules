@@ -1,5 +1,5 @@
 title: OSINT - Goblin Panda continues to target Vietnam - url_request
-id: c40e8f17-2a02-4a88-8f2c-efa6243912f5
+id: 6dc0171b-a0b0-4a36-817a-c27bf0820f7c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,11 +10,11 @@ logsource:
   category: url_request
 tags:
 - attack.group.hellsing
-- attack.group.newcore_rat
 - attack.software.newcore_rat
+- attack.group.newcore_rat
 detection:
   attributes:
     RequestUrl|contains:
-    - http://web.hcmuafgh.com
     - https://medium.com
+    - http://web.hcmuafgh.com
   condition: attributes

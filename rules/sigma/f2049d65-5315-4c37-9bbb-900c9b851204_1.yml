@@ -1,5 +1,5 @@
 title: OSINT - CircleCI incident report for January 4, 2023 security incident - url_request
-id: 035c466d-4cb3-47d9-9a3d-63fe0b684183
+id: 02e4312d-b429-49a1-a220-241c8b7ab5ac
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -16,6 +16,6 @@ detection:
     - https://circleci.com
   attributes:
     RequestUrl|contains:
-    - potrax.com
     - ptx.app
+    - potrax.com
   condition: 1 of object_* or attributes

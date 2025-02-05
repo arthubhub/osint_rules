@@ -1,5 +1,5 @@
 title: Netfilter Rootkit Samples - F. Roth - Google sheet + expansion - url_request
-id: 171ecd1e-c7e0-4373-aff8-a8f7a65ff72c
+id: 5cd3757b-236f-45b6-b104-a797e67d55b8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -14,6 +14,6 @@ detection:
     - http://110.42.4.180
   attributes:
     RequestUrl|contains:
-    - https://twitter.com
     - https://docs.google.com
+    - https://twitter.com
   condition: 1 of object_* or attributes

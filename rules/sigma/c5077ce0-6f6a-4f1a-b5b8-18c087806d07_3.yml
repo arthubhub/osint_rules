@@ -1,6 +1,6 @@
 title: AA22-138B Threat Actors Chaining VMware Vulnerabilities for Full System Control
   - process_creation
-id: a6fb55f7-d93d-4daf-a32d-e4b1046708e3
+id: aee8b8e9-9256-4cb5-af0d-2a8ebc492f4e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,20 +10,20 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1505.003
+- attack.t1068
 - attack.t1059.002
-- attack.t1071.001
-- attack.t1003.008
-- attack.t1059.004
-- attack.t1090
-- attack.t1588.001
-- attack.t1222.002
 - attack.t1105
 - attack.t1203
+- attack.t1071.001
+- attack.t1505.003
+- attack.t1090
 - attack.t1573.001
-- attack.t1070.003
-- attack.t1068
+- attack.t1588.001
+- attack.t1222.002
+- attack.t1059.004
 - attack.t1560
+- attack.t1003.008
+- attack.t1070.003
 detection:
   object_325:
     md5:
@@ -41,6 +41,6 @@ detection:
     - 8e7dee3b3cfdc8fbefb86c70ac6d49f1908cf75cafc772b6adfae69eec1733a3
   attributes:
     md5:
-    - f8ff5c72e8ffa2112b01802113148bd1
     - 4cd8366345ad4068feca4d417738b4bd
+    - f8ff5c72e8ffa2112b01802113148bd1
   condition: 1 of object_* or attributes

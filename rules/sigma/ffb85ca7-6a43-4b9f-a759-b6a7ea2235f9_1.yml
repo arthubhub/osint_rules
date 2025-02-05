@@ -1,5 +1,5 @@
 title: RegretLocker - compiled information, activity and samples - url_request
-id: ad080ae9-4f04-4fe9-ac74-d75b620d8548
+id: 0f7a3d8c-ec3a-4b09-a218-709ae153c1bf
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -14,13 +14,13 @@ tags:
 detection:
   object_13441:
     RequestUrl|contains:
-    - http://regretzjibibtcgb.onion
     - regretzjibibtcgb.onion
+    - http://regretzjibibtcgb.onion
   attributes:
     RequestUrl|contains:
-    - https://twitter.com
-    - https://app.any.run
     - http://344744.cloud4box.ru
-    - https://github.com
     - http://chuongdong.com
+    - https://app.any.run
+    - https://github.com
+    - https://twitter.com
   condition: 1 of object_* or attributes

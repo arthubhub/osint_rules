@@ -1,6 +1,6 @@
 title: SMS/iMessage phishes forcing users to install/run scripts and update VPN settings
   - dns_query
-id: 5274d791-bc55-486c-afce-315c29d6ac53
+id: f646c272-2355-48cc-ad4e-8ffe5b8348ca
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,10 +12,10 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - sso-vpn.com
     - up-vpn.com
     - up-sso.com
     - corp-vpn.com
+    - sso-vpn.com
     IpAddresses:
     - 172.96.173.150
   condition: attributes

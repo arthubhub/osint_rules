@@ -1,5 +1,5 @@
 title: OSINT Trend Micro Exposes LURID APT - url_request
-id: cfa02dbb-efd5-4622-827a-eda907586b85
+id: 5c4851d2-7c67-44fb-b870-b50269f25169
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,19 +11,19 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - mailru-pro.com
+    - http://blog.trendmicro.com
+    - yandex-vip.com
     - hoticq.com
     - zadhc.com
-    - http://www.trendmicro.com
     - foxit-pro.com
-    - http://la.trendmicro.com
-    - lasmail.com
-    - mailru-vip.com
-    - ymail-pro.com
-    - redhag.com
-    - http://blog.trendmicro.com
     - yandex-pro.com
-    - hotoicq.com
-    - mailru-pro.com
+    - mailru-vip.com
+    - http://la.trendmicro.com
+    - http://www.trendmicro.com
     - ymail-vip.com
-    - yandex-vip.com
+    - redhag.com
+    - lasmail.com
+    - hotoicq.com
+    - ymail-pro.com
   condition: attributes

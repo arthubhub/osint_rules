@@ -1,6 +1,6 @@
 title: 'OSINT - Anatomy of Attack: Inside BazarBackdoor to Ryuk Ransomware "one" Group
   via Cobalt Strike - dns_query'
-id: 7f7feb36-5fa5-4a9e-b12a-92db408b3da7
+id: cd432f4d-45f8-46a1-87b1-7c07e3152dab
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,35 +10,35 @@ logsource:
   product: windows
   category: dns_query
 tags:
+- attack.group.cobalt_strike
 - attack.group.ryuk_ransomware
 - attack.software.ryuk_ransomware
 - attack.software.cobalt_strike
-- attack.group.cobalt_strike
 detection:
   attributes:
     QueryName|contains:
-    - mixunderax.com
-    - secondlivve.com
-    - check1domains.com
-    - havemosts.com
     - sweetmonsterr.com
-    - fastbloodhunter.com
     - qascker.com
+    - fastbloodhunter.com
     - bugsbunnyy.com
+    - zhameharden.com
+    - gunsdrag.com
+    - servicemount.com
+    - havemosts.com
+    - mixunderax.com
+    - unlockwsa.com
+    - remotessa.com
+    - check1domains.com
+    - servicesupdater.com
+    - secondlivve.com
+    - hybriqdjs.com
+    - sobcase.com
     - dotmaingame.com
     - servicewikii.com
-    - sobcase.com
     - luckyhunterrs.com
-    - gunsdrag.com
-    - unlockwsa.com
-    - servicesupdater.com
-    - serviceboosterr.com
-    - zhameharden.com
     - service-boosterr.com
-    - servicemount.com
-    - serviceupdatter.com
-    - remotessa.com
-    - hybriqdjs.com
-    - gungameon.com
+    - serviceboosterr.com
     - wodemayaa.com
+    - serviceupdatter.com
+    - gungameon.com
   condition: attributes

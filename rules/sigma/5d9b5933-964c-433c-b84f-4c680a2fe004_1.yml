@@ -1,5 +1,5 @@
 title: Emotet in Depth TTP 10-07-19 - url_request
-id: de31f404-e9b2-466d-a8af-557217bfc8a4
+id: 74e2d4c7-be17-487f-9c4e-257f997c0b68
 description: edit this field when analysing or editing the rule - reported by "MiSOC"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,38 +9,38 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1060
-- attack.t1033
-- attack.software.s0363
-- attack.t1064
-- attack.t1086
 - attack.t1043
-- attack.t1193
-- attack.software.emotet
-- attack.t1032
-- attack.t1050
-- attack.software.s0154
+- attack.t1086
+- attack.t1087
+- attack.t1064
+- attack.t1071
 - attack.t1047
+- attack.t1033
+- attack.t1032
+- attack.t1193
+- attack.t1060
+- attack.t1050
+- attack.t1482
+- attack.software.emotet
 - attack.t1055
 - attack.t1059
+- attack.software.s0363
 - attack.t1053
-- attack.t1482
-- attack.t1087
-- attack.t1071
+- attack.software.s0154
 detection:
   attributes:
     RequestUrl|contains:
-    - http://178.254.6.27
-    - https://edealsadvisor.com
-    - http://latestgovernment.com
-    - http://201.184.105.242
-    - http://dulich.goasiatravel.com
     - https://kurumsalinternetsitesi.com
-    - https://drewnianazagroda.pl
-    - http://104.131.11.150
-    - http://192.254.173.31
-    - https://github.com
     - http://80.79.23.144
+    - http://dulich.goasiatravel.com
+    - http://latestgovernment.com
     - http://142.44.162.209
+    - http://104.131.11.150
+    - http://178.254.6.27
+    - http://192.254.173.31
     - http://45.123.3.54
+    - https://drewnianazagroda.pl
+    - https://edealsadvisor.com
+    - https://github.com
+    - http://201.184.105.242
   condition: attributes

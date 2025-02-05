@@ -1,5 +1,5 @@
 title: Fake booking.com service website gathering PII including passport - url_request
-id: eab96f64-3818-47de-b696-024168e10eec
+id: 5fc9fa80-a022-453c-8cd3-5fa7d8a5ae7d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,16 +9,16 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1274
 - attack.t1269
 - attack.t1268
+- attack.t1274
 detection:
   object_17292:
     RequestUrl|contains:
-    - 1facc.pw
     - https://booking-0ef4-8213-ae7f-3fec3e22.1facc.pw
+    - 1facc.pw
   attributes:
     RequestUrl|contains:
-    - 1fcca.pw
     - 1fcaa.sbs
+    - 1fcca.pw
   condition: 1 of object_* or attributes

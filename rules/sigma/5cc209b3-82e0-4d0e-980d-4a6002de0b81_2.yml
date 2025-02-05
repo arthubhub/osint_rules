@@ -1,6 +1,6 @@
 title: OSINT - Threat Actor TA505 Targets Financial Enterprises Using LOLBins and
   a New Backdoor Malware - dns_query
-id: d7ce2a4d-2690-412e-bf36-d0c5b4092e91
+id: 7b9bbdc1-418a-4c0a-9af3-31c997d80ff4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,15 +10,15 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.ta505
 - attack.t1193
 - attack.t1041
+- attack.group.ta505
 detection:
   attributes:
     QueryName|contains:
+    - zxskjkkjsk3232.pw
     - joisf333.icu
     - aasdkkkdsa3442.icu
-    - zxskjkkjsk3232.pw
     IpAddresses:
     - 79.141.171.160
     - 195.123.227.79

@@ -1,5 +1,5 @@
 title: OSINT - The Elderwood Project - dns_query
-id: 1b6e522b-bbc6-4767-b6e2-f2cb8baab625
+id: f58febd6-7d3a-4e04-a0fe-a2c877290047
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.beijing_group
 - attack.group.g0066
+- attack.group.beijing_group
 detection:
   attributes:
     QueryName|contains:
+    - wwwcnas.org
+    - 3dvideo.ru
     - help2012hi.hk
     - gate-usa.com
-    - 3dvideo.ru
-    - wwwcnas.org
     IpAddresses:
     - 71.6.217.131
   condition: attributes

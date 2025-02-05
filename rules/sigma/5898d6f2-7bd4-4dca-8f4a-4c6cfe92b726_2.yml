@@ -1,5 +1,5 @@
 title: Gamaredon Group (common notes from McAfee and other sources) - dns_query
-id: 98577953-cddc-4cd4-bd49-ac944e157ea9
+id: b7f9fc4c-2ab9-4bbe-8dcf-9fb5d2d2d508
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,28 +9,28 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.gamaredon_group
 - attack.group.g0047
+- attack.group.gamaredon_group
 detection:
   attributes:
     QueryName|contains:
-    - chelicerata.ru
-    - aidoona.online
-    - arachnidas.ru
-    - eurypterida.online
-    - fasciolas.online
-    - sufflari.ru
-    - scorpiones.online
-    - graphiuma.online
-    - formosanus.ru
-    - asilidae.online
-    - polyphemus.online
     - xiphosura.online
-    - sinensisa.online
+    - sufflari.ru
+    - aidoona.online
     - merostomata.online
-    - apoxipodes.online
-    - chelicerata.online
-    - rufescens.ru
-    - agaricusa.ru
+    - graphiuma.online
     - asilidae.ru
+    - agaricusa.ru
+    - apoxipodes.online
+    - scorpiones.online
+    - chelicerata.ru
+    - formosanus.ru
+    - rufescens.ru
+    - chelicerata.online
+    - eurypterida.online
+    - arachnidas.ru
+    - fasciolas.online
+    - polyphemus.online
+    - asilidae.online
+    - sinensisa.online
   condition: attributes

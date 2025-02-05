@@ -1,6 +1,6 @@
 title: 'M2M -  Locky Affid=3, ".asasin"/Trickbot "mac1" 2017-10-05 : "Invoice INV0000123"
   - "Invoice INV0000123.7z" - url_request'
-id: 5c93c3bc-d70a-479d-94dc-9ba17c90233d
+id: ed270ed0-5605-4825-9aac-3b4320569b78
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,28 +10,28 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.group.locky
 - attack.software.trick_bot
 - attack.software.locky
-- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://m-tensou.net
-    - http://hexacam.com
     - http://handhi.com
-    - http://nsaflow.info
-    - http://bit-chasers.com
-    - http://bjp.co.id
-    - http://centurythis.com
-    - http://mtblanc-let.co.uk
-    - http://logica-info.com
-    - http://suncoastot.com
-    - http://monstermx.com
-    - http://alucmuhendislik.com
     - http://smi-wi.com
+    - http://hexacam.com
     - http://mh-service.ru
     - http://estudiperceptiva.com
-    - http://paulcruse.com
-    - http://qxr33qxr.com
+    - http://nsaflow.info
+    - http://mtblanc-let.co.uk
     - http://yamanashi-jyujin.jp
+    - http://qxr33qxr.com
+    - http://paulcruse.com
+    - http://logica-info.com
+    - http://centurythis.com
+    - http://suncoastot.com
+    - http://bjp.co.id
+    - http://m-tensou.net
+    - http://bit-chasers.com
+    - http://monstermx.com
+    - http://alucmuhendislik.com
   condition: attributes

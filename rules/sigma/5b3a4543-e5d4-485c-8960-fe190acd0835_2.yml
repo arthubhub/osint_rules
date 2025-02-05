@@ -1,5 +1,5 @@
 title: Malware with legit company names in metadata - dns_query
-id: d5c74dab-4de0-40ba-8aa7-a92d8a8412e1
+id: 34d5f36b-8b34-4bd0-a9be-0eba6dd06165
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
@@ -10,14 +10,14 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.razy
-- attack.software.nanocore
-- attack.group.razy
 - attack.software.njrat
+- attack.software.nanocore
+- attack.software.razy
+- attack.group.razy
 detection:
   attributes:
     IpAddresses:
-    - 31.170.165.90
-    - 217.66.231.245
     - 112.213.89.144
+    - 217.66.231.245
+    - 31.170.165.90
   condition: attributes

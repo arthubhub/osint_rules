@@ -1,5 +1,5 @@
 title: "OSINT - A Look Into Fysbis: Sofacy\xE2\u20AC\u2122s Linux Backdoor - url_request"
-id: 015431bc-b8d5-41b5-afd1-f7cf37ba3433
+id: d13242e9-73bf-4cd8-968b-3c5a156fe5cf
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,8 +11,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - mozillaplagins.com
+    - http://researchcenter.paloaltonetworks.com
     - azureon-line.com
     - mozilla-plugins.com
-    - http://researchcenter.paloaltonetworks.com
-    - mozillaplagins.com
   condition: attributes

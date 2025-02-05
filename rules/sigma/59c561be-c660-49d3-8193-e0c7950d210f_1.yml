@@ -1,6 +1,6 @@
 title: "M2M -  Locky: \"Invoice RE-2017-09-21-00xxx\"\tfrom \"Amazon Marketplace\"\
   \ - url_request"
-id: a7d4cce0-8604-426b-a202-62ac47108b14
+id: 29155fd7-112e-454f-86f2-7b685c4693c6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,23 +10,23 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://81552.com
-    - http://agro-kerler.de
-    - http://aetozi.gr
-    - http://adr-werbetechnik.de
-    - http://accuflowfloors.com
-    - http://blog.dynamoo.com
-    - http://ahlbrandt.eu
-    - http://moonmusic.com.au
-    - http://fulcar.info
-    - http://agriturismobellaria.net
-    - http://afmance.it
-    - http://agricom.it
-    - http://afradem.com
     - https://www.hybrid-analysis.com
+    - http://blog.dynamoo.com
+    - http://agro-kerler.de
+    - http://fulcar.info
+    - http://adr-werbetechnik.de
+    - http://aetozi.gr
+    - http://afmance.it
+    - http://ahlbrandt.eu
+    - http://agricom.it
+    - http://accuflowfloors.com
+    - http://afradem.com
+    - http://agriturismobellaria.net
+    - http://81552.com
+    - http://moonmusic.com.au
   condition: attributes

@@ -1,6 +1,6 @@
 title: OSINT - McAfee Uncovers Operation Honeybee, a Malicious Document Campaign Targeting
   Humanitarian Aid Groups - url_request
-id: f7b9fafd-96b5-4a5e-acd6-f346317657b3
+id: 0be99a59-0eaf-40c7-be8c-8ecd7ebe1801
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,19 +10,19 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.data_from_local_system
-- attack.process_discovery
-- attack.service_execution
-- attack.file_deletion
-- attack.code_signing
-- attack.command-line_interface
-- attack.deobfuscate_or_decode_files_or_information
-- attack.commonly_used_port
-- attack.system_information_discovery
-- attack.data_encrypted
+- attack.scripting
 - attack.modify_existing_service
 - attack.bypass_user_account_control
-- attack.scripting
+- attack.service_execution
+- attack.commonly_used_port
+- attack.command-line_interface
+- attack.data_encrypted
+- attack.code_signing
+- attack.file_deletion
+- attack.system_information_discovery
+- attack.process_discovery
+- attack.data_from_local_system
+- attack.deobfuscate_or_decode_files_or_information
 - attack.automated_exfiltration
 - attack.rundll32
 detection:

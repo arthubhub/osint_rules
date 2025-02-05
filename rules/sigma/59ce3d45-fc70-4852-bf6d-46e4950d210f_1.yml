@@ -1,6 +1,6 @@
 title: 'M2M -  Locky Affid=3/Trickbot "mac1" 2017-09-29 : "Voice Message from ..."
   - "/voicemsg.html" links - url_request'
-id: 6b9694ee-50cd-4919-90ea-223546c79599
+id: 6ac50ada-6dd8-47de-9e3b-55169746743f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,47 +10,47 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.group.locky
 - attack.software.trick_bot
 - attack.software.locky
-- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://parquetroman.com
-    - http://simonline.nl
-    - http://louisawong.net
     - http://monroepoa.org
-    - http://datenhaus.info
-    - http://shineindian.com
-    - http://hashigosha.com
-    - http://somallc.com
-    - http://wwwa.su
-    - http://zik-et-dance.com
-    - http://kalorsystem.com
-    - http://fortcollins-accounting.com
-    - http://resortphotographics.com
-    - http://pinkyardflamingos.com
-    - http://moroplinghaptan.info
-    - http://ferienwohnung-schitter.at
-    - http://profigera.pt
-    - http://missinglynxsystems.com
-    - http://agrourbis.com
-    - http://auto-ecolecoccinelle.com
-    - http://weloveflowers.co.uk
-    - http://norsky.pt
-    - http://ilnumeroverde.it
-    - http://recturf.com.au
-    - http://sgtenterprises.com
-    - http://pagosdelrey.mobi
-    - http://afslearnenglish.com
-    - http://maule.biz
-    - http://monstermx.com
     - http://vincent-farben.de
-    - http://mueblesamedidamalaga.com
-    - http://alucmuhendislik.com
-    - http://estudiperceptiva.com
-    - http://sunny-voices.de
-    - http://team-bobcat.org
+    - http://recturf.com.au
+    - http://resortphotographics.com
     - http://agregate-cariera.ro
+    - http://simonline.nl
+    - http://fortcollins-accounting.com
+    - http://somallc.com
+    - http://sunny-voices.de
+    - http://ferienwohnung-schitter.at
+    - http://moroplinghaptan.info
+    - http://louisawong.net
+    - http://afslearnenglish.com
+    - http://monstermx.com
+    - http://kalorsystem.com
     - http://mobius-group.com
+    - http://parquetroman.com
+    - http://maule.biz
+    - http://zik-et-dance.com
+    - http://auto-ecolecoccinelle.com
+    - http://hashigosha.com
+    - http://estudiperceptiva.com
+    - http://norsky.pt
+    - http://pagosdelrey.mobi
+    - http://pinkyardflamingos.com
+    - http://sgtenterprises.com
+    - http://agrourbis.com
+    - http://wwwa.su
+    - http://shineindian.com
+    - http://profigera.pt
+    - http://datenhaus.info
+    - http://ilnumeroverde.it
+    - http://mueblesamedidamalaga.com
+    - http://missinglynxsystems.com
+    - http://team-bobcat.org
+    - http://weloveflowers.co.uk
+    - http://alucmuhendislik.com
   condition: attributes

@@ -1,5 +1,5 @@
 title: Malspam 2017-08-25 'Your Sage subscription invoice is ready' - url_request
-id: ba963909-ca0d-4f76-9942-93966397bf79
+id: ffd85aee-9448-4401-8010-66687e0a5935
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,33 +9,33 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://haboosh-law.com
-    - http://hbwconsultants.nl
-    - hartwig-mau.de
+    - hbwconsultants.nl
     - go-coo.jp
+    - hansstock.de
     - haleshomesales.com
     - gumart.com
     - haboosh-law.com
     - hausgerhard.com
-    - http://hausgerhard.com
-    - http://gumart.com
-    - http://heimatverein-menne.de
-    - http://hansstock.de
-    - hausgadum.de
-    - hansstock.de
-    - hbwconsultants.nl
-    - http://hartwig-mau.de
-    - hecam.de
-    - http://hecam.de
-    - bromesterionod.net
-    - http://bromesterionod.net
     - http://go-coo.jp
+    - http://hansstock.de
+    - hecam.de
+    - hartwig-mau.de
+    - http://hausgerhard.com
     - heimatverein-menne.de
-    - http://hausgadum.de
     - http://haleshomesales.com
+    - http://hbwconsultants.nl
+    - http://hartwig-mau.de
+    - http://bromesterionod.net
+    - http://gumart.com
+    - http://hausgadum.de
+    - http://hecam.de
+    - http://haboosh-law.com
+    - bromesterionod.net
+    - http://heimatverein-menne.de
+    - hausgadum.de
   condition: attributes

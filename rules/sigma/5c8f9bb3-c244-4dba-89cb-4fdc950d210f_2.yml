@@ -1,5 +1,5 @@
 title: OSINT - Spam Warns about Boeing 737 Max Crashes While Pushing Malware - dns_query
-id: e9a20dbb-cbb4-4cc5-8879-c3a950ad0592
+id: 91079edb-784e-49eb-bbcb-6cfcbbd467ed
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.adwind
-- attack.software.adwind_rat
-- attack.software.h-worm
-- attack.software.s0283
 - attack.software.h-w0rm
+- attack.software.s0283
+- attack.software.h-worm
+- attack.group.adwind
 - attack.software.adwind
+- attack.software.adwind_rat
 detection:
   attributes:
     QueryName|contains:

@@ -1,6 +1,6 @@
 title: OSINT - Javascript malware hosted on US government site which launches powershell
   to connect to C2. - url_request
-id: 6c149554-eee2-40fe-8d72-6a96ad9cb3df
+id: e3846a41-7f58-477a-ae66-1f26bae72c93
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://blog.newskysecurity.com
     - https://pastebin.com
+    - https://blog.newskysecurity.com
     - http://dms.nwcg.gov
   condition: attributes

@@ -1,5 +1,5 @@
 title: OSINT - BlackNurse Denial of Service Attack - url_request
-id: cc74d5c7-d6f0-4377-a620-947d7c6527b5
+id: 06916e38-2236-4a90-8ac6-a16f99526d13
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://www.blacknurse.dk
     - http://soc.tdc.dk
     - http://www.netresec.com
+    - http://www.blacknurse.dk
   condition: attributes

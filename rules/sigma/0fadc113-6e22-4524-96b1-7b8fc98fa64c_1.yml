@@ -1,6 +1,6 @@
 title: 'OSINT - Anatomy of Attack: Inside BazarBackdoor to Ryuk Ransomware "one" Group
   via Cobalt Strike - url_request'
-id: 4c8e625f-3c91-4986-b46a-e7eab98a9026
+id: 56da2600-f452-493b-af13-c2804117422e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,36 +10,36 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.group.cobalt_strike
 - attack.group.ryuk_ransomware
 - attack.software.ryuk_ransomware
 - attack.software.cobalt_strike
-- attack.group.cobalt_strike
 detection:
   attributes:
     RequestUrl|contains:
-    - unlockwsa.com
-    - servicesupdater.com
-    - serviceboosterr.com
-    - mixunderax.com
-    - https://www.advanced-intel.com
-    - secondlivve.com
-    - zhameharden.com
     - check1domains.com
-    - service-boosterr.com
-    - havemosts.com
-    - servicemount.com
+    - servicesupdater.com
     - sweetmonsterr.com
-    - fastbloodhunter.com
-    - serviceupdatter.com
     - qascker.com
-    - bugsbunnyy.com
-    - remotessa.com
-    - dotmaingame.com
-    - hybriqdjs.com
-    - servicewikii.com
-    - sobcase.com
+    - secondlivve.com
     - gungameon.com
-    - wodemayaa.com
-    - luckyhunterrs.com
+    - fastbloodhunter.com
+    - hybriqdjs.com
+    - sobcase.com
+    - bugsbunnyy.com
+    - zhameharden.com
+    - https://www.advanced-intel.com
     - gunsdrag.com
+    - dotmaingame.com
+    - servicemount.com
+    - servicewikii.com
+    - havemosts.com
+    - mixunderax.com
+    - luckyhunterrs.com
+    - service-boosterr.com
+    - serviceboosterr.com
+    - wodemayaa.com
+    - serviceupdatter.com
+    - unlockwsa.com
+    - remotessa.com
   condition: attributes

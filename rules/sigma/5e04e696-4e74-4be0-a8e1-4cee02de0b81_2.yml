@@ -1,6 +1,6 @@
 title: "OSINT - Let\xE2\u20AC\u2122s play (again) with Predator the thief \xE2\u20AC\
   \u201C Fumik0_'s box - dns_query"
-id: d20cfe10-4e4e-4d9e-97e5-a043a2772d38
+id: be94e292-a855-4724-8a76-51ac2ce14e04
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,13 +10,13 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.predator_the_thief
-- attack.t1081
 - attack.t1212
+- attack.t1503
+- attack.t1214
 - attack.t1003
 - attack.group.predator_the_thief
-- attack.t1214
-- attack.t1503
+- attack.t1081
+- attack.software.predator_the_thief
 detection:
   attributes:
     QueryName|contains:

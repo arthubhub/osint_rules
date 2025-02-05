@@ -1,6 +1,6 @@
 title: 'OSINT The Italian Connection: An analysis of exploit supply chains and digital
   quartermasters by Shadowserver - dns_query'
-id: 6e92490f-7a1f-4b16-b243-594e0c412d02
+id: db59c036-67f5-48e9-a2bd-c22bc3afa1b0
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,16 +12,16 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - eniw577dlcp4zbag.onion
     - appeal.ml
+    - eniw577dlcp4zbag.onion
     IpAddresses:
-    - 172.246.109.27
-    - 223.25.233.248
-    - 213.186.164.211
     - 203.249.88.243
+    - 70.90.107.245
+    - 213.186.164.211
+    - 223.25.233.248
     - 95.110.210.31
-    - 211.226.71.4
     - 202.183.129.155
     - 220.134.9.49
-    - 70.90.107.245
+    - 172.246.109.27
+    - 211.226.71.4
   condition: attributes

@@ -1,5 +1,5 @@
 title: OSINT - Indicators of Compromise for Malware used by APT28 - url_request
-id: d4521360-0615-48e5-8375-b67fdc0420d7
+id: 57ccf656-7cda-483d-be66-64370c70fb5d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,39 +9,39 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.x-tunnel
+- attack.software.x-agent
 - attack.group.sofacy
 - attack.group.strontium
-- attack.software.x-agent
-- attack.software.x-tunnel
 detection:
   attributes:
     RequestUrl|contains:
-    - malaytravelgroup.com
-    - thepiratecinemaclub.org
-    - bbcweather.org
-    - coindmarket.com
-    - https://www.ncsc.gov.uk
-    - creekcounty.net
-    - georgia-travel.org
-    - moderntips.org
-    - virtsvc.com
-    - narrowpass.net
-    - loungecinemaclub.com
-    - escochart.com
-    - topcinemaclub.com
-    - beststreammusic.com
-    - worldimagebucket.com
-    - protonhardstorage.com
-    - pointtk.com
-    - politicweekend.com
-    - iboxmit.com
-    - moldtravelgroup.com
-    - powernoderesources.com
-    - daysheduler.org
     - fundseats.com
-    - brownvelocity.org
-    - truefashionnews.com
-    - globaltechengineers.org
+    - coindmarket.com
     - genericnetworkaddress.com
+    - thepiratecinemaclub.org
+    - narrowpass.net
+    - brownvelocity.org
+    - pointtk.com
+    - loungecinemaclub.com
+    - beststreammusic.com
+    - creekcounty.net
+    - powernoderesources.com
+    - iboxmit.com
+    - bbcweather.org
+    - protonhardstorage.com
+    - escochart.com
+    - politicweekend.com
+    - daysheduler.org
+    - truefashionnews.com
     - bulgariatripholidays.com
+    - moldtravelgroup.com
+    - malaytravelgroup.com
+    - moderntips.org
+    - topcinemaclub.com
+    - https://www.ncsc.gov.uk
+    - virtsvc.com
+    - georgia-travel.org
+    - worldimagebucket.com
+    - globaltechengineers.org
   condition: attributes

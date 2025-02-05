@@ -1,5 +1,5 @@
 title: Ransomware Activity Targeting the Healthcare and Public Health Sector - url_request
-id: 837cf69a-908d-46a8-b28e-c89afb11a854
+id: 9b61f0dc-3b07-4db9-971c-26d766460ea1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,19 +9,19 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.ryuk_ransomware
 - attack.software.ryuk_ransomware
+- attack.group.ryuk_ransomware
 detection:
   attributes:
     RequestUrl|contains:
-    - icanhazip.com
+    - ipecho.net
     - myexternalip.com
-    - ipinfo.io
-    - chishir.com
     - mangoclone.com
-    - wtfismyip.com
     - kostunivo.com
     - onixcellent.com
-    - ipecho.net
+    - chishir.com
     - https://us-cert.cisa.gov
+    - ipinfo.io
+    - wtfismyip.com
+    - icanhazip.com
   condition: attributes

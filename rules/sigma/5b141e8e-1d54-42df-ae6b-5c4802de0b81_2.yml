@@ -1,5 +1,5 @@
 title: OSINT - Iron Cybercrime Group Under The Scope - dns_query
-id: 8d32f4d8-4a85-4907-8334-db3de0f322e9
+id: b7c76775-7b98-47a9-967f-b404435837ca
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.iron_backdoor
 - attack.group.iron_group
+- attack.software.iron_backdoor
 detection:
   attributes:
     QueryName|contains:
-    - blockbitcoin.com
     - blockchaln.info
+    - blockbitcoin.com
     - bitcoinwallet8.com
     - swb.one
   condition: attributes

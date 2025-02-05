@@ -1,6 +1,6 @@
 title: "OSINT - D\xC3\xA9j\xC3\_ vu: Petya ransomware appears with SMB propagation\
   \ capabilities - url_request"
-id: fca228e1-678c-4793-a2e6-1eab19a17ec3
+id: 410d7fe3-023e-4d3b-be98-60c519bb9c53
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,14 +10,14 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.petya
 - attack.software.petya
+- attack.group.petya
 detection:
   attributes:
     RequestUrl|contains:
-    - https://support.microsoft.com
-    - https://blogs.technet.microsoft.com
-    - https://blogs.forcepoint.com
     - https://blockchain.info
+    - https://blogs.technet.microsoft.com
+    - https://support.microsoft.com
     - http://www.ad.nl
+    - https://blogs.forcepoint.com
   condition: attributes

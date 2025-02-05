@@ -1,5 +1,5 @@
 title: OSINT - Iranian PupyRAT Bites Middle Eastern Organizations - dns_query
-id: 6aba80a5-bf8d-40e7-941e-c0897fa37ba8
+id: ea6a52e1-e87f-4a7e-a731-fd03a2950a0e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.s0192
-- attack.software.pupyrat
-- attack.group.g0059
-- attack.group.oilrig
-- attack.group.magic_hound
-- attack.group.cleaver
 - attack.group.apt35
+- attack.software.s0192
+- attack.group.cleaver
+- attack.group.g0059
+- attack.group.magic_hound
+- attack.group.oilrig
+- attack.software.pupyrat
 detection:
   object_1535:
     QueryName|contains:
@@ -25,8 +25,8 @@ detection:
     - 45.32.186.33
   object_1536:
     QueryName|contains:
-    - itworx.com-ho.me
     - itworx.com
+    - itworx.com-ho.me
     IpAddresses:
     - 45.32.186.33
   object_1537:
@@ -43,8 +43,8 @@ detection:
     - 45.32.186.33
   object_1539:
     QueryName|contains:
-    - mol.gov.sa
     - mol.com-ho.me
+    - mol.gov.sa
     IpAddresses:
     - 45.32.186.33
   attributes:

@@ -1,6 +1,6 @@
 title: OSINT - DarkHydrus delivers new Trojan that can use Google Drive for C2 communications
   - dns_query
-id: 76e88f7f-df5a-488f-8a20-62a8fb7974f0
+id: 6e453256-53e4-4278-9d7c-cfa66d44aa7c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,36 +10,36 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.s0270
-- attack.group.darkhydrus
 - attack.group.roguerobin
+- attack.group.darkhydrus
 - attack.software.roguerobin
+- attack.software.s0270
 - attack.group.g0079
 detection:
   attributes:
     QueryName|contains:
-    - microsoftonline.agency
-    - onecs-live.services
-    - iecvlist-microsoft.live
-    - edgekey.live
-    - 0ffice365.life
-    - 0nedrive.agency
-    - nsatc.agency
-    - sharepoint.agency
-    - phicdn.world
     - akamai.agency
-    - skydrive.agency
-    - 0ffice365.agency
-    - 0ffice365.services
-    - akdns.live
     - skydrive.services
+    - sharepoint.agency
+    - akamaiedge.services
+    - microsoftonline.agency
+    - azureedge.today
+    - iecvlist-microsoft.live
+    - data-microsoft.services
     - asimov-win-microsoft.services
     - akamaized.live
-    - akamaiedge.live
-    - t-msedge.world
-    - azureedge.today
+    - 0ffice365.life
+    - akdns.live
+    - 0nedrive.agency
+    - edgekey.live
     - corewindows.agency
+    - onecs-live.services
+    - nsatc.agency
+    - phicdn.world
+    - akamaiedge.live
     - onedrive.agency
-    - akamaiedge.services
-    - data-microsoft.services
+    - 0ffice365.services
+    - t-msedge.world
+    - skydrive.agency
+    - 0ffice365.agency
   condition: attributes

@@ -1,5 +1,5 @@
 title: Interesting Recon Script - url_request
-id: 4509b744-6c3e-4773-9dfc-884310889e17
+id: e156acef-6ead-4abe-badd-fb7805314e4b
 description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,23 +9,23 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1518
-- attack.t1064
-- attack.t1018
-- attack.t1135
-- attack.t1012
-- attack.t1057
-- attack.t1069
-- attack.t1083
 - attack.t1049
+- attack.t1087
+- attack.t1083
+- attack.t1064
 - attack.t1082
 - attack.t1204
-- attack.t1059
 - attack.t1482
-- attack.t1087
+- attack.t1018
+- attack.t1059
+- attack.t1057
+- attack.t1069
+- attack.t1518
+- attack.t1012
+- attack.t1135
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.wilbursecurity.com
     - https://pastebin.com
+    - https://www.wilbursecurity.com
   condition: attributes

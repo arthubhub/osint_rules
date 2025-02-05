@@ -1,5 +1,5 @@
 title: OSINT - Mac Malware of 2017 - url_request
-id: 7f83d714-83f1-409d-bdac-432e6afc1529
+id: e9624a80-d228-4719-bef5-34b4ed53f5a6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,55 +9,55 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.filecoder
-- attack.software.fruitfly
-- attack.software.pwnet
-- attack.software.cpumeaner
-- attack.software.macransom
-- attack.group.filecoder
-- attack.software.macspy
-- attack.software.proton
-- attack.software.turla
-- attack.software.x-agent
-- attack.software.mughthesec
-- attack.software.xagentosx
-- attack.group.macransom
-- attack.software.empyre
 - attack.software.macdownloader
+- attack.software.turla
+- attack.software.macransom
+- attack.software.proton
+- attack.software.fruitfly
+- attack.software.filecoder
+- attack.software.x-agent
+- attack.group.filecoder
+- attack.software.empyre
+- attack.software.cpumeaner
+- attack.group.macransom
+- attack.software.xagentosx
+- attack.software.macspy
+- attack.software.pwnet
+- attack.software.mughthesec
 detection:
   object_17864:
     RequestUrl|contains:
     - www.securitychecking.org
   attributes:
     RequestUrl|contains:
+    - handbrake.cc
+    - officialswebsites.info
+    - apple-uptoday.org
+    - https://researchcenter.paloaltonetworks.com
+    - eltima.in
+    - http://www.elmedia-video-player.com
     - http://apple-iclods.org
+    - http://apple-search.info
+    - symantecblog.com
     - https://iranthreats.github.io
     - apple-search.info
-    - http://192.168.3.217
-    - handbrakestore.com
-    - handbrake.cc
-    - https://mac.eltima.com
-    - apple-iclods.org
-    - http://23.227.196.215
-    - http://apple-uptoday.org
-    - https://www.welivesecurity.com
-    - https://blog.checkpoint.com
-    - http://46.17.97.37
-    - https://objective-see.com
-    - https://www.virusbulletin.com
-    - https://blog.malwarebytes.com
-    - https://researchcenter.paloaltonetworks.com
-    - http://www.elmedia-video-player.com
-    - officialswebsites.info
-    - eltima.in
     - apple-iclods.net
-    - https://www.securitychecking.org
-    - symantecblog.com
-    - https://blog.fox-it.com
-    - apple-uptoday.org
-    - http://apple-checker.org
-    - http://apple-search.info
-    - apple-checker.org
-    - https://www.cybersixgill.com
+    - apple-iclods.org
     - handbrake.biz
+    - https://www.welivesecurity.com
+    - https://www.securitychecking.org
+    - http://apple-uptoday.org
+    - https://blog.checkpoint.com
+    - apple-checker.org
+    - https://blog.malwarebytes.com
+    - handbrakestore.com
+    - http://apple-checker.org
+    - https://blog.fox-it.com
+    - http://192.168.3.217
+    - https://www.virusbulletin.com
+    - http://23.227.196.215
+    - https://objective-see.com
+    - https://www.cybersixgill.com
+    - https://mac.eltima.com
+    - http://46.17.97.37
   condition: 1 of object_* or attributes

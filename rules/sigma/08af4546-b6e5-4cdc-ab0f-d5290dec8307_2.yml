@@ -1,6 +1,6 @@
 title: 'AA23-250A: Multiple Nation-State Threat Actors Exploit CVE-2022-47966 and
   CVE-2022-42475 - dns_query'
-id: 56cd4254-dc5d-424b-8c70-8d2a8566b435
+id: 4e8f073d-e69b-4e5b-b750-b26bdddd7c08
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,31 +12,31 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - main.cloudfronts.net
     - xpack.disqus.com
     - cloudfronts.net
-    - main.cloudfronts.net
     IpAddresses:
+    - 144.202.2.71
     - 103.105.49.108
-    - 45.77.121.232
-    - 154.6.91.26
-    - 45.90.123.194
-    - 154.6.93.32
-    - 154.6.93.24
-    - 154.6.93.5
-    - 184.170.241.27
     - 191.96.106.40
+    - 45.90.123.194
+    - 179.60.147.4
+    - 154.6.91.26
+    - 92.118.39.82
     - 154.6.93.12
-    - 47.90.240.218
     - 102.129.145.232
     - 80.85.241.15
-    - 207.246.105.240
     - 193.142.146.226
+    - 154.6.93.24
+    - 184.170.241.27
+    - 207.246.105.240
+    - 154.6.93.32
     - 108.62.118.160
-    - 92.118.39.82
+    - 104.238.234.145
     - 68.177.56.38
     - 192.142.226.153
-    - 144.202.2.71
-    - 179.60.147.4
+    - 47.90.240.218
+    - 154.6.93.5
     - 154.6.93.22
-    - 104.238.234.145
+    - 45.77.121.232
   condition: attributes

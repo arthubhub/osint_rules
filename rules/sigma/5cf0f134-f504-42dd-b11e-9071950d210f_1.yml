@@ -1,6 +1,6 @@
 title: Emissary Panda Attacks Middle East Government Sharepoint Servers by Palo Alto
   Unit42 - url_request
-id: 293f503a-acd2-4681-ac3e-3d093780826a
+id: 80edbfa2-d068-4b1c-b69d-bcfbf3b6c612
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,12 +11,12 @@ logsource:
   category: url_request
 tags:
 - attack.group.luckymouse
-- attack.group.emissary_panda
 - attack.group.threat_group-3390
+- attack.group.emissary_panda
 - attack.group.g0027
 detection:
   attributes:
     RequestUrl|contains:
-    - https://185.12.45.134
     - https://unit42.paloaltonetworks.com
+    - https://185.12.45.134
   condition: attributes

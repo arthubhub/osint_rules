@@ -1,5 +1,5 @@
 title: OSINT - Goodbye Cerber? Hello Magniber Ransomware! - url_request
-id: 35b91f81-20fc-4748-ab3b-bb47bc46925d
+id: f02aff53-41a9-4659-b059-c44defeb7bc0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.magniber_ransomware
 - attack.group.magniber_ransomware
+- attack.software.magniber_ransomware
 detection:
   attributes:
     RequestUrl|contains:
+    - jobsnot.services
     - hotdisk.world
-    - bankme.date
     - ofotqrmsrdc6c3rz.onion
     - https://www.bleepingcomputer.com
+    - bankme.date
     - carefit.agency
-    - jobsnot.services
   condition: attributes

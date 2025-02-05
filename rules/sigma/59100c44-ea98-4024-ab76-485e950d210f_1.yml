@@ -1,6 +1,6 @@
 title: OSINT - Windows Defender ATP thwarts Operation WilySupply software supply chain
   cyberattack - url_request
-id: 700fb920-9dac-4862-8b3d-630c236cf0c1
+id: 1a7b8526-38c2-41b7-b85c-e6f8b0410386
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://176.53.118.131
-    - https://blogs.technet.microsoft.com
     - http://5.39.218.205
+    - https://blogs.technet.microsoft.com
+    - http://176.53.118.131
   condition: attributes

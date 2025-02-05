@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-11-03 : Affid=3, offline, ".asasin" : "Scanned image from
   MX-2600N" - "20171103_123456.doc" - url_request'
-id: dd11210b-2425-4d0a-8d79-3ea3f7bf6642
+id: a3d84799-93a9-472c-a2b4-d67842ba5d37
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,23 +10,23 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://336.linux1.testsider.dk
+    - http://watchez.biz
+    - http://saranville.com
     - http://comercialarques.es
     - http://pabxconsultants.co.za
-    - http://pwmsteel.com
-    - http://betadesign.es
-    - http://saranville.com
-    - http://deltaled.es
-    - http://watchez.biz
-    - http://san-syo.co.jp
     - http://visualindesign.be
-    - http://evengrollighromsof.net
-    - http://twonkygames.com
-    - http://testbxc.u-host.ru
     - http://unbescheiden.net
+    - http://pwmsteel.com
+    - http://twonkygames.com
+    - http://betadesign.es
+    - http://evengrollighromsof.net
+    - http://san-syo.co.jp
+    - http://336.linux1.testsider.dk
+    - http://testbxc.u-host.ru
+    - http://deltaled.es
   condition: attributes

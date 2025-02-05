@@ -1,5 +1,5 @@
 title: OSINT - APT Case RUAG Technical Report - dns_query
-id: c72f4f55-8f9b-46ff-90ed-da1f60bdd1c8
+id: a8d1bf7d-bbcd-49b2-b131-1b714b12f746
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,22 +9,22 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.turla
-- attack.group.turla_group
 - attack.software.wipbot
+- attack.group.turla_group
+- attack.software.turla
 detection:
   attributes:
     IpAddresses:
-    - 81.223.14.100
     - 5.255.93.228
-    - 217.10.138.233
-    - 92.53.126.118
-    - 195.63.103.228
-    - 155.94.65.2
-    - 85.214.40.111
-    - 85.25.120.177
-    - 193.26.18.117
     - 94.242.60.104
-    - 195.3.105.50
+    - 195.63.103.228
+    - 85.214.40.111
+    - 217.10.138.233
+    - 155.94.65.2
+    - 92.53.126.118
+    - 85.25.120.177
     - 80.74.145.80
+    - 81.223.14.100
+    - 193.26.18.117
+    - 195.3.105.50
   condition: attributes

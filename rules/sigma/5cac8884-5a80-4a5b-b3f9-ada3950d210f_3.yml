@@ -1,5 +1,5 @@
 title: OSINT - STUXSHOP The Oldest Stuxnet Component Dials Up - process_creation
-id: d80e3889-d5fa-4bc9-b4fd-30fa06054c2f
+id: 6e335d97-a2ab-4e27-87d8-9a9ee8fdf45f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,8 +9,8 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.stuxnet
 - attack.group.stuxnet
+- attack.software.stuxnet
 detection:
   object_6747:
     md5:
@@ -91,15 +91,15 @@ detection:
     - 77211838bb6783121fe1aeff182c8cc1cba9c9f0c1e5a0027e0c0b9dfa18e2ac
   attributes:
     sha256:
-    - a01845255bdc61b610cac269a5562ad09415aaf2a1490d53d55c4c3597670803
-    - 1daa2b15b70e486927c8fc06eed434080ab408a1b320be9fefe193c20d1d9a7f
-    - 32159d2a16397823bc882ddd3cd77ecdbabe0fde934e62f297b8ff4d7b89832a
+    - a248c9eeb8e53bbebce42f55e2bfa71bfc70ffcd9dff3271bfd338e1578f37a1
     - 77211838bb6783121fe1aeff182c8cc1cba9c9f0c1e5a0027e0c0b9dfa18e2ac
+    - f34c85bb4fcd87225468d0e8ee4441ebc92f42b3f69500d85e28be3c553ce433
+    - 32159d2a16397823bc882ddd3cd77ecdbabe0fde934e62f297b8ff4d7b89832a
+    - 683ce2c7c80b180768fe4d2a39030dc7c4f67db79d1953ee4803522131f533a3
+    - 1daa2b15b70e486927c8fc06eed434080ab408a1b320be9fefe193c20d1d9a7f
     - c074aeef97ce81e8c68b7376b124546cabf40e2cd3aff1719d9daa6c3f780532
     - c1961e54d60e34bbec397c9120564e8d08f2f243ae349d2fb20f736510716579
-    - f34c85bb4fcd87225468d0e8ee4441ebc92f42b3f69500d85e28be3c553ce433
-    - 683ce2c7c80b180768fe4d2a39030dc7c4f67db79d1953ee4803522131f533a3
-    - a248c9eeb8e53bbebce42f55e2bfa71bfc70ffcd9dff3271bfd338e1578f37a1
-    - ec41b029c3ff4147b6a5252cb8b659f851f4538d4af0a574f7e16bc1cd14a300
     - 63735d555f219765d486b3d253e39bd316bbcb1c0ec595ea45ddf6e419bef3cb
+    - a01845255bdc61b610cac269a5562ad09415aaf2a1490d53d55c4c3597670803
+    - ec41b029c3ff4147b6a5252cb8b659f851f4538d4af0a574f7e16bc1cd14a300
   condition: 1 of object_* or attributes

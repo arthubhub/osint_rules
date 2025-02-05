@@ -1,5 +1,5 @@
 title: OSINT - The Elderwood Project - url_request
-id: b2f3deec-6107-4389-ab29-d12b603b2c49
+id: ef3ede43-d910-4af4-9061-4fdbf2c6b251
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,14 +9,14 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.beijing_group
 - attack.group.g0066
+- attack.group.beijing_group
 detection:
   attributes:
     RequestUrl|contains:
     - https://www.symantec.com
-    - help2012hi.hk
-    - 3dvideo.ru
-    - gate-usa.com
     - wwwcnas.org
+    - 3dvideo.ru
+    - help2012hi.hk
+    - gate-usa.com
   condition: attributes

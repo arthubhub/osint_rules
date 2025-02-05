@@ -1,6 +1,6 @@
 title: Kaseya ransomware attack - indicators and information publicly available -
   url_request
-id: a9755e0f-95d6-4bf2-aab9-5a83ca6803df
+id: 7979c6e3-09f1-47c0-a061-e033911c7943
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,56 +11,56 @@ logsource:
   category: url_request
 tags:
 - attack.software.sodinokibi
-- attack.group.sodinokibi
 - attack.t1486
+- attack.group.sodinokibi
 detection:
   object_11979:
     RequestUrl|contains:
     - https://us-cert.cisa.gov
   attributes:
     RequestUrl|contains:
-    - cursosgratuitosnainternet.com
-    - myhostcloud.com
-    - 8449nohate.org
-    - bxdf.info
-    - blossombeyond50.com
-    - 101gowrie.com
-    - gmto.fr
-    - daklesa.de
-    - simoneblum.de
-    - thomasvicino.com
-    - 4youbeautysalon.com
-    - milestoneshows.com
-    - https://twitter.com
-    - sw1m.ru
-    - smartypractice.com
-    - fannmedias.com
-    - 365questions.org
-    - 4net.guru
-    - bierensgebakkramen.nl
-    - facettenreich27.de
-    - pasvenska.se
-    - mindpackstudios.com
-    - 35-40konkatsu.net
-    - ncuccr.org
-    - southeasternacademyofprosthodontics.org
-    - https://community.sophos.com
-    - filmstreamingvfcomplet.be
-    - faroairporttransfers.net
-    - iqbalscientific.com
-    - tanzschule-kieber.de
-    - gonzalezfornes.es
-    - 12starhd.online
-    - kaotikkustomz.com
-    - https://github.com
-    - candyhouseusa.com
-    - cerebralforce.net
-    - https://helpdesk.kaseya.com
     - c2e-poitiers.com
-    - blgr.be
-    - tonelektro.nl
+    - iqbalscientific.com
+    - faroairporttransfers.net
+    - 101gowrie.com
+    - facettenreich27.de
     - fotoscondron.com
-    - 1team.es
+    - bierensgebakkramen.nl
+    - 35-40konkatsu.net
+    - 365questions.org
+    - milestoneshows.com
+    - smartypractice.com
+    - blgr.be
+    - simoneblum.de
+    - https://github.com
+    - tanzschule-kieber.de
+    - mindpackstudios.com
+    - gonzalezfornes.es
+    - thomasvicino.com
     - homng.net
+    - https://community.sophos.com
+    - 4net.guru
+    - cursosgratuitosnainternet.com
+    - gmto.fr
+    - southeasternacademyofprosthodontics.org
+    - tonelektro.nl
+    - myhostcloud.com
+    - filmstreamingvfcomplet.be
+    - pasvenska.se
+    - daklesa.de
+    - blossombeyond50.com
+    - 8449nohate.org
+    - candyhouseusa.com
+    - 1team.es
+    - cerebralforce.net
+    - sw1m.ru
     - 123vrachi.ru
+    - ncuccr.org
+    - https://twitter.com
+    - https://helpdesk.kaseya.com
+    - 12starhd.online
+    - 4youbeautysalon.com
+    - fannmedias.com
+    - bxdf.info
+    - kaotikkustomz.com
   condition: 1 of object_* or attributes

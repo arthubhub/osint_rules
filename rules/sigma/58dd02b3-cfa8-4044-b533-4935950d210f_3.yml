@@ -1,6 +1,6 @@
 title: OSINT - Trochilus and New MoonWind RATs Used In Attack Against Thai Organizations
   - process_creation
-id: ff124d22-6c54-4276-8746-3ae3726fa281
+id: 6d4c3b24-b9a0-4164-ba46-4e7f2e4e576f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,21 +10,21 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.moonwind
 - attack.software.trochilus
+- attack.software.moonwind
 detection:
   attributes:
     md5:
-    - 278a95ffe4e8f8f33d56ae4276b4799b
     - 9ad1b81ca2d37a63faf2aaf279fed71c
+    - 278a95ffe4e8f8f33d56ae4276b4799b
     sha1:
-    - 36e367bd403f30d18314911ad129810cc7aa03aa
     - ae2905c603ebc1b41c11ef26ac344bd695a24580
+    - 36e367bd403f30d18314911ad129810cc7aa03aa
     sha256:
-    - 59f8a31d66f053f1efcc8d7c7ebb209a8c12233423cc2dc3673373dde9b3a149
-    - ce3da112e68e00621920911b1f9c72d7175894901173e703a44ac3700e4d427c
     - 815df680be80b26b5dff0bcaf73f7495b9cae5e3ad3acb7348be188af3e75201
-    - e31679b82be58ace96b1d9fdfc2b62b6e91d371ed93957e0764cd7c464b04b9d
-    - f2589745671949422b19beec0856ca8b9608c02d5df4402f92c0dcc9d403010b
     - fd4856f2ec676f273ff71e1b0a1729cf6251c82780fc9e7d628deca690b02928
+    - 59f8a31d66f053f1efcc8d7c7ebb209a8c12233423cc2dc3673373dde9b3a149
+    - f2589745671949422b19beec0856ca8b9608c02d5df4402f92c0dcc9d403010b
+    - e31679b82be58ace96b1d9fdfc2b62b6e91d371ed93957e0764cd7c464b04b9d
+    - ce3da112e68e00621920911b1f9c72d7175894901173e703a44ac3700e4d427c
   condition: attributes

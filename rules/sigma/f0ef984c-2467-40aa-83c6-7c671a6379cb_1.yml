@@ -1,6 +1,6 @@
 title: OSINT -  BattleRoyal, DarkGate Cluster Spreads via Email and Fake Browser Updates
   - url_request
-id: a1dae4bf-8890-431c-aca8-bc7986a7fade
+id: e650109c-4f47-49e6-84d2-31410a0aef0e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -36,13 +36,13 @@ detection:
     - https://heilee.com
   object_5047:
     RequestUrl|contains:
-    - kairoscounselingmi.com
     - https://kairoscounselingmi.com
+    - kairoscounselingmi.com
   attributes:
     RequestUrl|contains:
-    - searcherbigdealk.com
-    - kairoscounselingmi.com
-    - heilee.com
     - zxcdota2huysasi.com
+    - kairoscounselingmi.com
+    - searcherbigdealk.com
     - nathumvida.org
+    - heilee.com
   condition: 1 of object_* or attributes

@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-09-19 : Affid=3, offline, ".ykcol" : "HERBALIFE Order Number:
   6N01001234" - "6N01001234_1.7z" - url_request'
-id: e122b920-2f7a-423e-bc2c-a6c2e23f0f8c
+id: ac31559b-a106-4b4f-b686-69ec98fb9af7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,28 +10,28 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://bnphealthcare.com
+    - http://foodbikers.ch
+    - http://conxibit.com
+    - http://secureleads.com
+    - http://teracom.co.id
+    - http://cxwebdesign.de
+    - http://ycgrp.jp
+    - http://gui-design.de
+    - http://download.justowin.it
+    - http://ecofloraholland.nl
+    - http://isiquest1.com
+    - http://housecafe-essen.de
+    - http://diakoniestation-winnenden.de
     - http://highpressurewelding.co.uk
     - http://felixsolis.mobi
-    - http://secureleads.com
     - http://g-peer.at
     - http://asiaresearchcenter.org
-    - http://diakoniestation-winnenden.de
-    - http://isiquest1.com
-    - http://cxwebdesign.de
-    - http://ecofloraholland.nl
-    - http://teracom.co.id
-    - http://ycgrp.jp
-    - http://conxibit.com
-    - http://foodbikers.ch
-    - http://download.justowin.it
-    - http://bnphealthcare.com
     - http://arsmakina.org
-    - http://gui-design.de
     - http://zionbrand.su
-    - http://housecafe-essen.de
   condition: attributes

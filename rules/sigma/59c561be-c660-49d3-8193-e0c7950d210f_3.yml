@@ -1,6 +1,6 @@
 title: "M2M -  Locky: \"Invoice RE-2017-09-21-00xxx\"\tfrom \"Amazon Marketplace\"\
   \ - process_creation"
-id: 5c186c7f-4d81-4dc1-b3b7-71f30c0eea2f
+id: abf7b780-d925-41c1-9308-d483597f7e32
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,20 +10,20 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     md5:
-    - f3fcbc16b37e56f7a89ddf7d0f718291
-    - c47bc13595d44521b3f5567ded0a0a13
     - 149d63efd95781f3d3a07b838d14f04e
+    - c47bc13595d44521b3f5567ded0a0a13
+    - f3fcbc16b37e56f7a89ddf7d0f718291
     sha1:
-    - cb540085bef26e1b627476636701006abdff5de9
     - 7eb945458b1f489b351b86e3ff4403edc3503653
     - 0f4ca32e004dbbf7c3e485b3ccd6ed1adac7fb65
+    - cb540085bef26e1b627476636701006abdff5de9
     sha256:
-    - 35d9c92cc67596b694396eab38b8ab8b016a96ae3b40e2cd9e6aa686970186ca
     - 7bf8de16c1fc84eabcf087894b534c8af8fa4f6aa632c77c8b52471274d78a6c
     - ac6da4890150e2037a5913623557ab759b62d0ee9206ec0bacac318523afbc53
+    - 35d9c92cc67596b694396eab38b8ab8b016a96ae3b40e2cd9e6aa686970186ca
   condition: attributes

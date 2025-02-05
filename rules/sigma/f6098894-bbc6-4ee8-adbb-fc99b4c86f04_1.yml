@@ -1,5 +1,5 @@
 title: OSINT - Godfather Trojan IOCs - url_request
-id: 075ab2b8-a140-4b97-92b5-42172555d513
+id: d7e49222-22cf-49f8-84e1-83646c4041d3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,8 +9,8 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1475
 - attack.t1646
+- attack.t1475
 detection:
   object_6649:
     RequestUrl|contains:
@@ -20,14 +20,14 @@ detection:
     - https://blog.group-ib.com
   attributes:
     RequestUrl|contains:
-    - http://heikenmorgan.com
-    - http://50.18.3.26
-    - http://45.61.138.60
-    - heikenmorgan.com
-    - https://banerrokutepera.com
-    - https://henkormerise.com
     - pluscurrencyconverter.com
+    - banerrokutepera.com
+    - http://heikenmorgan.com
     - henkormerise.com
     - http://168.100.9.86
-    - banerrokutepera.com
+    - heikenmorgan.com
+    - http://45.61.138.60
+    - http://50.18.3.26
+    - https://henkormerise.com
+    - https://banerrokutepera.com
   condition: 1 of object_* or attributes
