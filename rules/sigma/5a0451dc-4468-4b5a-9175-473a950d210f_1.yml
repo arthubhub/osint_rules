@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-11-08 : Affid=3, offline, ".asasin" : "Invoice AX1234567"
   - "Invoice-AX1234567.doc" - url_request'
-id: c1b20504-3afa-4be3-8cf9-6e7dcef65c0c
+id: d90900b2-eb71-4391-a375-0d89f707a761
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,19 +10,19 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://www.drpampe.com
-    - http://feigel-fensterbau.eu
-    - http://elpuntinazo.com
-    - http://fgmindia.com
-    - http://gachvina.com
     - http://euriskosrl.it
-    - http://hapcen.com
-    - http://thennaloperdown.net
+    - http://elpuntinazo.com
+    - http://www.drpampe.com
+    - http://fgmindia.com
     - http://gulercin.com
+    - http://thennaloperdown.net
+    - http://feigel-fensterbau.eu
+    - http://gachvina.com
+    - http://hapcen.com
     - http://idiomwizard.com
   condition: attributes

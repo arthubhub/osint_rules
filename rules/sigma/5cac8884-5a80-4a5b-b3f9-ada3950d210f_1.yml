@@ -1,5 +1,5 @@
 title: OSINT - STUXSHOP The Oldest Stuxnet Component Dials Up - url_request
-id: b2fdfe53-0f0e-47c4-a1fe-b3aa92b96b07
+id: 40b8dec3-1c87-4372-8f0b-dce981941938
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,17 +12,17 @@ tags:
 - attack.group.stuxnet
 - attack.software.stuxnet
 detection:
-  object_11435:
+  object_6750:
     RequestUrl|contains:
     - todaysfutbol.com
-  object_11436:
+  object_6751:
     RequestUrl|contains:
     - mypremierfutbol.com
   attributes:
     RequestUrl|contains:
-    - https://storage.googleapis.com
-    - http://todaysfutbol.com
     - http://211.24.237.226
     - http://mypremierfutbol.com
     - http://78.111.169.146
+    - http://todaysfutbol.com
+    - https://storage.googleapis.com
   condition: 1 of object_* or attributes

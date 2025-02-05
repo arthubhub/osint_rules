@@ -1,6 +1,6 @@
 title: 'TraderTraitor: North Korean State-Sponsored APT Targets Blockchain Companies
   - url_request'
-id: fafb2a3b-f95c-459e-ae3b-b236cfb1e7d4
+id: 218ccca0-d3a6-4e1e-92a5-1f10ccf4e127
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -13,61 +13,61 @@ tags:
 - attack.group.lazarus_group
 - attack.group.g0032
 detection:
-  object_10031:
+  object_3379:
     RequestUrl|contains:
     - https://www.cisa.gov
-  object_10032:
+  object_3380:
     RequestUrl|contains:
     - https://www.cisa.gov
-  object_10033:
+  object_3381:
     RequestUrl|contains:
     - dafom.dev
-  object_10035:
+  object_3383:
     RequestUrl|contains:
     - tokenais.com
-  object_10037:
+  object_3385:
     RequestUrl|contains:
     - cryptais.com
-  object_10038:
+  object_3386:
     RequestUrl|contains:
     - alticgo.com
-  object_10039:
+  object_3387:
     RequestUrl|contains:
     - esilet.com
-  object_10040:
+  object_3388:
     RequestUrl|contains:
     - greenvideo.nl
-  object_10041:
+  object_3389:
     RequestUrl|contains:
     - dafnefonseca.com
-  object_10042:
+  object_3390:
     RequestUrl|contains:
     - haciendadeclarevot.com
-  object_10043:
+  object_3391:
     RequestUrl|contains:
     - sche-eg.org
-  object_10044:
+  object_3392:
     RequestUrl|contains:
     - www.vinoymas.ch
-  object_10045:
+  object_3393:
     RequestUrl|contains:
     - infodigitalnew.com
-  object_10046:
+  object_3394:
     RequestUrl|contains:
     - creaideck.com
-  object_10047:
+  object_3395:
     RequestUrl|contains:
     - aideck.net
   attributes:
     RequestUrl|contains:
-    - https://github.com
-    - https://greenvideo.nl
-    - https://haciendadeclarevot.com
-    - https://www.esilet.com
-    - https://www.alticgo.com
     - https://sche
-    - https://dafnefonseca.com
     - https://aideck.net
-    - https://infodigitalnew.com
+    - https://dafnefonseca.com
+    - https://greenvideo.nl
+    - https://www.esilet.com
+    - https://github.com
     - https://www.vinoymas.ch
+    - https://haciendadeclarevot.com
+    - https://www.alticgo.com
+    - https://infodigitalnew.com
   condition: 1 of object_* or attributes

@@ -1,5 +1,5 @@
 title: QUARTERRIG - Malware Analysis Report - url_request
-id: 88e65761-831e-4878-8ec3-98890ae76348
+id: 902d14b2-5416-4972-84a2-242eade84937
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,31 +9,31 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1566
-- attack.t1140
-- attack.t1204.002
-- attack.t1547.001
-- attack.t1574.002
 - attack.t1574.001
 - attack.t1583.003
-- attack.t1204
-- attack.t1566.001
-- attack.t1566.002
-- attack.t1553.005
-- attack.software.quarterrig
-- attack.t1027.006
 - attack.t1584
+- attack.t1566
+- attack.t1027.006
+- attack.t1140
+- attack.t1574.002
+- attack.t1204
+- attack.software.quarterrig
+- attack.t1566.002
+- attack.t1566.001
+- attack.t1204.002
+- attack.t1553.005
+- attack.t1547.001
 detection:
-  object_10009:
+  object_6334:
     RequestUrl|contains:
     - https://www.gov.pl
-  object_10021:
+  object_6346:
     RequestUrl|contains:
     - sharpledge.com
-  object_10022:
+  object_6347:
     RequestUrl|contains:
     - pateke.com
-  object_10023:
+  object_6348:
     RequestUrl|contains:
     - gatewan.com
   condition: 1 of object_*

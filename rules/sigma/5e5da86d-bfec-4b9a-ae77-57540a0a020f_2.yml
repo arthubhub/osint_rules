@@ -1,5 +1,5 @@
 title: Remcos RAT 02-28-20 - dns_query
-id: 48ae4e69-194e-4880-b98e-d6252dae7a66
+id: 4024bc52-9ac9-403d-aa47-46046e344e05
 description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,37 +9,37 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1099
-- attack.t1065
-- attack.t1060
-- attack.group.remcos
-- attack.t1202
-- attack.t1036
 - attack.t1054
+- attack.t1065
 - attack.t1064
-- attack.t1193
+- attack.group.remcos
+- attack.t1060
+- attack.t1099
 - attack.software.remcos
+- attack.t1202
+- attack.t1193
+- attack.t1036
 detection:
   attributes:
     QueryName|contains:
-    - droptop3.com
-    - droptop5.com
-    - droptop8.com
-    - usadroptop6.com
-    - usadroptop3.com
-    - usadroptop5.com
-    - usadroptop4.com
-    - usadroptop2.com
-    - usadroptop1.com
-    - droptop10.com
-    - usadroptop9.com
-    - droptop4.com
-    - usadroptop7.com
-    - usadroptop10.com
-    - usadroptop8.com
-    - droptop9.com
-    - droptop6.com
     - droptop2.com
-    - droptop1.com
+    - droptop5.com
+    - usadroptop4.com
+    - usadroptop6.com
+    - droptop3.com
+    - usadroptop1.com
+    - usadroptop2.com
+    - droptop9.com
+    - droptop4.com
+    - droptop8.com
+    - usadroptop7.com
+    - usadroptop5.com
+    - usadroptop8.com
+    - usadroptop9.com
     - droptop7.com
+    - droptop10.com
+    - usadroptop3.com
+    - droptop1.com
+    - usadroptop10.com
+    - droptop6.com
   condition: attributes

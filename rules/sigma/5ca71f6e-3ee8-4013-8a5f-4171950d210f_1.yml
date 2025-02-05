@@ -1,5 +1,5 @@
 title: OSINT - Hancitor domains - url_request
-id: 6a447c70-ac5e-4244-8147-e477ea26aced
+id: 6b060239-41ae-4dba-b4ed-f99f996aad91
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,33 +9,33 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.hancitor
 - attack.group.hancitor
+- attack.software.hancitor
 detection:
-  object_9243:
+  object_4525:
     RequestUrl|contains:
     - https://twitter.com
   attributes:
     RequestUrl|contains:
-    - alldogspoop.org
+    - https://pastebin.com
+    - http://duloperes.com
+    - http://orik.hu
+    - alldogspoop.info
+    - alldogspoop.biz
+    - shopalldogspoop.com
+    - http://automotivedreamteam.com
     - alldogspoop.net
-    - alldogspoop.co
-    - http://nal.com.ua
-    - pooperscooperfranchise.com
-    - https://ghostbin.com
+    - http://gogotwitof.ru
+    - alldogspoop.org
+    - http://reflyhepone.ru
     - http://ecsn.biz
     - http://inazel.es
-    - shopalldogspoop.com
-    - http://gogotwitof.ru
-    - https://pastebin.com
-    - alldogspoop.mobi
-    - alldogspoop.info
-    - http://automotivedreamteam.com
-    - http://duloperes.com
-    - http://syrtaki-santorini.gr
-    - http://scanelectric.ro
-    - alldogspoop.biz
+    - pooperscooperfranchise.com
+    - alldogspoop.co
     - cherryhillpooperscoopers.com
-    - http://reflyhepone.ru
-    - http://orik.hu
+    - http://scanelectric.ro
+    - alldogspoop.mobi
+    - https://ghostbin.com
+    - http://syrtaki-santorini.gr
+    - http://nal.com.ua
   condition: 1 of object_* or attributes

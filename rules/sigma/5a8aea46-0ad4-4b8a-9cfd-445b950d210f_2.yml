@@ -1,6 +1,6 @@
 title: OSINT - GandCrab Ransomware Distributed by Exploit Kits, Appends GDCB Extension
   - process_creation
-id: 402f39db-81b5-474f-a053-53d1b7b14505
+id: 971b26f3-56f3-4bdd-9981-bdde17ef060c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,14 +10,14 @@ logsource:
   product: windows
   category: process_creation
 detection:
-  object_9620:
+  object_930:
     md5:
     - 6866d8d8bf8565d94e0e1479978cf1e5
     sha1:
     - 2245bd90b753b7fd29b7218a0ef50435c64f8767
     sha256:
     - 3e2e881ec6fcfb6329cad95c15de4a90aef1032550176c7c7729c0a0e383c615
-  object_9622:
+  object_932:
     md5:
     - aedf80c426fb649bb258e430a3830d85
     sha1:
@@ -27,6 +27,6 @@ detection:
   attributes:
     md5:
     - 6866d8d8bf8565d94e0e1479978cf1e5
-    - aedf80c426fb649bb258e430a3830d85
     - 379e149517f4119f2edb9676ec456ed4
+    - aedf80c426fb649bb258e430a3830d85
   condition: 1 of object_* or attributes

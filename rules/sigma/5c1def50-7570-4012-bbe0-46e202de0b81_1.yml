@@ -1,5 +1,5 @@
 title: Malicious ELF binary (Mirai) - 2018-12-22 (collected on a router) - url_request
-id: 0134291f-4b02-45d5-be18-44e8b04b90b0
+id: ce4178c0-70e9-4aec-b8c9-f23e3588c047
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,20 +9,20 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.mirai
 - attack.group.mirai
+- attack.software.mirai
 detection:
   attributes:
     RequestUrl|contains:
-    - http://rce.trade
-    - http://145.239.138.69
-    - realtek.sh
-    - airlink.sh
     - rce.trade
+    - airlink.sh
     - tutos.sh
     - adb.sh
     - purenetworks.com
+    - http://145.239.138.69
     - dlink.sh
-    - dzs.sh
     - gpon8080.sh
+    - realtek.sh
+    - dzs.sh
+    - http://rce.trade
   condition: attributes

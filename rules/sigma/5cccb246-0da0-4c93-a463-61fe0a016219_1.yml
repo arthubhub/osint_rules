@@ -1,5 +1,5 @@
 title: ESET Turla LightNeuron Research - url_request
-id: fe42d7d1-b4a3-4b6a-bfc3-df82ddd86348
+id: c9685b13-cbc4-4a35-9bef-55a44382d0bc
 description: edit this field when analysing or editing the rule - reported by "ESET"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,20 +9,20 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.t1071
+- attack.t1086
+- attack.t1078
+- attack.t1001
+- attack.t1020
 - attack.t1005
 - attack.t1041
-- attack.t1078
-- attack.t1114
-- attack.group.turla_group
-- attack.t1001
-- attack.t1086
-- attack.t1020
-- attack.t1022
-- attack.t1029
-- attack.t1071
-- attack.t1032
 - attack.t1119
+- attack.t1114
+- attack.t1032
+- attack.group.turla_group
+- attack.t1029
 - attack.t1016
+- attack.t1022
 detection:
   attributes:
     RequestUrl|contains:

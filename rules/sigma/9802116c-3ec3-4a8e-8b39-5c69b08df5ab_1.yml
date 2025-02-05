@@ -1,6 +1,6 @@
 title: OSINT - Zero-Day Exploitation of Unauthenticated Remote Code Execution Vulnerability
   in GlobalProtect (CVE-2024-3400) - url_request
-id: 0f06f0cd-8e50-49c8-8060-0dd0ddeb05e0
+id: da8149ee-c1a5-476c-842e-27fa53c1c892
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,10 +10,10 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1133
 - attack.t1190
+- attack.t1133
 detection:
-  object_12366:
+  object_12924:
     RequestUrl|contains:
     - https://www.volexity.com
   condition: 1 of object_*

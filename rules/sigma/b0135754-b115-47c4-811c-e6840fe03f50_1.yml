@@ -1,5 +1,5 @@
 title: Serverless InfoStealer delivered in Est European Countries - url_request
-id: 6b205edf-0e11-4fb2-917a-80cd36a7409a
+id: caad2079-db90-4179-b2f9-09e6146c026d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,16 +9,16 @@ logsource:
   product: windows
   category: url_request
 detection:
-  object_10495:
+  object_250:
     RequestUrl|contains:
     - https://yoroi.company
   attributes:
     RequestUrl|contains:
-    - https://bitbucket.
-    - https://bitbucket.org
-    - https://madarbloghogya.blogspot.com
+    - http://69.174.99.181
     - https://bitly.com
     - http://crypters.coolpage.biz
-    - http://69.174.99.181
+    - https://madarbloghogya.blogspot.com
+    - https://bitbucket.
+    - https://bitbucket.org
     - https://1230948%1230948%1230948%1230948%1230948%1230948
   condition: 1 of object_* or attributes

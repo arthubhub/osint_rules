@@ -1,5 +1,5 @@
 title: I-Soon / Anxun data leak in Github - url_request
-id: d37e06ec-b6e0-4e82-9522-53ba50b6d894
+id: f6068a15-20a3-4703-adec-22bc3b0a0ee1
 description: edit this field when analysing or editing the rule - reported by "THA-CERT"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: url_request
 detection:
-  object_17903:
+  object_6781:
     RequestUrl|contains:
     - mailnotes.online
   attributes:
     RequestUrl|contains:
-    - https://github.com
-    - https://blogger.googleusercontent.com
-    - https://x.com
     - https://blog.bushidotoken.net
+    - https://github.com
+    - https://x.com
+    - https://blogger.googleusercontent.com
   condition: 1 of object_* or attributes

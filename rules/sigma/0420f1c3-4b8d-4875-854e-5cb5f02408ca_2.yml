@@ -1,6 +1,6 @@
 title: 'OSINT - Major Payment Disruption: Ransomware Strikes Indian Banking Infrastructure
   - dns_query'
-id: aa70401b-e1ef-4ae4-a9f9-5cb1f111f3db
+id: 6955905a-75a0-4f56-a4cf-2c54a52fa042
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,16 +10,16 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.ransomexx
 - attack.software.ransomexx
+- attack.group.ransomexx
 detection:
-  object_12165:
+  object_13197:
     QueryName|contains:
     - sm4i8smr3f43.com
-  object_12166:
+  object_13198:
     QueryName|contains:
     - blutmagie.de
-  object_12167:
+  object_13199:
     QueryName|contains:
     - fenaow48fn42.com
   condition: 1 of object_*

@@ -1,5 +1,5 @@
 title: OSINT  - Fancy Bear Source Code - url_request
-id: 1347711f-502c-4273-930d-15ff19dbc706
+id: 4648a67b-d503-45bb-9caa-6597e2bb3307
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,11 +9,11 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.strontium
 - attack.group.sofacy
+- attack.group.strontium
 detection:
   attributes:
     RequestUrl|contains:
-    - http://trasitionmail.com
     - https://github.com
+    - http://trasitionmail.com
   condition: attributes

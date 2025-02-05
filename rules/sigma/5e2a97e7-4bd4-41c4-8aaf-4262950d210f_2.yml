@@ -1,5 +1,5 @@
 title: OSINT - Iranian PupyRAT Bites Middle Eastern Organizations - dns_query
-id: b1091b12-ff18-4187-90d1-bdc051023872
+id: 61448b69-7395-456b-bcea-8122b7583393
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,46 +9,46 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.g0059
-- attack.group.oilrig
-- attack.group.magic_hound
-- attack.group.cleaver
-- attack.group.apt35
-- attack.software.pupyrat
 - attack.software.s0192
+- attack.group.cleaver
+- attack.group.magic_hound
+- attack.software.pupyrat
+- attack.group.apt35
+- attack.group.oilrig
+- attack.group.g0059
 detection:
-  object_11708:
+  object_1535:
     QueryName|contains:
     - ntg.com.sa
     - ntg-sa.com
     IpAddresses:
     - 45.32.186.33
-  object_11709:
+  object_1536:
     QueryName|contains:
     - itworx.com-ho.me
     - itworx.com
     IpAddresses:
     - 45.32.186.33
-  object_11710:
+  object_1537:
     QueryName|contains:
     - mci.gov.sa
     - mci.com-ho.me
     IpAddresses:
     - 45.32.186.33
-  object_11711:
+  object_1538:
     QueryName|contains:
-    - moh.gov.sa
     - moh.com-ho.me
+    - moh.gov.sa
     IpAddresses:
     - 45.32.186.33
-  object_11712:
+  object_1539:
     QueryName|contains:
-    - mol.gov.sa
     - mol.com-ho.me
+    - mol.gov.sa
     IpAddresses:
     - 45.32.186.33
   attributes:
     IpAddresses:
-    - 89.107.62.39
     - 139.59.46.154
+    - 89.107.62.39
   condition: 1 of object_* or attributes

@@ -1,6 +1,6 @@
 title: 3CX Software Supply Chain Compromise Initiated by a Prior Software Supply Chain
   Compromise; Suspected North Korean Actor Responsible - url_request
-id: f31973f8-1049-44d3-bd5d-a9d0b2785f16
+id: 982e8051-5f35-4d5c-9a27-293d11381881
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,62 +10,62 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1012
-- attack.t1140
-- attack.t1071.004
-- attack.t1190
-- attack.t1588.004
-- attack.software.daveshell
-- attack.t1608
-- attack.t1027
-- attack.t1070.004
-- attack.t1071.001
-- attack.t1620
-- attack.t1588
-- attack.t1036.001
-- attack.software.sigflip
-- attack.t1574.002
-- attack.t1195
-- attack.software.poolrat
-- attack.group.poolrat
-- attack.t1036
-- attack.t1573.002
-- attack.t1608.003
-- attack.t1070.001
-- attack.group.iconicstealer
-- attack.t1112
-- attack.t1497.001
-- attack.t1083
-- attack.t1082
-- attack.t1105
-- attack.t1574
-- attack.t1565.001
-- attack.t1071
-- attack.software.taxhaul
 - attack.t1565
-- attack.t1614
-- attack.software.iconicstealer
-- attack.t1195.002
-- attack.software.coldcat
 - attack.t1497
-- attack.t1573
-- attack.t1070
+- attack.t1071.004
+- attack.t1574.002
+- attack.software.taxhaul
+- attack.t1608.003
+- attack.t1070.004
+- attack.t1083
+- attack.t1614
+- attack.t1608
+- attack.t1497.001
+- attack.t1036.001
+- attack.t1105
+- attack.t1190
+- attack.t1565.001
 - attack.t1614.001
-- attack.t1055
+- attack.t1573
+- attack.software.sigflip
+- attack.t1195
 - attack.t1622
+- attack.t1195.002
+- attack.t1036
+- attack.t1588.004
+- attack.t1071.001
+- attack.t1071
+- attack.t1112
+- attack.t1055
+- attack.t1070.001
+- attack.t1082
+- attack.software.iconicstealer
+- attack.t1027
+- attack.group.poolrat
+- attack.t1140
+- attack.software.poolrat
+- attack.t1588
+- attack.group.iconicstealer
+- attack.t1573.002
+- attack.software.daveshell
+- attack.software.coldcat
+- attack.t1012
+- attack.t1620
+- attack.t1070
+- attack.t1574
 detection:
-  object_11127:
+  object_18074:
     RequestUrl|contains:
     - https://www.mandiant.com
-  object_11129:
+  object_18076:
     RequestUrl|contains:
-    - pbxphonenetwork.com
     - curvefinances.com
-  object_11130:
+    - pbxphonenetwork.com
+  object_18077:
     RequestUrl|contains:
-    - nxmnv.site
     - journalide.org
-  object_11131:
+    - nxmnv.site
+  object_18078:
     RequestUrl|contains:
     - msedgepackageinfo.com
   condition: 1 of object_*

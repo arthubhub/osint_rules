@@ -1,5 +1,5 @@
 title: Flash CVE-2018-15982 IOCs - process_creation
-id: ddd3e71b-26b0-4e12-9430-abed2e6e048f
+id: d83169ba-a889-41b1-9e4b-49d04005607c
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
@@ -10,17 +10,17 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1193
-- attack.t1204
-- attack.t1043
 - attack.t1072
+- attack.t1204
+- attack.t1193
+- attack.t1043
 detection:
   attributes:
     md5:
-    - f49da7c983fe65ba301695188006d979
     - 8a64017953d0840323318bc224bab9c7
-    - 9c65fa48d29e8a0eb1ad80b10b3d9603
+    - f49da7c983fe65ba301695188006d979
     - 7d92dd6e2bff590437dad2cfa221d976
+    - 9c65fa48d29e8a0eb1ad80b10b3d9603
     - 92b1c50c3ddf8289e85cbb7f8eead077
     - 1cbc626abbe10a4fae6abf0f405c35e2
   condition: attributes

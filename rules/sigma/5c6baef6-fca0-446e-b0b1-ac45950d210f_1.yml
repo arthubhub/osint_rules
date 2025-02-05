@@ -1,6 +1,6 @@
 title: Financial - socgen-compliance.com fake website delivering malicious documents
   - url_request
-id: 96f2d1fa-9f00-41b2-b941-9ec2becccfe4
+id: e1dd9817-b920-4768-84bd-7d81175661a7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,13 +11,13 @@ logsource:
   category: url_request
 tags:
 - attack.t1137
-- attack.t1179
 - attack.t1065
+- attack.t1179
 - attack.t1112
 - attack.t1055
 detection:
   attributes:
     RequestUrl|contains:
-    - https://socgen-compliance.com
     - socgen-compliance.com
+    - https://socgen-compliance.com
   condition: attributes

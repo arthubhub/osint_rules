@@ -1,5 +1,5 @@
 title: LockerGoga  - yara rules - process_creation
-id: cc203307-45aa-4a2c-9c5b-4c63215b909d
+id: 9b772155-0c84-4447-a199-f7c4f1aa336c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,63 +12,63 @@ tags:
 - attack.software.lockergoga
 - attack.group.lockergoga
 detection:
-  object_18340:
+  object_556:
     md5:
     - 2e2e4988a49f8b22d5909cf1964851cb
     sha1:
     - cd3f6121705a3df9156d823b7da34c4745588ac5
     sha256:
     - b8dedd74f8f474c97d53d313eb5a61d09fc020e91aa09c36711bac5cc123b6d7
-  object_18342:
+  object_558:
     md5:
     - 164f72dfb729ca1e15f99d456b7cf811
     sha1:
     - f92339e73c7e901c0c852d8e65615cfb588a4ff6
     sha256:
     - 8cfbd38855d2d6033847142fdfa74710b796daf465ab94216fbbbe85971aee29
-  object_18344:
+  object_560:
     md5:
     - 174e3d9c7b0380dd7576187c715c4681
     sha1:
     - 31fbfe814628db3b459ddc87bf5ed538700db17a
     sha256:
     - c7a69dcfb6a3fe433a52a71d85a7e90df25b1db1bc843a541eb08ea2fd1052a4
-  object_18346:
+  object_562:
     md5:
     - 4da135516f3da1c6ca04d17f83b99e65
     sha1:
     - 127b2c4403995d35622487bd250d673d74b613b9
     sha256:
     - bef41d3c76aa98e774ca0185eb5d37da7bf128e3d855ebc699fed90f3988c7d3
-  object_18348:
+  object_564:
     md5:
     - a1d732aa27e1ca2ae45a189451419ed5
     sha1:
     - 50f5a5ec13d21d4df119140547d63bc40f93b079
     sha256:
     - c3d334cb7f6007c9ebee1a68c4f3f72eac9b3c102461d39f2a0a4b32a053843a
-  object_18350:
+  object_566:
     md5:
     - 52340664fe59e030790c48b66924b5bd
     sha1:
     - 73171ffa6dfee5f9264e3d20a1b6926ec1b60897
     sha256:
     - bdf36127817413f625d2625d3133760af724d6ad2410bea7297ddc116abc268f
-  object_18352:
+  object_568:
     md5:
     - 3ebca21b1d4e2f482b3eda6634e89211
     sha1:
     - 37cdd1e3225f8da596dc13779e902d8d13637360
     sha256:
     - 6e69548b1ae61d951452b65db15716a5ee2f9373be05011e897c61118c239a77
-  object_18354:
+  object_570:
     md5:
     - e8c7c902bcb2191630e10a80ddf9d5de
     sha1:
     - e00ec019409a078e9819e09d0f3915cb41fc131f
     sha256:
     - f3c58f6de17d2ef3e894c09bc68c0afcce23254916c182e44056db3cad710192
-  object_18356:
+  object_572:
     md5:
     - 9cad8641ac79688e09c5fa350aef2094
     sha1:
@@ -78,12 +78,12 @@ detection:
   attributes:
     sha256:
     - 8cfbd38855d2d6033847142fdfa74710b796daf465ab94216fbbbe85971aee29
-    - c3d334cb7f6007c9ebee1a68c4f3f72eac9b3c102461d39f2a0a4b32a053843a
-    - b8dedd74f8f474c97d53d313eb5a61d09fc020e91aa09c36711bac5cc123b6d7
-    - 5b0b972713cd8611b04e4673676cdff70345ac7301b2c23173cdfeaff564225c
     - 6e69548b1ae61d951452b65db15716a5ee2f9373be05011e897c61118c239a77
-    - bdf36127817413f625d2625d3133760af724d6ad2410bea7297ddc116abc268f
-    - c7a69dcfb6a3fe433a52a71d85a7e90df25b1db1bc843a541eb08ea2fd1052a4
     - bef41d3c76aa98e774ca0185eb5d37da7bf128e3d855ebc699fed90f3988c7d3
+    - 5b0b972713cd8611b04e4673676cdff70345ac7301b2c23173cdfeaff564225c
+    - b8dedd74f8f474c97d53d313eb5a61d09fc020e91aa09c36711bac5cc123b6d7
+    - bdf36127817413f625d2625d3133760af724d6ad2410bea7297ddc116abc268f
     - f3c58f6de17d2ef3e894c09bc68c0afcce23254916c182e44056db3cad710192
+    - c3d334cb7f6007c9ebee1a68c4f3f72eac9b3c102461d39f2a0a4b32a053843a
+    - c7a69dcfb6a3fe433a52a71d85a7e90df25b1db1bc843a541eb08ea2fd1052a4
   condition: 1 of object_* or attributes

@@ -1,5 +1,5 @@
 title: Turla Outlook White Paper - url_request
-id: c20153a4-d665-4a05-83e8-0c85472f7d03
+id: 04081e85-4738-413d-9ad9-860ef02dde86
 description: edit this field when analysing or editing the rule - reported by "ESET"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1114
 - attack.email_collection
-- attack.group.turla_group
 - attack.component_object_model_hijacking
 - attack.t1122
+- attack.t1114
+- attack.group.turla_group
 detection:
   attributes:
     RequestUrl|contains:
-    - https://github.com
     - https://wws.cert-ist.com
+    - https://github.com
     - https://www.welivesecurity.com
   condition: attributes

@@ -1,6 +1,6 @@
 title: OSINT - ESET discovered an undocumented backdoor used by the infamous Stealth
   Falcon group - url_request
-id: 229815b2-2f76-4a63-aa66-5380c4c6898d
+id: 7f2dda55-4652-48d1-a68b-49893f5c31ab
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,16 +10,16 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1197
 - attack.group.stealth_falcon
+- attack.t1197
 - attack.group.g0038
 detection:
   attributes:
     RequestUrl|contains:
-    - upnpdiscover.org
-    - electricalweb.org
-    - https://www.welivesecurity.com
     - windowsearchcache.com
+    - electricalweb.org
     - footballtimes.info
+    - https://www.welivesecurity.com
     - vegetableportfolio.com
+    - upnpdiscover.org
   condition: attributes

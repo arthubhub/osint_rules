@@ -1,5 +1,5 @@
 title: OSINT -   Sorpresa! JasperLoader targets Italy with a new bag of tricks - dns_query
-id: 290f88bd-8051-46fd-ba51-d51512b5a9ea
+id: bf2f61eb-355c-4c56-bf51-80ae6fa55a3d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,14 +9,14 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1192
 - attack.software.jasperloader
+- attack.t1192
 detection:
   attributes:
     IpAddresses:
     - 185.212.44.126
-    - 185.158.248.110
     - 185.158.251.171
     - 185.212.47.163
     - 185.158.249.116
+    - 185.158.248.110
   condition: attributes

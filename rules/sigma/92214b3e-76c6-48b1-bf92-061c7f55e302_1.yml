@@ -1,6 +1,6 @@
 title: OSINT - ArcaneDoor - New espionage-focused campaign found targeting perimeter
   network devices - url_request
-id: 50a4d2dd-039f-4792-aba2-261e06871e98
+id: 9ace0ac0-e8f8-4c24-9c7d-2640b8a1ee87
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -13,10 +13,10 @@ tags:
 - attack.group.arcanedoor
 - attack.t1133
 detection:
-  object_18015:
+  object_5425:
     RequestUrl|contains:
     - https://www.circl.lu
-  object_18016:
+  object_5426:
     RequestUrl|contains:
     - https://blog.talosintelligence.com
   condition: 1 of object_*

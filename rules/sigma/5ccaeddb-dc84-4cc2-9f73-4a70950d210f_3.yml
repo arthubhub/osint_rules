@@ -1,5 +1,5 @@
 title: OSINT - Goblin Panda continues to target Vietnam - process_creation
-id: c53d3fe8-4f90-4144-89b2-c6be625fe71a
+id: 9cd5490c-e8b1-4ff4-9f47-c5282b8d7078
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,31 +10,31 @@ logsource:
   category: process_creation
 tags:
 - attack.software.newcore_rat
-- attack.group.hellsing
 - attack.group.newcore_rat
+- attack.group.hellsing
 detection:
-  object_11679:
+  object_1772:
     md5:
     - 6d2e6a61eede06fa9d633ce151208831
     sha1:
     - f764163f3912376ebcabaf1cf3a60b6bc74561be
     sha256:
     - 207e66a3b0f1abfd4721f1b3e9fed8ac89be51e1ec13dd407b4e08fad52113e3
-  object_11681:
+  object_1774:
     md5:
     - 109d51899c832287d7ce1f70b5bd885d
     sha1:
     - daa69d1b1abc00139b1d73d075921ab93137598d
     sha256:
     - 9f3114e48dd0245467fd184bb9655a5208fa7d13e2fe06514d1f3d61ce8b8770
-  object_11683:
+  object_1776:
     md5:
     - 84fca27bc75f40194c95534b07838d6c
     sha1:
     - 9520a18e9f6d4f6f014aa576b8843cdff176f701
     sha256:
     - 81f75839e6193212d71d771edea62430111482177cdc481f4688d82cd8a5fed6
-  object_11685:
+  object_1778:
     md5:
     - 1b19175c41b9a9881b23b4382cc5935f
     sha1:
@@ -43,10 +43,10 @@ detection:
     - 5b652205b1c248e5d5fc0eb5f53c5754df829ed2479687d4f14c2e08fbf87e76
   attributes:
     sha256:
-    - 05d0ad2bcc1c6e2752a231bc36d07a841f075a0a32a3a62abaafddbdafd72f62
     - 5a592b92ffcbea75e458726cecc7f159b8f71c46b80de30bac2a48006ac1e1b3
-    - 207e66a3b0f1abfd4721f1b3e9fed8ac89be51e1ec13dd407b4e08fad52113e3
-    - 81f75839e6193212d71d771edea62430111482177cdc481f4688d82cd8a5fed6
     - 5b652205b1c248e5d5fc0eb5f53c5754df829ed2479687d4f14c2e08fbf87e76
     - 9f3114e48dd0245467fd184bb9655a5208fa7d13e2fe06514d1f3d61ce8b8770
+    - 81f75839e6193212d71d771edea62430111482177cdc481f4688d82cd8a5fed6
+    - 05d0ad2bcc1c6e2752a231bc36d07a841f075a0a32a3a62abaafddbdafd72f62
+    - 207e66a3b0f1abfd4721f1b3e9fed8ac89be51e1ec13dd407b4e08fad52113e3
   condition: 1 of object_* or attributes

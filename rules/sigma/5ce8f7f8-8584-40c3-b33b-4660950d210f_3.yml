@@ -1,5 +1,5 @@
 title: OSINT -   Sorpresa! JasperLoader targets Italy with a new bag of tricks - process_creation
-id: 959b118d-b8b9-4eec-9add-783499bb17cf
+id: 6a0a3593-0fb8-4943-aded-4dd373d1bad5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1192
 - attack.software.jasperloader
+- attack.t1192
 detection:
   attributes:
     sha256:
     - 052c9895383eb10e4ad5bec37822f624e443bbe01700b1fe5abeeea757456aed
-    - ee3601c6e111c42d02c83b58b4fc70265b937e9d4d153203a4111f51a8a08aab
     - 54666103a3c8221cf3d7d39035b638f3c3bcc233e1916b015aeee2539f38f719
+    - ee3601c6e111c42d02c83b58b4fc70265b937e9d4d153203a4111f51a8a08aab
   condition: attributes

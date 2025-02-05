@@ -1,6 +1,6 @@
 title: 'OSINT - BitPaymer Source Code Fork: Meet DoppelPaymer Ransomware and Dridex
   2.0 - process_creation'
-id: d591fe0e-db2a-43c7-9022-f4f00c62acd0
+id: 6c65e25a-e2d0-45e2-ae26-08247b64af8b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,50 +10,50 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.bitpaymer
-- attack.software.friedex
+- attack.group.indrik_spider
 - attack.group.friedex
 - attack.group.dridex
 - attack.software.dridex
-- attack.group.indrik_spider
+- attack.software.friedex
 - attack.group.bitpaymer
+- attack.software.bitpaymer
 detection:
-  object_11372:
+  object_5259:
     md5:
     - 1b5c3c458e31bede55145d0644e88d75
     sha1:
     - a21c84c6bf2e21d69fa06daaf19b4cc34b589347
     sha256:
     - 70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4
-  object_11374:
+  object_5261:
     md5:
     - 68f9b52895f4d34e74112f3129b3b00d
     sha1:
     - c5e2018bf7c0f314fed4fd7fe7e69fa2e648359e
     sha256:
     - d4a0fe56316a2c45b9ba9ac1005363309a3edc7acf9e4df64d326a0ff273e80f
-  object_11376:
+  object_5263:
     md5:
     - 6365fe1d37545c71cbe2719ac7831bdd
     sha1:
     - 9356d660cebd2604ec4e72967f44678741331d5a
     sha256:
     - 0f97f6d53fff47914174bc3a05fb016e2c02ed0b43c827e5e5aadba2d244aecc
-  object_11378:
+  object_5265:
     md5:
     - 47bc14f741779c3a7450adeeb66bb7e8
     sha1:
     - 980842b405d6df5385503044e102ad4a5d8b8573
     sha256:
     - 813d8020f32fefe01b66bea0ce63834adef2e725801b4b761f5ea90ac4facd3a
-  object_11380:
+  object_5267:
     md5:
     - 9141d1d189afc2e300121e71a211c925
     sha1:
     - ee5ac27425616878a932516000c04dedbde5b715
     sha256:
     - 801b04a1504f167c25f568f8d7cbac13bdde6440a609d0dcd64ebe225c197f9b
-  object_11382:
+  object_5269:
     md5:
     - b365af317ae730a67c936f21432b9c71
     sha1:
@@ -62,12 +62,12 @@ detection:
     - bd2c2cf0631d881ed382817afcce2b093f4e412ffb170a719e2762f250abfea4
   attributes:
     sha256:
-    - d4a0fe56316a2c45b9ba9ac1005363309a3edc7acf9e4df64d326a0ff273e80f
     - 813d8020f32fefe01b66bea0ce63834adef2e725801b4b761f5ea90ac4facd3a
-    - bd2c2cf0631d881ed382817afcce2b093f4e412ffb170a719e2762f250abfea4
     - bfb7e62ba4ad5975e68a1beefb045cb72e056911fd7a8b070a15029dfcbbefe1
-    - 801b04a1504f167c25f568f8d7cbac13bdde6440a609d0dcd64ebe225c197f9b
-    - 70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4
     - 51d8618ec86159327e883615ad8989c7638172cf801f65ab0367e5b2e6af596a
+    - bd2c2cf0631d881ed382817afcce2b093f4e412ffb170a719e2762f250abfea4
+    - 70211a3f90376bbc61f49c22a63075d1d4ddd53f0aefa976216c46e6ba39a9f4
+    - 801b04a1504f167c25f568f8d7cbac13bdde6440a609d0dcd64ebe225c197f9b
     - 0f97f6d53fff47914174bc3a05fb016e2c02ed0b43c827e5e5aadba2d244aecc
+    - d4a0fe56316a2c45b9ba9ac1005363309a3edc7acf9e4df64d326a0ff273e80f
   condition: 1 of object_* or attributes

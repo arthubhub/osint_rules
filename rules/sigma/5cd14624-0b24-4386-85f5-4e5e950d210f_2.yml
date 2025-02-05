@@ -1,5 +1,5 @@
 title: OSINT - CARBANAK Week - Fire Eye - dns_query
-id: 6d4a6bc9-824f-498d-b4f1-85673cde34ff
+id: fbb9242a-b2a2-44f7-85c9-9640d5d34464
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,64 +9,64 @@ logsource:
   product: windows
   category: dns_query
 tags:
+- attack.group.fin7
 - attack.software.s0030
+- attack.group.anunak
+- attack.group.g0008
+- attack.group.g0046
 - attack.software.carbanak
 - attack.group.carbanak
-- attack.group.fin7
-- attack.group.anunak
-- attack.group.g0046
-- attack.group.g0008
 detection:
-  object_8996:
+  object_6299:
     IpAddresses:
     - 104.193.252.151
-  object_8997:
+  object_6300:
     IpAddresses:
     - 185.180.196.35
-  object_8998:
+  object_6301:
     IpAddresses:
     - 213.227.155.8
-  object_8999:
+  object_6302:
     IpAddresses:
     - 94.156.133.69
-  object_9000:
+  object_6303:
     IpAddresses:
     - 185.174.172.241
-  object_9001:
+  object_6304:
     IpAddresses:
     - 109.230.199.227
-  object_9002:
+  object_6305:
     IpAddresses:
     - 37.1.212.100
-  object_9003:
+  object_6306:
     IpAddresses:
     - 188.138.98.105
-  object_9004:
+  object_6307:
     IpAddresses:
     - 80.84.49.50
-  object_9005:
+  object_6308:
     IpAddresses:
     - 52.11.125.44
-  object_9006:
+  object_6309:
     IpAddresses:
     - 192.168.0.100
-  object_9007:
+  object_6310:
     IpAddresses:
     - 192.168.0.100
-  object_9008:
+  object_6311:
     IpAddresses:
     - 193.203.48.23
   attributes:
     QueryName|contains:
-    - qwqreererwere.com
-    - stats10-google.com
     - hhklhlkhkjhjkjk.org
+    - aaaabbbbccccc.org
     - akamai-technologies.org
     - comixed.org
-    - aaaabbbbccccc.org
+    - stats10-google.com
+    - qwqreererwere.com
     IpAddresses:
-    - 107.181.155.151
-    - 23.253.126.58
     - 194.146.180.40
+    - 107.181.155.151
     - 85.25.84.223
+    - 23.253.126.58
   condition: 1 of object_* or attributes

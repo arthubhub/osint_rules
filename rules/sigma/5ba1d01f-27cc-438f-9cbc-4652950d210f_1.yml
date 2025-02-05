@@ -1,6 +1,6 @@
 title: OSINT (expanded) - Xbash Combines Botnet, Ransomware, Coinmining in Worm that
   Targets Linux and Windows - url_request
-id: 8b720215-a853-4a04-81a7-dae433103b99
+id: ab52ba92-d8b0-41cc-9105-a766233c3308
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,33 +10,33 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.iron_group
-- attack.t1071
-- attack.software.xbash
 - attack.t1190
+- attack.group.iron_group
+- attack.software.xbash
+- attack.t1071
 detection:
-  object_7245:
+  object_819:
     RequestUrl|contains:
     - https://pastebin.com
-  object_7246:
+  object_820:
     RequestUrl|contains:
     - https://pastebin.com
-  object_7247:
+  object_821:
     RequestUrl|contains:
     - https://pastebin.com
-  object_7248:
+  object_822:
     RequestUrl|contains:
     - https://pastebin.com
   attributes:
     RequestUrl|contains:
     - https://pastebin.com
-    - http://3g2upl4pq6kufc4m.tk
-    - http://d3goboxon32grk2l.tk
-    - http://png.realtimenews.tk
-    - http://xmr.enjoytopic.tk
-    - http://daknobcq4zal6vbm.tk
     - https://researchcenter.paloaltonetworks.com
     - scanaan.tk
-    - http://e3sas6tzvehwgpak.tk
     - blockbitcoin.com
+    - http://e3sas6tzvehwgpak.tk
+    - http://daknobcq4zal6vbm.tk
+    - http://png.realtimenews.tk
+    - http://xmr.enjoytopic.tk
+    - http://3g2upl4pq6kufc4m.tk
+    - http://d3goboxon32grk2l.tk
   condition: 1 of object_* or attributes

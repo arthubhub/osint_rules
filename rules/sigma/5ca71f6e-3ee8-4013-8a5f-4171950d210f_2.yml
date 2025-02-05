@@ -1,5 +1,5 @@
 title: OSINT - Hancitor domains - dns_query
-id: 74442b7e-cc0d-4a4a-a414-d2220448c307
+id: 382c41e4-e6fa-475d-8a9a-1dd113b98ac5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,18 +9,18 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.hancitor
 - attack.group.hancitor
+- attack.software.hancitor
 detection:
   attributes:
     QueryName|contains:
-    - alldogspoop.mobi
-    - alldogspoop.info
-    - alldogspoop.org
-    - alldogspoop.net
-    - alldogspoop.co
     - pooperscooperfranchise.com
-    - alldogspoop.biz
-    - shopalldogspoop.com
+    - alldogspoop.co
+    - alldogspoop.info
     - cherryhillpooperscoopers.com
+    - alldogspoop.biz
+    - alldogspoop.mobi
+    - shopalldogspoop.com
+    - alldogspoop.net
+    - alldogspoop.org
   condition: attributes

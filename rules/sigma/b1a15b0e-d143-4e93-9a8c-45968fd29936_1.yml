@@ -1,6 +1,6 @@
 title: 'OSINT - Advisory: Active exploitation of Check Point Remote Access VPN vulnerability
   (CVE-2024-24919) - url_request'
-id: 0f610f7c-ff95-4c27-89cb-8173d91c6379
+id: a77a0eec-e261-43ba-a7a8-c7338d62c7ae
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,10 +10,10 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1133
 - attack.t1190
+- attack.t1133
 detection:
-  object_7875:
+  object_6854:
     RequestUrl|contains:
     - https://www.mnemonic.io
   condition: 1 of object_*

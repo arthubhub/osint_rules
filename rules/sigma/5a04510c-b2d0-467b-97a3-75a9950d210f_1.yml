@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-11-06 : Affid=3, ".asasin" : "E3S1234567890123 Payment advice"
   - "advice_123456_20171106.doc" - url_request'
-id: 3a5d4fec-76e7-4177-a77b-fe2197bbc37d
+id: 38c75547-4cfe-4953-91f8-f6dd2bc8ec81
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,26 +10,26 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
     - http://primeassociatesinc.com
-    - https://www.hybrid-analysis.com
     - http://saranville.com
-    - http://ro.isuzu.it
-    - http://jimhalltreeservice.com
-    - http://ist-profy.ru
-    - http://michelsmarkt.de
-    - http://themollymalone.es
-    - http://hilaryandsavio.com
-    - http://studio311.de
-    - http://xn--buremrt-9wa.ch
     - http://testbxc.u-host.ru
-    - http://nikom.be
-    - http://l-up.net
     - http://lvps212-67-205-60.vps.webfusion.co.uk
-    - http://maeserdruck.com
+    - http://xn--buremrt-9wa.ch
     - http://toftinrontonsfo.info
+    - http://hilaryandsavio.com
+    - http://nikom.be
+    - http://ist-profy.ru
+    - http://maeserdruck.com
+    - http://studio311.de
+    - http://themollymalone.es
+    - http://ro.isuzu.it
+    - http://l-up.net
+    - http://jimhalltreeservice.com
+    - http://michelsmarkt.de
+    - https://www.hybrid-analysis.com
   condition: attributes

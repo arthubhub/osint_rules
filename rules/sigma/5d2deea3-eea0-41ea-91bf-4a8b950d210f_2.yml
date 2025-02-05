@@ -1,5 +1,5 @@
 title: OSINT - Turla renews its arsenal with Topinambour - dns_query
-id: 4d3b29b5-d93d-4785-af75-a01235cb2ba4
+id: f51c346e-f2a2-4451-8054-fff060e6db1b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.turla
 - attack.software.turla
+- attack.group.turla
 detection:
   attributes:
     IpAddresses:
-    - 197.168.0.247
+    - 197.168.0.73
+    - 197.168.0.243
     - 197.168.0.250
     - 197.168.0.98
-    - 197.168.0.243
     - 197.168.0.212
-    - 197.168.0.73
+    - 197.168.0.247
   condition: attributes

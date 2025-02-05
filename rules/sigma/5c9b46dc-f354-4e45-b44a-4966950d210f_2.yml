@@ -1,5 +1,5 @@
 title: OSINT- WinRAR Zero-day (CVE-2018-20250) Abused in Multiple Campaigns - dns_query
-id: 98fb2e17-b38e-4890-ae5a-9ea5d1c0af4f
+id: a63ceda6-e456-4f0d-b7b7-daaf011e8165
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,19 +9,19 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.azorult
-- attack.group.azorult
-- attack.software.netwire
-- attack.software.razy
-- attack.group.razy
-- attack.software.s0262
-- attack.software.s0198
 - attack.software.quasar_rat
 - attack.group.quasar_rat
+- attack.software.azorult
+- attack.group.razy
+- attack.software.netwire
+- attack.software.s0198
+- attack.software.razy
+- attack.software.s0262
+- attack.group.azorult
 detection:
   attributes:
     IpAddresses:
+    - 185.162.131.92
     - 89.34.111.113
     - 31.148.220.53
-    - 185.162.131.92
   condition: attributes

@@ -1,5 +1,5 @@
 title: M2M -  malspam Subject FreeFax From:\d{10} - process_creation
-id: 61a8ebe7-10c4-460d-844a-eaa78f85c052
+id: cb1d5e14-c32e-4e79-a37c-7aef1fc2b1af
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     md5:
+    - c9128378e75c3a0455154e3e5674c494
     - 708e93ec5d1a5b68b8544d1ed1fca40d
     - 5e063ea9212759c7689eccd099c1eccf
-    - c9128378e75c3a0455154e3e5674c494
   condition: attributes

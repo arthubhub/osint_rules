@@ -1,5 +1,5 @@
 title: Compromised host delivering malware (Mirai) - url_request
-id: 2bcd571f-75cb-4f2f-9ca7-4062ab2bc67e
+id: f31ec0e2-16ac-4ebf-b21a-5360177ec661
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,12 +11,12 @@ logsource:
 tags:
 - attack.software.mirai
 detection:
-  object_5075:
+  object_670:
     RequestUrl|contains:
     - teknowmuzical.top
   attributes:
     RequestUrl|contains:
+    - http://teknowmuzical.top
     - http://37.49.229.172
     - https://teknowmuzical.top
-    - http://teknowmuzical.top
   condition: 1 of object_* or attributes

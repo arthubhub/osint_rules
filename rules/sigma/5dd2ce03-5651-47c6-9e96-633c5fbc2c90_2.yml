@@ -1,6 +1,6 @@
 title: "CISA - Malware Analysis Report (AR22-055A) - MAR\u201310369127\u20131.v1 -\
   \ MuddyWater - dns_query"
-id: 1128d595-47da-43d9-a2ae-204aef1185ea
+id: 6235da54-9a3a-4f71-9e66-322c0aca7a2c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,16 +10,16 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.g0069
 - attack.group.muddywater
+- attack.group.g0069
 detection:
   attributes:
     IpAddresses:
-    - 185.118.164.21
-    - 185.183.96.7
     - 192.210.191.188
-    - 185.183.96.44
-    - 88.119.170.124
-    - 5.199.133.149
     - 185.117.75.34
+    - 185.183.96.44
+    - 5.199.133.149
+    - 88.119.170.124
+    - 185.183.96.7
+    - 185.118.164.21
   condition: attributes

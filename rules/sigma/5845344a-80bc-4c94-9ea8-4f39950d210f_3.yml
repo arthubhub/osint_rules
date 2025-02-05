@@ -1,6 +1,6 @@
 title: 'OSINT - MMD-0033-2015 - Linux/XorDDoS infection incident report (CNC: HOSTASA.ORG)
   - process_creation'
-id: 12a67833-e742-43f2-b894-0484d4712e06
+id: f2bb7c24-de5d-4c1b-9fe5-a5def86c1ea9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,35 +10,35 @@ logsource:
   product: windows
   category: process_creation
 detection:
-  object_12889:
+  object_4675:
     md5:
     - 3c49b5160b981f06bd5242662f8d0a54
     sha1:
     - c50933e1f8a194e608049839707d8d698dd5caa5
     sha256:
     - c394440c56fdcda9739fbb966e9ac2eab9e11e2eeff0720eb4c850a05b33eefc
-  object_12891:
+  object_4677:
     md5:
     - d1b5b4b4b5a118e384c7ff487e14ac3f
     sha1:
     - 038b7e9406fe5cb0a0be8f95ac935923c6d83c28
     sha256:
     - 0a312a4154dcec2bc6ce1d3b51c037b122ace5848ec99c2b861ab6124addae9b
-  object_12893:
+  object_4679:
     md5:
     - 83eea5625ca2affd3e841d3b374e88eb
     sha1:
     - dca946f677a1be95fb3ef6adc950730b4736a405
     sha256:
     - fd6060b963d1b5ca7a07b5a283ad99105298a6708e44d286440a506738a17e34
-  object_12895:
+  object_4681:
     md5:
     - a99c10cb9713770b9e7dda376cddee3a
     sha1:
     - 1f1dd4d74eba8949fb1d2316c13f77b3ffa96f98
     sha256:
     - 92a260d856e00056469fb26f5305a37f6ab443d735d1476281b053b10b3c4f86
-  object_12897:
+  object_4683:
     md5:
     - bcb6b83a4e6e20ffe0ce3c750360ddf5
     sha1:
@@ -47,9 +47,9 @@ detection:
     - 61b0107a7a06ecbb8cc1d323967291d15450df7e8bab5d96c822a98c9399a521
   attributes:
     md5:
-    - a99c10cb9713770b9e7dda376cddee3a
     - d1b5b4b4b5a118e384c7ff487e14ac3f
+    - a99c10cb9713770b9e7dda376cddee3a
     - 83eea5625ca2affd3e841d3b374e88eb
-    - 3c49b5160b981f06bd5242662f8d0a54
     - bcb6b83a4e6e20ffe0ce3c750360ddf5
+    - 3c49b5160b981f06bd5242662f8d0a54
   condition: 1 of object_* or attributes

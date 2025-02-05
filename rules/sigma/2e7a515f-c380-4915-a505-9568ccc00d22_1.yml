@@ -1,5 +1,5 @@
 title: 'DeftTorero: tactics, techniques and procedures of intrusions revealed - url_request'
-id: dd8e7f79-3f5c-4965-adf3-c90bff4dadd0
+id: 4dd2d961-b075-4508-954b-76260d38e2e8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,17 +9,17 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.s0002
+- attack.software.mimikatz
 - attack.group.g0123
+- attack.group.mimikatz
 - attack.software.netcat
 - attack.group.volatile_cedar
-- attack.software.mimikatz
-- attack.group.mimikatz
+- attack.software.s0002
 detection:
-  object_11721:
+  object_1205:
     RequestUrl|contains:
-    - https://securelist.com
     - https://otx.alienvault.com
+    - https://securelist.com
   attributes:
     RequestUrl|contains:
     - http://200.159.87.196

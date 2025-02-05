@@ -1,6 +1,6 @@
 title: "OSINT - North Korea\u2019s Lazarus APT leverages Windows Update client, GitHub\
   \ in latest campaign - url_request"
-id: 8d76ea26-55f6-410c-a094-3177d27538ea
+id: e6cff9d5-6a79-499f-9291-a4ed6d06a7e0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -13,11 +13,11 @@ tags:
 - attack.group.lazarus_group
 - attack.group.g0032
 detection:
-  object_17657:
+  object_4187:
     RequestUrl|contains:
     - https://blog.malwarebytes.com
   attributes:
     RequestUrl|contains:
-    - lm-career.com
     - markettrendingcenter.com
+    - lm-career.com
   condition: 1 of object_* or attributes

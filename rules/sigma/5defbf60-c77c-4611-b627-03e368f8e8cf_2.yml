@@ -1,6 +1,6 @@
 title: "2019-12-10: TrickBot Project \xE2\u20AC\u0153Anchor:\xE2\u20AC\x9D Window\
   \ Into Sophisticated Operation - process_creation"
-id: 7bcc53bd-0ad6-442d-b157-29413527e256
+id: 46c4d7c0-335f-453c-b522-c13cda0ae790
 description: edit this field when analysing or editing the rule - reported by "VK_INTEL_EVIL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,65 +10,65 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.trickbot
 - attack.group.trickbot
+- attack.software.trickbot
 detection:
-  object_9388:
+  object_859:
     sha256:
     - b02494ffc1dab60510e6caee3c54695e24408e5bfa6621adcd19301cfc18e329
-  object_9390:
+  object_861:
     md5:
     - 8ae6cd70b4acf2b17b3b678eb741344e
     sha1:
     - 299d63fef8274c51325a6f7b3e2bb7578c978d19
     sha256:
     - d584e868f867c6251e115b7909559da784f25b778192c6a24e49685f80257e4d
-  object_9392:
+  object_863:
     md5:
     - 9998b8cf8f204cadb9a855f42af0ddc5
     sha1:
     - 314967cc074e31b448d42ca15ab43fff27d716c7
     sha256:
     - e54a267e788cc076c870eba0ff16920f9cb49207a034a8b6bfd92abc5a5f7434
-  object_9394:
+  object_865:
     md5:
     - 737346c9511b32f1b6f878667785dc32
     sha1:
     - 945852060bea021b20855f4cd913951f5b1b14c9
     sha256:
     - 354936f4265a5e870374a3fe9378cf9a3e7dd45ee4626b971d6b7b0837f4f181
-  object_9396:
+  object_867:
     md5:
     - 488ec17aff5f12732fc3a5c7503e26ba
     sha1:
     - a96fe2efc6a0b661cf30420d13584b4ffbd654fe
     sha256:
     - 6500190bf8253c015700eb071416cbe33a1c8f3b84aeb28b7118a6abe96005e3
-  object_9398:
+  object_869:
     md5:
     - ad4e7904c241bb64955bd066806b25a8
     sha1:
     - 33c9a73ec1150f0b55903537e79e11413954e58f
     sha256:
     - e49e6f0b194ff7c83ec02b3c2efc9e746a4b2ba74607a4aad8fbdcdc66baa8dc
-  object_9400:
+  object_871:
     sha256:
     - c6d466600371ced9d962594474a4b8b0ccff19adc59dbd2027c10d930afbe282
-  object_9402:
+  object_873:
     md5:
     - b9b5f5039c19f15ca610baa095642f8a
     sha1:
     - 6464f52a47c362195a219bd5cf529338bf29a5c9
     sha256:
     - b288c3b3f5886b1cd7b6600df2b8046f2c0fd17360fb188ecfbcc8f6b7e552a5
-  object_9404:
+  object_875:
     md5:
     - b21646d0e17312079f3e509d5e5a7830
     sha1:
     - 8beef55eee4608afe013741033f060c8f47804b5
     sha256:
     - 6b1759936993f02df80b330d11c1b12accd53a80b6207cd1defc555e6e4bf57c
-  object_9406:
+  object_877:
     md5:
     - 3045fb2685124532f28829e07d2d07fb
     sha1:
@@ -77,15 +77,15 @@ detection:
     - 54257aa2394ef87dd510da00e0583b670f3eb43e2eef86be4db69c3432e99abd
   attributes:
     sha256:
+    - 6b1759936993f02df80b330d11c1b12accd53a80b6207cd1defc555e6e4bf57c
+    - d584e868f867c6251e115b7909559da784f25b778192c6a24e49685f80257e4d
+    - c6d466600371ced9d962594474a4b8b0ccff19adc59dbd2027c10d930afbe282
+    - e49e6f0b194ff7c83ec02b3c2efc9e746a4b2ba74607a4aad8fbdcdc66baa8dc
+    - 354936f4265a5e870374a3fe9378cf9a3e7dd45ee4626b971d6b7b0837f4f181
+    - b288c3b3f5886b1cd7b6600df2b8046f2c0fd17360fb188ecfbcc8f6b7e552a5
     - 54257aa2394ef87dd510da00e0583b670f3eb43e2eef86be4db69c3432e99abd
     - b02494ffc1dab60510e6caee3c54695e24408e5bfa6621adcd19301cfc18e329
-    - e49e6f0b194ff7c83ec02b3c2efc9e746a4b2ba74607a4aad8fbdcdc66baa8dc
-    - d584e868f867c6251e115b7909559da784f25b778192c6a24e49685f80257e4d
-    - 6b1759936993f02df80b330d11c1b12accd53a80b6207cd1defc555e6e4bf57c
-    - b288c3b3f5886b1cd7b6600df2b8046f2c0fd17360fb188ecfbcc8f6b7e552a5
-    - 6500190bf8253c015700eb071416cbe33a1c8f3b84aeb28b7118a6abe96005e3
-    - c6d466600371ced9d962594474a4b8b0ccff19adc59dbd2027c10d930afbe282
     - e54a267e788cc076c870eba0ff16920f9cb49207a034a8b6bfd92abc5a5f7434
-    - 354936f4265a5e870374a3fe9378cf9a3e7dd45ee4626b971d6b7b0837f4f181
     - 52a1ca4e65a99f997db0314add8c3b84c6f257844eda73ae6e5debce6abc2bd4
+    - 6500190bf8253c015700eb071416cbe33a1c8f3b84aeb28b7118a6abe96005e3
   condition: 1 of object_* or attributes

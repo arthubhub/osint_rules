@@ -1,5 +1,5 @@
 title: Fake booking.com service website gathering PII including passport - dns_query
-id: 2f2b2fc1-8a59-4efe-9034-f66a2cf0abd7
+id: 3d65647c-c16b-4ca0-bd62-427c87e4c983
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,17 +9,17 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1274
 - attack.t1269
+- attack.t1274
 - attack.t1268
 detection:
-  object_7586:
+  object_17292:
     QueryName|contains:
     - 1facc.pw
   attributes:
     QueryName|contains:
-    - 1fcca.pw
     - 1fcaa.sbs
+    - 1fcca.pw
     IpAddresses:
     - 93.157.63.150
   condition: 1 of object_* or attributes

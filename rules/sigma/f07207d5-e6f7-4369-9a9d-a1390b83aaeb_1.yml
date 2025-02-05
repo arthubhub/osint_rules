@@ -1,5 +1,5 @@
 title: Is Hagga Threat Actor (ab)using FSociety framework ? - url_request
-id: 839b7a81-f2bc-498b-85af-005418e3bfb1
+id: f6bfd5c3-88ec-4907-a0c7-6ae5ee97b637
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: url_request
 detection:
-  object_7640:
+  object_1369:
     RequestUrl|contains:
     - http://4.204.233.44
-  object_7641:
+  object_1370:
     RequestUrl|contains:
     - http://4.204.233.44
-  object_7642:
+  object_1371:
     RequestUrl|contains:
     - https://marcoramilli.com
   condition: 1 of object_*

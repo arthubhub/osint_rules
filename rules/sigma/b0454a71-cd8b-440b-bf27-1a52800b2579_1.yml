@@ -1,5 +1,5 @@
 title: 'OSINT - Inside the Dragon: DragonForce Ransomware Group - url_request'
-id: 6170392d-b00c-475e-92ab-8f2b5d22c91d
+id: 58ccacec-3f10-4ea5-b113-cb5177e9c396
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,25 +9,25 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.group.dragonforce
 - attack.t1071.001
-- attack.t1083
-- attack.t1082
+- attack.t1078
 - attack.t1059.001
-- attack.t1547.001
+- attack.t1083
+- attack.t1021.001
+- attack.t1078.002
+- attack.t1003.001
+- attack.t1018
+- attack.t1070.001
+- attack.t1543.003
+- attack.t1082
 - attack.t1482
 - attack.t1486
-- attack.t1078
-- attack.t1018
-- attack.t1021.001
-- attack.group.dragonforce
-- attack.t1070.001
-- attack.t1003.001
-- attack.t1543.003
-- attack.t1078.002
-- attack.software.dragonforce
 - attack.t1016
+- attack.software.dragonforce
+- attack.t1547.001
 detection:
-  object_9038:
+  object_11769:
     RequestUrl|contains:
     - https://www.group-ib.com
   condition: 1 of object_*

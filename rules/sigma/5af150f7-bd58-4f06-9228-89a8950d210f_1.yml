@@ -1,5 +1,5 @@
 title: OSINT - APT28 malicious NATO document - url_request
-id: 207737aa-b605-4d8f-ad38-1a7f7a4f46de
+id: d629affe-6eb4-442f-b8c2-aedf452a7ba4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,23 +9,23 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.group.sofacy
 - attack.group.apt28
 - attack.group.strontium
-- attack.group.sofacy
 detection:
-  object_7559:
+  object_12041:
     RequestUrl|contains:
     - miropc.org
-  object_7561:
+  object_12043:
     RequestUrl|contains:
     - gtranm.com
-  object_7562:
+  object_12044:
     RequestUrl|contains:
     - zpfgr.com
   attributes:
     RequestUrl|contains:
+    - rolstug.com
     - http://malware.prevenity.com
     - https://threatreconblog.com
     - lxwo.org
-    - rolstug.com
   condition: 1 of object_* or attributes

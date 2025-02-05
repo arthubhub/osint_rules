@@ -1,6 +1,6 @@
 title: "OSINT -  Threat Actor \xE2\u20AC\u0153Cold River\xE2\u20AC\x9D: Network Traffic\
   \ Analysis and a Deep Dive on Agent Drable - dns_query"
-id: 0964abca-c02a-42a6-9408-a9c1c5572396
+id: b6f4078d-8b70-4281-928e-4e1d29b90e0e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -14,18 +14,18 @@ tags:
 detection:
   attributes:
     QueryName|contains:
+    - hr-suncor.com
     - files-sender.com
     - microsoftonedrive.org
     - 0ffice36o.com
     - hr-wipro.com
-    - hr-suncor.com
     IpAddresses:
-    - 185.161.211.72
-    - 185.20.184.157
     - 185.161.211.79
-    - 185.20.184.15
-    - 185.20.184.138
+    - 185.161.211.72
     - 194.9.177.22
+    - 185.20.184.138
     - 104.148.109.193
+    - 185.20.184.15
+    - 185.20.184.157
     - 185.20.187.8
   condition: attributes

@@ -1,6 +1,6 @@
 title: SMS/iMessage phishes forcing users to install/run scripts and update VPN settings
   - process_creation
-id: 419d0c7a-797a-4429-8bbc-a520a185263f
+id: 12cb96e8-3191-4134-aad6-1955f6843b2c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,14 +10,14 @@ logsource:
   product: windows
   category: process_creation
 detection:
-  object_6670:
+  object_1577:
     md5:
     - b97847bcc1a27107888475fd6baeb2d9
     sha1:
     - 5e8784026c3fd64c932e53622d0454c33038976e
     sha256:
     - 2ff6b78a4c2b239b2502d4eb7907906ae68275dbb92d3773fa083fb2fbc09a76
-  object_6672:
+  object_1579:
     md5:
     - 35fba2a83659d22eedf5926a3dc680f4
     sha1:
@@ -26,6 +26,6 @@ detection:
     - 1bccbc10642a31b871f5503a52ec5c89598976e6aea0874ed2e396394d8dca00
   attributes:
     sha256:
-    - 2ff6b78a4c2b239b2502d4eb7907906ae68275dbb92d3773fa083fb2fbc09a76
     - 1bccbc10642a31b871f5503a52ec5c89598976e6aea0874ed2e396394d8dca00
+    - 2ff6b78a4c2b239b2502d4eb7907906ae68275dbb92d3773fa083fb2fbc09a76
   condition: 1 of object_* or attributes

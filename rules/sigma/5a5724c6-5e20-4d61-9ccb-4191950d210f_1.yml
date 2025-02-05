@@ -1,5 +1,5 @@
 title: OSINT - Mac Malware of 2017 - url_request
-id: 63a7ba23-a88e-472d-b4c9-6af705b41e4b
+id: 1169b57a-64bd-4ba7-afe0-9e03f306d30f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,54 +10,54 @@ logsource:
   category: url_request
 tags:
 - attack.software.x-agent
-- attack.software.proton
-- attack.software.macspy
-- attack.group.macransom
-- attack.software.cpumeaner
 - attack.software.fruitfly
-- attack.group.filecoder
+- attack.group.macransom
 - attack.software.empyre
-- attack.software.pwnet
 - attack.software.mughthesec
 - attack.software.filecoder
-- attack.software.xagentosx
+- attack.software.pwnet
+- attack.software.macspy
 - attack.software.macransom
+- attack.software.cpumeaner
+- attack.group.filecoder
 - attack.software.macdownloader
+- attack.software.xagentosx
 - attack.software.turla
+- attack.software.proton
 detection:
-  object_8571:
+  object_17864:
     RequestUrl|contains:
     - www.securitychecking.org
   attributes:
     RequestUrl|contains:
-    - https://iranthreats.github.io
-    - http://apple-checker.org
-    - https://www.securitychecking.org
-    - http://apple-uptoday.org
-    - apple-iclods.net
-    - https://www.virusbulletin.com
-    - apple-checker.org
-    - handbrakestore.com
-    - http://apple-search.info
-    - http://www.elmedia-video-player.com
-    - https://www.welivesecurity.com
-    - https://blog.fox-it.com
-    - http://46.17.97.37
-    - https://blog.checkpoint.com
-    - https://blog.malwarebytes.com
-    - http://192.168.3.217
-    - http://23.227.196.215
-    - https://mac.eltima.com
     - https://objective-see.com
-    - handbrake.cc
-    - symantecblog.com
-    - apple-iclods.org
-    - https://www.cybersixgill.com
-    - https://researchcenter.paloaltonetworks.com
+    - https://blog.checkpoint.com
+    - handbrake.biz
+    - http://apple-checker.org
     - apple-search.info
     - officialswebsites.info
+    - handbrakestore.com
+    - https://blog.malwarebytes.com
+    - https://www.virusbulletin.com
+    - http://46.17.97.37
+    - apple-iclods.net
+    - apple-checker.org
+    - https://blog.fox-it.com
+    - handbrake.cc
     - apple-uptoday.org
-    - http://apple-iclods.org
-    - handbrake.biz
+    - https://researchcenter.paloaltonetworks.com
+    - http://www.elmedia-video-player.com
     - eltima.in
+    - https://www.cybersixgill.com
+    - http://23.227.196.215
+    - http://apple-iclods.org
+    - https://iranthreats.github.io
+    - http://apple-uptoday.org
+    - apple-iclods.org
+    - symantecblog.com
+    - http://apple-search.info
+    - https://mac.eltima.com
+    - http://192.168.3.217
+    - https://www.securitychecking.org
+    - https://www.welivesecurity.com
   condition: 1 of object_* or attributes

@@ -1,5 +1,5 @@
 title: Phishing targeting Luxembourg services (hosted and served on/from AWS) - url_request
-id: 8c781281-fa95-494f-899d-f3dbcc4a8668
+id: 8335396f-d4fe-4f47-9219-bdabba05bae8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,94 +11,94 @@ logsource:
 tags:
 - attack.t1566
 detection:
-  object_11656:
+  object_996:
     RequestUrl|contains:
     - cfl-lu.com
     - ccss.support
-  object_11657:
+  object_997:
     RequestUrl|contains:
     - https://sante-lu.com
-  object_11658:
+  object_998:
     RequestUrl|contains:
     - luxtrust-help.com
-  object_11659:
+  object_999:
     RequestUrl|contains:
-    - https://public-ccss.com
     - public-ccss.com
-  object_11660:
+    - https://public-ccss.com
+  object_1000:
     RequestUrl|contains:
-    - https://help-luxtrust.lu
     - help-luxtrust.lu
-  object_11661:
+    - https://help-luxtrust.lu
+  object_1001:
     RequestUrl|contains:
     - https://carte-sante-lu.com
-  object_11662:
+  object_1002:
     RequestUrl|contains:
-    - https://infoluxtrust.com
     - infoluxtrust.com
-  object_11663:
+    - https://infoluxtrust.com
+  object_1003:
     RequestUrl|contains:
     - https://luxtrust.help
     - luxtrust.help
-  object_11664:
+  object_1004:
     RequestUrl|contains:
     - https://ccss.digital
-  object_11665:
+  object_1005:
     RequestUrl|contains:
     - https://public-order.lu
-  object_11666:
+  object_1006:
     RequestUrl|contains:
-    - order-public.com
     - https://order-public.com
-  object_11667:
+    - order-public.com
+  object_1007:
     RequestUrl|contains:
-    - support-luxtrust.com
     - https://support-luxtrust.com
-  object_11668:
+    - support-luxtrust.com
+  object_1008:
     RequestUrl|contains:
-    - https://guichet.me
     - guichet.me
-  object_11669:
+    - https://guichet.me
+  object_1009:
     RequestUrl|contains:
     - cfl-lu.com
-  object_11670:
+  object_1010:
     RequestUrl|contains:
     - card-order.lu
-  object_11671:
+  object_1011:
     RequestUrl|contains:
-    - payconiq.direct
     - payconiq.tel
-  object_11672:
+    - payconiq.direct
+  object_1012:
     RequestUrl|contains:
     - https://support-luxtrust.lu
-  object_11673:
+  object_1013:
     RequestUrl|contains:
     - payconiq.support
-  object_11674:
+  object_1014:
     RequestUrl|contains:
     - https://app-luxtrust.com
-  object_11675:
+  object_1015:
     RequestUrl|contains:
     - http://payconiq-blocage.com
-  object_11676:
+  object_1016:
     RequestUrl|contains:
     - http://update-lu.com
-  object_11677:
+  object_1017:
     RequestUrl|contains:
     - https://luxtrust-support.com
-  object_11678:
+  object_1018:
     RequestUrl|contains:
     - https://luxtrust-support.com
   attributes:
     RequestUrl|contains:
+    - cns-lu.com
     - luxtrust-unlock.com
-    - www-cns.com
-    - ccss-public.com
-    - luxtrust-cancel.com
-    - luxtrust.help
     - luxtrust.support
     - ccss-sante-lu.com
-    - www-cns-lu.com
-    - cns-lu.com
     - https://public-ccss.com
+    - luxtrust-cancel.com
+    - www-cns.com
+    - luxtrust.help
+    - ccss-public.com
+    - www-cns-lu.com
   condition: 1 of object_* or attributes

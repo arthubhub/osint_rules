@@ -1,5 +1,5 @@
 title: 'MoustachedBouncer: Espionage against foreign diplomats in Belarus - dns_query'
-id: b200c8d2-5176-4667-a93b-bcbd46dfbc28
+id: 17ea546f-b764-46d8-ae57-36a98a241895
 description: edit this field when analysing or editing the rule - reported by "ESET"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,55 +9,55 @@ logsource:
   product: windows
   category: dns_query
 detection:
-  object_7663:
+  object_4942:
     QueryName|contains:
     - updates.microsoft.com
-  object_7674:
+  object_4953:
     IpAddresses:
     - 38.9.8.78
-  object_7681:
+  object_4960:
     IpAddresses:
     - 209.19.37.184
-  object_7686:
+  object_4965:
     IpAddresses:
     - 52.3.8.25
-  object_7689:
+  object_4968:
     IpAddresses:
     - 59.6.8.25
-  object_7692:
+  object_4971:
     IpAddresses:
     - 24.9.51.94
-  object_7710:
+  object_4989:
     IpAddresses:
     - 35.214.56.2
-  object_7733:
+  object_5012:
     IpAddresses:
     - 45.136.199.67
-  object_7734:
+  object_5013:
     QueryName|contains:
     - securityocspdev.com
-  object_7735:
+  object_5014:
     IpAddresses:
     - 185.87.148.86
-  object_7736:
+  object_5015:
     QueryName|contains:
     - centrocspupdate.com
-  object_7737:
+  object_5016:
     IpAddresses:
     - 185.87.151.130
-  object_7738:
+  object_5017:
     QueryName|contains:
     - ocsp-atomsecure.com
-  object_7739:
+  object_5018:
     IpAddresses:
     - 45.136.199.129
-  object_7740:
+  object_5019:
     QueryName|contains:
     - dervasopssec.com
-  object_7741:
+  object_5020:
     IpAddresses:
     - 71.15.110.25
-  object_7742:
+  object_5021:
     QueryName|contains:
     - windows.network.troubleshooter.com
   condition: 1 of object_*

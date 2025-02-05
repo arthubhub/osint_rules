@@ -1,6 +1,6 @@
 title: 'OSINT - New Scheme: Spread Popcorn Time Ransomware, get chance of free Decryption
   Key - url_request'
-id: d1bd5f62-5364-4180-8175-8b017667e1b0
+id: 6a185ecb-dcc8-4178-a3e7-ee03704cb0ec
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,8 +12,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - https://3hnuhydu4pd247qb.onion.to
+    - https://3hnuhydu4pd247qb.onion
     - http://popcorn-time-free.net
     - https://www.bleepingcomputer.com
-    - https://3hnuhydu4pd247qb.onion
-    - https://3hnuhydu4pd247qb.onion.to
   condition: attributes

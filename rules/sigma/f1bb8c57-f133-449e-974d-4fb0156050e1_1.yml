@@ -1,5 +1,5 @@
 title: CSSF - Warnings - url_request
-id: d198f705-912f-4cd2-aa0d-410fddabc97f
+id: 4ab4c194-5e5d-461f-9e8d-7f2e5d0bb345
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,19 +9,19 @@ logsource:
   product: windows
   category: url_request
 detection:
-  object_11520:
+  object_5:
     RequestUrl|contains:
     - https://www.cssf.lu
-  object_11521:
+  object_6:
     RequestUrl|contains:
     - cssf.services
-  object_11522:
+  object_7:
     RequestUrl|contains:
     - https://www.cssf.lu
-  object_11523:
+  object_8:
     RequestUrl|contains:
     - acces-andreascapital.com
-  object_11524:
+  object_9:
     RequestUrl|contains:
     - andreasfx.com
   condition: 1 of object_*

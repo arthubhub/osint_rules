@@ -1,6 +1,6 @@
 title: OSINT - Bahamut Revisited, More Cyber Espionage in the Middle East and South
   Asia - dns_query
-id: 06147500-e7de-4577-96d5-d800c06a7763
+id: a92c4e6a-7c95-4299-800b-5a9718956a6f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,31 +10,31 @@ logsource:
   product: windows
   category: dns_query
 detection:
-  object_7660:
+  object_13180:
     QueryName|contains:
     - i3mode.com
   attributes:
     QueryName|contains:
-    - kashmir-weather-info.com
-    - sa-google.com
-    - devotedtohumanity-fif.info
-    - myinfocheck.com
-    - host-auth.com
-    - goolg-en.com
-    - singin-go-olge.com
     - login-asmx.com
-    - string2port.com
-    - insidecloud-aspx.com
-    - squre39-cld.info
-    - rnail-aspx.com
-    - data-covery.com
-    - session-en.com
-    - mxiplayer.com
     - session-service.com
     - session-owa.com
+    - mxiplayer.com
+    - devotedtohumanity-fif.info
+    - singin-go-olge.com
+    - insidecloud-aspx.com
+    - rnail-aspx.com
+    - myinfocheck.com
+    - string2port.com
+    - session-en.com
+    - goolg-en.com
+    - host-auth.com
+    - squre39-cld.info
+    - data-covery.com
+    - sa-google.com
+    - kashmir-weather-info.com
     IpAddresses:
+    - 188.68.242.18
     - 200.63.45.47
     - 91.92.136.134
-    - 188.68.242.18
     - 111.90.138.81
   condition: 1 of object_* or attributes

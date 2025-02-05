@@ -1,6 +1,6 @@
 title: OSINT - Sigma Ransomware Being Distributed Using Fake Craigslist Malspam -
   url_request
-id: 5271a6e2-8a33-445d-b30a-ea5f23f79e90
+id: 7c452564-c9c6-43c1-8d49-976d37d7fa54
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,16 +10,16 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.sigma_ransomware
-- attack.t1192
-- attack.t1204
-- attack.software.sigma_ransomware
 - attack.t1064
-- attack.t1027
+- attack.t1204
+- attack.group.sigma_ransomware
+- attack.software.sigma_ransomware
+- attack.t1192
 - attack.t1193
+- attack.t1027
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.bleepingcomputer.com
     - http://185.121.139.229
+    - https://www.bleepingcomputer.com
   condition: attributes

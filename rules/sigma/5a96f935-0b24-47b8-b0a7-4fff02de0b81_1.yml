@@ -1,5 +1,5 @@
 title: OSINT - Sofacy Attacks Multiple Government Entities - url_request
-id: c1e1ad93-59cf-4e3b-9285-8842eca95382
+id: 4043e38f-692e-49f1-99a7-a521c4f672b5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.apt28
 - attack.group.sofacy
+- attack.group.apt28
 detection:
   attributes:
     RequestUrl|contains:
-    - cdnverify.net
-    - hotfixmsupload.com
     - https://researchcenter.paloaltonetworks.com
+    - hotfixmsupload.com
+    - cdnverify.net
   condition: attributes

@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-09-19 : Affid=3, offline, ".ykcol" : "HERBALIFE Order Number:
   6N01001234" - "6N01001234_1.7z" - url_request'
-id: 29cefe72-50ee-4b95-a779-35fd58bf87f0
+id: 9d56cf3d-918a-472a-9832-b66aacb67a76
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,28 +10,28 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://secureleads.com
+    - http://isiquest1.com
+    - http://diakoniestation-winnenden.de
     - http://ycgrp.jp
     - http://asiaresearchcenter.org
-    - http://ecofloraholland.nl
-    - http://conxibit.com
-    - http://cxwebdesign.de
-    - http://g-peer.at
-    - http://zionbrand.su
-    - http://felixsolis.mobi
-    - http://secureleads.com
-    - http://diakoniestation-winnenden.de
     - http://teracom.co.id
-    - http://download.justowin.it
-    - http://highpressurewelding.co.uk
-    - http://isiquest1.com
-    - http://foodbikers.ch
-    - http://bnphealthcare.com
-    - http://gui-design.de
+    - http://felixsolis.mobi
+    - http://g-peer.at
     - http://arsmakina.org
+    - http://download.justowin.it
+    - http://cxwebdesign.de
     - http://housecafe-essen.de
+    - http://conxibit.com
+    - http://foodbikers.ch
+    - http://highpressurewelding.co.uk
+    - http://gui-design.de
+    - http://zionbrand.su
+    - http://bnphealthcare.com
+    - http://ecofloraholland.nl
   condition: attributes

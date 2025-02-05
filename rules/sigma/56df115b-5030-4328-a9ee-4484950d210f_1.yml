@@ -1,5 +1,5 @@
 title: 'BadMirror: New Android Malware Family Spotted by SherlockDroid - url_request'
-id: e618963e-1d35-4abf-ada1-5c46b60d0566
+id: 7325688c-ee6e-4302-a93d-ebac9aba88c6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://blog.fortinet.com
-    - http://googlestatistics.net
-    - http://silent.800t.net
-    - http://bg.800t.net
     - http://silent.googlestatistics.net
+    - http://bg.800t.net
+    - http://silent.800t.net
+    - http://googlestatistics.net
+    - http://blog.fortinet.com
   condition: attributes

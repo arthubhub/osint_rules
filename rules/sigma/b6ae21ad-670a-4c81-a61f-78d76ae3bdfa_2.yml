@@ -1,5 +1,5 @@
 title: The Golden Tax Department and the Emergence of GoldenSpy Malware - dns_query
-id: f100ff50-603c-48d5-b02d-47cf73b62e78
+id: 1a0d0cd7-c410-48da-920e-4f01d47e5309
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,22 +11,22 @@ logsource:
 tags:
 - attack.t1195.002
 detection:
-  object_11140:
+  object_13102:
     IpAddresses:
     - 223.112.21.2
-  object_11141:
+  object_13103:
     IpAddresses:
     - 42.56.76.93
-  object_11142:
+  object_13104:
     QueryName|contains:
     - ningzhidata.com
-  object_11143:
+  object_13105:
     IpAddresses:
     - 49.232.156.177
-  object_11144:
+  object_13106:
     IpAddresses:
     - 59.83.204.14
-  object_11145:
+  object_13107:
     IpAddresses:
     - 124.152.41.85
   condition: 1 of object_*

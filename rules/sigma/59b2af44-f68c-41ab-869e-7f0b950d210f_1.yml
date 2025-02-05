@@ -1,5 +1,5 @@
 title: 'Malspam 2017-09-08 - ''Microsoft Store E-invoice for your order #'' - url_request'
-id: c875c755-2f10-44bd-b10c-3fb2697e1c57
+id: 0cd49e10-8020-44bb-a03e-47a5b75635d5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,16 +9,16 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - etforhartohat.info
-    - http://brandingforbuyout.com
-    - http://anloandy.co.uk
-    - http://etforhartohat.info
-    - lagrangeglassandmirrorco.com
     - http://lagrangeglassandmirrorco.com
     - brandingforbuyout.com
+    - http://brandingforbuyout.com
+    - lagrangeglassandmirrorco.com
+    - http://etforhartohat.info
+    - etforhartohat.info
+    - http://anloandy.co.uk
   condition: attributes

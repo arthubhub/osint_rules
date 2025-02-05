@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-11-07 : Affid=3, offline, ".asasin" : "Emailing: AZ123 -
   07.11.2017" - "AZ123 - 07.11.2017.doc" - url_request'
-id: 06e1faeb-eb41-4c05-bda6-a443d31a20ea
+id: d6741e87-4c67-4cf2-a83f-858ce1a70eca
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,20 +10,20 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://amcscomputer.com
+    - http://developmenttesting.website
     - http://bobtheprinter.com
     - http://muchinfaket.net
-    - http://ecochart.org
-    - http://basarteks.com
-    - http://altarek.com
-    - http://c3pconsulting.com
     - http://arcusautomatika.ba
+    - http://c3pconsulting.com
     - http://city-hospital.com
-    - http://developmenttesting.website
+    - http://ecochart.org
+    - http://altarek.com
     - http://2013oakseedessaycontest.com
-    - http://amcscomputer.com
+    - http://basarteks.com
   condition: attributes

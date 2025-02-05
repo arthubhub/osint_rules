@@ -1,5 +1,5 @@
 title: OSINT - DearCry ransomware (abusing Exchange Server) - process_creation
-id: f700b8e1-581f-4ba5-bb76-69cdcf1f09f7
+id: 21a3ae18-b8a6-463c-a701-261ef503f20e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,21 +12,21 @@ tags:
 - attack.t1486
 - attack.t1485
 detection:
-  object_11366:
+  object_17400:
     md5:
     - cdda3913408c4c46a6c575421485fa5b
     sha1:
     - 56eec7392297e7301159094d7e461a696fe5b90f
     sha256:
     - e044d9f2d0f1260c3f4a543a1e67f33fcac265be114a1b135fd575b860d2b8c6
-  object_11368:
+  object_17402:
     md5:
     - c6eeb14485d93f4e30fb79f3a57518fc
     sha1:
     - b7d99521348d319f57d2b2ba7045295fc99cf6a7
     sha256:
     - feb3e6d30ba573ba23f3bd1291ca173b7879706d1fe039c34d53a4fdcdf33ede
-  object_11370:
+  object_17404:
     md5:
     - 0e55ead3b8fd305d9a54f78c7b56741a
     sha1:
@@ -35,7 +35,7 @@ detection:
     - 2b9838da7edb0decd32b086e47a31e8f5733b5981ad8247a2f9508e232589bff
   attributes:
     sha256:
-    - 2b9838da7edb0decd32b086e47a31e8f5733b5981ad8247a2f9508e232589bff
     - feb3e6d30ba573ba23f3bd1291ca173b7879706d1fe039c34d53a4fdcdf33ede
     - e044d9f2d0f1260c3f4a543a1e67f33fcac265be114a1b135fd575b860d2b8c6
+    - 2b9838da7edb0decd32b086e47a31e8f5733b5981ad8247a2f9508e232589bff
   condition: 1 of object_* or attributes

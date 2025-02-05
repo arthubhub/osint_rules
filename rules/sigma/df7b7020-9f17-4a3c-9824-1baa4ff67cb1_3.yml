@@ -1,6 +1,6 @@
 title: CVE-2023-46604 (Apache ActiveMQ) Vulnerability Exploited to Infect Systems
   With Cryptominers and Rootkits - process_creation
-id: 8f0336f6-6581-4a3a-ace5-5e587ff33544
+id: 927f8b7b-c799-4d87-bf0c-2d8dd02e9b9a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -13,21 +13,21 @@ tags:
 - attack.t1496
 - attack.group.kinsing
 detection:
-  object_468:
+  object_1036:
     md5:
     - ccef46c7edf9131ccffc47bd69eb743b
     sha1:
     - 38c56b5e1489092b80c9908f04379e5a16876f01
     sha256:
     - c38c21120d8c17688f9aeb2af5bdafb6b75e1d2673b025b720e50232f888808a
-  object_477:
+  object_1045:
     md5:
     - da753ebcfe793614129fc11890acedbc
     sha1:
     - ee458e526125d60cc1a387b4163376be8e9bc689
     sha256:
     - c6fbd6896d162a12d9c900056781eb82f44649945808b7b009646b5397bcf6bf
-  object_498:
+  object_1066:
     md5:
     - 0b882c863de5c302015c1a1cb8616bcd
     sha1:
@@ -36,9 +36,9 @@ detection:
     - d8f55bbbcc20e81e46b9bf78f93b73f002c76a8fcdb4dc2ae21b8609445c14f9
   attributes:
     sha256:
-    - c38c21120d8c17688f9aeb2af5bdafb6b75e1d2673b025b720e50232f888808a
-    - 787e2c94e6d9ce5ec01f5cbe9ee2518431eca8523155526d6dc85934c9c5787c
-    - c6fbd6896d162a12d9c900056781eb82f44649945808b7b009646b5397bcf6bf
     - 0cc60a0c480e4d898fa77ab501bbd2afaf3f5fb89a2917a31e7f5fdaa6c3879c
+    - c6fbd6896d162a12d9c900056781eb82f44649945808b7b009646b5397bcf6bf
+    - 787e2c94e6d9ce5ec01f5cbe9ee2518431eca8523155526d6dc85934c9c5787c
     - d8f55bbbcc20e81e46b9bf78f93b73f002c76a8fcdb4dc2ae21b8609445c14f9
+    - c38c21120d8c17688f9aeb2af5bdafb6b75e1d2673b025b720e50232f888808a
   condition: 1 of object_* or attributes

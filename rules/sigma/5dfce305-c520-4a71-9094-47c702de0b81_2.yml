@@ -1,6 +1,6 @@
 title: OSINT - TA505 evolves ServHelper, uses Predator The Thief and Team Viewer Hijacking
   - process_creation
-id: 5207e5fa-1aa6-4deb-bbbd-f3434ae74a44
+id: 2d6f4d58-cabe-4b7d-b98b-96501d2d9b60
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,63 +12,63 @@ logsource:
 tags:
 - attack.group.ta505
 detection:
-  object_1:
+  object_536:
     md5:
     - de70f256b9fd194f6844d7aa81b17b4e
     sha1:
     - 8c14b7bc7d0f132b4a00062ebc84eca98074eb06
     sha256:
     - ea42d2ae3f97bfd117f4d4f268ddcae4b1361becf1463d9003d6d2ad8e67d1a2
-  object_3:
+  object_538:
     md5:
     - a511410d5889fca07a0dd0a8c84d6c8a
     sha1:
     - c470685e7f2b4c1c1ff5a544824becef1f81c0de
     sha256:
     - 1d0310aa5acb6974afe3c0c4be806500276f86ea0717f2c449ca59eb2756aa5a
-  object_5:
+  object_540:
     md5:
     - 9aa1b6bb7d53b008b6529b4a2f6bfada
     sha1:
     - e764a66692df3ecbfae0660a1d1e567be20e034d
     sha256:
     - d83063586bbdd28a3936fc508e69c0d880673fb985429ede6d0369c91250cbc2
-  object_7:
+  object_542:
     md5:
     - c3c226ec03f393103b9df764df50f0bc
     sha1:
     - 177f891063569d82f85fc931a5254f0c5acbee9f
     sha256:
     - c6830cfbfc47d8623d4c8ba7121527a0104226037e1acd6d8a4f80e7da9ad2e0
-  object_9:
+  object_544:
     md5:
     - 6954cee9db2533337e4425aceacc547b
     sha1:
     - da3973333643735f740f832ebb914faedc3385fa
     sha256:
     - 70fdeda60efc1265d71ecb6893760aea7404096a1b2c3daf9760c544d9dd8a72
-  object_11:
+  object_546:
     md5:
     - a2e77ee41f4d4d3e8814d07d26ec5be3
     sha1:
     - e07292223d53785c61e4d4e33126e71d69527cbd
     sha256:
     - 1b94a8fa7d412d6722931d55792b38fc5f4edae99b3e7be98c260ae603f6e6eb
-  object_13:
+  object_548:
     md5:
     - 77f46b13d858f83c3ce5bdc6ffbc8a95
     sha1:
     - d08b44e8aed3aa013827d5aeef901fed360c57fb
     sha256:
     - 97d68390ccece4c1834e5917ea8f5e50f16ae8166fc29f7ddb8056e48a878fbf
-  object_15:
+  object_550:
     md5:
     - 92cc85c53e169b330fd8686d35259261
     sha1:
     - 4d30c482886f3369731914f6db4100e84fa8cf27
     sha256:
     - ec03d56bc3064f38cde8866d08f52aa70b7cd12d8e61c36c0576c45964bef248
-  object_17:
+  object_552:
     md5:
     - a606d454b408b99aa9fc7ad774951621
     sha1:
@@ -78,12 +78,12 @@ detection:
   attributes:
     md5:
     - a2e77ee41f4d4d3e8814d07d26ec5be3
+    - c3c226ec03f393103b9df764df50f0bc
+    - a511410d5889fca07a0dd0a8c84d6c8a
+    - 92cc85c53e169b330fd8686d35259261
+    - a606d454b408b99aa9fc7ad774951621
+    - 77f46b13d858f83c3ce5bdc6ffbc8a95
     - 9aa1b6bb7d53b008b6529b4a2f6bfada
     - 6954cee9db2533337e4425aceacc547b
-    - 77f46b13d858f83c3ce5bdc6ffbc8a95
-    - a606d454b408b99aa9fc7ad774951621
     - de70f256b9fd194f6844d7aa81b17b4e
-    - 92cc85c53e169b330fd8686d35259261
-    - a511410d5889fca07a0dd0a8c84d6c8a
-    - c3c226ec03f393103b9df764df50f0bc
   condition: 1 of object_* or attributes

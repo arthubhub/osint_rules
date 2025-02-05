@@ -1,5 +1,5 @@
 title: M2M - new locky - process_creation
-id: fb728f2e-ee77-483c-9b7a-f3bc14eeb4d3
+id: 86c7b662-e024-480a-afcb-aff29b0544f3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,18 +9,18 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     md5:
     - 4dec8241eea439ac0413b1b8cca98a18
     - 63ed156f8d2efad83cb2d835c3575d16
-    - 7210b3a262d96b514d07abfe8d601390
     - e84f8462fe7c11f4441f15b003ad8966
+    - 7210b3a262d96b514d07abfe8d601390
     sha256:
-    - a2dd27957eba44eda1764b7426641072a0b310cf84d9e2ae2a78d78e5ff2c4ea
-    - 39d986b3a62f4d1b2e43c8295a2a645187e08417b6c0d2d8b08a9f7e75343936
     - d3a1017f8e5d4ede0eeaa634b81f2d772a425898009ddf19ca73593a9b8700cb
     - 70e828a3b69e1416e6ef17bf1c4d6e15bd92d877f08e6c3e36e0d779c45ed2a0
+    - 39d986b3a62f4d1b2e43c8295a2a645187e08417b6c0d2d8b08a9f7e75343936
+    - a2dd27957eba44eda1764b7426641072a0b310cf84d9e2ae2a78d78e5ff2c4ea
   condition: attributes

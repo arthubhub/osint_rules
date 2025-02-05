@@ -1,6 +1,6 @@
 title: 'OSINT - Analyzing Operation GhostSecret: Attack Seeks to Steal Data Worldwide
   - url_request'
-id: 17de7c15-d627-449a-8d11-9806ef4c3832
+id: 1a41e801-ca28-42c7-a367-cac819835b12
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,14 +10,14 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.t1124
 - attack.t1005
+- attack.t1043
 - attack.t1041
+- attack.t1035
+- attack.t1119
 - attack.t1107
 - attack.t1057
-- attack.t1043
-- attack.t1124
-- attack.t1119
-- attack.t1035
 detection:
   attributes:
     RequestUrl|contains:

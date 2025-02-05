@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-09-26 : Affid=3, offline, ".ykcol" : "Invoice PIS1234567"
   - "InvoicePIS1234567.7z" - url_request'
-id: a292a832-deea-42f6-bb0a-3cd2f7dc86d4
+id: 93e1adb4-f14c-4a01-b99a-0bced315ce9b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,22 +10,22 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://fwbcondo.com
-    - http://envirotambang.com
-    - http://gbvm.nl
-    - http://camerawind.com
     - http://fincasoroel.es
-    - http://financeforautos.com
-    - http://playbrief.info
-    - http://fmarson.com
-    - http://gaestehaus-im-vogelsang.de
     - http://fiancevisacover.com
-    - http://formareal.com
+    - http://gbvm.nl
+    - http://gaestehaus-im-vogelsang.de
+    - http://envirotambang.com
+    - http://playbrief.info
+    - http://financeforautos.com
     - http://geeks-online.de
+    - http://fwbcondo.com
+    - http://camerawind.com
+    - http://formareal.com
+    - http://fmarson.com
     - http://fianceevisa101.com
   condition: attributes

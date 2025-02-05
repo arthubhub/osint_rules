@@ -1,5 +1,5 @@
 title: Muhstik Botnet Attacks Tomato Routers - process_creation
-id: 49b18192-8094-4538-9ba8-ce1f17fffa4b
+id: c1647c56-fbe1-46b8-abed-eda52d396bfc
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,38 +9,38 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.tsunami_elf
 - attack.group.tsunami_elf
+- attack.software.tsunami_elf
 detection:
-  object_7119:
+  object_1553:
     md5:
     - 2d8a62b8a27e14f741098fe1ced8eae4
     sha1:
     - e9a8aebc6822f01199ff311b94641044c4a38dd3
     sha256:
     - 492780a9ac9f03305538b360d8a836c038da4920e8c1ae620988b120613c0b1f
-  object_7121:
+  object_1555:
     md5:
     - 8154ace62f0dcf7c47447153746c4be5
     sha1:
     - 6c9f004c977d3ce1ebda3b6e50313556f977d654
     sha256:
     - a4ba50129408f9f52ddabe5bfd5bfb46aea0ca48fb616f495f2610b2f1729687
-  object_7123:
+  object_1557:
     md5:
     - 167c2f5e0d6abe5b9b35348fd0269928
     sha1:
     - 7914fb8e72e6a7a57998f8b7817c2508ce9ec865
     sha256:
     - 7325742dc0d939542d4c04ae2ae8f2792711203de50d3d16de3a9f83baaf5435
-  object_7125:
+  object_1559:
     md5:
     - a3e3809eb10bae7d19787f6c52d2b289
     sha1:
     - 00e4457de90df173b51757fcf120bc31ce16040e
     sha256:
     - 72123c51bcdf8c1784654d9e2470e69131872407408aa3cf775ea0ace87bb9a0
-  object_7127:
+  object_1561:
     md5:
     - b66fbdec14a7f7b0087aebb9c176ac12
     sha1:
@@ -49,11 +49,11 @@ detection:
     - cee20e79f20d35b95645f0cbda1897302e6e554c50f3e6754ce9293e3c1ba11c
   attributes:
     sha256:
-    - 7325742dc0d939542d4c04ae2ae8f2792711203de50d3d16de3a9f83baaf5435
-    - 2548f5b1613f6ebba2ff589c7b3416ccdd066b73644d4d212232beb1cecd9c31
-    - a4ba50129408f9f52ddabe5bfd5bfb46aea0ca48fb616f495f2610b2f1729687
-    - dc52a1193ecf6096192f771ae663de6e0389840cb5ceb7b979091333ce6f7f02
     - cee20e79f20d35b95645f0cbda1897302e6e554c50f3e6754ce9293e3c1ba11c
     - 72123c51bcdf8c1784654d9e2470e69131872407408aa3cf775ea0ace87bb9a0
+    - dc52a1193ecf6096192f771ae663de6e0389840cb5ceb7b979091333ce6f7f02
     - 492780a9ac9f03305538b360d8a836c038da4920e8c1ae620988b120613c0b1f
+    - a4ba50129408f9f52ddabe5bfd5bfb46aea0ca48fb616f495f2610b2f1729687
+    - 2548f5b1613f6ebba2ff589c7b3416ccdd066b73644d4d212232beb1cecd9c31
+    - 7325742dc0d939542d4c04ae2ae8f2792711203de50d3d16de3a9f83baaf5435
   condition: 1 of object_* or attributes

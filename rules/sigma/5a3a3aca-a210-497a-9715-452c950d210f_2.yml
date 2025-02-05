@@ -1,5 +1,5 @@
 title: OSINT - Rise of One More Mirai Worm Variant - process_creation
-id: 433c675d-3eda-4479-a3b6-35c5f87d2f81
+id: ca09bbfa-944d-4f39-b9c5-833eab5ee9cf
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,14 +11,14 @@ logsource:
 tags:
 - attack.software.satori
 detection:
-  object_8026:
+  object_5530:
     md5:
     - fc11c9cb0d4433143271f0f767864a30
     sha1:
     - 562c61a6413bf35c00a76e22d4cd8278658a0483
     sha256:
     - e5fc493874f2a49e1a1594f3ee2254fa30e6dd69c6f24d24a08a562f03b2fd26
-  object_8028:
+  object_5532:
     md5:
     - eeab715dc67af05280c926dc4c4676f5
     sha1:
@@ -27,6 +27,6 @@ detection:
     - dd6e5607f137b6536097670a1211b4e20821ca136e2db26529948ff0a48555ff
   attributes:
     sha256:
-    - dd6e5607f137b6536097670a1211b4e20821ca136e2db26529948ff0a48555ff
     - e5fc493874f2a49e1a1594f3ee2254fa30e6dd69c6f24d24a08a562f03b2fd26
+    - dd6e5607f137b6536097670a1211b4e20821ca136e2db26529948ff0a48555ff
   condition: 1 of object_* or attributes

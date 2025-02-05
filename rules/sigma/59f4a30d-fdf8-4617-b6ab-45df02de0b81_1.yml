@@ -1,6 +1,6 @@
 title: OSINT - Bahamut Revisited, More Cyber Espionage in the Middle East and South
   Asia - url_request
-id: 75495400-92ac-497d-94b1-2a0782192181
+id: 353ad810-e37e-45bc-baed-941e4f2f0f00
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,27 +10,27 @@ logsource:
   product: windows
   category: url_request
 detection:
-  object_7660:
+  object_13180:
     RequestUrl|contains:
     - i3mode.com
   attributes:
     RequestUrl|contains:
-    - kashmir-weather-info.com
-    - myinfocheck.com
-    - goolg-en.com
-    - singin-go-olge.com
-    - login-asmx.com
-    - squre39-cld.info
-    - data-covery.com
     - mxiplayer.com
-    - sa-google.com
-    - devotedtohumanity-fif.info
-    - host-auth.com
     - insidecloud-aspx.com
+    - myinfocheck.com
     - string2port.com
-    - https://www.bellingcat.com
-    - rnail-aspx.com
     - session-en.com
+    - host-auth.com
+    - data-covery.com
+    - rnail-aspx.com
+    - login-asmx.com
     - session-service.com
     - session-owa.com
+    - devotedtohumanity-fif.info
+    - singin-go-olge.com
+    - https://www.bellingcat.com
+    - goolg-en.com
+    - squre39-cld.info
+    - sa-google.com
+    - kashmir-weather-info.com
   condition: 1 of object_* or attributes

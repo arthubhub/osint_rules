@@ -1,5 +1,5 @@
 title: IOCs Associated with DNS Infrastructure Tampering - url_request
-id: f4e001ef-3c85-4040-b704-7ae54fc69dfe
+id: 8b73eada-acf6-4019-b1e7-cab672a1183d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - hr-wipro.com
-    - http://hr-suncor.com
-    - http://hr-wipro.com
     - hr-suncor.com
+    - http://hr-suncor.com
     - 0ffice36o.com
+    - http://hr-wipro.com
+    - hr-wipro.com
   condition: attributes

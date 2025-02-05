@@ -1,5 +1,5 @@
 title: "OSINT - CozyBear \xE2\u20AC\u201C In from the Cold? - dns_query"
-id: 8177475c-5811-4789-8632-fb73401a39eb
+id: 0f3c5273-fcf9-41aa-85b2-bba9af03d9f2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.cobalt_strike
-- attack.group.g0016
 - attack.group.apt_29
-- attack.group.apt29
-- attack.group.cobalt_strike
 - attack.software.s0154
+- attack.group.cobalt_strike
+- attack.group.apt29
 - attack.software.cozycar
+- attack.group.g0016
+- attack.software.cobalt_strike
 detection:
-  object_7573:
+  object_5913:
     QueryName|contains:
     - mx1.era.citon.com
     IpAddresses:

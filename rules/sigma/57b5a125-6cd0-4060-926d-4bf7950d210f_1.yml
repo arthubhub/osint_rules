@@ -1,6 +1,6 @@
 title: OSINT TorrentLocker Ransomware Email IoCs 8/16/2016 by neonPrimeTime user on
   AlienVault OTX - url_request
-id: 5df196b4-ff45-49a5-8b14-2809dd6d9e6c
+id: 2a767fbe-03bf-4405-971c-6dd87f88f012
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,15 +12,15 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://siasibisaat.com
-    - http://vize.aglbillspayment.com
-    - wtfismyip.com
-    - siasibisaat.com
-    - http://uxk.aglbillspayment.com
-    - https://otx.alienvault.com
-    - ipecho.net
-    - gnhdd.com
     - http://gnhdd.com
-    - myexternalip.com
+    - http://uxk.aglbillspayment.com
+    - siasibisaat.com
     - http://pastebin.com
+    - myexternalip.com
+    - wtfismyip.com
+    - ipecho.net
+    - http://siasibisaat.com
+    - gnhdd.com
+    - https://otx.alienvault.com
+    - http://vize.aglbillspayment.com
   condition: attributes

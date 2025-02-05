@@ -1,5 +1,5 @@
 title: 'Talos Blog: Threat Roundup for May 18-25 - dns_query'
-id: a99c3e3f-8ab0-4d9a-bc53-2f07fb85b533
+id: 00df0fa8-5c14-4dd1-9bdc-5e4f7fd3ffbc
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
@@ -12,11 +12,11 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - reason0monster-meadow.tk
     - ec2-35-158-168-189.eu-central-1.compute.amazonaws.com
+    - reason0monster-meadow.tk
     IpAddresses:
-    - 188.42.242.245
-    - 104.28.21.191
     - 35.158.168.189
+    - 188.42.242.245
     - 104.28.20.191
+    - 104.28.21.191
   condition: attributes

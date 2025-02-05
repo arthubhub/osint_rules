@@ -1,5 +1,5 @@
 title: 'CustomerLoader: a new malware distributing a wide variety of payloads - dns_query'
-id: f18abc02-9360-45e6-8de5-cebb77bf5b14
+id: 58270f23-94a0-48fa-adba-b4aff4d3dc13
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -10,106 +10,106 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1140
-- attack.software.s0366
-- attack.t1566.001
-- attack.group.darkcloud_stealer
-- attack.t1132.001
-- attack.t1027
-- attack.group.ave_maria
+- attack.software.sectoprat
+- attack.software.vidar
 - attack.software.asyncrat
-- attack.software.lgoogloader
-- attack.software.xloader
-- attack.t1573.001
-- attack.software.darkcloud_stealer
-- attack.software.s0262
-- attack.t1001
-- attack.t1071.001
-- attack.t1620
-- attack.group.asyncrat
+- attack.group.redline_stealer
 - attack.software.formbook
-- attack.t1027.007
+- attack.group.bitrat
+- attack.software.xloader
+- attack.software.darkcloud_stealer
+- attack.software.s0366
 - attack.t1562.001
 - attack.software.s0332
-- attack.t1562
-- attack.software.stealc
-- attack.t1129
-- attack.software.s0670
-- attack.group.redline_stealer
-- attack.group.xloader
-- attack.software.sectoprat
+- attack.group.asyncrat
+- attack.group.stealc
+- attack.t1105
+- attack.t1001
+- attack.t1573.001
+- attack.group.darkcloud_stealer
+- attack.software.bitrat
 - attack.group.lgoogloader
+- attack.software.s0331
+- attack.group.ave_maria
+- attack.group.xloader
+- attack.software.s0670
+- attack.software.ave_maria
+- attack.t1071.001
+- attack.group.vidar
+- attack.software.s0262
+- attack.t1129
+- attack.t1566.001
+- attack.t1027
+- attack.t1027.007
+- attack.software.stealc
+- attack.t1140
+- attack.t1132.001
+- attack.software.agent_tesla
+- attack.group.agent_tesla
+- attack.software.lgoogloader
 - attack.group.sectoprat
 - attack.software.redline_stealer
-- attack.software.agent_tesla
-- attack.t1105
-- attack.software.ave_maria
-- attack.group.agent_tesla
-- attack.group.bitrat
-- attack.software.s0331
-- attack.group.vidar
-- attack.software.vidar
-- attack.software.bitrat
-- attack.group.stealc
+- attack.t1562
+- attack.t1620
 detection:
-  object_8694:
+  object_12956:
     IpAddresses:
     - 45.9.74.99
-  object_8695:
+  object_12957:
     IpAddresses:
     - 5.42.65.69
   attributes:
     QueryName|contains:
-    - get-a.pw
-    - bin-c.pw
-    - hardcoverradio.com
-    - bin-d.pw
+    - slackmessenger.site
+    - adanagram.com
+    - get-d.pw
     - cmd22.pw
-    - hautegaleria.com
-    - macrospro.pw
-    - bin-a.pw
-    - vst-dw.com
-    - get-y.com
-    - get-i.pw
-    - soft-got.pw
-    - macros-pro.net
-    - soft-got.net
-    - cmd2.pw
-    - self-games.space
-    - seif-games.com
+    - jacksmanual.com
+    - get-c.pw
+    - vbs22.pw
+    - minemy.pw
     - bin-b.pw
-    - slackmessenger.pw
-    - cmd1.pw
-    - get-vbs.com
-    - soft-got.co
+    - hardcoverradio.com
+    - get-i.pw
+    - bin-c.pw
+    - vst-dw.com
+    - vpnsget.pw
+    - self-games.pw
     - self-games.com
+    - seif-games.com
+    - self-games.site
+    - soft-got.co
+    - plugin4free.net
+    - cmd2.pw
+    - get-y.com
+    - bin-d.pw
+    - slackmessenger.pw
+    - vpnsget.com
+    - gethere.pw
+    - vstget.com
+    - kyliansuperm92139124.sbs
+    - cmd1.pw
+    - hautegaleria.com
     - plugin4free.com
+    - get-b.pw
+    - mymine.pw
+    - macros-pro.net
+    - vbs2.pw
+    - soft-got.pw
+    - self-games.host
+    - vbs1.pw
+    - macrospro.pw
     - vbs3.pw
     - crypt1.pw
-    - plugin4free.net
-    - vbs22.pw
-    - soft-got.com
-    - vbs1.pw
-    - mymine.pw
-    - self-games.host
-    - kyliansuperm92139124.sbs
-    - self-games.site
+    - get-vbs.com
+    - soft-got.net
     - vstdw.com
-    - minemy.pw
-    - gethere.pw
-    - jacksmanual.com
-    - vpnsget.com
-    - vpnsget.pw
-    - get-d.pw
-    - get-b.pw
-    - adanagram.com
-    - slackmessenger.site
-    - self-games.pw
-    - get-c.pw
-    - vbs2.pw
-    - vstget.com
+    - self-games.space
+    - bin-a.pw
+    - get-a.pw
+    - soft-got.com
     IpAddresses:
-    - 5.42.94.169
-    - 179.43.170.241
     - 77.91.124.25
+    - 179.43.170.241
+    - 5.42.94.169
   condition: 1 of object_* or attributes

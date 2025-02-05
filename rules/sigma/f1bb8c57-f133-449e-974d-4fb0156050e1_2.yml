@@ -1,5 +1,5 @@
 title: CSSF - Warnings - dns_query
-id: 1d084be6-04fc-44f9-946e-af90716a58bc
+id: 50614761-92bf-4e55-a897-6b38b2e4adb9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: dns_query
 detection:
-  object_11521:
+  object_6:
     QueryName|contains:
     - cssf.services
-  object_11523:
+  object_8:
     QueryName|contains:
     - acces-andreascapital.com
-  object_11524:
+  object_9:
     QueryName|contains:
     - andreasfx.com
   condition: 1 of object_*

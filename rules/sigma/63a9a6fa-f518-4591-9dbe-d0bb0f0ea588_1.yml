@@ -1,5 +1,5 @@
 title: OSINT - First Exploitation of Follina Seen in the Wild - url_request
-id: 6654a305-c693-4493-8a08-e83a66d0ab05
+id: ae03ff84-e26e-4f44-ace4-b6fe4268baec
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: url_request
 detection:
-  object_8838:
+  object_3405:
     RequestUrl|contains:
     - https://isc.sans.edu
-  object_8845:
+  object_3412:
     RequestUrl|contains:
     - http://coolrat.xyz
-  object_8848:
+  object_3415:
     RequestUrl|contains:
     - coolrat.xyz
   condition: 1 of object_*

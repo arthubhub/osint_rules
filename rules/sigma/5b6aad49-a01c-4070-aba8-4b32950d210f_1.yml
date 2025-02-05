@@ -1,6 +1,6 @@
 title: OSINT - CYBER THREATSCAPE  REPORT 2018 - MIDYEAR CYBERSECURITY  RISK REVIEW
   - url_request
-id: be8fbe97-e259-45c5-9dfb-6793e179b1a3
+id: 2c94d843-2dc3-49f8-88f1-70f068113a4f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,30 +10,30 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.group.rastakhiz
+- attack.group.wannasmile
 - attack.software.black_ruby
+- attack.group.cobalt
+- attack.group.tyrant
+- attack.software.tyrant
 - attack.group.fin7
+- attack.group.black_ruby
+- attack.group.anunak
 - attack.software.rastakhiz
 - attack.software.wannasmile
-- attack.group.cobalt
-- attack.group.black_ruby
-- attack.software.tyrant
-- attack.group.anunak
-- attack.group.rastakhiz
-- attack.group.tyrant
-- attack.group.wannasmile
 detection:
-  object_12338:
+  object_5316:
     RequestUrl|contains:
     - https://twitter.com
   attributes:
     RequestUrl|contains:
-    - exchange.ir
-    - toshiba.org.kz
-    - http://toshiba.org.kz
-    - https://www.accenture.com
-    - swift-fraud.com
-    - https://otx.alienvault.com
-    - https://swift-fraud.com
     - https://api.toshiba.org.kz
+    - https://www.accenture.com
+    - https://swift-fraud.com
+    - swift-fraud.com
+    - http://toshiba.org.kz
+    - toshiba.org.kz
     - webmoney.ir
+    - https://otx.alienvault.com
+    - exchange.ir
   condition: 1 of object_* or attributes

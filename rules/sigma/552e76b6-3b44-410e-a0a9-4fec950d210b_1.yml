@@ -1,6 +1,6 @@
 title: OSINT Unit 42 Identifies New DragonOK Backdoor Malware Deployed Against Japanese
   Targets by Palo Alto Unit42 - url_request
-id: b9771f86-db08-4270-897a-1ed5562c50d5
+id: 8db24516-4289-456e-938d-04208a20426b
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,9 +12,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - jpaols.com
-    - biosnews.info
-    - http://researchcenter.paloaltonetworks.com
-    - http://biosnews.info
     - https://www.fireeye.com
+    - http://researchcenter.paloaltonetworks.com
+    - biosnews.info
+    - http://biosnews.info
+    - jpaols.com
   condition: attributes

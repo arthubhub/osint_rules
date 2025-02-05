@@ -1,5 +1,5 @@
 title: Mitigating Brute Force Attacks on NetScaler Devices - url_request
-id: a17d7879-78de-43f0-85d8-2200bbfe7ac7
+id: b67fc111-0853-4c0b-aed5-78079981badc
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,10 +9,10 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1254
 - attack.t1190
+- attack.t1254
 detection:
-  object_10118:
+  object_5506:
     RequestUrl|contains:
     - https://www.cyderes.com
   condition: 1 of object_*

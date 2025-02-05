@@ -1,5 +1,5 @@
 title: Tor hidden services for GandCrab and jokeroo "vendor" - dns_query
-id: 13cc5124-4174-4ff7-b5e1-3b30dbf15922
+id: b141b623-2c28-450f-8687-5b1899e174c4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,16 +9,16 @@ logsource:
   product: windows
   category: dns_query
 tags:
+- attack.software.jokeroo
 - attack.group.gandcrab
 - attack.software.gandcrab
 - attack.group.jokeroo
-- attack.software.jokeroo
 detection:
   attributes:
     QueryName|contains:
-    - gandcrasgyol4tol.onion
+    - gandcrab2pie73et.onion
     - gandcratjyr44pms.onion
     - gandcr4cponzb2it.onion
+    - gandcrasgyol4tol.onion
     - gandcrabmfe6mnef.onion
-    - gandcrab2pie73et.onion
   condition: attributes

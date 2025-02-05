@@ -1,6 +1,6 @@
 title: 'Buzzing in the Background: BumbleBee, a New Modular Backdoor Evolved From
   BookWorm - url_request'
-id: 655f41a2-4d91-46c4-8408-697bf294951b
+id: 233a65df-a372-498d-99de-fe1891379d9e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,28 +10,28 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1548.002
-- attack.t1547
-- attack.t1573.001
-- attack.software.bookworm
-- attack.t1071.001
-- attack.t1587.001
-- attack.group.bumblebee
-- attack.t1090
-- attack.t1037
-- attack.t1417
-- attack.t1056
-- attack.t1574
-- attack.t1543
-- attack.software.bumblebee
-- attack.t1056.001
 - attack.t1480
+- attack.t1548.002
 - attack.t1592
-- attack.t1070
+- attack.software.bookworm
+- attack.t1417
+- attack.t1587.001
+- attack.t1573.001
+- attack.t1547
+- attack.t1056.001
+- attack.software.bumblebee
+- attack.t1071.001
 - attack.t1055
+- attack.group.bumblebee
+- attack.t1056
+- attack.t1037
+- attack.t1543
 - attack.group.bookworm
+- attack.t1090
+- attack.t1070
+- attack.t1574
 detection:
-  object_12883:
+  object_6645:
     RequestUrl|contains:
     - https://www.trendmicro.com
   attributes:

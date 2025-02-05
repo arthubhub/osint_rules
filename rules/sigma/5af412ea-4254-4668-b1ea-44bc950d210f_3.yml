@@ -1,5 +1,5 @@
 title: OSINT - Botnet exploiting GPON Vulnerability - process_creation
-id: a1b3ad98-dcb2-4ba0-829e-32019ba5d027
+id: b2c2687b-46e7-40ce-a723-59155273e2c7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,35 +9,35 @@ logsource:
   product: windows
   category: process_creation
 detection:
-  object_759:
+  object_12012:
     md5:
     - d546bc209d315ae81869315e8d536f36
     sha1:
     - 06f08af784b24a55018b4489afab19f0436b90a9
     sha256:
     - efa4fe06e4949c0f7aedea61a79da92e379ea66b169cd1d99c47b9e93e814093
-  object_761:
+  object_12014:
     md5:
     - 21fa1dcc069309245a8aa1c142f112a3
     sha1:
     - c724be3b4cc8b7e0fbac7d0391be0f2aea0b5b19
     sha256:
     - a79964ce5cf4b92f996bbc24230e102b94ef05fb072c0afdeabc88d28695cace
-  object_763:
+  object_12016:
     md5:
     - 2adb540db754366a1aa04ccca7105c80
     sha1:
     - 041dcbad0ca62255129048636afec9b89b65a748
     sha256:
     - 1ff787d52bc9e4a6c27d75b1a427c3e5dd16d6d5f082a79227c14edf8e908ab2
-  object_765:
+  object_12018:
     md5:
     - 20deff5786a4769b219c304965559043
     sha1:
     - dc6102418faedf4379bfc786acb216d5defe64f0
     sha256:
     - bab7e9f42df88902acb00fbdf3b4b5d8ffec2a1a7ad32eb5f2fb1dbf38f3167d
-  object_767:
+  object_12020:
     md5:
     - a536f99aa4030efb5d44c0b4792f4e9b
     sha1:
@@ -46,9 +46,9 @@ detection:
     - 7caac9c9fa954730665d63b692119ba5f14ee6c07cf11ffc60bca7b3d25ea109
   attributes:
     sha256:
-    - 7caac9c9fa954730665d63b692119ba5f14ee6c07cf11ffc60bca7b3d25ea109
-    - a79964ce5cf4b92f996bbc24230e102b94ef05fb072c0afdeabc88d28695cace
     - bab7e9f42df88902acb00fbdf3b4b5d8ffec2a1a7ad32eb5f2fb1dbf38f3167d
+    - a79964ce5cf4b92f996bbc24230e102b94ef05fb072c0afdeabc88d28695cace
     - efa4fe06e4949c0f7aedea61a79da92e379ea66b169cd1d99c47b9e93e814093
+    - 7caac9c9fa954730665d63b692119ba5f14ee6c07cf11ffc60bca7b3d25ea109
     - 1ff787d52bc9e4a6c27d75b1a427c3e5dd16d6d5f082a79227c14edf8e908ab2
   condition: 1 of object_* or attributes

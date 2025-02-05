@@ -1,6 +1,6 @@
 title: 'M2M -  Locky Affid=3, ".asasin"/Trickbot "mac1" 2017-10-05 : "Invoice INV0000123"
   - "Invoice INV0000123.7z" - process_creation'
-id: 6d1a9b41-9f53-4708-bcbf-712ff02c0a77
+id: a41afae4-a9ea-41ff-a390-b996cd25addb
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,18 +10,18 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.locky
 - attack.software.trick_bot
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     md5:
-    - 5216bf5213f2f94e756ce464d34c740c
     - 1934bc240ae9e8e101490a9dab13c079
+    - 5216bf5213f2f94e756ce464d34c740c
     sha1:
     - a0218048aaca34259d0651d911b81f9f12a30326
     - dd3ad086b2973e67e41aa21680448badb989f9c5
     sha256:
-    - 24184f3ae1a878018d650812c7084cdc91fdaa8916d3d11140ef06d6306347a2
     - c2e56510866a6e038ac723a3e5a2ac66b14f407b91886077727f622f561164e3
+    - 24184f3ae1a878018d650812c7084cdc91fdaa8916d3d11140ef06d6306347a2
   condition: attributes

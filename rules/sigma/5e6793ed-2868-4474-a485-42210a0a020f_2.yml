@@ -1,5 +1,5 @@
 title: Trickbot Gtag QW1 - dns_query
-id: a27738a4-955d-4973-bb13-aa56674d6eae
+id: a0979463-85be-4382-bc4e-6137d0f26af6
 description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.trickbot
 - attack.group.trickbot
+- attack.software.trickbot
 detection:
   attributes:
     QueryName|contains:
-    - customscripts.us
     - serviceuphelper.com
+    - customscripts.us
     IpAddresses:
     - 50.87.170.67
     - 95.179.210.8

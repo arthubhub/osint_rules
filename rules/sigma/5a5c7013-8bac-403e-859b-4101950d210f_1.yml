@@ -1,6 +1,6 @@
 title: OSINT Duping Doping Domains - Possible Fancy Bear Domains Spoofing Anti-Doping
   and Olympic Organizations by ThreatConnect - url_request
-id: e2f100ad-2bf3-497d-bf76-22b3bdf117e3
+id: e89056c9-902c-43af-9630-995eb41c45b7
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,15 +10,15 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.group.sofacy
 - attack.group.apt28
 - attack.group.strontium
-- attack.group.sofacy
 detection:
   attributes:
     RequestUrl|contains:
-    - ocaia.org
     - wada-adams.org
-    - https://www.threatconnect.com
     - webmail-usada.org
+    - ocaia.org
     - usada.eu
+    - https://www.threatconnect.com
   condition: attributes

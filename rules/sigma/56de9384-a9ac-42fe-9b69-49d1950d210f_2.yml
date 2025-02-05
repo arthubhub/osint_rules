@@ -1,5 +1,5 @@
 title: TeslaCrypt (2016-03-08) - dns_query
-id: 417137b5-f41a-468a-8bb8-599bab2aea45
+id: 3d037737-6ff6-4a4c-87ae-637582c9368c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,12 +11,12 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - greetingsjamajcaff.com
     - drcordoba.com
     - hellomisterbiznesqq.com
-    - greetingsjamajcaff.com
     IpAddresses:
-    - 50.62.125.1
     - 74.117.183.252
-    - 173.82.74.197
     - 104.168.62.235
+    - 173.82.74.197
+    - 50.62.125.1
   condition: attributes

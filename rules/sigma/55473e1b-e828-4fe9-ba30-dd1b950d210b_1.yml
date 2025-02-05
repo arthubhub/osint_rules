@@ -1,5 +1,5 @@
 title: OSINT Dalexis/CTB-Locker malspam campaign by SANS Internet Storm Center - url_request
-id: 05585514-0e0c-4273-bf2b-176c45d93c89
+id: f37ec40f-94bf-48ca-954c-987cd650c368
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,11 +11,11 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - http://www.microsoft.com
+    - https://techhelplist.com
+    - https://isc.sans.edu
     - https://malwr.com
     - https://blogs.mcafee.com
-    - https://techhelplist.com
-    - https://heimdalsecurity.com
-    - http://www.microsoft.com
     - http://www.malware-traffic-analysis.net
-    - https://isc.sans.edu
+    - https://heimdalsecurity.com
   condition: attributes

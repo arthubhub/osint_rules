@@ -1,6 +1,6 @@
 title: 'Operation Cobalt Whisper: Threat Actor Targets Multiple Industries Across
   Hong Kong and Pakistan. - url_request'
-id: 252a7d13-5698-4ab4-8ecc-fe6a10e9325b
+id: 1fa01913-fbcf-449a-9ce3-6021b726b006
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,14 +11,14 @@ logsource:
   category: url_request
 tags:
 - attack.t1071.001
+- attack.t1059.005
+- attack.t1055.002
+- attack.t1033
+- attack.t1053.005
 - attack.t1204.002
 - attack.t1566.001
-- attack.t1055.002
-- attack.t1053.005
-- attack.t1059.005
-- attack.t1033
 detection:
-  object_8153:
+  object_17437:
     RequestUrl|contains:
     - https://www.seqrite.com
   condition: 1 of object_*

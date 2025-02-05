@@ -1,6 +1,6 @@
 title: OSINT - Poison Ivy Group and the Cyberespionage Campaign Against Chinese Military
   and Goverment - url_request
-id: c4d9b704-6c9d-479d-9ef4-f72fa961a1ac
+id: ca1fed3a-d8cb-4292-947b-4f07b1021eaa
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,11 +10,11 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.poison_ivy
 - attack.software.poisonivy
+- attack.software.poison_ivy
 detection:
   attributes:
     RequestUrl|contains:
-    - http://annie165.zyns.com
     - http://blogs.360.cn
+    - http://annie165.zyns.com
   condition: attributes

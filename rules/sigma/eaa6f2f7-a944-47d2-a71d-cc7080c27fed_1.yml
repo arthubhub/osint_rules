@@ -1,6 +1,6 @@
 title: Lumma Stealer Malware (delivered via GitHub Spam) - Pandora analysis (l6E.exe)
   - url_request
-id: 4eee45cb-d631-4d61-a765-5c95ef8664d9
+id: ae919846-bcff-403f-87ea-d427f4cd002f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,20 +10,20 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.lumma_stealer
 - attack.software.lumma_stealer
+- attack.group.lumma_stealer
 detection:
-  object_10172:
+  object_5343:
     RequestUrl|contains:
     - eemmbryequo.shop
+    - relaxatinownio.shop
     - tryyudjasudqo.shop
-    - tendencctywop.shop
     - reggwardssdqw.shop
+    - licenseodqwmqn.shop
     - tesecuuweqo.shop
     - keennylrwmqlw.shop
-    - relaxatinownio.shop
-    - licenseodqwmqn.shop
-  object_10173:
+    - tendencctywop.shop
+  object_5344:
     RequestUrl|contains:
     - https://github-scanner.com
     - github-scanner.com

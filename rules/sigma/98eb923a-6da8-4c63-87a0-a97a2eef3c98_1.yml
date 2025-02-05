@@ -1,5 +1,5 @@
 title: 'CustomerLoader: a new malware distributing a wide variety of payloads - url_request'
-id: 324c5211-3011-4b1b-9790-571cee812a35
+id: 9dcba8d3-b3a4-4ab6-a52a-57c332014351
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -10,114 +10,114 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1140
-- attack.software.s0366
-- attack.t1566.001
-- attack.group.darkcloud_stealer
-- attack.t1132.001
-- attack.t1027
-- attack.group.ave_maria
+- attack.software.sectoprat
+- attack.software.vidar
 - attack.software.asyncrat
-- attack.software.lgoogloader
-- attack.software.xloader
-- attack.t1573.001
-- attack.software.darkcloud_stealer
-- attack.software.s0262
-- attack.t1001
-- attack.t1071.001
-- attack.t1620
-- attack.group.asyncrat
+- attack.group.redline_stealer
 - attack.software.formbook
-- attack.t1027.007
+- attack.group.bitrat
+- attack.software.xloader
+- attack.software.darkcloud_stealer
+- attack.software.s0366
 - attack.t1562.001
 - attack.software.s0332
-- attack.t1562
-- attack.software.stealc
-- attack.t1129
-- attack.software.s0670
-- attack.group.redline_stealer
-- attack.group.xloader
-- attack.software.sectoprat
+- attack.group.asyncrat
+- attack.group.stealc
+- attack.t1105
+- attack.t1001
+- attack.t1573.001
+- attack.group.darkcloud_stealer
+- attack.software.bitrat
 - attack.group.lgoogloader
+- attack.software.s0331
+- attack.group.ave_maria
+- attack.group.xloader
+- attack.software.s0670
+- attack.software.ave_maria
+- attack.t1071.001
+- attack.group.vidar
+- attack.software.s0262
+- attack.t1129
+- attack.t1566.001
+- attack.t1027
+- attack.t1027.007
+- attack.software.stealc
+- attack.t1140
+- attack.t1132.001
+- attack.software.agent_tesla
+- attack.group.agent_tesla
+- attack.software.lgoogloader
 - attack.group.sectoprat
 - attack.software.redline_stealer
-- attack.software.agent_tesla
-- attack.t1105
-- attack.software.ave_maria
-- attack.group.agent_tesla
-- attack.group.bitrat
-- attack.software.s0331
-- attack.group.vidar
-- attack.software.vidar
-- attack.software.bitrat
-- attack.group.stealc
+- attack.t1562
+- attack.t1620
 detection:
-  object_8689:
+  object_12951:
     RequestUrl|contains:
     - http://5.42.94.169
-  object_8690:
+  object_12952:
     RequestUrl|contains:
     - https://telegra.ph
-  object_8691:
+  object_12953:
     RequestUrl|contains:
     - https://www.mediafire.com
-  object_8693:
+  object_12955:
     RequestUrl|contains:
     - http://5.42.94.169
-  object_8696:
+  object_12958:
     RequestUrl|contains:
     - https://slackmessenger.site
-  object_8698:
+  object_12960:
     RequestUrl|contains:
     - http://5.42.94.169
   attributes:
     RequestUrl|contains:
-    - get-a.pw
-    - bin-c.pw
-    - hardcoverradio.com
-    - bin-d.pw
+    - slackmessenger.site
+    - adanagram.com
+    - get-d.pw
     - cmd22.pw
-    - hautegaleria.com
-    - macrospro.pw
-    - bin-a.pw
-    - vst-dw.com
-    - get-y.com
-    - get-i.pw
-    - soft-got.pw
-    - macros-pro.net
-    - soft-got.net
-    - cmd2.pw
-    - self-games.space
-    - seif-games.com
+    - jacksmanual.com
+    - get-c.pw
+    - vbs22.pw
+    - minemy.pw
     - bin-b.pw
-    - slackmessenger.pw
-    - cmd1.pw
-    - get-vbs.com
-    - soft-got.co
+    - hardcoverradio.com
+    - get-i.pw
+    - bin-c.pw
+    - vst-dw.com
+    - vpnsget.pw
+    - self-games.pw
     - self-games.com
+    - seif-games.com
+    - self-games.site
+    - soft-got.co
+    - plugin4free.net
+    - cmd2.pw
+    - get-y.com
+    - bin-d.pw
+    - slackmessenger.pw
+    - vpnsget.com
+    - gethere.pw
+    - vstget.com
+    - kyliansuperm92139124.sbs
+    - cmd1.pw
+    - hautegaleria.com
     - plugin4free.com
+    - get-b.pw
+    - mymine.pw
+    - macros-pro.net
+    - vbs2.pw
+    - soft-got.pw
+    - self-games.host
+    - vbs1.pw
+    - macrospro.pw
     - vbs3.pw
     - crypt1.pw
-    - plugin4free.net
-    - vbs22.pw
-    - soft-got.com
-    - vbs1.pw
-    - mymine.pw
-    - self-games.host
-    - kyliansuperm92139124.sbs
-    - self-games.site
+    - get-vbs.com
+    - soft-got.net
     - vstdw.com
-    - minemy.pw
-    - gethere.pw
-    - jacksmanual.com
-    - vpnsget.com
-    - vpnsget.pw
-    - get-d.pw
-    - get-b.pw
-    - adanagram.com
-    - slackmessenger.site
-    - self-games.pw
-    - get-c.pw
-    - vbs2.pw
-    - vstget.com
+    - self-games.space
+    - bin-a.pw
+    - get-a.pw
+    - soft-got.com
   condition: 1 of object_* or attributes

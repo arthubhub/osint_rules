@@ -1,5 +1,5 @@
 title: 'OSINT -  Down but Not Out: A Look Into Recent Exploit Kit Activities - url_request'
-id: f543dfba-f6c2-4981-9a38-7bb43b62d241
+id: 556df249-a6f1-4366-b716-93252e426e06
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://blog.trendmicro.com
-    - taxhuge.com
     - carder.bit
-    - fedpart.website
+    - taxhuge.com
+    - https://blog.trendmicro.com
     - addrole.space
+    - fedpart.website
   condition: attributes

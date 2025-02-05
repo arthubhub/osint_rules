@@ -1,6 +1,6 @@
 title: OSINT  - Analyzing attacks taking advantage of the Exchange Server vulnerabilities
   - url_request
-id: c0919dc3-7baa-4990-8b99-012484d41826
+id: f1d867ef-65af-44f1-9e49-d49df90c2c90
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,7 +10,7 @@ logsource:
   product: windows
   category: url_request
 detection:
-  object_8338:
+  object_252:
     RequestUrl|contains:
     - https://www.microsoft.com
   condition: 1 of object_*

@@ -1,5 +1,5 @@
 title: OSINT - Lojack Becomes a Double-Agent - process_creation
-id: 10e1a1d4-655c-41f7-b2f6-19d8d0d8fa6a
+id: 2056242c-ec21-4ed9-b756-3394ba5b8030
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,49 +11,49 @@ logsource:
 tags:
 - attack.group.apt28
 detection:
-  object_8896:
+  object_746:
     md5:
     - f391556d9f89499fa8ee757cb3472710
     sha1:
     - 2529f6eda28d54490119d2123d22da56783c704f
     sha256:
     - 060448ffd71fe2edbb5fe7c6298ad2b077e57fa6ed6d4250fbd799dd85488843
-  object_8898:
+  object_748:
     md5:
     - 6eaa1ff5f33df3169c209f98cc5012d0
     sha1:
     - 10d571d66d3ab7b9ddf6a850cb9b8e38b07623c0
     sha256:
     - 27dd9de09e22efa2ef12e9e2f462fa9da83684bdb4ec900dd86439c5758107d9
-  object_8900:
+  object_750:
     md5:
     - cf45ec807321d12f8df35fa434591460
     sha1:
     - ddaa06a4021baf980a08caea899f2904609410b9
     sha256:
     - 0860f29226069a732f988cb70ea6d51057d204d421bb709b8e759376b0c4d201
-  object_8902:
+  object_752:
     md5:
     - f1df1a795eb784f7bfc3ba9a7e3b00ac
     sha1:
     - 1470995de2278ae79646d524e7c311dad29aee17
     sha256:
     - e029ed8cfe34185c94b15c74f52d6fdf9bf9b635853c466b2589c1d9f3639200
-  object_8904:
+  object_754:
     md5:
     - e78e3b0171b189074d2539c7baaa0719
     sha1:
     - 5f45bf0f57aa1f7c9d676740989b58cbffaf0ceb
     sha256:
     - 998aa45b4cd6ca30610c3f7dc1603c2c1feb49b0e2d968d29f64f1658f4d40d5
-  object_8906:
+  object_756:
     md5:
     - f3c6e16f0dd2b0e55a7dad365c3877d4
     sha1:
     - 397d97e278110a48bd2cb11bb5632b99a9100dbd
     sha256:
     - fa8de430fb491d898ee4e557977f036f2aae5f019c3b0552c9e0223da748fc27
-  object_8908:
+  object_758:
     md5:
     - ac1a85d3ca1b6265cad4ed41b696f9b7
     sha1:
@@ -62,11 +62,11 @@ detection:
     - 32d8c36c829be1cdbed56201a0e663227fe74d479f1732a7974fb50fdf09c02e
   attributes:
     md5:
-    - f391556d9f89499fa8ee757cb3472710
-    - ac1a85d3ca1b6265cad4ed41b696f9b7
-    - f1df1a795eb784f7bfc3ba9a7e3b00ac
-    - f3c6e16f0dd2b0e55a7dad365c3877d4
-    - e78e3b0171b189074d2539c7baaa0719
-    - cf45ec807321d12f8df35fa434591460
     - 6eaa1ff5f33df3169c209f98cc5012d0
+    - f391556d9f89499fa8ee757cb3472710
+    - f3c6e16f0dd2b0e55a7dad365c3877d4
+    - cf45ec807321d12f8df35fa434591460
+    - e78e3b0171b189074d2539c7baaa0719
+    - f1df1a795eb784f7bfc3ba9a7e3b00ac
+    - ac1a85d3ca1b6265cad4ed41b696f9b7
   condition: 1 of object_* or attributes

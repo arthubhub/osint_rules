@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-09-27 : Affid=3, offline, ".ykcol" : "Scanned image from
   MX-2600N" - "20170927_123456.7z" - url_request'
-id: 345313b3-ace2-4720-ae19-db3550c234a2
+id: 66c7fdf9-489f-431f-b367-770a466adc7a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,24 +10,24 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.locky
 - attack.group.locky
+- attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
     - http://www.fasching-hallbergmoos.de
-    - http://asecontrids.com
-    - http://bosphorustekneleri.com
-    - http://avsaroglubisiklet.com
-    - http://ashtontan.com
     - http://ashapeforlife.com
-    - http://borcom.de
-    - http://crna-macka.com
-    - http://poemsan.info
-    - http://dic-astra.com
-    - http://gug-gummi.com
+    - http://ashtontan.com
+    - http://avsaroglubisiklet.com
     - http://consultingfranquean.com
-    - http://aeaccting.com
-    - http://bhs-news.com
     - http://cortaestanciapolanco.com
+    - http://poemsan.info
+    - http://borcom.de
+    - http://dic-astra.com
+    - http://aeaccting.com
+    - http://bosphorustekneleri.com
+    - http://asecontrids.com
+    - http://bhs-news.com
+    - http://gug-gummi.com
+    - http://crna-macka.com
   condition: attributes

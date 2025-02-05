@@ -1,5 +1,5 @@
 title: 'OSINT - JSSLoader: the shellcode edition - url_request'
-id: d14b541c-454b-451e-94d6-879456767a26
+id: 27e8b8a9-6c6e-43a0-a583-669bb293bb08
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,10 +9,10 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.g0046
 - attack.group.fin7
+- attack.group.g0046
 detection:
-  object_8558:
+  object_17388:
     RequestUrl|contains:
     - https://malwarebytes.app.box.com
   condition: 1 of object_*

@@ -1,7 +1,7 @@
 title: OSINT - keepass(dot)com spreading malware acting as the official site for KeePass
   password manager. Download for .dmg and .exe files are available on the site. -
   process_creation
-id: 7a960d2e-9ee8-4459-9740-0b8b79a5c0d4
+id: 6fe00976-edb1-4849-a007-beb25b36a340
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -13,14 +13,14 @@ logsource:
 tags:
 - attack.t1372
 detection:
-  object_7920:
+  object_11774:
     md5:
     - 3590c4b2cfa63655dc14bef32659f675
     sha1:
     - 5b0825a4436e4908501667e1cfa91e9e39e82302
     sha256:
     - 4090224f97db5601e5b293f81ec6fe28f86d7e3d8f4592f6b9d0765831e2c966
-  object_7922:
+  object_11776:
     md5:
     - 0211036d4f551610892d3da2f2377b95
     sha1:
@@ -29,6 +29,6 @@ detection:
     - 41c82089de60c0a2fe9a51d0f8f919261d0e73cf1da0d61b835194c177787b4e
   attributes:
     sha256:
-    - 41c82089de60c0a2fe9a51d0f8f919261d0e73cf1da0d61b835194c177787b4e
     - 4090224f97db5601e5b293f81ec6fe28f86d7e3d8f4592f6b9d0765831e2c966
+    - 41c82089de60c0a2fe9a51d0f8f919261d0e73cf1da0d61b835194c177787b4e
   condition: 1 of object_* or attributes

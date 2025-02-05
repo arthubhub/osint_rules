@@ -1,5 +1,5 @@
 title: Brazil malspam pushes Astaroth (Guildma) malware - process_creation
-id: 88e2b0b8-adb7-4766-b692-1398c1eb589f
+id: bb137f7e-1778-4252-9e25-5558af8ca430
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,24 +9,24 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.astaroth
 - attack.group.astaroth
 - attack.software.guildma
+- attack.software.astaroth
 - attack.software.s0373
 detection:
-  object_749:
+  object_5525:
     sha256:
     - f254f9deeb61f0a53e021c6c0859ba4e745169322fe2fb91ad2875f5bf077300
-  object_750:
+  object_5526:
     sha256:
     - 5ca1e9f0e79185dde9655376b8cecc29193ad3e933c7b93dc1a6ce2a60e63bba
-  object_751:
+  object_5527:
     sha256:
     - db136e87a5835e56d39c225e00b675727dc73a788f90882ad81a1500ac0a17d6
-  object_752:
+  object_5528:
     sha256:
     - 237d1bca6e056df5bb16a1216a434634109478f882d3b1d58344c801d184f95d
-  object_753:
+  object_5529:
     sha256:
     - e31658734d3e0de1d2764636d1b8726f0f8319b0e50b87e5949ec162ae1c0050
   condition: 1 of object_*

@@ -1,5 +1,5 @@
 title: Malware Discovered in Popular NPM Package, ua-parser-js - dns_query
-id: 2b6b4768-0fc9-412b-91b7-1fbdf2aad9df
+id: f9d74eca-687f-4d2d-93f8-643cc4911e19
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1195.001
 - attack.t1195.002
+- attack.t1195.001
 detection:
-  object_4773:
+  object_672:
     QueryName|contains:
     - citationsherbe.at
     IpAddresses:
     - 95.213.165.20
-  object_4774:
+  object_673:
     IpAddresses:
     - 159.148.186.228
   attributes:

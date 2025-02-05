@@ -1,6 +1,6 @@
 title: OSINT - Who's who in the zoo. Cyberespionage operation targets android users
   in the Middle East. - dns_query
-id: c04272f8-379d-4001-a965-444b0766cb45
+id: cb5e72f2-a667-449a-a374-ab57028956e3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,33 +12,33 @@ logsource:
 tags:
 - attack.group.zoopark
 detection:
-  object_10523:
+  object_1109:
     QueryName|contains:
     - androidupdaters.com
     IpAddresses:
     - 178.162.214.146
-  object_10524:
+  object_1110:
     QueryName|contains:
     - dlgmail.com
     IpAddresses:
     - 46.4.41.195
-  object_10525:
+  object_1111:
     QueryName|contains:
     - rhubarb2.com
     IpAddresses:
     - 109.200.28.162
-  object_10526:
+  object_1112:
     QueryName|contains:
     - rhubarb3.com
     IpAddresses:
-    - 5.144.130.33
     - 46.4.74.56
+    - 5.144.130.33
   attributes:
     QueryName|contains:
-    - rhubarb3.com
-    - dlgmail.com
     - androidupdaters.com
+    - dlgmail.com
     - rhubarb2.com
+    - rhubarb3.com
     IpAddresses:
     - 5.61.27.157
     - 5.61.27.154

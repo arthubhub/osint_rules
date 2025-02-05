@@ -1,5 +1,5 @@
 title: 'OSINT - Crypt0l0cker (TorrentLocker): Old Dog, New Tricks - url_request'
-id: 1245948b-1ad2-4be1-af54-9d2c25f47e9e
+id: 58ca7e8e-10df-4a30-9984-fefc0357ab89
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,41 +9,41 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.torrentlocker
 - attack.software.torrentlocker
+- attack.group.torrentlocker
 detection:
   attributes:
     RequestUrl|contains:
-    - http://directory.submitlocally.com
-    - http://www.mmgmarketing.com
-    - http://drjacobberger.com
-    - http://fms-uchet.ru
-    - http://humannecessityfoundation.com
     - http://arkatechknowledges.com
-    - http://activmedia.net
-    - http://biotechclinical.com
-    - http://ltmp.applepice.pl
-    - http://glutenfreeworks.com
-    - http://cyjt.com
-    - http://fanrp.com
     - http://nji.fileserver4390.org
     - http://ileriteknikservis.com
-    - http://ansagoldcoast.com
-    - http://ltmp.joymes.pl
-    - http://mayaastro.com
-    - http://blog.talosintelligence.com
-    - http://staracer.com.br
-    - http://saunabau.sk
-    - http://www.girokonto.club
-    - http://partylimobusnj.com
-    - http://prorubim.com
-    - http://saudail-alpin.no
-    - http://blisunn.com
-    - http://48f4339.js2-order.pl
     - http://rubbishinteriors.com
-    - http://iuhd873.omniheart.pl
-    - http://4839.js2-order.pl
-    - http://flyanairliner.com
-    - http://gidrostroy-nn.ru
+    - http://ltmp.applepice.pl
+    - http://blog.talosintelligence.com
+    - http://prorubim.com
+    - http://directory.submitlocally.com
+    - http://saunabau.sk
+    - http://ansagoldcoast.com
     - http://quatang.thackhoi.com
+    - http://biotechclinical.com
+    - http://glutenfreeworks.com
+    - http://iuhd873.omniheart.pl
+    - http://gidrostroy-nn.ru
+    - http://drjacobberger.com
+    - http://www.girokonto.club
+    - http://blisunn.com
+    - http://mayaastro.com
+    - http://www.mmgmarketing.com
+    - http://cyjt.com
+    - http://humannecessityfoundation.com
+    - http://saudail-alpin.no
+    - http://partylimobusnj.com
+    - http://4839.js2-order.pl
+    - http://fanrp.com
+    - http://ltmp.joymes.pl
+    - http://staracer.com.br
+    - http://48f4339.js2-order.pl
+    - http://activmedia.net
+    - http://flyanairliner.com
+    - http://fms-uchet.ru
   condition: attributes

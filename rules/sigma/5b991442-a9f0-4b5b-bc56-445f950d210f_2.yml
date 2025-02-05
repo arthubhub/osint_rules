@@ -1,6 +1,6 @@
 title: OSINT - Multi-exploit IoT/Linux Botnets Mirai and Gafgyt Target Apache Struts,
   SonicWall - dns_query
-id: dafa4c05-666b-4628-9794-d4aa27d4cc71
+id: 9beca029-04ca-4e7f-a992-dfdf8a80c26b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,12 +10,12 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.mirai
-- attack.software.gafgyt
 - attack.t1190
+- attack.software.gafgyt
+- attack.software.mirai
 detection:
   attributes:
     IpAddresses:
-    - 185.10.68.127
     - 185.10.68.213
+    - 185.10.68.127
   condition: attributes

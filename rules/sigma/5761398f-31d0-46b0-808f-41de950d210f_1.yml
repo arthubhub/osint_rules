@@ -1,6 +1,6 @@
 title: OSINT Microsoft Office Zero-Day CVE-2015-2424 Leveraged By Tsar Team report
   by iSight - url_request
-id: 2be6912e-db56-4546-90de-f6eb07beefde
+id: 493df230-ada6-41a4-a68d-e7b123e72bc8
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,8 +12,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.isightpartners.com
     - tabsync.net
-    - storsvc.org
     - wscapi.com
+    - storsvc.org
+    - https://www.isightpartners.com
   condition: attributes

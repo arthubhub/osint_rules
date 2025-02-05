@@ -1,5 +1,5 @@
 title: OSINT - Indicators of Compromise for Malware used by APT28 - url_request
-id: 6b8beeb0-8127-4a47-9031-3f0b9c63aaa8
+id: 97aabe6d-3b29-4cc5-97cf-591f7c6a02b4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,38 +10,38 @@ logsource:
   category: url_request
 tags:
 - attack.software.x-agent
-- attack.group.strontium
 - attack.group.sofacy
+- attack.group.strontium
 - attack.software.x-tunnel
 detection:
   attributes:
     RequestUrl|contains:
-    - narrowpass.net
-    - iboxmit.com
-    - topcinemaclub.com
-    - pointtk.com
-    - moderntips.org
-    - genericnetworkaddress.com
+    - truefashionnews.com
+    - worldimagebucket.com
     - loungecinemaclub.com
     - globaltechengineers.org
-    - escochart.com
-    - creekcounty.net
     - brownvelocity.org
-    - virtsvc.com
     - coindmarket.com
-    - beststreammusic.com
-    - protonhardstorage.com
-    - bbcweather.org
-    - politicweekend.com
-    - thepiratecinemaclub.org
-    - worldimagebucket.com
-    - bulgariatripholidays.com
-    - powernoderesources.com
-    - truefashionnews.com
-    - daysheduler.org
-    - moldtravelgroup.com
-    - https://www.ncsc.gov.uk
-    - malaytravelgroup.com
+    - narrowpass.net
     - georgia-travel.org
+    - protonhardstorage.com
+    - powernoderesources.com
+    - politicweekend.com
+    - moderntips.org
+    - beststreammusic.com
+    - iboxmit.com
+    - malaytravelgroup.com
+    - moldtravelgroup.com
+    - genericnetworkaddress.com
+    - daysheduler.org
+    - escochart.com
+    - bulgariatripholidays.com
     - fundseats.com
+    - pointtk.com
+    - bbcweather.org
+    - topcinemaclub.com
+    - thepiratecinemaclub.org
+    - virtsvc.com
+    - https://www.ncsc.gov.uk
+    - creekcounty.net
   condition: attributes

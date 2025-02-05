@@ -1,5 +1,5 @@
 title: 'UEFI threats moving to the ESP: Introducing ESPecter bootkit - dns_query'
-id: cf73105f-904c-4447-bd3c-6e7fee1babc8
+id: 2e278e1f-8727-4927-b4a4-b9578a816b5c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,54 +9,54 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1564.001
-- attack.t1012
-- attack.t1025
-- attack.t1041
-- attack.t1140
-- attack.t1106
-- attack.t1497.003
-- attack.t1406
-- attack.t1547
-- attack.t1029
-- attack.t1573.001
-- attack.t1010
-- attack.t1027.002
-- attack.t1071.001
-- attack.t1513
-- attack.t1036.003
-- attack.t1095
-- attack.t1074.001
-- attack.t1562
-- attack.t1112
 - attack.t1564.005
-- attack.t1124
-- attack.t1119
-- attack.t1553.006
-- attack.t1083
-- attack.t1601.001
-- attack.t1417
-- attack.t1105
-- attack.t1056
-- attack.t1113
-- attack.t1420
-- attack.t1056.001
-- attack.t1542
-- attack.t1104
-- attack.t1542.003
-- attack.software.especter_bootkit
-- attack.t1426
-- attack.t1055.001
-- attack.t1424
 - attack.t1020
+- attack.t1426
+- attack.t1417
+- attack.t1083
+- attack.t1055.001
+- attack.t1105
 - attack.t1120
+- attack.t1573.001
+- attack.t1547
+- attack.t1025
+- attack.t1406
+- attack.t1113
+- attack.t1027.002
+- attack.t1497.003
+- attack.t1056.001
+- attack.t1029
+- attack.t1036.003
+- attack.t1071.001
+- attack.t1112
+- attack.t1104
+- attack.t1106
+- attack.t1056
+- attack.t1542
+- attack.t1124
+- attack.t1564.001
+- attack.t1010
+- attack.t1601.001
+- attack.t1140
+- attack.t1513
+- attack.t1041
+- attack.t1553.006
+- attack.t1119
+- attack.t1562
+- attack.t1012
+- attack.t1424
+- attack.software.especter_bootkit
+- attack.t1420
+- attack.t1074.001
+- attack.t1095
+- attack.t1542.003
 detection:
   attributes:
     QueryName|contains:
     - crystalnba.com
     IpAddresses:
+    - 196.1.2.111
     - 61.178.79.69
     - 183.90.187.65
-    - 196.1.2.111
     - 103.212.69.175
   condition: attributes

@@ -1,5 +1,5 @@
 title: OSINT - DarkHydrus is launching attacks to targets in Middle East - url_request
-id: baa28b1f-52a8-4c35-bccb-e616c0cf5d84
+id: 97ae722f-cfc2-4093-969b-33b47685513b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,33 +11,33 @@ logsource:
 tags:
 - attack.group.darkhydrus
 detection:
-  object_11306:
+  object_12315:
     RequestUrl|contains:
     - https://mobile.twitter.com
   attributes:
     RequestUrl|contains:
-    - akamaiedge.services
-    - akdns.live
-    - azureedge.today
-    - skydrive.agency
-    - phicdn.world
-    - microsoftonline.agency
-    - 0nedrive.agency
-    - sharepoint.agency
-    - akamaized.live
-    - akadns.live
     - corewindows.agency
-    - microsoftonline.services
-    - hotmai1.com
-    - skydrive.services
-    - t-msedge.world
-    - akamai.agency
-    - akamaiedge.live
-    - onedrive.agency
-    - trafficmanager.live
-    - nsatc.agency
     - cloudfronts.services
-    - 0ffice365.services
-    - 0ffice365.life
+    - akamaiedge.live
+    - sharepoint.agency
+    - nsatc.agency
+    - onedrive.agency
+    - hotmai1.com
+    - trafficmanager.live
+    - akamaiedge.services
+    - skydrive.services
+    - microsoftonline.agency
+    - akadns.live
+    - akamai.agency
+    - phicdn.world
+    - t-msedge.world
+    - akdns.live
+    - 0nedrive.agency
+    - microsoftonline.services
     - edgekey.live
+    - skydrive.agency
+    - 0ffice365.services
+    - akamaized.live
+    - 0ffice365.life
+    - azureedge.today
   condition: 1 of object_* or attributes

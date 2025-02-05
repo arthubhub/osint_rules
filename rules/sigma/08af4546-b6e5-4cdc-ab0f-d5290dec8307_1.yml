@@ -1,6 +1,6 @@
 title: 'AA23-250A: Multiple Nation-State Threat Actors Exploit CVE-2022-47966 and
   CVE-2022-42475 - url_request'
-id: 254d687a-70d4-4dad-b091-bc5cb8c52787
+id: 69e4d0ad-8637-45ec-a17a-f2f87bc437d7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - main.cloudfronts.net
     - xpack.disqus.com
     - cloudfronts.net
-    - main.cloudfronts.net
   condition: attributes

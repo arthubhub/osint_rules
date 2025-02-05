@@ -1,5 +1,5 @@
 title: Warzone RAT - process_creation
-id: 34faad40-09f3-4594-8ab5-6d2ad6dfbc31
+id: f8ba1346-36cb-4064-a9c4-177b6f66cc1f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,21 +9,21 @@ logsource:
   product: windows
   category: process_creation
 detection:
-  object_4681:
+  object_12022:
     md5:
     - 16ba8719479baaaf2649690a13eb1e8e
     sha1:
     - 92caa2eb703d011755ead3ab9073b319a077d1a7
     sha256:
     - 263433966d28f1e6e5f6ae389ca3694495dd8fcc08758ea113dddc45fe6b3741
-  object_4683:
+  object_12024:
     md5:
     - 08e869b11b70f084263bf01e730b1650
     sha1:
     - bbf009d679c218d9856cb9c0b14f38b43f5b75c0
     sha256:
     - a03764da06bbf52678d65500fa266609d45b972709b3213a8f83f52347524cf2
-  object_4685:
+  object_12026:
     md5:
     - d93bc04fd77f7762aaadffc707c5d3ae
     sha1:
@@ -32,7 +32,7 @@ detection:
     - 531d967b9204291e70e3aab161a5b7f1001339311ece4f2eed8e52e91559c755
   attributes:
     sha256:
+    - 263433966d28f1e6e5f6ae389ca3694495dd8fcc08758ea113dddc45fe6b3741
     - 531d967b9204291e70e3aab161a5b7f1001339311ece4f2eed8e52e91559c755
     - a03764da06bbf52678d65500fa266609d45b972709b3213a8f83f52347524cf2
-    - 263433966d28f1e6e5f6ae389ca3694495dd8fcc08758ea113dddc45fe6b3741
   condition: 1 of object_* or attributes

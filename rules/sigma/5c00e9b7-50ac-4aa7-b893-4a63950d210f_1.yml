@@ -1,5 +1,5 @@
 title: OSINT - Hancitor active again yith new macro - IoCs - url_request
-id: 2db50464-645c-49bd-bee1-0a88191b6d76
+id: 6d513a8d-a70b-4b35-8c61-d286fcd317d6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,39 +9,39 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.hancitor
 - attack.group.hancitor
+- attack.software.hancitor
 detection:
-  object_11103:
+  object_4245:
     RequestUrl|contains:
     - https://mobile.twitter.com
   attributes:
     RequestUrl|contains:
-    - honeyhillfarmspop.com
-    - http://arsmarri.ru
-    - g-cals.com
-    - http://bdhsxj.com
-    - http://geeventsehin.com
-    - https://ghostbin.com
-    - satsumasgeorgia.com
-    - joincryptofundraiser.com
-    - satsumasschoolfundraiser.com
-    - satsumassales.com
-    - joincrytofundraisernow.net
-    - localloop-wi.com
-    - http://bigheartstorage.com
-    - localloopwi.org
-    - minaskaowners.com
-    - http://fidosofwass.ru
-    - wilocalloop.com
-    - appersonpropertiesinc.com
-    - joincrytofundraisernow.org
-    - localloop-wi.org
-    - http://tonshekinar.ru
     - http://oriton.ru
-    - http://letortedierica.it
-    - mybabyguam.com
+    - satsumasgeorgia.com
+    - http://arsmarri.ru
     - joincrytofundraisernow.us
-    - kenapperson.net
+    - honeyhillfarmspop.com
+    - appersonpropertiesinc.com
+    - localloop-wi.com
+    - mybabyguam.com
+    - satsumassales.com
     - mogamecalls.com
+    - http://geeventsehin.com
+    - joincrytofundraisernow.net
+    - joincryptofundraiser.com
+    - http://tonshekinar.ru
+    - http://fidosofwass.ru
+    - kenapperson.net
+    - minaskaowners.com
+    - g-cals.com
+    - joincrytofundraisernow.org
+    - http://bigheartstorage.com
+    - localloop-wi.org
+    - satsumasschoolfundraiser.com
+    - http://bdhsxj.com
+    - https://ghostbin.com
+    - http://letortedierica.it
+    - localloopwi.org
+    - wilocalloop.com
   condition: 1 of object_* or attributes

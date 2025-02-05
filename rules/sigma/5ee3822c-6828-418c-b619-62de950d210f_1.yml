@@ -1,5 +1,5 @@
 title: Dharma Ransomware Event - url_request
-id: 7f2a825e-1a4d-4c5f-bce4-b00c4f1495c0
+id: 1ccecd03-fece-40e5-84e1-2ee7dd41db68
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
@@ -10,16 +10,16 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1083
-- attack.software.dharma_ransomware
-- attack.software.dharma
-- attack.t1486
-- attack.group.dharma
-- attack.t1064
 - attack.group.dharma_ransomware
 - attack.t1133
-- attack.t1135
 - attack.t1078
+- attack.t1064
+- attack.t1083
+- attack.t1135
+- attack.t1486
+- attack.software.dharma
+- attack.software.dharma_ransomware
+- attack.group.dharma
 detection:
   attributes:
     RequestUrl|contains:

@@ -1,6 +1,6 @@
 title: OSINT - The ZAYKA and NOOB CryptoMix Ransomware Variants Released in Quick
   Succession - process_creation
-id: 7b0bdd7f-2c5a-4ce5-bba6-887c38320eba
+id: 5ab09e59-1139-4559-bf3b-75ab8e1061fb
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,8 +10,8 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.cryptomix
 - attack.software.cryptomix
+- attack.group.cryptomix
 detection:
   attributes:
     md5:
@@ -21,6 +21,6 @@ detection:
     - f71297632052974c83b95412dcb07090089b890d
     - 53371fd7a36fcf23d615143ba82045a417850c08
     sha256:
-    - ceaee070d84bb182593787002442520acbbac7a0e5ec6cecde40370d5d744023
     - aaf7bdb7445d7d58e597240630b23bd7f3f2c6551de61029e932eaa09e27a685
+    - ceaee070d84bb182593787002442520acbbac7a0e5ec6cecde40370d5d744023
   condition: attributes

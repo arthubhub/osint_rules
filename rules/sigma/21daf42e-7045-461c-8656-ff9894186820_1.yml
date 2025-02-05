@@ -1,6 +1,6 @@
 title: OSINT -  Protecting customers from a private-sector offensive actor using 0-day
   exploits and DevilsTongue malware - url_request
-id: d0500156-3e1f-4f47-8a08-b25868eac923
+id: b7d248dd-ef71-4c06-8700-17fb1d607917
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,26 +10,26 @@ logsource:
   product: windows
   category: url_request
 detection:
-  object_18127:
+  object_4649:
     RequestUrl|contains:
     - https://www.microsoft.com
   attributes:
     RequestUrl|contains:
-    - johnshopkin.net
     - online-affiliate-mon.com
-    - codeingasmylife.com
-    - fbcdnads.live
+    - kenoratravels.com
+    - backxercise.com
     - library-update.com
     - online-source-validate.com
-    - pochtarossiy.info
+    - service-deamon.com
     - winmslaf.xyz
-    - colorpallatess.com
-    - kenoratravels.com
+    - fbcdnads.live
     - weathercheck.digital
+    - johnshopkin.net
+    - grayhornet.com
+    - pochtarossiy.info
+    - colorpallatess.com
+    - eulenformacion.com
     - noc-service-streamer.com
     - hilocake.info
-    - eulenformacion.com
-    - backxercise.com
-    - grayhornet.com
-    - service-deamon.com
+    - codeingasmylife.com
   condition: 1 of object_* or attributes

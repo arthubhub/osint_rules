@@ -1,5 +1,5 @@
 title: Nanocore 20210816 - url_request
-id: bfab9109-6c09-47c8-af12-7f8bdf50c64d
+id: 1d5ee395-0ceb-4439-ab55-981ed925f923
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,11 +9,11 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.nanocore_rat
 - attack.software.nanocorerat
+- attack.software.nanocore_rat
 - attack.group.nanocore_rat
 detection:
-  object_18406:
+  object_17117:
     RequestUrl|contains:
     - https://otx.alienvault.com
   condition: 1 of object_*

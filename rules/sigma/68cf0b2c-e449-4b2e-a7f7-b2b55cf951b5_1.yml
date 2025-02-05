@@ -1,5 +1,5 @@
 title: SNOWYAMBER - Malware Analysis Report - url_request
-id: a188d744-38e9-42cc-931d-a575895e3f47
+id: 69ffb44a-c275-4c18-b285-e4c23ba0c146
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,27 +9,27 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.snowyamber
-- attack.t1140
-- attack.t1566.001
-- attack.t1204.001
-- attack.t1204.002
-- attack.t1574.002
-- attack.t1574.001
-- attack.t1583.003
-- attack.t1204
-- attack.t1027.006
 - attack.t1584
-- attack.t1102.003
-- attack.t1566
+- attack.t1204.001
+- attack.software.snowyamber
+- attack.t1574.002
+- attack.t1553.005
 - attack.t1547.001
 - attack.t1583.006
-- attack.t1036.002
-- attack.t1566.002
-- attack.t1553.005
+- attack.t1204
+- attack.t1102.003
+- attack.t1574.001
+- attack.t1204.002
+- attack.t1566.001
 - attack.t1102
+- attack.t1583.003
+- attack.t1566
+- attack.t1027.006
+- attack.t1140
+- attack.t1566.002
+- attack.t1036.002
 detection:
-  object_8312:
+  object_853:
     RequestUrl|contains:
     - https://www.gov.pl
   attributes:

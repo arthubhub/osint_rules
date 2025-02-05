@@ -1,5 +1,5 @@
 title: Lazarus infrastructure (pivot via Censys) - url_request
-id: 7473f2bf-c422-4250-839a-1f83e5a22a5e
+id: 4261103d-1963-4857-98a0-85cf1c06efe9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,68 +11,68 @@ logsource:
 tags:
 - attack.group.lazarus_group
 detection:
-  object_17922:
+  object_1318:
     RequestUrl|contains:
     - https://twitter.com
-  object_17925:
+  object_1321:
     RequestUrl|contains:
     - https://147.124.214.129
-  object_17927:
+  object_1323:
     RequestUrl|contains:
     - http://147.124.214.129
-  object_17929:
+  object_1325:
     RequestUrl|contains:
     - http://147.124.214.129
-  object_17932:
+  object_1328:
     RequestUrl|contains:
     - http://147.124.214.237
-  object_17934:
+  object_1330:
     RequestUrl|contains:
     - http://147.124.214.237
-  object_17936:
+  object_1332:
     RequestUrl|contains:
     - http://147.124.214.237
-  object_17938:
+  object_1334:
     RequestUrl|contains:
     - http://147.124.214.237
-  object_17940:
+  object_1336:
     RequestUrl|contains:
     - https://147.124.214.237
-  object_17943:
+  object_1339:
     RequestUrl|contains:
     - https://147.124.212.89
-  object_17945:
+  object_1341:
     RequestUrl|contains:
     - http://147.124.212.89
-  object_17947:
+  object_1343:
     RequestUrl|contains:
     - http://147.124.212.89
-  object_17949:
+  object_1345:
     RequestUrl|contains:
     - http://147.124.212.89
-  object_17951:
+  object_1347:
     RequestUrl|contains:
     - http://147.124.212.89
-  object_17952:
+  object_1348:
     RequestUrl|contains:
-    - tracksmobiles.com
     - www.tracksmobiles.com
-  object_17955:
+    - tracksmobiles.com
+  object_1351:
     RequestUrl|contains:
     - https://67.203.7.171
-  object_17957:
+  object_1353:
     RequestUrl|contains:
     - http://67.203.7.171
-  object_17959:
+  object_1355:
     RequestUrl|contains:
     - http://67.203.7.171
-  object_17961:
+  object_1357:
     RequestUrl|contains:
     - http://67.203.7.171
-  object_17964:
+  object_1360:
     RequestUrl|contains:
     - https://67.203.7.245
-  object_17966:
+  object_1362:
     RequestUrl|contains:
     - http://67.203.7.245
   condition: 1 of object_*

@@ -1,6 +1,6 @@
 title: OSINT New Sofacy Attacks Against US Government Agency by Palo Alto Unit 42
   - url_request
-id: 9e03cef8-7970-4b44-922c-2b5308aa2593
+id: 026af183-e047-4ebb-b966-3cb6f4c8d6ef
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,10 +12,10 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://researchcenter.paloaltonetworks.com
     - munimonoce.com
-    - servicecdp.com
-    - tabsync.net
     - storsvc.org
+    - http://researchcenter.paloaltonetworks.com
+    - tabsync.net
+    - servicecdp.com
     - wscapi.com
   condition: attributes

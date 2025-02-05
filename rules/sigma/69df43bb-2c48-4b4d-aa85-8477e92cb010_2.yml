@@ -1,5 +1,5 @@
 title: I-Soon / Anxun data leak in Github - dns_query
-id: 6f9f3f7f-2860-4df3-a38e-4cd3ae3d26e5
+id: 17427b7a-8ca2-40d0-a2cb-4fe27afc8ee4
 description: edit this field when analysing or editing the rule - reported by "THA-CERT"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,20 +9,20 @@ logsource:
   product: windows
   category: dns_query
 detection:
-  object_17903:
+  object_6781:
     QueryName|contains:
     - mailnotes.online
     IpAddresses:
     - 74.120.172.10
   attributes:
     IpAddresses:
-    - 118.31.3.116
-    - 66.98.127.105
-    - 171.88.143.37
     - 1.192.194.162
-    - 221.13.74.218
+    - 66.98.127.105
     - 171.88.142.148
+    - 171.88.143.37
+    - 118.31.3.116
+    - 171.88.143.72
     - 8.218.67.52
     - 101.219.17.111
-    - 171.88.143.72
+    - 221.13.74.218
   condition: 1 of object_* or attributes

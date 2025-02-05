@@ -1,5 +1,5 @@
 title: Targeted phishing - PDF documents / phishkit - url_request
-id: fb1584d2-6e97-4ef1-bd80-566b48b843cc
+id: fcee0d58-b365-4a88-9290-635e0e6799ae
 description: edit this field when analysing or editing the rule - reported by "EUROLEA"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1192
 - attack.t1193
+- attack.t1192
 detection:
   attributes:
     RequestUrl|contains:
-    - http://office.online-drive.ml
-    - https://arbutusroutes.com
     - https://drpianotellsall.com
-    - https://helpersserer.com
-    - https://www.arbutusroutes.com
+    - https://arbutusroutes.com
     - https://lulufabllc.com
+    - http://office.online-drive.ml
+    - https://www.arbutusroutes.com
+    - https://helpersserer.com
   condition: attributes

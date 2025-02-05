@@ -1,5 +1,5 @@
 title: OSINT Trojanized PuTTY Software by Cisco CSIRT - dns_query
-id: ff0af639-645d-4706-8624-852279777b3a
+id: b46c735f-39fa-407a-880f-a23e3a1ff5fc
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,11 +11,11 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - go-upload.ru
     - ngusto-uro.ru
+    - go-upload.ru
     - aliserv2013.ru
     IpAddresses:
+    - 146.185.239.3
     - 193.227.240.131
     - 144.76.120.243
-    - 146.185.239.3
   condition: attributes

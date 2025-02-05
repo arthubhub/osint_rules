@@ -1,5 +1,5 @@
 title: 'OSINT Morpho: Profiting from high-level corporate attacks by Symantec - dns_query'
-id: 6fe3e0b6-2916-43b7-8849-71eaf680728c
+id: 5a738f1c-34da-44ce-a5fa-08ed9d9d6404
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -15,12 +15,12 @@ detection:
     QueryName|contains:
     - cloudprotect.eu
     - corp-aapl.com
-    - digitalinsight-ltd.com
-    - jdk-update.com
     - clust12-akmai.net
+    - jdk-update.com
+    - digitalinsight-ltd.com
     IpAddresses:
-    - 46.183.217.132
-    - 46.165.237.75
-    - 217.23.3.112
     - 178.162.197.9
+    - 46.165.237.75
+    - 46.183.217.132
+    - 217.23.3.112
   condition: attributes

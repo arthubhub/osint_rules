@@ -1,5 +1,5 @@
 title: OSINT - Cisco Job Posting Targets Korean Candidates - process_creation
-id: c6bab77c-eb95-44b9-a8a6-a7635a14f598
+id: b6a7e69f-46d9-4b40-af73-b0ba043ca8fa
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,14 +9,14 @@ logsource:
   product: windows
   category: process_creation
 detection:
-  object_7229:
+  object_4805:
     md5:
     - c067345667eded99610e51042a14081a
     sha1:
     - ea9bd89535c250c7bb7d98d10971ca586a574c53
     sha256:
     - 1497ab6ddccf91ef7f2cd75ce020bb3bf39979210351deaa6e0025997ddfda5a
-  object_7231:
+  object_4807:
     md5:
     - fbd1cd15019c0dd6659a59bc93b8596f
     sha1:
@@ -25,6 +25,6 @@ detection:
     - bf27c1631ef64c1e75676375a85d48f8ae97e1ea9a5f67c2beefc02c609fc18b
   attributes:
     sha256:
-    - bf27c1631ef64c1e75676375a85d48f8ae97e1ea9a5f67c2beefc02c609fc18b
     - 1497ab6ddccf91ef7f2cd75ce020bb3bf39979210351deaa6e0025997ddfda5a
+    - bf27c1631ef64c1e75676375a85d48f8ae97e1ea9a5f67c2beefc02c609fc18b
   condition: 1 of object_* or attributes
