@@ -1,5 +1,5 @@
 title: 'OSINT - FINTEAM: Trojanized TeamViewer Against Government Targets - process_creation'
-id: 82ecc6b2-fc1d-4674-ba4d-6f2b565593c1
+id: 52853185-23e6-4b45-8ac3-f6d786ff1251
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,8 +9,8 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1193
 - attack.t1113
+- attack.t1193
 - attack.t1041
 detection:
   object_6606:
@@ -95,16 +95,16 @@ detection:
     - fa7aab5d6e62cd1d9d5c92d793cbd3f570d9d4c3c6b1744a25382e93c679f570
   attributes:
     md5:
-    - 799ab035023b655506c0d565996579b5
-    - e1167cb7f3735d4edec5f7219cea64ef
-    - 1e741ebc08af09edc69f017e170b9852
-    - 1675cdec4c0ff49993a1fcbdfad85e56
-    - c6ae889f3bee42cc19a728ba66fa3d99
-    - 72de32fa52cc2fab2b0584c26657820f
-    - 44038b936667f6ce2333af80086f877f
-    - 013e87b874477fcad54ada4fa0a274a2
     - aad0d93a570e6230f843dcdf20041e1e
-    - 4dbe9dbfb53438d9ce410535355cd973
+    - 72de32fa52cc2fab2b0584c26657820f
     - 6cc0218d2b93a243721b088f177d8e8f
+    - 4dbe9dbfb53438d9ce410535355cd973
+    - 1675cdec4c0ff49993a1fcbdfad85e56
+    - 013e87b874477fcad54ada4fa0a274a2
+    - e1167cb7f3735d4edec5f7219cea64ef
+    - 44038b936667f6ce2333af80086f877f
+    - c6ae889f3bee42cc19a728ba66fa3d99
     - 4acf624ad87609d476180ecc4c96c355
+    - 799ab035023b655506c0d565996579b5
+    - 1e741ebc08af09edc69f017e170b9852
   condition: 1 of object_* or attributes

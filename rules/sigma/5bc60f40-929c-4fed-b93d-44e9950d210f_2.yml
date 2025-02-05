@@ -1,5 +1,5 @@
 title: OSINT - 2018-10-09 - HANCITOR INFECTION WITH ZEUS PANDA BANKER - dns_query
-id: d7f12e09-0e24-4649-acbc-10abed78d9c9
+id: b1c6ec08-5834-4579-a41c-d72bd52033bd
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,34 +9,34 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1056
 - attack.t1193
-- attack.t1022
 - attack.t1041
+- attack.t1022
+- attack.t1056
 detection:
   object_3621:
     IpAddresses:
     - 46.36.220.116
   attributes:
     QueryName|contains:
-    - 275aacaa1610.net
-    - carvanamemphis.com
-    - sellittooxmoor.com
     - selltooxmoor.com
-    - sincirewdo.ru
-    - fornetodu.com
     - genesisatoxmoor.com
     - genesisofwestlouisville.com
-    - genesisofeaslouisville.com
-    - genesisofindiana.com
-    - 275aacaa1698.net
-    - carvananashville.com
-    - oxmoorusedcars.com
-    - veintitna.ru
-    - carvanadenver.com
-    - nobotanri.ru
     - genesiseastlouisville.com
-    - hehenforfi.ru
-    - lachistontfi.ru
     - hersjustretleft.ru
+    - 275aacaa1610.net
+    - carvanadenver.com
+    - veintitna.ru
+    - sincirewdo.ru
+    - sellittooxmoor.com
+    - nobotanri.ru
+    - genesisofeaslouisville.com
+    - fornetodu.com
+    - 275aacaa1698.net
+    - oxmoorusedcars.com
+    - hehenforfi.ru
+    - carvananashville.com
+    - lachistontfi.ru
+    - genesisofindiana.com
+    - carvanamemphis.com
   condition: 1 of object_* or attributes

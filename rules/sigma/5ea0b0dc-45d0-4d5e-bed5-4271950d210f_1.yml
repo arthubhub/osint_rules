@@ -1,5 +1,5 @@
 title: Ursnif Campaign f1.pipen.at - url_request
-id: 6ad22e3a-0ce6-487b-a1c4-6512029d4703
+id: c2a0317e-0408-4e47-b275-551621656b9f
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
@@ -10,35 +10,35 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1500
-- attack.t1071
-- attack.software.gozi
-- attack.t1204
-- attack.t1112
-- attack.t1043
-- attack.t1117
 - attack.group.gozi
-- attack.t1170
 - attack.t1192
+- attack.t1043
+- attack.t1112
+- attack.t1117
+- attack.t1204
+- attack.t1170
+- attack.t1500
+- attack.software.gozi
+- attack.t1071
 detection:
   attributes:
     RequestUrl|contains:
-    - www.kamalak.at
     - ahonpot.at
-    - vv.malorun.at
-    - dxdeedle.host
-    - kamalak.at
-    - free.up100n.at
-    - targoo.at
-    - mobify.at
-    - deem.dianer.at
-    - two.ahah100.at
-    - been.dianer.at
-    - https://thedfirreport.com
-    - ahah100.at
-    - dianer.at
-    - pipen.at
+    - www.kamalak.at
     - f1.pipen.at
-    - api5.malorun.at
+    - deem.dianer.at
+    - kamalak.at
+    - pipen.at
+    - mobify.at
+    - targoo.at
     - api10.dianer.at
+    - https://thedfirreport.com
+    - vv.malorun.at
+    - free.up100n.at
+    - api5.malorun.at
+    - been.dianer.at
+    - dianer.at
+    - two.ahah100.at
+    - ahah100.at
+    - dxdeedle.host
   condition: attributes

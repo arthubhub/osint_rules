@@ -1,5 +1,5 @@
 title: Malspam 2017-08-25 'Your Sage subscription invoice is ready' - dns_query
-id: e4a0c9d8-7f06-4c61-a861-dbe22bf925fa
+id: 82d1cee4-79c2-4a90-8c02-d344ab4c6efc
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,34 +9,34 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     QueryName|contains:
-    - heimatverein-menne.de
     - hecam.de
-    - hbwconsultants.nl
-    - bromesterionod.net
-    - hansstock.de
-    - haboosh-law.com
     - hartwig-mau.de
+    - bromesterionod.net
     - go-coo.jp
-    - gumart.com
-    - hausgerhard.com
-    - hausgadum.de
     - haleshomesales.com
+    - gumart.com
+    - heimatverein-menne.de
+    - haboosh-law.com
+    - hausgerhard.com
+    - hansstock.de
+    - hausgadum.de
+    - hbwconsultants.nl
     IpAddresses:
-    - 47.89.246.2
-    - 138.201.230.90
     - 85.25.124.78
-    - 203.183.65.225
-    - 81.169.168.153
-    - 62.75.191.150
-    - 204.197.248.45
     - 92.51.164.62
-    - 80.244.168.26
-    - 173.192.66.137
+    - 81.169.168.153
+    - 47.89.246.2
     - 83.169.22.79
     - 109.237.218.40
+    - 204.197.248.45
+    - 62.75.191.150
+    - 138.201.230.90
+    - 173.192.66.137
+    - 203.183.65.225
+    - 80.244.168.26
   condition: attributes

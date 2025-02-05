@@ -1,5 +1,5 @@
 title: OSINT - CARBANAK Week - Fire Eye - dns_query
-id: fbb9242a-b2a2-44f7-85c9-9640d5d34464
+id: 418880fc-4f1d-4f68-b481-12a9222810ed
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.fin7
-- attack.software.s0030
-- attack.group.anunak
-- attack.group.g0008
-- attack.group.g0046
 - attack.software.carbanak
+- attack.group.g0046
 - attack.group.carbanak
+- attack.group.fin7
+- attack.group.anunak
+- attack.software.s0030
+- attack.group.g0008
 detection:
   object_6299:
     IpAddresses:
@@ -58,12 +58,12 @@ detection:
     - 193.203.48.23
   attributes:
     QueryName|contains:
-    - hhklhlkhkjhjkjk.org
-    - aaaabbbbccccc.org
-    - akamai-technologies.org
-    - comixed.org
     - stats10-google.com
     - qwqreererwere.com
+    - aaaabbbbccccc.org
+    - hhklhlkhkjhjkjk.org
+    - akamai-technologies.org
+    - comixed.org
     IpAddresses:
     - 194.146.180.40
     - 107.181.155.151

@@ -1,5 +1,5 @@
 title: OSINT - Uber Breach & Attack Analysis - url_request
-id: 5a97f46d-ff66-4dd0-99e8-ccf07a8db4fc
+id: 3e437fcd-e968-4f5a-b47e-723c7a06bda8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,20 +9,20 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1586
-- attack.t1133
-- attack.t1078
-- attack.t1048
 - attack.t1078.002
-- attack.t1135
-- attack.t1589.001
-- attack.t1194
 - attack.t1081
-- attack.t1566.003
-- attack.t1552.001
 - attack.t1087.002
 - attack.t1136.002
+- attack.t1135
+- attack.t1078
 - attack.t1621
+- attack.t1566.003
+- attack.t1048
+- attack.t1589.001
+- attack.t1133
+- attack.t1586
+- attack.t1194
+- attack.t1552.001
 detection:
   object_7014:
     RequestUrl|contains:

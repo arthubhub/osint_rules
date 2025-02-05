@@ -1,5 +1,5 @@
 title: Malspam 2016-07-13 .wsf campaign - dns_query
-id: e81806ba-b1c8-4853-bd1f-7db96073e0be
+id: fc25cd33-67f7-44b2-a7f6-b039755a81f2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,14 +11,14 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - williamsbreak.com
+    - lifecare-hc.com
     - pernelkul.hu
     - ampexholdings.com
-    - lifecare-hc.com
-    - williamsbreak.com
     IpAddresses:
+    - 194.38.104.131
+    - 107.180.50.238
     - 169.55.8.36
     - 104.156.51.130
-    - 107.180.50.238
-    - 194.38.104.131
     - 203.170.86.41
   condition: attributes

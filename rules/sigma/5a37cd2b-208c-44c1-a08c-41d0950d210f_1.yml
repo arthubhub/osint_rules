@@ -1,6 +1,6 @@
 title: OSINT - Malspam pushing Locky ransomware tries HoeflerText notifications for
   Chrome and FireFox - url_request
-id: 0e153a76-c77b-44d3-b13e-1e34c0c98f5d
+id: 1fd2a8e7-d5ab-4aee-b95c-313074b586e4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,35 +10,35 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://albion-cx22.co.uk
-    - http://bayimpex.be
-    - http://autoecoleathena.com
-    - http://avtokhim.ru
-    - http://willemshoeck.nl
-    - http://autoecoleboisdesroches.com
-    - http://dippydado.net
-    - http://autoecoledufrene.com
-    - http://ambrogiauto.com
-    - http://charleskeener.com
     - http://dar-alataa.com
-    - http://gestionale-orbit.it
-    - http://46.183.165.45
-    - http://jaysonmorrison.com
-    - http://gclubrace.info
     - http://campusvoltaire.com
-    - http://geocean.co.id
+    - http://albion-cx22.co.uk
+    - http://dippydado.net
+    - http://charleskeener.com
     - http://potamitis.gr
     - http://griffithphoto.com
+    - http://46.183.165.45
+    - http://geocean.co.id
     - http://tasgetiren.com
-    - https://isc.sans.edu
-    - http://jakuboweb.com
-    - http://flooringforyou.co.uk
-    - http://binarycousins.com
-    - http://patrickreeves.com
+    - http://avtokhim.ru
     - http://arthurdenniswilliams.com
+    - http://gclubrace.info
+    - http://willemshoeck.nl
+    - http://patrickreeves.com
+    - http://jakuboweb.com
+    - http://autoecoleathena.com
+    - http://autoecoledufrene.com
+    - http://autoecoleboisdesroches.com
+    - http://ambrogiauto.com
+    - http://jaysonmorrison.com
+    - http://bayimpex.be
+    - http://gestionale-orbit.it
+    - http://flooringforyou.co.uk
+    - https://isc.sans.edu
+    - http://binarycousins.com
   condition: attributes

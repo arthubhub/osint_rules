@@ -1,6 +1,6 @@
 title: 'OSINT - Analyzing Operation GhostSecret: Attack Seeks to Steal Data Worldwide
   - process_creation'
-id: 1a6f4e26-249d-46d5-b821-6e1e811615ca
+id: e0f7dc8e-2ac4-440c-9022-9012e26d2eea
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,13 +11,13 @@ logsource:
   category: process_creation
 tags:
 - attack.t1124
-- attack.t1005
-- attack.t1043
 - attack.t1041
-- attack.t1035
-- attack.t1119
 - attack.t1107
+- attack.t1119
+- attack.t1043
 - attack.t1057
+- attack.t1005
+- attack.t1035
 detection:
   object_12006:
     md5:
@@ -43,7 +43,7 @@ detection:
   attributes:
     sha1:
     - 8f2918c721511536d8c72144eabaf685ddc21a35
-    - d0cb9b2d4809575e1bc1f4657e0eb56f307c7a76
     - 33ffbc8d6850794fa3b7bccb7b1aa1289e6eaa45
+    - d0cb9b2d4809575e1bc1f4657e0eb56f307c7a76
     - fe887fcab66d7d7f79f05e0266c0649f0114ba7c
   condition: 1 of object_* or attributes

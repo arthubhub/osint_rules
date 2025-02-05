@@ -1,5 +1,5 @@
 title: Trickbot to Pyxie - dns_query
-id: 816547bc-d66b-4931-bf5d-fb7d81598e49
+id: 2f8d8348-97cb-45bc-b707-6de882bcf078
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
@@ -12,12 +12,12 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - benreat.com
-    - teamchuan.com
     - tedxns.com
+    - teamchuan.com
+    - benreat.com
     IpAddresses:
-    - 185.206.144.40
-    - 216.189.145.132
     - 162.248.245.71
     - 192.169.6.180
+    - 185.206.144.40
+    - 216.189.145.132
   condition: attributes

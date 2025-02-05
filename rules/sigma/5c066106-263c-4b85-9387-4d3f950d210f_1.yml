@@ -1,5 +1,5 @@
 title: MAR-10166283.r1.v1 (SamSam ransomware) - url_request
-id: a180affb-18a3-4556-a237-c69f8c5974a9
+id: b2938ae0-6eea-4e8d-b894-f6521444b1a2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.samsam
-- attack.software.samas-samsam
 - attack.group.samas-samsam
 - attack.group.samsam
+- attack.software.samas-samsam
+- attack.software.samsam
 detection:
   attributes:
     RequestUrl|contains:
-    - http://jcmi5n4c3mvgtyt5.onion
     - jcmi5n4c3mvgtyt5.onion
+    - http://jcmi5n4c3mvgtyt5.onion
   condition: attributes

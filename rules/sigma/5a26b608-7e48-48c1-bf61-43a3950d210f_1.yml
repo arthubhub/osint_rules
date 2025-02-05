@@ -1,5 +1,5 @@
 title: 'M2M - "..doc" 2017-11-30 : "FL-123456 11.30.2017.7z" - url_request'
-id: 946cc292-7b65-4773-8f6d-a0733e263285
+id: 823aefb4-168e-4922-b1b4-7420b664e559
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,19 +9,19 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.fake_globe_ransomware
 - attack.software.fake_globe_ransomware
+- attack.group.fake_globe_ransomware
 detection:
   attributes:
     RequestUrl|contains:
-    - http://datenhaus.info
-    - http://alucmuhendislik.com
-    - http://accessyouraudience.com
-    - http://mh-service.ru
+    - http://hexacam.com
     - https://n224ezvhg4sgyamb.onion.link
     - http://awholeblueworld.com
-    - http://yamanashi-jyujin.jp
+    - http://alucmuhendislik.com
+    - http://mh-service.ru
     - http://bit-chasers.com
+    - http://datenhaus.info
     - http://summi.space
-    - http://hexacam.com
+    - http://accessyouraudience.com
+    - http://yamanashi-jyujin.jp
   condition: attributes

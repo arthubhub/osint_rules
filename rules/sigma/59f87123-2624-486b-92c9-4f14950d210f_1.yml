@@ -1,6 +1,6 @@
 title: 'M2M -  Locky Affid=3, ".asasin"/Trickbot "mac1" 2017-10-31 : "Invoice INV0000123"
   - "INV0000123.doc" - url_request'
-id: 821a4902-b4f8-4f59-afdb-94b4e67aae76
+id: 3aaeee75-1c60-47c1-bce5-76b0ab816337
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,22 +11,22 @@ logsource:
   category: url_request
 tags:
 - attack.software.trick_bot
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://fetchstats.net
+    - http://projex-dz.com
+    - http://celebrityonline.cz
+    - http://sigmanet.gr
+    - http://cornertape.net
+    - http://bwos.be
+    - http://claridge-holdings.com
     - http://kengray.com
     - http://zahntechnik-imlau.de
-    - http://cornertape.net
-    - http://hobbystube.net
-    - http://fetchstats.net
-    - http://sigmanet.gr
-    - http://apply.pam-innovation.com
-    - http://bwos.be
-    - http://projex-dz.com
     - http://christakranzl.at
-    - http://claridge-holdings.com
     - http://dvprojekt.hr
-    - http://celebrityonline.cz
+    - http://apply.pam-innovation.com
+    - http://hobbystube.net
   condition: attributes

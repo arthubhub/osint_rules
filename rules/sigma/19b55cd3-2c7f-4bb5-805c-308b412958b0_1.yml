@@ -1,5 +1,5 @@
 title: Brazil malspam pushes Astaroth (Guildma) malware - url_request
-id: 42ae9fae-c904-4f2d-acde-5aed11e87b0c
+id: d80057a8-9fd7-4b13-b2b1-b3f1cc0cbbd2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,10 +9,10 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.astaroth
 - attack.software.guildma
-- attack.software.astaroth
 - attack.software.s0373
+- attack.group.astaroth
+- attack.software.astaroth
 detection:
   object_5507:
     RequestUrl|contains:

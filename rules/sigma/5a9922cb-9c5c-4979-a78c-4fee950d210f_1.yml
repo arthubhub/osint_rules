@@ -1,6 +1,6 @@
 title: SMS/iMessage phishes forcing users to install/run scripts and update VPN settings
   - url_request
-id: 67b5877e-6149-43c9-a872-6500ce5ac103
+id: 2be4af73-a5a0-40e4-8101-e037f71c393e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,9 +12,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://twitter.com
     - sso-vpn.com
+    - up-vpn.com
+    - https://twitter.com
     - up-sso.com
     - corp-vpn.com
-    - up-vpn.com
   condition: attributes

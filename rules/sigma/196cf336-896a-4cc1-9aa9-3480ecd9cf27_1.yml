@@ -1,6 +1,6 @@
 title: BatLoader Continues to Abuse Google Search Ads to Deliver Vidar Stealer and
   Ursnif - url_request
-id: ccd9cbfa-d975-4979-8726-b283f72bf7a8
+id: 2bf758cc-ffb5-48e8-b21d-44c31fcd5278
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -11,44 +11,44 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1059.006
 - attack.software.vidar
-- attack.t1059
-- attack.t1059.001
 - attack.t1064
-- attack.group.vidar
 - attack.t1410
 - attack.software.s0386
+- attack.t1059
+- attack.t1059.001
+- attack.t1059.006
+- attack.group.vidar
 detection:
   attributes:
     RequestUrl|contains:
-    - bitwarden-t.com
-    - anydesk-r.com
-    - anydesk-o.com
-    - adobe-l.com
-    - java-s.com
-    - spotify-uss.com
-    - quickbooks-q.com
-    - zoomvideor.com
-    - jhgfdlkjhaoiu.su
-    - basecamp-a.com
-    - adobe-e.com
-    - reggy914.ru
-    - openoffice-a.com
-    - freecad-l.com
-    - gimp-t.com
-    - iujdhsndjfks.ru
     - chatgpt-t.com
-    - microso-t.com
+    - reggy914.ru
+    - adobe-e.com
     - adobe-a.com
-    - tableau-r.com
-    - visualstudio-t.com
-    - pixelarmada.su
+    - microso-t.com
+    - gimp-t.com
     - uelcoskdi.ru
-    - java-r.com
-    - isoridkf.ru
-    - gameindikdowd.ru
+    - quickbooks-q.com
+    - pixelarmada.su
+    - zoomvideor.com
+    - anydesk-o.com
+    - spotify-uss.com
     - shvarcnegerhistory.com
-    - reggy506.ru
     - java-a.com
+    - bitwarden-t.com
+    - java-r.com
+    - tableau-r.com
+    - adobe-l.com
+    - basecamp-a.com
+    - gameindikdowd.ru
+    - jhgfdlkjhaoiu.su
+    - visualstudio-t.com
+    - reggy506.ru
+    - isoridkf.ru
+    - anydesk-r.com
+    - openoffice-a.com
+    - java-s.com
+    - iujdhsndjfks.ru
+    - freecad-l.com
   condition: attributes

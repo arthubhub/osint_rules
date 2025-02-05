@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-09-21/22 : Affid=3, offline, ".ykcol" : "PIC_1234" - "PIC_1234.7z"
   - url_request'
-id: d4feb4cb-a1b2-4308-b0f9-55ce8a650fa0
+id: eca90723-22a5-4ee3-bdbe-d053ae0befac
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,24 +10,24 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://www.cagw.ca
-    - http://alicante-ave.es
-    - http://adriasolaclavijo.com
-    - http://alarmecontrol.pt
-    - http://alexandre-azaria.com
-    - http://fulcar.info
-    - http://agriturismo-1001ulivo.it
-    - http://akolade.com
-    - http://algoros.com
-    - http://akoli.gr
     - http://airparagliding.com
-    - http://alertco2.com
-    - http://ak-on.com
-    - http://albatros-projekt.info
     - http://akustik-hautnah-erleben.de
+    - http://albatros-projekt.info
+    - http://algoros.com
+    - http://alicante-ave.es
+    - http://akolade.com
+    - http://agriturismo-1001ulivo.it
+    - http://alexandre-azaria.com
+    - http://ak-on.com
+    - http://alarmecontrol.pt
+    - http://www.cagw.ca
+    - http://fulcar.info
+    - http://alertco2.com
+    - http://adriasolaclavijo.com
+    - http://akoli.gr
   condition: attributes

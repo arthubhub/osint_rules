@@ -1,6 +1,6 @@
 title: 'OSINT - North Korea Bitten by Bitcoin Bug: Financially motivated campaigns
   reveal new dimension of the Lazarus Group - url_request'
-id: efc0153f-5240-471d-87e2-d7e3dd6c5959
+id: 7f7cb2f2-20ba-4a27-b9a3-fada5471057f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,45 +10,45 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.powerspritz
-- attack.group.lazarus_group
-- attack.software.powerratankba
 - attack.software.gh0st_rat
+- attack.software.powerspritz
+- attack.software.powerratankba
 - attack.software.gh0st
+- attack.group.lazarus_group
 detection:
   attributes:
     RequestUrl|contains:
-    - xn--electrm-s2a.org
-    - xn--btcongold-54ad.com
-    - xn--bitcingold-jbb.com
-    - http://macintosh.linkpc.net
-    - https://doc-00-64-docs.googleusercontent.com
-    - xn--bitcin-zxa.org
-    - http://www.btc-gold.us
-    - xn--bitcingold-t3b.com
-    - http://www.businesshop.net
-    - http://201.211.183.215
-    - xn--bitoingold-1ib.com
-    - xn--bitcoingod-8yb.com
-    - http://dogecoin.deaftone.com
-    - xn--btcoingold-v8a.com
-    - http://apps.got-game.org
-    - http://51.255.219.82
-    - https://www.proofpoint.com
     - xn--bitcingold-hcb.org
-    - http://122.248.34.23
-    - http://skypeupdate.2.vu
-    - http://www.energydonate.com
-    - xn--btcongold-g5ad.com
-    - xn--bitcoigold-o1b.com
+    - xn--bitcoingod-8yb.com
+    - http://macintosh.linkpc.net
+    - xn--btcongold-54ad.com
+    - xn--bitcoingol-4kb.com
+    - http://skype.2.vu
+    - https://doc-00-64-docs.googleusercontent.com
+    - http://dogecoin.deaftone.com
     - http://trade.publicvm.com
-    - xn--bitcoingld-lcb.org
-    - xn--6fgp.com
-    - http://tinyurl.com
+    - xn--bitoingold-1ib.com
+    - http://www.btc-gold.us
+    - http://51.255.219.82
     - http://telegramupdate.2.vu
     - http://92.222.106.229
-    - http://skype.2.vu
+    - http://www.businesshop.net
+    - http://www.energydonate.com
+    - xn--bitcoigold-o1b.com
+    - http://122.248.34.23
     - xn--bitcoingld-lcb.com
+    - xn--bitcingold-t3b.com
+    - xn--btcoingold-v8a.com
     - xn--bitcoingldwallet-twb.org
-    - xn--bitcoingol-4kb.com
+    - http://skypeupdate.2.vu
+    - http://apps.got-game.org
+    - xn--electrm-s2a.org
+    - http://tinyurl.com
+    - http://201.211.183.215
+    - xn--6fgp.com
+    - xn--bitcin-zxa.org
+    - xn--btcongold-g5ad.com
+    - xn--bitcoingld-lcb.org
+    - https://www.proofpoint.com
+    - xn--bitcingold-jbb.com
   condition: attributes

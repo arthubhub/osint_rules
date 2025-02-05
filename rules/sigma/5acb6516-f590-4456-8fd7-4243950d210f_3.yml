@@ -1,6 +1,6 @@
 title: OSINT - New Matrix Ransomware Variants Installed Via Hacked Remote Desktop
   Services - process_creation
-id: 6c7d6a16-058d-4207-9906-97c9bd0456fe
+id: 4906b9cb-e4bf-46ec-9123-10593bc17946
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,8 +10,8 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.matrix
 - attack.group.matrix
+- attack.software.matrix
 detection:
   object_22:
     md5:
@@ -29,6 +29,6 @@ detection:
     - 996ea85f12a17e8267dcc32eae9ad20cff44115182e707153006162711fbe3c9
   attributes:
     sha256:
-    - 996ea85f12a17e8267dcc32eae9ad20cff44115182e707153006162711fbe3c9
     - a26087bb88d654cd702f945e43d7feebd98cfc50531d2cdc0afa2b0437d25eea
+    - 996ea85f12a17e8267dcc32eae9ad20cff44115182e707153006162711fbe3c9
   condition: 1 of object_* or attributes

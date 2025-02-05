@@ -1,5 +1,5 @@
 title: QUARTERRIG - Malware Analysis Report - dns_query
-id: 4be2794c-f333-4d40-8222-bee8e68023a0
+id: d06af63f-9f0e-4bb5-82dc-ae96f545367d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,20 +9,20 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1574.001
+- attack.t1204.002
+- attack.t1566
+- attack.t1547.001
+- attack.t1553.005
+- attack.t1566.001
+- attack.t1027.006
 - attack.t1583.003
 - attack.t1584
-- attack.t1566
-- attack.t1027.006
-- attack.t1140
-- attack.t1574.002
 - attack.t1204
 - attack.software.quarterrig
 - attack.t1566.002
-- attack.t1566.001
-- attack.t1204.002
-- attack.t1553.005
-- attack.t1547.001
+- attack.t1574.001
+- attack.t1140
+- attack.t1574.002
 detection:
   object_6346:
     QueryName|contains:

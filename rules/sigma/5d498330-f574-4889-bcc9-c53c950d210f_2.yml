@@ -1,5 +1,5 @@
 title: OSINT - Sharpening the Machete - dns_query
-id: cdb3b683-0a7b-4743-89b0-238eebe89e05
+id: e71a75de-ca4b-4756-9abc-d28dc244fd34
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,52 +9,52 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1049
-- attack.t1008
-- attack.t1145
-- attack.t1020
-- attack.t1005
-- attack.t1081
-- attack.t1083
-- attack.t1193
-- attack.t1052
-- attack.t1105
-- attack.t1120
-- attack.t1204
-- attack.t1025
-- attack.t1074
-- attack.t1113
-- attack.t1043
-- attack.t1217
-- attack.t1158
-- attack.t1045
 - attack.t1029
+- attack.t1081
+- attack.t1145
+- attack.t1043
+- attack.t1193
+- attack.t1113
+- attack.t1020
+- attack.t1027
+- attack.t1056
 - attack.t1057
+- attack.t1217
+- attack.t1049
+- attack.group.machete
+- attack.t1005
+- attack.t1052
+- attack.t1053
+- attack.t1071
+- attack.software.machete
+- attack.t1192
+- attack.t1074
+- attack.t1105
+- attack.t1115
+- attack.t1120
+- attack.t1002
+- attack.t1010
+- attack.t1045
+- attack.t1008
+- attack.t1158
+- attack.group.el_machete
+- attack.t1041
+- attack.t1083
 - attack.t1022
 - attack.t1036
-- attack.t1071
-- attack.t1056
-- attack.group.machete
-- attack.t1027
-- attack.t1010
-- attack.t1041
-- attack.t1053
-- attack.group.el_machete
-- attack.t1192
-- attack.t1115
-- attack.software.machete
-- attack.t1002
+- attack.t1204
+- attack.t1025
 detection:
   attributes:
     QueryName|contains:
-    - artyomt.com
-    - koliast.com
     - tobabean.expert
+    - koliast.com
+    - artyomt.com
     IpAddresses:
-    - 156.67.222.88
     - 109.61.164.33
-    - 185.224.137.63
-    - 142.44.236.215
+    - 156.67.222.88
     - 199.79.63.188
+    - 142.44.236.215
     - 158.69.9.209
+    - 185.224.137.63
   condition: attributes

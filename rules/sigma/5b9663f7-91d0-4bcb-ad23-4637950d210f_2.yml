@@ -1,6 +1,6 @@
 title: 'OSINT -  Operation AppleJeus: Lazarus hits cryptocurrency exchange with fake
   installer and macOS malware - dns_query'
-id: d2891eea-4b06-433b-8b29-82618b1fb997
+id: 9b948184-9861-41fb-993c-ca850069912a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,15 +10,15 @@ logsource:
   product: windows
   category: dns_query
 tags:
+- attack.software.fallchill
 - attack.group.lazarus_group
 - attack.t1005
-- attack.software.fallchill
 detection:
   attributes:
     IpAddresses:
-    - 196.38.48.121
-    - 185.142.236.226
     - 80.82.64.91
-    - 185.142.236.213
+    - 196.38.48.121
     - 185.142.239.173
+    - 185.142.236.213
+    - 185.142.236.226
   condition: attributes

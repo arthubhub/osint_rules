@@ -1,6 +1,6 @@
 title: "OSINT - Introducing BIOLOAD: FIN7 BOOSTWRITE\xE2\u20AC\u2122s Lost Twin -\
   \ process_creation"
-id: 645adaef-0ee1-4b6d-aaa5-b38445177bdb
+id: 588cf7e4-4dd2-42d9-a388-3f35c6b685a7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,8 +11,8 @@ logsource:
   category: process_creation
 tags:
 - attack.dll_search_order_hijacking
-- attack.group.anunak
 - attack.group.fin7
+- attack.group.anunak
 detection:
   object_6773:
     md5:
@@ -44,8 +44,8 @@ detection:
     - 42d3cf75497a724e9a9323855e0051971816915fc7eb9f0426b5a23115a3bdcb
   attributes:
     sha256:
-    - c1c68454e82d79e75fefad33e5acbb496bbc3f5056dfa26aaf1f142cee1af372
     - 77a6fbd4799a8468004f49f5929352336f131ad83c92484b052a2eb120ebaf9a
+    - c1c68454e82d79e75fefad33e5acbb496bbc3f5056dfa26aaf1f142cee1af372
     - 7bdae0dfc37cb5561a89a0b337b180ac6a139250bd5247292f470830bd96dda7
     - 42d3cf75497a724e9a9323855e0051971816915fc7eb9f0426b5a23115a3bdcb
   condition: 1 of object_* or attributes

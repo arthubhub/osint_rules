@@ -1,5 +1,5 @@
 title: M2M -  Malspam 2017-09-11 "Email Invoice Requested" - dns_query
-id: 9035ea11-d4e1-42a2-852a-b1e53f0f307b
+id: 72be2104-1269-49f3-80ca-4974be23d969
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,28 +9,28 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     IpAddresses:
-    - 81.177.141.172
-    - 81.177.135.41
-    - 188.127.239.10
-    - 208.86.184.66
-    - 185.67.2.156
-    - 188.244.34.63
-    - 77.108.83.244
-    - 141.8.226.58
-    - 109.120.162.26
-    - 151.248.118.201
-    - 81.177.139.92
     - 78.110.50.125
-    - 81.177.141.82
+    - 109.120.162.26
     - 188.127.230.15
-    - 188.225.77.99
-    - 5.189.167.10
-    - 47.88.55.29
+    - 81.177.139.92
+    - 188.244.34.63
+    - 151.248.118.201
     - 95.85.29.52
     - 64.6.250.196
+    - 208.86.184.66
+    - 141.8.226.58
+    - 5.189.167.10
+    - 188.225.77.99
+    - 81.177.141.172
+    - 81.177.135.41
+    - 185.67.2.156
+    - 47.88.55.29
+    - 81.177.141.82
+    - 188.127.239.10
+    - 77.108.83.244
   condition: attributes

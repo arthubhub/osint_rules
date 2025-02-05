@@ -1,5 +1,5 @@
 title: Operation Ghost - White Paper - url_request
-id: 17303d9b-0d65-4965-8254-9ee4f59abf94
+id: 9309e2b7-fff5-4e66-ad65-e191a6855ddb
 description: edit this field when analysing or editing the rule - reported by "ESET"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,69 +9,69 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1049
-- attack.t1008
-- attack.t1005
-- attack.t1035
-- attack.t1083
-- attack.t1193
-- attack.t1001
-- attack.t1025
-- attack.t1039
-- attack.t1045
-- attack.t1084
-- attack.t1057
-- attack.t1085
-- attack.t1071
-- attack.t1078
-- attack.t1064
 - attack.t1135
-- attack.t1112
-- attack.t1060
-- attack.t1106
-- attack.t1129
-- attack.t1027
+- attack.t1193
 - attack.t1102
-- attack.t1086
-- attack.group.apt_29
+- attack.t1084
 - attack.t1140
-- attack.t1041
-- attack.t1053
+- attack.t1035
+- attack.t1106
+- attack.t1060
+- attack.t1027
+- attack.t1064
+- attack.t1057
+- attack.t1049
+- attack.t1129
+- attack.t1005
 - attack.t1077
+- attack.t1053
+- attack.t1071
 - attack.t1107
 - attack.t1090
+- attack.t1078
+- attack.t1112
+- attack.t1045
+- attack.t1039
+- attack.t1085
+- attack.t1008
+- attack.t1041
+- attack.t1086
+- attack.t1083
+- attack.t1025
+- attack.t1001
+- attack.group.apt_29
 detection:
   attributes:
     RequestUrl|contains:
-    - acciaio.com.br
-    - fisioterapiabb.it
-    - http://twitter.com
-    - http://www.evernote.com
-    - http://www.reddit.com
-    - varuhusmc.org
-    - http://ibb.co
-    - http://imgur.com
-    - http://thinkery.me
-    - http://jack998899jack.imgbb.com
-    - fairfieldsch.org
-    - publiccouncil.org
-    - powerpolymerindustry.com
-    - bandabonga.fr
-    - skagenyoga.com
-    - http://www.fotolog.com
-    - http://www.kiwibox.com
-    - motherlodebulldogclub.com
-    - lorriratzlaff.com
     - mavin21c.dothome.co.kr
+    - skagenyoga.com
+    - http://thinkery.me
     - coachandcook.at
-    - http://simp.ly
     - westmedicalgroup.net
-    - sistemikan.com
-    - ministernetwork.org
-    - ceycarb.com
+    - lorriratzlaff.com
     - busseylawoffice.com
-    - rulourialuminiu.co.uk
+    - publiccouncil.org
     - salesappliances.com
+    - http://twitter.com
     - https://www.welivesecurity.com
+    - ministernetwork.org
+    - http://jack998899jack.imgbb.com
+    - acciaio.com.br
+    - http://www.evernote.com
+    - ceycarb.com
+    - powerpolymerindustry.com
+    - sistemikan.com
+    - varuhusmc.org
+    - fisioterapiabb.it
+    - motherlodebulldogclub.com
+    - bandabonga.fr
+    - http://www.fotolog.com
+    - rulourialuminiu.co.uk
+    - http://imgur.com
+    - http://www.reddit.com
+    - http://www.kiwibox.com
+    - fairfieldsch.org
+    - http://ibb.co
     - ecolesndmessines.org
+    - http://simp.ly
   condition: attributes

@@ -1,6 +1,6 @@
 title: OSINT - New Gootkit Banking Trojan campaign against Italian Companies and Users.
   - dns_query
-id: 8fcca304-a398-4fe4-aa63-30b5ad77a21b
+id: 3fa5020a-c3fd-4e97-82e9-faac9e0ecd15
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,12 +10,12 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.gootkit
 - attack.software.gootkit
+- attack.group.gootkit
 detection:
   attributes:
     IpAddresses:
     - 185.141.27.101
-    - 46.166.176.152
     - 89.238.181.100
+    - 46.166.176.152
   condition: attributes

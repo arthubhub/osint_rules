@@ -1,6 +1,6 @@
 title: 'M2M - "..doc" 2017-12-05 : ''Message from "G10PR0123456.MYCOMPANY.COM"'' -
   "20171205123.zip" - url_request'
-id: c6728c61-47be-4c14-8b2c-626ce993fed9
+id: 62dfe31d-6a7d-47e6-b0fc-fee5c44e80c2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,16 +10,16 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.fake_globe_ransomware
 - attack.software.fake_globe_ransomware
+- attack.group.fake_globe_ransomware
 detection:
   attributes:
     RequestUrl|contains:
-    - http://primeassociatesinc.com
-    - https://ugf57wl6uexcj7fu.onion.link
     - http://horoskoperstellung.com
     - http://rorymartin8.info
     - http://hofgrund.de
     - http://summi.space
+    - https://ugf57wl6uexcj7fu.onion.link
     - http://hosting-jw.de
+    - http://primeassociatesinc.com
   condition: attributes

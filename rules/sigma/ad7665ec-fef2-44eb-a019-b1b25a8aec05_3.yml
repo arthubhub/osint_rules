@@ -1,5 +1,5 @@
 title: Malware Discovered in Popular NPM Package, ua-parser-js - process_creation
-id: 3f43a9ba-0a17-401b-9539-b1eb26eb042a
+id: 962cd45a-26e2-4c3f-a8dc-1f556aa7c6b5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,8 +9,8 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1195.002
 - attack.t1195.001
+- attack.t1195.002
 detection:
   object_674:
     md5:
@@ -21,6 +21,6 @@ detection:
     - 2a3acdcd76575762b18c18c644a745125f55ce121f742d2aad962521bc7f25fd
   attributes:
     sha256:
-    - 47dded0efc230c3536f4db1e2e476afd3eda8d8ea0537db69d432322cdbac9ca
     - 2a3acdcd76575762b18c18c644a745125f55ce121f742d2aad962521bc7f25fd
+    - 47dded0efc230c3536f4db1e2e476afd3eda8d8ea0537db69d432322cdbac9ca
   condition: 1 of object_* or attributes

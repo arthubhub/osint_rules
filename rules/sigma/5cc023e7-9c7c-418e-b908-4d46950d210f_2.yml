@@ -1,5 +1,5 @@
 title: OSINT -  DNSpionage brings out the Karkoff - dns_query
-id: bdd524f1-51d0-487c-9069-180bb3a8a6b3
+id: ab7cbabe-50b6-4f19-98fb-a5181ac88cc9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,8 +10,8 @@ logsource:
   category: dns_query
 tags:
 - attack.group.dnspionage
-- attack.software.karkoff
 - attack.software.dnspionage
+- attack.software.karkoff
 detection:
   attributes:
     QueryName|contains:
@@ -19,6 +19,6 @@ detection:
     - rimrun.com
     - kuternull.com
     IpAddresses:
-    - 108.62.141.247
     - 74.118.138.192
+    - 108.62.141.247
   condition: attributes

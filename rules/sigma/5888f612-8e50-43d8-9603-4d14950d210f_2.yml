@@ -1,6 +1,6 @@
 title: OSINT - Detecting threat actors in recent German industrial attacks with Windows
   Defender ATP - process_creation
-id: ab71369e-ddbf-4641-82ef-4629b5d7ed01
+id: 7c242c39-8740-45f5-997e-06a253160b7a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,17 +10,17 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.barium
-- attack.software.winnti
 - attack.group.lead
+- attack.software.winnti
+- attack.group.barium
 detection:
   attributes:
     md5:
     - eada46387b377ff07a4f4c36e1778cd2
     sha1:
-    - 56994d107bad32dddf8516351c9c137c3b1d0724
-    - d740674f543565b3616c10c8f9c834ac39bb382f
     - 07d8314ceff227f32bce19b9a8d33a48eec6c7e7
+    - d740674f543565b3616c10c8f9c834ac39bb382f
+    - 56994d107bad32dddf8516351c9c137c3b1d0724
     sha256:
     - 964f9bfd52b5a93179b90d21705cd0c31461f54d51c56d558806fe0efff264e5
   condition: attributes

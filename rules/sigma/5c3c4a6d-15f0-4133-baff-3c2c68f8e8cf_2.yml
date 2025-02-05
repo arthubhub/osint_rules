@@ -1,5 +1,5 @@
 title: '2019-01-10: North Korea Lazarus Targeting REDBANC - dns_query'
-id: 8ec34244-5bd1-4abc-b00c-918914549174
+id: 8d37fd17-2c23-4518-bfd9-0a8900f2aa8d
 description: edit this field when analysing or editing the rule - reported by "VK-Intel"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,17 +9,17 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1199
-- attack.t1132
-- attack.t1050
-- attack.t1064
-- attack.t1005
 - attack.t1041
-- attack.t1053
+- attack.t1064
+- attack.t1199
+- attack.t1050
+- attack.t1132
 - attack.t1047
+- attack.t1005
+- attack.t1053
 detection:
   attributes:
     QueryName|contains:
-    - bodyshoppechiropractic.com
     - ecombox.store
+    - bodyshoppechiropractic.com
   condition: attributes

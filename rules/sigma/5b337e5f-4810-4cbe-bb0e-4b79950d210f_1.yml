@@ -1,6 +1,6 @@
 title: 'OSINT - RedAlpha: New Campaigns Discovered Targeting the Tibetan Community
   - url_request'
-id: 2ba0504d-da46-4ade-9fbe-ef3d2241a959
+id: 5f885b93-1bdf-4f10-8d85-e6ac20ac0ad0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,13 +10,13 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.njrat
 - attack.group.redalpha
+- attack.software.njrat
 detection:
   object_6891:
     RequestUrl|contains:
-    - https://mobile.twitter.com
     - https://t.co
+    - https://mobile.twitter.com
   object_6898:
     RequestUrl|contains:
     - www.hktechy.com
@@ -181,8 +181,8 @@ detection:
     - drive-accounts-gooogle.com
   attributes:
     RequestUrl|contains:
-    - http://doc.internetdocss.com
     - http://220.218.70.160
     - https://go.recordedfuture.com
+    - http://doc.internetdocss.com
     - https://www.recordedfuture.com
   condition: 1 of object_* or attributes

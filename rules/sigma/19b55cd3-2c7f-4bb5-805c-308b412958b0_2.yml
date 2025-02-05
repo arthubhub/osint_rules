@@ -1,5 +1,5 @@
 title: Brazil malspam pushes Astaroth (Guildma) malware - dns_query
-id: df468853-0022-4097-8889-2052e769677a
+id: 85cd1060-0248-49ff-b73b-3576f23cf8d5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,10 +9,10 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.astaroth
 - attack.software.guildma
-- attack.software.astaroth
 - attack.software.s0373
+- attack.group.astaroth
+- attack.software.astaroth
 detection:
   object_5509:
     QueryName|contains:

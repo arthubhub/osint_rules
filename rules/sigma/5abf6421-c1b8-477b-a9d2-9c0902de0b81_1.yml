@@ -1,5 +1,5 @@
 title: OSINT - Crypter-as-a-Service Helps jRAT Fly Under The Radar - url_request
-id: 8ea1d24c-8efc-44c9-b592-a21adc0b61f1
+id: 606910f4-8935-41f1-b96d-9bd2a9d4d8f3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.jrat
 - attack.software.quaverse
 - attack.software.qrat
-- attack.software.jrat
 detection:
   attributes:
     RequestUrl|contains:
-    - https://pastebin.com
     - https://vvrhhhnaijyj6s2m.onion.top
     - https://www.trustwave.com
+    - https://pastebin.com
   condition: attributes

@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-10-06 : Affid=3, offline, ".ykcol" : "Your Remittance Advice"
   - "12345 Remittance.7z" - url_request'
-id: ba82eff9-1da2-41ee-99d7-e827d2b9e069
+id: b6c4a1a8-9308-4f12-a164-6a3945575c66
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,24 +10,24 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://3e.com.pt
     - http://allesandradesigns.com
     - http://asheardontheradiogreens.com
-    - http://alexandre-azaria.com
-    - http://appartement-sailer.at
-    - http://agriturismo-1001ulivo.it
-    - http://3e.com.pt
     - http://9ninewright.net
-    - http://2-wave.com
-    - http://felixsolis.mobi
-    - http://agriturismobellaria.net
-    - http://a-host.co.uk
-    - http://andresarlemijn.nl
-    - http://agricom.it
     - http://thedarkpvp.net
+    - http://felixsolis.mobi
+    - http://andresarlemijn.nl
+    - http://agriturismo-1001ulivo.it
+    - http://alexandre-azaria.com
+    - http://2-wave.com
+    - http://agriturismobellaria.net
+    - http://agricom.it
+    - http://a-host.co.uk
+    - http://appartement-sailer.at
     - http://PamelaSparrowChilds.com
   condition: attributes

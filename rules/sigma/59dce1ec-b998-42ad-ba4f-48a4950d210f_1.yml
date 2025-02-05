@@ -1,6 +1,6 @@
 title: 'M2M -  Locky Affid=3, "asasin" / Trickbot "mac1" 2017-10-10 : "Status of invoice
   A2171234-56" - "A2171234-56.html" - url_request'
-id: ce91f382-ebea-4951-8376-317fc264632c
+id: c145d7d4-7b6a-4fe4-bf21-38521d97bee6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,14 +11,14 @@ logsource:
   category: url_request
 tags:
 - attack.software.trick_bot
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://haproprab.net
+    - http://mtblanc-let.co.uk
     - http://qxr33qxr.com
     - http://smi-wi.com
     - http://yamanashi-jyujin.jp
-    - http://haproprab.net
-    - http://mtblanc-let.co.uk
   condition: attributes

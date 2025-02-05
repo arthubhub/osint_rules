@@ -1,5 +1,5 @@
 title: Remcos RAT 02-28-20 - url_request
-id: ef0e3d30-b071-404c-9faf-8e7d4cf46065
+id: 8aeb84ff-2fe5-4dd9-909d-da310d6ec1d4
 description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,38 +9,38 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1054
-- attack.t1065
-- attack.t1064
-- attack.group.remcos
 - attack.t1060
-- attack.t1099
-- attack.software.remcos
 - attack.t1202
+- attack.t1099
+- attack.t1064
 - attack.t1193
 - attack.t1036
+- attack.software.remcos
+- attack.group.remcos
+- attack.t1054
+- attack.t1065
 detection:
   attributes:
     RequestUrl|contains:
+    - droptop1.com
+    - usadroptop7.com
+    - droptop7.com
+    - usadroptop4.com
+    - usadroptop3.com
+    - https://laskowski-tech.com
+    - droptop8.com
+    - droptop6.com
+    - usadroptop9.com
+    - usadroptop1.com
+    - droptop4.com
+    - droptop3.com
     - droptop2.com
     - droptop5.com
     - usadroptop8.com
-    - usadroptop4.com
-    - usadroptop9.com
     - usadroptop6.com
-    - droptop3.com
-    - droptop7.com
-    - droptop10.com
-    - usadroptop3.com
-    - usadroptop1.com
-    - usadroptop7.com
-    - droptop1.com
-    - https://laskowski-tech.com
+    - usadroptop5.com
     - usadroptop10.com
+    - droptop10.com
     - usadroptop2.com
     - droptop9.com
-    - droptop4.com
-    - droptop6.com
-    - droptop8.com
-    - usadroptop5.com
   condition: attributes

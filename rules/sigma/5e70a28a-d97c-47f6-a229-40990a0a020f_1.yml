@@ -1,5 +1,5 @@
 title: Trickbot Gtag lib693/tt0002 - url_request
-id: 7f5bab74-dbda-4674-8971-ac28b8770f42
+id: afddd37a-2f97-48c6-81f3-44e9d78f3c58
 description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,11 +9,11 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.trickbot
 - attack.software.trickbot
+- attack.group.trickbot
 detection:
   attributes:
     RequestUrl|contains:
-    - https://laskowski-tech.com
     - http://66.42.99.79
+    - https://laskowski-tech.com
   condition: attributes

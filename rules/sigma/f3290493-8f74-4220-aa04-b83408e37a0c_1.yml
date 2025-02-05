@@ -1,5 +1,5 @@
 title: Phishing targeting Luxembourg services (hosted and served on/from AWS) - url_request
-id: 8335396f-d4fe-4f47-9219-bdabba05bae8
+id: 21a7d661-6936-4067-b489-f84c954d54c3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -13,8 +13,8 @@ tags:
 detection:
   object_996:
     RequestUrl|contains:
-    - cfl-lu.com
     - ccss.support
+    - cfl-lu.com
   object_997:
     RequestUrl|contains:
     - https://sante-lu.com
@@ -23,19 +23,19 @@ detection:
     - luxtrust-help.com
   object_999:
     RequestUrl|contains:
-    - public-ccss.com
     - https://public-ccss.com
+    - public-ccss.com
   object_1000:
     RequestUrl|contains:
-    - help-luxtrust.lu
     - https://help-luxtrust.lu
+    - help-luxtrust.lu
   object_1001:
     RequestUrl|contains:
     - https://carte-sante-lu.com
   object_1002:
     RequestUrl|contains:
-    - infoluxtrust.com
     - https://infoluxtrust.com
+    - infoluxtrust.com
   object_1003:
     RequestUrl|contains:
     - https://luxtrust.help
@@ -52,12 +52,12 @@ detection:
     - order-public.com
   object_1007:
     RequestUrl|contains:
-    - https://support-luxtrust.com
     - support-luxtrust.com
+    - https://support-luxtrust.com
   object_1008:
     RequestUrl|contains:
-    - guichet.me
     - https://guichet.me
+    - guichet.me
   object_1009:
     RequestUrl|contains:
     - cfl-lu.com
@@ -66,8 +66,8 @@ detection:
     - card-order.lu
   object_1011:
     RequestUrl|contains:
-    - payconiq.tel
     - payconiq.direct
+    - payconiq.tel
   object_1012:
     RequestUrl|contains:
     - https://support-luxtrust.lu
@@ -91,14 +91,14 @@ detection:
     - https://luxtrust-support.com
   attributes:
     RequestUrl|contains:
-    - cns-lu.com
+    - https://public-ccss.com
+    - luxtrust.help
+    - www-cns-lu.com
+    - luxtrust-cancel.com
+    - www-cns.com
     - luxtrust-unlock.com
     - luxtrust.support
     - ccss-sante-lu.com
-    - https://public-ccss.com
-    - luxtrust-cancel.com
-    - www-cns.com
-    - luxtrust.help
+    - cns-lu.com
     - ccss-public.com
-    - www-cns-lu.com
   condition: 1 of object_* or attributes

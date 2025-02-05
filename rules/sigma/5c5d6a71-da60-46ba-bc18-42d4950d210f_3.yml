@@ -1,5 +1,5 @@
 title: OSINT - DanaBot updated with new C&C communication - process_creation
-id: bc2a15ac-b819-4dfb-9ba0-212ed5f082a6
+id: c31fe22f-ba39-4e4c-a038-1b5e68bbda04
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,8 +9,8 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.danabot
 - attack.software.danabot
+- attack.group.danabot
 detection:
   object_170:
     md5:
@@ -42,17 +42,17 @@ detection:
     - 4054ca079a1c1af7a9531c160be7025930e45e739af847b264ca6a49b0ea0571
   attributes:
     sha1:
-    - b816e90e9b71c85539ea3bb897e4f234a0422f85
-    - 9b0ec454401023df6d3d4903735301ba669aadd1
-    - 0df17562844b7a0a0170c9830921c3442d59c73c
     - 73a5b0bee8c9fb4703a206608ed277a06aa1e384
+    - b816e90e9b71c85539ea3bb897e4f234a0422f85
     - b1ff7285b49f36fe8d65e7b896fccdb1618eaa4b
-    - 98c70361ea611ba33ee3a79816a88b2500ed7844
+    - 9b0ec454401023df6d3d4903735301ba669aadd1
     - e0880dcfcb1724790dfeb7dfe01a5d54b33d80b6
-    - 4075375a08273e65c223116ecd2cef903ba97b1e
     - 890b5473b419057f89802e0b6da011b315f3ef94
-    - e50a03d12ddac6ea626718286650b9bb858b2e69
+    - 4075375a08273e65c223116ecd2cef903ba97b1e
+    - dbfd8553c66275694fc4b32f9df16adea74145e6
+    - 98c70361ea611ba33ee3a79816a88b2500ed7844
     - 5f085b19657d2511a89f3172b7887ce29fc70792
     - 28139782562b0e4cab7f7885eca75dfca5e1d570
-    - dbfd8553c66275694fc4b32f9df16adea74145e6
+    - 0df17562844b7a0a0170c9830921c3442d59c73c
+    - e50a03d12ddac6ea626718286650b9bb858b2e69
   condition: 1 of object_* or attributes

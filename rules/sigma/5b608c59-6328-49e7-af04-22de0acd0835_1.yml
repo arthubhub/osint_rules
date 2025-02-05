@@ -1,6 +1,6 @@
 title: Massive Malvertising Campaign Discovered Attempting 40,000 Infections per Week
   - url_request
-id: a4ca1148-b7c9-4964-a9c9-dd5a067129d5
+id: ff0ac704-2105-4cdf-b6c2-233ca1a258a2
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
@@ -13,15 +13,15 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://research.checkpoint.com
-    - https://www.securityweek.com
-    - https://www.bleepingcomputer.com
-    - junnify.com
     - bestadbid.com
+    - https://research.checkpoint.com
+    - bikinisgroup.com
+    - exoclick.com
     - onclkds.com
     - hibids10.com
-    - sloi1.com
-    - exoclick.com
-    - bikinisgroup.com
+    - https://www.bleepingcomputer.com
+    - https://www.securityweek.com
     - cpm10.com
+    - sloi1.com
+    - junnify.com
   condition: attributes

@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-10-10 : Affid=3, offline, ".asasin" : "Voicemail From 845-551-1234"
   - "VMSG12345678_20171010.7z" - url_request'
-id: 8e669b74-b2dc-4e3e-a213-383e49fef4ff
+id: 670b00ed-2bb4-4040-b2bc-355cb9dd3f4e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,26 +10,26 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://m-tensou.net
+    - http://hexacam.com
     - http://handhi.com
+    - http://nsaflow.info
+    - http://bit-chasers.com
+    - http://bjp.co.id
+    - http://centurythis.com
+    - http://miamirecyclecenters.com
+    - http://hellonwheelsthemovie.com
+    - http://logica-info.com
+    - http://suncoastot.com
     - http://atlantarecyclingcenters.com
     - http://monstermx.com
-    - http://logica-info.com
-    - http://m-tensou.net
-    - http://suncoastot.com
-    - http://hexacam.com
-    - http://hellonwheelsthemovie.com
-    - http://paulcruse.com
     - http://alucmuhendislik.com
-    - http://nsaflow.info
     - http://mh-service.ru
-    - http://miamirecyclecenters.com
-    - http://centurythis.com
-    - http://bit-chasers.com
     - http://estudiperceptiva.com
-    - http://bjp.co.id
+    - http://paulcruse.com
   condition: attributes

@@ -1,6 +1,6 @@
 title: Kaseya ransomware attack - indicators and information publicly available -
   dns_query
-id: 1038097e-c356-4f57-a467-2d93b55a25b2
+id: 8b5a9fb2-d791-4c84-af3c-bc8cbdbd531d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,53 +10,53 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1486
 - attack.software.sodinokibi
 - attack.group.sodinokibi
+- attack.t1486
 detection:
   object_11972:
     IpAddresses:
     - 161.35.239.148
   attributes:
     QueryName|contains:
-    - pasvenska.se
-    - blossombeyond50.com
-    - mindpackstudios.com
-    - bxdf.info
-    - gmto.fr
-    - filmstreamingvfcomplet.be
-    - 1team.es
-    - tonelektro.nl
-    - 365questions.org
-    - bierensgebakkramen.nl
-    - smartypractice.com
-    - 12starhd.online
-    - myhostcloud.com
-    - 4net.guru
-    - kaotikkustomz.com
-    - tanzschule-kieber.de
-    - simoneblum.de
-    - 101gowrie.com
-    - thomasvicino.com
-    - faroairporttransfers.net
-    - fotoscondron.com
-    - southeasternacademyofprosthodontics.org
-    - 4youbeautysalon.com
-    - gonzalezfornes.es
-    - blgr.be
-    - milestoneshows.com
-    - ncuccr.org
     - cursosgratuitosnainternet.com
-    - cerebralforce.net
-    - facettenreich27.de
+    - myhostcloud.com
     - 8449nohate.org
+    - bxdf.info
+    - blossombeyond50.com
+    - 101gowrie.com
+    - gmto.fr
     - daklesa.de
-    - candyhouseusa.com
-    - fannmedias.com
-    - iqbalscientific.com
-    - c2e-poitiers.com
-    - homng.net
-    - 35-40konkatsu.net
+    - simoneblum.de
+    - thomasvicino.com
+    - 4youbeautysalon.com
+    - milestoneshows.com
     - sw1m.ru
+    - smartypractice.com
+    - fannmedias.com
+    - 365questions.org
+    - 4net.guru
+    - bierensgebakkramen.nl
+    - facettenreich27.de
+    - pasvenska.se
+    - mindpackstudios.com
+    - 35-40konkatsu.net
+    - ncuccr.org
+    - southeasternacademyofprosthodontics.org
+    - filmstreamingvfcomplet.be
+    - faroairporttransfers.net
+    - iqbalscientific.com
+    - tanzschule-kieber.de
+    - gonzalezfornes.es
+    - 12starhd.online
+    - kaotikkustomz.com
+    - candyhouseusa.com
+    - cerebralforce.net
+    - c2e-poitiers.com
+    - blgr.be
+    - tonelektro.nl
+    - fotoscondron.com
+    - 1team.es
+    - homng.net
     - 123vrachi.ru
   condition: 1 of object_* or attributes

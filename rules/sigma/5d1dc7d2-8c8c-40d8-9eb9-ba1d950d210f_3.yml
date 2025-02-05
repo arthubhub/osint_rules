@@ -1,5 +1,5 @@
 title: 'OSINT - Threat Spotlight: Ratsnif - New Network Vermin from OceanLotus - process_creation'
-id: 327236b8-68c8-462c-987e-89a9a057f5ee
+id: 753930a3-f06e-4250-91ba-9d6d9bbee898
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,9 +9,9 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.apt32
-- attack.t1043
 - attack.t1094
+- attack.t1043
+- attack.group.apt32
 detection:
   object_12180:
     md5:
@@ -60,6 +60,6 @@ detection:
     md5:
     - 516ad28f8fa161f086be7ca122351edf
     sha256:
-    - b20327c03703ebad191c0ba025a3f26494ff12c5908749e33e71589ae1e1f6b3
     - 7fd526e1a190c10c060bac21de17d2c90eb2985633c9ab74020a2b78acd8a4c8
+    - b20327c03703ebad191c0ba025a3f26494ff12c5908749e33e71589ae1e1f6b3
   condition: 1 of object_* or attributes

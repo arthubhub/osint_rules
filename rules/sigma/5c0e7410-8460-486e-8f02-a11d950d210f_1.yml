@@ -1,5 +1,5 @@
 title: OSINT - Sextortion with a side of ransomware - url_request
-id: 4d265937-ebde-493d-bab6-b75520770de7
+id: 8867e1af-fd59-4c04-ae3b-7f533564bd9b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,16 +9,16 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.azorult
 - attack.group.azorult
+- attack.software.azorult
 - attack.group.win.gandcrab
 - attack.software.win.gandcrab
 detection:
   attributes:
     RequestUrl|contains:
-    - http://egorgerov3.temp.swtest.ru
-    - http://supermainers.online
-    - http://jdhftu.tk
     - https://www.proofpoint.com
     - gandcrabmfe6mnef.onion
+    - http://jdhftu.tk
+    - http://supermainers.online
+    - http://egorgerov3.temp.swtest.ru
   condition: attributes

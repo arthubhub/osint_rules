@@ -1,6 +1,6 @@
 title: 'OSINT - Analyzing Operation GhostSecret: Attack Seeks to Steal Data Worldwide
   - dns_query'
-id: 33cbcce1-5d4c-4e1d-8e90-dccc2b947c01
+id: 675fcef5-c2e8-434d-aec8-cfff91bc827a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,26 +11,26 @@ logsource:
   category: dns_query
 tags:
 - attack.t1124
-- attack.t1005
-- attack.t1043
 - attack.t1041
-- attack.t1035
-- attack.t1119
 - attack.t1107
+- attack.t1119
+- attack.t1043
 - attack.t1057
+- attack.t1005
+- attack.t1035
 detection:
   attributes:
     IpAddresses:
-    - 203.131.222.95
-    - 223.30.98.170
-    - 196.4.67.45
-    - 121.240.155.76
-    - 14.140.116.172
-    - 193.248.247.59
     - 121.240.155.77
-    - 121.240.155.74
-    - 121.240.155.78
-    - 203.131.222.83
+    - 203.131.222.95
     - 223.30.98.169
+    - 223.30.98.170
+    - 121.240.155.78
+    - 196.4.67.45
+    - 121.240.155.74
+    - 121.240.155.76
     - 203.131.222.109
+    - 193.248.247.59
+    - 14.140.116.172
+    - 203.131.222.83
   condition: attributes

@@ -1,5 +1,5 @@
 title: 'RegretLocker - VMRay Analyzer Report for Sample #1500977 - dns_query'
-id: cf58c1d0-1979-4c51-846e-76832432f335
+id: 7a15b7a8-120c-4695-84aa-63ecfd373874
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,39 +9,39 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.vmray_drop_pe_file
-- attack.vmray_request_dns_by_name
-- attack.vmray_establish_http_connection
-- attack.vmray_install_scheduled_task_by_schtasks
-- attack.vmray_modify_windows_backup_settings
-- attack.software.regretlocker
-- attack.vmray_tcp_out_connection
 - attack.vmray_check_external_ip
-- attack.vmray_create_process_with_hidden_window
 - attack.vmray_enumerate_processes
-- attack.vmray_create_named_mutex
-- attack.vmray_change_folder_appearance
-- attack.vmray_delay_execution_by_sleep
-- attack.vmray_delay_by_scheduled_task_delayed
-- attack.vmray_dynamic_api_usage_by_api
+- attack.vmray_drop_pe_file
+- attack.vmray_av_malicious_match
 - attack.vmray_known_suspicious_file
 - attack.vmray_install_startup_script_by_registry
+- attack.software.regretlocker
+- attack.vmray_establish_http_connection
 - attack.vmray_use_encryption_api
+- attack.vmray_create_named_mutex
+- attack.vmray_modify_windows_backup_settings
+- attack.vmray_dynamic_api_usage_by_api
+- attack.vmray_delay_by_scheduled_task_delayed
 - attack.group.regretlocker
-- attack.vmray_av_malicious_match
+- attack.vmray_change_folder_appearance
+- attack.vmray_create_process_with_hidden_window
+- attack.vmray_delay_execution_by_sleep
+- attack.vmray_install_scheduled_task_by_schtasks
+- attack.vmray_request_dns_by_name
+- attack.vmray_tcp_out_connection
 detection:
   attributes:
     QueryName|contains:
     - api.ipify.org
-    - elb097307-934924932.us-east-1.elb.amazonaws.com
     - nagano-19599.herokussl.com
+    - elb097307-934924932.us-east-1.elb.amazonaws.com
     IpAddresses:
-    - 54.235.169.38
-    - 54.235.98.120
-    - 54.225.169.28
     - 54.204.14.42
-    - 23.21.252.4
-    - 50.19.252.36
-    - 54.225.66.103
+    - 54.225.169.28
     - 54.227.255.202
+    - 54.235.98.120
+    - 54.225.66.103
+    - 50.19.252.36
+    - 23.21.252.4
+    - 54.235.169.38
   condition: attributes

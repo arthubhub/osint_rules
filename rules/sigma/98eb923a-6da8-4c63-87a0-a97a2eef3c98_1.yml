@@ -1,5 +1,5 @@
 title: 'CustomerLoader: a new malware distributing a wide variety of payloads - url_request'
-id: 9dcba8d3-b3a4-4ab6-a52a-57c332014351
+id: 68ba91fd-a878-4b53-80ad-f899291b204c
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -10,47 +10,47 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.sectoprat
-- attack.software.vidar
-- attack.software.asyncrat
-- attack.group.redline_stealer
-- attack.software.formbook
-- attack.group.bitrat
-- attack.software.xloader
-- attack.software.darkcloud_stealer
-- attack.software.s0366
-- attack.t1562.001
-- attack.software.s0332
 - attack.group.asyncrat
-- attack.group.stealc
-- attack.t1105
-- attack.t1001
-- attack.t1573.001
-- attack.group.darkcloud_stealer
-- attack.software.bitrat
-- attack.group.lgoogloader
-- attack.software.s0331
-- attack.group.ave_maria
-- attack.group.xloader
-- attack.software.s0670
-- attack.software.ave_maria
 - attack.t1071.001
-- attack.group.vidar
+- attack.t1027.007
+- attack.software.s0331
+- attack.group.agent_tesla
+- attack.software.formbook
+- attack.software.redline_stealer
+- attack.software.stealc
+- attack.t1562.001
+- attack.software.agent_tesla
+- attack.t1140
+- attack.software.s0332
+- attack.t1027
 - attack.software.s0262
 - attack.t1129
-- attack.t1566.001
-- attack.t1027
-- attack.t1027.007
-- attack.software.stealc
-- attack.t1140
+- attack.group.ave_maria
+- attack.t1573.001
 - attack.t1132.001
-- attack.software.agent_tesla
-- attack.group.agent_tesla
-- attack.software.lgoogloader
-- attack.group.sectoprat
-- attack.software.redline_stealer
+- attack.group.lgoogloader
 - attack.t1562
+- attack.software.asyncrat
+- attack.group.redline_stealer
+- attack.t1566.001
+- attack.group.stealc
+- attack.software.lgoogloader
+- attack.software.s0670
+- attack.software.s0366
+- attack.t1105
+- attack.software.xloader
+- attack.group.vidar
+- attack.software.bitrat
+- attack.software.ave_maria
+- attack.software.vidar
+- attack.group.sectoprat
+- attack.group.darkcloud_stealer
+- attack.software.sectoprat
+- attack.group.xloader
+- attack.software.darkcloud_stealer
+- attack.group.bitrat
 - attack.t1620
+- attack.t1001
 detection:
   object_12951:
     RequestUrl|contains:
@@ -72,52 +72,52 @@ detection:
     - http://5.42.94.169
   attributes:
     RequestUrl|contains:
-    - slackmessenger.site
-    - adanagram.com
-    - get-d.pw
-    - cmd22.pw
-    - jacksmanual.com
-    - get-c.pw
-    - vbs22.pw
-    - minemy.pw
-    - bin-b.pw
-    - hardcoverradio.com
-    - get-i.pw
-    - bin-c.pw
-    - vst-dw.com
-    - vpnsget.pw
-    - self-games.pw
-    - self-games.com
-    - seif-games.com
+    - get-vbs.com
     - self-games.site
-    - soft-got.co
-    - plugin4free.net
+    - cmd22.pw
+    - bin-c.pw
     - cmd2.pw
-    - get-y.com
-    - bin-d.pw
+    - get-c.pw
+    - jacksmanual.com
     - slackmessenger.pw
-    - vpnsget.com
-    - gethere.pw
-    - vstget.com
-    - kyliansuperm92139124.sbs
-    - cmd1.pw
-    - hautegaleria.com
-    - plugin4free.com
-    - get-b.pw
-    - mymine.pw
+    - get-i.pw
     - macros-pro.net
-    - vbs2.pw
-    - soft-got.pw
-    - self-games.host
-    - vbs1.pw
+    - bin-a.pw
+    - soft-got.net
     - macrospro.pw
+    - vstget.com
+    - mymine.pw
+    - slackmessenger.site
+    - cmd1.pw
+    - get-b.pw
+    - plugin4free.com
+    - vbs2.pw
+    - seif-games.com
+    - self-games.pw
+    - kyliansuperm92139124.sbs
+    - vpnsget.com
+    - vstdw.com
+    - vbs22.pw
     - vbs3.pw
     - crypt1.pw
-    - get-vbs.com
-    - soft-got.net
-    - vstdw.com
+    - bin-b.pw
+    - hardcoverradio.com
+    - self-games.com
+    - get-d.pw
+    - adanagram.com
+    - get-y.com
+    - minemy.pw
+    - plugin4free.net
     - self-games.space
-    - bin-a.pw
+    - self-games.host
+    - bin-d.pw
+    - vbs1.pw
+    - soft-got.co
+    - gethere.pw
     - get-a.pw
+    - hautegaleria.com
+    - vst-dw.com
     - soft-got.com
+    - soft-got.pw
+    - vpnsget.pw
   condition: 1 of object_* or attributes

@@ -1,5 +1,5 @@
 title: OSINT - Spam Warns about Boeing 737 Max Crashes While Pushing Malware - dns_query
-id: 78fc04ce-17d2-406a-bcec-4afdad4ddb76
+id: e9a20dbb-cbb4-4cc5-8879-c3a950ad0592
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.s0283
+- attack.group.adwind
 - attack.software.adwind_rat
 - attack.software.h-worm
+- attack.software.s0283
 - attack.software.h-w0rm
 - attack.software.adwind
-- attack.group.adwind
 detection:
   attributes:
     QueryName|contains:
-    - brothersjoy.nl
     - pm2bitcoin.com
+    - brothersjoy.nl
   condition: attributes

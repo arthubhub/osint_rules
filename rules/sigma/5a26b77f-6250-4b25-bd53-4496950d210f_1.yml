@@ -1,5 +1,5 @@
 title: 'M2M - "..doc" 2017-12-01 : "12_Invoice_3456" - "I_4321.7z" - url_request'
-id: dd9f3c11-2c15-4f47-9afc-1c7a18516f1f
+id: 3519b010-755f-4a42-8745-6c2e89199002
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,22 +9,22 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.fake_globe_ransomware
 - attack.software.fake_globe_ransomware
+- attack.group.fake_globe_ransomware
 detection:
   attributes:
     RequestUrl|contains:
-    - http://schwellenwertdaten.de
     - http://troyriser.com
-    - http://centralbaptistchurchnj.org
-    - http://basedow-bilder.de
-    - http://highlandfamily.org
-    - https://n224ezvhg4sgyamb.onion.link
-    - http://team-bobcat.org
-    - http://185.176.221.146
-    - http://shamanic-extracts.biz
-    - http://pragmaticinquiry.org
-    - http://motifahsap.com
-    - http://summi.space
     - http://pdj.co.id
+    - https://n224ezvhg4sgyamb.onion.link
+    - http://shamanic-extracts.biz
+    - http://highlandfamily.org
+    - http://centralbaptistchurchnj.org
+    - http://motifahsap.com
+    - http://basedow-bilder.de
+    - http://team-bobcat.org
+    - http://summi.space
+    - http://pragmaticinquiry.org
+    - http://185.176.221.146
+    - http://schwellenwertdaten.de
   condition: attributes

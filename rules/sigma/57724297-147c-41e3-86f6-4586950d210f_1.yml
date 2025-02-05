@@ -1,5 +1,5 @@
 title: OSINT Threat Group-4127 Targets Google Accounts by Secureworks - url_request
-id: b31137e5-caa5-4bd0-9214-49579b1bdfb4
+id: cf3545ce-61a0-4ab5-b73c-5cee6262e855
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - googlesetting.com
-    - https://www.secureworks.com
     - accoounts-google.com
+    - https://www.secureworks.com
+    - googlesetting.com
   condition: attributes

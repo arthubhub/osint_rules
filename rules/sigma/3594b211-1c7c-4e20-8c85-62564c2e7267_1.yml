@@ -1,5 +1,5 @@
 title: OSINT - NGate Android malware relays NFC traffic to steal cash - url_request
-id: 284e56eb-87f2-4f1d-ad65-cbcc891c8365
+id: c4e103a1-5e94-4053-964f-b5b8312093f1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1644
 - attack.t1509
-- attack.t1660
-- attack.t1437.001
-- attack.t1426
 - attack.t1417.002
+- attack.t1426
+- attack.t1644
+- attack.t1437.001
+- attack.t1660
 detection:
   object_12239:
     RequestUrl|contains:

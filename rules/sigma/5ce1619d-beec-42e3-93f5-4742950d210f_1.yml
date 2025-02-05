@@ -1,5 +1,5 @@
 title: OSINT -  200+ hosts attempting Linksys RCE exploits - url_request
-id: 2d769fd0-408b-491b-baca-ddb5fac35720
+id: 27cf051c-3f51-4cbc-bdb1-53c4d81cbb1f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://pastebin.com
-    - https://twitter.com
     - http://hulo.r00ts.online
-    - vpsville.ru
+    - https://twitter.com
     - https://www.exploit-db.com
+    - https://pastebin.com
+    - vpsville.ru
   condition: attributes

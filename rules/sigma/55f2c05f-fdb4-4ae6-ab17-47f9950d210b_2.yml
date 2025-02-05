@@ -1,6 +1,6 @@
 title: 'OSINT  Musical Chairs: Multi-Year Campaign Involving New Variant of Gh0st
   Malware by Palo Alto Networks Unit 42 - dns_query'
-id: 5866e9f1-e616-4ca0-bfb0-d512cf6c6cb2
+id: 01c3dae7-7229-47ab-bf65-74b262440690
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,11 +12,11 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - meitanjiaoyiwang.com
     - yourbroiler.com
+    - meitanjiaoyiwang.com
     IpAddresses:
-    - 68.68.105.174
     - 173.254.223.24
     - 98.126.121.202
+    - 68.68.105.174
     - 98.126.67.114
   condition: attributes

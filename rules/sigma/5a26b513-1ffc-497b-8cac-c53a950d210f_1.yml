@@ -1,5 +1,5 @@
 title: OSINT - Multi-stage malware sneaks into Google Play - url_request
-id: c7e2d9f3-4616-4855-8943-4cb8233fdf91
+id: e789e2b0-3e54-43f3-8295-2597db712736
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -11,10 +11,10 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - loaderclientarea24.ru
+    - https://www.welivesecurity.com
     - loaderclientarea15.ru
+    - loaderclientarea22.ru
     - loaderclientarea20.ru
     - loaderclientarea13.ru
-    - loaderclientarea22.ru
-    - https://www.welivesecurity.com
-    - loaderclientarea24.ru
   condition: attributes

@@ -1,6 +1,6 @@
 title: BatLoader Continues to Abuse Google Search Ads to Deliver Vidar Stealer and
   Ursnif - dns_query
-id: 7416b7fc-47aa-4aba-a192-943970f35b81
+id: 4aa193b9-0b59-4c15-a1df-565231405d26
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -11,44 +11,44 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1059.006
 - attack.software.vidar
-- attack.t1059
-- attack.t1059.001
 - attack.t1064
-- attack.group.vidar
 - attack.t1410
 - attack.software.s0386
+- attack.t1059
+- attack.t1059.001
+- attack.t1059.006
+- attack.group.vidar
 detection:
   attributes:
     QueryName|contains:
-    - bitwarden-t.com
-    - adobe-l.com
-    - java-s.com
-    - adobe-e.com
-    - openoffice-a.com
-    - gimp-t.com
-    - microso-t.com
-    - tableau-r.com
-    - visualstudio-t.com
-    - java-r.com
-    - gameindikdowd.ru
-    - shvarcnegerhistory.com
-    - reggy506.ru
-    - anydesk-r.com
-    - spotify-uss.com
-    - quickbooks-q.com
-    - zoomvideor.com
-    - jhgfdlkjhaoiu.su
-    - basecamp-a.com
-    - reggy914.ru
-    - freecad-l.com
-    - iujdhsndjfks.ru
     - chatgpt-t.com
+    - reggy914.ru
+    - adobe-e.com
     - adobe-a.com
-    - pixelarmada.su
-    - uelcoskdi.ru
-    - isoridkf.ru
+    - microso-t.com
+    - quickbooks-q.com
     - anydesk-o.com
+    - spotify-uss.com
     - java-a.com
+    - bitwarden-t.com
+    - tableau-r.com
+    - adobe-l.com
+    - basecamp-a.com
+    - reggy506.ru
+    - isoridkf.ru
+    - anydesk-r.com
+    - java-s.com
+    - iujdhsndjfks.ru
+    - gimp-t.com
+    - freecad-l.com
+    - gameindikdowd.ru
+    - uelcoskdi.ru
+    - pixelarmada.su
+    - zoomvideor.com
+    - shvarcnegerhistory.com
+    - java-r.com
+    - jhgfdlkjhaoiu.su
+    - visualstudio-t.com
+    - openoffice-a.com
   condition: attributes

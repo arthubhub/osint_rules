@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-11-08 : Affid=3, offline, ".asasin" : "Invoice AX1234567"
   - "Invoice-AX1234567.doc" - dns_query'
-id: 366b06d6-3833-45cb-8efb-4b69e4ce1b0b
+id: a4df7500-ef09-4f50-90f2-bbf642faf163
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -10,19 +10,19 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     IpAddresses:
-    - 81.169.145.151
-    - 162.210.102.40
-    - 64.29.151.221
-    - 112.213.95.177
-    - 45.76.38.221
-    - 210.1.58.196
-    - 195.110.124.188
     - 23.229.221.103
     - 216.228.2.69
+    - 162.210.102.40
+    - 210.1.58.196
+    - 45.76.38.221
+    - 112.213.95.177
+    - 81.169.145.151
+    - 64.29.151.221
+    - 195.110.124.188
     - 81.22.98.50
   condition: attributes

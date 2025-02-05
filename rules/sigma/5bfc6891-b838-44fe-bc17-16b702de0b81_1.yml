@@ -1,6 +1,6 @@
 title: OSINT - `event-stream` dependency attack steals wallets from users of copay
   - url_request
-id: 73253d2a-d1a4-48c9-abe3-86d3057955c2
+id: a61ef30b-1678-404c-9d44-ae7234c4b7ba
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - copayapi.host
     - https://github.com
     - https://www.npmjs.com
-    - copayapi.host
   condition: attributes

@@ -1,5 +1,5 @@
 title: '#StopRansomware: MedusaLocker - dns_query'
-id: 815af5d2-2eea-41e5-934b-d6eaeaa23a8e
+id: d91bf7c1-0c72-4b37-9231-26c7c511ecf5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -9,14 +9,14 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1133
-- attack.t1562.009
+- attack.t1490
 - attack.t1566
-- attack.t1059.001
+- attack.t1562.009
 - attack.group.medusalocker
+- attack.t1059.001
+- attack.t1133
 - attack.software.medusalocker
 - attack.t1486
-- attack.t1490
 detection:
   object_1723:
     IpAddresses:

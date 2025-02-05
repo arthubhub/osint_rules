@@ -1,6 +1,6 @@
 title: OSINT - Android banking trojan masquerades as Flash Player and bypasses 2FA
   - url_request
-id: 6d987136-f8cd-46f6-bbb3-3f6f7ecc21bc
+id: b6b21789-f6ab-4ae0-aa2a-e95fcbd17e45
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/05
@@ -12,15 +12,15 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://adobeupdateflash11.com
-    - http://181.174.164.138
-    - http://adobeflashplaayer.com
     - http://adobeuploadplayer.com
-    - http://adobeupdateplayeer.com
-    - http://adobeplayerdownload.com
-    - http://46.105.95.130
-    - http://www.welivesecurity.com
-    - http://adobeupdateplayer.com
+    - http://181.174.164.138
     - http://flashplayeerupdate.com
+    - http://adobeplayerdownload.com
+    - http://adobeupdateplayer.com
+    - http://46.105.95.130
     - http://94.198.97.202
+    - http://adobeupdateflash11.com
+    - http://adobeupdateplayeer.com
+    - http://adobeflashplaayer.com
+    - http://www.welivesecurity.com
   condition: attributes
