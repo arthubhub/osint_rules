@@ -1,20 +1,20 @@
 title: Kinsing & Dark.IoT botnet among threats targeting CVE-2022-26134 - dns_query
-id: 393c3c49-508f-4a5f-95f8-8ef4c119d48f
+id: e0a9f434-5117-4356-ba5c-0ccd9e41d4bb
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/d4766c50-0269-4cda-acea-850ea4fdb198.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.dark
-- attack.group.hezb
 - attack.group.dark
-- attack.software.kinsing
-- attack.group.kinsing
 - attack.software.s0599
+- attack.group.hezb
+- attack.group.kinsing
+- attack.software.dark
+- attack.software.kinsing
 detection:
   object_12216:
     QueryName|contains:
@@ -38,10 +38,10 @@ detection:
     - 203.0.113.0
   attributes:
     IpAddresses:
-    - 95.217.229.211
-    - 162.243.19.47
-    - 194.36.144.87
-    - 144.76.157.242
     - 94.247.43.254
     - 94.16.114.254
+    - 95.217.229.211
+    - 194.36.144.87
+    - 162.243.19.47
+    - 144.76.157.242
   condition: 1 of object_* or attributes

@@ -1,8 +1,8 @@
 title: 'CISA - AA24-242A #StopRansomware: RansomHub Ransomware - url_request'
-id: aaa37b9b-2a0e-42f2-a107-912a283d4337
+id: 4a355c87-277e-4a7e-bf60-c86be2d7fb70
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/317bb250-bddd-4c57-82a3-5a068f5b8d7f.json
 logsource:
@@ -10,26 +10,26 @@ logsource:
   category: url_request
 tags:
 - attack.software.cyclops
-- attack.group.knight
-- attack.software.knight
 - attack.group.cyclops
+- attack.group.knight
 - attack.software.ransomhub
 - attack.group.ransomhub
+- attack.software.knight
 detection:
   object_13457:
     RequestUrl|contains:
     - https://www.cisa.gov
   attributes:
     RequestUrl|contains:
-    - https://i.ibb.co
     - samuelelena.co
-    - https://i.ibb.com
-    - http://samuelelena.co
     - https://samuelelena.co
-    - https://12301230.co
-    - https://grabify.link
-    - http://188.34.188.7
     - http://temp.sh
-    - https://40031.co
+    - http://188.34.188.7
     - http://89.23.96.203
+    - https://12301230.co
+    - http://samuelelena.co
+    - https://i.ibb.co
+    - https://i.ibb.com
+    - https://grabify.link
+    - https://40031.co
   condition: 1 of object_* or attributes

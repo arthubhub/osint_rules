@@ -1,22 +1,22 @@
 title: 'OSINT  - Oops, they did it again: APT Targets Russia and Belarus with ZeroT
   and PlugX - url_request'
-id: b6920db1-2cc9-4c0e-80f1-a94501634be7
+id: 9be409ae-eddb-4ba3-91a5-9679ee93ded0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5894f679-33c8-4642-8e51-8cd902de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.zerot
 - attack.software.plugx
+- attack.software.zerot
 detection:
   attributes:
     RequestUrl|contains:
+    - https://www.sophos.com
     - http://researchcenter.paloaltonetworks.com
     - https://enigma0x3.net
-    - https://www.sophos.com
     - https://www.proofpoint.com
   condition: attributes

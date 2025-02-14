@@ -1,8 +1,8 @@
 title: Spam week 43 (mule acquisition) - probably related to Locky resources - dns_query
-id: 66772fa0-dafa-487c-9c0a-a3bff81be9a4
+id: 623d5103-fb61-4db5-a6b9-1f0be894120e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58046227-00a0-47fb-a125-c025950d210f.json
 logsource:
@@ -11,26 +11,26 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - faithfulwebhosting.com
-    - festiv-bras.com
-    - getdeone.com
     - belevtsev.net
-    - feeltohealfitness.com
-    - bbwsa.com
     - billfoundation.org
-    - benavent.cat
+    - getdeone.com
+    - bbwsa.com
+    - faithfulwebhosting.com
     - bestedates.com
+    - festiv-bras.com
+    - feeltohealfitness.com
+    - benavent.cat
     IpAddresses:
-    - 199.116.255.248
-    - 50.23.93.227
-    - 50.63.100.1
-    - 52.202.112.204
-    - 93.62.255.201
-    - 149.202.56.129
     - 160.153.16.30
+    - 50.63.100.1
+    - 195.208.1.164
+    - 52.202.112.204
+    - 50.23.93.227
+    - 199.116.255.248
     - 104.238.124.62
     - 160.153.162.16
-    - 195.208.1.164
+    - 93.62.255.201
     - 121.46.0.100
     - 160.153.73.137
+    - 149.202.56.129
   condition: attributes

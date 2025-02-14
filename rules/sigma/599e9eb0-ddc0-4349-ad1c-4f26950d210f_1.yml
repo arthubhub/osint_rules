@@ -1,8 +1,8 @@
 title: 'OSINT - Meet Ovidiy Stealer: Bringing credential theft to the masses - url_request'
-id: c502d054-5c4f-429c-8e90-ecd36fa16bd0
+id: 6f44b532-34f2-4932-bf5d-2175160dcf9b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/599e9eb0-ddc0-4349-ad1c-4f26950d210f.json
 logsource:
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - ovidiystealer.ru
     - vkhacktool.zip
+    - ovidiystealer.ru
+    - https://www.proofpoint.com
     - hideminer.zip
     - vk.com
-    - https://www.proofpoint.com
   condition: attributes

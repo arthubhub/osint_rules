@@ -1,9 +1,9 @@
 title: OSINT of Exchange 0-day campaign (Atos) - dns_query
-id: b224cc53-ffd2-47a8-b82d-307844574765
+id: a45e8efc-99bc-4719-a610-601fd79a27f3
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/fba1fa66-183d-4e82-bb89-78bfcb4d6e29.json
 logsource:
@@ -12,23 +12,23 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - auth0rization.cloud
     - northapollon.com
-    - application-download.net
-    - rkn-redirect.net
-    - byannika.com
     - web-document.com
-    - akipress.news
-    - openingfile.net
     - mfa-tj.download
-    - united-nations-news.com
-    - openfile-attachment.com
     - openattachment.net
+    - united-nations-news.com
+    - akipress.news
+    - rkn-redirect.net
     - united-nation-news.com
+    - byannika.com
+    - auth0rization.cloud
+    - application-download.net
+    - openingfile.net
+    - openfile-attachment.com
     - tr-redirect.net
     IpAddresses:
     - 206.188.196.77
-    - 162.33.179.130
-    - 168.100.10.30
     - 178.20.40.95
+    - 168.100.10.30
+    - 162.33.179.130
   condition: attributes

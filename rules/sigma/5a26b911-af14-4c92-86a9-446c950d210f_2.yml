@@ -1,26 +1,26 @@
 title: 'M2M - "..doc" 2017-12-05 : ''Message from "G10PR0123456.MYCOMPANY.COM"'' -
   "20171205123.zip" - dns_query'
-id: 3fbe768c-b507-49d9-adc8-a9b971372457
+id: 59cf46ab-ea2d-4499-a555-c4f776b00e8a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a26b911-af14-4c92-86a9-446c950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.fake_globe_ransomware
 - attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
 detection:
   attributes:
     IpAddresses:
+    - 78.111.75.239
+    - 209.54.51.32
+    - 213.203.202.31
     - 103.198.0.2
     - 192.185.193.214
-    - 78.111.75.239
     - 85.214.130.145
-    - 209.54.51.32
     - 52.5.196.34
     - 198.23.241.227
-    - 213.203.202.31
   condition: attributes

@@ -1,9 +1,9 @@
 title: 'Malspam 2016-09-08 (.wsf in .zip) - campaign: "New voice mail message from"
   - dns_query'
-id: 614ed41f-923b-4cce-bdbc-22544c480a2f
+id: 5edd05a0-ebe9-4ea3-8c6b-e1c46b6d8fc7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57d15dca-ccd0-4e18-b2c5-e6b5950d210f.json
 logsource:
@@ -12,27 +12,27 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - gam-e20.it
     - tst-technik.de
+    - gam-e20.it
     IpAddresses:
-    - 211.78.38.199
-    - 86.65.123.70
-    - 208.71.106.37
-    - 208.71.106.45
-    - 62.250.4.180
-    - 94.126.40.48
-    - 185.107.213.133
-    - 195.238.0.64
-    - 202.224.59.191
-    - 81.24.34.9
-    - 80.150.6.138
-    - 212.159.8.151
-    - 62.24.202.31
-    - 85.18.11.68
-    - 213.205.40.169
-    - 211.134.181.38
-    - 213.186.33.19
     - 37.152.88.16
-    - 213.185.87.30
+    - 185.107.213.133
+    - 213.205.40.169
+    - 62.250.4.180
+    - 85.18.11.68
     - 212.159.9.91
+    - 211.134.181.38
+    - 202.224.59.191
+    - 62.24.202.31
+    - 86.65.123.70
+    - 208.71.106.45
+    - 208.71.106.37
+    - 80.150.6.138
+    - 211.78.38.199
+    - 213.186.33.19
+    - 213.185.87.30
+    - 94.126.40.48
+    - 195.238.0.64
+    - 81.24.34.9
+    - 212.159.8.151
   condition: attributes

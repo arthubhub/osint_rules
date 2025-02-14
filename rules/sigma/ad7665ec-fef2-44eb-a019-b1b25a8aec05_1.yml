@@ -1,16 +1,16 @@
 title: Malware Discovered in Popular NPM Package, ua-parser-js - url_request
-id: 21705926-8839-4d76-8328-ba3f56d27edf
+id: 529fa55a-f613-4cea-954e-520d4853b52f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/ad7665ec-fef2-44eb-a019-b1b25a8aec05.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1195.002
 - attack.t1195.001
+- attack.t1195.002
 detection:
   object_671:
     RequestUrl|contains:
@@ -20,8 +20,8 @@ detection:
     - citationsherbe.at
   attributes:
     RequestUrl|contains:
+    - http://159.148.186.228
     - https://github.com
     - https://citationsherbe.at
-    - http://159.148.186.228
     - citationsherbe.at
   condition: 1 of object_* or attributes

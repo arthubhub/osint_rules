@@ -1,8 +1,8 @@
 title: 'OSINT - Threat Spotlight: Is Fireball Adware or Malware? - dns_query'
-id: 8aebc150-5c04-4109-9fcb-e87cd46c26c1
+id: 61732eb3-6e78-4e62-8e30-4a206b59a03e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/599eb71f-2620-4dfe-9f6a-4cf8950d210f.json
 logsource:
@@ -11,21 +11,21 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - luckysearch123.com
+    - thewebanswers.com
     - attirerpage.com
     - funcionapage.com
-    - universalsearches.com
+    - youndoo.com
     - mustang-browser.com
     - forestbrowser.com
-    - walasearch.com
-    - trotux.com
-    - startpageing123.com
-    - luckysearch123.com
     - ooxxsearch.com
-    - giqepofa.com
-    - hohosearch.com
-    - search2000s.com
     - yessearches.com
-    - youndoo.com
+    - startpageing123.com
+    - giqepofa.com
+    - search2000s.com
     - nicesearches.com
-    - thewebanswers.com
+    - trotux.com
+    - hohosearch.com
+    - universalsearches.com
+    - walasearch.com
   condition: attributes

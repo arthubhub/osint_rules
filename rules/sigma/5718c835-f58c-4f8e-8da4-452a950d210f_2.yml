@@ -1,9 +1,9 @@
 title: 'CryptXXX: New Ransomware From the Actors Behind Reveton, Dropping Via Angler
   - dns_query'
-id: 7fb4ca13-2bd3-4a76-bfb3-7cfd08823408
+id: 1cd294b8-edfe-4e13-bddf-c256666af9b9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5718c835-f58c-4f8e-8da4-452a950d210f.json
 logsource:
@@ -12,9 +12,9 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - rp4roxeuhcf2vgft.onion.to
-    - rp4roxeuhcf2vgft.onion.cab
     - rp4roxeuhcf2vgft.onion.city
+    - rp4roxeuhcf2vgft.onion.cab
+    - rp4roxeuhcf2vgft.onion.to
     IpAddresses:
     - 146.0.42.68
     - 104.193.252.245

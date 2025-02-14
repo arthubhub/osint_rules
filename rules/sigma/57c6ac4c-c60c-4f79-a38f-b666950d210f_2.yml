@@ -1,9 +1,9 @@
 title: 'Malspam 2016-08-31 (.wsf in .zip) - campaign: "Image|Picture|Photos|Photo|Document"
   - dns_query'
-id: 43e0ed65-2c6e-40af-8d3b-6f9fe5d7dc51
+id: a6d67b0e-babc-4709-88bc-9621caa7b29f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57c6ac4c-c60c-4f79-a38f-b666950d210f.json
 logsource:
@@ -12,24 +12,24 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - alians-ekb.ru
     - og-kaiserslautern-kft.de
+    - alians-ekb.ru
     - onlineportal-2012.de
     IpAddresses:
-    - 217.97.216.17
-    - 86.65.123.70
-    - 213.205.40.169
-    - 178.254.51.20
-    - 80.150.6.138
-    - 81.169.145.226
     - 81.169.145.74
-    - 62.116.84.99
-    - 213.180.150.17
-    - 109.237.140.28
-    - 95.211.144.65
-    - 208.71.106.62
     - 81.169.145.224
-    - 81.196.20.134
+    - 213.180.150.17
+    - 62.116.84.99
+    - 217.97.216.17
+    - 109.237.140.28
+    - 81.169.145.226
+    - 208.71.106.62
+    - 178.254.51.20
+    - 213.205.40.169
     - 217.74.66.167
+    - 86.65.123.70
+    - 80.150.6.138
+    - 95.211.144.65
     - 85.12.197.61
+    - 81.196.20.134
   condition: attributes

@@ -1,27 +1,27 @@
 title: Spyware Telegram mod distributed via Google Play - Evil Telegram doppelganger
   attacks Chinese users - process_creation
-id: 1fbb0bce-e731-440c-ac29-904c07fa9320
+id: 3d80de1b-8560-44c0-bc73-1c4ad04e8509
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e3b6b6a1-fe4a-4475-948b-fe763b7254a4.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1565
 - attack.t1475
+- attack.t1565
 detection:
   attributes:
     md5:
-    - c7a8c3c78ac973785f700c537fbfcb00
-    - 19f927386a03ce8d2866879513f37ea0
-    - a0e197b9c359b89e48c3f0c01af21713
-    - 8e878695aab7ab16e38265c3a5f17970
-    - 39df26099caf5d5edf264801a486e4ee
-    - b9e9a29229a10deecc104654cb7c71ae
-    - efcbcd6a2166745153c329fd2d486b3a
     - 65377fa1d86351c7bd353b51f68f6b80
+    - a0e197b9c359b89e48c3f0c01af21713
     - e0dab7efb9cea5b6a010c8c5fee1a285
+    - efcbcd6a2166745153c329fd2d486b3a
+    - b9e9a29229a10deecc104654cb7c71ae
+    - c7a8c3c78ac973785f700c537fbfcb00
+    - 39df26099caf5d5edf264801a486e4ee
+    - 19f927386a03ce8d2866879513f37ea0
+    - 8e878695aab7ab16e38265c3a5f17970
   condition: attributes

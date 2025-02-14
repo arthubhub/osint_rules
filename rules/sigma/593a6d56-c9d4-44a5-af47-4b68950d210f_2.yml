@@ -1,40 +1,40 @@
 title: 'M2M -  Jaff 2017-06-09 : missing subject - "IMG_1234.ZIP" / "DOC_1234.docm"
   - dns_query'
-id: f541c01c-872f-49af-88dc-939cf4262282
+id: 036c8068-6594-44a0-b347-f389046608b6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/593a6d56-c9d4-44a5-af47-4b68950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.jaff
 - attack.software.jaff
+- attack.group.jaff
 detection:
   attributes:
     IpAddresses:
-    - 199.79.62.121
-    - 119.28.85.128
-    - 111.118.215.77
-    - 173.254.28.87
-    - 69.64.147.34
-    - 162.222.226.195
-    - 23.229.221.200
-    - 174.127.105.121
-    - 46.29.160.48
+    - 141.8.194.135
     - 196.46.186.187
     - 198.252.98.191
-    - 213.32.71.234
-    - 103.21.59.169
-    - 192.185.5.128
-    - 185.158.165.13
-    - 37.97.228.171
+    - 23.229.221.200
+    - 69.64.147.34
+    - 119.28.85.128
+    - 199.79.62.121
     - 103.254.148.134
-    - 70.40.221.121
-    - 141.8.194.135
-    - 81.169.145.94
-    - 209.99.16.227
+    - 46.29.160.48
+    - 185.158.165.13
+    - 192.185.5.128
     - 151.248.113.29
+    - 174.127.105.121
+    - 213.32.71.234
+    - 37.97.228.171
+    - 173.254.28.87
+    - 81.169.145.94
+    - 70.40.221.121
+    - 111.118.215.77
+    - 103.21.59.169
+    - 162.222.226.195
+    - 209.99.16.227
   condition: attributes

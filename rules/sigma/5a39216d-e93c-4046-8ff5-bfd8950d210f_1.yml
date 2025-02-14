@@ -1,8 +1,8 @@
 title: OSINT - Banking malware on Google Play targets Polish banks - url_request
-id: fd13fe17-e1a4-4819-9452-640d7ff3b407
+id: bb4e1720-5a66-4e6f-a5cd-ec7d9afaaf21
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a39216d-e93c-4046-8ff5-bfd8950d210f.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.welivesecurity.com
     - nelis.at
+    - https://www.welivesecurity.com
     - sdljfkh1313.win
   condition: attributes

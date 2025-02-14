@@ -1,8 +1,8 @@
 title: 'Malspam (2016-04-28) - #3 (unknown payload, not accessible) - url_request'
-id: 23054770-615f-46c9-a937-00ec038ffc2f
+id: 712236ad-37af-4e4f-a2f7-642a8e60d549
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5721cf79-61d8-4af9-8314-4756950d210f.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://api.spartanburg-community-college.net
     - http://api.spartanburg-community-college.org
+    - http://api.spartanburg-community-college.net
   condition: attributes

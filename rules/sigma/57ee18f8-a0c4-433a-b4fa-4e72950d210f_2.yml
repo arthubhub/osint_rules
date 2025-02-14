@@ -1,8 +1,8 @@
 title: 'Malspam 2016-09-29 (.xls) - campaign: "Receipt" - dns_query'
-id: 30ba28e6-eb67-4f0d-b144-9e57a688d253
+id: d057f9ba-05d5-44d0-8dd1-a1623f70fc00
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57ee18f8-a0c4-433a-b4fa-4e72950d210f.json
 logsource:
@@ -11,21 +11,21 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - unionathletica.com
-    - bandbcreuse.com
-    - sonajp.com
     - globalremoteservices.com
+    - techsilicon.com
     - 81millstreet.nl
     - anhsaodem.info
+    - unionathletica.com
+    - sonajp.com
+    - bandbcreuse.com
     - hollywoodjesus.com
-    - techsilicon.com
     IpAddresses:
     - 94.76.210.52
-    - 103.47.193.75
-    - 107.180.51.252
-    - 89.37.120.230
-    - 107.180.29.172
-    - 141.138.204.64
-    - 107.180.0.85
     - 108.179.200.174
+    - 107.180.0.85
+    - 141.138.204.64
+    - 107.180.29.172
+    - 89.37.120.230
+    - 107.180.51.252
+    - 103.47.193.75
   condition: attributes

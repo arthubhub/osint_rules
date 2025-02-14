@@ -1,33 +1,33 @@
 title: SNOWYAMBER - Malware Analysis Report - url_request
-id: 82956b8e-d5ee-4969-97a8-925fb3e712d9
+id: 04b420db-30a7-4626-a4c2-4c3f84517358
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/68cf0b2c-e449-4b2e-a7f7-b2b55cf951b5.json
 logsource:
   product: windows
   category: url_request
 tags:
+- attack.t1204.002
 - attack.t1574.001
-- attack.t1102
-- attack.t1574.002
-- attack.t1027.006
-- attack.t1553.005
-- attack.t1583.003
 - attack.t1036.002
+- attack.t1583.006
+- attack.t1566.001
 - attack.t1566
 - attack.t1204
-- attack.t1584
-- attack.t1102.003
 - attack.t1204.001
-- attack.t1566.002
-- attack.t1566.001
-- attack.software.snowyamber
-- attack.t1583.006
-- attack.t1204.002
-- attack.t1547.001
+- attack.t1102
+- attack.t1102.003
+- attack.t1553.005
+- attack.t1574.002
 - attack.t1140
+- attack.t1547.001
+- attack.t1027.006
+- attack.t1583.003
+- attack.t1566.002
+- attack.software.snowyamber
+- attack.t1584
 detection:
   object_853:
     RequestUrl|contains:

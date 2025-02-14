@@ -1,22 +1,22 @@
 title: Fake amf-fr.org website delivering malicious Word document and binaries - url_request
-id: 7444e982-12bc-4f9f-9bc8-3eb148abe123
+id: 7b6954b6-6955-47e0-9703-6f846ca70853
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c687cb3-08c4-46d3-9981-093702de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1035
 - attack.t1179
+- attack.t1035
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.amf-france.org
-    - https://www.amf-fr.org
     - https://amf-fr.org
-    - http://amf-fr.org
     - http://www.amf-fr.org
+    - https://www.amf-fr.org
+    - http://amf-fr.org
+    - https://www.amf-france.org
   condition: attributes

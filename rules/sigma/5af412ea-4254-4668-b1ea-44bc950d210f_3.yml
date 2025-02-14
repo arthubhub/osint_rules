@@ -1,8 +1,8 @@
 title: OSINT - Botnet exploiting GPON Vulnerability - process_creation
-id: 5dcd2c66-f43f-4d39-8fa6-c1e03e294ea1
+id: c1ade4b5-49a9-447a-be80-86e3b3d08aa6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5af412ea-4254-4668-b1ea-44bc950d210f.json
 logsource:
@@ -46,9 +46,9 @@ detection:
     - 7caac9c9fa954730665d63b692119ba5f14ee6c07cf11ffc60bca7b3d25ea109
   attributes:
     sha256:
-    - 1ff787d52bc9e4a6c27d75b1a427c3e5dd16d6d5f082a79227c14edf8e908ab2
-    - 7caac9c9fa954730665d63b692119ba5f14ee6c07cf11ffc60bca7b3d25ea109
-    - efa4fe06e4949c0f7aedea61a79da92e379ea66b169cd1d99c47b9e93e814093
     - bab7e9f42df88902acb00fbdf3b4b5d8ffec2a1a7ad32eb5f2fb1dbf38f3167d
     - a79964ce5cf4b92f996bbc24230e102b94ef05fb072c0afdeabc88d28695cace
+    - efa4fe06e4949c0f7aedea61a79da92e379ea66b169cd1d99c47b9e93e814093
+    - 7caac9c9fa954730665d63b692119ba5f14ee6c07cf11ffc60bca7b3d25ea109
+    - 1ff787d52bc9e4a6c27d75b1a427c3e5dd16d6d5f082a79227c14edf8e908ab2
   condition: 1 of object_* or attributes

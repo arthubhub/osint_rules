@@ -1,46 +1,46 @@
 title: 'M2M -  Locky Affid=3, ".asasin"/Trickbot "mac1" 2017-10-11 : "Emailing: 12345678"
   - "12345678.7z" - url_request'
-id: 6d375b85-3340-443b-b204-f162dfcd629d
+id: 3537160e-c932-44f0-ba6b-0d4924206039
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59df77e7-2420-4c6c-bc2c-44ce950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.trick_bot
+- attack.group.locky
 - attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://enixgaming.de
-    - http://fetchstats.net
-    - http://arkberg-design.fi
-    - http://fls-portal.co.uk
-    - http://lacosturera.es
-    - http://itsmaterial.us
-    - http://agriturismoviridarium.it
-    - http://jeangurunlian.com
-    - http://stemcellenhancementresearch.com
-    - http://sambad.com.np
     - http://pacalik.net
-    - http://sgtenterprises.com
-    - http://hair-select.jp
-    - http://missiegeslaagd.nl
+    - http://itsmaterial.us
+    - http://jeangurunlian.com
+    - http://fls-portal.co.uk
+    - http://secundaria50.edu.mx
+    - http://arkberg-design.fi
     - http://shamanic-extracts.biz
-    - http://basedow-bilder.de
     - http://download.justowin.it
+    - http://enixgaming.de
+    - http://missiegeslaagd.nl
+    - http://centralbaptistchurchnj.org
+    - http://sgtenterprises.com
+    - http://stemcellenhancementresearch.com
     - http://peopleiknow.org
-    - http://sci-eye.com
-    - http://petrochemus.com
     - http://motifahsap.com
+    - http://basedow-bilder.de
+    - http://sambad.com.np
+    - http://enmee.net
+    - http://lacosturera.es
+    - http://fetchstats.net
+    - http://agriturismoviridarium.it
     - http://alexandradickman.com
     - http://ryanbaptistchurch.com
-    - http://secundaria50.edu.mx
-    - http://enmee.net
+    - http://sci-eye.com
+    - http://hair-select.jp
     - http://signlight.com.au
-    - http://centralbaptistchurchnj.org
+    - http://petrochemus.com
   condition: attributes

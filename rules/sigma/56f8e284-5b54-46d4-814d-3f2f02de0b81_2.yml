@@ -1,8 +1,8 @@
 title: OSINT - McAfee Labs Threat Advisory Ransomware-Locky - dns_query
-id: 0b57696f-f88d-45f9-b0fa-d63cc14bea98
+id: 56a93fb6-f90f-441a-8d9b-6adb98d2b75c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56f8e284-5b54-46d4-814d-3f2f02de0b81.json
 logsource:
@@ -11,13 +11,13 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - cgavqeodnop.it
-    - wblejsfob.pw
     - pvwinlrmwvccuo.eu
     - kqlxtqptsmys.in
+    - wblejsfob.pw
+    - cgavqeodnop.it
     IpAddresses:
     - 95.181.171.58
+    - 195.22.28.196
     - 195.22.28.198
     - 185.14.30.97
-    - 195.22.28.196
   condition: attributes

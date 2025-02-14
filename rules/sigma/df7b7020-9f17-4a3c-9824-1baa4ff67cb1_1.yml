@@ -1,17 +1,17 @@
 title: CVE-2023-46604 (Apache ActiveMQ) Vulnerability Exploited to Infect Systems
   With Cryptominers and Rootkits - url_request
-id: 55f2e2ea-1e47-4c08-a0c6-df360e24a83b
+id: f5a6842c-d4f8-4b99-9ba0-880f938d1193
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/df7b7020-9f17-4a3c-9824-1baa4ff67cb1.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1496
 - attack.group.kinsing
+- attack.t1496
 detection:
   object_1019:
     RequestUrl|contains:
@@ -69,6 +69,6 @@ detection:
     - http://194.38.22.53
   attributes:
     RequestUrl|contains:
-    - http://185.122.204.197
     - http://194.38.22.53
+    - http://185.122.204.197
   condition: 1 of object_* or attributes

@@ -1,26 +1,26 @@
 title: OSINT - DanaBot updated with new C&C communication - dns_query
-id: 2e24a77e-6408-4d5b-a196-f5d1eee5aaba
+id: 4a723a26-8a91-4b70-8425-04a3f54fcc4a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c5d6a71-da60-46ba-bc18-42d4950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.danabot
 - attack.software.danabot
+- attack.group.danabot
 detection:
   attributes:
     IpAddresses:
-    - 89.144.25.243
-    - 192.71.249.51
     - 185.158.249.144
-    - 89.144.25.104
-    - 84.54.37.102
-    - 178.209.51.211
-    - 185.92.222.238
-    - 47.74.249.106
+    - 89.144.25.243
     - 95.179.227.160
+    - 192.71.249.51
+    - 47.74.249.106
+    - 89.144.25.104
+    - 178.209.51.211
+    - 84.54.37.102
+    - 185.92.222.238
   condition: attributes

@@ -1,22 +1,22 @@
 title: OSINT - Gamaredon group - dns_query
-id: c1936a21-b25d-45b2-be9b-309cd6b76751
+id: 155be737-e516-4fb6-965a-ce7f457e1b1e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d64d069-0fa0-45a4-bd65-b6f0950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1064
-- attack.t1106
-- attack.t1059
-- attack.group.g0047
-- attack.group.gamaredon_group
 - attack.t1053
-- attack.t1012
+- attack.t1064
+- attack.group.g0047
 - attack.t1112
+- attack.t1106
+- attack.group.gamaredon_group
+- attack.t1059
+- attack.t1012
 detection:
   object_18140:
     QueryName|contains:

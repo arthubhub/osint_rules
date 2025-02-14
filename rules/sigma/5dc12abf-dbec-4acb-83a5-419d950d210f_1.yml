@@ -1,20 +1,20 @@
 title: OSINT - Turla/Venomous Bear Implants - url_request
-id: d65105d5-ba0a-4b7e-a12b-2cd991c05790
+id: 52d8e230-1f37-4f78-b197-3163d1cacc95
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5dc12abf-dbec-4acb-83a5-419d950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.turla
-- attack.software.turla
 - attack.group.turla_rat
-- attack.group.turla_group
+- attack.group.turla
 - attack.group.g0010
 - attack.software.turla_rat
+- attack.software.turla
+- attack.group.turla_group
 detection:
   object_3354:
     RequestUrl|contains:

@@ -1,22 +1,22 @@
 title: 'OSINT - Advisory: Active exploitation of Check Point Remote Access VPN vulnerability
   (CVE-2024-24919) - dns_query'
-id: 14ed205b-11b6-4023-9527-fbf2930fd353
+id: 21d54edd-47e7-4a74-ac6c-583041d44ebd
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/b1a15b0e-d143-4e93-9a8c-45968fd29936.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1133
 - attack.t1190
+- attack.t1133
 detection:
   attributes:
     IpAddresses:
-    - 87.120.8.173
     - 203.160.68.12
-    - 23.227.203.36
     - 82.180.133.120
+    - 23.227.203.36
+    - 87.120.8.173
   condition: attributes

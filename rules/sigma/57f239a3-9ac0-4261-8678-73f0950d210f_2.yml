@@ -1,8 +1,8 @@
 title: 'Malspam 2016-10-03 (.xls) - campaign: "[Scan]" - dns_query'
-id: 7cb58945-e03b-4b95-9a66-5dcf4e04bd53
+id: 1b447adf-e285-4a02-8f1d-932699b4931c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57f239a3-9ac0-4261-8678-73f0950d210f.json
 logsource:
@@ -11,14 +11,14 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - bluewaterappco.com
-    - boservice.info
     - far-infraredsaunas.com
+    - bluewaterappco.com
     - golfnauvoo.com
+    - boservice.info
     - cedrussauna.com
     IpAddresses:
-    - 68.65.120.207
     - 96.0.130.2
+    - 68.65.120.207
     - 162.253.225.88
     - 77.79.239.195
   condition: attributes

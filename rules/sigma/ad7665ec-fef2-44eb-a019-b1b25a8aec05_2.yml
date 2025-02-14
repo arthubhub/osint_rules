@@ -1,16 +1,16 @@
 title: Malware Discovered in Popular NPM Package, ua-parser-js - dns_query
-id: 1a87bd41-ce01-4d33-af9b-d0f49e595b0f
+id: 527b76b7-731c-45de-8fd5-c10738e63cc7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/ad7665ec-fef2-44eb-a019-b1b25a8aec05.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1195.002
 - attack.t1195.001
+- attack.t1195.002
 detection:
   object_672:
     QueryName|contains:

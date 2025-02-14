@@ -1,9 +1,9 @@
 title: spearphishing campaign targeted at least 20 Autonomous System (AS) owners -
   url_request
-id: 1001d8ec-78ae-4156-93b0-414ac0b5958f
+id: 8a99d2b4-d126-44b0-ae80-8aa101a91d45
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/8506c95a-f2da-48c2-a1e0-339db58b1ba7.json
 logsource:
@@ -17,6 +17,6 @@ detection:
     - https://infosec.exchange
   attributes:
     RequestUrl|contains:
-    - swisscoms.com
     - onnetmais.org
+    - swisscoms.com
   condition: 1 of object_* or attributes

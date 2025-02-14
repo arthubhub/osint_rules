@@ -1,38 +1,38 @@
 title: 'RegretLocker - VMRay Analyzer Report for Sample #1500977 - url_request'
-id: be3afabc-3e8f-43ce-a8b0-c30ce1a8c9a8
+id: 94dc4e19-d32c-485e-97fc-b382f6c38d17
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56864321-e4c0-4a50-b7cf-1102ee4c2808.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.vmray_create_process_with_hidden_window
-- attack.vmray_create_named_mutex
+- attack.vmray_install_startup_script_by_registry
+- attack.vmray_enumerate_processes
+- attack.vmray_change_folder_appearance
+- attack.vmray_av_malicious_match
 - attack.vmray_check_external_ip
+- attack.vmray_delay_by_scheduled_task_delayed
+- attack.software.regretlocker
 - attack.vmray_dynamic_api_usage_by_api
+- attack.vmray_create_named_mutex
+- attack.vmray_create_process_with_hidden_window
+- attack.vmray_install_scheduled_task_by_schtasks
+- attack.vmray_modify_windows_backup_settings
+- attack.vmray_use_encryption_api
+- attack.vmray_tcp_out_connection
+- attack.vmray_establish_http_connection
 - attack.vmray_drop_pe_file
 - attack.vmray_delay_execution_by_sleep
-- attack.vmray_change_folder_appearance
-- attack.vmray_delay_by_scheduled_task_delayed
-- attack.vmray_known_suspicious_file
-- attack.vmray_use_encryption_api
-- attack.vmray_install_startup_script_by_registry
-- attack.vmray_tcp_out_connection
 - attack.vmray_request_dns_by_name
-- attack.vmray_establish_http_connection
-- attack.vmray_enumerate_processes
-- attack.vmray_modify_windows_backup_settings
-- attack.vmray_av_malicious_match
-- attack.software.regretlocker
-- attack.vmray_install_scheduled_task_by_schtasks
 - attack.group.regretlocker
+- attack.vmray_known_suspicious_file
 detection:
   attributes:
     RequestUrl|contains:
+    - api.ipify.org
     - nagano-19599.herokussl.com
     - elb097307-934924932.us-east-1.elb.amazonaws.com
-    - api.ipify.org
   condition: attributes

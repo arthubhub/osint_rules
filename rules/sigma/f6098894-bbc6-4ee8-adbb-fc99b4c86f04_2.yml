@@ -1,25 +1,25 @@
 title: OSINT - Godfather Trojan IOCs - dns_query
-id: 15342cdc-0176-41dd-a1a7-8eb4b39dbb4b
+id: 8cd4d99b-e5b3-454b-9fe3-3bc9471f67d1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/f6098894-bbc6-4ee8-adbb-fc99b4c86f04.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1646
 - attack.t1475
+- attack.t1646
 detection:
   attributes:
     QueryName|contains:
-    - heikenmorgan.com
-    - pluscurrencyconverter.com
     - banerrokutepera.com
+    - pluscurrencyconverter.com
     - henkormerise.com
+    - heikenmorgan.com
     IpAddresses:
+    - 168.100.9.86
     - 50.18.3.26
     - 45.61.138.60
-    - 168.100.9.86
   condition: attributes

@@ -1,10 +1,10 @@
 title: Malware Posing as Human Rights Organizations and Commercial Software Targeting
   Iranians, Foreign Policy Institutions and Middle Eastern Countries (ExtremeDownloader
   and Strealer) - url_request
-id: 1a162afb-2ee7-4b70-ad37-2938a736bd2d
+id: 2058cd5a-3a00-4117-905f-d61fd4fe8a9f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57c8398d-2238-41df-bbc7-45b7950d210f.json
 logsource:
@@ -13,8 +13,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - update-finder.com
     - apache-utility.com
     - microsoft-hotfix.com
     - https://iranthreats.github.io
-    - update-finder.com
   condition: attributes

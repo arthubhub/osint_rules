@@ -1,9 +1,9 @@
 title: OSINT Threat Actors Use Sketchy Dating Website to Launch New Home Router Attacks
   by Damballa - url_request
-id: c4dbd974-81d4-4702-b86c-e4c3dc583a48
+id: f479d900-8573-4d08-b3db-e710a65ca466
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56af46bd-e4d0-4bf8-aa4a-4228950d210f.json
 logsource:
@@ -12,10 +12,10 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - sexyworldtouralliance.com
-    - superadultnat.com
-    - https://www.damballa.com
-    - violationcyberatack.com
     - allinceofsexuality.com
+    - https://www.damballa.com
+    - superadultnat.com
     - anniversaryaliancesex.com
+    - violationcyberatack.com
+    - sexyworldtouralliance.com
   condition: attributes

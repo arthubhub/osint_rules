@@ -1,25 +1,25 @@
 title: "OSINT - Kobalos \u2013 A complex Linux threat to high performance computing\
   \ infrastructure - url_request"
-id: cb42237f-9253-463a-b60c-0454ee6b4430
+id: 60dca7d2-4f94-40c5-961a-7f10e50164f4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/2ebc21a4-5635-4a7d-9553-ec5f58be0ee6.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1554
-- attack.t1070.006
-- attack.t1090
 - attack.t1573
+- attack.t1090
 - attack.t1027.002
-- attack.t1070.003
+- attack.t1070.006
+- attack.t1554
 - attack.t1205
+- attack.t1070.003
 detection:
   attributes:
     RequestUrl|contains:
-    - https://github.com
     - https://www.welivesecurity.com
+    - https://github.com
   condition: attributes

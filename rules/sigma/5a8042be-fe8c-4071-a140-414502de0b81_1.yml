@@ -1,16 +1,16 @@
 title: OSINT - Dasan Unauthenticated Remote Code Execution - and ongoing abuse - url_request
-id: dd649dc0-db23-41e5-9f0b-e8ec4752bb74
+id: e45ab024-3a0e-4bd4-a735-b0c04d99a2a1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a8042be-fe8c-4071-a140-414502de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.mirai
 - attack.software.satori
+- attack.software.mirai
 detection:
   attributes:
     RequestUrl|contains:

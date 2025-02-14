@@ -1,16 +1,16 @@
 title: Vurten Ransomware - url_request
-id: 4dc76b3e-f503-447f-996d-3b165e4f0c69
+id: 03e7e31a-38e4-4272-bfb0-c0d77e6a494f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ad09f32-ce58-47f3-b137-4411950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.vurten
 - attack.software.vurten
+- attack.group.vurten
 detection:
   object_12034:
     RequestUrl|contains:

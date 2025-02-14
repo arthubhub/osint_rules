@@ -1,16 +1,16 @@
 title: OSINT - New Variant of Petya Ransomware Spreading Like Wildfire - url_request
-id: 285ce51c-27e2-4fd5-bef0-b21bd5226b36
+id: 8a73f638-0fb3-4701-8883-eb56172b93ae
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5952d18c-b4f4-4a20-8373-443802de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.petya
 - attack.group.petya
+- attack.software.petya
 detection:
   attributes:
     RequestUrl|contains:

@@ -1,17 +1,17 @@
 title: OSINT - Matrix Ransomware Spreads to Other PCs Using Malicious Shortcuts -
   url_request
-id: a79555db-493a-4288-b4fd-9fa05a9658b1
+id: d29b80d1-7807-45c6-a3fd-dd46c54ececf
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58eb4dde-5254-4163-add1-4d47950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.matrix
 - attack.software.matrix
+- attack.group.matrix
 detection:
   attributes:
     RequestUrl|contains:

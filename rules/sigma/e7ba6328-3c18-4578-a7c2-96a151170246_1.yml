@@ -1,8 +1,8 @@
 title: 'OSINT - Reservations Requested: TA558 Targets Hospitality and Travel - url_request'
-id: 0858ac4c-63a2-46aa-8434-b9740c24c9e1
+id: 5cae683f-0ae7-465e-84a6-a22f3215a967
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e7ba6328-3c18-4578-a7c2-96a151170246.json
 logsource:
@@ -20,7 +20,7 @@ detection:
   attributes:
     RequestUrl|contains:
     - http://cdtmaster.com.br
-    - http://maringareservas.com.br
-    - http://hypemediardf.com.pl
     - http://corporated.com
+    - http://hypemediardf.com.pl
+    - http://maringareservas.com.br
   condition: 1 of object_* or attributes

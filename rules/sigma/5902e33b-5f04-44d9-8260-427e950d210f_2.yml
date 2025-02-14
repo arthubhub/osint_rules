@@ -1,73 +1,73 @@
 title: OSINT - Alert (TA17-117A) Intrusions Affecting Multiple Victims Across Multiple
   Sectors - dns_query
-id: 0945b747-9b44-4847-a9b6-664b1b8b6737
+id: fd68720f-750a-4e6c-9a52-839a8ad52c03
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5902e33b-5f04-44d9-8260-427e950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.redleaves
 - attack.software.plugx
+- attack.software.redleaves
 detection:
   attributes:
     QueryName|contains:
-    - vmmini.com
-    - jica-go-jp.biz
-    - jica-go-jp.bike
-    - unhamj.com
-    - wchildress.com
-    - salvaiona.com
-    - cloud-maste.com
-    - mofa-go-jp.com
-    - catholicmmb.com
-    - meiji-ac-jp.com
     - incloud-obert.com
-    - bdoncloud.com
-    - incloud-go.com
-    - cwiinatonal.com
-    - microsoft.got
-    - sindeali.com
     - jimin-jp.biz
+    - unhamj.com
+    - jica-go-jp.biz
+    - bdoncloud.com
+    - wchildress.com
+    - microsoft.got
+    - meiji-ac-jp.com
+    - sindeali.com
+    - salvaiona.com
+    - incloud-go.com
     - cloud-kingl.com
     - ccfchrist.com
+    - mofa-go-jp.com
+    - vmmini.com
+    - cloud-maste.com
+    - jica-go-jp.bike
+    - catholicmmb.com
+    - cwiinatonal.com
     IpAddresses:
+    - 109.237.108.202
+    - 160.202.163.82
+    - 31.184.198.38
+    - 183.134.11.84
+    - 81.176.239.56
+    - 31.184.198.23
+    - 61.97.241.239
+    - 151.101.100.73
     - 185.117.88.77
     - 158.255.208.189
-    - 31.184.198.23
-    - 183.134.11.84
-    - 103.208.86.129
-    - 109.237.108.150
-    - 61.97.241.239
-    - 158.255.208.61
-    - 160.202.163.91
-    - 185.117.88.81
-    - 185.117.88.78
-    - 109.237.108.202
-    - 158.255.208.170
-    - 160.202.163.82
-    - 107.181.160.109
-    - 95.47.156.86
-    - 185.141.25.33
-    - 160.202.163.78
-    - 81.176.239.56
-    - 86.106.102.3
-    - 151.101.100.73
-    - 109.248.222.85
-    - 31.184.198.38
-    - 92.242.144.2
-    - 162.243.6.98
-    - 185.133.40.63
-    - 185.14.185.189
-    - 95.183.52.57
-    - 185.117.88.82
-    - 160.202.163.90
-    - 211.110.17.209
-    - 109.237.111.175
-    - 160.202.163.79
     - 110.10.176.181
+    - 185.14.185.189
+    - 160.202.163.91
+    - 160.202.163.90
+    - 185.117.88.81
+    - 162.243.6.98
+    - 158.255.208.170
+    - 92.242.144.2
+    - 95.47.156.86
     - 151.236.20.16
+    - 158.255.208.61
+    - 86.106.102.3
+    - 109.248.222.85
+    - 103.208.86.129
+    - 160.202.163.78
+    - 185.117.88.78
+    - 95.183.52.57
+    - 107.181.160.109
+    - 185.133.40.63
+    - 185.117.88.82
+    - 109.237.108.150
+    - 109.237.111.175
+    - 211.110.17.209
+    - 185.141.25.33
+    - 160.202.163.79
   condition: attributes

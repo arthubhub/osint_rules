@@ -1,8 +1,8 @@
 title: 'OSINT - TREASUREHUNT: A CUSTOM POS MALWARE TOOL - url_request'
-id: 1c898729-6a7a-4a95-8302-92339202b914
+id: 4d1a17eb-dc42-4f63-bf22-28a3e7d7c42d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56f92df0-24f0-4c6e-a297-6f2402de0b81.json
 logsource:
@@ -11,10 +11,10 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - https://www.fireeye.com
     - seatrip888.eu
     - cortykopl.com
-    - https://www.fireeye.com
-    - friltopyes.com
     - millionjam.eu
+    - friltopyes.com
     - 3sipiojt.com
   condition: attributes

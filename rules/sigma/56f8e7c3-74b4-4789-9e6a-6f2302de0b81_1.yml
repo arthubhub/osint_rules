@@ -1,8 +1,8 @@
 title: OSINT - Malware Employs PowerShell to Infect Systems - url_request
-id: 6cc4d8d8-675d-4583-8651-10887cb7a28d
+id: 6d69d433-b2b9-4009-b4f6-f1d8465a095e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56f8e7c3-74b4-4789-9e6a-6f2302de0b81.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://blogs.mcafee.com
     - http://anonfile.xyz
+    - https://blogs.mcafee.com
   condition: attributes

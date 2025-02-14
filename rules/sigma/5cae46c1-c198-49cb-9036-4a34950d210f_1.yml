@@ -1,33 +1,33 @@
 title: "Malware Analysis Report (AR19-100A) MAR-10135536-8 \xE2\u20AC\u201C North\
   \ Korean Trojan: HOPLIGHT MAR-10135536.r8.v1 - dns_query"
-id: bd94d5e0-4c6c-4c83-8a99-81c1776389a1
+id: 1897b708-1c4c-4664-9264-ea63065da6f2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cae46c1-c198-49cb-9036-4a34950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.lazarus_group
 - attack.group.covellite
+- attack.group.lazarus_group
 detection:
   attributes:
     IpAddresses:
-    - 70.224.36.194
-    - 97.90.44.200
-    - 81.94.192.147
-    - 112.175.92.57
-    - 137.139.135.151
-    - 113.114.117.122
-    - 197.211.212.59
-    - 128.200.115.228
-    - 21.252.107.198
-    - 26.165.218.44
-    - 181.39.135.126
-    - 186.169.2.237
-    - 47.206.4.145
-    - 84.49.242.125
     - 81.94.192.10
+    - 47.206.4.145
+    - 137.139.135.151
+    - 128.200.115.228
+    - 112.175.92.57
+    - 97.90.44.200
+    - 186.169.2.237
+    - 26.165.218.44
+    - 70.224.36.194
+    - 181.39.135.126
+    - 81.94.192.147
+    - 84.49.242.125
+    - 197.211.212.59
+    - 113.114.117.122
+    - 21.252.107.198
   condition: attributes

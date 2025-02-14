@@ -1,16 +1,16 @@
 title: OSINT - 0000 Cryptomix Ransomware Variant Released - url_request
-id: b915eedc-2ef0-433d-b1f2-b565ec5ca657
+id: 0083429b-d9f4-455f-9064-cd6d1ed0be57
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a142fcd-cb4c-4b8b-99c5-0efd950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.cryptomix
 - attack.software.cryptomix
+- attack.group.cryptomix
 detection:
   attributes:
     RequestUrl|contains:

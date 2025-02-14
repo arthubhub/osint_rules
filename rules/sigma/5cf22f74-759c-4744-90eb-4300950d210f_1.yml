@@ -1,19 +1,19 @@
 title: Linux server infection with coinminers (derived from original post with iptables
   rules) - url_request
-id: 73967e91-91cf-40a6-b32d-db3c244618ca
+id: cd2aeb97-89ed-4218-82f5-ae9153cd29af
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cf22f74-759c-4744-90eb-4300950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1059
-- attack.group.coinminer
-- attack.t1496
 - attack.software.coinminer
+- attack.group.coinminer
+- attack.t1059
+- attack.t1496
 detection:
   object_1569:
     RequestUrl|contains:

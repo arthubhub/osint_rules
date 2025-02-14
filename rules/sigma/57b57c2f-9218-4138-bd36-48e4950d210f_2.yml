@@ -1,9 +1,9 @@
 title: OSINT Potential CNC base on CCNE activities described in NSA document leak
   - dns_query
-id: 9e3009d9-9f7f-4093-869f-d8ba687a4cc1
+id: de38d7dc-2061-4f81-aef5-d877f7873667
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57b57c2f-9218-4138-bd36-48e4950d210f.json
 logsource:
@@ -12,9 +12,9 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - sandrogolinelli.net
-    - transpersia.com
     - mcee.org
+    - transpersia.com
+    - sandrogolinelli.net
     IpAddresses:
     - 208.73.210.155
   condition: attributes

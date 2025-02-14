@@ -1,9 +1,9 @@
 title: 'OSINT - ikittens: iranian actor resurfaces with malware for mac (macdownloader)
   - url_request'
-id: d1bd4f6d-2560-4785-8172-143b30003af4
+id: c1b891eb-4b98-42b5-b80c-ac1a62d04955
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5898af07-fb0c-4135-b908-491b950d210f.json
 logsource:
@@ -13,7 +13,7 @@ detection:
   attributes:
     RequestUrl|contains:
     - https://iranthreats.github.io
-    - http://192.168.3.217
     - officialswebsites.info
     - http://46.17.97.37
+    - http://192.168.3.217
   condition: attributes

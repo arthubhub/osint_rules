@@ -1,8 +1,8 @@
 title: Warzone RAT - url_request
-id: fd984555-9909-4460-a479-3ba4279d0587
+id: 6f4c5ab0-a84c-48c4-8aa3-46ae9897bee9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e3be06f-d0a8-4ed9-abe9-46be950d210f.json
 logsource:
@@ -12,6 +12,6 @@ detection:
   attributes:
     RequestUrl|contains:
     - warzone.io
-    - warzone.pw
     - warzonedns.com
+    - warzone.pw
   condition: attributes

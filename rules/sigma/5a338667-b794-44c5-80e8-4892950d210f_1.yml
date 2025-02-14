@@ -1,16 +1,16 @@
 title: OSINT -  WORK Cryptomix Ransomware Variant Released - url_request
-id: 9ef457a1-0e5c-4871-84bd-6acdc9b5a40a
+id: 62e89ab6-8814-41cd-b6e3-03a50e173648
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a338667-b794-44c5-80e8-4892950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.cryptomix
 - attack.software.cryptomix
+- attack.group.cryptomix
 detection:
   attributes:
     RequestUrl|contains:

@@ -1,16 +1,16 @@
 title: OSINT Backdoor.Win32.Equationdrug.A report by Telus - url_request
-id: e68ced21-11c4-4916-9c9c-7cf0f2944120
+id: 39a02492-704f-47e8-894a-2855358f9a6d
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5500579e-e1b4-43fe-b7c5-73da950d210b.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.equation_group
 - attack.software.equationdrug
+- attack.group.equation_group
 detection:
   attributes:
     RequestUrl|contains:

@@ -1,8 +1,8 @@
 title: FluBot - Distribution vectors & Threat network infrastructure - url_request
-id: b3b3f660-c6f0-47a0-8c1c-76096dd3eb16
+id: c680ba41-2250-42dc-9b8c-1b5d5ed5b751
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/7315018a-36ea-47b4-b3e6-3c68b58788bf.json
 logsource:
@@ -29,9 +29,9 @@ detection:
     - cuicsi.com
   attributes:
     RequestUrl|contains:
-    - flavarich.com
-    - myworldnetwork.org
     - cuicsi.com
-    - vipmein.com
+    - flavarich.com
     - progralmedical.com.co
+    - myworldnetwork.org
+    - vipmein.com
   condition: 1 of object_* or attributes

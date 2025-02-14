@@ -1,17 +1,17 @@
 title: Nanocore 20210816 - url_request
-id: 4e6405e5-925c-4d3a-b7ae-1f5f9ca53b04
+id: 0b67b663-98b2-4fca-9bc2-d08aad4372b1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/b6a0d910-69ae-463d-80a8-1f84839a2514.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.nanocore_rat
 - attack.software.nanocorerat
 - attack.group.nanocore_rat
+- attack.software.nanocore_rat
 detection:
   object_17117:
     RequestUrl|contains:

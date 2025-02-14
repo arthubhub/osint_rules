@@ -1,9 +1,9 @@
 title: OSINT - Microsoft Word Intruder 8 Adds Support for Flash Vulnerability CVE-2016-4117
   - dns_query
-id: 816c2008-709f-4e38-aad1-205a644840b8
+id: bbd2b970-9db2-49a6-aace-4994d0201b6d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/582ab1cc-31a4-48f2-a0a1-4966950d210f.json
 logsource:
@@ -12,10 +12,10 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - bibi.pro
     - take5market.com
+    - bibi.pro
     IpAddresses:
-    - 188.138.71.117
     - 5.45.80.32
+    - 188.138.71.117
     - 82.146.37.202
   condition: attributes

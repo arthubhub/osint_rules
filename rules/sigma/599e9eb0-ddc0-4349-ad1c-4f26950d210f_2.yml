@@ -1,8 +1,8 @@
 title: 'OSINT - Meet Ovidiy Stealer: Bringing credential theft to the masses - dns_query'
-id: 51c25780-240c-4fc1-b4c6-cb1b45dbb163
+id: 2fda51ff-e62d-454a-b1e1-50d6b99a333d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/599e9eb0-ddc0-4349-ad1c-4f26950d210f.json
 logsource:
@@ -11,8 +11,8 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - vkhacktool.zip
     - ovidiystealer.ru
     - hideminer.zip
     - vk.com
-    - vkhacktool.zip
   condition: attributes

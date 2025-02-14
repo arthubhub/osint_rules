@@ -1,16 +1,16 @@
 title: 'OSINT -  RAT Gone Rogue: Meet ARS VBS Loader - url_request'
-id: fbf3c2ff-dfcc-4abd-a594-08e582d4354d
+id: c20e2321-d649-45c5-b3ed-fe9d984f9bb4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5afaeb66-962c-4cd6-a5c8-419e950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.ars_vbs_loader
 - attack.software.ars_vbs_loader
+- attack.group.ars_vbs_loader
 detection:
   attributes:
     RequestUrl|contains:

@@ -1,9 +1,9 @@
 title: 'OSINT The Italian Connection: An analysis of exploit supply chains and digital
   quartermasters by Shadowserver - url_request'
-id: d90cdc46-d8c0-417a-969a-849fc08d664e
+id: 66ae092f-fec6-412f-ba2d-023c749bc68e
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/55c98ff2-f2fc-4284-8a34-f483950d210b.json
 logsource:
@@ -12,8 +12,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://blog.shadowserver.org
-    - appeal.ml
-    - eniw577dlcp4zbag.onion
     - https://docs.google.com
+    - http://blog.shadowserver.org
+    - eniw577dlcp4zbag.onion
+    - appeal.ml
   condition: attributes

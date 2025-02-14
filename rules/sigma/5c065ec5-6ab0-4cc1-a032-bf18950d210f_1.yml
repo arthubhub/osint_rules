@@ -1,18 +1,18 @@
 title: SamSam Ransomware - Alert (AA18-337A) - url_request
-id: 1419bc1d-04ae-4548-9554-aae9c928c870
+id: eb4eb6cb-c9cf-4ccd-abde-a0efbbdc9045
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c065ec5-6ab0-4cc1-a032-bf18950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.samas-samsam
-- attack.group.samsam
 - attack.software.samsam
 - attack.software.samas-samsam
+- attack.group.samsam
+- attack.group.samas-samsam
 detection:
   attributes:
     RequestUrl|contains:

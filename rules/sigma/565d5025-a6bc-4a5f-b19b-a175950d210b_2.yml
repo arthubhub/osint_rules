@@ -2,10 +2,10 @@ title: "OSINT - PlugX-\xD1\u201A \xD3\xA9\xD1\u20AC\xD1\u201A\xD1\x81\xD3\xA9\xD
   \ \xD1\x81\xD0\xB8\xD1\x81\xD1\u201A\xD0\xB5\xD0\xBC\xD0\xB8\xD0\xB9\xD0\xB3 \xD1\
   \u2020\xD1\x8D\xD0\xB2\xD1\x8D\xD1\u20AC\xD0\xBB\xD1\x8D\xD1\u2026 \xD0\xBD\xD1\u0152\
   \ - dns_query"
-id: 3eebf04a-c3da-4fd2-b145-31f89e33d315
+id: 8d54448b-9e64-4f5d-9c51-de43793eeb7f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/565d5025-a6bc-4a5f-b19b-a175950d210b.json
 logsource:
@@ -14,17 +14,17 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - baatarhuu.com
-    - goodmongol.com
-    - heritageblog.org
-    - firefox-sync.com
-    - mol-government.com
     - mongolbaatar.net
+    - baatarhuu.com
+    - heritageblog.org
     - molnews.net
+    - firefox-sync.com
     - teever.mn
+    - goodmongol.com
+    - mol-government.com
     IpAddresses:
-    - 98.126.24.12
-    - 45.32.64.183
     - 173.208.206.172
     - 104.207.152.11
+    - 98.126.24.12
+    - 45.32.64.183
   condition: attributes

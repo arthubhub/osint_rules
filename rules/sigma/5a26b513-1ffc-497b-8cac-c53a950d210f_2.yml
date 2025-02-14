@@ -1,8 +1,8 @@
 title: OSINT - Multi-stage malware sneaks into Google Play - dns_query
-id: 446250b7-b892-4775-8dcb-ca03cde39ee4
+id: a5f31565-7b59-45b0-a0df-d8161a8fb797
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a26b513-1ffc-497b-8cac-c53a950d210f.json
 logsource:
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - loaderclientarea20.ru
     - loaderclientarea22.ru
     - loaderclientarea13.ru
     - loaderclientarea15.ru
-    - loaderclientarea20.ru
     - loaderclientarea24.ru
   condition: attributes

@@ -1,20 +1,20 @@
 title: 'DeftTorero: tactics, techniques and procedures of intrusions revealed - url_request'
-id: 329c730a-3636-4663-9629-6d46ec5f1766
+id: 5dec8a95-beb4-4a58-8c04-883c2e872270
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/2e7a515f-c380-4915-a505-9568ccc00d22.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.mimikatz
-- attack.software.netcat
-- attack.group.g0123
 - attack.group.mimikatz
-- attack.group.volatile_cedar
 - attack.software.s0002
+- attack.group.volatile_cedar
+- attack.software.mimikatz
+- attack.group.g0123
+- attack.software.netcat
 detection:
   object_1205:
     RequestUrl|contains:

@@ -1,8 +1,8 @@
 title: 'Malspam 2016-09-19 (.js in .zip) - campaign: "Express Parcel service" - url_request'
-id: 99c63136-ec32-4247-81a5-ab1e65d9e275
+id: 751210ff-c0e4-44d6-92cb-9aa18efc0c48
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57dfad33-41c0-4000-8d94-4149950d210f.json
 logsource:
@@ -11,10 +11,10 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - roxieimshi.com
     - http://roxieimshi.com
+    - merofid.com
+    - http://foveawaac.net
     - foveawaac.net
     - http://merofid.com
-    - http://foveawaac.net
-    - roxieimshi.com
-    - merofid.com
   condition: attributes

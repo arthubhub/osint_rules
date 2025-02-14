@@ -1,22 +1,22 @@
 title: '2019-01-21: APT28 Autoit Zebrocy Progression - process_creation'
-id: 930299b9-8ef1-4d34-a2fc-e33a2ad980eb
+id: b3a3b8b0-11e7-4f9d-afc1-8b65058d7830
 description: edit this field when analysing or editing the rule - reported by "VK-Intel"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c463bd0-63bc-41f1-91dc-622168f8e8cf.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1064
-- attack.t1071
-- attack.t1047
 - attack.group.sofacy
+- attack.t1064
+- attack.t1047
+- attack.t1041
 - attack.t1082
 - attack.t1060
+- attack.t1071
 - attack.t1059
-- attack.t1041
 detection:
   object_88:
     md5:
@@ -55,10 +55,10 @@ detection:
     - 121407a9bced8297fbbdfb76ae79f16fe9fa0574deee21a44dfb56d5b1deb999
   attributes:
     md5:
-    - d6751b148461e0f863548be84020b879
-    - c2e1f2cf18ca987ebb3e8f4c09a4ef7e
     - ec57bb4980ea0190f4ad05d0ea9c9447
+    - d6751b148461e0f863548be84020b879
     - 311f24eb2dda26c26f572c727a25503b
+    - c2e1f2cf18ca987ebb3e8f4c09a4ef7e
     - 7b1974e61795e84b6aacf33571320c2a
     sha1:
     - ce3b60fbad031c9bd5a10779cc8beb185035d407

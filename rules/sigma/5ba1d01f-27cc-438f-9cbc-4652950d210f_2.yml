@@ -1,19 +1,19 @@
 title: OSINT (expanded) - Xbash Combines Botnet, Ransomware, Coinmining in Worm that
   Targets Linux and Windows - dns_query
-id: 50e12f3e-a807-4df1-9eda-8ea470da0767
+id: d4b4da74-4ccc-491a-a053-c5cd4b5c9796
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ba1d01f-27cc-438f-9cbc-4652950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
+- attack.software.xbash
+- attack.t1071
 - attack.group.iron_group
 - attack.t1190
-- attack.t1071
-- attack.software.xbash
 detection:
   attributes:
     QueryName|contains:

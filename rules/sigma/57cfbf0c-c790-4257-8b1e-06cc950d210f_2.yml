@@ -1,9 +1,9 @@
 title: 'Malspam 2016-09-06 (.wsf in .zip) - campaign: ''Message from "CUKPR[x]"''
   - dns_query'
-id: c24ba909-54d4-4781-ab25-3ee322a016b7
+id: eb65f1dd-736d-40aa-8079-98bad7d0920e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57cfbf0c-c790-4257-8b1e-06cc950d210f.json
 logsource:
@@ -12,30 +12,30 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - sp-moto.ru
-    - bushman-rest.com
-    - marcotormento.de
     - tst-technik.de
+    - marcotormento.de
+    - bushman-rest.com
+    - sp-moto.ru
     IpAddresses:
-    - 81.169.145.82
-    - 81.169.145.157
+    - 208.71.106.48
     - 88.156.222.94
-    - 95.211.144.65
-    - 208.71.106.37
-    - 208.71.106.45
-    - 85.248.42.103
-    - 188.120.235.214
-    - 81.24.34.9
-    - 81.196.20.134
-    - 80.150.6.138
-    - 209.41.183.242
-    - 62.24.202.31
-    - 87.242.73.75
-    - 80.150.6.143
     - 186.202.126.199
     - 213.205.40.169
+    - 209.41.183.242
+    - 80.150.6.143
+    - 85.248.42.103
     - 211.134.181.38
-    - 208.71.106.48
+    - 95.211.144.65
+    - 62.24.202.31
+    - 81.196.20.134
+    - 87.242.73.75
+    - 208.71.106.45
+    - 208.71.106.37
+    - 81.169.145.82
+    - 80.150.6.138
+    - 81.169.145.157
     - 213.180.150.17
     - 213.185.87.30
+    - 81.24.34.9
+    - 188.120.235.214
   condition: attributes

@@ -1,9 +1,9 @@
 title: "OSINT Orcus \xE2\u20AC\u201C Birth of an unusual plugin builder RAT by Palo\
   \ Alto Unit 42 - url_request"
-id: 523032dd-ab71-44cc-a74b-5a0c69e9c8a0
+id: 5fdf895e-9bbf-45e7-bbd6-7df74852005a
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57a8a426-c8f0-4893-8a2a-475d950d210f.json
 logsource:
@@ -12,6 +12,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://researchcenter.paloaltonetworks.com
     - https://github.com
+    - http://researchcenter.paloaltonetworks.com
   condition: attributes

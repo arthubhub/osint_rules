@@ -1,8 +1,8 @@
 title: OSINT - Sednit espionage group now using custom exploit kit - url_request
-id: 349fd8b9-69e2-4c8a-9894-f950015243dd
+id: bd5cbabf-ec3e-446d-aaab-f1184872ed9c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a3cc84d-2434-4ae6-8d76-c328950d210f.json
 logsource:
@@ -11,19 +11,19 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - caci.com
+    - mfapress.com
+    - mfapress.org
+    - http://defenceiq.us
+    - armypress.org
+    - defenceiq.us
+    - foreignaffairs.com
+    - msonlinelive.com
+    - armytime.com
     - windows-updater.com
     - https://www.welivesecurity.com
-    - http://defenceiq.us
-    - defenceiq.com
-    - defenceiq.us
-    - caciltd.com
-    - http://cntt.akcdndata.com
-    - armytime.com
-    - mfapress.org
-    - msonlinelive.com
-    - mfapress.com
-    - armypress.org
     - azureon-line.com
-    - foreignaffairs.com
+    - defenceiq.com
+    - http://cntt.akcdndata.com
+    - caciltd.com
+    - caci.com
   condition: attributes

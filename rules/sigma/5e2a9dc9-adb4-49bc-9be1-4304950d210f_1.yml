@@ -1,16 +1,16 @@
 title: 'OSINT - First Node.js-based Ransomware : Nodera - url_request'
-id: fffa1703-1d8e-47a0-bf9d-33f610e232d1
+id: e3f275ce-c3b5-44be-b03f-76e4d192c259
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e2a9dc9-adb4-49bc-9be1-4304950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.nodera_ransomware
 - attack.software.nodera_ransomware
+- attack.group.nodera_ransomware
 detection:
   attributes:
     RequestUrl|contains:

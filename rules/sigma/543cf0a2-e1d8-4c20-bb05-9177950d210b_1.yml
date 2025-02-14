@@ -1,8 +1,8 @@
 title: OSINT Shellshock exploitation from Red Sky Weekly blog post - url_request
-id: f7ac7712-5c23-4719-b8c6-001d79f4bffd
+id: 079f750a-8b47-442b-8446-25abc5d8499f
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/543cf0a2-e1d8-4c20-bb05-9177950d210b.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - http://henrybasset.blogspot.be
     - google-traffic-analytics.com
+    - http://henrybasset.blogspot.be
     - http://google-traffic-analytics.com
   condition: attributes

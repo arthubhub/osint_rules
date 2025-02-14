@@ -1,19 +1,19 @@
 title: OSINT - RIG exploit kit distributes Princess ransomware - url_request
-id: 317e066a-116b-4c2b-a8e0-787772a233b6
+id: 2e4a3caa-afbd-4111-a740-d0ad027abea0
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a3797c2-e770-4722-9435-4350950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.princess_locker
 - attack.software.princess_locker
+- attack.group.princess_locker
 detection:
   attributes:
     RequestUrl|contains:
-    - royall6qpvndxlsj.onion
     - https://blog.malwarebytes.com
+    - royall6qpvndxlsj.onion
   condition: attributes

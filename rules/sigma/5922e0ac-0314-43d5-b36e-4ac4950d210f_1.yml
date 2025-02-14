@@ -1,38 +1,38 @@
 title: 'Jaff 2017-05-22 : "Copy of Invoice 12345678" / "12345678.PDF" - url_request'
-id: 1f9a7c79-1d0f-4e88-8cf2-fe5bd9c2314b
+id: 46682b41-f856-4bef-b822-4e427374946e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5922e0ac-0314-43d5-b36e-4ac4950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.jaff
 - attack.software.jaff
+- attack.group.jaff
 detection:
   attributes:
     RequestUrl|contains:
-    - http://boomroom.jp
-    - http://endosuitepartners.com
-    - http://byuscorp.com
-    - http://tipografia.by
-    - http://essensworld.cz
-    - http://trollitrancessions.net
-    - http://brotexxshferrogd.net
-    - http://pattumalamatha.com
     - http://thegardiners.ca
+    - http://dewatch.de
+    - http://electua.org
+    - http://endosuitepartners.com
     - http://datadunyasi.com
+    - http://way2lab.com
+    - http://essensworld.cz
+    - http://everstruct.com.au
+    - http://f1toh1.com
+    - http://tipografia.by
+    - http://byuscorp.com
+    - http://herrossoidffr6644qa.top
+    - http://tayangfood.com
+    - http://boomroom.jp
+    - http://pattumalamatha.com
     - http://joesrv.com
     - http://tjhangtai.com
-    - http://f1toh1.com
-    - http://tayangfood.com
-    - http://everstruct.com.au
-    - http://electua.org
-    - http://dewatch.de
-    - http://way2lab.com
     - http://primary-ls.ru
+    - http://trollitrancessions.net
     - http://knowyourmarketing.com
-    - http://herrossoidffr6644qa.top
+    - http://brotexxshferrogd.net
   condition: attributes

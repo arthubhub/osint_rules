@@ -1,8 +1,8 @@
 title: OSINT - The Blockbuster Sequel - dns_query
-id: fead1f6a-2808-4816-8a39-0deb23eff44e
+id: b4fe5ad2-4685-40dc-98a7-fa9ad72a0767
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58e8a3b2-b0fc-41a9-b89a-4a8b02de0b81.json
 logsource:
@@ -13,27 +13,27 @@ tags:
 detection:
   attributes:
     QueryName|contains:
-    - daedong.or.kr
-    - kcnp.or.kr
-    - wstore.lt
     - kosic.or.kr
+    - wstore.lt
     - xkclub.hk
+    - kcnp.or.kr
+    - daedong.or.kr
     IpAddresses:
-    - 23.115.75.188
-    - 211.233.13.62
-    - 80.153.49.82
-    - 218.103.37.22
-    - 103.224.82.154
-    - 211.233.13.11
-    - 221.161.82.208
-    - 199.26.11.17
-    - 180.67.205.101
-    - 182.70.113.138
-    - 211.236.42.52
-    - 193.189.144.145
     - 61.100.180.9
     - 61.78.63.95
-    - 211.49.171.243
+    - 80.153.49.82
     - 221.138.17.152
+    - 199.26.11.17
+    - 211.233.13.62
+    - 211.236.42.52
+    - 211.49.171.243
+    - 182.70.113.138
+    - 221.161.82.208
+    - 103.224.82.154
+    - 211.233.13.11
+    - 23.115.75.188
+    - 218.103.37.22
+    - 180.67.205.101
     - 209.105.242.64
+    - 193.189.144.145
   condition: attributes

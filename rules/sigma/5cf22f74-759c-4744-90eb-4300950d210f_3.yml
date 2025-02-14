@@ -1,19 +1,19 @@
 title: Linux server infection with coinminers (derived from original post with iptables
   rules) - process_creation
-id: 91834547-b126-456d-98d1-db1c3df47eab
+id: 56b5b76b-0506-4462-8ba7-b4d449e3acf2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cf22f74-759c-4744-90eb-4300950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1059
-- attack.group.coinminer
-- attack.t1496
 - attack.software.coinminer
+- attack.group.coinminer
+- attack.t1059
+- attack.t1496
 detection:
   object_1564:
     md5:

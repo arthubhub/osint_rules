@@ -1,8 +1,8 @@
 title: HackShit phishing as a service - url_request
-id: cc5b16e1-70cd-4827-bbbf-8e49f1c30332
+id: 41f8c951-3a34-49c8-b9e6-2b8854bfa927
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/596c6ae1-d4f0-4d84-8718-4a50950d210f.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - https://resources.netskope.com
     - logshit.com
     - hackshit.com
-    - https://resources.netskope.com
   condition: attributes

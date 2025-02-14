@@ -1,8 +1,8 @@
 title: OSINT - A tale of two zero-days - url_request
-id: 035357ce-72c3-4acc-9362-56cd4c086ffb
+id: c07bfba3-0066-4830-a816-de5dc07741ae
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5afafce0-0598-4ca0-b52a-41f4950d210f.json
 logsource:
@@ -14,6 +14,6 @@ detection:
   attributes:
     RequestUrl|contains:
     - https://www.welivesecurity.com
-    - http://j00ru.vexillium.org
     - http://www.ivanlef0u.tuxfamily.org
+    - http://j00ru.vexillium.org
   condition: attributes

@@ -1,8 +1,8 @@
 title: Bad Rabbit (via Pastebin) - url_request
-id: e98f4277-9cf2-4895-be75-6343c522c6f1
+id: bf44b9db-d21a-4001-b4b5-cc386a382393
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59f02f94-544c-4db8-b156-46ce950d210f.json
 logsource:
@@ -14,10 +14,10 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - 1dnscontrol.com
+    - https://twitter.com
+    - caforssztxqzf2nm.onion
     - https://app.any.run
     - fastmonitor1.net
     - https://pastebin.com
-    - https://twitter.com
-    - caforssztxqzf2nm.onion
+    - 1dnscontrol.com
   condition: attributes

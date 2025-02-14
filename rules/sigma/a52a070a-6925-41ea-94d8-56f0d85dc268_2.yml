@@ -1,37 +1,37 @@
 title: An Analysis of Infrastructure linked to the Hagga Threat Actor - dns_query
-id: ad784d63-a109-4b03-bd05-ad16b053d6b0
+id: 226b800b-14ce-43e2-b50f-99caadfc6f14
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/a52a070a-6925-41ea-94d8-56f0d85dc268.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1219
 - attack.t1571
+- attack.t1219
 detection:
   attributes:
     QueryName|contains:
+    - heavy-dutyindustry.shop
     - workflowstatus.live
     - newbotv4.monster
-    - heavy-dutyindustry.shop
     IpAddresses:
-    - 64.188.20.198
-    - 192.154.226.47
-    - 103.133.105.61
-    - 103.153.77.98
-    - 155.94.209.50
-    - 194.31.98.108
-    - 161.129.64.49
-    - 72.11.143.125
-    - 64.188.21.227
-    - 72.11.143.47
     - 78.138.105.142
-    - 207.32.217.137
-    - 69.174.99.181
-    - 64.188.27.104
-    - 72.11.157.208
     - 103.151.122.110
+    - 69.174.99.181
+    - 103.133.105.61
+    - 64.188.27.104
+    - 155.94.209.50
+    - 72.11.143.47
+    - 207.32.217.137
+    - 192.154.226.47
+    - 194.31.98.108
+    - 72.11.143.125
+    - 161.129.64.49
+    - 72.11.157.208
+    - 64.188.20.198
+    - 103.153.77.98
+    - 64.188.21.227
   condition: attributes

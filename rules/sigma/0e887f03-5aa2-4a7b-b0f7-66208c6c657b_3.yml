@@ -1,17 +1,17 @@
 title: "OSINT - North Korea\u2019s Lazarus APT leverages Windows Update client, GitHub\
   \ in latest campaign - process_creation"
-id: a836677b-4abd-4689-abcf-b86ab2eb68f4
+id: afbdfd4d-1635-40da-9d79-6182ad58bc78
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/0e887f03-5aa2-4a7b-b0f7-66208c6c657b.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.lazarus_group
 - attack.group.g0032
+- attack.group.lazarus_group
 detection:
   object_4178:
     md5:
@@ -79,11 +79,11 @@ detection:
   attributes:
     sha256:
     - 11b5944715da95e4a57ea54968439d955114088222fd2032d4e0282d12a58abb
-    - 829eceee720b0a3e505efbd3262c387b92abdf46183d51a50489e2b157dac3b1
-    - 5098ec21c88e14d9039d232106560b3c87487b51b40d6fef28254c37e4865182
-    - 9d18defe7390c59a1473f79a2407d072a3f365de9834b8d8be25f7e35a76d818
-    - 4216f63870e2cdfe499d09fce9caa301f9546f60a69c4032cb5fb6d5ceb9af32
-    - 660e60cc1fd3e155017848a1f6befc4a335825a6ae04f3416b9b148ff156d143
-    - f14b1a91ed1ecd365088ba6de5846788f86689c6c2f2182855d5e0954d62af3b
     - c677a79b853d3858f8c8b86ccd8c76ebbd1508cc9550f1da2d30be491625b744
+    - 829eceee720b0a3e505efbd3262c387b92abdf46183d51a50489e2b157dac3b1
+    - 660e60cc1fd3e155017848a1f6befc4a335825a6ae04f3416b9b148ff156d143
+    - 5098ec21c88e14d9039d232106560b3c87487b51b40d6fef28254c37e4865182
+    - 4216f63870e2cdfe499d09fce9caa301f9546f60a69c4032cb5fb6d5ceb9af32
+    - 9d18defe7390c59a1473f79a2407d072a3f365de9834b8d8be25f7e35a76d818
+    - f14b1a91ed1ecd365088ba6de5846788f86689c6c2f2182855d5e0954d62af3b
   condition: 1 of object_* or attributes

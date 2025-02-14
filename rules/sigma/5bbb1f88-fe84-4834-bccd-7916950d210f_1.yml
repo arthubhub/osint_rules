@@ -1,17 +1,17 @@
 title: OSINT - New Fox Ransomware Matrix Variant Tries Its Best to Close All File
   Handles - url_request
-id: 69091641-701e-42c2-afd4-ddfaed25d164
+id: 91ebe74d-5c6f-465f-bb6d-b72d171222c9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bbb1f88-fe84-4834-bccd-7916950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.matrix
 - attack.software.matrix
+- attack.group.matrix
 detection:
   attributes:
     RequestUrl|contains:

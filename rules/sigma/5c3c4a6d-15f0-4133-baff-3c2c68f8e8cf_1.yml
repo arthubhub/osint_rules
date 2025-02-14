@@ -1,8 +1,8 @@
 title: '2019-01-10: North Korea Lazarus Targeting REDBANC - url_request'
-id: f9d925b2-1798-40c5-a5be-1f9f4b42f1c3
+id: cc456b34-06dc-4510-9243-23964d96db5b
 description: edit this field when analysing or editing the rule - reported by "VK-Intel"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c3c4a6d-15f0-4133-baff-3c2c68f8e8cf.json
 logsource:
@@ -11,17 +11,17 @@ logsource:
 tags:
 - attack.t1064
 - attack.t1047
-- attack.t1005
-- attack.t1050
-- attack.t1053
-- attack.t1199
-- attack.t1132
 - attack.t1041
+- attack.t1050
+- attack.t1132
+- attack.t1199
+- attack.t1005
+- attack.t1053
 detection:
   attributes:
     RequestUrl|contains:
-    - https://bodyshoppechiropractic.com
     - bodyshoppechiropractic.com
-    - ecombox.store
     - https://ecombox.store
+    - ecombox.store
+    - https://bodyshoppechiropractic.com
   condition: attributes

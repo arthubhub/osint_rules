@@ -1,29 +1,29 @@
 title: OSINT - CARBANAK Week - Fire Eye - url_request
-id: 2b739225-1123-4b46-8edb-a962506b9c39
+id: e1de0e26-4e7f-41e0-9652-1acd14ff1228
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cd14624-0b24-4386-85f5-4e5e950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.carbanak
-- attack.group.g0046
 - attack.group.g0008
 - attack.group.fin7
 - attack.group.carbanak
-- attack.software.s0030
 - attack.group.anunak
+- attack.software.s0030
+- attack.software.carbanak
+- attack.group.g0046
 detection:
   attributes:
     RequestUrl|contains:
-    - aaaabbbbccccc.org
-    - stats10-google.com
-    - hhklhlkhkjhjkjk.org
-    - qwqreererwere.com
-    - akamai-technologies.org
     - https://www.fireeye.com
+    - aaaabbbbccccc.org
+    - hhklhlkhkjhjkjk.org
+    - akamai-technologies.org
     - comixed.org
+    - stats10-google.com
+    - qwqreererwere.com
   condition: attributes

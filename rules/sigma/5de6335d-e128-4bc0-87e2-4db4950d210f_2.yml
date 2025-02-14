@@ -1,18 +1,18 @@
 title: OSINT -  More than a Dozen Obfuscated APT33 Botnets Used for Extreme Narrow
   Targeting - dns_query
-id: 4e0f0d17-4d66-4d58-903f-0780e76328b2
+id: ce208cee-40ce-46f2-a125-744570cff7ee
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5de6335d-e128-4bc0-87e2-4db4950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
+- attack.group.magnallium
 - attack.group.apt33
 - attack.group.g0064
-- attack.group.magnallium
 detection:
   object_6577:
     IpAddresses:
@@ -79,15 +79,15 @@ detection:
     - 216.244.93.137
   attributes:
     QueryName|contains:
-    - zandelshop.com
-    - zeverco.com
-    - service-explorer.com
-    - suncocity.com
     - simsoshop.com
-    - oorgans.com
-    - service-eset.com
-    - update-symantec.com
+    - service-explorer.com
     - service-norton.com
-    - service-essential.com
+    - service-eset.com
     - qualitweb.com
+    - service-essential.com
+    - suncocity.com
+    - zeverco.com
+    - update-symantec.com
+    - zandelshop.com
+    - oorgans.com
   condition: 1 of object_* or attributes

@@ -1,18 +1,18 @@
 title: OSINT - Minecraft & CS:GO Ransomware Strive For Media Attention - url_request
-id: 9a9c5608-3165-4978-8e8a-3fe297b02911
+id: 4cd0884e-1043-43c3-a060-f8fd8d35a5ed
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ad8687b-0e10-4a8b-a157-46a5950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.csgo_ransomware
-- attack.group.mc_ransomware
-- attack.software.csgo_ransomware
 - attack.software.mc_ransomware
+- attack.group.mc_ransomware
+- attack.group.csgo_ransomware
+- attack.software.csgo_ransomware
 detection:
   attributes:
     RequestUrl|contains:

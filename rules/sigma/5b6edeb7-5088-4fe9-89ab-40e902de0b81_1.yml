@@ -1,17 +1,17 @@
 title: "OSINT - Malware Analysis Report (AR18-221A) MAR-10135536-17 \xE2\u20AC\u201C\
   \ North Korean Trojan: KEYMARBLE- MAR-10135536.r17.v1 - url_request"
-id: b4fea8f4-9fd9-4761-b55d-db182d1a3aeb
+id: 64d731ca-fcde-41ac-9356-4ba8cff1ceed
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b6edeb7-5088-4fe9-89ab-40e902de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.lazarus_group
 - attack.software.keymarble
+- attack.group.lazarus_group
 detection:
   attributes:
     RequestUrl|contains:

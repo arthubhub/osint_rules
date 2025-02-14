@@ -1,9 +1,9 @@
 title: OSINT - GratefulPOS credit card stealing malware - just in time for the shopping
   season - url_request
-id: c6840a60-3146-4e72-b97b-a83bec227259
+id: 1de31221-b024-462f-a41b-053e686e305b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a38dd78-f12c-4c15-8b98-c4d6950d210f.json
 logsource:
@@ -12,6 +12,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://community.rsa.com
     - a193-108-94-56-deploy-akamaitechnologies.com
+    - https://community.rsa.com
   condition: attributes

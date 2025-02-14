@@ -1,8 +1,8 @@
 title: OSINT - Linux/GafGyt - DVR devices compromised/infected - url_request
-id: aca73440-0b3e-4b72-97f6-20014352b864
+id: e3331f66-0311-44dc-8841-c740fb805e33
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57722fef-c208-4297-a3bc-40be950d210f.json
 logsource:
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - https://twitter.com
     - https://www.reddit.com
+    - https://isc.sans.edu
     - https://otx.alienvault.com
     - https://bitninja.io
-    - https://twitter.com
-    - https://isc.sans.edu
   condition: attributes

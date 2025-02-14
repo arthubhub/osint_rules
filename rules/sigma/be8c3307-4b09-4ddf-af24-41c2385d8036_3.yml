@@ -1,17 +1,17 @@
 title: "Remcos RAT New TTPS \u2013 Detection & Response - process_creation"
-id: 3843a93a-c375-436a-9961-c1d65dcbf2aa
+id: 389b2a36-12fe-4206-b7fe-a2b8cfb6a488
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/be8c3307-4b09-4ddf-af24-41c2385d8036.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.s0332
-- attack.group.remcos
 - attack.software.remcos
+- attack.group.remcos
+- attack.software.s0332
 detection:
   attributes:
     md5:
@@ -19,7 +19,7 @@ detection:
     - 6d25e04e66cccb61648f34728af7c2f2
     - 8cea687c5c02c9b71303c53dc2641f03
     sha256:
+    - e2816883a7a514fe1a3fbce95c04c2fc735f0c7ab872f7c23978388c42aea5c2
     - bf7212910de7bff455c3b3fe4b3a1a05059fe0da0c29e69b3aef492fe2a66fc0
     - af9596cf630f0f3e6e453ac8bdd6671f84feb65a057483ec5f620d04f4068209
-    - e2816883a7a514fe1a3fbce95c04c2fc735f0c7ab872f7c23978388c42aea5c2
   condition: attributes

@@ -1,8 +1,8 @@
 title: OSINT - The Blockbuster Sequel - url_request
-id: 2a78d074-2f70-4808-acc4-39ce2a24fa51
+id: c746159e-b460-46c6-a3df-97680a135cc5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58e8a3b2-b0fc-41a9-b89a-4a8b02de0b81.json
 logsource:
@@ -13,10 +13,10 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - xkclub.hk
-    - daedong.or.kr
     - kcnp.or.kr
-    - wstore.lt
+    - xkclub.hk
     - http://researchcenter.paloaltonetworks.com
+    - daedong.or.kr
     - kosic.or.kr
+    - wstore.lt
   condition: attributes

@@ -1,9 +1,9 @@
 title: OSINT Targeted Malware Attacks against NGO Linked to Attacks on Burmese Government
   Websites by Citizen Labs - url_request
-id: 9668b78e-4ad6-4d58-881c-9d023feceec8
+id: 9d1bc31e-f878-4bbe-a54f-4a3d64edb5b2
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56240d98-a524-4386-8e43-8371950d210b.json
 logsource:
@@ -12,9 +12,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - iyouthen.com
     - http://client.mailsecurityservice.com
-    - https://citizenlab.org
-    - https://passivetotal.org
+    - iyouthen.com
     - mailsecurityservice.com
+    - https://passivetotal.org
+    - https://citizenlab.org
   condition: attributes

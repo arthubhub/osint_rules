@@ -1,18 +1,18 @@
 title: OSINT - New BabyShark Malware Targets U.S. National Security Think Tanks -
   process_creation
-id: 8ecc254e-6103-4c4e-8fe2-97b819a1f4a2
+id: e3c08ae4-80f7-4c54-9de6-ec75213b22f4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c706a30-8ad4-4fcc-9e17-4d3d02de0b81.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1441
-- attack.software.babyshark
 - attack.group.stolen_pencil
+- attack.software.babyshark
+- attack.t1441
 detection:
   object_6230:
     md5:
@@ -86,14 +86,14 @@ detection:
     - 6f76a8e16908ba2d576cf0e8cdb70114dcb70e0f7223be10aab3a728dc65c41c
   attributes:
     sha256:
-    - 6f76a8e16908ba2d576cf0e8cdb70114dcb70e0f7223be10aab3a728dc65c41c
-    - 2b6dc1a826a4d5d5de5a30b458e6ed995a4cfb9cad8114d1197541a86905d60e
-    - 66439f0e377bbe8cda3e516e801a86c64688e7c3dde0287b1bfb298a5bdbc2a2
-    - 9d842c9c269345cd3b2a9ce7d338a03ffbf3765661f1ee6d5e178f40d409c3f8
+    - 1334c087390fb946c894c1863dfc9f0a659f594a3d6307fb48f24c30a23e0fc0
     - 94a09aff59c0c27d1049509032d5ba05e9285fd522eb20b033b8188e0fee4ff0
+    - 6f76a8e16908ba2d576cf0e8cdb70114dcb70e0f7223be10aab3a728dc65c41c
     - dc425e93e83fe02da9c76b56f6fd286eace282eaad6d8d497e17b3ec4059020a
     - 7b77112ac7cbb7193bcd891ce48ab2acff35e4f8d523980dff834cb42eaffafa
-    - 1334c087390fb946c894c1863dfc9f0a659f594a3d6307fb48f24c30a23e0fc0
-    - 8ef4bc09a9534910617834457114b9217cac9cb33ae22b37889040cde4cabea6
     - 331d17dbe4ee61d8f2c91d7e4af17fb38102003663872223efaa4a15099554d7
+    - 2b6dc1a826a4d5d5de5a30b458e6ed995a4cfb9cad8114d1197541a86905d60e
+    - 9d842c9c269345cd3b2a9ce7d338a03ffbf3765661f1ee6d5e178f40d409c3f8
+    - 66439f0e377bbe8cda3e516e801a86c64688e7c3dde0287b1bfb298a5bdbc2a2
+    - 8ef4bc09a9534910617834457114b9217cac9cb33ae22b37889040cde4cabea6
   condition: 1 of object_* or attributes

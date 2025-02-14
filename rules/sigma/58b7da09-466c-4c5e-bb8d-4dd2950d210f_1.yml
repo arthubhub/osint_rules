@@ -1,8 +1,8 @@
 title: OSINT - Google Play Apps Infected with Malicious IFrames - url_request
-id: f2683b8e-1973-4b3d-9257-44dfc7843c87
+id: 7bebb324-0675-4022-9b47-48ea22676339
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58b7da09-466c-4c5e-bb8d-4dd2950d210f.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - brenz.pl
     - http://researchcenter.paloaltonetworks.com
+    - brenz.pl
   condition: attributes

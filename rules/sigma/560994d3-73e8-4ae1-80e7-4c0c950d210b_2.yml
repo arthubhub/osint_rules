@@ -1,9 +1,9 @@
 title: "OSINT Gaza cybergang, where\xE2\u20AC\u2122s your IR team? by Kaspersky -\
   \ dns_query"
-id: 5859313a-85c4-4174-97da-7d150163732a
+id: 20812c65-32a9-43c9-8142-76f9322d1a4d
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/560994d3-73e8-4ae1-80e7-4c0c950d210b.json
 logsource:
@@ -12,26 +12,26 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - downloadskype.cf
     - chromeupdt.tk
     - store-legal.biz
-    - downloadskype.cf
-    - uae.kim
     - cbbnews.tk
+    - uae.kim
     IpAddresses:
-    - 185.33.168.150
-    - 198.105.122.96
-    - 192.52.167.125
-    - 162.220.246.117
-    - 131.72.136.124
-    - 192.99.111.228
-    - 198.105.117.37
-    - 109.200.23.207
-    - 131.72.136.11
-    - 66.155.23.36
-    - 131.72.136.171
     - 192.52.166.115
-    - 131.72.136.28
+    - 131.72.136.11
     - 172.227.95.162
+    - 109.200.23.207
     - 185.45.193.4
     - 192.253.246.169
+    - 162.220.246.117
+    - 131.72.136.171
+    - 185.33.168.150
+    - 131.72.136.124
+    - 66.155.23.36
+    - 192.99.111.228
+    - 192.52.167.125
+    - 198.105.117.37
+    - 131.72.136.28
+    - 198.105.122.96
   condition: attributes

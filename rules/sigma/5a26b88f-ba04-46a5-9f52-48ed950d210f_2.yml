@@ -1,26 +1,26 @@
 title: 'M2M - "..doc" 2017-12-04 : "Emailing: 1234567" - "1234567.7z" - dns_query'
-id: 762e086b-53ba-4fa9-a140-7f96d2f6f921
+id: 78b8857b-fbfe-46cc-9e1a-75ed72ef9421
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a26b88f-ba04-46a5-9f52-48ed950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.fake_globe_ransomware
 - attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
 detection:
   attributes:
     IpAddresses:
-    - 81.169.145.159
-    - 192.186.219.83
     - 195.222.33.183
-    - 64.50.184.217
     - 81.22.98.50
     - 195.87.101.81
-    - 216.242.171.101
     - 188.166.203.69
+    - 64.50.184.217
+    - 216.242.171.101
+    - 192.186.219.83
+    - 81.169.145.159
     - 198.23.241.227
   condition: attributes

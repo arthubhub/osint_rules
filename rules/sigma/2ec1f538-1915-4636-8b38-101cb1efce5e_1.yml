@@ -1,38 +1,38 @@
 title: A22-108A TraderTraitor North Korean State-Sponsored APT Targets Blockchain
   Companies - url_request
-id: 4d3d5db4-97bb-4b80-b81a-e8e29df3049a
+id: 65bbcfde-9f79-46f3-ae23-5c8be19338ba
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/2ec1f538-1915-4636-8b38-101cb1efce5e.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1552.004
-- attack.t1071.001
 - attack.group.lazarus_group
-- attack.t1566.001
+- attack.t1071.001
 - attack.group.g0032
+- attack.t1552.004
+- attack.t1566.001
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.esilet.com
-    - dafom.dev
-    - alticgo.com
-    - https://www.alticgo.com
-    - https://aideck.net
-    - greenvideo.nl
-    - aideck.net
-    - haciendadeclarevot.com
-    - infodigitalnew.com
-    - vinoymas.ch
-    - https://github.com
-    - sche-eg.org
-    - cryptais.com
-    - creaideck.com
-    - tokenais.com
     - esilet.com
+    - cryptais.com
+    - https://www.esilet.com
+    - haciendadeclarevot.com
+    - alticgo.com
+    - greenvideo.nl
+    - creaideck.com
+    - https://github.com
+    - https://aideck.net
+    - tokenais.com
+    - dafom.dev
+    - infodigitalnew.com
+    - sche-eg.org
     - dafnefonseca.com
+    - aideck.net
+    - https://www.alticgo.com
+    - vinoymas.ch
   condition: attributes

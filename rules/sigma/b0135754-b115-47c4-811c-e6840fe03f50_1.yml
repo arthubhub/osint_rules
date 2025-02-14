@@ -1,8 +1,8 @@
 title: Serverless InfoStealer delivered in Est European Countries - url_request
-id: d6ce7a56-0684-4dfe-bc92-88d51fcccb73
+id: 10f91820-8422-45a1-8f49-ef0ea1620fba
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/b0135754-b115-47c4-811c-e6840fe03f50.json
 logsource:
@@ -14,11 +14,11 @@ detection:
     - https://yoroi.company
   attributes:
     RequestUrl|contains:
-    - https://bitbucket.org
-    - https://bitbucket.
-    - https://1230948%1230948%1230948%1230948%1230948%1230948
-    - https://bitly.com
-    - https://madarbloghogya.blogspot.com
     - http://69.174.99.181
     - http://crypters.coolpage.biz
+    - https://madarbloghogya.blogspot.com
+    - https://bitbucket.org
+    - https://bitbucket.
+    - https://bitly.com
+    - https://1230948%1230948%1230948%1230948%1230948%1230948
   condition: 1 of object_* or attributes

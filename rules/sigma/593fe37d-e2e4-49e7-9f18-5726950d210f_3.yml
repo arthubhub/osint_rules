@@ -1,16 +1,16 @@
 title: 'M2M -  Jaff 2017-06-13 : "Invoice PIS1234567.zip" - process_creation'
-id: bb1993ec-3bcb-444b-afe7-0b3606d901e0
+id: 3162d6fb-7b8b-42aa-b0a0-15609cec9cca
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/593fe37d-e2e4-49e7-9f18-5726950d210f.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.jaff
 - attack.software.jaff
+- attack.group.jaff
 detection:
   attributes:
     md5:
@@ -20,6 +20,6 @@ detection:
     - 6c5ffb2702f91868b084eb0e5fcf3b68dafa2c5d
     - 2ca20e12f8a2ba865f7144671e1b61f906a93b0b
     sha256:
-    - 31f37745ed6e75d4ee975481b603a95d8e20642153ec6dc1c87193066990aaec
     - c748df01456ff4f89c6413b229fafdfcd07f6503b9b9d3e3450642e3070740ac
+    - 31f37745ed6e75d4ee975481b603a95d8e20642153ec6dc1c87193066990aaec
   condition: attributes

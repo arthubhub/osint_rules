@@ -1,62 +1,62 @@
 title: Kaseya ransomware attack - indicators and information publicly available -
   dns_query
-id: 007c47f9-5fb3-4bd5-ad4e-8504c2878269
+id: cfde5ed1-b75d-4ba2-b4e7-53d551421819
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e0eaf6f2-a12c-4b31-9d19-f77faf1ea4c9.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.sodinokibi
-- attack.t1486
 - attack.group.sodinokibi
+- attack.t1486
+- attack.software.sodinokibi
 detection:
   object_11972:
     IpAddresses:
     - 161.35.239.148
   attributes:
     QueryName|contains:
-    - c2e-poitiers.com
-    - iqbalscientific.com
-    - faroairporttransfers.net
-    - 101gowrie.com
-    - facettenreich27.de
-    - fotoscondron.com
-    - bierensgebakkramen.nl
-    - 35-40konkatsu.net
-    - 365questions.org
-    - milestoneshows.com
-    - smartypractice.com
-    - blgr.be
-    - simoneblum.de
-    - tanzschule-kieber.de
-    - mindpackstudios.com
-    - gonzalezfornes.es
-    - thomasvicino.com
-    - homng.net
-    - 4net.guru
-    - cursosgratuitosnainternet.com
-    - gmto.fr
-    - southeasternacademyofprosthodontics.org
-    - tonelektro.nl
-    - myhostcloud.com
-    - filmstreamingvfcomplet.be
-    - pasvenska.se
-    - daklesa.de
-    - blossombeyond50.com
-    - 8449nohate.org
-    - candyhouseusa.com
-    - 1team.es
-    - cerebralforce.net
-    - sw1m.ru
-    - 123vrachi.ru
-    - ncuccr.org
     - 12starhd.online
-    - 4youbeautysalon.com
-    - fannmedias.com
+    - 365questions.org
     - bxdf.info
+    - 101gowrie.com
+    - mindpackstudios.com
+    - faroairporttransfers.net
+    - 1team.es
+    - tanzschule-kieber.de
+    - facettenreich27.de
+    - gonzalezfornes.es
+    - filmstreamingvfcomplet.be
+    - fannmedias.com
+    - simoneblum.de
+    - bierensgebakkramen.nl
+    - homng.net
+    - smartypractice.com
+    - fotoscondron.com
+    - blossombeyond50.com
+    - 4youbeautysalon.com
+    - iqbalscientific.com
+    - 35-40konkatsu.net
+    - cerebralforce.net
+    - myhostcloud.com
+    - sw1m.ru
+    - pasvenska.se
+    - blgr.be
+    - 8449nohate.org
+    - 123vrachi.ru
+    - milestoneshows.com
+    - c2e-poitiers.com
+    - southeasternacademyofprosthodontics.org
+    - candyhouseusa.com
+    - thomasvicino.com
+    - 4net.guru
     - kaotikkustomz.com
+    - ncuccr.org
+    - gmto.fr
+    - tonelektro.nl
+    - cursosgratuitosnainternet.com
+    - daklesa.de
   condition: 1 of object_* or attributes

@@ -1,8 +1,8 @@
 title: OSINT - Kernel Mode Malicious Loader - process_creation
-id: 30bc9bb7-0ee7-42e7-8140-0bb921eae6dd
+id: 0f76a584-8fef-44f0-a2d7-ab720e0e7ca4
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5cc92e5a-c624-4343-8352-40fd02de0b81.json
 logsource:
@@ -21,6 +21,6 @@ detection:
     - 1284962d30eabb8e47261414350c01ec04555800a3866f4e6cf1e20816e25a2e
   attributes:
     sha1:
-    - 9cfced68abe4f2c0dc5c42f47652592077c26fd6
     - e1111022deeeed0389ff01ebb02489c45fa2f71a
+    - 9cfced68abe4f2c0dc5c42f47652592077c26fd6
   condition: 1 of object_* or attributes

@@ -1,8 +1,8 @@
 title: Malspam (2016-04-28) - Locky (#2) - dns_query
-id: fc753c34-0fb4-47fe-a05f-ea3cb8a0092a
+id: 025da909-eec4-4f9b-bffe-f0f72bfa4130
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5721c2e4-05ec-4af3-9264-411b950d210f.json
 logsource:
@@ -12,27 +12,27 @@ detection:
   attributes:
     QueryName|contains:
     - htankds.info
-    - be-stlines-tore.com
-    - florsan.net
     - ivanmayor.es
     - smartmol.ru
     - brutal-escort.ru
+    - be-stlines-tore.com
+    - florsan.net
     - h-zd.ru
     IpAddresses:
+    - 86.109.170.198
+    - 77.221.130.19
+    - 92.53.112.82
+    - 167.114.156.90
+    - 81.177.165.93
+    - 91.234.32.19
+    - 89.161.167.194
     - 83.217.26.168
     - 185.26.122.123
-    - 92.53.112.82
     - 96.44.163.12
-    - 91.234.32.19
-    - 206.221.178.138
-    - 81.177.165.31
-    - 77.221.130.19
     - 51.254.240.60
-    - 167.114.156.90
-    - 31.41.44.246
-    - 81.177.165.93
-    - 91.219.31.18
-    - 86.109.170.198
-    - 89.161.167.194
     - 50.6.80.163
+    - 206.221.178.138
+    - 31.41.44.246
+    - 81.177.165.31
+    - 91.219.31.18
   condition: attributes

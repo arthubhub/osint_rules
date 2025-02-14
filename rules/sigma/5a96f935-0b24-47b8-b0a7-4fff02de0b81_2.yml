@@ -1,19 +1,19 @@
 title: OSINT - Sofacy Attacks Multiple Government Entities - dns_query
-id: 4232270b-5942-48af-9ded-987d184ad820
+id: 4ba7e078-63fd-4cf5-bb89-42f81e08f2d9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a96f935-0b24-47b8-b0a7-4fff02de0b81.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.apt28
 - attack.group.sofacy
+- attack.group.apt28
 detection:
   attributes:
     QueryName|contains:
-    - cdnverify.net
     - hotfixmsupload.com
+    - cdnverify.net
   condition: attributes

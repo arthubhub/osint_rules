@@ -1,16 +1,16 @@
 title: OSINT - Neo23x0 Yara Rule Set and Sigma Rule Set - WannaCry - url_request
-id: 3fb2a4ab-90b9-496e-99eb-915cb6eb2fc1
+id: 89414882-5ece-4f54-be8b-3a8788b43d1e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59188096-18dc-47dc-9a67-beaf950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.wannacry
 - attack.group.wannacry
+- attack.software.wannacry
 detection:
   attributes:
     RequestUrl|contains:

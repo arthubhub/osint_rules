@@ -1,8 +1,8 @@
 title: Malspam (2016-03-10) - Locky, TeslaCrypt - dns_query
-id: 1b6ca572-6b3f-4a2b-b83e-f18d30a0c346
+id: a01107fb-4a61-4cb0-afe6-cb7db2105bc6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56e17b23-c61c-42e8-9f33-463e950d210f.json
 logsource:
@@ -13,13 +13,13 @@ detection:
     QueryName|contains:
     - tele-channel.com
     IpAddresses:
-    - 31.184.196.78
     - 91.234.33.149
-    - 78.40.108.39
     - 91.219.30.254
-    - 37.235.53.18
-    - 149.154.157.14
-    - 91.195.12.131
-    - 151.236.14.51
     - 178.162.214.146
+    - 37.235.53.18
+    - 91.195.12.131
+    - 149.154.157.14
+    - 31.184.196.78
+    - 78.40.108.39
+    - 151.236.14.51
   condition: attributes

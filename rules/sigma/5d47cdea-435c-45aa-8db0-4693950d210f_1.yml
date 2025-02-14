@@ -1,24 +1,24 @@
 title: "OSINT - From Carnaval to Cinco de Mayo \xE2\u20AC\u201C The journey of Amavaldo\
   \ - url_request"
-id: 3a26c1e5-8a65-4386-b60d-7c87a202075a
+id: 256ddd44-4526-4f59-848c-eef08bf1e9e5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5d47cdea-435c-45aa-8db0-4693950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
+- attack.t1125
+- attack.t1036
+- attack.t1194
+- attack.software.amavaldo_banking_trojan
 - attack.t1113
 - attack.t1056
-- attack.t1036
 - attack.t1187
-- attack.software.amavaldo_banking_trojan
-- attack.t1194
-- attack.software.amavaldo
 - attack.t1017
-- attack.t1125
+- attack.software.amavaldo
 detection:
   attributes:
     RequestUrl|contains:

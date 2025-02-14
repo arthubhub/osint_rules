@@ -1,9 +1,9 @@
 title: 'OSINT - ProjectSauron: top level cyber-espionage platform covertly extracts
   encrypted government comms - dns_query'
-id: 3e0bc90e-2e37-4256-8368-a821dd9d2d18
+id: f09dbada-6c59-4b44-88d8-af1aef2bda34
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57a8a2e8-6054-46ef-bab9-418e950d210f.json
 logsource:
@@ -12,13 +12,13 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - bikessport.com
     - rapidcomments.com
+    - bikessport.com
     IpAddresses:
-    - 185.78.64.121
     - 81.4.108.168
-    - 5.196.206.166
     - 178.211.40.117
-    - 176.9.242.188
     - 217.160.176.157
+    - 5.196.206.166
+    - 176.9.242.188
+    - 185.78.64.121
   condition: attributes

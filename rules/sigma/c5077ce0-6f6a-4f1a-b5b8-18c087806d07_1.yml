@@ -1,35 +1,35 @@
 title: AA22-138B Threat Actors Chaining VMware Vulnerabilities for Full System Control
   - url_request
-id: bf60ab44-5921-4bc5-8127-4b2dc6e5a4d7
+id: 2c6cd73a-493c-4e92-8369-bca75de0f38d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/c5077ce0-6f6a-4f1a-b5b8-18c087806d07.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1068
-- attack.t1059.002
-- attack.t1105
-- attack.t1203
-- attack.t1071.001
-- attack.t1505.003
-- attack.t1090
 - attack.t1573.001
-- attack.t1588.001
+- attack.t1090
 - attack.t1222.002
-- attack.t1059.004
-- attack.t1560
+- attack.t1068
+- attack.t1105
+- attack.t1071.001
 - attack.t1003.008
+- attack.t1203
+- attack.t1059.002
 - attack.t1070.003
+- attack.t1560
+- attack.t1588.001
+- attack.t1505.003
+- attack.t1059.004
 detection:
   attributes:
     RequestUrl|contains:
+    - https://20.232.97.189
+    - http://84.38.133.149
+    - https://149.248.35.200.sslip.io
     - 149.248.35.200.sslip.io
     - sslip.io
-    - https://20.232.97.189
-    - https://149.248.35.200.sslip.io
-    - http://84.38.133.149
   condition: attributes

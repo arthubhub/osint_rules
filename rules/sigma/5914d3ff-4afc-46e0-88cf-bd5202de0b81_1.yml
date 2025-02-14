@@ -1,21 +1,21 @@
 title: 'OSINT - Practice Makes Perfect: Nemucod Evolves Delivery and Obfuscation Techniques
   to Harvest Credentials - url_request'
-id: ce7cec4a-b8c9-4c43-bbff-17d5af9eb36d
+id: 5a9c7e9c-a255-4814-8caf-83951ab955c3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5914d3ff-4afc-46e0-88cf-bd5202de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.nemucod
 - attack.group.nemucod
+- attack.software.nemucod
 detection:
   attributes:
     RequestUrl|contains:
-    - http://researchcenter.paloaltonetworks.com
-    - http://185.159.82.11
     - https://185.159.82.11
+    - http://185.159.82.11
+    - http://researchcenter.paloaltonetworks.com
   condition: attributes

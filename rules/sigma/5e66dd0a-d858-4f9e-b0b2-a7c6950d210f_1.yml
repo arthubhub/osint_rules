@@ -1,19 +1,19 @@
 title: Harma and Odveta Ransomware - url_request
-id: 97a2fc87-e9ba-40a4-a90a-a0642be3273c
+id: df3b2080-de52-4d6a-8fe4-b65417592801
 description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e66dd0a-d858-4f9e-b0b2-a7c6950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1043
 - attack.t1486
+- attack.t1043
 - attack.t1060
-- attack.t1059
 - attack.t1133
+- attack.t1059
 detection:
   attributes:
     RequestUrl|contains:

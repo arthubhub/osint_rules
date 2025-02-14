@@ -1,9 +1,9 @@
 title: "OSINT - Keep Calm and (Don\xE2\u20AC\u2122t) Enable Macros: A New Threat Actor\
   \ Targets UAE Dissidents - dns_query"
-id: 4179115f-71dc-4c86-81e2-9e867db2221a
+id: 38a5ceff-0afc-4d56-b250-86effbfa63c1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/574c3d9c-41dc-4af6-b99d-1d31950d210f.json
 logsource:
@@ -12,12 +12,12 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - optimizedimghosting.com
     - adhostingcache.com
-    - edgecacheimagehosting.com
     - adhostingcaches.com
     - incapsulawebcache.com
-    - optimizedimghosting.com
+    - edgecacheimagehosting.com
     IpAddresses:
-    - 87.120.37.83
     - 95.215.44.37
+    - 87.120.37.83
   condition: attributes

@@ -1,9 +1,9 @@
 title: 'OSINT Fidelis Threat Advisory #1019 Ratcheting Down on JSocket: A PC and Android
   Threat by Fidelis Cybersecurity - url_request'
-id: 2909ab6d-9729-4c84-8c20-50e16b93af05
+id: 884d8740-ffea-41e5-a214-588120b63b89
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/563a0656-bfa0-4e80-90df-a033950d210b.json
 logsource:
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.fidelissecurity.com
     - d370.cc
     - https://otx.alienvault.com
+    - https://www.fidelissecurity.com
   condition: attributes

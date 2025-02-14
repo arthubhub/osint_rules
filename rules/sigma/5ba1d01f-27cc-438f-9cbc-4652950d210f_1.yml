@@ -1,19 +1,19 @@
 title: OSINT (expanded) - Xbash Combines Botnet, Ransomware, Coinmining in Worm that
   Targets Linux and Windows - url_request
-id: 7105fecb-e1b3-4fc9-8538-83fe0a350890
+id: cd352ac7-6768-4016-9635-2e825bba2b35
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ba1d01f-27cc-438f-9cbc-4652950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.xbash
+- attack.t1071
 - attack.group.iron_group
 - attack.t1190
-- attack.t1071
-- attack.software.xbash
 detection:
   object_819:
     RequestUrl|contains:
@@ -29,14 +29,14 @@ detection:
     - https://pastebin.com
   attributes:
     RequestUrl|contains:
-    - http://png.realtimenews.tk
-    - scanaan.tk
-    - https://researchcenter.paloaltonetworks.com
-    - http://daknobcq4zal6vbm.tk
-    - http://d3goboxon32grk2l.tk
-    - http://xmr.enjoytopic.tk
-    - http://e3sas6tzvehwgpak.tk
     - http://3g2upl4pq6kufc4m.tk
-    - https://pastebin.com
+    - http://d3goboxon32grk2l.tk
+    - http://png.realtimenews.tk
+    - http://xmr.enjoytopic.tk
+    - http://daknobcq4zal6vbm.tk
+    - scanaan.tk
     - blockbitcoin.com
+    - http://e3sas6tzvehwgpak.tk
+    - https://pastebin.com
+    - https://researchcenter.paloaltonetworks.com
   condition: 1 of object_* or attributes

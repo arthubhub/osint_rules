@@ -1,8 +1,8 @@
 title: OSINT Operation Double Tap from FireEye - url_request
-id: 3411c964-6f36-4101-8cc4-84932ad59d57
+id: 1a7f5912-fa95-4ba3-af27-74c5c3ae0f73
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5474459d-1c60-456a-b057-4bdc950d210b.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://github.com
     - https://www.fireeye.com
+    - https://github.com
   condition: attributes

@@ -1,9 +1,9 @@
 title: Phishing La Banque Postale - Lookyloo Capture (http://one.doesntexist.com/p/b2ba4)
   - url_request
-id: 61c1f373-c7cc-4202-b56b-77f1cbe88bc1
+id: 882323c6-d63f-43d9-81cc-524d9bfdd375
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/ff6b1c02-8c44-4646-9d3f-9a831b5ba006.json
 logsource:
@@ -16,14 +16,14 @@ detection:
     - http://one.doesntexist.com
   object_18080:
     RequestUrl|contains:
-    - one.doesntexist.com
     - https://one.doesntexist.com
+    - one.doesntexist.com
   object_18081:
     RequestUrl|contains:
-    - one.doesntexist.com
     - https://one.doesntexist.com
+    - one.doesntexist.com
   attributes:
     RequestUrl|contains:
-    - https://urlscan.io
     - https://lookyloo.circl.lu
+    - https://urlscan.io
   condition: 1 of object_* or attributes

@@ -1,41 +1,41 @@
 title: 'Invoice ###### 05/17/2017 from dontreply@random - dns_query'
-id: eabbd93e-a57e-4cc1-8072-9fd20da65fbf
+id: 8753178e-9d99-4f89-b564-c6926bdc9ea2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/591d566d-3ec0-4195-adb2-9f28950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.jaff
 - attack.software.jaff
+- attack.group.jaff
 detection:
   attributes:
     IpAddresses:
-    - 65.19.169.34
-    - 129.121.5.206
-    - 107.154.168.187
-    - 211.115.89.71
-    - 185.87.184.212
-    - 199.166.6.15
-    - 46.30.213.164
-    - 103.224.248.183
-    - 107.154.161.187
-    - 81.88.57.68
-    - 213.246.39.74
-    - 47.91.107.213
-    - 143.95.74.249
-    - 92.43.113.68
-    - 212.18.226.16
-    - 5.61.25.106
     - 192.162.100.191
-    - 37.230.111.113
-    - 81.169.145.95
-    - 103.247.9.134
-    - 93.185.104.24
-    - 51.254.159.78
+    - 129.121.5.206
+    - 81.88.57.68
     - 211.149.239.112
+    - 107.154.161.187
+    - 107.154.168.187
+    - 213.246.39.74
+    - 103.224.248.183
+    - 93.185.104.24
+    - 47.91.107.213
+    - 185.87.184.212
+    - 143.95.74.249
+    - 81.169.145.95
+    - 37.230.111.113
+    - 103.247.9.134
+    - 92.43.113.68
+    - 211.115.89.71
+    - 51.254.159.78
+    - 46.30.213.164
     - 34.209.214.237
+    - 65.19.169.34
+    - 199.166.6.15
+    - 5.61.25.106
+    - 212.18.226.16
   condition: attributes

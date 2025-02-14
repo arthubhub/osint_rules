@@ -1,21 +1,21 @@
 title: FIN8-LINKED ACTOR TARGETS CITRIX NETSCALER SYSTEMS - dns_query
-id: f324aa03-69e9-4a48-a3ba-df33f0d23fc1
+id: 8f60fd59-813d-4295-aaf3-f78ac466936a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e8141fc5-e84d-4aeb-8879-f71caffab35a.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.unidentified_103_fin8
+- attack.group.g0061
 - attack.software.unidentified_103_fin8
 - attack.group.fin8
-- attack.group.g0061
+- attack.group.unidentified_103_fin8
 detection:
   attributes:
     IpAddresses:
-    - 45.66.248.189
     - 85.239.53.49
+    - 45.66.248.189
   condition: attributes

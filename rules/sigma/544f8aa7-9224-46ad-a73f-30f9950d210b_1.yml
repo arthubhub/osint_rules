@@ -1,8 +1,8 @@
 title: OSINT - Operation SMN (Novetta) - url_request
-id: 6ae73745-f9d4-4c51-9eea-f245d2914573
+id: f80b021b-e6f5-4d47-a500-9581f8031079
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/544f8aa7-9224-46ad-a73f-30f9950d210b.json
 logsource:
@@ -13,7 +13,7 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
+    - http://www.novetta.com
     - http://novetta.com
     - http://blogs.cisco.com
-    - http://www.novetta.com
   condition: attributes

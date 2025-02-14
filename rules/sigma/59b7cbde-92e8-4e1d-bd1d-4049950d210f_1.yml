@@ -1,8 +1,8 @@
 title: Malspam 2017-09-12 - 'Your Amazon.co.uk order' phishing - url_request
-id: 865653ce-fe8d-4f04-8752-fe5445bd85f1
+id: e1412bd9-7f7f-4db0-9092-a55d63f81df7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59b7cbde-92e8-4e1d-bd1d-4049950d210f.json
 logsource:
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - tarimsalteknoloji.com
-    - rossfranklinarchitecture.com
     - http://tarimsalteknoloji.com
-    - http://asilk.co.uk
+    - tarimsalteknoloji.com
     - http://rossfranklinarchitecture.com
+    - rossfranklinarchitecture.com
+    - http://asilk.co.uk
   condition: attributes

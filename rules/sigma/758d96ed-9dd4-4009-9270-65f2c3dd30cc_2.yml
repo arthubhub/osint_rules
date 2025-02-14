@@ -1,35 +1,35 @@
 title: 'Buzzing in the Background: BumbleBee, a New Modular Backdoor Evolved From
   BookWorm - process_creation'
-id: 15c4767a-ab86-4f9d-8de4-637c44692ad1
+id: 078897be-a785-4b7c-a210-3d8b7c1dd246
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/758d96ed-9dd4-4009-9270-65f2c3dd30cc.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.t1592
-- attack.t1071.001
-- attack.t1056.001
-- attack.t1548.002
-- attack.software.bumblebee
+- attack.t1090
 - attack.t1056
-- attack.t1480
-- attack.t1547
-- attack.t1070
-- attack.group.bumblebee
-- attack.t1573.001
-- attack.group.bookworm
 - attack.t1055
-- attack.t1543
+- attack.group.bookworm
+- attack.t1056.001
+- attack.t1071.001
+- attack.software.bookworm
+- attack.t1480
+- attack.t1070
 - attack.t1417
 - attack.t1587.001
-- attack.t1574
+- attack.software.bumblebee
 - attack.t1037
-- attack.t1090
-- attack.software.bookworm
+- attack.group.bumblebee
+- attack.t1548.002
+- attack.t1574
+- attack.t1573.001
+- attack.t1547
+- attack.t1592
+- attack.t1543
 detection:
   object_6646:
     sha256:
@@ -43,9 +43,9 @@ detection:
   attributes:
     sha256:
     - 4ecde81a476f1e4622d192fe2f120f7c5c3ec58bf118b791d5532f3ff61c09ee
-    - 8ab8bb836b074e170c129b7f0523d256930fd1f8cf126ca1875b450fdb6c4c05
-    - 6690b7ace461b60b7a72613c202d70f4684c8cdc5afbb4267c67b5fe5dbf828e
-    - 515cb31b2c89df83ea6d54d5c0c3e4fe9a024319d9bd8fd76ad351860bd67ea3
     - eeca34fba68754e05e7307de61708e4ce74441754fcc6ae762148edf9e8e2ca0
+    - 515cb31b2c89df83ea6d54d5c0c3e4fe9a024319d9bd8fd76ad351860bd67ea3
+    - 8ab8bb836b074e170c129b7f0523d256930fd1f8cf126ca1875b450fdb6c4c05
     - 8e340746339614ca105a1873dad471188b24421648d080e37d52b87f4ced5e6d
+    - 6690b7ace461b60b7a72613c202d70f4684c8cdc5afbb4267c67b5fe5dbf828e
   condition: 1 of object_* or attributes

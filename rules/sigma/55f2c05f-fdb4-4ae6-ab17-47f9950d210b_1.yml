@@ -1,9 +1,9 @@
 title: 'OSINT  Musical Chairs: Multi-Year Campaign Involving New Variant of Gh0st
   Malware by Palo Alto Networks Unit 42 - url_request'
-id: 4f099e7d-dc83-4f2e-87ef-1eb183489a66
+id: 95e6720c-61e2-4de1-9e22-2def4929cea7
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/55f2c05f-fdb4-4ae6-ab17-47f9950d210b.json
 logsource:
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - yourbroiler.com
     - http://researchcenter.paloaltonetworks.com
     - meitanjiaoyiwang.com
-    - yourbroiler.com
   condition: attributes

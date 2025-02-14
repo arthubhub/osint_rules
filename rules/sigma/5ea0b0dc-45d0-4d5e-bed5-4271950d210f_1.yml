@@ -1,44 +1,44 @@
 title: Ursnif Campaign f1.pipen.at - url_request
-id: 648e5849-c42e-4269-b8ec-f60e64b83e66
+id: 04f77100-aeba-4d14-aa07-6a93fdee107c
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ea0b0dc-45d0-4d5e-bed5-4271950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1043
-- attack.t1170
-- attack.group.gozi
-- attack.t1071
-- attack.t1192
-- attack.t1204
+- attack.t1117
 - attack.t1500
 - attack.software.gozi
+- attack.t1043
 - attack.t1112
-- attack.t1117
+- attack.group.gozi
+- attack.t1192
+- attack.t1071
+- attack.t1170
+- attack.t1204
 detection:
   attributes:
     RequestUrl|contains:
-    - f1.pipen.at
-    - ahonpot.at
-    - kamalak.at
-    - www.kamalak.at
-    - dianer.at
-    - targoo.at
-    - api5.malorun.at
-    - two.ahah100.at
-    - https://thedfirreport.com
     - mobify.at
-    - deem.dianer.at
-    - free.up100n.at
-    - pipen.at
     - vv.malorun.at
+    - dianer.at
+    - api5.malorun.at
+    - dxdeedle.host
     - api10.dianer.at
     - been.dianer.at
-    - dxdeedle.host
+    - https://thedfirreport.com
+    - kamalak.at
+    - deem.dianer.at
+    - ahonpot.at
+    - www.kamalak.at
+    - two.ahah100.at
+    - pipen.at
     - ahah100.at
+    - targoo.at
+    - free.up100n.at
+    - f1.pipen.at
   condition: attributes

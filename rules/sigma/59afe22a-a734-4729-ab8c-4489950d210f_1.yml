@@ -1,16 +1,16 @@
 title: OSINT - SynAck Ransomware Sees Huge Spike in Activity - url_request
-id: 3a4b86d1-ab25-45b3-944b-95cf361da6f3
+id: d5386761-791a-4556-b4d0-fb36e04cdfd2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59afe22a-a734-4729-ab8c-4489950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.synack
 - attack.software.synack
+- attack.group.synack
 detection:
   attributes:
     RequestUrl|contains:

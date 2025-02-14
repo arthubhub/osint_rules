@@ -1,8 +1,8 @@
 title: Ransomware Activity Targeting the Healthcare and Public Health Sector - url_request
-id: 9b61f0dc-3b07-4db9-971c-26d766460ea1
+id: 4d564e39-bad0-4ba0-af6d-8f90592660ef
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/4dd5ab8b-f4dd-4d69-9873-745dd8196b94.json
 logsource:
@@ -14,14 +14,14 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - ipecho.net
-    - myexternalip.com
     - mangoclone.com
-    - kostunivo.com
-    - onixcellent.com
+    - icanhazip.com
     - chishir.com
     - https://us-cert.cisa.gov
+    - myexternalip.com
+    - ipecho.net
     - ipinfo.io
+    - kostunivo.com
     - wtfismyip.com
-    - icanhazip.com
+    - onixcellent.com
   condition: attributes

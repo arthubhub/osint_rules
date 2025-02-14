@@ -1,9 +1,9 @@
 title: 'Talos Blog: Threat Roundup for May 18-25 - url_request'
-id: 738a292a-07c2-44f8-8e67-057d9cdf6821
+id: 0b34adf5-bded-4add-b539-288e4c6fe03c
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b0d3d49-7be8-4be1-9d15-5d4d0acd0835.json
 logsource:
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - reason0monster-meadow.tk
     - ec2-35-158-168-189.eu-central-1.compute.amazonaws.com
     - https://blog.talosintelligence.com
-    - reason0monster-meadow.tk
   condition: attributes

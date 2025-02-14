@@ -1,46 +1,46 @@
 title: 2017-05-15 Malspam  00_Invoice_###.PDF - dns_query
-id: 36c076cb-624b-428b-b375-b2da86550ffe
+id: 9b2f30b9-255a-4d49-bfc0-a2e2f04d5ee8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/591bfbca-a168-4ca0-b1d8-4c14950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.jaff
 - attack.software.jaff
+- attack.group.jaff
 detection:
   attributes:
     QueryName|contains:
     - byydei74fg43ff4f.net
-    - urachart.com
-    - sjffonrvcik45bd.info
     - fotografikum.com
+    - sjffonrvcik45bd.info
+    - urachart.com
     - 5hdnnd74fffrottd.com
     IpAddresses:
+    - 61.191.55.24
+    - 203.170.192.184
+    - 5.10.105.54
+    - 107.180.14.32
     - 185.24.219.110
     - 94.73.148.80
-    - 47.91.145.254
-    - 78.46.162.14
     - 160.153.162.140
-    - 185.2.31.189
-    - 81.169.145.156
-    - 81.177.135.222
-    - 203.170.192.184
-    - 69.64.147.39
     - 93.89.224.41
-    - 89.26.241.3
-    - 5.10.105.54
+    - 47.91.145.254
     - 81.169.145.161
-    - 112.78.6.183
-    - 193.70.44.106
-    - 166.62.27.56
     - 116.0.121.220
+    - 81.177.135.222
+    - 166.62.27.56
+    - 89.26.241.3
+    - 185.2.31.189
+    - 112.78.6.183
     - 34.209.214.237
-    - 107.180.14.32
-    - 61.191.55.24
-    - 85.248.29.38
     - 203.124.43.229
+    - 78.46.162.14
+    - 85.248.29.38
+    - 81.169.145.156
+    - 193.70.44.106
+    - 69.64.147.39
   condition: attributes

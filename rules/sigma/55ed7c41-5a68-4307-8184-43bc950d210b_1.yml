@@ -1,9 +1,9 @@
 title: "OSINT Threat Research Team Goes \xE2\u20AC\u0153Beyond the Exploit\xE2\u20AC\
   \x9D in Search of Payloads from MS15-093 by bit9 - url_request"
-id: cacacdd1-4311-4ad1-ae9d-77ae46788303
+id: 567ef265-b04a-41d1-bd9a-3daa7d9ff03e
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/55ed7c41-5a68-4307-8184-43bc950d210b.json
 logsource:
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - gotoiknowledge.com
     - https://otx.alienvault.com
     - https://blog.bit9.com
-    - gotoiknowledge.com
   condition: attributes

@@ -1,8 +1,8 @@
 title: Malicious Chrome browser extensions injecting code - url_request
-id: 21bb72cb-9b66-4ce8-964b-3d1bbe42bbe1
+id: b1560e5d-0484-4522-b4d5-a3bf3387cf21
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a698fd0-f3dc-4e06-a580-4d34950d210f.json
 logsource:
@@ -11,9 +11,9 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - lite-bookmarks.info
     - nyoogle.info
-    - stickies.pro
-    - https://www.icebrg.io
     - change-request.info
+    - https://www.icebrg.io
+    - lite-bookmarks.info
+    - stickies.pro
   condition: attributes

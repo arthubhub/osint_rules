@@ -1,9 +1,9 @@
 title: 'OSINT Expansion on APT-28 - Evolving Threats: dissection of a Cyber-Espionage
   attack - dns_query'
-id: 38775632-f01f-4eb2-a6fe-82a2c1c9a10a
+id: 9ad1405e-d079-4dae-9012-c8ffb1b93260
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56580480-2738-4888-98be-b742950d210b.json
 logsource:
@@ -12,24 +12,24 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - windowsappstore.net
-    - irwing.org
     - 1oo7.net
+    - microsoftdriver.com
+    - irwing.org
     - microsofthelpcenter.info
     - eservicesystems.net
-    - microsoftdriver.com
+    - windowsappstore.net
     - militaryexponews.com
     IpAddresses:
-    - 176.31.96.178
-    - 204.12.244.58
-    - 131.72.136.10
-    - 104.200.17.53
     - 198.105.125.74
-    - 46.19.138.66
-    - 87.236.215.13
-    - 45.64.105.23
-    - 66.172.12.133
     - 104.200.17.202
+    - 87.236.215.13
+    - 204.12.244.58
+    - 176.31.96.178
+    - 131.72.136.10
+    - 45.64.105.23
     - 5.199.171.58
+    - 46.19.138.66
+    - 66.172.12.133
+    - 104.200.17.53
     - 176.31.112.10
   condition: attributes

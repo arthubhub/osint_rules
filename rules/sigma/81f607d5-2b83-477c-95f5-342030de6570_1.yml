@@ -1,26 +1,26 @@
 title: Chinese Threat Actors Targeting Europe in SmugX Campaign - url_request
-id: afdb4bb3-6778-45b4-9d8c-ab4e261e8352
+id: ddcc1b1d-4c95-41d9-997e-cc24248b1f0d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/81f607d5-2b83-477c-95f5-342030de6570.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.reddelta
 - attack.group.g0129
-- attack.group.plugx
-- attack.group.reddelta
-- attack.group.mustang_panda
 - attack.software.plugx
+- attack.group.mustang_panda
+- attack.group.reddelta
+- attack.group.plugx
+- attack.software.reddelta
 detection:
   object_13012:
     RequestUrl|contains:
     - https://research.checkpoint.com
   attributes:
     RequestUrl|contains:
-    - jcswcd.com
     - newsmailnet.com
+    - jcswcd.com
   condition: 1 of object_* or attributes

@@ -1,21 +1,21 @@
 title: OSINT - The Rise of Dridex and the Role of ESPs - url_request
-id: 5be9d81a-c740-4b4c-9c10-8a17f2792b32
+id: d29825fe-066c-4dd4-971c-d072e3107bad
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58ab3fb6-6c3c-49e3-8294-b3f202de0b81.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.dridex
 - attack.group.anunak
+- attack.software.dridex
 detection:
   attributes:
     RequestUrl|contains:
-    - https://talofinancial-my.sharepoint.com
-    - https://www.govcert.admin.ch
-    - https://jensenbowers-my.sharepoint.com
     - https://yemposolutions-my.sharepoint.com
+    - https://talofinancial-my.sharepoint.com
+    - https://jensenbowers-my.sharepoint.com
+    - https://www.govcert.admin.ch
   condition: attributes

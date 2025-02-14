@@ -1,46 +1,46 @@
 title: OSINT - 2018-10-09 - HANCITOR INFECTION WITH ZEUS PANDA BANKER - url_request
-id: 2480a3d0-3696-4e28-8858-56018f31f1f7
+id: f0308b4e-7ede-45d0-8942-326182743634
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5bc60f40-929c-4fed-b93d-44e9950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1193
-- attack.t1056
 - attack.t1022
+- attack.t1056
 - attack.t1041
+- attack.t1193
 detection:
   attributes:
     RequestUrl|contains:
-    - oxmoorusedcars.com
-    - genesisatoxmoor.com
-    - hehenforfi.ru
-    - sellittooxmoor.com
-    - genesisofwestlouisville.com
-    - https://www.malware-traffic-analysis.net
-    - selltooxmoor.com
-    - http://merisela.ru
-    - carvananashville.com
-    - http://surfsongnorthwildwood.com
-    - http://muneersiddiqui.com
-    - genesisofeaslouisville.com
-    - genesisofindiana.com
-    - http://www.socialmanagers.com
-    - http://keywestresortsadvice.com
-    - carvanadenver.com
-    - genesiseastlouisville.com
-    - veintitna.ru
-    - 275aacaa1610.net
     - carvanamemphis.com
     - 275aacaa1698.net
-    - sincirewdo.ru
-    - http://lonestarportablebuildings.com
+    - oxmoorusedcars.com
+    - 275aacaa1610.net
+    - http://merisela.ru
+    - genesiseastlouisville.com
+    - genesisatoxmoor.com
+    - carvanadenver.com
+    - sellittooxmoor.com
     - nobotanri.ru
-    - lachistontfi.ru
-    - fornetodu.com
+    - sincirewdo.ru
+    - https://www.malware-traffic-analysis.net
     - hersjustretleft.ru
+    - http://muneersiddiqui.com
+    - http://surfsongnorthwildwood.com
+    - genesisofwestlouisville.com
+    - genesisofeaslouisville.com
+    - http://keywestresortsadvice.com
+    - carvananashville.com
+    - veintitna.ru
+    - fornetodu.com
+    - lachistontfi.ru
+    - selltooxmoor.com
+    - hehenforfi.ru
+    - genesisofindiana.com
+    - http://www.socialmanagers.com
+    - http://lonestarportablebuildings.com
   condition: attributes

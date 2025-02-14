@@ -1,8 +1,8 @@
 title: IOCs Associated with DNS Infrastructure Tampering - dns_query
-id: 5b3be16e-b8d4-4aca-ab90-b03faba2c344
+id: ced298c1-da58-4a95-8f50-b8d882033fbf
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c4a2972-fd10-4470-936d-4d2a02de0b81.json
 logsource:
@@ -12,16 +12,16 @@ detection:
   attributes:
     QueryName|contains:
     - hr-suncor.com
-    - hr-wipro.com
     - 0ffice36o.com
+    - hr-wipro.com
     IpAddresses:
     - 185.161.211.79
-    - 185.20.184.138
-    - 185.174.101.168
-    - 185.20.187.8
     - 185.236.78.63
-    - 192.161.187.200
+    - 185.20.187.8
+    - 185.174.101.168
     - 185.161.211.72
+    - 192.161.187.200
+    - 185.20.184.138
     - 107.161.23.204
     - 209.141.38.71
   condition: attributes

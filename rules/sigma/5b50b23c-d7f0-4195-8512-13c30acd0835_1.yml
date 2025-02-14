@@ -1,9 +1,9 @@
 title: Email Credential Phish, Dropbox Theme - url_request
-id: 8b6f876e-048e-4549-a73d-a93df3a289e6
+id: 38ed9345-824f-4bba-89e7-f34e8010ef3f
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b50b23c-d7f0-4195-8512-13c30acd0835.json
 logsource:
@@ -12,8 +12,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - abri.org
-    - ahqcs.fr
     - https://ahqcs.fr
     - https://abri.org
+    - ahqcs.fr
+    - abri.org
   condition: attributes

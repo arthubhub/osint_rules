@@ -1,41 +1,41 @@
 title: 'M2M -  Jaff 2017-06-09 : missing subject - "IMG_1234.ZIP" / "DOC_1234.docm"
   - url_request'
-id: 8948400c-397e-40d1-9899-e94941ad7605
+id: 103d6e43-0823-45b2-a1db-7171c43e56bb
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/593a6d56-c9d4-44a5-af47-4b68950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.jaff
 - attack.software.jaff
+- attack.group.jaff
 detection:
   attributes:
     RequestUrl|contains:
-    - http://missangel.org
-    - http://assuresolutions.in
-    - http://msbn.net
-    - http://mscomunicacion.com.mx
-    - http://sportsandsocialchange.org
-    - http://zonnit.com
-    - http://charlenelouw.co.za
-    - http://xp.com.sg
-    - http://sevsem.biz
-    - http://speaklifegreetings.com
-    - http://gidrowash.ru
-    - http://yesman.me
-    - http://seminator.de
-    - http://e67tfgc4uybfbnfmd.org
     - http://adjlegal.com
-    - http://brookstecholiggronm.net
-    - http://stock-fallimenti.com
-    - http://akira-sushi34.ru
-    - http://coregroupindia.co.in
+    - http://missangel.org
+    - http://msbn.net
     - http://7prisms.com
-    - http://zeshta.com
+    - http://mscomunicacion.com.mx
+    - http://seminator.de
+    - http://assuresolutions.in
+    - http://stock-fallimenti.com
+    - http://sevsem.biz
+    - http://yesman.me
+    - http://xp.com.sg
+    - http://coregroupindia.co.in
+    - http://brookstecholiggronm.net
+    - http://e67tfgc4uybfbnfmd.org
+    - http://charlenelouw.co.za
     - http://mercobel.be
+    - http://akira-sushi34.ru
     - http://matbaa.be
+    - http://speaklifegreetings.com
+    - http://sportsandsocialchange.org
+    - http://zeshta.com
+    - http://gidrowash.ru
+    - http://zonnit.com
   condition: attributes

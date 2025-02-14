@@ -1,16 +1,16 @@
 title: 'OSINT -  Player 3 Has Entered the Game: Say Hello to ''WannaCry'' - url_request'
-id: d938a4aa-1940-41d3-8cfd-5c227efd2c24
+id: 167269de-98fe-4830-920d-601fdfdc6470
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5916cc1f-cb18-4db1-b4f4-a535950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.wannacry
 - attack.group.wannacry
+- attack.software.wannacry
 detection:
   attributes:
     RequestUrl|contains:

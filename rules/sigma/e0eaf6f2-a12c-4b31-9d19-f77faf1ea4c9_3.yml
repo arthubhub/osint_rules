@@ -1,18 +1,18 @@
 title: Kaseya ransomware attack - indicators and information publicly available -
   process_creation
-id: 49d10589-0cf5-4ea6-801e-10f9aa5f4b6a
+id: 14d6ba1f-e60e-4dad-902a-3aa02d6a931b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e0eaf6f2-a12c-4b31-9d19-f77faf1ea4c9.json
 logsource:
   product: windows
   category: process_creation
 tags:
-- attack.software.sodinokibi
-- attack.t1486
 - attack.group.sodinokibi
+- attack.t1486
+- attack.software.sodinokibi
 detection:
   object_11971:
     sha256:

@@ -1,27 +1,27 @@
 title: Racoon Stealer - url_request
-id: 6535072e-729a-426f-879f-fe26757e82d5
+id: ee120f22-44b6-4b28-acf4-27e1d29834e3
 description: edit this field when analysing or editing the rule - reported by "laskowski-tech.com"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e5709a4-8850-453e-9f11-275a0a0a020f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1043
 - attack.t1086
-- attack.t1105
-- attack.t1005
 - attack.t1002
+- attack.t1041
+- attack.t1043
+- attack.t1105
 - attack.t1193
 - attack.t1119
 - attack.t1059
-- attack.t1041
+- attack.t1005
 detection:
   attributes:
     RequestUrl|contains:
+    - http://35.228.134.218
     - http://109.201.143.181
     - https://laskowski-tech.com
-    - http://35.228.134.218
   condition: attributes

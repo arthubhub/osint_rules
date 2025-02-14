@@ -1,8 +1,8 @@
 title: OSINT - Egregor RaaS Continues the Chaos with Cobalt Strike and Rclone - url_request
-id: de17d69c-e167-484b-9b44-1c0c8e6bc2af
+id: c7627e9f-542c-4da7-9008-9d4ae67a2d36
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/f42c106c-df01-47f3-bc36-16072ad63856.json
 logsource:
@@ -14,9 +14,9 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://labs.sentinelone.com
     - http://185.238.0.233
-    - https://egregornews.com
-    - http://egregoranrmzapcv.onion
     - http://egregor4u5ipdzhv.onion
+    - http://egregoranrmzapcv.onion
+    - https://labs.sentinelone.com
+    - https://egregornews.com
   condition: attributes

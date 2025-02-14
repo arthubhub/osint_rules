@@ -1,9 +1,9 @@
 title: Expansion based on pDNS + whois from OSINT Roaming tiger by Anton Cherepanov
   from ESET - dns_query
-id: 495cb3d4-8c1c-4c82-8bd2-76e8139d6871
+id: 264e3d74-0949-45e1-b625-8b1b94978c4a
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/54731605-821c-48c2-b74b-5701950d210b.json
 logsource:
@@ -12,55 +12,55 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - sizn-ru.com
-    - hsats.com
-    - adobeupdated.com
-    - 0fficeupdated.com
-    - wwindowsupdate.com
-    - wcncsvc.com
-    - cisco-users.com
-    - wscsvc.com
-    - adobesunsupdates.org
-    - tvsonin.com
-    - husromm.com
-    - mosisp.com
     - obhin.com
-    - ruojsc.com
-    - gobimofa.org
     - eturkestan.org
-    - blogmn.com
-    - pcwbhtcling.com
-    - mskcw.com
-    - winmax-forums.com
-    - bussuu.org
-    - spbmts.com
-    - openwrt-forums.com
-    - 0fficeupdate.com
-    - mailarchivup.com
-    - kholboo.com
-    - tibetwinner.com
     - drod-tech.com
+    - husromm.com
+    - tvsonin.com
+    - winmax-forums.com
+    - ruojsc.com
+    - mosisp.com
+    - bussuu.org
+    - kholboo.com
+    - spbmts.com
+    - adobeupdated.com
+    - blogmn.com
+    - wwindowsupdate.com
+    - wscsvc.com
+    - wcncsvc.com
     - mongoliguide.com
+    - mailarchivup.com
+    - cisco-users.com
+    - mskcw.com
+    - 0fficeupdated.com
+    - openwrt-forums.com
+    - sizn-ru.com
+    - 0fficeupdate.com
+    - tibetwinner.com
+    - gobimofa.org
+    - hsats.com
+    - adobesunsupdates.org
+    - pcwbhtcling.com
     IpAddresses:
-    - 122.10.92.14
-    - 98.126.14.12
+    - 122.10.83.62
+    - 122.10.92.15
+    - 103.20.222.170
     - 58.64.200.154
+    - 122.10.92.14
+    - 122.10.118.131
     - 123.254.109.166
     - 122.10.118.129
-    - 64.202.189.170
-    - 103.20.222.170
-    - 174.139.12.85
-    - 122.10.89.79
-    - 123.151.193.135
-    - 122.10.83.51
     - 58.64.200.150
-    - 122.112.2.14
-    - 54.208.247.222
-    - 68.178.232.99
-    - 122.10.118.131
-    - 122.10.83.62
+    - 122.10.83.51
     - 123.151.193.211
-    - 118.193.147.135
-    - 122.10.92.15
+    - 54.208.247.222
+    - 122.10.89.79
     - 103.225.196.140
+    - 64.202.189.170
+    - 118.193.147.135
+    - 174.139.12.85
+    - 68.178.232.99
+    - 123.151.193.135
+    - 122.112.2.14
+    - 98.126.14.12
   condition: attributes

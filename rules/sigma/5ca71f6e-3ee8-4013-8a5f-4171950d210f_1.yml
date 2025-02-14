@@ -1,41 +1,41 @@
 title: OSINT - Hancitor domains - url_request
-id: 5a0ae939-c915-42c2-b26d-dfeef51a2a5b
+id: 6ba00f62-27a5-4f4d-8b97-977656c4cb43
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ca71f6e-3ee8-4013-8a5f-4171950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.hancitor
 - attack.group.hancitor
+- attack.software.hancitor
 detection:
   object_4525:
     RequestUrl|contains:
     - https://twitter.com
   attributes:
     RequestUrl|contains:
-    - http://inazel.es
-    - shopalldogspoop.com
-    - pooperscooperfranchise.com
-    - http://duloperes.com
-    - http://gogotwitof.ru
-    - https://pastebin.com
-    - http://ecsn.biz
-    - alldogspoop.info
-    - http://reflyhepone.ru
-    - alldogspoop.org
-    - http://orik.hu
-    - alldogspoop.mobi
-    - alldogspoop.co
-    - cherryhillpooperscoopers.com
     - alldogspoop.biz
-    - https://ghostbin.com
-    - http://nal.com.ua
-    - http://automotivedreamteam.com
     - http://scanelectric.ro
-    - http://syrtaki-santorini.gr
     - alldogspoop.net
+    - http://inazel.es
+    - http://gogotwitof.ru
+    - http://automotivedreamteam.com
+    - https://pastebin.com
+    - alldogspoop.org
+    - http://nal.com.ua
+    - http://duloperes.com
+    - http://reflyhepone.ru
+    - http://orik.hu
+    - pooperscooperfranchise.com
+    - alldogspoop.info
+    - https://ghostbin.com
+    - http://ecsn.biz
+    - http://syrtaki-santorini.gr
+    - cherryhillpooperscoopers.com
+    - alldogspoop.mobi
+    - shopalldogspoop.com
+    - alldogspoop.co
   condition: 1 of object_* or attributes

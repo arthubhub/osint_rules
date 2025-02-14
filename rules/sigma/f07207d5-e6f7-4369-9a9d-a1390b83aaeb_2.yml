@@ -1,8 +1,8 @@
 title: Is Hagga Threat Actor (ab)using FSociety framework ? - dns_query
-id: 6b1c2908-b53c-44da-a0ce-a7a974d2d26e
+id: a74014b2-6cf1-4306-a296-08b194da22d3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/f07207d5-e6f7-4369-9a9d-a1390b83aaeb.json
 logsource:
@@ -14,7 +14,7 @@ detection:
     - 103.151.123.121
   attributes:
     IpAddresses:
-    - 4.204.233.44
     - 69.174.99.181
+    - 4.204.233.44
     - 103.151.123.121
   condition: 1 of object_* or attributes

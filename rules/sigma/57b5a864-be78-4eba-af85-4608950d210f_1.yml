@@ -1,8 +1,8 @@
 title: 'OSINT Shakti Trojan: Document Thief  by Malwarebytes - url_request'
-id: c99ab904-2c19-42c5-8331-2f46cfc8402a
+id: a8832a98-4c60-4f06-a4aa-c58a9b8ed116
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57b5a864-be78-4eba-af85-4608950d210f.json
 logsource:
@@ -12,10 +12,10 @@ detection:
   attributes:
     RequestUrl|contains:
     - securedesignuk.com
-    - web4solution.net
+    - https://blog.malwarebytes.com
     - http://vms.drweb.ru
     - http://www.bleepingcomputer.com
-    - https://blog.malwarebytes.com
     - https://malwr.com
     - securedesignus.com
+    - web4solution.net
   condition: attributes

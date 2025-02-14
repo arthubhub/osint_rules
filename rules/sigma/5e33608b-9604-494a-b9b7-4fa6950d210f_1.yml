@@ -1,8 +1,8 @@
 title: VBS Downloader and Defender Control - url_request
-id: d3471d78-f2f5-424b-a7db-c4986e2b9ab2
+id: 26941c5b-6cc0-4dcf-bd30-f57f6afc05bd
 description: edit this field when analysing or editing the rule - reported by "wilbursecurity.com"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e33608b-9604-494a-b9b7-4fa6950d210f.json
 logsource:
@@ -11,6 +11,6 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.wilbursecurity.com
     - http://185.81.114.49
+    - https://www.wilbursecurity.com
   condition: attributes

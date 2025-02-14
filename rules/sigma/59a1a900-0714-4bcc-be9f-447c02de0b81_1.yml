@@ -1,9 +1,9 @@
 title: 'OSINT - Operation RAT Cook: Chinese APT actors use fake Game of Thrones leaks
   as lures - url_request'
-id: 2c253dcf-2c29-4d2f-bb9f-1b47055c65d2
+id: fbf3a053-0bfb-44a0-9ed5-2705a2dfc7b8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59a1a900-0714-4bcc-be9f-447c02de0b81.json
 logsource:
@@ -12,13 +12,13 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://researchcenter.paloaltonetworks.com
-    - http://security-is-just-an-illusion.blogspot.nl
     - https://www.fireeye.com
     - https://www.proofpoint.com
+    - http://security-is-just-an-illusion.blogspot.nl
     - http://27.255.83.3
-    - http://www.washingtontimes.com
     - mn1.org
     - https://github.com
+    - http://www.washingtontimes.com
     - https://community.saas.hpe.com
+    - https://researchcenter.paloaltonetworks.com
   condition: attributes

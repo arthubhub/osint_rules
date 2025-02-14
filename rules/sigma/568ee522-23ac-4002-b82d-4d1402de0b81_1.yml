@@ -1,8 +1,8 @@
 title: OSINT -  Clickjacking Campaign Plays on European Cookie Law - url_request
-id: e7249e9a-9b0d-466a-bcd1-d30edc372cbd
+id: c5ea11cf-17f4-45b6-82a5-57490cff118c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/568ee522-23ac-4002-b82d-4d1402de0b81.json
 logsource:
@@ -11,11 +11,11 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - popcash.net
-    - bestcartoday.info
-    - featurewebhosting.com
-    - elitewebhostings.com
-    - https://blog.malwarebytes.org
-    - ivirtualcloudhost.com
     - hotcartop.online
+    - https://blog.malwarebytes.org
+    - featurewebhosting.com
+    - popcash.net
+    - ivirtualcloudhost.com
+    - elitewebhostings.com
+    - bestcartoday.info
   condition: attributes

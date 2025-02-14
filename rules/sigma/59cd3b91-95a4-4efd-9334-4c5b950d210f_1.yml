@@ -1,56 +1,56 @@
 title: 'M2M -  Locky / Trickbot: "Emailing: Scan0xxx" from "Sales" - url_request'
-id: 3cf0e997-4ff0-4b99-9472-e20b1a0a806c
+id: 24ec593c-ce9f-433d-b41a-606e922c71c6
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/59cd3b91-95a4-4efd-9334-4c5b950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.trick_bot
+- attack.group.locky
 - attack.software.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://flooringforyou.co.uk
     - http://fls-portal.co.uk
-    - http://financeforautos.com
+    - http://asnsport-bg.com
+    - http://fincasoroel.es
+    - http://autoecoleathena.com
+    - http://givensplace.com
     - http://davidstephensbanjo.com
-    - http://ambrogiauto.com
+    - http://atlantarecyclingcenters.com
+    - http://feng-lian.com.tw
     - http://kailanisilks.com
-    - http://camerawind.com
-    - http://autoecole-jeanpierre.com
-    - http://e-westchesterpropertytax.com
+    - http://melting-potes.com
+    - http://geeks-online.de
     - http://mtblanc-let.co.uk
     - http://augustinechua.com
-    - http://jaysonmorrison.com
-    - http://flooringforyou.co.uk
-    - http://fmarson.com
-    - http://givensplace.com
-    - http://conlin-boats.com
-    - http://autoecoleathena.com
-    - http://freevillemusic.com
-    - http://anarakdesert.com
-    - http://astilleroscotnsa.com
-    - http://melting-potes.com
-    - http://americanbulldogradio.com
-    - http://classactionlawsuitnewscenter.com
     - http://poemsan.info
-    - http://asnsport-bg.com
-    - http://geeks-online.de
-    - http://feng-lian.com.tw
-    - http://essenza.co.id
-    - http://modaintensa.com
-    - http://mediatrendsistem.com
-    - http://patrickreeves.com
-    - http://evlilikpsikolojisi.com
-    - http://autoecoleboisdesroches.com
-    - http://fincasoroel.es
-    - http://felicesfiestas.com.mx
-    - http://atlantarecyclingcenters.com
+    - http://e-westchesterpropertytax.com
+    - http://autoecole-jeanpierre.com
+    - http://classactionlawsuitnewscenter.com
+    - http://anarakdesert.com
     - http://sherylbro.net
-    - http://jakuboweb.com
+    - http://financeforautos.com
+    - http://ambrogiauto.com
+    - http://fmarson.com
+    - http://camerawind.com
+    - http://mediatrendsistem.com
+    - http://conlin-boats.com
+    - http://patrickreeves.com
     - http://plumanns.com
+    - http://americanbulldogradio.com
+    - http://essenza.co.id
+    - http://jaysonmorrison.com
+    - http://autoecoleboisdesroches.com
+    - http://freevillemusic.com
+    - http://felicesfiestas.com.mx
+    - http://jakuboweb.com
+    - http://evlilikpsikolojisi.com
+    - http://astilleroscotnsa.com
+    - http://modaintensa.com
   condition: attributes

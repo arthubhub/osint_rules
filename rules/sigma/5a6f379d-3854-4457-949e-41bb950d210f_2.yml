@@ -1,8 +1,8 @@
 title: 'OSINT - VERMIN: Quasar RAT and Custom Malware Used In Ukraine - dns_query'
-id: 5270c85a-b6d6-42da-b034-63a514786719
+id: f1e9160c-9b5b-4c99-b676-e5b905c3b54b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a6f379d-3854-4457-949e-41bb950d210f.json
 logsource:
@@ -13,22 +13,22 @@ tags:
 detection:
   attributes:
     QueryName|contains:
-    - cdnakamai.ru
-    - akamainet024.info
-    - akamainet022.info
-    - akamainet066.info
-    - notifymail.ru
-    - akamainet021.info
-    - akamaicdn.ru
     - akamainet023.info
+    - notifymail.ru
+    - akamaicdn.ru
+    - akamainet022.info
+    - cdnakamai.ru
+    - akamainet021.info
+    - akamainet066.info
+    - akamainet024.info
     - mailukr.net
     IpAddresses:
+    - 94.158.46.251
+    - 195.78.105.23
     - 94.158.47.228
     - 185.158.153.222
-    - 94.158.46.251
-    - 5.200.53.181
     - 188.227.75.189
     - 212.116.121.46
-    - 195.78.105.23
     - 185.125.46.24
+    - 5.200.53.181
   condition: attributes

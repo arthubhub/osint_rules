@@ -1,17 +1,17 @@
 title: Malicious PyPI packages - url_request
-id: 3bf5fbfe-226e-44f1-9d03-e44e6d5d11b6
+id: 45456ceb-4e69-4391-8fb6-726b92210a42
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5de7883b-22bc-4264-995c-4d1f950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1195
 - attack.t1011
 - attack.t1005
+- attack.t1195
 detection:
   object_13024:
     RequestUrl|contains:

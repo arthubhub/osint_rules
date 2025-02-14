@@ -1,8 +1,8 @@
 title: 'OSINT Shark Ransomware: Ransomware as a service - dns_query'
-id: d8f23f14-a43f-403a-a5e8-994d0b16dcaa
+id: ef79059d-b094-4448-8d1f-be8b503ae94a
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/57b5a6a6-334c-4a50-9e23-45b0950d210f.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - system.io
     - system.net
     - 1729studios.com
+    - system.io
   condition: attributes

@@ -1,8 +1,8 @@
 title: OSINT -  Operation ShadowHammer - url_request
-id: 9cb60a0a-8228-4175-a848-6636f92abf37
+id: c0c70e3d-5223-4075-9c2b-062e1407ab30
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c9a14a9-fdb0-4cc9-bd13-4cbf950d210f.json
 logsource:
@@ -13,8 +13,8 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
-    - asushotfix.com
     - https://securelist.com
-    - http://liveupdate01.asus.com
     - https://liveupdate01s.asus.com
+    - http://liveupdate01.asus.com
+    - asushotfix.com
   condition: attributes

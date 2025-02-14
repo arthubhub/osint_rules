@@ -1,18 +1,18 @@
 title: OSINT - Mole66 Cryptomix Ransomware Variant Released - url_request
-id: 56a5b6fb-91e7-45f1-adc8-c1ff30c7f836
+id: 4a8acd62-e7d2-47d6-bc16-eec5007e877f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ac5d6b1-3848-4918-9e42-4206950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.cryptomix
 - attack.group.zeta
 - attack.software.zeta
 - attack.group.cryptomix
-- attack.software.cryptomix
 detection:
   attributes:
     RequestUrl|contains:

@@ -1,66 +1,66 @@
 title: Kaseya ransomware attack - indicators and information publicly available -
   url_request
-id: 7979c6e3-09f1-47c0-a061-e033911c7943
+id: c7fe5454-e116-4d9a-b15a-57d74d2c8ed9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e0eaf6f2-a12c-4b31-9d19-f77faf1ea4c9.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.sodinokibi
-- attack.t1486
 - attack.group.sodinokibi
+- attack.t1486
+- attack.software.sodinokibi
 detection:
   object_11979:
     RequestUrl|contains:
     - https://us-cert.cisa.gov
   attributes:
     RequestUrl|contains:
-    - c2e-poitiers.com
-    - iqbalscientific.com
-    - faroairporttransfers.net
-    - 101gowrie.com
-    - facettenreich27.de
-    - fotoscondron.com
-    - bierensgebakkramen.nl
-    - 35-40konkatsu.net
-    - 365questions.org
-    - milestoneshows.com
-    - smartypractice.com
-    - blgr.be
-    - simoneblum.de
-    - https://github.com
-    - tanzschule-kieber.de
-    - mindpackstudios.com
-    - gonzalezfornes.es
-    - thomasvicino.com
-    - homng.net
-    - https://community.sophos.com
-    - 4net.guru
-    - cursosgratuitosnainternet.com
-    - gmto.fr
-    - southeasternacademyofprosthodontics.org
-    - tonelektro.nl
-    - myhostcloud.com
-    - filmstreamingvfcomplet.be
-    - pasvenska.se
-    - daklesa.de
-    - blossombeyond50.com
-    - 8449nohate.org
-    - candyhouseusa.com
-    - 1team.es
-    - cerebralforce.net
-    - sw1m.ru
-    - 123vrachi.ru
-    - ncuccr.org
-    - https://twitter.com
-    - https://helpdesk.kaseya.com
     - 12starhd.online
-    - 4youbeautysalon.com
-    - fannmedias.com
+    - 365questions.org
     - bxdf.info
+    - 101gowrie.com
+    - mindpackstudios.com
+    - faroairporttransfers.net
+    - 1team.es
+    - https://helpdesk.kaseya.com
+    - tanzschule-kieber.de
+    - facettenreich27.de
+    - https://community.sophos.com
+    - gonzalezfornes.es
+    - filmstreamingvfcomplet.be
+    - fannmedias.com
+    - simoneblum.de
+    - bierensgebakkramen.nl
+    - homng.net
+    - smartypractice.com
+    - fotoscondron.com
+    - https://github.com
+    - blossombeyond50.com
+    - 4youbeautysalon.com
+    - iqbalscientific.com
+    - 35-40konkatsu.net
+    - cerebralforce.net
+    - myhostcloud.com
+    - sw1m.ru
+    - pasvenska.se
+    - https://twitter.com
+    - blgr.be
+    - 8449nohate.org
+    - 123vrachi.ru
+    - milestoneshows.com
+    - c2e-poitiers.com
+    - southeasternacademyofprosthodontics.org
+    - candyhouseusa.com
+    - thomasvicino.com
+    - 4net.guru
     - kaotikkustomz.com
+    - ncuccr.org
+    - gmto.fr
+    - tonelektro.nl
+    - cursosgratuitosnainternet.com
+    - daklesa.de
   condition: 1 of object_* or attributes

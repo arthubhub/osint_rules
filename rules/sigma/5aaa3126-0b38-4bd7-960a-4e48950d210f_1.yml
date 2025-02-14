@@ -1,16 +1,16 @@
 title: OSINT - Qwerty Ransomware Utilizes GnuPG to Encrypt a Victims Files - url_request
-id: c1023974-8795-473f-ac45-e1ad323d8ba5
+id: 7074f74f-6d09-4b54-98bd-50152435e33e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5aaa3126-0b38-4bd7-960a-4e48950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.qwerty_ransomware
 - attack.software.qwerty_ransomware
+- attack.group.qwerty_ransomware
 detection:
   attributes:
     RequestUrl|contains:

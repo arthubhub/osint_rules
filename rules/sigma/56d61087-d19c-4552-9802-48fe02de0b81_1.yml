@@ -1,8 +1,8 @@
 title: OSINT APT Bestia used in APT attacks on Polish Government - url_request
-id: 1a64b430-eea4-4018-ab49-72f6ec17ee62
+id: e6337dd5-0815-41b7-8f99-a62ed3e856ee
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/56d61087-d19c-4552-9802-48fe02de0b81.json
 logsource:
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://github.com
     - https://twitter.com
+    - https://github.com
     - https://zaufanatrzeciastrona.pl
   condition: attributes

@@ -1,8 +1,8 @@
 title: Gamaredon Group (common notes from McAfee and other sources) - url_request
-id: d97de25c-00af-4736-8e60-b3b6a9995811
+id: e8d247d1-f875-4a9c-a533-3ff249782216
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5898d6f2-7bd4-4dca-8f4a-4c6cfe92b726.json
 logsource:
@@ -17,23 +17,23 @@ detection:
     - https://twitter.com
   attributes:
     RequestUrl|contains:
-    - xiphosura.online
-    - sufflari.ru
-    - rufescens.ru
     - chelicerata.online
-    - aidoona.online
-    - eurypterida.online
-    - arachnidas.ru
-    - fasciolas.online
-    - merostomata.online
-    - graphiuma.online
-    - asilidae.ru
-    - agaricusa.ru
-    - apoxipodes.online
     - scorpiones.online
+    - asilidae.online
     - chelicerata.ru
     - polyphemus.online
-    - asilidae.online
-    - formosanus.ru
+    - eurypterida.online
+    - sufflari.ru
+    - rufescens.ru
+    - xiphosura.online
+    - asilidae.ru
+    - merostomata.online
+    - agaricusa.ru
+    - apoxipodes.online
+    - fasciolas.online
+    - aidoona.online
+    - arachnidas.ru
+    - graphiuma.online
     - sinensisa.online
+    - formosanus.ru
   condition: 1 of object_* or attributes

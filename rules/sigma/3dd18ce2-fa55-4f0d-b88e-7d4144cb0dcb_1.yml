@@ -1,8 +1,8 @@
 title: OSINT - AN ANALYSIS OF THE EGREGOR RANSOMWARE - url_request
-id: e388deb8-0559-4c91-ab4d-c4634197c3e3
+id: a66c00bf-5aaa-45b5-beab-c6bd561613ba
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/3dd18ce2-fa55-4f0d-b88e-7d4144cb0dcb.json
 logsource:
@@ -10,18 +10,18 @@ logsource:
   category: url_request
 tags:
 - attack.software.sodinokibi
-- attack.software.s0496
-- attack.group.gandcrab
-- attack.software.egregor
 - attack.software.gandcrab
-- attack.group.sodinokibi
 - attack.group.egregor
+- attack.group.gandcrab
+- attack.software.s0496
+- attack.software.egregor
+- attack.group.sodinokibi
 detection:
   object_17308:
     RequestUrl|contains:
     - https://www.morphisec.com
   attributes:
     RequestUrl|contains:
-    - https://aes.one
     - https://file.io
+    - https://aes.one
   condition: 1 of object_* or attributes

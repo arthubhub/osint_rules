@@ -1,9 +1,9 @@
 title: New Phishing Attacks Abuse Excel Internet Query Files - url_request
-id: 47662098-c299-4df3-a5f0-4c4d881767d0
+id: 80d71367-0e42-4753-936b-1b2248f27fc7
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b191ead-fac0-4f21-aaef-b9700acd0835.json
 logsource:
@@ -14,7 +14,7 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
+    - http://clodflarechk.com
     - https://myonlinesecurity.co.uk
     - clodflarechk.com
-    - http://clodflarechk.com
   condition: attributes

@@ -1,8 +1,8 @@
 title: Compromised host delivering malware (Mirai) - url_request
-id: e3b447f2-8e3d-497a-a876-68208202e457
+id: d2e0ee6c-5b01-4e2a-b328-72695af61e25
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/91a106b2-5ae3-4433-a885-fe3023adb768.json
 logsource:
@@ -16,7 +16,7 @@ detection:
     - teknowmuzical.top
   attributes:
     RequestUrl|contains:
+    - http://37.49.229.172
     - https://teknowmuzical.top
     - http://teknowmuzical.top
-    - http://37.49.229.172
   condition: 1 of object_* or attributes

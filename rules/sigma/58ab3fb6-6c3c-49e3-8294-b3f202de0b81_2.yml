@@ -1,40 +1,40 @@
 title: OSINT - The Rise of Dridex and the Role of ESPs - dns_query
-id: 62ede182-a16b-49cd-bc2d-19eb019b590a
+id: da0efdbc-99d4-48e7-831a-44680fd94d59
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/58ab3fb6-6c3c-49e3-8294-b3f202de0b81.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.dridex
 - attack.group.anunak
+- attack.software.dridex
 detection:
   attributes:
     IpAddresses:
-    - 194.150.118.25
+    - 213.222.56.155
+    - 37.0.26.34
+    - 95.208.65.134
+    - 179.177.114.30
+    - 216.51.232.176
+    - 37.139.21.245
+    - 195.22.127.26
     - 81.130.131.55
+    - 159.226.92.9
+    - 173.196.157.250
+    - 46.17.3.237
+    - 194.150.118.25
+    - 81.155.55.211
+    - 89.35.178.115
+    - 82.99.60.26
+    - 77.236.97.60
     - 178.195.0.12
     - 109.235.76.95
-    - 195.22.127.26
-    - 89.35.178.115
-    - 213.222.56.155
-    - 154.0.171.105
-    - 86.130.54.90
-    - 37.0.26.34
-    - 81.155.55.211
-    - 179.177.114.30
-    - 159.226.92.9
-    - 37.139.21.245
-    - 46.17.3.237
-    - 173.196.157.250
-    - 77.236.97.60
     - 198.167.136.139
-    - 216.51.232.176
-    - 82.99.60.26
-    - 95.208.65.134
-    - 136.243.209.34
     - 209.20.67.87
+    - 154.0.171.105
+    - 136.243.209.34
+    - 86.130.54.90
   condition: attributes

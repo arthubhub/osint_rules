@@ -1,23 +1,23 @@
 title: OSINT - New Matrix Ransomware Variants Installed Via Hacked Remote Desktop
   Services - url_request
-id: fc04b910-fde9-4af4-ae3f-e9b2cbd26e71
+id: 2668d96c-6c48-4e42-8d54-2051f201a927
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5acb6516-f590-4456-8fd7-4243950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.matrix
 - attack.software.matrix
+- attack.group.matrix
 detection:
   object_26:
     RequestUrl|contains:
     - murik.xyz
   attributes:
     RequestUrl|contains:
-    - http://id-ransomware.blogspot.lu
     - https://www.bleepingcomputer.com
+    - http://id-ransomware.blogspot.lu
   condition: 1 of object_* or attributes

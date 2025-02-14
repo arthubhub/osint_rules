@@ -1,8 +1,8 @@
 title: OSINT - Talos/Cisco  Threat Roundup for April 6 - 13 - dns_query
-id: ff82d279-601b-4418-9bb8-0be87ba40038
+id: 862190f0-e57c-46eb-86d2-0c261cf80a5e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5ad5bc00-d988-48bb-9293-2135950d210f.json
 logsource:
@@ -11,37 +11,37 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - nomoreransom.bit
     - gpt9.com
     - optcdn.com
-    - makewebomb.xyz
-    - nomoreransom.coin
-    - optitm.com
     - gandcrab.bit
+    - nomoreransom.coin
+    - nomoreransom.bit
+    - makewebomb.xyz
+    - optitm.com
     IpAddresses:
-    - 216.58.206.78
+    - 43.231.4.7
+    - 174.37.56.249
+    - 101.99.75.151
     - 216.58.217.174
     - 84.16.241.77
-    - 68.65.121.51
-    - 104.250.149.195
-    - 12.167.151.116
     - 173.243.255.79
-    - 52.85.88.217
-    - 101.99.75.151
-    - 104.200.23.95
-    - 216.146.43.71
-    - 66.171.248.178
     - 45.32.78.78
-    - 198.54.117.217
-    - 72.230.82.80
-    - 85.25.185.229
-    - 173.248.31.6
-    - 66.199.229.251
-    - 173.192.16.184
-    - 45.63.57.87
-    - 43.231.4.7
-    - 62.75.222.235
-    - 174.37.56.249
     - 93.185.4.90
+    - 45.63.57.87
+    - 173.248.31.6
+    - 104.200.23.95
     - 45.77.68.17
+    - 198.54.117.217
+    - 12.167.151.116
+    - 104.250.149.195
+    - 66.199.229.251
+    - 66.171.248.178
+    - 173.192.16.184
+    - 72.230.82.80
+    - 216.58.206.78
+    - 85.25.185.229
+    - 216.146.43.71
+    - 62.75.222.235
+    - 68.65.121.51
+    - 52.85.88.217
   condition: attributes

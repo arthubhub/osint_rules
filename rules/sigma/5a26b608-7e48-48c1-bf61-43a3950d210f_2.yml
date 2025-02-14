@@ -1,27 +1,27 @@
 title: 'M2M - "..doc" 2017-11-30 : "FL-123456 11.30.2017.7z" - dns_query'
-id: f678d48d-3d28-4312-af58-6327250de980
+id: b75a0276-922a-4ae8-8e8f-5e15b908df2c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5a26b608-7e48-48c1-bf61-43a3950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.fake_globe_ransomware
 - attack.group.fake_globe_ransomware
+- attack.software.fake_globe_ransomware
 detection:
   attributes:
     IpAddresses:
-    - 98.124.251.176
     - 185.85.205.9
-    - 98.124.251.75
-    - 188.166.203.69
-    - 66.36.173.215
-    - 85.214.205.231
-    - 98.124.251.65
-    - 180.222.185.74
-    - 198.23.241.227
     - 89.253.235.118
+    - 198.23.241.227
+    - 66.36.173.215
+    - 98.124.251.65
+    - 98.124.251.176
+    - 188.166.203.69
+    - 180.222.185.74
+    - 85.214.205.231
+    - 98.124.251.75
   condition: attributes

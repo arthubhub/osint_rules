@@ -1,9 +1,9 @@
 title: powerpool-malware-exploits-zero-day-vulnerability - dns_query
-id: 192f8773-dd4b-4668-b1cf-efbbf1942412
+id: 9fa4c00e-1f2b-4532-9375-306dc5db0600
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b9162c3-90b4-423b-bd69-28330acd0835.json
 logsource:
@@ -12,10 +12,10 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - afishaonline.eu
-    - rosbusiness.eu
     - sports-collectors.com
+    - rosbusiness.eu
     - newsrental.net
+    - afishaonline.eu
     IpAddresses:
     - 27.102.106.149
   condition: attributes

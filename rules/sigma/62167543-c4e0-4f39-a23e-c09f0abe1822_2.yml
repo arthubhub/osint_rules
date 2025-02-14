@@ -1,18 +1,18 @@
 title: '[NCSC-UK] Cyclops blink - process_creation'
-id: d2eea32b-2d1a-4380-884c-0ff93fb770e4
+id: 67eabff8-644d-430e-a854-7a6704302339
 description: edit this field when analysing or editing the rule - reported by "CERT-FR_1510"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/62167543-c4e0-4f39-a23e-c09f0abe1822.json
 logsource:
   product: windows
   category: process_creation
 tags:
+- attack.group.telebots
+- attack.group.sandworm
 - attack.group.iridium
 - attack.group.electrum
-- attack.group.sandworm
-- attack.group.telebots
 detection:
   object_1393:
     md5:

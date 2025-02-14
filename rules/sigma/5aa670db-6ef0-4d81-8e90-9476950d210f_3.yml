@@ -1,9 +1,9 @@
 title: 'OSINT - APT15 is alive and strong: An analysis of RoyalCli and RoyalDNS -
   process_creation'
-id: c8d68ca6-d8ac-4cc7-a4a4-3b4c7beffdc1
+id: 385be180-8eeb-4041-be16-fb11af2c7f12
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5aa670db-6ef0-4d81-8e90-9476950d210f.json
 logsource:
@@ -42,9 +42,9 @@ detection:
     - 16b868d1bef6be39f69b4e976595e7bd46b6c0595cf6bc482229dbb9e64f1bce
   attributes:
     sha256:
-    - 750d9eecd533f89b8aa13aeab173a1cf813b021b6824bc30e60f5db6fa7b950b
-    - 6ea9cc475d41ca07fa206eb84b10cf2bbd2392366890de5ae67241afa2f4269f
-    - 16b868d1bef6be39f69b4e976595e7bd46b6c0595cf6bc482229dbb9e64f1bce
-    - bc937f6e958b339f6925023bc2af375d669084e9551fd3753e501ef26e36b39d
     - 6df9b712ff56009810c4000a0ad47e41b7a6183b69416251e060b5c80cd05785
+    - bc937f6e958b339f6925023bc2af375d669084e9551fd3753e501ef26e36b39d
+    - 750d9eecd533f89b8aa13aeab173a1cf813b021b6824bc30e60f5db6fa7b950b
+    - 16b868d1bef6be39f69b4e976595e7bd46b6c0595cf6bc482229dbb9e64f1bce
+    - 6ea9cc475d41ca07fa206eb84b10cf2bbd2392366890de5ae67241afa2f4269f
   condition: 1 of object_* or attributes

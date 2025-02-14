@@ -1,9 +1,9 @@
 title: Active Exploitation of Two Zero-Day Vulnerabilities in Ivanti Connect Secure
   VPN - dns_query
-id: bdda1170-04e2-4182-bac0-52954bdacc21
+id: c9145da5-0a30-49d0-8518-425be71f4c80
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/ab1a2393-2d57-46c9-91ab-16a4cc4b0b03.json
 logsource:
@@ -14,21 +14,21 @@ tags:
 detection:
   attributes:
     QueryName|contains:
-    - gpoaccess.com
-    - symantke.com
     - webb-institute.com
+    - symantke.com
+    - gpoaccess.com
     IpAddresses:
-    - 98.160.48.170
-    - 50.243.177.161
-    - 206.189.208.156
     - 50.215.39.49
-    - 47.207.9.89
-    - 73.128.178.221
-    - 75.145.224.109
-    - 71.127.149.194
     - 64.24.179.210
-    - 173.53.43.7
+    - 47.207.9.89
     - 173.220.106.166
     - 50.213.208.89
     - 75.145.243.85
+    - 75.145.224.109
+    - 50.243.177.161
+    - 71.127.149.194
+    - 206.189.208.156
+    - 98.160.48.170
+    - 173.53.43.7
+    - 73.128.178.221
   condition: attributes

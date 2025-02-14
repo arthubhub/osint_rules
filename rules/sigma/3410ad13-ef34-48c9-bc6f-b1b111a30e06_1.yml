@@ -1,9 +1,9 @@
 title: OSINT - Russia's APT28 uses fear of nuclear war to spread Follina docs in Ukraine
   - url_request
-id: c984b5c8-506d-4d80-9427-b6273fecc5f8
+id: aa1592b5-e425-4dcb-a1e4-ce4b5f02c950
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/3410ad13-ef34-48c9-bc6f-b1b111a30e06.json
 logsource:
@@ -14,8 +14,8 @@ tags:
 detection:
   object_4688:
     RequestUrl|contains:
-    - https://otx.alienvault.com
     - https://blog.malwarebytes.com
+    - https://otx.alienvault.com
   object_4689:
     RequestUrl|contains:
     - http://kitten-268.frge.io

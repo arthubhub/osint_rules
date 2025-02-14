@@ -1,28 +1,28 @@
 title: SNOWYAMBER, HALFRIG, QUARTERRIG - IoC Reference - url_request
-id: 1f9be380-0da5-4ad3-bb57-2530865f0db7
+id: c3890bc9-ef2a-451f-a464-8120c03dbc14
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/e9bf73b9-f82c-4203-ba04-deacf8d9fbd6.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.halfrig
-- attack.software.quarterrig
 - attack.software.snowyamber
+- attack.software.quarterrig
+- attack.software.halfrig
 detection:
   object_1071:
     RequestUrl|contains:
     - https://www.gov.pl
   attributes:
     RequestUrl|contains:
-    - sawabfoundation.net
-    - sanjosemotosport.com
     - gatewan.com
     - pateke.com
+    - sanjosemotosport.com
     - sharpledge.com
     - communitypowersports.com
     - badriatimimi.com
+    - sawabfoundation.net
   condition: 1 of object_* or attributes

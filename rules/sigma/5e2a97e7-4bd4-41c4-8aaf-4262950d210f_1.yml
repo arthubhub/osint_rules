@@ -1,8 +1,8 @@
 title: OSINT - Iranian PupyRAT Bites Middle Eastern Organizations - url_request
-id: 67d587ae-4025-438a-ab18-b855b228c5df
+id: c5edade7-f439-465c-9933-234473b00e91
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5e2a97e7-4bd4-41c4-8aaf-4262950d210f.json
 logsource:
@@ -10,12 +10,12 @@ logsource:
   category: url_request
 tags:
 - attack.group.apt35
-- attack.software.s0192
-- attack.group.cleaver
-- attack.group.g0059
-- attack.group.magic_hound
 - attack.group.oilrig
+- attack.group.g0059
+- attack.group.cleaver
+- attack.software.s0192
 - attack.software.pupyrat
+- attack.group.magic_hound
 detection:
   object_1534:
     RequestUrl|contains:
@@ -26,16 +26,16 @@ detection:
     - ntg.com.sa
   object_1536:
     RequestUrl|contains:
-    - itworx.com
     - itworx.com-ho.me
+    - itworx.com
   object_1537:
     RequestUrl|contains:
-    - mci.gov.sa
     - mci.com-ho.me
+    - mci.gov.sa
   object_1538:
     RequestUrl|contains:
-    - moh.com-ho.me
     - moh.gov.sa
+    - moh.com-ho.me
   object_1539:
     RequestUrl|contains:
     - mol.com-ho.me

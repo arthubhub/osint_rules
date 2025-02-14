@@ -1,35 +1,35 @@
 title: OSINT - Hancitor active again yith new macro - IoCs - dns_query
-id: 847c8467-4ae6-4e67-bdd0-c8c9528a8454
+id: c41e165a-8716-4874-83c7-5ffe8e7a90dd
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c00e9b7-50ac-4aa7-b893-4a63950d210f.json
 logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.hancitor
 - attack.group.hancitor
+- attack.software.hancitor
 detection:
   attributes:
     QueryName|contains:
     - satsumasgeorgia.com
-    - joincrytofundraisernow.us
-    - appersonpropertiesinc.com
-    - joincrytofundraisernow.net
     - g-cals.com
-    - localloop-wi.org
-    - mogamecalls.com
-    - joincryptofundraiser.com
-    - honeyhillfarmspop.com
-    - kenapperson.net
-    - localloop-wi.com
-    - satsumassales.com
-    - satsumasschoolfundraiser.com
-    - minaskaowners.com
-    - mybabyguam.com
     - joincrytofundraisernow.org
     - wilocalloop.com
+    - joincrytofundraisernow.net
+    - joincryptofundraiser.com
+    - joincrytofundraisernow.us
+    - kenapperson.net
     - localloopwi.org
+    - localloop-wi.org
+    - satsumasschoolfundraiser.com
+    - honeyhillfarmspop.com
+    - minaskaowners.com
+    - appersonpropertiesinc.com
+    - mogamecalls.com
+    - localloop-wi.com
+    - mybabyguam.com
+    - satsumassales.com
   condition: attributes

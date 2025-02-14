@@ -1,9 +1,9 @@
 title: Phishing Domains - url_request
-id: 74113683-7110-427e-96c9-daa57c1a7061
+id: d301df35-5d2d-451c-8491-b9b91a0b65f4
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5b16dcc8-2750-456f-8840-fbae0acd0835.json
 logsource:
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - web-traveller.com
-    - edatasales.com
     - elfsrush.com
+    - edatasales.com
+    - web-traveller.com
   condition: attributes

@@ -1,23 +1,23 @@
 title: '2019-01-28: Turla Kazuar RAT - url_request'
-id: 2e0ccb26-3f9c-44df-abc4-1ce80154e37e
+id: 6b4db57e-7ad0-4905-9900-5b346c175505
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
-date: 2025/02/05
+date: 2025/02/14
 status: experimental
 reference: https://www.circl.lu/doc/misp/feed-osint/5c502e8e-09e8-4c7c-9135-4c1b950d210f.json
 logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.turla
-- attack.software.turla
-- attack.software.s0265
-- attack.group.turla_rat
-- attack.group.turla_group
 - attack.group.kazuar
-- attack.group.g0010
+- attack.group.turla_rat
+- attack.software.s0265
+- attack.group.turla
 - attack.software.kazuar
+- attack.group.g0010
 - attack.software.turla_rat
+- attack.software.turla
+- attack.group.turla_group
 detection:
   object_13342:
     RequestUrl|contains:
