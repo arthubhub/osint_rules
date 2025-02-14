@@ -1,5 +1,5 @@
 title: Malspam 2017-08-25 'New voice message' - dns_query
-id: 3d929219-bbc2-4735-b838-9263221ec0b1
+id: 03b88b16-f131-48d9-bcaf-3008bf3fc1d2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -11,13 +11,13 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - hbwconsultants.nl
     - hausverwaltungfrankfurt.de
-    - bromesterionod.net
     - heimatverein-menne.de
+    - hbwconsultants.nl
+    - bromesterionod.net
     IpAddresses:
+    - 83.169.35.187
     - 109.237.218.40
     - 62.75.191.150
     - 47.89.246.2
-    - 83.169.35.187
   condition: attributes

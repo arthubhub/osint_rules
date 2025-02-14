@@ -1,5 +1,5 @@
 title: Emotet 5-18-2018 - url_request
-id: 38eb58f9-153d-4dfe-a0f7-9f549e98e463
+id: 9a559801-555f-4b22-8c8c-443a30ea0d5f
 description: edit this field when analysing or editing the rule - reported by "Synovus
   Financial"
 author: IOCparser_bot
@@ -14,10 +14,10 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
+    - http://sweatshop.org
+    - http://emulsiflex.com
     - http://www.gardonyrefhir.hu
     - http://e-muhr.de
-    - http://emulsiflex.com
     - http://columbiainstitute.org
-    - http://sweatshop.org
     - http://lemat.sk
   condition: attributes

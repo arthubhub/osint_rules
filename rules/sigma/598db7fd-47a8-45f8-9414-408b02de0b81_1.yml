@@ -1,5 +1,5 @@
 title: OSINT - APT28 Targets Hospitality Sector, Presents Threat to Travelers - url_request
-id: 9abb906b-f36e-44ee-9dee-3eef649dd24e
+id: b427d233-2d79-4a47-a33a-d69b68e52934
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.sofacy
 - attack.software.eternalblue
+- attack.group.sofacy
 - attack.group.strontium
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.fireeye.com
     - mvband.net
     - mvtband.net
+    - https://www.fireeye.com
   condition: attributes

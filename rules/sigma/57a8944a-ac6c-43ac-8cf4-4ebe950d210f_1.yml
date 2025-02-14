@@ -1,6 +1,6 @@
 title: Expansion on OSINT Lost your iPhone? Be on guard for a perfectly-timed Apple
   ID phishing attack by Hot For Security - url_request
-id: ef9d723b-73fe-4d33-815e-0dbfd7ff8457
+id: 023fefde-cc83-48a9-a572-44adab283713
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/14
@@ -12,29 +12,29 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - alert-map.com
     - apple-map-locate.com
+    - iphone-service.us
+    - mmison.xyz
+    - findmyiphones-team.com
+    - icloudsecurelogin.com
+    - alert-map.com
     - locationteam-icloud.com
+    - security-ios.net
+    - apple-support-apple.com
+    - fmi-verify-lost.com
+    - hamedia.net
+    - verify-apple-id.us
+    - fmidevice-location.com
     - verify-iphone-location.com
     - https://www.passivetotal.org
-    - microexperts.xyz
-    - trackingiphonelocation.com
-    - hamedia.net
-    - apple-support-apple.com
-    - findmyiphone-system.com
-    - fmi-verify-lost.com
-    - icloudsecurelogin.com
     - lcloud-location-map.com
-    - forum.liveplays.net
+    - findmyiphone-system.com
     - icloud-find.us
-    - fmidevice-location.com
-    - security-ios.net
-    - verify-apple-id.us
-    - show-iphone-location.com
-    - findmyiphones-team.com
     - icloudview.com
-    - mmison.xyz
-    - rakgrs.xyz
-    - iphone-service.us
     - alert-support.com
+    - show-iphone-location.com
+    - microexperts.xyz
+    - forum.liveplays.net
+    - rakgrs.xyz
+    - trackingiphonelocation.com
   condition: attributes

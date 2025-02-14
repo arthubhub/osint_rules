@@ -1,5 +1,5 @@
 title: 'OSINT - Egregor: The New Ransomware Variant To Watch - url_request'
-id: 16541dd0-b918-478f-afb1-b6b6e5c52d45
+id: 9d47dbef-599d-47b4-876d-852ce337f44b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,11 +9,11 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.egregor
 - attack.group.egregor
+- attack.software.egregor
 detection:
   attributes:
     RequestUrl|contains:
-    - http://49.12.104.241
     - https://www.digitalshadows.com
+    - http://49.12.104.241
   condition: attributes

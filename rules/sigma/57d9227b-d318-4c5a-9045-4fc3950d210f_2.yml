@@ -1,5 +1,5 @@
 title: 'Malspam 2016-09-14 (.wsf in .zip) - campaign: "Tax invoice" - dns_query'
-id: 30c89c57-3dff-4afe-965b-7a5125b3716d
+id: 27851738-af34-4853-9785-73505963bf5a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -11,14 +11,14 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - morningaamu.com
+    - adzebury.com
     - duelrid.com
     - maydayen.net
-    - morningaamu.com
     - smilehymy.com
-    - adzebury.com
     IpAddresses:
-    - 178.212.131.10
-    - 103.208.86.164
     - 192.3.7.44
     - 37.200.70.6
+    - 103.208.86.164
+    - 178.212.131.10
   condition: attributes

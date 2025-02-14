@@ -1,5 +1,5 @@
 title: Bad Rabbit (via Pastebin) - url_request
-id: bf44b9db-d21a-4001-b4b5-cc386a382393
+id: 4fe69b7b-f15a-474b-adee-9f7aa6fcf87d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.bad_rabbit
 - attack.software.bad_rabbit
+- attack.group.bad_rabbit
 detection:
   attributes:
     RequestUrl|contains:
-    - https://twitter.com
-    - caforssztxqzf2nm.onion
-    - https://app.any.run
     - fastmonitor1.net
-    - https://pastebin.com
     - 1dnscontrol.com
+    - https://app.any.run
+    - https://pastebin.com
+    - caforssztxqzf2nm.onion
+    - https://twitter.com
   condition: attributes

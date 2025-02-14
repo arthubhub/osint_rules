@@ -1,6 +1,6 @@
 title: OSINT - Return of Not Petya as Bad Rabbit Diskcoder, yes those two are the
   same! - url_request
-id: a0c8fdef-f3ba-4eaa-8d55-626cf67049c5
+id: 0c1c46f6-4d9f-48fb-9d30-d3e3496ed45a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,45 +10,45 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.bad_rabbit
 - attack.software.bad_rabbit
+- attack.group.bad_rabbit
 detection:
   attributes:
     RequestUrl|contains:
-    - http://1dnscontrol.com
-    - http://www.grupovo.bg
-    - ankerch-crimea.ru
-    - http://www.sinematurk.com
-    - http://argumenti.ru
+    - http://ankerch-crimea.ru
+    - http://blog.fontanka.ru
     - http://caforssztxqzf2nm.onion
-    - http://www.imer.ro
-    - http://calendar.fontanka.ru
     - http://an-crimea.ru
-    - http://i24.com.ua
-    - http://www.mediaport.ua
-    - http://www.aica.co.jp
-    - 1dnscontrol.com
-    - http://bg.pensionhotel.com
-    - http://www.otbrana.com
+    - http://most-dnepr.info
+    - http://osvitaportal.com.ua
+    - caforssztxqzf2nm.onion
+    - argumentiru.com
     - http://www.pensionhotel.cz
-    - an-crimea.ru
+    - http://www.mediaport.ua
+    - argumenti.ru
+    - http://novayagazeta.spb.ru
+    - http://grupovo.bg
+    - http://argumentiru.com
+    - http://bg.pensionhotel.com
+    - http://www.grupovo.bg
+    - http://www.t.ks.ua
+    - ankerch-crimea.ru
+    - http://185.149.120.3
+    - http://calendar.fontanka.ru
     - most-dnepr.info
     - https://mjolnirsecurity.com
-    - http://185.149.120.3
-    - http://www.online812.ru
-    - da.id
-    - http://ankerch-crimea.ru
-    - http://grupovo.bg
-    - argumenti.ru
-    - http://most-dnepr.info
-    - http://www.t.ks.ua
-    - caforssztxqzf2nm.onion
-    - http://www.fontanka.ru
-    - http://blog.fontanka.ru
-    - http://spbvoditel.ru
-    - argumentiru.com
-    - http://novayagazeta.spb.ru
-    - http://argumentiru.com
-    - http://osvitaportal.com.ua
+    - an-crimea.ru
     - spbvoditel.ru
+    - http://argumenti.ru
+    - 1dnscontrol.com
+    - http://www.otbrana.com
+    - http://www.sinematurk.com
+    - http://1dnscontrol.com
+    - da.id
+    - http://www.aica.co.jp
+    - http://www.fontanka.ru
+    - http://www.imer.ro
+    - http://i24.com.ua
+    - http://www.online812.ru
+    - http://spbvoditel.ru
   condition: attributes

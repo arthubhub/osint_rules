@@ -1,5 +1,5 @@
 title: Warzone RAT - dns_query
-id: d3d36b9c-70c5-4eb8-9287-1f96b6f0b396
+id: 57150b74-62b5-421b-a74d-fbbac0dd6fd1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -11,7 +11,7 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - warzone.pw
     - warzone.io
     - warzonedns.com
-    - warzone.pw
   condition: attributes

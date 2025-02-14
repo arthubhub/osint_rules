@@ -1,6 +1,6 @@
 title: OSINT - Threat Actors Using Legitimate PayPal Accounts To Distribute Chthonic
   Banking Trojan - url_request
-id: e41353bc-797b-4f17-b33e-7aedce66a9c7
+id: 3ce49234-d884-4fd5-b563-ab5a0ebe2959
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -14,10 +14,10 @@ tags:
 detection:
   attributes:
     RequestUrl|contains:
+    - http://www.viscot.com
     - http://wasingo.info
-    - http://goo.gl
     - https://www.proofpoint.com
     - http://katyaflash.com
+    - http://goo.gl
     - kingstonevikte.com
-    - http://www.viscot.com
   condition: attributes

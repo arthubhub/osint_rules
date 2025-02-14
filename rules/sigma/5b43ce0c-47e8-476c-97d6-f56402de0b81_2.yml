@@ -1,5 +1,5 @@
 title: 'OSINT - APT Attack In the Middle East: The Big Bang - dns_query'
-id: a97b7c3d-6c07-47ba-aa25-54f96dd7f93c
+id: 027c8529-bfc8-424c-a833-fd7132d19504
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,20 +9,20 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.the_big_bang
 - attack.t1113
+- attack.t1193
+- attack.group.the_big_bang
 - attack.t1043
 - attack.t1213
-- attack.t1193
 detection:
   attributes:
     QueryName|contains:
-    - spgbotup.club
-    - hitmesanjjoy.pro
     - lindamullins.info
-    - namybotter.info
-    - sanjynono.website
-    - namyyeatop.club
-    - exvsnomy.club
     - ezofiezo.website
+    - sanjynono.website
+    - namybotter.info
+    - exvsnomy.club
+    - spgbotup.club
+    - namyyeatop.club
+    - hitmesanjjoy.pro
   condition: attributes

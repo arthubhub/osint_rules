@@ -1,5 +1,5 @@
 title: OSINT - TA505 Group Adopts New ServHelper Backdoor and FlawedGrace RAT - url_request
-id: e6e7af5a-8fce-4a80-bf23-e3fb271543c6
+id: e8e3a18e-f132-43dc-9f3c-ee2b8970d43e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.ta505
 - attack.software.flawedgrace
+- attack.group.ta505
 detection:
   attributes:
     RequestUrl|contains:
+    - arepos.bit
     - dedsolutions.bit
     - https://www.bleepingcomputer.com
-    - arepos.bit
   condition: attributes

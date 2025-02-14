@@ -1,5 +1,5 @@
 title: OSINT - AN ANALYSIS OF THE EGREGOR RANSOMWARE - dns_query
-id: 1b1492b8-b613-461a-81d9-ff9050a44257
+id: 85e4184b-d3a0-4661-af09-e8cd4eba0500
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: dns_query
 tags:
+- attack.software.egregor
+- attack.group.gandcrab
+- attack.group.egregor
+- attack.software.s0496
+- attack.group.sodinokibi
 - attack.software.sodinokibi
 - attack.software.gandcrab
-- attack.group.egregor
-- attack.group.gandcrab
-- attack.software.s0496
-- attack.software.egregor
-- attack.group.sodinokibi
 detection:
   attributes:
     IpAddresses:

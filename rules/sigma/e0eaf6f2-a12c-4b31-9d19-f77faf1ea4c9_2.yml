@@ -1,6 +1,6 @@
 title: Kaseya ransomware attack - indicators and information publicly available -
   dns_query
-id: cfde5ed1-b75d-4ba2-b4e7-53d551421819
+id: b3bd93c0-5f3c-419d-b466-9b4c693743a3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,8 +10,8 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.sodinokibi
 - attack.t1486
+- attack.group.sodinokibi
 - attack.software.sodinokibi
 detection:
   object_11972:
@@ -19,44 +19,44 @@ detection:
     - 161.35.239.148
   attributes:
     QueryName|contains:
+    - cursosgratuitosnainternet.com
+    - bierensgebakkramen.nl
+    - 8449nohate.org
+    - cerebralforce.net
+    - facettenreich27.de
+    - tanzschule-kieber.de
+    - gmto.fr
+    - sw1m.ru
+    - daklesa.de
+    - filmstreamingvfcomplet.be
+    - myhostcloud.com
+    - kaotikkustomz.com
+    - faroairporttransfers.net
+    - fannmedias.com
+    - 4net.guru
     - 12starhd.online
-    - 365questions.org
+    - blgr.be
+    - ncuccr.org
+    - candyhouseusa.com
+    - southeasternacademyofprosthodontics.org
+    - pasvenska.se
+    - c2e-poitiers.com
+    - 35-40konkatsu.net
+    - gonzalezfornes.es
+    - homng.net
+    - tonelektro.nl
     - bxdf.info
+    - milestoneshows.com
+    - simoneblum.de
+    - blossombeyond50.com
+    - 1team.es
+    - 123vrachi.ru
+    - fotoscondron.com
+    - smartypractice.com
+    - thomasvicino.com
+    - 4youbeautysalon.com
+    - 365questions.org
     - 101gowrie.com
     - mindpackstudios.com
-    - faroairporttransfers.net
-    - 1team.es
-    - tanzschule-kieber.de
-    - facettenreich27.de
-    - gonzalezfornes.es
-    - filmstreamingvfcomplet.be
-    - fannmedias.com
-    - simoneblum.de
-    - bierensgebakkramen.nl
-    - homng.net
-    - smartypractice.com
-    - fotoscondron.com
-    - blossombeyond50.com
-    - 4youbeautysalon.com
     - iqbalscientific.com
-    - 35-40konkatsu.net
-    - cerebralforce.net
-    - myhostcloud.com
-    - sw1m.ru
-    - pasvenska.se
-    - blgr.be
-    - 8449nohate.org
-    - 123vrachi.ru
-    - milestoneshows.com
-    - c2e-poitiers.com
-    - southeasternacademyofprosthodontics.org
-    - candyhouseusa.com
-    - thomasvicino.com
-    - 4net.guru
-    - kaotikkustomz.com
-    - ncuccr.org
-    - gmto.fr
-    - tonelektro.nl
-    - cursosgratuitosnainternet.com
-    - daklesa.de
   condition: 1 of object_* or attributes

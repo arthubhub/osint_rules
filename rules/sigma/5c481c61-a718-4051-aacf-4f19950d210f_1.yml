@@ -1,6 +1,6 @@
 title: OSINT - DarkHydrus delivers new Trojan that can use Google Drive for C2 communications
   - url_request
-id: 0372b4a5-91e7-433d-b570-52f907444bdc
+id: eced456a-be9e-42fa-aa7c-e72bb470992c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,37 +10,37 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.roguerobin
-- attack.group.darkhydrus
-- attack.group.g0079
 - attack.software.s0270
+- attack.group.roguerobin
+- attack.group.g0079
 - attack.software.roguerobin
+- attack.group.darkhydrus
 detection:
   attributes:
     RequestUrl|contains:
-    - phicdn.world
-    - skydrive.agency
-    - akamaiedge.services
-    - azureedge.today
-    - asimov-win-microsoft.services
-    - sharepoint.agency
-    - 0ffice365.life
-    - onecs-live.services
-    - t-msedge.world
-    - 0ffice365.agency
-    - 0ffice365.services
-    - akamai.agency
     - data-microsoft.services
-    - corewindows.agency
-    - skydrive.services
-    - akdns.live
-    - akamaized.live
-    - 0nedrive.agency
-    - https://unit42.paloaltonetworks.com
-    - akamaiedge.live
-    - nsatc.agency
     - onedrive.agency
+    - azureedge.today
+    - https://unit42.paloaltonetworks.com
+    - 0ffice365.services
+    - skydrive.services
+    - akamai.agency
+    - sharepoint.agency
+    - 0nedrive.agency
+    - akamaiedge.services
+    - onecs-live.services
+    - 0ffice365.life
     - microsoftonline.agency
-    - edgekey.live
     - iecvlist-microsoft.live
+    - edgekey.live
+    - 0ffice365.agency
+    - akdns.live
+    - nsatc.agency
+    - skydrive.agency
+    - asimov-win-microsoft.services
+    - t-msedge.world
+    - corewindows.agency
+    - akamaized.live
+    - phicdn.world
+    - akamaiedge.live
   condition: attributes

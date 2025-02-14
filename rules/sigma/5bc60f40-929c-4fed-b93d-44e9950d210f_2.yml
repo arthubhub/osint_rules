@@ -1,5 +1,5 @@
 title: OSINT - 2018-10-09 - HANCITOR INFECTION WITH ZEUS PANDA BANKER - dns_query
-id: 2f7d7c55-4c13-4ecd-b401-473f89079406
+id: af29c6b0-41c6-4966-9315-944f3aff88aa
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,34 +9,34 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1022
 - attack.t1056
-- attack.t1041
+- attack.t1022
 - attack.t1193
+- attack.t1041
 detection:
   object_3621:
     IpAddresses:
     - 46.36.220.116
   attributes:
     QueryName|contains:
-    - 275aacaa1698.net
-    - oxmoorusedcars.com
-    - genesiseastlouisville.com
-    - nobotanri.ru
-    - hersjustretleft.ru
-    - genesisofwestlouisville.com
-    - genesisofeaslouisville.com
-    - carvananashville.com
-    - selltooxmoor.com
-    - hehenforfi.ru
-    - carvanamemphis.com
-    - 275aacaa1610.net
-    - genesisatoxmoor.com
-    - carvanadenver.com
-    - sellittooxmoor.com
-    - sincirewdo.ru
     - veintitna.ru
-    - fornetodu.com
-    - lachistontfi.ru
+    - genesisofeaslouisville.com
+    - carvanadenver.com
     - genesisofindiana.com
+    - carvanamemphis.com
+    - 275aacaa1698.net
+    - genesiseastlouisville.com
+    - selltooxmoor.com
+    - hersjustretleft.ru
+    - oxmoorusedcars.com
+    - carvananashville.com
+    - sincirewdo.ru
+    - genesisofwestlouisville.com
+    - fornetodu.com
+    - nobotanri.ru
+    - lachistontfi.ru
+    - genesisatoxmoor.com
+    - sellittooxmoor.com
+    - hehenforfi.ru
+    - 275aacaa1610.net
   condition: 1 of object_* or attributes

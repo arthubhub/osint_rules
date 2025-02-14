@@ -1,5 +1,5 @@
 title: 'Malspam 2017-09-08 - ''Microsoft Store E-invoice for your order #'' - dns_query'
-id: d1082282-c547-4e65-8cea-137c90712014
+id: 3480a2cb-3a7d-4fb7-a7a7-00cbedad2c94
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,14 +9,14 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     QueryName|contains:
+    - etforhartohat.info
     - lagrangeglassandmirrorco.com
     - brandingforbuyout.com
-    - etforhartohat.info
     IpAddresses:
     - 74.208.163.59
     - 213.246.110.104

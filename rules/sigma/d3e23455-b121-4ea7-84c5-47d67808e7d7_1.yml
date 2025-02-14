@@ -1,6 +1,6 @@
 title: Microsoft Office 365 Phishing - hosted on IPFS - https://ipfs.io/ipfs/QmdZDtyPrvVegTU7p6JZ5dm3CoZnH2qdEjTRfsUY8Nncwh
   - url_request
-id: c23fc18e-4d02-421b-b826-ba76688e7992
+id: 6dde8071-331e-46f1-9da4-a97fa241156f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -14,10 +14,10 @@ tags:
 detection:
   object_18124:
     RequestUrl|contains:
-    - ipfs.io
     - https://ipfs.io
+    - ipfs.io
   attributes:
     RequestUrl|contains:
-    - https://lookyloo.circl.lu
     - https://urlscan.io
+    - https://lookyloo.circl.lu
   condition: 1 of object_* or attributes

@@ -1,5 +1,5 @@
 title: Phishing targeting Luxembourg services (hosted and served on/from AWS) - url_request
-id: 1765d5a7-fada-4b06-a788-4956d6787a7d
+id: 9ead4438-366c-487d-b898-0b82189e9b7c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -13,8 +13,8 @@ tags:
 detection:
   object_996:
     RequestUrl|contains:
-    - ccss.support
     - cfl-lu.com
+    - ccss.support
   object_997:
     RequestUrl|contains:
     - https://sante-lu.com
@@ -34,8 +34,8 @@ detection:
     - https://carte-sante-lu.com
   object_1002:
     RequestUrl|contains:
-    - https://infoluxtrust.com
     - infoluxtrust.com
+    - https://infoluxtrust.com
   object_1003:
     RequestUrl|contains:
     - https://luxtrust.help
@@ -52,12 +52,12 @@ detection:
     - https://order-public.com
   object_1007:
     RequestUrl|contains:
-    - support-luxtrust.com
     - https://support-luxtrust.com
+    - support-luxtrust.com
   object_1008:
     RequestUrl|contains:
-    - https://guichet.me
     - guichet.me
+    - https://guichet.me
   object_1009:
     RequestUrl|contains:
     - cfl-lu.com
@@ -66,8 +66,8 @@ detection:
     - card-order.lu
   object_1011:
     RequestUrl|contains:
-    - payconiq.direct
     - payconiq.tel
+    - payconiq.direct
   object_1012:
     RequestUrl|contains:
     - https://support-luxtrust.lu
@@ -91,14 +91,14 @@ detection:
     - https://luxtrust-support.com
   attributes:
     RequestUrl|contains:
-    - cns-lu.com
-    - www-cns.com
-    - ccss-sante-lu.com
-    - luxtrust.help
-    - luxtrust-unlock.com
     - luxtrust-cancel.com
-    - https://public-ccss.com
-    - www-cns-lu.com
-    - ccss-public.com
+    - luxtrust-unlock.com
+    - luxtrust.help
+    - cns-lu.com
     - luxtrust.support
+    - ccss-public.com
+    - ccss-sante-lu.com
+    - https://public-ccss.com
+    - www-cns.com
+    - www-cns-lu.com
   condition: 1 of object_* or attributes

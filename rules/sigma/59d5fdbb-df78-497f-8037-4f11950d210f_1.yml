@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-10-05 : Affid=3, offline, ".ykcol" : "Invoice" - "1234567.7z"
   - url_request'
-id: 0aa2c715-9acb-45ad-a5cf-bed08523e4e4
+id: e44232fc-141f-4989-8edf-3e2918770158
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,26 +10,26 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
+    - http://hutterstock.org
     - http://comtecav.co.uk
+    - http://maitreandre.com
+    - http://formationdirecte.ca
     - http://ernestoangiolini.com
-    - http://www.cioccolatopaolillo.it
+    - http://173.83.200.79
     - http://physicallyfocused.biz
-    - http://adamjarekelk.freehost.pl
-    - http://ristorantetrefontane.it
-    - http://www.gentechimpianti.com
     - http://www.mariodigregorio.it
     - http://www.emtech-canada.com
-    - http://maitreandre.com
-    - http://LeadingWare.us
+    - http://www.gentechimpianti.com
+    - http://ristorantetrefontane.it
+    - http://adamjarekelk.freehost.pl
     - http://kimberlyvargasauthor.com
+    - http://www.cioccolatopaolillo.it
+    - http://LeadingWare.us
     - http://gandmco.com
     - http://173.83.200.78
-    - http://hutterstock.org
-    - http://173.83.200.79
-    - http://formationdirecte.ca
   condition: attributes

@@ -1,5 +1,5 @@
 title: OSINT - Attacks on industrial enterprises using RMS and TeamViewer - dns_query
-id: cd7373c5-e42b-4974-a63a-c19d2788af30
+id: 7299d205-dfb9-4c6e-b369-63f6333e5a1b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -14,17 +14,17 @@ detection:
   attributes:
     QueryName|contains:
     - rosatomgov.ru
-    - buhuchetooo.ru
-    - micorsoft.info
-    - papaninili.temp.swtest.ru
     - document-buh.com
+    - buhuchetooo.ru
+    - papaninili.temp.swtest.ru
+    - micorsoft.info
     IpAddresses:
     - 185.51.247.169
+    - 185.51.247.125
     - 208.91.198.93
+    - 77.222.57.247
+    - 81.177.135.151
     - 191.101.245.101
     - 81.177.141.15
-    - 81.177.135.151
-    - 185.51.247.125
     - 87.236.19.244
-    - 77.222.57.247
   condition: attributes

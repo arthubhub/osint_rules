@@ -1,6 +1,6 @@
 title: 'OSINT - Setting Sights On Retail: AbaddonPOS Now Targeting Specific POS Software
   - url_request'
-id: 55e0c5c9-4003-4d3c-9238-c705beff2d41
+id: 16d2e0e6-ae16-4daa-82ea-b50bbd4331ca
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -12,8 +12,8 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - http://dolcheriva.com
     - http://85.93.5.136
     - http://50.7.124.178
-    - http://dolcheriva.com
     - https://www.proofpoint.com
   condition: attributes

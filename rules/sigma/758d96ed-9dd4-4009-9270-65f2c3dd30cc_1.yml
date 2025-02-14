@@ -1,6 +1,6 @@
 title: 'Buzzing in the Background: BumbleBee, a New Modular Backdoor Evolved From
   BookWorm - url_request'
-id: cbe33709-858c-481a-b6c1-391891ecde81
+id: 07d5b3ce-78b6-4618-9f94-409555364eec
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -11,31 +11,31 @@ logsource:
   category: url_request
 tags:
 - attack.t1090
-- attack.t1056
-- attack.t1055
-- attack.group.bookworm
-- attack.t1056.001
-- attack.t1071.001
-- attack.software.bookworm
 - attack.t1480
-- attack.t1070
-- attack.t1417
-- attack.t1587.001
 - attack.software.bumblebee
 - attack.t1037
-- attack.group.bumblebee
 - attack.t1548.002
-- attack.t1574
+- attack.t1056.001
+- attack.t1056
 - attack.t1573.001
+- attack.t1070
+- attack.t1574
+- attack.t1055
 - attack.t1547
+- attack.group.bookworm
+- attack.software.bookworm
 - attack.t1592
+- attack.group.bumblebee
+- attack.t1587.001
 - attack.t1543
+- attack.t1417
+- attack.t1071.001
 detection:
   object_6645:
     RequestUrl|contains:
     - https://www.trendmicro.com
   attributes:
     RequestUrl|contains:
-    - http://www.synolo.ns01.biz
     - http://118.163.105.130
+    - http://www.synolo.ns01.biz
   condition: 1 of object_* or attributes

@@ -1,5 +1,5 @@
 title: Ransomware spreading through SMB attacking multiple companies - url_request
-id: aaa40aaf-5d26-47e7-894e-365cecc3ef01
+id: 820eccdf-d927-45ab-8da9-672b1b27e9d5
 description: edit this field when analysing or editing the rule - reported by "INCIBE"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,17 +10,17 @@ logsource:
   category: url_request
 tags:
 - attack.group.wannacry
-- attack.software.wannacry
 - attack.software.eternalblue
+- attack.software.wannacry
 detection:
   attributes:
     RequestUrl|contains:
-    - gx7ekbenv2riucmf.onion
+    - 76jdd2ir2embyv47.onion
+    - https://gist.github.com
     - https://www.bleepingcomputer.com
+    - https://www.hybrid-analysis.com
     - cwwnhwhlz52maqm7.onion
     - 57g7spgrzlojinas.onion
-    - 76jdd2ir2embyv47.onion
-    - https://www.hybrid-analysis.com
+    - gx7ekbenv2riucmf.onion
     - xxlvbrloxvriy2c5.onion
-    - https://gist.github.com
   condition: attributes

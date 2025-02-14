@@ -1,6 +1,6 @@
 title: A22-108A TraderTraitor North Korean State-Sponsored APT Targets Blockchain
   Companies - dns_query
-id: 4a8803ff-744f-49da-b3cd-d5de3f404c14
+id: f507f167-d710-4e8a-b5c6-3f5a0ce43dd2
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,39 +10,39 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.lazarus_group
-- attack.t1071.001
+- attack.t1566.001
 - attack.group.g0032
 - attack.t1552.004
-- attack.t1566.001
+- attack.group.lazarus_group
+- attack.t1071.001
 detection:
   attributes:
     QueryName|contains:
-    - esilet.com
+    - greenvideo.nl
+    - aideck.net
+    - creaideck.com
+    - dafnefonseca.com
+    - tokenais.com
     - cryptais.com
     - haciendadeclarevot.com
-    - alticgo.com
-    - greenvideo.nl
-    - creaideck.com
-    - tokenais.com
-    - dafom.dev
-    - infodigitalnew.com
+    - esilet.com
     - sche-eg.org
-    - dafnefonseca.com
-    - aideck.net
+    - infodigitalnew.com
+    - alticgo.com
+    - dafom.dev
     - vinoymas.ch
     IpAddresses:
-    - 62.84.240.140
-    - 46.16.62.238
-    - 108.170.55.202
-    - 107.154.160.132
-    - 89.45.4.151
-    - 160.153.235.20
-    - 104.168.98.156
-    - 45.14.227.58
-    - 151.101.64.119
-    - 185.66.41.17
     - 38.132.124.161
+    - 62.84.240.140
+    - 151.101.64.119
+    - 46.16.62.238
+    - 160.153.235.20
+    - 185.66.41.17
+    - 45.14.227.58
+    - 107.154.160.132
     - 82.102.31.14
+    - 108.170.55.202
     - 199.188.103.115
+    - 89.45.4.151
+    - 104.168.98.156
   condition: attributes

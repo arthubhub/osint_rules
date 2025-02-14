@@ -1,6 +1,6 @@
 title: 'OSINT - Anatomy of Attack: Inside BazarBackdoor to Ryuk Ransomware "one" Group
   via Cobalt Strike - dns_query'
-id: 8916517f-ce0a-4165-9ff4-92c2a8e128d5
+id: 35962398-376a-4148-ab9a-2b4d3e9c9e7e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,35 +10,35 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.cobalt_strike
-- attack.software.ryuk_ransomware
 - attack.software.cobalt_strike
+- attack.group.cobalt_strike
 - attack.group.ryuk_ransomware
+- attack.software.ryuk_ransomware
 detection:
   attributes:
     QueryName|contains:
-    - luckyhunterrs.com
     - hybriqdjs.com
-    - service-boosterr.com
     - wodemayaa.com
-    - mixunderax.com
-    - serviceboosterr.com
-    - check1domains.com
-    - havemosts.com
-    - servicewikii.com
-    - unlockwsa.com
-    - dotmaingame.com
-    - sweetmonsterr.com
-    - fastbloodhunter.com
-    - serviceupdatter.com
     - bugsbunnyy.com
-    - zhameharden.com
-    - gungameon.com
-    - servicesupdater.com
-    - qascker.com
-    - sobcase.com
-    - remotessa.com
-    - gunsdrag.com
+    - fastbloodhunter.com
     - servicemount.com
+    - servicewikii.com
+    - mixunderax.com
+    - zhameharden.com
+    - gunsdrag.com
+    - serviceboosterr.com
+    - remotessa.com
+    - gungameon.com
+    - havemosts.com
+    - unlockwsa.com
+    - serviceupdatter.com
+    - servicesupdater.com
+    - sobcase.com
     - secondlivve.com
+    - service-boosterr.com
+    - luckyhunterrs.com
+    - check1domains.com
+    - sweetmonsterr.com
+    - qascker.com
+    - dotmaingame.com
   condition: attributes

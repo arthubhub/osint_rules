@@ -1,6 +1,6 @@
 title: "OSINT - Let\xE2\u20AC\u2122s play (again) with Predator the thief \xE2\u20AC\
   \u201C Fumik0_'s box - url_request"
-id: 131a71ef-3870-4945-9312-8a8f45d95d2c
+id: 7dddcd41-bf78-4ede-99e6-5b254f736a0b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,16 +10,16 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1214
-- attack.software.predator_the_thief
-- attack.t1212
-- attack.t1003
-- attack.group.predator_the_thief
 - attack.t1081
+- attack.t1003
+- attack.software.predator_the_thief
+- attack.group.predator_the_thief
 - attack.t1503
+- attack.t1214
+- attack.t1212
 detection:
   attributes:
     RequestUrl|contains:
-    - cadvexmail19mn.world
     - https://fumik0.com
+    - cadvexmail19mn.world
   condition: attributes

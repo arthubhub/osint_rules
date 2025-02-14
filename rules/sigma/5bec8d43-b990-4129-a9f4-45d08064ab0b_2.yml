@@ -1,5 +1,5 @@
 title: 'MISSING LINK: Tibetan Groups Targeted with Mobile Exploits - dns_query'
-id: db8d1845-7e2a-496f-b24b-cbc75396a3eb
+id: d21a4da4-438f-474a-8d8b-68bb70c1a525
 description: edit this field when analysing or editing the rule - reported by "citizenlab"
 author: IOCparser_bot
 date: 2025/02/14
@@ -11,32 +11,32 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - msap.services
-    - gmailapp.me
-    - rf.mk
+    - beemail.online
     - izelense.com
-    - polarismail.services
+    - www.msap.services
+    - bf.mk
     - energy-mail.org
+    - www.energy-mail.org
+    - gmailapp.me
     - mailcontactanalysis.online
     - mailnotes.online
-    - bf.mk
+    - polarismail.services
     - mailanalysis.services
-    - walkingnote.online
-    - www.energy-mail.org
+    - msap.services
     - antmoving.online
-    - beemail.online
-    - www.msap.services
+    - rf.mk
+    - walkingnote.online
     IpAddresses:
-    - 45.76.149.154
-    - 95.169.2.57
     - 43.251.16.87
+    - 45.32.75.217
+    - 149.28.93.11
+    - 45.76.149.154
     - 45.78.79.100
     - 144.202.59.23
     - 66.42.58.59
-    - 45.76.53.26
-    - 149.28.93.11
-    - 45.32.75.217
-    - 206.189.65.198
     - 140.82.17.222
+    - 206.189.65.198
     - 45.32.91.137
+    - 95.169.2.57
+    - 45.76.53.26
   condition: attributes

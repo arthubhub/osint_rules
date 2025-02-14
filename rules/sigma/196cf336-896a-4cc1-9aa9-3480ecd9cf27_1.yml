@@ -1,6 +1,6 @@
 title: BatLoader Continues to Abuse Google Search Ads to Deliver Vidar Stealer and
   Ursnif - url_request
-id: b6fb23da-8976-4a75-a005-697e19d5f73f
+id: 89f0e72a-fe91-4276-a1e7-6f69826eb6e2
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -11,44 +11,44 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.t1059
 - attack.t1410
+- attack.group.vidar
+- attack.software.vidar
+- attack.software.s0386
+- attack.t1059.001
 - attack.t1064
 - attack.t1059.006
-- attack.software.s0386
-- attack.group.vidar
-- attack.t1059
-- attack.t1059.001
-- attack.software.vidar
 detection:
   attributes:
     RequestUrl|contains:
-    - adobe-l.com
-    - anydesk-o.com
-    - java-s.com
-    - jhgfdlkjhaoiu.su
-    - openoffice-a.com
     - gimp-t.com
-    - isoridkf.ru
-    - reggy506.ru
-    - iujdhsndjfks.ru
+    - pixelarmada.su
     - anydesk-r.com
+    - uelcoskdi.ru
+    - adobe-l.com
+    - microso-t.com
+    - isoridkf.ru
+    - openoffice-a.com
+    - jhgfdlkjhaoiu.su
+    - zoomvideor.com
+    - java-s.com
+    - reggy506.ru
+    - tableau-r.com
+    - spotify-uss.com
+    - java-a.com
+    - java-r.com
+    - adobe-e.com
+    - freecad-l.com
+    - bitwarden-t.com
+    - anydesk-o.com
+    - quickbooks-q.com
+    - iujdhsndjfks.ru
+    - basecamp-a.com
+    - visualstudio-t.com
     - reggy914.ru
     - adobe-a.com
-    - tableau-r.com
-    - chatgpt-t.com
-    - zoomvideor.com
-    - basecamp-a.com
-    - java-a.com
-    - microso-t.com
-    - quickbooks-q.com
-    - adobe-e.com
-    - pixelarmada.su
-    - freecad-l.com
-    - gameindikdowd.ru
-    - java-r.com
-    - uelcoskdi.ru
     - shvarcnegerhistory.com
-    - visualstudio-t.com
-    - bitwarden-t.com
-    - spotify-uss.com
+    - chatgpt-t.com
+    - gameindikdowd.ru
   condition: attributes

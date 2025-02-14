@@ -1,5 +1,5 @@
 title: 'OSINT -  RAT Gone Rogue: Meet ARS VBS Loader - dns_query'
-id: 63093859-1f37-4b8d-8b00-63c8f9869ad6
+id: 4b8a0288-bb9b-4865-a388-da2feb54cdcb
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,14 +9,14 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.ars_vbs_loader
 - attack.group.ars_vbs_loader
+- attack.software.ars_vbs_loader
 detection:
   attributes:
     QueryName|contains:
     - gtneifnsyrf.tk
     IpAddresses:
     - 192.95.42.88
-    - 94.102.60.148
     - 54.36.12.175
+    - 94.102.60.148
   condition: attributes

@@ -1,5 +1,5 @@
 title: "[OSINT] No Honor Among Thieves - Prynt Stealer\u2019s Backdoor Exposed - dns_query"
-id: 6b5c6d19-a56a-4ced-8010-5c2059c309e7
+id: 9cffeedb-f9cf-42f4-b66a-f0a2f97b70a5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.software.darkeye
-- attack.software.worldwind
-- attack.software.prynt_stealer
-- attack.group.worldwind
 - attack.group.darkeye
+- attack.software.prynt_stealer
 - attack.group.prynt_stealer
+- attack.group.worldwind
+- attack.software.worldwind
+- attack.software.darkeye
 detection:
   object_17615:
     QueryName|contains:

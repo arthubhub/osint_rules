@@ -1,5 +1,5 @@
 title: 'OSINT - Bad Rabbit: Not-Petya is back with improved ransomware - url_request'
-id: 0d242a78-636b-4063-8965-d79e62800baf
+id: 4efb7770-3d98-4fb7-be1f-7efd5a9eac63
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,37 +9,37 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.bad_rabbit
 - attack.software.bad_rabbit
+- attack.group.bad_rabbit
 detection:
   attributes:
     RequestUrl|contains:
-    - http://1dnscontrol.com
-    - http://www.grupovo.bg
-    - http://osvitaportal.com.ua
-    - http://www.sinematurk.com
-    - https://www.welivesecurity.com
-    - http://argumenti.ru
-    - http://most-dnepr.info
+    - http://ankerch-crimea.ru
+    - http://blog.fontanka.ru
     - http://www.t.ks.ua
     - http://caforssztxqzf2nm.onion
-    - http://www.fontanka.ru
-    - http://www.imer.ro
-    - http://calendar.fontanka.ru
     - http://an-crimea.ru
-    - http://i24.com.ua
-    - http://www.mediaport.ua
-    - http://blog.fontanka.ru
-    - http://www.aica.co.jp
-    - 1dnscontrol.com
-    - http://bg.pensionhotel.com
-    - http://spbvoditel.ru
-    - http://www.otbrana.com
-    - http://www.pensionhotel.cz
+    - http://most-dnepr.info
+    - http://osvitaportal.com.ua
     - http://185.149.120.3
+    - http://calendar.fontanka.ru
+    - http://www.pensionhotel.cz
+    - http://www.mediaport.ua
     - http://novayagazeta.spb.ru
-    - http://argumentiru.com
-    - http://ankerch-crimea.ru
+    - http://argumenti.ru
+    - 1dnscontrol.com
+    - http://www.otbrana.com
+    - http://www.sinematurk.com
+    - http://1dnscontrol.com
     - http://grupovo.bg
+    - http://www.aica.co.jp
+    - http://www.fontanka.ru
+    - http://argumentiru.com
+    - https://www.welivesecurity.com
+    - http://bg.pensionhotel.com
+    - http://www.imer.ro
+    - http://i24.com.ua
     - http://www.online812.ru
+    - http://spbvoditel.ru
+    - http://www.grupovo.bg
   condition: attributes

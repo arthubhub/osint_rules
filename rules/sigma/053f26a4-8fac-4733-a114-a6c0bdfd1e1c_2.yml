@@ -1,6 +1,6 @@
 title: 'OSINT -  Space Pirates: analyzing the tools and connections of a new hacker
   group - dns_query'
-id: 0e58f5c7-4fb8-4555-bf2a-f401ab3f8de3
+id: d7876ffa-98fe-4ef9-a659-c7f490195b41
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,35 +10,35 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.shadowpad
-- attack.software.poison_ivy
-- attack.software.plugx
-- attack.software.s0596
-- attack.software.s0013
 - attack.group.poison_ivy
-- attack.group.plugx
 - attack.software.shadowpad
+- attack.software.poison_ivy
+- attack.group.shadowpad
+- attack.software.plugx
+- attack.software.s0013
+- attack.software.s0596
+- attack.group.plugx
 detection:
   attributes:
     QueryName|contains:
     - findanswer123.tk
     IpAddresses:
-    - 192.225.226.218
     - 207.148.121.88
     - 192.225.226.217
-    - 120.78.127.189
-    - 121.89.210.144
-    - 123.1.151.64
-    - 154.213.21.207
-    - 108.160.134.113
-    - 45.76.145.22
-    - 192.225.226.123
-    - 103.27.109.234
-    - 154.211.161.161
-    - 47.108.89.169
-    - 202.182.98.74
-    - 154.85.48.108
     - 45.77.16.91
+    - 45.76.145.22
     - 141.164.35.87
+    - 47.108.89.169
     - 103.101.178.152
+    - 123.1.151.64
+    - 154.85.48.108
+    - 192.225.226.123
+    - 108.160.134.113
+    - 192.225.226.218
+    - 103.27.109.234
+    - 154.213.21.207
+    - 120.78.127.189
+    - 154.211.161.161
+    - 121.89.210.144
+    - 202.182.98.74
   condition: attributes

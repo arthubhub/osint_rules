@@ -1,5 +1,5 @@
 title: Malspam 2017-08-25 'Your Sage subscription invoice is ready' - url_request
-id: 1135f03c-21c3-43c9-a229-c214b4536007
+id: 8d99b886-4519-4a75-b379-1756493a357c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,33 +9,33 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - hbwconsultants.nl
-    - hartwig-mau.de
+    - http://hausgerhard.com
+    - gumart.com
+    - hausgadum.de
     - hecam.de
-    - http://heimatverein-menne.de
+    - http://hansstock.de
     - haleshomesales.com
     - bromesterionod.net
-    - http://hausgadum.de
-    - http://hausgerhard.com
-    - http://hansstock.de
-    - http://hbwconsultants.nl
+    - hbwconsultants.nl
     - http://hecam.de
-    - hansstock.de
-    - http://gumart.com
-    - gumart.com
-    - http://go-coo.jp
-    - hausgadum.de
-    - hausgerhard.com
-    - http://hartwig-mau.de
-    - http://haboosh-law.com
     - http://haleshomesales.com
-    - heimatverein-menne.de
-    - go-coo.jp
-    - http://bromesterionod.net
+    - http://haboosh-law.com
     - haboosh-law.com
+    - http://hbwconsultants.nl
+    - http://bromesterionod.net
+    - heimatverein-menne.de
+    - http://hausgadum.de
+    - hansstock.de
+    - hartwig-mau.de
+    - hausgerhard.com
+    - http://heimatverein-menne.de
+    - http://hartwig-mau.de
+    - http://gumart.com
+    - go-coo.jp
+    - http://go-coo.jp
   condition: attributes

@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-09-19 : Affid=3, offline, ".ykcol" : "Emailing - 10008001234"
   - "10008001234.7z" - url_request'
-id: 3dd04755-9b77-4a26-9a6b-6f9984d4a84b
+id: f4a6eeee-1ee4-4a0f-8896-e2b9b396f74c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,22 +10,22 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://edificioviacapital.com.br
-    - http://dealer.my-beads.nl
     - http://dkck.com.tw
+    - http://dealer.my-beads.nl
     - http://hkwatercolors.com
-    - http://hydrodesign.net
-    - http://globalmitrateknik.com
-    - http://keener-music.com
     - http://lowlender.com
-    - http://countryhome.dmw123.com
-    - http://land-atlanta.net
+    - http://edificioviacapital.com.br
     - http://mebel.wladimir.ru
+    - http://land-atlanta.net
     - http://slbjuris.fr
+    - http://globalmitrateknik.com
+    - http://hydrodesign.net
+    - http://keener-music.com
     - http://zionbrand.su
+    - http://countryhome.dmw123.com
   condition: attributes

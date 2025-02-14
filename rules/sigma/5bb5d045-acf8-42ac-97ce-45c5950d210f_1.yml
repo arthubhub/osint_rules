@@ -1,5 +1,5 @@
 title: OSINT - Indicators of Compromise for Malware used by APT28 - url_request
-id: 83a1cb75-927b-4572-b9c8-e4e60a98eb80
+id: 5a5a0176-311b-4982-af35-64d01bd9f9f9
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,39 +9,39 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.x-agent
 - attack.group.sofacy
 - attack.software.x-tunnel
 - attack.group.strontium
-- attack.software.x-agent
 detection:
   attributes:
     RequestUrl|contains:
-    - topcinemaclub.com
-    - protonhardstorage.com
-    - narrowpass.net
-    - powernoderesources.com
-    - bbcweather.org
-    - virtsvc.com
-    - brownvelocity.org
-    - georgia-travel.org
-    - malaytravelgroup.com
-    - worldimagebucket.com
-    - politicweekend.com
-    - genericnetworkaddress.com
-    - truefashionnews.com
-    - globaltechengineers.org
-    - creekcounty.net
-    - beststreammusic.com
-    - bulgariatripholidays.com
-    - escochart.com
-    - moderntips.org
-    - thepiratecinemaclub.org
-    - moldtravelgroup.com
-    - fundseats.com
-    - daysheduler.org
-    - loungecinemaclub.com
     - coindmarket.com
+    - narrowpass.net
+    - bbcweather.org
+    - powernoderesources.com
+    - fundseats.com
+    - creekcounty.net
+    - brownvelocity.org
+    - thepiratecinemaclub.org
+    - escochart.com
+    - bulgariatripholidays.com
+    - virtsvc.com
+    - moldtravelgroup.com
+    - georgia-travel.org
+    - politicweekend.com
+    - topcinemaclub.com
+    - globaltechengineers.org
+    - protonhardstorage.com
     - https://www.ncsc.gov.uk
-    - pointtk.com
+    - genericnetworkaddress.com
+    - daysheduler.org
+    - truefashionnews.com
+    - beststreammusic.com
+    - malaytravelgroup.com
     - iboxmit.com
+    - worldimagebucket.com
+    - moderntips.org
+    - loungecinemaclub.com
+    - pointtk.com
   condition: attributes

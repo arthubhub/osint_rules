@@ -1,6 +1,6 @@
 title: "OSINT - StrongPity2 spyware replaces FinFisher in MitM campaign \xE2\u20AC\
   \u201C ISP involved? - url_request"
-id: 51355914-cee9-4753-b53c-b06833c001b0
+id: 6f051b0b-e668-428d-935e-2454be34051c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,12 +10,12 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.strongpity2
 - attack.group.promethium
+- attack.software.strongpity2
 detection:
   attributes:
     RequestUrl|contains:
+    - https://updserv-east-cdn3.com
     - https://downloading.internetdownloading.co
     - https://www.welivesecurity.com
-    - https://updserv-east-cdn3.com
   condition: attributes

@@ -1,6 +1,6 @@
 title: "OSINT - Kampania APT28 skierowana przeciwko polskim instytucjom rz\u0105dowym\
   \ - url_request"
-id: 7f32b779-6f9d-4d56-bf81-a51c75286fe0
+id: 73586187-d938-4f3d-9878-e9f593e5cb8b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -17,6 +17,6 @@ detection:
     - https://cert.pl
   attributes:
     RequestUrl|contains:
-    - https://webhook.site
     - https://run.mocky.io
+    - https://webhook.site
   condition: 1 of object_* or attributes

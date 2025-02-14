@@ -1,6 +1,6 @@
 title: OSINT - New BabyShark Malware Targets U.S. National Security Think Tanks -
   url_request
-id: b8b75ed5-622c-4d6d-b6a7-9361994baf12
+id: 52414b8d-aa61-487e-a55e-2aa4b77c1c38
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -11,11 +11,11 @@ logsource:
   category: url_request
 tags:
 - attack.group.stolen_pencil
-- attack.software.babyshark
 - attack.t1441
+- attack.software.babyshark
 detection:
   attributes:
     RequestUrl|contains:
-    - https://unit42.paloaltonetworks.com
     - https://tdalpacafarm.com
+    - https://unit42.paloaltonetworks.com
   condition: attributes

@@ -1,6 +1,6 @@
 title: "OSINT An In-Depth Look at How Pawn Storm\xE2\u20AC\u2122s Java Zero-Day Was\
   \ Used by Trend Micro - dns_query"
-id: 6dc2e3d2-23b6-49f0-9c09-ccbb4c42878b
+id: 943bb660-e68d-4c81-96fa-7befcb4c4810
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/14
@@ -12,20 +12,20 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - api-ms-win-downlevel-profile-l1-1-0.dll
-    - vhgg5hkvn25.exe
+    - arrayreplace.class
     - acledit.com
-    - biocpl.org
+    - converter.class
+    - ausameetings.com
     - mybytearrayinputstream.class
     - cormac.mcr
-    - converter.class
     - none2.class
-    - ausameetings.com
+    - biocpl.org
+    - api-ms-win-downlevel-profile-l1-1-0.dll
+    - vhgg5hkvn25.exe
     - none.class
-    - arrayreplace.class
     IpAddresses:
-    - 87.236.215.132
+    - 37.187.116.240
     - 95.215.45.189
     - 192.111.146.185
-    - 37.187.116.240
+    - 87.236.215.132
   condition: attributes

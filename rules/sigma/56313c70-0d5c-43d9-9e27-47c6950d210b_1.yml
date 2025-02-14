@@ -1,6 +1,6 @@
 title: OSINT Chinese Taomike Monetization Library Steals SMS Messages by AlienVault
   and Palo Alto networks - url_request
-id: f47e4b29-46c8-45c5-8461-4e2844308e4c
+id: c6d39ea3-be2a-4db7-8aea-7e23780333d4
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/14
@@ -12,7 +12,7 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
-    - https://otx.alienvault.com
     - http://112.126.69.51
     - http://researchcenter.paloaltonetworks.com
+    - https://otx.alienvault.com
   condition: attributes

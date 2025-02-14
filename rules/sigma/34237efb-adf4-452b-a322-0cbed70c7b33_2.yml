@@ -1,6 +1,6 @@
 title: 'OSINT - Cutting Edge, Part 2: Investigating Ivanti Connect Secure VPN Zero-Day
   Exploitation - dns_query'
-id: a2c0a60c-8cbd-40f6-b85f-b98773bd09d1
+id: e3824002-640d-4ae2-ae98-7aa3866d2613
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -14,23 +14,23 @@ tags:
 detection:
   attributes:
     QueryName|contains:
-    - secure-cama.com
-    - entraide-internationale.fr
-    - clicko.click
-    - ehangmun.com
-    - line-api.com
-    - clickcom.click
-    - areekaweb.com
     - miltonhouse.nl
+    - secure-cama.com
+    - ehangmun.com
+    - areekaweb.com
     - symantke.com
+    - entraide-internationale.fr
+    - clickcom.click
+    - clicko.click
     - duorhytm.fun
+    - line-api.com
     IpAddresses:
-    - 50.215.39.49
-    - 173.220.106.166
-    - 91.92.254.14
+    - 159.65.130.146
+    - 186.179.39.235
     - 8.137.112.245
     - 146.0.228.66
+    - 91.92.254.14
     - 45.61.136.14
-    - 186.179.39.235
-    - 159.65.130.146
+    - 173.220.106.166
+    - 50.215.39.49
   condition: attributes

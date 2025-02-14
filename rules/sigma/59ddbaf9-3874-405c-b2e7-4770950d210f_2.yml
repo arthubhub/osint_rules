@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-10-10 : Affid=3, offline, ".asasin" : "Voicemail From 845-551-1234"
   - "VMSG12345678_20171010.7z" - dns_query'
-id: 03b643d4-8d53-431b-8a83-62d1692dd681
+id: 0c2ca49b-97da-47c3-8651-16fa73af6d7f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,24 +10,24 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     IpAddresses:
-    - 185.85.205.9
-    - 89.253.235.118
-    - 98.124.252.176
-    - 107.152.98.20
-    - 202.218.252.73
-    - 86.109.170.66
     - 98.124.251.65
-    - 98.124.251.176
-    - 66.36.165.149
-    - 98.124.252.66
-    - 202.169.44.167
     - 91.215.186.147
-    - 202.169.44.143
+    - 185.85.205.9
+    - 98.124.252.176
+    - 86.109.170.66
+    - 107.152.98.20
     - 162.213.255.19
+    - 89.253.235.118
+    - 202.169.44.167
+    - 202.218.252.73
     - 98.124.251.75
+    - 98.124.252.66
+    - 66.36.165.149
+    - 202.169.44.143
+    - 98.124.251.176
   condition: attributes

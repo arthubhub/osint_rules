@@ -1,5 +1,5 @@
 title: Malspam 2016-07-05 (subject 'Scanned image'), .docm - dns_query
-id: 2777d05e-5051-4a7d-8421-ac4885eaa04e
+id: 8ee2fd04-b164-4ed1-9fbf-92c1c8f99958
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -11,16 +11,16 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
+    - flyingcarts.com
+    - brazilmart.com
     - lojaeberlin.com
     - mundoescolarrd.com
-    - brazilmart.com
-    - flyingcarts.com
     - sgi-shipping.com
     IpAddresses:
-    - 103.9.170.53
-    - 160.153.45.1
     - 160.153.74.199
     - 108.175.149.16
-    - 209.222.76.36
     - 50.63.136.152
+    - 209.222.76.36
+    - 103.9.170.53
+    - 160.153.45.1
   condition: attributes

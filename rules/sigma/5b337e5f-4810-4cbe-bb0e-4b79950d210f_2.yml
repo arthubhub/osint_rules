@@ -1,6 +1,6 @@
 title: 'OSINT - RedAlpha: New Campaigns Discovered Targeting the Tibetan Community
   - dns_query'
-id: 4fbfa5ef-d37a-4f72-9c44-0a6a15a066cf
+id: d5af1eea-8915-4a32-b85c-32e19b84aba3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,8 +10,8 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.redalpha
 - attack.software.njrat
+- attack.group.redalpha
 detection:
   object_6898:
     QueryName|contains:
@@ -281,16 +281,16 @@ detection:
     - drive-accounts-gooogle.com
   attributes:
     IpAddresses:
-    - 103.20.192.4
+    - 27.126.179.156
     - 103.20.195.140
-    - 103.245.22.117
     - 103.30.7.77
-    - 103.20.192.59
-    - 122.10.84.146
     - 103.20.192.248
     - 27.126.179.160
-    - 142.4.62.249
-    - 27.126.179.156
+    - 122.10.84.146
     - 103.245.22.124
+    - 103.20.192.4
+    - 103.20.192.59
     - 103.30.7.76
+    - 142.4.62.249
+    - 103.245.22.117
   condition: 1 of object_* or attributes

@@ -1,5 +1,5 @@
 title: OSINT - Lame proxychanger, apparently related to a clickfraud botnet. - url_request
-id: a71b17c5-b235-46ce-90a5-52e6bcc14a9c
+id: 21555722-34fe-450e-8d93-789bad455114
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -11,11 +11,11 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - https://labs.bitdefender.com
+    - http://xn--51haaa.ml
     - xn--51haaa.ml
     - http://wpad.com.gr
-    - http://xn--51haaa.ml
-    - xn--koa.net
-    - https://labs.bitdefender.com
-    - http://93.190.137.240
     - http://xn--koa.net
+    - http://93.190.137.240
+    - xn--koa.net
   condition: attributes

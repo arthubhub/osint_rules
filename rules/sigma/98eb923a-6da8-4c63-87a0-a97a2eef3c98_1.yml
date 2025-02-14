@@ -1,5 +1,5 @@
 title: 'CustomerLoader: a new malware distributing a wide variety of payloads - url_request'
-id: 624e6fc7-5538-4c6a-aa94-acc2e4f81fdc
+id: 4bda14cd-502c-4bc9-8180-0ff06e282f50
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -10,47 +10,47 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.s0366
-- attack.software.ave_maria
-- attack.group.darkcloud_stealer
-- attack.group.bitrat
-- attack.software.s0670
-- attack.group.lgoogloader
-- attack.software.redline_stealer
-- attack.software.vidar
-- attack.software.sectoprat
-- attack.t1001
-- attack.group.asyncrat
-- attack.group.xloader
-- attack.t1071.001
-- attack.software.s0331
-- attack.software.s0262
-- attack.t1566.001
-- attack.group.vidar
-- attack.t1027
-- attack.software.darkcloud_stealer
-- attack.software.stealc
-- attack.t1027.007
-- attack.group.agent_tesla
-- attack.t1620
-- attack.software.agent_tesla
-- attack.group.sectoprat
 - attack.t1140
-- attack.software.xloader
-- attack.t1562
-- attack.group.redline_stealer
-- attack.software.s0332
-- attack.t1573.001
+- attack.software.stealc
+- attack.software.agent_tesla
+- attack.software.vidar
+- attack.group.sectoprat
+- attack.group.bitrat
+- attack.software.s0366
+- attack.t1620
 - attack.software.formbook
-- attack.software.asyncrat
 - attack.t1105
-- attack.t1129
-- attack.t1562.001
-- attack.t1132.001
-- attack.group.ave_maria
+- attack.software.s0332
+- attack.t1027.007
 - attack.group.stealc
-- attack.software.lgoogloader
+- attack.software.s0262
+- attack.group.asyncrat
+- attack.group.vidar
+- attack.software.redline_stealer
 - attack.software.bitrat
+- attack.software.s0331
+- attack.group.xloader
+- attack.t1573.001
+- attack.t1566.001
+- attack.software.sectoprat
+- attack.t1132.001
+- attack.software.lgoogloader
+- attack.software.ave_maria
+- attack.group.redline_stealer
+- attack.t1562
+- attack.group.darkcloud_stealer
+- attack.group.lgoogloader
+- attack.t1001
+- attack.t1129
+- attack.software.xloader
+- attack.software.asyncrat
+- attack.t1027
+- attack.software.s0670
+- attack.group.ave_maria
+- attack.group.agent_tesla
+- attack.software.darkcloud_stealer
+- attack.t1562.001
+- attack.t1071.001
 detection:
   object_12951:
     RequestUrl|contains:
@@ -72,52 +72,52 @@ detection:
     - http://5.42.94.169
   attributes:
     RequestUrl|contains:
-    - vbs3.pw
-    - soft-got.co
-    - seif-games.com
-    - get-a.pw
-    - macros-pro.net
     - plugin4free.com
-    - get-y.com
-    - get-d.pw
-    - self-games.pw
-    - vstdw.com
-    - vbs1.pw
     - gethere.pw
-    - get-b.pw
-    - bin-d.pw
-    - vpnsget.com
-    - bin-c.pw
+    - cmd22.pw
     - kyliansuperm92139124.sbs
-    - crypt1.pw
-    - hardcoverradio.com
     - self-games.com
+    - soft-got.com
+    - vbs22.pw
     - vbs2.pw
     - slackmessenger.site
-    - get-i.pw
-    - vbs22.pw
-    - vstget.com
-    - plugin4free.net
-    - soft-got.com
     - soft-got.pw
-    - cmd22.pw
-    - mymine.pw
-    - vst-dw.com
-    - get-c.pw
-    - self-games.host
     - vpnsget.pw
-    - minemy.pw
-    - bin-a.pw
-    - bin-b.pw
-    - cmd1.pw
-    - cmd2.pw
-    - self-games.space
-    - slackmessenger.pw
-    - macrospro.pw
-    - soft-got.net
-    - self-games.site
-    - adanagram.com
+    - bin-d.pw
     - jacksmanual.com
+    - minemy.pw
+    - plugin4free.net
     - hautegaleria.com
+    - crypt1.pw
+    - get-a.pw
+    - mymine.pw
+    - get-b.pw
+    - vbs3.pw
+    - seif-games.com
+    - self-games.site
+    - bin-b.pw
+    - vpnsget.com
+    - cmd1.pw
+    - macrospro.pw
+    - vstget.com
+    - soft-got.co
+    - self-games.space
+    - vbs1.pw
+    - get-d.pw
+    - adanagram.com
+    - get-y.com
+    - bin-c.pw
+    - get-c.pw
+    - soft-got.net
+    - macros-pro.net
+    - slackmessenger.pw
+    - hardcoverradio.com
+    - cmd2.pw
+    - self-games.host
+    - bin-a.pw
+    - vstdw.com
     - get-vbs.com
+    - self-games.pw
+    - vst-dw.com
+    - get-i.pw
   condition: 1 of object_* or attributes

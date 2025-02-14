@@ -1,6 +1,6 @@
 title: 'AA24-249A: Russian Military Cyber Actors Target U.S. and Global Critical Infrastructure
   - url_request'
-id: 2e699ba1-5f99-44bd-95be-b21cd27614c0
+id: 990f49ee-5c2b-4f82-807c-9edfabcc066d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -18,13 +18,13 @@ detection:
     - https://www.cisa.gov
   attributes:
     RequestUrl|contains:
-    - https://3proxy.ru
-    - interlinks.top
+    - smm2021.net
+    - 3proxy.ru
     - 3237.site
+    - interlinks.top
+    - https://cdn.discordapp.com
     - https://nssm.cc
     - dns.test658324901domain.me
-    - 3proxy.ru
     - nssm.cc
-    - https://cdn.discordapp.com
-    - smm2021.net
+    - https://3proxy.ru
   condition: 1 of object_* or attributes

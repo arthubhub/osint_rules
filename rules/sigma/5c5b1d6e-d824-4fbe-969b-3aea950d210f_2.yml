@@ -1,5 +1,5 @@
 title: Malicious XLS claiming to be from Deloitte - dns_query
-id: abaf81a3-d93c-42d8-9bf7-5cd713fcf349
+id: cd359b9d-c22a-45e0-a8a7-d45e34b453b1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,15 +9,15 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1193
 - attack.t1064
+- attack.t1193
 detection:
   attributes:
     QueryName|contains:
     - deloitte-canada.com
     IpAddresses:
-    - 134.19.181.154
+    - 95.211.242.210
     - 95.211.143.214
     - 95.211.163.26
-    - 95.211.242.210
+    - 134.19.181.154
   condition: attributes

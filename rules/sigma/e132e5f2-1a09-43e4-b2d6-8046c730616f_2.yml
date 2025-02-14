@@ -1,5 +1,5 @@
 title: OSINT - Fortinet says SSL-VPN pre-auth RCE bug is exploited in attacks - dns_query
-id: 9b96c0fc-a008-4e47-a04e-f97cd0239715
+id: e1ec3028-bc48-45f0-9c4f-80c1b33fce8c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,8 +9,8 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1190
 - attack.t1133
+- attack.t1190
 detection:
   object_814:
     IpAddresses:
@@ -27,10 +27,10 @@ detection:
   attributes:
     IpAddresses:
     - 107.148.27.117
-    - 185.174.136.20
-    - 158.247.221.101
-    - 139.180.128.142
-    - 139.180.184.197
-    - 66.42.91.32
     - 155.138.224.122
+    - 66.42.91.32
+    - 139.180.184.197
+    - 139.180.128.142
+    - 158.247.221.101
+    - 185.174.136.20
   condition: 1 of object_* or attributes

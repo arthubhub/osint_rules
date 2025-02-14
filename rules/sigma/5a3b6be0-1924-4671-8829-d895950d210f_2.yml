@@ -1,6 +1,6 @@
 title: 'OSINT - North Korea Bitten by Bitcoin Bug: Financially motivated campaigns
   reveal new dimension of the Lazarus Group - dns_query'
-id: d3971ede-c355-4c13-9ddb-2ed916e920ce
+id: 7956a619-c453-442c-8a8e-b488f037d48b
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,30 +10,30 @@ logsource:
   product: windows
   category: dns_query
 tags:
+- attack.software.gh0st_rat
+- attack.software.powerspritz
+- attack.software.gh0st
 - attack.group.lazarus_group
 - attack.software.powerratankba
-- attack.software.gh0st
-- attack.software.powerspritz
-- attack.software.gh0st_rat
 detection:
   attributes:
     QueryName|contains:
-    - xn--6fgp.com
-    - xn--bitcingold-jbb.com
-    - xn--bitcoingol-4kb.com
-    - xn--bitoingold-1ib.com
-    - xn--bitcin-zxa.org
-    - xn--electrm-s2a.org
-    - xn--bitcingold-hcb.org
-    - xn--bitcoigold-o1b.com
-    - xn--btcongold-54ad.com
-    - xn--bitcoingldwallet-twb.org
-    - xn--bitcoingod-8yb.com
-    - xn--btcongold-g5ad.com
     - xn--btcoingold-v8a.com
+    - xn--bitcoingldwallet-twb.org
+    - xn--bitoingold-1ib.com
+    - xn--btcongold-g5ad.com
+    - xn--6fgp.com
     - xn--bitcoingld-lcb.com
+    - xn--bitcoingol-4kb.com
+    - xn--electrm-s2a.org
+    - xn--btcongold-54ad.com
+    - xn--bitcingold-jbb.com
     - xn--bitcingold-t3b.com
+    - xn--bitcoingod-8yb.com
+    - xn--bitcingold-hcb.org
+    - xn--bitcin-zxa.org
     - xn--bitcoingld-lcb.org
+    - xn--bitcoigold-o1b.com
     IpAddresses:
     - 198.100.157.239
   condition: attributes

@@ -1,5 +1,5 @@
 title: 'OSINT -  SWEED: Exposing years of Agent Tesla campaigns - dns_query'
-id: 05762847-b78b-45de-ab70-b77f672c4db2
+id: 828852c3-82ba-42ea-a22f-172be04a622e
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,68 +9,68 @@ logsource:
   product: windows
   category: dns_query
 tags:
+- attack.software.agent_tesla
 - attack.software.s0331
 - attack.group.agent_tesla
-- attack.software.agent_tesla
 detection:
   attributes:
     QueryName|contains:
-    - catalanoshpping.com
-    - aidanube.com
-    - cablsol.com
-    - quycarp.com
-    - wlttraco.com
-    - sweed-viki.ru
-    - hybru.com
-    - etqworld.com
-    - gufageneys.com
-    - serec.us
-    - samhwansleel.com
-    - aiaininsurance.com
     - sukrltiv.com
-    - spedaqinterfreight.com
-    - sweeddehacklord.us
-    - oralbdentaltreatment.tk
-    - kn-habour.com
-    - aelna.com
-    - mti-transt.com
-    - willistoweswatson.com
-    - worldjaquar.com
-    - rsaqencies.com
-    - dougiasbarwick.com
-    - blssleel.com
-    - mglt-mea.com
-    - virdtech.com
-    - kayneslnterconnection.com
-    - profbuiiders.com
-    - xlnya-cn.com
-    - crosspoiimeri.com
-    - repotc.com
-    - candqre.com
-    - usarmy-mill.com
-    - cawus-coskunsu.com
-    - evegreen-shipping.com
-    - bwayachtng.com
-    - lnnovalues.com
-    - anernostat.com
-    - zurieh.com
-    - intermodaishipping.net
-    - jyexports.com
-    - jltqroup.com
-    - supe-lab.com
-    - regionaitradeinspections.com
-    - snapqata.com
     - zarpac.us
-    - leocouriercompany.com
     - erieil.com
+    - mglt-mea.com
+    - leocouriercompany.com
+    - willistoweswatson.com
+    - cawus-coskunsu.com
+    - bwayachtng.com
+    - evegreen-shipping.com
+    - anernostat.com
+    - spedaqinterfreight.com
+    - virdtech.com
+    - aiaininsurance.com
+    - aidanube.com
+    - kn-habour.com
+    - usarmy-mill.com
+    - rsaqencies.com
+    - profbuiiders.com
+    - kayneslnterconnection.com
+    - mti-transt.com
+    - catalanoshpping.com
+    - dougiasbarwick.com
+    - wlttraco.com
+    - intermodaishipping.net
+    - candqre.com
+    - regionaitradeinspections.com
+    - samhwansleel.com
+    - xlnya-cn.com
+    - cablsol.com
+    - etqworld.com
+    - quycarp.com
+    - hybru.com
+    - snapqata.com
+    - serec.us
+    - jyexports.com
+    - repotc.com
+    - lnnovalues.com
+    - blssleel.com
+    - sweed-viki.ru
+    - sweeddehacklord.us
+    - supe-lab.com
+    - gufageneys.com
+    - crosspoiimeri.com
+    - aelna.com
+    - zurieh.com
+    - oralbdentaltreatment.tk
+    - jltqroup.com
+    - worldjaquar.com
     IpAddresses:
-    - 198.54.125.61
-    - 154.80.172.212
     - 84.38.134.121
+    - 209.99.40.222
     - 151.80.88.242
-    - 46.21.144.100
+    - 154.80.172.212
+    - 208.91.197.91
     - 209.99.40.223
     - 185.26.122.68
-    - 209.99.40.222
-    - 208.91.197.91
+    - 198.54.125.61
+    - 46.21.144.100
   condition: attributes

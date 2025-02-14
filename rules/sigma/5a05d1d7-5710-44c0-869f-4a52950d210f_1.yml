@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-11-09 : Affid=3, offline, ".asasin" : "Documents" - "ABY001234.doc"
   - url_request'
-id: f190f29f-a1cb-4192-bb56-21e597f9185e
+id: ff4a47a6-a920-4774-8b53-375166229f89
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,19 +10,19 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://336.linux1.testsider.dk
     - http://holidays-auction.com
-    - http://maydakookt.indepenmedia.nl
-    - http://horoskoperstellung.com
     - http://vallei-elektrotechniek.nl
-    - http://jw-portal.hosting-jw.de
-    - http://with-hair.co.jp
     - http://hofgrund.de
     - http://testbxc.u-host.ru
+    - http://with-hair.co.jp
+    - http://horoskoperstellung.com
+    - http://jw-portal.hosting-jw.de
+    - http://336.linux1.testsider.dk
+    - http://maydakookt.indepenmedia.nl
     - http://primeassociatesinc.com
   condition: attributes

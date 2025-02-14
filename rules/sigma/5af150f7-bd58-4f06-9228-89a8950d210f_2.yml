@@ -1,5 +1,5 @@
 title: OSINT - APT28 malicious NATO document - dns_query
-id: 83b99d0a-b814-4ece-9d51-5e86d0731b50
+id: 4d8a0902-0b0e-43ba-b99e-e1f9ac025def
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,8 +9,8 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.sofacy
 - attack.group.apt28
+- attack.group.sofacy
 - attack.group.strontium
 detection:
   object_12041:
@@ -27,9 +27,9 @@ detection:
     QueryName|contains:
     - zpfgr.com
     IpAddresses:
+    - 91.216.163.80
     - 94.177.12.74
     - 185.86.149.54
-    - 91.216.163.80
   attributes:
     QueryName|contains:
     - lxwo.org

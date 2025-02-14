@@ -1,5 +1,5 @@
 title: "OSINT - FINDING THE RAT\xE2\u20AC\u2122S NEST - dns_query"
-id: 3819b655-6d50-4f07-baf4-2013250f7530
+id: 2291615d-02d2-436f-9ce3-0114c6bc1486
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -13,16 +13,16 @@ tags:
 detection:
   attributes:
     QueryName|contains:
+    - email-hosting.us
     - myvm2.biz
     - vm2online.biz
-    - email-hosting.us
-    - onsitepowersystems.com
-    - emailhostings.in
-    - hackcom.org
-    - irus-os-77h7ft.pw
     - thevm2.biz
     - marciaguthke.com
+    - emailhostings.in
+    - onsitepowersystems.com
+    - irus-os-77h7ft.pw
+    - hackcom.org
     IpAddresses:
-    - 191.101.22.47
     - 192.111.155.6
+    - 191.101.22.47
   condition: attributes

@@ -1,6 +1,6 @@
 title: BatLoader Continues to Abuse Google Search Ads to Deliver Vidar Stealer and
   Ursnif - process_creation
-id: 3ad51a54-0fb1-4c1a-9ac2-89d137d3bac3
+id: 88632569-6c38-4bb6-b949-7978b7aff5d1
 description: edit this field when analysing or editing the rule - reported by "Centre
   for Cyber security Belgium"
 author: IOCparser_bot
@@ -11,20 +11,20 @@ logsource:
   product: windows
   category: process_creation
 tags:
+- attack.t1059
 - attack.t1410
+- attack.group.vidar
+- attack.software.vidar
+- attack.software.s0386
+- attack.t1059.001
 - attack.t1064
 - attack.t1059.006
-- attack.software.s0386
-- attack.group.vidar
-- attack.t1059
-- attack.t1059.001
-- attack.software.vidar
 detection:
   attributes:
     md5:
     - 0cb75b1192b23b8e03d955f1156ad19e
     - 3db1edc5b5550f54abdcb5520cf91d75
-    - 85fbc743bb686688ce05cf3289507bf7
-    - 11ae3dabdb2d2458da43558f36114acb
     - 9ebbe0a1b79e6f13bfca014f878ddeec
+    - 11ae3dabdb2d2458da43558f36114acb
+    - 85fbc743bb686688ce05cf3289507bf7
   condition: attributes

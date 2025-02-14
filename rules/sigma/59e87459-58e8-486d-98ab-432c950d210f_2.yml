@@ -1,6 +1,6 @@
 title: 'M2M -  Locky 2017-10-18 : Affid=3, offline, ".asasin" : "Message from 02087654321"
   - "Voice Message.7z" - dns_query'
-id: 19a64690-8090-46ae-8ed0-a8d0502a8b08
+id: 4dda0c8e-2546-4ea3-9f57-4c185d1b418f
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,13 +10,13 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     IpAddresses:
-    - 98.124.251.202
     - 67.210.102.240
-    - 98.124.251.72
     - 199.30.241.139
+    - 98.124.251.202
+    - 98.124.251.72
   condition: attributes

@@ -1,6 +1,6 @@
 title: 'OSINT - Cutting Edge, Part 2: Investigating Ivanti Connect Secure VPN Zero-Day
   Exploitation - url_request'
-id: 9d177db7-f0e2-4434-ab5a-3cc7b16be17d
+id: d16b3894-9f07-46cd-a5b5-4dd0b5cc3af3
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -17,14 +17,14 @@ detection:
     - https://www.mandiant.com
   attributes:
     RequestUrl|contains:
-    - secure-cama.com
-    - entraide-internationale.fr
-    - clicko.click
-    - ehangmun.com
-    - line-api.com
-    - clickcom.click
-    - areekaweb.com
     - miltonhouse.nl
+    - secure-cama.com
+    - ehangmun.com
+    - areekaweb.com
     - symantke.com
+    - entraide-internationale.fr
+    - clickcom.click
+    - clicko.click
     - duorhytm.fun
+    - line-api.com
   condition: 1 of object_* or attributes

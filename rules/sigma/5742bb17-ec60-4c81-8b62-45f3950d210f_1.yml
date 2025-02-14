@@ -1,5 +1,5 @@
 title: OSINT - APT Case RUAG Technical Report - url_request
-id: be733c03-525a-48e1-accf-90cf3be045ae
+id: 7f6663b6-11cf-4c38-86c7-f864bc713547
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,18 +9,18 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.turla_group
 - attack.software.wipbot
+- attack.group.turla_group
 - attack.software.turla
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.symantec.com
     - https://www.melani.admin.ch
-    - https://www.circl.lu
-    - https://blog.gdatasoftware.com
-    - http://artemonsecurity.com
     - https://securelist.com
     - http://www.symantec.com
+    - https://blog.gdatasoftware.com
     - http://www.kaspersky.com
+    - https://www.circl.lu
+    - https://www.symantec.com
+    - http://artemonsecurity.com
   condition: attributes

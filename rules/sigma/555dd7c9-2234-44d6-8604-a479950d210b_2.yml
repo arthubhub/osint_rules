@@ -1,6 +1,6 @@
 title: OSINT Attacks on East Asia using Google Code for Command and Control by Palo
   Alto Unit 42 - dns_query
-id: 2ec91a91-7c09-4c7d-8f13-8d8cd15e42f0
+id: ef12509e-d35f-4bf7-b073-24d33e7815df
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/14
@@ -12,16 +12,16 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - lthly.com
     - qq7712409.3322.org
     - java-se.com
+    - lthly.com
     IpAddresses:
-    - 61.78.34.179
-    - 211.233.89.182
-    - 223.29.248.9
-    - 58.64.139.39
-    - 202.181.133.237
     - 113.10.149.142
+    - 61.78.34.179
+    - 223.29.248.9
     - 203.135.134.243
+    - 58.64.139.39
+    - 211.233.89.182
     - 210.253.101.105
+    - 202.181.133.237
   condition: attributes

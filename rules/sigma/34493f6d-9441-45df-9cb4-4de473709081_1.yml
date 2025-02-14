@@ -1,5 +1,5 @@
 title: '#StopRansomware: MedusaLocker - url_request'
-id: 2b5aace6-bc24-4064-bfa7-2fc310046355
+id: a08ea60a-d783-46d3-b7fe-e5e9c2427126
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1486
-- attack.t1562.009
+- attack.t1566
+- attack.group.medusalocker
 - attack.t1490
 - attack.t1133
-- attack.group.medusalocker
-- attack.t1566
 - attack.t1059.001
+- attack.t1562.009
+- attack.t1486
 - attack.software.medusalocker
 detection:
   object_1747:
@@ -23,8 +23,8 @@ detection:
     - https://www.cisa.gov
   attributes:
     RequestUrl|contains:
-    - http://gvlay6y4g53rxdi5.onion
-    - http://medusacegu2ufmc3kx2kkqicrlcxdettsjcenhjena6uannk5f4ffuyd.onion
-    - qd7pcafncosqfqu3ha6fcx4h6sr7tzwagzpcdcnytiw3b6varaeqv5yd.onion
     - http://gvlay6u4g53rxdi5.onion
+    - http://medusacegu2ufmc3kx2kkqicrlcxdettsjcenhjena6uannk5f4ffuyd.onion
+    - http://gvlay6y4g53rxdi5.onion
+    - qd7pcafncosqfqu3ha6fcx4h6sr7tzwagzpcdcnytiw3b6varaeqv5yd.onion
   condition: 1 of object_* or attributes

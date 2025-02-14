@@ -1,5 +1,5 @@
 title: Ursnif Campaign f1.pipen.at - url_request
-id: 04f77100-aeba-4d14-aa07-6a93fdee107c
+id: 3ec97bdf-8d13-4f07-a1f0-ed3b705b49ab
 description: edit this field when analysing or editing the rule - reported by "The
   DFIR Report"
 author: IOCparser_bot
@@ -10,35 +10,35 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1117
-- attack.t1500
-- attack.software.gozi
-- attack.t1043
-- attack.t1112
-- attack.group.gozi
-- attack.t1192
-- attack.t1071
-- attack.t1170
 - attack.t1204
+- attack.group.gozi
+- attack.t1500
+- attack.t1192
+- attack.t1043
+- attack.t1170
+- attack.t1071
+- attack.t1112
+- attack.t1117
+- attack.software.gozi
 detection:
   attributes:
     RequestUrl|contains:
-    - mobify.at
-    - vv.malorun.at
+    - pipen.at
     - dianer.at
-    - api5.malorun.at
-    - dxdeedle.host
-    - api10.dianer.at
-    - been.dianer.at
     - https://thedfirreport.com
+    - api5.malorun.at
+    - mobify.at
+    - api10.dianer.at
     - kamalak.at
     - deem.dianer.at
+    - vv.malorun.at
+    - f1.pipen.at
     - ahonpot.at
     - www.kamalak.at
     - two.ahah100.at
-    - pipen.at
+    - free.up100n.at
+    - been.dianer.at
+    - dxdeedle.host
     - ahah100.at
     - targoo.at
-    - free.up100n.at
-    - f1.pipen.at
   condition: attributes

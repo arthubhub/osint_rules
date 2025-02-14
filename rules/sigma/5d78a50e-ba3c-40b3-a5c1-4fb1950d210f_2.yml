@@ -1,6 +1,6 @@
 title: OSINT - ESET discovered an undocumented backdoor used by the infamous Stealth
   Falcon group - dns_query
-id: a9f34449-54a3-4a9f-aa03-c0d17c0732e0
+id: cae080e1-d3c3-443c-ba81-986454a1ef44
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -16,13 +16,13 @@ tags:
 detection:
   attributes:
     QueryName|contains:
+    - footballtimes.info
+    - upnpdiscover.org
     - vegetableportfolio.com
     - electricalweb.org
-    - upnpdiscover.org
     - windowsearchcache.com
-    - footballtimes.info
     IpAddresses:
-    - 46.183.219.85
     - 193.105.134.75
     - 185.227.82.19
+    - 46.183.219.85
   condition: attributes

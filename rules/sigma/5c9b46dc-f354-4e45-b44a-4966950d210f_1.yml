@@ -1,5 +1,5 @@
 title: OSINT- WinRAR Zero-day (CVE-2018-20250) Abused in Multiple Campaigns - url_request
-id: 88d5c15e-f168-48b5-a70c-aa3b3379a30a
+id: 4aa977b4-10eb-43a0-8689-116c171f1891
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,30 +9,30 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.s0198
-- attack.software.netwire
-- attack.software.razy
-- attack.group.quasar_rat
+- attack.software.azorult
+- attack.group.azorult
 - attack.group.razy
+- attack.software.netwire
 - attack.software.quasar_rat
 - attack.software.s0262
-- attack.group.azorult
-- attack.software.azorult
+- attack.group.quasar_rat
+- attack.software.s0198
+- attack.software.razy
 detection:
   object_4546:
     RequestUrl|contains:
-    - https://mobile.twitter.com
-    - https://www.fireeye.com
-    - https://otx.alienvault.com
     - https://t.co
     - https://research.checkpoint.com
+    - https://www.fireeye.com
+    - https://mobile.twitter.com
+    - https://otx.alienvault.com
   attributes:
     RequestUrl|contains:
     - http://47.91.56.21
-    - http://185.162.131.92
-    - http://185.49.71.101
     - http://www.alahbabgroup.com
     - http://103.225.168.159
+    - http://185.162.131.92
     - http://tiny-share.com
+    - http://185.49.71.101
     - http://www.khuyay.org
   condition: 1 of object_* or attributes

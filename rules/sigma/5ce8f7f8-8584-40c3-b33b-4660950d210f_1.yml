@@ -1,5 +1,5 @@
 title: OSINT -   Sorpresa! JasperLoader targets Italy with a new bag of tricks - url_request
-id: d4718df7-a148-430a-bb70-647800a4e549
+id: 96ab74d0-b96d-4fc9-adc5-29b0fde826f8
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,11 +9,11 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.jasperloader
 - attack.t1192
+- attack.software.jasperloader
 detection:
   attributes:
     RequestUrl|contains:
-    - http://tribunaledinapoli.recsinc.com
     - https://blog.talosintelligence.com
+    - http://tribunaledinapoli.recsinc.com
   condition: attributes

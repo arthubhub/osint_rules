@@ -1,6 +1,6 @@
 title: OSINT - Microsoft Disrupts APT28 Hacking Campaign Aimed at US Midterm Elections
   - url_request
-id: 46802db8-5fb7-41b9-b8c0-1ccbac4c27de
+id: ef23f197-d3ab-4dcf-adf3-9dccef397ff1
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,18 +10,18 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.sofacy
 - attack.group.apt28
+- attack.group.sofacy
 - attack.group.strontium
 detection:
   attributes:
     RequestUrl|contains:
-    - adfs-senate.email
-    - https://www.bleepingcomputer.com
-    - my-iri.org
-    - https://blogs.microsoft.com
-    - hudsonorg-my-sharepoint.com
-    - office365-onedrive.com
     - adfs-senate.services
+    - my-iri.org
+    - hudsonorg-my-sharepoint.com
+    - adfs-senate.email
+    - https://blogs.microsoft.com
     - senate.group
+    - office365-onedrive.com
+    - https://www.bleepingcomputer.com
   condition: attributes

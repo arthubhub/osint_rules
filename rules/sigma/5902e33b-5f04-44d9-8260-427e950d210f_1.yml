@@ -1,6 +1,6 @@
 title: OSINT - Alert (TA17-117A) Intrusions Affecting Multiple Victims Across Multiple
   Sectors - url_request
-id: 6ae6a1bc-0060-4a9d-8e52-de817cc5746f
+id: 75b0136e-028f-44c7-8e4f-af6caa2e6f02
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,29 +10,29 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.plugx
 - attack.software.redleaves
+- attack.software.plugx
 detection:
   attributes:
     RequestUrl|contains:
-    - cloud-kingl.com
-    - ccfchrist.com
-    - incloud-obert.com
-    - jimin-jp.biz
-    - mofa-go-jp.com
-    - unhamj.com
-    - https://www.us-cert.gov
-    - jica-go-jp.biz
-    - bdoncloud.com
-    - wchildress.com
-    - vmmini.com
-    - cloud-maste.com
-    - jica-go-jp.bike
     - microsoft.got
-    - meiji-ac-jp.com
-    - sindeali.com
-    - salvaiona.com
-    - incloud-go.com
+    - https://www.us-cert.gov
     - catholicmmb.com
+    - ccfchrist.com
+    - vmmini.com
+    - incloud-go.com
+    - mofa-go-jp.com
+    - sindeali.com
+    - jica-go-jp.bike
+    - cloud-kingl.com
+    - wchildress.com
+    - jica-go-jp.biz
+    - incloud-obert.com
+    - bdoncloud.com
+    - salvaiona.com
+    - jimin-jp.biz
     - cwiinatonal.com
+    - cloud-maste.com
+    - unhamj.com
+    - meiji-ac-jp.com
   condition: attributes

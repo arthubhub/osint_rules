@@ -1,5 +1,5 @@
 title: OSINT - Exploring CVE-2015-2545 and its users - dns_query
-id: 38f22721-1eec-4551-b9cc-3dbe21edaaee
+id: 457f1f55-7cc9-43ab-84d4-236ed562ab69
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -11,13 +11,13 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - updo.nl
     - coffeol.com
+    - updo.nl
     IpAddresses:
-    - 64.62.238.73
-    - 59.188.13.204
-    - 37.10.71.35
     - 121.127.249.74
-    - 192.168.1.114
+    - 64.62.238.73
     - 78.128.92.49
+    - 192.168.1.114
+    - 37.10.71.35
+    - 59.188.13.204
   condition: attributes

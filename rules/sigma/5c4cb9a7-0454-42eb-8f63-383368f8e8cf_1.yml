@@ -1,5 +1,5 @@
 title: '2019-01-25: Lazarus Pakistan Toolkits - url_request'
-id: ca0aa5c8-f131-4c64-8b6c-5339aac60983
+id: d57a1976-af98-4682-9d92-f9b49d0a39e8
 description: edit this field when analysing or editing the rule - reported by "VK-Intel"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,16 +9,16 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.lazarus_group
-- attack.software.powerratankba
+- attack.group.powerratankba
+- attack.group.g0032
 - attack.group.lazarus
 - attack.software.lazarus
-- attack.group.g0032
-- attack.group.powerratankba
+- attack.group.lazarus_group
+- attack.software.powerratankba
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.vkremez.com
     - https://ecombox.store
+    - https://www.vkremez.com
     - https://github.com
   condition: attributes

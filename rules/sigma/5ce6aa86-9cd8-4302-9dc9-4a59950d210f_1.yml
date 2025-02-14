@@ -1,5 +1,5 @@
 title: OSINT - A journey to Zebrocy land - url_request
-id: 650f5338-c8c5-4a36-ab3a-281030f6cb55
+id: c5e23060-1aad-46d4-964f-7b8d1479cf9a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,44 +9,44 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.s0251
-- attack.t1113
-- attack.t1056
-- attack.software.zebrocy_autoit
-- attack.t1074
+- attack.t1085
 - attack.group.zebrocy_autoit
-- attack.t1132
-- attack.t1089
-- attack.t1024
-- attack.t1001
-- attack.t1079
-- attack.t1043
-- attack.t1041
-- attack.group.zebrocy
-- attack.t1020
-- attack.t1039
-- attack.t1025
-- attack.t1204
-- attack.t1053
 - attack.t1083
 - attack.software.zebrocy
-- attack.t1047
-- attack.t1022
-- attack.t1032
-- attack.t1192
+- attack.t1005
 - attack.t1057
-- attack.t1071
-- attack.t1012
-- attack.t1085
+- attack.t1122
 - attack.t1107
 - attack.t1082
-- attack.t1122
+- attack.t1132
+- attack.t1074
+- attack.t1056
+- attack.t1204
+- attack.t1113
+- attack.t1192
+- attack.t1032
+- attack.t1039
+- attack.t1041
 - attack.t1008
+- attack.t1071
+- attack.t1043
+- attack.t1079
+- attack.t1012
+- attack.t1053
+- attack.t1047
+- attack.group.zebrocy
+- attack.software.zebrocy_autoit
 - attack.t1060
-- attack.t1005
+- attack.t1001
+- attack.t1025
+- attack.t1024
+- attack.t1022
+- attack.t1020
+- attack.software.s0251
+- attack.t1089
 detection:
   attributes:
     RequestUrl|contains:
-    - https://www.welivesecurity.com
     - http://45.124.132.127
+    - https://www.welivesecurity.com
   condition: attributes

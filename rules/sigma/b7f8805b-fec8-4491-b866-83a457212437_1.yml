@@ -1,5 +1,5 @@
 title: FireEye Mandiant PulseSecure Exploitation Countermeasures - url_request
-id: 2d76c3c1-ad01-4f02-83e6-09ff9c6d32de
+id: f123923f-4620-4e42-b80a-cae55da5188d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -14,6 +14,6 @@ detection:
     - https://www.fireeye.com
   attributes:
     RequestUrl|contains:
-    - https://www.fireeye.com
     - https://www.circl.lu
+    - https://www.fireeye.com
   condition: 1 of object_* or attributes

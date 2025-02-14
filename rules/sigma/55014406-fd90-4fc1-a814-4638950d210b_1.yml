@@ -1,5 +1,5 @@
 title: OSINT Tibetan Uprising Day Malware Attacks by Citizen Labs - url_request
-id: e135f1df-ab86-4b56-aa0f-3691564c516f
+id: 412f47d7-1b0a-43b8-afe2-940c1a089360
 description: edit this field when analysing or editing the rule - reported by "CthulhuSPRL.be"
 author: IOCparser_bot
 date: 2025/02/14
@@ -11,15 +11,15 @@ logsource:
 detection:
   attributes:
     RequestUrl|contains:
+    - http://122.10.117.152
+    - https://citizenlab.org
     - http://johnsmith152.typepad.com
     - http://mynewshemm.wordpress.com
-    - conamail.info
-    - semamail.info
-    - http://122.10.117.152
-    - https://malwr.com
-    - convmail.info
     - http://johnsmith5382.thoughts.com
-    - https://citizenlab.org
-    - fifamp3.info
+    - convmail.info
     - http://www.semamail.info
+    - fifamp3.info
+    - semamail.info
+    - conamail.info
+    - https://malwr.com
   condition: attributes

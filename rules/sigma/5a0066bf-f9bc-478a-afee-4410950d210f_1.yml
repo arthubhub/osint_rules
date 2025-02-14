@@ -1,5 +1,5 @@
 title: 'M2M -  Locky 2017-11-03 : Affid=3, offline, ".asasin" : "12345678.doc" - url_request'
-id: 9599346a-ce14-4fb8-9860-3968092cecfc
+id: 42be058e-29f5-4744-a5b2-001eb6d90b63
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,24 +9,24 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     RequestUrl|contains:
-    - http://dangelofavata.com
-    - http://euroregistro.net
-    - http://finanzen-netto.de
-    - http://ceocfonewsline.com
-    - http://fsol.co.za
-    - http://evengrollighromsof.net
     - http://washingtoncountyyellowpagesdirectory.com
     - http://generalcom.ro
-    - http://futtermittel-schwaegerl.de
     - http://www.test.doctorsordersltd.co.uk
-    - http://with-hair.co.jp
+    - http://euroregistro.net
+    - http://finanzen-netto.de
+    - http://evengrollighromsof.net
+    - http://futtermittel-schwaegerl.de
     - http://teesaddiction.com
-    - http://ddcms.nl
+    - http://with-hair.co.jp
+    - http://fsol.co.za
+    - http://dangelofavata.com
+    - http://ceocfonewsline.com
     - http://ebsitaly.it
     - http://cibeservice.it
+    - http://ddcms.nl
   condition: attributes

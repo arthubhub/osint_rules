@@ -1,6 +1,6 @@
 title: Prynt Stealer Spotted In the Wild - A New Info Stealer Performing Clipper And
   Keylogger Activities - url_request
-id: 1f806000-4743-4619-90f3-db22663f9bfb
+id: 1a6801a6-853b-4291-8982-92c80693f2d7
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,24 +10,24 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.t1528
-- attack.t1497.001
+- attack.t1204
+- attack.t1113
 - attack.t1087
 - attack.t1614
-- attack.t1518
-- attack.t1113
 - attack.t1041
+- attack.t1555
+- attack.t1071
+- attack.t1007
+- attack.t1057
+- attack.t1539
 - attack.t1552
 - attack.t1124
-- attack.t1007
 - attack.group.prynt_stealer
+- attack.t1518
+- attack.t1528
 - attack.software.prynt_stealer
-- attack.t1555
-- attack.t1057
-- attack.t1071
-- attack.t1539
 - attack.t1567
-- attack.t1204
+- attack.t1497.001
 detection:
   object_5812:
     RequestUrl|contains:

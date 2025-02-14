@@ -1,5 +1,5 @@
 title: OSINT - Gamaredon group - dns_query
-id: 155be737-e516-4fb6-965a-ce7f457e1b1e
+id: ec0964a7-1c4d-4d05-8aa5-ee7bb719c20c
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,14 +9,14 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.t1053
-- attack.t1064
+- attack.t1106
+- attack.t1059
 - attack.group.g0047
 - attack.t1112
-- attack.t1106
-- attack.group.gamaredon_group
-- attack.t1059
+- attack.t1064
 - attack.t1012
+- attack.t1053
+- attack.group.gamaredon_group
 detection:
   object_18140:
     QueryName|contains:

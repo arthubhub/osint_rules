@@ -1,6 +1,6 @@
 title: "OSINT - \xE2\u20AC\u0153Cyber Conflict\xE2\u20AC\x9D Decoy Document Used In\
   \ Real Cyber Conflict - url_request"
-id: b765975f-eef2-4bed-b0a3-4dc387ebe4a9
+id: 826cb288-0573-4b25-ab22-d45ac444377a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,15 +10,15 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.sofacy
+- attack.software.gamefish
 - attack.software.s0044
 - attack.group.apt28
-- attack.group.strontium
-- attack.software.gamefish
+- attack.group.sofacy
 - attack.software.jhuhugit
+- attack.group.strontium
 detection:
   attributes:
     RequestUrl|contains:
-    - myinvestgroup.com
     - https://blog.talosintelligence.com
+    - myinvestgroup.com
   condition: attributes

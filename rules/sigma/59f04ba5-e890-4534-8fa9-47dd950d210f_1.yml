@@ -1,6 +1,6 @@
 title: OSINT - BadRabbit Ransomware Compiled by ThaiCERT, a member of the Electronic
   Transactions Development Agency - url_request
-id: 05ea0a62-a5de-42d9-ab35-63036af0cd6f
+id: 35a1506d-dbb3-4b78-9b27-8bb979bf0010
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,53 +10,53 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.group.bad_rabbit
 - attack.software.bad_rabbit
+- attack.group.bad_rabbit
 detection:
   attributes:
     RequestUrl|contains:
-    - http://1dnscontrol.com
-    - https://otx.alienvault.com
-    - https://www.pcmag.com
-    - https://www.us-cert.gov
-    - http://blog.talosintelligence.com
-    - http://caforssztxqzf2nm.onion
-    - https://securingtomorrow.mcafee.com
-    - https://www.itnews.com.au
-    - https://researchcenter.paloaltonetworks.com
-    - https://blog.malwarebytes.com
-    - https://www.csoonline.com
-    - https://nakedsecurity.sophos.com
-    - https://labs.bitdefender.com
-    - https://www.cyberscoop.com
-    - https://www.technologyreview.com
     - https://www.scmagazine.com
-    - https://www.group-ib.com
-    - http://185.149.120.3
-    - https://www.cybereason.com
-    - https://www.bloomberg.com
-    - https://www.bleepingcomputer.com
-    - https://www.darkreading.com
-    - http://securityaffairs.co
-    - https://thehackernews.com
-    - https://threatpost.com
-    - https://www.infosecurity-magazine.com
-    - https://www.welivesecurity.com
-    - https://www.wired.com
-    - http://money.cnn.com
-    - http://www.zdnet.com
-    - https://arstechnica.com
-    - https://gizmodo.com
-    - https://www.kaspersky.com
-    - https://motherboard.vice.com
-    - http://www.bbc.co.uk
-    - https://www.windowscentral.com
-    - https://www.theregister.co.uk
-    - https://isc.sans.edu
     - https://www.washingtontimes.com
+    - http://caforssztxqzf2nm.onion
+    - http://www.reuters.com
+    - https://isc.sans.edu
+    - http://www.zdnet.com
+    - http://securityaffairs.co
+    - https://www.cyberscoop.com
+    - https://www.infosecurity-magazine.com
+    - https://www.group-ib.com
+    - https://labs.bitdefender.com
+    - https://www.pcmag.com
+    - https://www.technologyreview.com
+    - https://www.kaspersky.com
+    - https://www.wired.com
     - https://www.microsoft.com
     - https://securelist.com
-    - http://www.reuters.com
+    - https://www.theregister.co.uk
+    - https://blog.malwarebytes.com
+    - https://nakedsecurity.sophos.com
+    - https://www.bloomberg.com
+    - https://www.csoonline.com
+    - https://otx.alienvault.com
+    - https://gizmodo.com
+    - https://www.us-cert.gov
+    - http://www.bbc.co.uk
+    - http://185.149.120.3
+    - https://thehackernews.com
+    - https://www.itnews.com.au
+    - http://money.cnn.com
+    - https://researchcenter.paloaltonetworks.com
+    - https://securingtomorrow.mcafee.com
+    - https://arstechnica.com
     - https://techcrunch.com
     - https://www.bangkokpost.com
+    - http://1dnscontrol.com
+    - https://www.cybereason.com
+    - https://www.bleepingcomputer.com
+    - https://www.welivesecurity.com
+    - https://www.windowscentral.com
+    - http://blog.talosintelligence.com
+    - https://threatpost.com
+    - https://motherboard.vice.com
+    - https://www.darkreading.com
   condition: attributes

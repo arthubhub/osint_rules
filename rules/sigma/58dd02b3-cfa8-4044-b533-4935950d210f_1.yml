@@ -1,6 +1,6 @@
 title: OSINT - Trochilus and New MoonWind RATs Used In Attack Against Thai Organizations
   - url_request
-id: 8a0dae88-448c-44cf-b7d9-310b7300f6d7
+id: f16e658f-4826-4424-9267-890f2be929e5
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,11 +10,11 @@ logsource:
   product: windows
   category: url_request
 tags:
-- attack.software.moonwind
 - attack.software.trochilus
+- attack.software.moonwind
 detection:
   attributes:
     RequestUrl|contains:
-    - webswindows.com
     - http://researchcenter.paloaltonetworks.com
+    - webswindows.com
   condition: attributes

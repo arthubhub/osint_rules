@@ -1,5 +1,5 @@
 title: FluBot - Distribution vectors & Threat network infrastructure - dns_query
-id: 18030a11-4a2f-4a36-ad90-a0ef9d903430
+id: 422c4f7f-c23a-4b8a-9ed3-954752f76675
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,8 +9,8 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.flubot
 - attack.software.flubot
+- attack.group.flubot
 detection:
   object_5393:
     QueryName|contains:
@@ -29,9 +29,9 @@ detection:
     - cuicsi.com
   attributes:
     QueryName|contains:
-    - cuicsi.com
+    - progralmedical.com.co
     - flavarich.com
     - myworldnetwork.org
-    - progralmedical.com.co
     - vipmein.com
+    - cuicsi.com
   condition: 1 of object_* or attributes

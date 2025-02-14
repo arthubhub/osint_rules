@@ -1,7 +1,7 @@
 title: Malware Posing as Human Rights Organizations and Commercial Software Targeting
   Iranians, Foreign Policy Institutions and Middle Eastern Countries (ExtremeDownloader
   and Strealer) - dns_query
-id: 5026d3c6-c5c3-4855-ab26-e46ae8494c3a
+id: 098bb07d-c039-4eb3-aadb-123c0ca3216d
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -13,9 +13,9 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - update-finder.com
-    - apache-utility.com
     - microsoft-hotfix.com
+    - apache-utility.com
+    - update-finder.com
     IpAddresses:
     - 5.152.202.53
   condition: attributes

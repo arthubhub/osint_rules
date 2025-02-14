@@ -1,6 +1,6 @@
 title: OSINT - The Latest Android Overlay Malware Spreading via SMS Phishing in Europe
   - dns_query
-id: 8f050cdb-068c-4070-942c-8eb8480e01c5
+id: dfda721c-cd51-4c97-ab90-c4c9bfb3bf9a
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -12,16 +12,16 @@ logsource:
 detection:
   attributes:
     QueryName|contains:
-    - mmstildig.com
-    - mmstildig.net
     - mmstildig.info
+    - mmstildig.net
+    - mmstildig.com
     - postdanmark.org
     IpAddresses:
-    - 85.93.5.83
+    - 85.93.5.108
     - 85.93.5.139
     - 85.93.5.109
-    - 91.224.101.102
-    - 193.105.240.158
-    - 85.93.5.108
     - 102.220.240.24
+    - 193.105.240.158
+    - 91.224.101.102
+    - 85.93.5.83
   condition: attributes

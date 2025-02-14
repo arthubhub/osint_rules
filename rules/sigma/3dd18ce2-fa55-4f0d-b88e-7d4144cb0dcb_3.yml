@@ -1,5 +1,5 @@
 title: OSINT - AN ANALYSIS OF THE EGREGOR RANSOMWARE - process_creation
-id: 2d07327b-4291-4184-8089-b9bf4a27b956
+id: 7bb3d210-1d96-40b9-8b72-835ce4e05752
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,13 +9,13 @@ logsource:
   product: windows
   category: process_creation
 tags:
+- attack.software.egregor
+- attack.group.gandcrab
+- attack.group.egregor
+- attack.software.s0496
+- attack.group.sodinokibi
 - attack.software.sodinokibi
 - attack.software.gandcrab
-- attack.group.egregor
-- attack.group.gandcrab
-- attack.software.s0496
-- attack.software.egregor
-- attack.group.sodinokibi
 detection:
   object_17309:
     md5:

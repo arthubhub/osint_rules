@@ -1,5 +1,5 @@
 title: '2019-01-28: APT28 XTunnel Backdoor - dns_query'
-id: ca7e4819-d3d9-4be3-9c4d-1bf6685432b7
+id: 1ac16a99-5165-43d4-83b1-4953ce77c844
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,12 +9,12 @@ logsource:
   product: windows
   category: dns_query
 tags:
-- attack.group.sofacy
-- attack.software.s0117
-- attack.software.xtunnel
-- attack.group.g0007
-- attack.group.apt28
 - attack.group.strontium
+- attack.group.apt28
+- attack.software.xtunnel
+- attack.software.s0117
+- attack.group.sofacy
+- attack.group.g0007
 detection:
   attributes:
     IpAddresses:

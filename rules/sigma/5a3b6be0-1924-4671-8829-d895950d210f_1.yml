@@ -1,6 +1,6 @@
 title: 'OSINT - North Korea Bitten by Bitcoin Bug: Financially motivated campaigns
   reveal new dimension of the Lazarus Group - url_request'
-id: 622e60f7-618c-4eaa-a2fc-eae9e713aebe
+id: e3008f3d-69ff-41cc-ab1a-99e2b2e0e790
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -10,45 +10,45 @@ logsource:
   product: windows
   category: url_request
 tags:
+- attack.software.gh0st_rat
+- attack.software.powerspritz
+- attack.software.gh0st
 - attack.group.lazarus_group
 - attack.software.powerratankba
-- attack.software.gh0st
-- attack.software.powerspritz
-- attack.software.gh0st_rat
 detection:
   attributes:
     RequestUrl|contains:
-    - xn--6fgp.com
+    - http://trade.publicvm.com
     - http://skype.2.vu
-    - http://www.btc-gold.us
-    - http://macintosh.linkpc.net
-    - xn--electrm-s2a.org
-    - http://92.222.106.229
-    - xn--btcongold-g5ad.com
-    - xn--btcoingold-v8a.com
-    - xn--bitcoingld-lcb.com
-    - xn--bitcingold-t3b.com
-    - http://122.248.34.23
-    - xn--bitcoingld-lcb.org
-    - http://201.211.183.215
-    - http://telegramupdate.2.vu
-    - xn--bitcingold-jbb.com
-    - xn--bitcoingol-4kb.com
+    - http://www.businesshop.net
+    - http://www.energydonate.com
     - https://www.proofpoint.com
-    - xn--bitoingold-1ib.com
-    - xn--bitcin-zxa.org
+    - xn--btcongold-g5ad.com
+    - http://92.222.106.229
+    - xn--bitcoingld-lcb.com
     - http://skypeupdate.2.vu
-    - http://apps.got-game.org
-    - xn--bitcingold-hcb.org
-    - xn--bitcoigold-o1b.com
+    - xn--electrm-s2a.org
     - xn--btcongold-54ad.com
     - https://doc-00-64-docs.googleusercontent.com
-    - http://www.energydonate.com
-    - http://www.businesshop.net
-    - xn--bitcoingod-8yb.com
-    - http://trade.publicvm.com
+    - xn--bitcingold-jbb.com
+    - http://macintosh.linkpc.net
+    - http://dogecoin.deaftone.com
+    - xn--bitcoingld-lcb.org
+    - xn--bitcin-zxa.org
+    - http://201.211.183.215
+    - xn--btcoingold-v8a.com
+    - xn--bitcoingol-4kb.com
+    - xn--bitcoigold-o1b.com
     - http://51.255.219.82
     - xn--bitcoingldwallet-twb.org
-    - http://dogecoin.deaftone.com
     - http://tinyurl.com
+    - xn--bitoingold-1ib.com
+    - http://telegramupdate.2.vu
+    - http://apps.got-game.org
+    - http://122.248.34.23
+    - xn--6fgp.com
+    - xn--bitcingold-t3b.com
+    - xn--bitcoingod-8yb.com
+    - xn--bitcingold-hcb.org
+    - http://www.btc-gold.us
   condition: attributes

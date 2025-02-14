@@ -1,5 +1,5 @@
 title: Malspam 2017-08-25 'Your Sage subscription invoice is ready' - process_creation
-id: 6542e993-a41a-4879-9c8a-9a3ad6a0bfca
+id: 5c33f79f-e07e-468f-ac37-ed1fc0e97dcf
 description: edit this field when analysing or editing the rule - reported by "CIRCL"
 author: IOCparser_bot
 date: 2025/02/14
@@ -9,16 +9,16 @@ logsource:
   product: windows
   category: process_creation
 tags:
-- attack.group.locky
 - attack.software.locky
+- attack.group.locky
 detection:
   attributes:
     sha1:
+    - bace8533f660fa525072bb704973148504fdbf42
     - 3490bef54f73a02e244cdec001f871e271fd58e6
     - 9d23067187d8e40380580db7c3c64e9e8ba14fd0
-    - bace8533f660fa525072bb704973148504fdbf42
     sha256:
     - abacabfc7c6550bd8594fd0b758c3f890a01212fcc23d3a04b04f761684cc86e
-    - aa75f8ecb2a990615dc534155a15fd9d8ea99ca2db718e8bc6092dc07fda9b2c
     - 11e77e2b4ff4a3fd2cdd20f7896a2b44a426978d378a9557fbf60aee318e92bf
+    - aa75f8ecb2a990615dc534155a15fd9d8ea99ca2db718e8bc6092dc07fda9b2c
   condition: attributes
